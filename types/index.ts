@@ -1,0 +1,167 @@
+export interface BreadcrumbItem {
+  label: string;
+  href: string;
+}
+
+export interface FAQItem {
+  question: string;
+  answer: string;
+  category: string;
+  relatedPage?: string;
+}
+
+export interface SiteSettings {
+  siteName: string;
+  phone: string;
+  whatsapp: string;
+  whatsappMessage: string;
+  email: string;
+  address: string;
+  city: string;
+  workingHours: string;
+}
+
+export interface SEOData {
+  title: string;
+  description: string;
+  canonicalPath: string;
+  ogImage?: string;
+  noindex?: boolean;
+}
+
+export interface ServiceSymptom {
+  title: string;
+  description: string;
+  icon: string;
+}
+
+export interface ProcessStep {
+  step: number;
+  title: string;
+  description: string;
+}
+
+export interface ServiceMethod {
+  title: string;
+  description: string;
+}
+
+export interface Service {
+  id: string;
+  title: string;
+  slug: string;
+  shortDescription: string;
+  longDescription: string;
+  heroTitle: string;
+  heroDescription: string;
+  heroImage?: string;
+  icon: string;
+  symptoms: ServiceSymptom[];
+  processSteps: ProcessStep[];
+  methods: ServiceMethod[];
+  faq: FAQItem[];
+  relatedServices: string[];
+  relatedLocations: string[];
+  seoTitle: string;
+  seoDescription: string;
+  canonicalPath: string;
+  featured?: boolean;
+}
+
+export interface Neighborhood {
+  id: string;
+  title: string;
+  slug: string;
+  districtSlug: string;
+  description: string;
+  shortDescription: string;
+  relatedServices: string[];
+  faq: FAQItem[];
+  seoTitle: string;
+  seoDescription: string;
+  canonicalPath: string;
+}
+
+export interface Location {
+  id: string;
+  title: string;
+  slug: string;
+  city: string;
+  district?: string;
+  description: string;
+  shortDescription: string;
+  neighborhoods: string[];
+  relatedServices: string[];
+  faq: FAQItem[];
+  seoTitle: string;
+  seoDescription: string;
+  canonicalPath: string;
+  heroImage?: string;
+  stats?: { label: string; value: string }[];
+}
+
+export type BlogPostStatus = "draft" | "published";
+
+export interface BlogPost {
+  id: string;
+  title: string;
+  slug: string;
+  excerpt: string;
+  content: string;
+  category: string;
+  publishedAt: string;
+  updatedAt: string;
+  readingTime: number;
+  seoTitle: string;
+  seoDescription: string;
+  canonicalPath: string;
+  relatedServices: string[];
+  faq: FAQItem[];
+  status: BlogPostStatus;
+  image?: string;
+}
+
+export interface ContactLead {
+  id: string;
+  fullName: string;
+  phone: string;
+  district?: string;
+  serviceType?: string;
+  description: string;
+  createdAt: string;
+}
+
+export interface NavLink {
+  label: string;
+  href: string;
+}
+
+export interface Navigation {
+  header: NavLink[];
+  footer: {
+    services: NavLink[];
+    company: NavLink[];
+    legal: NavLink[];
+  };
+}
+
+export interface ContactFormInput {
+  fullName: string;
+  phone: string;
+  district?: string;
+  serviceType?: string;
+  description: string;
+}
+
+export interface BlogFormInput {
+  title: string;
+  slug: string;
+  excerpt: string;
+  content: string;
+  category: string;
+  status: BlogPostStatus;
+  seoTitle: string;
+  seoDescription: string;
+  relatedServices: string[];
+  publishedAt?: string;
+}

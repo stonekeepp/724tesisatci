@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Kağıthane Tesisatçı | 7/24 Cihazlı ve Temiz Tesisat Hizmeti</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-lowest": "#ffffff",
+                        "outline": "#76777d",
+                        "surface-tint": "#565e74",
+                        "on-secondary-fixed": "#001f28",
+                        "error-container": "#ffdad6",
+                        "primary": "#000000",
+                        "on-secondary-container": "#006077",
+                        "surface-container-highest": "#e0e3e5",
+                        "primary-fixed": "#dae2fd",
+                        "surface-container-high": "#e6e8ea",
+                        "inverse-on-surface": "#eff1f3",
+                        "on-primary-fixed-variant": "#3f465c",
+                        "tertiary-container": "#331200",
+                        "surface-dim": "#d8dadc",
+                        "on-surface": "#191c1e",
+                        "on-primary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "on-surface-variant": "#45464d",
+                        "secondary-fixed": "#b7eaff",
+                        "on-error-container": "#93000a",
+                        "background": "#f7f9fb",
+                        "secondary-fixed-dim": "#6cd3f7",
+                        "on-secondary": "#ffffff",
+                        "surface-variant": "#e0e3e5",
+                        "primary-container": "#131b2e",
+                        "surface-bright": "#f7f9fb",
+                        "on-secondary-fixed-variant": "#004e61",
+                        "on-background": "#191c1e",
+                        "secondary": "#006780",
+                        "on-tertiary-fixed": "#331200",
+                        "on-primary-fixed": "#131b2e",
+                        "tertiary-fixed": "#ffdbca",
+                        "on-tertiary-container": "#cf6721",
+                        "inverse-primary": "#bec6e0",
+                        "on-tertiary-fixed-variant": "#763300",
+                        "on-primary-container": "#7c839b",
+                        "inverse-surface": "#2d3133",
+                        "secondary-container": "#76dcff",
+                        "surface-container": "#eceef0",
+                        "on-tertiary": "#ffffff",
+                        "outline-variant": "#c6c6cd",
+                        "surface": "#f7f9fb",
+                        "primary-fixed-dim": "#bec6e0",
+                        "surface-container-low": "#f2f4f6",
+                        "tertiary-fixed-dim": "#ffb68e",
+                        "tertiary": "#000000",
+                        "error": "#ba1a1a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "1.25rem",
+                        "margin-desktop": "4rem",
+                        "gutter": "1.5rem",
+                        "section-padding": "6rem",
+                        "container-max": "1280px",
+                        "stack-md": "1rem",
+                        "stack-sm": "0.5rem",
+                        "stack-lg": "2rem"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "label-md": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-lg-mobile": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "600" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .soft-shadow {
+            box-shadow: 0 4px 12px rgba(0, 103, 128, 0.05), 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+        .hover-lift {
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .hover-lift:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(0, 103, 128, 0.1), 0 4px 8px rgba(0, 0, 0, 0.05);
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #001f28 0%, #006780 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        /* Breadcrumb separator */
+        .breadcrumb-item + .breadcrumb-item::before {
+            content: "/";
+            color: #76777d; /* outline */
+            margin: 0 0.5rem;
+            font-family: inherit;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased min-h-screen flex flex-col pt-20">
+<!-- TopNavBar -->
+<header class="bg-surface-container-lowest dark:bg-surface-container-lowest full-width top-0 sticky shadow-sm z-40 hidden md:block">
+<div class="bg-surface-container-lowest border-b border-outline-variant">
+<div class="flex justify-between items-center h-20 px-margin-desktop max-w-container-max mx-auto w-full">
+<!-- Brand -->
+<div class="font-headline-md text-headline-md font-bold text-primary dark:text-primary">
+                    724 Tesisatçı
+                </div>
+<!-- Navigation Links -->
+<nav class="flex items-center space-x-8">
+<a class="font-body-md text-body-md font-label-md text-label-md text-on-surface-variant font-medium hover:text-secondary transition-colors duration-200" href="#">Hizmetlerimiz</a>
+<a aria-current="page" class="font-body-md text-body-md font-label-md text-label-md text-secondary font-bold border-b-2 border-secondary pb-1 hover:text-secondary transition-colors duration-200" href="#">Hizmet Bölgeleri</a>
+<a class="font-body-md text-body-md font-label-md text-label-md text-on-surface-variant font-medium hover:text-secondary transition-colors duration-200" href="#">Blog</a>
+<a class="font-body-md text-body-md font-label-md text-label-md text-on-surface-variant font-medium hover:text-secondary transition-colors duration-200" href="#">Hakkımızda</a>
+</nav>
+<!-- Actions -->
+<div class="flex items-center space-x-4">
+<button class="font-label-md text-label-md text-on-secondary bg-secondary hover:bg-on-secondary-fixed-variant transition-colors px-6 py-2.5 rounded-full flex items-center gap-2">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">call</span>
+                        Hemen Ara
+                    </button>
+<button class="font-label-md text-label-md text-secondary border border-secondary hover:bg-secondary-container transition-colors px-6 py-2.5 rounded-full flex items-center gap-2">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">chat</span>
+                        WhatsApp
+                    </button>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow">
+<!-- Breadcrumb & Hero Section -->
+<section class="bg-surface-container-lowest pt-stack-lg pb-section-padding px-margin-mobile md:px-margin-desktop border-b border-surface-container-high relative overflow-hidden">
+<!-- Background Texture -->
+<div class="absolute inset-0 opacity-5 pointer-events-none" style="background-image: radial-gradient(circle at 2px 2px, #001f28 1px, transparent 0); background-size: 32px 32px;"></div>
+<div class="max-w-container-max mx-auto relative z-10">
+<!-- Breadcrumb -->
+<nav aria-label="Breadcrumb" class="mb-8">
+<ol class="flex items-center text-label-md text-on-surface-variant">
+<li class="breadcrumb-item"><a class="hover:text-secondary transition-colors" href="#">Anasayfa</a></li>
+<li class="breadcrumb-item"><a class="hover:text-secondary transition-colors" href="#">Hizmet Bölgeleri</a></li>
+<li aria-current="page" class="breadcrumb-item text-secondary font-semibold">Kağıthane</li>
+</ol>
+</nav>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter items-center">
+<div>
+<h1 class="font-display-lg text-headline-lg-mobile md:text-display-lg font-bold text-primary mb-stack-md text-gradient">
+                            Kağıthane Tesisatçı | 7/24 Cihazlı ve Temiz Tesisat Hizmeti
+                        </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-stack-lg max-w-2xl">
+                            Kağıthane'nin tüm mahallelerinde, profesyonel ekibimizle kırmadan su kaçağı tespiti, robotla tıkanıklık açma ve tüm sıhhi tesisat arızalarında garantili ve güvenilir hizmet sunuyoruz. Yerel uzmanlığımızla en hızlı çözümü ayağınıza getiriyoruz.
+                        </p>
+<div class="flex flex-wrap gap-4">
+<a class="inline-flex items-center justify-center bg-primary text-on-primary font-label-md text-label-md px-8 py-4 rounded-lg hover:bg-secondary transition-colors group" href="tel:08500000000">
+<span class="material-symbols-outlined mr-2 group-hover:scale-110 transition-transform" style="font-variation-settings: 'FILL' 1;">call</span>
+                                Acil Usta Çağır
+                            </a>
+<a class="inline-flex items-center justify-center bg-surface border border-outline-variant text-on-surface font-label-md text-label-md px-8 py-4 rounded-lg hover:bg-surface-container-high transition-colors" href="#hizmetler">
+                                Hizmetleri İncele
+                            </a>
+</div>
+<!-- Trust Indicators -->
+<div class="mt-8 flex items-center gap-6 text-sm text-on-surface-variant font-medium">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">verified</span>
+                                Garantili Hizmet
+                            </div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">schedule</span>
+                                30 Dk'da Kapınızda
+                            </div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">handyman</span>
+                                Kırmadan Çözüm
+                            </div>
+</div>
+</div>
+<div class="relative h-[400px] lg:h-[500px] rounded-2xl overflow-hidden soft-shadow">
+<img class="w-full h-full object-cover" data-alt="A professional plumber in a clean, branded uniform working on a modern bathroom sink fixture in a bright, upscale home setting. The lighting is soft and natural, emphasizing a clean, reliable, and premium service aesthetic, aligned with a corporate modern light-mode design system. A neat toolkit rests nearby." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXROHpsb_0ShFS7c0dnlOKy3EOPIofJkje84hhQd4-GVB9XnCjMIzvrZ5X2q4OQoeCIPyWaz3MmqW5dvpXLrJFdnTFykO99M14x4XEavWa1lePcpoxQ1RARtwz9mE-z5kc-6hjlwrEmINiG6ZQfk-bl6DR5Hmds-z__QO83Co83C6IPwG5vra4scmUvZA2dYTTHzpEWf8qEWXwT-ItwBdInjlbzQCyoU4PtwA_aB4zzryg4oXqKVA-DA"/>
+<!-- Glass overlay stat -->
+<div class="absolute bottom-6 left-6 right-6 glass-panel p-4 rounded-xl flex items-center justify-between">
+<div>
+<p class="font-label-md text-label-md text-on-surface">Kağıthane'de Tamamlanan İş</p>
+<p class="font-headline-md text-headline-md text-secondary font-bold">2.450+</p>
+</div>
+<div class="bg-secondary text-on-secondary p-3 rounded-full">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">task_alt</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Neighborhood Service Areas (Bento Grid) -->
+<section class="py-section-padding px-margin-mobile md:px-margin-desktop bg-surface-container-low">
+<div class="max-w-container-max mx-auto">
+<div class="text-center mb-stack-lg max-w-3xl mx-auto">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg font-bold text-primary mb-stack-sm">Kağıthane Mahallelerine Özel Hizmet</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Kağıthane'nin her noktasına hızlı erişim sağlıyoruz. Size en yakın ekibimiz dakikalar içinde adresinizde.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest p-6 rounded-2xl border border-outline-variant hover-lift flex flex-col justify-between h-full">
+<div>
+<div class="flex items-center gap-3 mb-4 text-secondary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">location_on</span>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold">Çağlayan</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">Adliye çevresi ve konut alanlarında sık görülen su kaçağı ve tıkanıklık sorunlarına acil müdahale.</p>
+</div>
+<a class="inline-flex items-center text-secondary font-label-md text-label-md hover:text-on-secondary-fixed-variant transition-colors group" href="#">
+                            Detaylı İncele <span class="material-symbols-outlined ml-1 text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest p-6 rounded-2xl border border-outline-variant hover-lift flex flex-col justify-between h-full">
+<div>
+<div class="flex items-center gap-3 mb-4 text-secondary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">location_on</span>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold">Gültepe</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">Eski yapıların yoğun olduğu bölgede kırmadan cihazla tespit ve yenileme çalışmaları.</p>
+</div>
+<a class="inline-flex items-center text-secondary font-label-md text-label-md hover:text-on-secondary-fixed-variant transition-colors group" href="#">
+                            Detaylı İncele <span class="material-symbols-outlined ml-1 text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest p-6 rounded-2xl border border-outline-variant hover-lift flex flex-col justify-between h-full">
+<div>
+<div class="flex items-center gap-3 mb-4 text-secondary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">location_on</span>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold">Seyrantepe</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">Sanayi sitesi ve yeni konut projeleri için endüstriyel ve evsel tesisat çözümleri.</p>
+</div>
+<a class="inline-flex items-center text-secondary font-label-md text-label-md hover:text-on-secondary-fixed-variant transition-colors group" href="#">
+                            Detaylı İncele <span class="material-symbols-outlined ml-1 text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-container-lowest p-6 rounded-2xl border border-outline-variant hover-lift flex flex-col justify-between h-full">
+<div>
+<div class="flex items-center gap-3 mb-4 text-secondary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">location_on</span>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold">Talatpaşa</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">Yoğun yerleşim alanlarında hızlı petek temizliği ve batarya montaj hizmetleri.</p>
+</div>
+<a class="inline-flex items-center text-secondary font-label-md text-label-md hover:text-on-secondary-fixed-variant transition-colors group" href="#">
+                            Detaylı İncele <span class="material-symbols-outlined ml-1 text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+<!-- View All Callout -->
+<div class="md:col-span-2 lg:col-span-2 bg-primary-container text-on-primary-container p-6 rounded-2xl flex flex-col md:flex-row items-center justify-between">
+<div class="mb-4 md:mb-0 max-w-lg">
+<h3 class="font-headline-md text-headline-md font-bold mb-2 text-on-primary">Diğer Mahalleler</h3>
+<p class="font-body-md text-body-md text-on-primary-container">Ortabayır, Merkez, Şirintepe, Çeliktepe, Yahya Kemal ve Kağıthane'nin tüm diğer mahallelerine de aynı hız ve kaliteyle hizmet veriyoruz.</p>
+</div>
+<a class="whitespace-nowrap bg-on-primary text-primary font-label-md text-label-md px-6 py-3 rounded-lg hover:bg-surface-container-lowest transition-colors" href="#iletisim">
+                             Bölgemi Sorgula
+                         </a>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Available (Asymmetric List) -->
+<section class="py-section-padding px-margin-mobile md:px-margin-desktop bg-surface-container-lowest" id="hizmetler">
+<div class="max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-stack-lg border-b border-surface-container-high pb-6">
+<div class="max-w-2xl">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg font-bold text-primary mb-stack-sm">Kağıthane'de Sunduğumuz Hizmetler</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Bölgenin altyapı dinamiklerine hakim ustalarımızla en sık karşılaşılan sorunlara kalıcı çözümler.</p>
+</div>
+</div>
+<div class="space-y-6">
+<!-- Service Row 1 -->
+<div class="group flex flex-col md:flex-row items-center gap-8 p-6 rounded-2xl hover:bg-surface-container-low transition-colors border border-transparent hover:border-outline-variant">
+<div class="w-16 h-16 shrink-0 bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center rounded-xl">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">search</span>
+</div>
+<div class="flex-grow">
+<h3 class="font-headline-md text-headline-md font-semibold text-on-surface mb-2 group-hover:text-secondary transition-colors">Kırmadan Su Kaçağı Tespiti</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">Termal kamera ve akustik dinleme cihazları ile Kağıthane'deki evinizde hiçbir yeri kırmadan sızıntının noktasal yerini tespit ediyoruz.</p>
+</div>
+<div class="shrink-0">
+<a class="inline-flex p-3 rounded-full border border-outline-variant hover:bg-secondary hover:text-on-secondary hover:border-secondary transition-all" href="#">
+<span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Service Row 2 -->
+<div class="group flex flex-col md:flex-row items-center gap-8 p-6 rounded-2xl hover:bg-surface-container-low transition-colors border border-transparent hover:border-outline-variant">
+<div class="w-16 h-16 shrink-0 bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center rounded-xl">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">plumbing</span>
+</div>
+<div class="flex-grow">
+<h3 class="font-headline-md text-headline-md font-semibold text-on-surface mb-2 group-hover:text-secondary transition-colors">Robotla Tıkanıklık Açma</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">Lavabo, tuvalet, pimaş ve logar tıkanıklıklarını özel çelik yaylı robot cihazlarımızla etrafı kirletmeden garantili olarak açıyoruz.</p>
+</div>
+<div class="shrink-0">
+<a class="inline-flex p-3 rounded-full border border-outline-variant hover:bg-secondary hover:text-on-secondary hover:border-secondary transition-all" href="#">
+<span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Service Row 3 -->
+<div class="group flex flex-col md:flex-row items-center gap-8 p-6 rounded-2xl hover:bg-surface-container-low transition-colors border border-transparent hover:border-outline-variant">
+<div class="w-16 h-16 shrink-0 bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center rounded-xl">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">hvac</span>
+</div>
+<div class="flex-grow">
+<h3 class="font-headline-md text-headline-md font-semibold text-on-surface mb-2 group-hover:text-secondary transition-colors">Petek Temizliği ve Bakımı</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">Isınma sorunlarına son! Çift yönlü makineler ve kimyasal ilaçlar ile peteklerinizin içindeki çamuru temizleyerek verimi artırıyoruz.</p>
+</div>
+<div class="shrink-0">
+<a class="inline-flex p-3 rounded-full border border-outline-variant hover:bg-secondary hover:text-on-secondary hover:border-secondary transition-all" href="#">
+<span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Neden Bizi Seçmelisiniz? (Split Layout) -->
+<section class="py-section-padding px-margin-mobile md:px-margin-desktop bg-primary text-on-primary">
+<div class="max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg font-bold mb-stack-md text-on-primary">Neden Kağıthane'de Biz?</h2>
+<p class="font-body-lg text-body-lg text-on-primary-container mb-8">
+                         Tesisat sorunları ertelenemez. Yerel bir işletme olmanın avantajıyla, size en hızlı şekilde ulaşıyor ve profesyonel donanımımızla sorunu kökünden çözüyoruz.
+                     </p>
+<ul class="space-y-6">
+<li class="flex items-start gap-4">
+<div class="bg-primary-container p-2 rounded-lg mt-1">
+<span class="material-symbols-outlined text-secondary-container">speed</span>
+</div>
+<div>
+<h4 class="font-headline-md text-[20px] font-semibold text-on-primary">Bölgesel Hız Avantajı</h4>
+<p class="font-body-md text-body-md text-on-primary-container mt-1">Trafiğe takılmadan, Kağıthane içi çağrılara ortalama 30 dakikada intikal ediyoruz.</p>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<div class="bg-primary-container p-2 rounded-lg mt-1">
+<span class="material-symbols-outlined text-secondary-container">engineering</span>
+</div>
+<div>
+<h4 class="font-headline-md text-[20px] font-semibold text-on-primary">İleri Teknoloji Cihazlar</h4>
+<p class="font-body-md text-body-md text-on-primary-container mt-1">Geleneksel kırma-dökme yöntemleri yerine akustik dinleme ve termal görüntüleme kullanıyoruz.</p>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<div class="bg-primary-container p-2 rounded-lg mt-1">
+<span class="material-symbols-outlined text-secondary-container">workspace_premium</span>
+</div>
+<div>
+<h4 class="font-headline-md text-[20px] font-semibold text-on-primary">Garantili İşçilik</h4>
+<p class="font-body-md text-body-md text-on-primary-container mt-1">Yaptığımız onarımlara ve kullandığımız yedek parçalara yazılı garanti sunuyoruz.</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="relative h-[500px] rounded-2xl overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A close-up shot of a professional plumber's hands using a high-tech acoustic listening device on a clean, modern white wall to detect a water leak. The lighting is crisp and cool, emphasizing precision and modern technology in a premium residential setting. Corporate modern aesthetic, high contrast." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNj8-nN9KAEIkUZ1SD5IReHCG4iXuz03KsyVqZetwaha3BU2uTjrbp5D2AnhTEqj6mq5kGImSOf1xFvi-Zy0sAAdCe2rd_J98bTAD4BI5lV61Y6mVN5vw5dlprCH3_OUCVQVbgF8AMB7K1IwxZNU36zRLfotvbvPZ_ZOcjaFaNkcR8pVthnQ5ovG1bDAjXy7zl7RaOPvZUHeEXebnJpkLs0277H2GGpEzBxDU8cMPC1Nol8y1mgDOwFA"/>
+<!-- Overlay element -->
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent"></div>
+<div class="absolute bottom-8 left-8 right-8">
+<div class="bg-surface-container-lowest/10 backdrop-blur-md border border-surface-container-lowest/20 p-6 rounded-xl">
+<p class="font-body-lg text-body-lg text-on-primary italic mb-4">"Kağıthane Merkez'deki ofisimizin su tesisatı patladığında gece yarısı geldiler. Hiçbir yeri kırmadan cihazla bulup yarım saatte hallettiler. Kesinlikle tavsiye ederim."</p>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-primary-container rounded-full flex items-center justify-center font-bold text-on-primary">A.Y</div>
+<div class="font-label-md text-label-md text-on-primary-container">Ahmet Y. - Kağıthane Merkez</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact & Map -->
+<section class="py-section-padding px-margin-mobile md:px-margin-desktop bg-surface" id="iletisim">
+<div class="max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
+<!-- Contact Form -->
+<div class="bg-surface-container-lowest p-8 md:p-10 rounded-2xl soft-shadow border border-surface-container-high">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg font-bold text-primary mb-2">Hemen Servis Çağırın</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">Formu doldurun, size en kısa sürede dönüş yapalım veya acil durumlar için bizi hemen arayın.</p>
+<form action="#" class="space-y-6" method="POST">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-2" for="name">Ad Soyad</label>
+<input class="w-full h-12 bg-surface-container-low border-outline-variant rounded-lg focus:border-secondary focus:ring-secondary text-on-surface px-4 font-body-md" id="name" name="name" required="" type="text"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-2" for="phone">Telefon</label>
+<input class="w-full h-12 bg-surface-container-low border-outline-variant rounded-lg focus:border-secondary focus:ring-secondary text-on-surface px-4 font-body-md" id="phone" name="phone" required="" type="tel"/>
+</div>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-2" for="mahalle">Mahalle (Kağıthane)</label>
+<select class="w-full h-12 bg-surface-container-low border-outline-variant rounded-lg focus:border-secondary focus:ring-secondary text-on-surface px-4 font-body-md" id="mahalle" name="mahalle">
+<option value="">Seçiniz...</option>
+<option value="caglayan">Çağlayan</option>
+<option value="gultepe">Gültepe</option>
+<option value="seyrantepe">Seyrantepe</option>
+<option value="merkez">Merkez</option>
+<option value="diger">Diğer</option>
+</select>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-2" for="message">Sorununuz Kısaca Nedir?</label>
+<textarea class="w-full bg-surface-container-low border-outline-variant rounded-lg focus:border-secondary focus:ring-secondary text-on-surface px-4 py-3 font-body-md" id="message" name="message" rows="4"></textarea>
+</div>
+<button class="w-full bg-primary text-on-primary font-label-md text-label-md h-12 rounded-lg hover:bg-secondary transition-colors" type="submit">
+                            Servis Talebi Oluştur
+                        </button>
+</form>
+</div>
+<!-- Map & Direct Contact -->
+<div class="flex flex-col gap-8">
+<!-- Map Placeholder using data-location -->
+<div class="bg-surface-container-low rounded-2xl overflow-hidden h-[300px] border border-surface-container-high relative flex items-center justify-center">
+<div class="absolute inset-0 bg-surface-variant flex items-center justify-center" data-location="Kağıthane, Istanbul" style="">
+<div class="text-center text-on-surface-variant">
+<span class="material-symbols-outlined text-4xl mb-2">map</span>
+<p class="font-label-md">Harita Yükleniyor...</p>
+<p class="text-xs mt-1">Kağıthane, İstanbul</p>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+<div class="bg-surface-container-lowest p-6 rounded-xl border border-surface-container-high flex flex-col items-center text-center">
+<div class="w-12 h-12 bg-secondary-container rounded-full flex items-center justify-center text-on-secondary-container mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">call</span>
+</div>
+<h3 class="font-label-md text-label-md font-bold text-on-surface mb-1">Acil Tesisat Hattı</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">7/24 Kesintisiz Hizmet</p>
+<a class="font-headline-md text-[20px] font-bold text-secondary" href="tel:08500000000">0850 000 00 00</a>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl border border-surface-container-high flex flex-col items-center text-center">
+<div class="w-12 h-12 bg-secondary-container rounded-full flex items-center justify-center text-on-secondary-container mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">chat</span>
+</div>
+<h3 class="font-label-md text-label-md font-bold text-on-surface mb-1">WhatsApp Destek</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">Fotoğraf Gönderin</p>
+<a class="font-label-md text-label-md font-bold text-secondary bg-surface-container-low px-4 py-2 rounded-lg hover:bg-surface-container-highest transition-colors" href="#">Mesaj Gönder</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary-container dark:bg-primary-container full-width mt-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter py-section-padding px-margin-desktop max-w-container-max mx-auto">
+<!-- Brand Column -->
+<div class="flex flex-col space-y-4">
+<div class="font-headline-md text-headline-md font-bold text-on-primary">
+                    724 Tesisatçı
+                </div>
+<p class="font-body-md text-body-md font-label-md text-label-md text-on-primary-container opacity-80">
+                    © 2024 724 Tesisatçı. Tüm hakları saklıdır. Profesyonel Sıhhi Tesisat Çözümleri.
+                </p>
+</div>
+<!-- Links Columns -->
+<div class="flex flex-col space-y-2">
+<a class="font-body-md text-body-md font-label-md text-label-md text-on-primary-container opacity-80 hover:text-secondary-container transition-colors" href="#">Hizmetlerimiz</a>
+<a class="font-body-md text-body-md font-label-md text-label-md text-secondary-container hover:text-secondary-container transition-colors" href="#">Hizmet Bölgeleri</a>
+<a class="font-body-md text-body-md font-label-md text-label-md text-on-primary-container opacity-80 hover:text-secondary-container transition-colors" href="#">Blog</a>
+</div>
+<div class="flex flex-col space-y-2">
+<a class="font-body-md text-body-md font-label-md text-label-md text-on-primary-container opacity-80 hover:text-secondary-container transition-colors" href="#">Gizlilik Politikası</a>
+<a class="font-body-md text-body-md font-label-md text-label-md text-on-primary-container opacity-80 hover:text-secondary-container transition-colors" href="#">Kullanım Koşulları</a>
+<a class="font-body-md text-body-md font-label-md text-label-md text-on-primary-container opacity-80 hover:text-secondary-container transition-colors" href="#">İletişim</a>
+</div>
+<div class="flex flex-col space-y-2">
+<p class="font-label-md text-label-md text-on-primary mb-2">Kağıthane Merkez Şube</p>
+<p class="font-body-md text-body-md text-on-primary-container opacity-80 text-sm">Merkez Mah. Ayazma Cad.<br/>Kağıthane / İstanbul</p>
+</div>
+</div>
+</footer>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 pb-safe bg-surface border-t border-outline-variant bg-surface dark:bg-surface-container-high shadow-[0_-4px_12px_rgba(0,103,128,0.08)] md:hidden">
+<a class="flex flex-col items-center justify-center text-on-surface-variant font-label-md text-label-md active:bg-surface-container-highest" href="#">
+<span class="material-symbols-outlined mb-1">call</span>
+<span class="text-xs">Ara</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant font-label-md text-label-md active:bg-surface-container-highest" href="#">
+<span class="material-symbols-outlined mb-1">chat</span>
+<span class="text-xs">WhatsApp</span>
+</a>
+<!-- Assuming generic top-level intent, no specific active state here, acting as a general layout -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant font-label-md text-label-md active:bg-surface-container-highest" href="#">
+<span class="material-symbols-outlined mb-1">edit_note</span>
+<span class="text-xs">Talep</span>
+</a>
+</nav>
+<!-- Padding for mobile bottom nav -->
+<div class="h-20 md:hidden"></div>
+</body></html>

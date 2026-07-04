@@ -1,0 +1,128 @@
+import type { Config } from "tailwindcss";
+import forms from "@tailwindcss/forms";
+import containerQueries from "@tailwindcss/container-queries";
+
+const config: Config = {
+  darkMode: "class",
+  content: [
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
+  theme: {
+    extend: {
+      colors: {
+        "surface-container-lowest": "#ffffff",
+        outline: "#76777d",
+        "surface-tint": "#565e74",
+        "on-secondary-fixed": "#001f28",
+        "error-container": "#ffdad6",
+        primary: "#000000",
+        "on-secondary-container": "#006077",
+        "surface-container-highest": "#e0e3e5",
+        "primary-fixed": "#dae2fd",
+        "surface-container-high": "#e6e8ea",
+        "inverse-on-surface": "#eff1f3",
+        "on-primary-fixed-variant": "#3f465c",
+        "tertiary-container": "#331200",
+        "surface-dim": "#d8dadc",
+        "on-surface": "#191c1e",
+        "on-primary": "#ffffff",
+        "on-error": "#ffffff",
+        "on-surface-variant": "#45464d",
+        "secondary-fixed": "#b7eaff",
+        "on-error-container": "#93000a",
+        background: "#f7f9fb",
+        "secondary-fixed-dim": "#6cd3f7",
+        "on-secondary": "#ffffff",
+        "surface-variant": "#e0e3e5",
+        "primary-container": "#131b2e",
+        "surface-bright": "#f7f9fb",
+        "on-secondary-fixed-variant": "#004e61",
+        "on-background": "#191c1e",
+        secondary: "#006780",
+        "on-tertiary-fixed": "#331200",
+        "on-primary-fixed": "#131b2e",
+        "tertiary-fixed": "#ffdbca",
+        "on-tertiary-container": "#cf6721",
+        "inverse-primary": "#bec6e0",
+        "on-tertiary-fixed-variant": "#763300",
+        "on-primary-container": "#7c839b",
+        "inverse-surface": "#2d3133",
+        "secondary-container": "#76dcff",
+        "surface-container": "#eceef0",
+        "on-tertiary": "#ffffff",
+        "outline-variant": "#c6c6cd",
+        surface: "#f7f9fb",
+        "primary-fixed-dim": "#bec6e0",
+        "surface-container-low": "#f2f4f6",
+        "tertiary-fixed-dim": "#ffb68e",
+        tertiary: "#000000",
+        error: "#ba1a1a",
+      },
+      borderRadius: {
+        DEFAULT: "0.25rem",
+        lg: "0.5rem",
+        xl: "0.75rem",
+        full: "9999px",
+      },
+      spacing: {
+        "margin-mobile": "1.25rem",
+        "margin-desktop": "4rem",
+        gutter: "1.5rem",
+        "section-padding": "6rem",
+        "stack-md": "1rem",
+        "stack-sm": "0.5rem",
+        "stack-lg": "2rem",
+        "container-max": "1280px",
+      },
+      fontFamily: {
+        "body-lg": ["var(--font-inter)", "Inter", "sans-serif"],
+        "display-lg": ["var(--font-inter)", "Inter", "sans-serif"],
+        "label-md": ["var(--font-inter)", "Inter", "sans-serif"],
+        "headline-lg": ["var(--font-inter)", "Inter", "sans-serif"],
+        "headline-md": ["var(--font-inter)", "Inter", "sans-serif"],
+        "body-md": ["var(--font-inter)", "Inter", "sans-serif"],
+        "headline-lg-mobile": ["var(--font-inter)", "Inter", "sans-serif"],
+      },
+      fontSize: {
+        "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+        "display-lg": [
+          "48px",
+          {
+            lineHeight: "56px",
+            letterSpacing: "-0.02em",
+            fontWeight: "700",
+          },
+        ],
+        "label-md": [
+          "14px",
+          {
+            lineHeight: "20px",
+            letterSpacing: "0.05em",
+            fontWeight: "600",
+          },
+        ],
+        "headline-lg": [
+          "32px",
+          {
+            lineHeight: "40px",
+            letterSpacing: "-0.01em",
+            fontWeight: "600",
+          },
+        ],
+        "headline-md": ["24px", { lineHeight: "32px", fontWeight: "600" }],
+        "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+        "headline-lg-mobile": [
+          "28px",
+          { lineHeight: "36px", fontWeight: "600" },
+        ],
+      },
+      maxWidth: {
+        "container-max": "1280px",
+      },
+    },
+  },
+  plugins: [forms, containerQueries],
+};
+
+export default config;

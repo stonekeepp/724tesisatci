@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+
+<html lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>İletişim | 724 Tesisatçı</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-container": "#131b2e",
+                        "surface-variant": "#e0e3e5",
+                        "surface-bright": "#f7f9fb",
+                        "secondary": "#006780",
+                        "on-tertiary-fixed": "#331200",
+                        "on-secondary-fixed-variant": "#004e61",
+                        "on-background": "#191c1e",
+                        "on-tertiary-fixed-variant": "#763300",
+                        "inverse-primary": "#bec6e0",
+                        "tertiary-fixed": "#ffdbca",
+                        "on-primary-fixed": "#131b2e",
+                        "on-tertiary-container": "#cf6721",
+                        "on-primary-container": "#7c839b",
+                        "inverse-surface": "#2d3133",
+                        "surface": "#f7f9fb",
+                        "primary-fixed-dim": "#bec6e0",
+                        "outline-variant": "#c6c6cd",
+                        "surface-container": "#eceef0",
+                        "secondary-container": "#76dcff",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-low": "#f2f4f6",
+                        "tertiary-fixed-dim": "#ffb68e",
+                        "tertiary": "#000000",
+                        "error": "#ba1a1a",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-fixed": "#001f28",
+                        "outline": "#76777d",
+                        "surface-tint": "#565e74",
+                        "surface-container-highest": "#e0e3e5",
+                        "primary-fixed": "#dae2fd",
+                        "error-container": "#ffdad6",
+                        "primary": "#000000",
+                        "on-secondary-container": "#006077",
+                        "tertiary-container": "#331200",
+                        "surface-container-high": "#e6e8ea",
+                        "on-primary-fixed-variant": "#3f465c",
+                        "inverse-on-surface": "#eff1f3",
+                        "on-surface": "#191c1e",
+                        "surface-dim": "#d8dadc",
+                        "secondary-fixed": "#b7eaff",
+                        "on-error-container": "#93000a",
+                        "on-primary": "#ffffff",
+                        "on-surface-variant": "#45464d",
+                        "on-error": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "secondary-fixed-dim": "#6cd3f7",
+                        "background": "#f7f9fb"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-sm": "0.5rem",
+                        "stack-lg": "2rem",
+                        "section-padding": "6rem",
+                        "stack-md": "1rem",
+                        "container-max": "1280px",
+                        "gutter": "1.5rem",
+                        "margin-mobile": "1.25rem",
+                        "margin-desktop": "4rem"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "label-md": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "600" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.fill {
+            font-variation-settings: 'FILL' 1;
+        }
+        
+        .soft-shadow {
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+        
+        .form-input-focus:focus {
+            border-color: theme('colors.secondary');
+            box-shadow: 0 0 0 1px theme('colors.secondary');
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<header class="bg-surface-container-lowest dark:bg-surface-container-lowest font-body-md text-body-md font-label-md text-label-md full-width top-0 sticky shadow-sm z-50">
+<div class="flex justify-between items-center h-20 px-margin-desktop max-w-container-max mx-auto w-full bg-surface-container-lowest border-b border-outline-variant">
+<div class="font-headline-md text-headline-md font-bold text-primary dark:text-primary">
+                724 Tesisatçı
+            </div>
+<nav class="hidden md:flex items-center gap-stack-lg">
+<a class="text-on-surface-variant font-medium hover:text-secondary transition-colors duration-200" href="#">Hizmetlerimiz</a>
+<a class="text-on-surface-variant font-medium hover:text-secondary transition-colors duration-200" href="#">Hizmet Bölgeleri</a>
+<a class="text-on-surface-variant font-medium hover:text-secondary transition-colors duration-200" href="#">Blog</a>
+<a class="text-on-surface-variant font-medium hover:text-secondary transition-colors duration-200" href="#">Hakkımızda</a>
+</nav>
+<div class="hidden md:flex items-center gap-stack-sm">
+<button class="font-label-md text-label-md bg-transparent text-secondary border border-secondary px-6 py-2 rounded-lg hover:bg-secondary hover:text-on-secondary transition-colors">WhatsApp</button>
+<button class="font-label-md text-label-md bg-secondary text-on-secondary px-6 py-2 rounded-lg hover:bg-on-secondary-container transition-colors shadow-sm">Hemen Ara</button>
+</div>
+</div>
+</header>
+<main class="flex-grow pb-32 md:pb-0">
+<!-- Hero Section -->
+<section class="py-section-padding px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto text-center">
+<h1 class="font-display-lg text-display-lg md:font-display-lg md:text-display-lg text-primary mb-stack-sm">Bize Ulaşın</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Acil tesisat ihtiyaçlarınız, periyodik bakım talepleriniz veya projeleriniz için 7/24 profesyonel ekibimizle hizmetinizdeyiz.</p>
+</section>
+<!-- Contact Methods Grid -->
+<section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-section-padding">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Phone -->
+<div class="bg-surface-container-lowest rounded-xl p-8 border border-outline-variant/30 soft-shadow text-center flex flex-col items-center group hover:-translate-y-1 transition-transform duration-300">
+<div class="w-16 h-16 rounded-full bg-primary-fixed flex items-center justify-center mb-stack-md group-hover:bg-secondary-container transition-colors">
+<span class="material-symbols-outlined text-[32px] text-primary group-hover:text-on-secondary-container">call</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-stack-sm">Acil Servis Hattı</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-stack-md">7 gün 24 saat kesintisiz hizmet.</p>
+<a class="font-headline-md text-headline-md text-secondary font-bold hover:underline" href="tel:08500000000">0850 000 00 00</a>
+</div>
+<!-- WhatsApp -->
+<div class="bg-surface-container-lowest rounded-xl p-8 border border-outline-variant/30 soft-shadow text-center flex flex-col items-center group hover:-translate-y-1 transition-transform duration-300">
+<div class="w-16 h-16 rounded-full bg-primary-fixed flex items-center justify-center mb-stack-md group-hover:bg-secondary-container transition-colors">
+<span class="material-symbols-outlined text-[32px] text-primary group-hover:text-on-secondary-container">chat</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-stack-sm">WhatsApp Destek</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-stack-md">Fotoğraf gönderin, anında fiyat alın.</p>
+<a class="font-label-md text-label-md bg-surface text-on-surface border border-outline-variant px-6 py-2 rounded-lg hover:bg-surface-variant transition-colors mt-auto" href="#">Mesaj Gönder</a>
+</div>
+<!-- Email -->
+<div class="bg-surface-container-lowest rounded-xl p-8 border border-outline-variant/30 soft-shadow text-center flex flex-col items-center group hover:-translate-y-1 transition-transform duration-300">
+<div class="w-16 h-16 rounded-full bg-primary-fixed flex items-center justify-center mb-stack-md group-hover:bg-secondary-container transition-colors">
+<span class="material-symbols-outlined text-[32px] text-primary group-hover:text-on-secondary-container">mail</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-stack-sm">E-posta İletişim</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-stack-md">Proje ve işbirlikleri için.</p>
+<a class="font-body-md text-body-md text-secondary font-medium hover:underline mt-auto" href="mailto:info@724tesisatci.com">info@724tesisatci.com</a>
+</div>
+</div>
+</section>
+<!-- Split Layout: Form & Map/Info -->
+<section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-section-padding">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-stack-lg lg:gap-section-padding">
+<!-- Request Form -->
+<div class="bg-surface-container-lowest rounded-xl p-8 border border-outline-variant/30 soft-shadow">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-stack-sm">Servis Talep Formu</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-stack-lg">Size en hızlı şekilde yardımcı olabilmemiz için lütfen formu eksiksiz doldurun.</p>
+<form class="space-y-stack-md">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-stack-md">
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-2">Ad Soyad</label>
+<input class="w-full h-12 bg-surface border-outline-variant rounded-lg px-4 form-input-focus font-body-md text-body-md" placeholder="Adınız Soyadınız" type="text"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-2">Telefon Numarası</label>
+<input class="w-full h-12 bg-surface border-outline-variant rounded-lg px-4 form-input-focus font-body-md text-body-md" placeholder="05XX XXX XX XX" type="tel"/>
+</div>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-2">İlçe / Mahalle</label>
+<input class="w-full h-12 bg-surface border-outline-variant rounded-lg px-4 form-input-focus font-body-md text-body-md" placeholder="Örn: Kağıthane, Merkez Mah." type="text"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-2">Hizmet Türü</label>
+<select class="w-full h-12 bg-surface border-outline-variant rounded-lg px-4 form-input-focus font-body-md text-body-md text-on-surface">
+<option>Su Kaçağı Tespiti</option>
+<option>Tıkanıklık Açma</option>
+<option>Petek Temizliği</option>
+<option>Klozet Tamiri</option>
+<option>Diğer</option>
+</select>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-2">Arıza Açıklaması</label>
+<textarea class="w-full bg-surface border-outline-variant rounded-lg px-4 py-3 form-input-focus font-body-md text-body-md h-32 resize-none" placeholder="Lütfen sorunu kısaca açıklayın..."></textarea>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-2">Fotoğraf Yükle (İsteğe Bağlı)</label>
+<div class="border-2 border-dashed border-outline-variant rounded-lg p-6 text-center hover:bg-surface-variant/50 transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-outline text-[32px] mb-2">cloud_upload</span>
+<p class="font-body-md text-body-md text-on-surface-variant">Arızanın fotoğrafını yüklemek için tıklayın veya sürükleyin.</p>
+</div>
+</div>
+<button class="w-full h-12 bg-secondary text-on-secondary font-label-md text-label-md rounded-lg hover:bg-on-secondary-container transition-colors shadow-md mt-stack-md" type="button">Talebi Gönder</button>
+</form>
+</div>
+<!-- Info & Map -->
+<div class="flex flex-col gap-stack-lg">
+<!-- Location Info -->
+<div class="bg-surface-container-lowest rounded-xl p-8 border border-outline-variant/30 soft-shadow">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-stack-md">Merkez Şube</h2>
+<div class="flex items-start gap-4 mb-stack-sm">
+<span class="material-symbols-outlined text-secondary mt-1">location_on</span>
+<div>
+<p class="font-label-md text-label-md text-primary mb-1">Adres</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Merkez Mahallesi, Tesisat Sokak No: 12<br/>Kağıthane / İstanbul</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary mt-1">schedule</span>
+<div>
+<p class="font-label-md text-label-md text-primary mb-1">Çalışma Saatleri</p>
+<p class="font-body-md text-body-md text-on-surface-variant font-medium text-secondary">7 Gün 24 Saat Açık</p>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm mt-1">Acil müdahale ekiplerimiz sürekli sahada hazırdır.</p>
+</div>
+</div>
+</div>
+<!-- Map Placeholder -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden border border-outline-variant/30 soft-shadow h-64 md:h-full min-h-[300px] relative">
+<div class="bg-cover bg-center w-full h-full absolute inset-0" data-alt="A clean, modern top-down satellite map view of Istanbul, Turkey, focusing on the Kagithane district. The map uses a sophisticated light-mode color palette with soft grays, crisp whites, and subtle blue accents for water bodies. No labels, highly abstract, premium corporate UI styling." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC0X7h9XvfA7G94JZ-s28Y0o8DPG_tkizFMYAEUqwiCTbNbZKExlkWDNkNZ6v712Z3ZqAFhsLZ3tBsNlqecawFEQjAP96cv2kbhmMPqDxWzvfdCDvZ63DFm15De4QGHVAbNwGSN6Z64_7ZBVxx2M3tKHtyZCtn0bOhkFc3J3IYEWxbsO_QZOE8DV-lxoLBZjI0SQbMfPxXsNrQWYuu-XoYN-rQWLg2imtWdsJ_4F4tc1d28Zksv6-_tjg')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/80 to-transparent flex items-end p-6">
+<button class="bg-surface text-on-surface font-label-md text-label-md px-4 py-2 rounded-lg border border-outline-variant shadow-sm hover:bg-surface-variant flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px]">directions</span>
+                                Yol Tarifi Al
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 pb-safe bg-surface border-t border-outline-variant shadow-[0_-4px_12px_rgba(0,103,128,0.08)] font-label-md text-label-md text-secondary">
+<a class="flex flex-col items-center justify-center text-on-surface-variant active:bg-surface-container-highest rounded-xl px-4 py-1" href="#">
+<span class="material-symbols-outlined mb-1">call</span>
+<span>Ara</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant active:bg-surface-container-highest rounded-xl px-4 py-1" href="#">
+<span class="material-symbols-outlined mb-1">chat</span>
+<span>WhatsApp</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-secondary-container text-on-secondary-container rounded-xl px-4 py-1 scale-98 transition-all" href="#">
+<span class="material-symbols-outlined fill mb-1">edit_note</span>
+<span>Talep</span>
+</a>
+</nav>
+<!-- Footer -->
+<footer class="bg-primary-container dark:bg-primary-container font-body-md text-body-md font-label-md text-label-md full-width pb-24 md:pb-0">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter py-section-padding px-margin-desktop max-w-container-max mx-auto bg-primary-container">
+<div class="col-span-1 md:col-span-2">
+<div class="font-headline-md text-headline-md font-bold text-on-primary mb-stack-md">724 Tesisatçı</div>
+<p class="text-on-primary-container opacity-80 mb-stack-lg max-w-sm">Profesyonel Sıhhi Tesisat Çözümleri. Güvenilir, hızlı ve garantili hizmet anlayışıyla 7/24 yanınızdayız.</p>
+<div class="text-on-primary-container opacity-80 text-sm">
+                    © 2024 724 Tesisatçı. Tüm hakları saklıdır.
+                </div>
+</div>
+<div class="col-span-1">
+<h4 class="font-label-md text-label-md text-on-primary mb-stack-md">Bağlantılar</h4>
+<ul class="space-y-stack-sm">
+<li><a class="text-on-primary-container opacity-80 hover:text-secondary-container transition-colors" href="#">Hizmetlerimiz</a></li>
+<li><a class="text-on-primary-container opacity-80 hover:text-secondary-container transition-colors" href="#">Hizmet Bölgeleri</a></li>
+<li><a class="text-on-primary-container opacity-80 hover:text-secondary-container transition-colors" href="#">Blog</a></li>
+<li><a class="text-on-primary-container opacity-80 hover:text-secondary-container transition-colors" href="#">İletişim</a></li>
+</ul>
+</div>
+<div class="col-span-1">
+<h4 class="font-label-md text-label-md text-on-primary mb-stack-md">Yasal</h4>
+<ul class="space-y-stack-sm">
+<li><a class="text-on-primary-container opacity-80 hover:text-secondary-container transition-colors" href="#">Gizlilik Politikası</a></li>
+<li><a class="text-on-primary-container opacity-80 hover:text-secondary-container transition-colors" href="#">Kullanım Koşulları</a></li>
+</ul>
+</div>
+</div>
+</footer>
+</body></html>

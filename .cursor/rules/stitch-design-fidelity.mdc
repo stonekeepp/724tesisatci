@@ -1,0 +1,49 @@
+---
+description: Stitch HTML mockup tasarımına bire bir sadakat — görsel/layout değişikliği yasak
+alwaysApply: true
+---
+
+# Stitch Tasarım Sadakati (Zorunlu)
+
+724 Tesisatçı sitesinde **görsel tasarım Stitch export HTML dosyalarından bire bir aynı kalır**. Renk, font, spacing, layout, section sırası, className'ler ve görseller değiştirilmez.
+
+## Kaynak dosyalar
+
+Proje kökündeki Stitch klasörleri (`Ana sayfa/code.html`, `hakk_m_zda_.../code.html`, vb.) tek tasarım referansıdır. `plumbing_excellence_system/DESIGN.md` token referansıdır; Stitch HTML ile çelişirse **Stitch HTML kazanır**.
+
+## Yapılabilir (sadece altyapı)
+
+- `href="#"` → Next.js `Link` / gerçek route
+- Form submit → API bağlantısı
+- `generateMetadata`, JSON-LD, sitemap
+- Mock data / repository katmanı
+- Admin CMS (Stitch mockup'ı yok)
+
+## Yapılamaz
+
+- Section ekleme, çıkarma veya sadeleştirme
+- Generic şablonla sayfa-specific Stitch layout'unu değiştirme
+- Renk, font, spacing token veya Tailwind class değiştirme
+- Placeholder ikon/gri kutu ile Stitch görselinin yerine geçme
+- "Benzer" veya "yaklaşık" layout — **bire bir port** gerekir
+
+## Port prosedürü
+
+1. İlgili `**/code.html` dosyasını aç
+2. `<main>` içeriğini (header/footer hariç) className'leri koruyarak TSX'e çevir
+3. Görseller: HTML'deki `src` / `background-image` URL'lerini aynen kullan (`data/mock/images.ts`)
+4. Stitch'te olmayan sayfa için en yakın mockup klonlanır; yine bire bir
+
+## Route → Stitch eşlemesi
+
+| Route | Stitch klasörü |
+|---|---|
+| `/` | `Ana sayfa` |
+| `/hizmetler` | `i_stanbul_tesisat_hizmetleri_724_tesisat` |
+| `/hizmetler/[slug]` | Her hizmetin kendi klasörü |
+| `/hizmet-bolgeleri` | `hizmet_b_lgeleri_724_tesisat_servis_a` |
+| `/hizmet-bolgeleri/kagithane` | `ka_thane_tesisat_724_tesisat` |
+| `/hakkimizda` | `hakk_m_zda_724_tesisat_profesyonel_servis` |
+| `/iletisim` | `i_leti_im_724_tesisat_servis_talebi` |
+| `/sss` | `s_k_a_sorulan_sorular_724_tesisat_bilgi_bankas` |
+| `/blog` | `tesisat_blog_724_tesisat_uzman_yaz_lar` |
