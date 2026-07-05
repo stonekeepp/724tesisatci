@@ -118,8 +118,8 @@ export default async function HizmetlerPage() {
             <div className="absolute inset-0 bg-secondary/5 rounded-2xl transform translate-x-4 translate-y-4" />
             <StitchImage
               src={pageImages.hizmetlerHero}
-              alt="İstanbul geneli profesyonel tesisat hizmetleri — su kaçağı tespiti, tıkanıklık açma ve kombi servisi"
-              className="relative w-full h-[380px] md:h-[480px] object-cover rounded-2xl soft-shadow border border-outline-variant z-10"
+              alt="İstanbul geneli profesyonel tesisat çözümleri — mobil servis ekibi"
+              className="relative w-full h-[380px] md:h-[480px] object-cover object-[center_40%] rounded-2xl soft-shadow border border-outline-variant z-10"
             />
           </div>
         </div>

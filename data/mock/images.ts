@@ -2,10 +2,8 @@
 
 export const pageImages = {
   homeHero: "/images/home-hero.png",
-  hizmetlerHero:
-    "https://lh3.googleusercontent.com/aida-public/AB6AXuAdp0hKM6252200tvGfJI78EvJsepIL7VY1Q-t6ryffPStjmjIouvHmt6Coo09tswbQavAj6kkKaEKsmTFxK01USV82fXri7GB1G8VfeKHXQPnB_6qwIm9qDighA-ylv_lYIVDj2U5Jm1MI981RsybDToKKSxGVHQUP53x1FXMqXx3uD-ChGbYM5s1F4l_vbWyKdPpwX_ZpqXuYXP9rj_0LgXw-q108VROT-l0FwWoxCpPxmp8YdWG1xA",
-  hizmetlerHeroBg:
-    "https://lh3.googleusercontent.com/aida-public/AB6AXuAdp0hKM6252200tvGfJI78EvJsepIL7VY1Q-t6ryffPStjmjIouvHmt6Coo09tswbQavAj6kkKaEKsmTFxK01USV82fXri7GB1G8VfeKHXQPnB_6qwIm9qDighA-ylv_lYIVDj2U5Jm1MI981RsybDToKKSxGVHQUP53x1FXMqXx3uD-ChGbYM5s1F4l_vbWyKdPpwX_ZpqXuYXP9rj_0LgXw-q108VROT-l0FwWoxCpPxmp8YdWG1xA",
+  hizmetlerHero: "/images/hizmetler-hero.png",
+  hizmetlerHeroBg: "/images/hizmetler-hero.png",
   hizmetBolgeleriHero: "/images/hizmet-bolgeleri-hero.png",
   istanbulMap:
     "https://lh3.googleusercontent.com/aida-public/AB6AXuCjEmqurxC1OPVoLXANZLy214MDCvtCu9SIwBwjgsyd3j2rEP_TbioALqkj85EJ-oR3K0wakMmjac-3VY8xB25phHWzOe3Sd6IwckURyssBkUdIFXpOXStgQ7ySdabLyIimkG3PSkz8bK8kUx5g0ucNGhfjd3wdguyPxqVdLOEQEd5BMbSO_NfJUFU_5fPgaDcX9OrSn23z1Z1_mh3ic8IxR5Zt3n6H35Sg_Ezl2JYM0jNVry9_G5v3iw",
