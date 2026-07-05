@@ -46,7 +46,7 @@ export function HeaderNav({ activePath }: HeaderNavProps) {
   }, [closeMenus]);
 
   return (
-    <nav ref={navRef} className="hidden md:flex gap-6 items-center">
+    <nav ref={navRef} className="hidden md:flex gap-8 lg:gap-10 items-center">
       {navigation.header.map((item) => {
         const active = isNavActive(item, activePath);
         const hasChildren = Boolean(item.children?.length);

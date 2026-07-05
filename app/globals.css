@@ -55,25 +55,27 @@
   box-shadow: 0 0 0 1px theme("colors.secondary");
 }
 
-.material-symbols-outlined {
-  font-family: "Material Symbols Outlined";
-  font-weight: normal;
-  font-style: normal;
-  font-size: 24px;
-  line-height: 1;
-  letter-spacing: normal;
-  text-transform: none;
-  display: inline-block;
-  white-space: nowrap;
-  word-wrap: normal;
-  direction: ltr;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
-}
+@layer base {
+  .material-symbols-outlined {
+    font-family: "Material Symbols Outlined";
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+  }
 
-.material-symbols-outlined.fill {
-  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;
+  .material-symbols-outlined.fill {
+    font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;
+  }
 }
 
 .accordion-content {
@@ -84,4 +86,43 @@
 
 .accordion-content.open {
   max-height: 500px;
+}
+
+@layer components {
+  .accordion-toggle-icon {
+    position: relative;
+    display: inline-grid;
+    place-items: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 9999px;
+    flex-shrink: 0;
+  }
+
+  .accordion-toggle-icon::before,
+  .accordion-toggle-icon::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 1px;
+    background-color: currentColor;
+    transform: translate(-50%, -50%);
+  }
+
+  .accordion-toggle-icon::before {
+    width: 0.75rem;
+    height: 2px;
+  }
+
+  .accordion-toggle-icon::after {
+    width: 2px;
+    height: 0.75rem;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+
+  .accordion-toggle-icon.is-open::after {
+    transform: translate(-50%, -50%) scaleY(0);
+    opacity: 0;
+  }
 }

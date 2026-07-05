@@ -32,8 +32,8 @@ export function SSSPageClient({ faqs }: SSSPageClientProps) {
             <h1 className="font-display-lg text-headline-lg-mobile md:text-display-lg text-primary mb-4">
               Sıkça Sorulan Sorular
             </h1>
-            <p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
-              Tesisat hizmetleri hakkında merak ettiğiniz soruların cevapları.
+            <p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto leading-relaxed">
+              İstanbul genelinde su kaçağı tespiti, tıkanıklık açma, petek temizleme, kombi servisi, fiyatlandırma, garanti ve acil müdahale konularında en çok merak edilen soruların yanıtları.
             </p>
           </div>
 
@@ -57,9 +57,16 @@ export function SSSPageClient({ faqs }: SSSPageClientProps) {
             </nav>
 
             <div className="lg:col-span-3">
-              <div id={activeCategory}>
-                <FAQAccordion items={categoryFaqs} />
-              </div>
+              {faqCategories.map((cat) => (
+                <div
+                  key={cat.id}
+                  id={cat.id}
+                  className={activeCategory === cat.id ? "block" : "hidden"}
+                  aria-hidden={activeCategory !== cat.id}
+                >
+                  <FAQAccordion items={faqs.filter((f) => f.category === cat.id)} />
+                </div>
+              ))}
               {categoryFaqs.some((f) => f.relatedPage) && (
                 <div className="mt-8 pt-8 border-t border-outline-variant">
                   <p className="font-body-md text-body-md text-on-surface-variant mb-4">

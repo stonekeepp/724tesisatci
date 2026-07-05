@@ -27,9 +27,9 @@ export const staticPageSeo: Record<string, SEOData> = {
     canonicalPath: "/blog",
   },
   sss: {
-    title: "Sıkça Sorulan Sorular | 724 Tesisatçı",
+    title: "SSS | İstanbul Tesisat — Su Kaçağı, Tıkanıklık, Kombi | 724 Tesisatçı",
     description:
-      "Tesisat hizmetleri, fiyatlandırma, su kaçağı ve tıkanıklık hakkında sık sorulan sorular ve cevapları.",
+      "724 Tesisatçı sık sorulan sorular: su kaçağı tespiti, tıkanıklık açma, petek temizleme, kombi servisi, fiyatlandırma, garanti, acil müdahale ve İstanbul geneli 7/24 servis hakkında kapsamlı yanıtlar.",
     canonicalPath: "/sss",
   },
   hakkimizda: {

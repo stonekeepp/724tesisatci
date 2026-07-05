@@ -55,17 +55,18 @@ export function FAQAccordion({ items, variant = "default" }: FAQAccordionProps) 
                 {item.question}
               </span>
               <span
-                className={`material-symbols-outlined shrink-0 transition-transform duration-200 ${
+                className={`shrink-0 transition-colors duration-200 ${
                   isPremium
-                    ? `w-8 h-8 rounded-full flex items-center justify-center text-lg ${
+                    ? `accordion-toggle-icon ${
                         isOpen
-                          ? "bg-secondary text-on-secondary rotate-0"
+                          ? "is-open bg-secondary text-on-secondary"
                           : "bg-secondary-container text-secondary"
                       }`
-                    : "text-secondary"
+                    : "material-symbols-outlined text-secondary"
                 }`}
+                aria-hidden="true"
               >
-                {isOpen ? "remove" : "add"}
+                {!isPremium && (isOpen ? "remove" : "add")}
               </span>
             </button>
             <div className={`accordion-content ${isOpen ? "open" : ""}`}>

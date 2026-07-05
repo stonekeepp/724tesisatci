@@ -119,6 +119,7 @@ const config: Config = {
       },
       maxWidth: {
         "container-max": "1280px",
+        "header-max": "1440px",
       },
     },
   },
