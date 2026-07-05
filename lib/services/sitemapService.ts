@@ -12,8 +12,6 @@ export async function generateSitemapEntries() {
   const staticPages = [
     "/",
     ...Object.values(staticPageSeo).map((s) => s.canonicalPath),
-    "/hizmet-bolgeleri/istanbul",
-    "/hizmet-bolgeleri/kagithane",
     "/hizmet-bolgeleri/kagithane-mahalleleri",
   ];
 
@@ -55,5 +53,10 @@ export async function generateSitemapEntries() {
     })),
   ];
 
-  return entries;
+  const seen = new Set<string>();
+  return entries.filter((entry) => {
+    if (seen.has(entry.url)) return false;
+    seen.add(entry.url);
+    return true;
+  });
 }

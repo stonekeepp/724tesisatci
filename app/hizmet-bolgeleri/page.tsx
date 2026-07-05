@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { SiteLayout } from "@/components/layout/SiteLayout";
+import { ContextualLinks } from "@/components/ui/ContextualLinks";
 import { getDistrictLocations, getLocationBySlug } from "@/data/mock/locations";
 import { getNeighborhoodsByDistrict } from "@/lib/services/neighborhoodService";
 import { buildMetadata } from "@/lib/services/seoService";
@@ -11,6 +12,7 @@ import {
   getWhatsAppHref,
   siteSettings,
 } from "@/data/mock/siteSettings";
+import { primaryHubLinks } from "@/lib/utils/internalLinks";
 
 export const metadata = buildMetadata(staticPageSeo["hizmet-bolgeleri"]);
 
@@ -190,9 +192,30 @@ export default async function HizmetBolgeleriPage() {
               İstanbul Geneli Detay
               <span className="material-symbols-outlined text-sm" aria-hidden="true">arrow_forward</span>
             </Link>
+            <div className="mt-8 flex flex-wrap justify-center gap-4">
+              <Link
+                href="/hizmetler"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-on-primary rounded-xl font-label-md hover:bg-primary-container transition-colors"
+              >
+                Tüm Hizmetlerimiz
+                <span className="material-symbols-outlined text-sm" aria-hidden="true">arrow_forward</span>
+              </Link>
+              <Link
+                href="/blog"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-surface text-primary border border-outline-variant rounded-xl font-label-md hover:bg-surface-variant transition-colors"
+              >
+                Tesisat Blog
+              </Link>
+            </div>
           </div>
         </section>
       )}
+
+      <section className="py-section-padding bg-surface-container-low px-margin-mobile md:px-margin-desktop">
+        <div className="max-w-container-max mx-auto">
+          <ContextualLinks title="Site genelinde gezinin" links={primaryHubLinks} />
+        </div>
+      </section>
     </SiteLayout>
   );
 }

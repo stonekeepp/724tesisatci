@@ -33,6 +33,14 @@ export function Footer() {
                   </Link>
                 </li>
               ))}
+              <li>
+                <Link
+                  href="/hizmetler"
+                  className="font-body-md text-body-md text-secondary-container hover:text-on-secondary-container transition-colors font-semibold"
+                >
+                  Tüm Hizmetler →
+                </Link>
+              </li>
             </ul>
           </div>
           <div>

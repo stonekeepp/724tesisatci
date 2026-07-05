@@ -2,6 +2,7 @@ import Link from "next/link";
 import { SiteLayout } from "@/components/layout/SiteLayout";
 import { JsonLdScript } from "@/components/seo/JsonLdScript";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
+import { ContextualLinks } from "@/components/ui/ContextualLinks";
 import { getSiteSettings } from "@/lib/services/settingsService";
 import { buildMetadata } from "@/lib/services/seoService";
 import {
@@ -20,6 +21,7 @@ import {
   homeValueProps,
 } from "@/data/mock/homeContent";
 import { getPhoneHref, getWhatsAppHref } from "@/data/mock/siteSettings";
+import { primaryHubLinks } from "@/lib/utils/internalLinks";
 
 export const metadata = buildMetadata(defaultSeo);
 
@@ -152,7 +154,14 @@ export default async function HomePage() {
               Deneyimli teknik ekibimizle su kaçağı tespiti, tıkanıklık açma, petek temizleme, pimaş yıkama, kombi, kalorifer ve doğalgaz tesisatı arızalarınız için hızlı, güvenilir ve profesyonel servis sunuyoruz.
             </p>
             <p className="font-body-md text-body-md text-on-surface-variant/80 italic">
-              Kağıthane merkezli ekiplerle İstanbul&apos;un 39 ilçesine aynı gün servis yönlendirmesi.
+              Kağıthane merkezli ekiplerle{" "}
+              <Link href="/hizmet-bolgeleri" className="text-secondary hover:text-primary transition-colors">
+                İstanbul&apos;un 39 ilçesine
+              </Link>{" "}
+              aynı gün servis yönlendirmesi.{" "}
+              <Link href="/hakkimizda" className="text-secondary hover:text-primary transition-colors">
+                Ekibimiz hakkında
+              </Link>
             </p>
             <div className="flex flex-wrap gap-4 pt-2">
               <Link
@@ -397,7 +406,13 @@ export default async function HomePage() {
                 <div className="pt-4 border-t border-outline-variant/40">
                   <p className="font-label-md text-label-md text-primary font-semibold">{review.name}</p>
                   <p className="font-body-md text-sm text-on-surface-variant">
-                    {review.district} · {review.service}
+                    <Link href={review.districtHref} className="hover:text-secondary transition-colors">
+                      {review.district}
+                    </Link>
+                    {" · "}
+                    <Link href={review.serviceHref} className="hover:text-secondary transition-colors">
+                      {review.service}
+                    </Link>
                   </p>
                 </div>
               </article>
@@ -432,6 +447,11 @@ export default async function HomePage() {
               <FAQAccordion items={homeFaqs} variant="premium" />
             </div>
           </div>
+          <ContextualLinks
+            title="Site genelinde gezinin"
+            links={primaryHubLinks}
+            className="mt-12 pt-8 border-t border-outline-variant/40"
+          />
         </div>
       </section>
 

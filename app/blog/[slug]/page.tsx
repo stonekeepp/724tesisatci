@@ -4,6 +4,7 @@ import { SiteLayout } from "@/components/layout/SiteLayout";
 import { Breadcrumb } from "@/components/layout/Breadcrumb";
 import { JsonLdScript } from "@/components/seo/JsonLdScript";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
+import { ContextualLinks } from "@/components/ui/ContextualLinks";
 import { getBlogPostBySlug } from "@/lib/services/blogService";
 import { getAllServices } from "@/lib/services/serviceService";
 import { getSiteSettings } from "@/lib/services/settingsService";
@@ -14,6 +15,8 @@ import {
   buildFAQSchema,
 } from "@/lib/services/schemaService";
 import { blogPosts } from "@/data/mock/blogPosts";
+import { getPhoneHref, getWhatsAppHref } from "@/data/mock/siteSettings";
+import { primaryHubLinks } from "@/lib/utils/internalLinks";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -64,6 +67,10 @@ export default async function BlogDetailPage({ params }: Props) {
   const relatedServices = allServices.filter((s) =>
     post.relatedServices.includes(s.slug)
   );
+  const relatedPosts = blogPosts
+    .filter((p) => p.status === "published" && p.slug !== post.slug)
+    .slice(0, 3);
+
   const settings = await getSiteSettings();
 
   const breadcrumbs = [
@@ -133,6 +140,59 @@ export default async function BlogDetailPage({ params }: Props) {
           </div>
         </section>
       )}
+
+      {relatedPosts.length > 0 && (
+        <section className="py-section-padding bg-surface-container-low px-margin-mobile md:px-margin-desktop">
+          <div className="max-w-container-max mx-auto max-w-3xl">
+            <h2 className="font-headline-lg text-headline-lg text-primary mb-6">
+              Diğer Yazılar
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              {relatedPosts.map((related) => (
+                <Link
+                  key={related.slug}
+                  href={related.canonicalPath}
+                  className="bg-surface-container-lowest rounded-xl p-4 border border-outline-variant hover:border-secondary transition-colors"
+                >
+                  <h3 className="font-headline-md text-sm text-primary line-clamp-2">
+                    {related.title}
+                  </h3>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      <section className="py-section-padding bg-primary-container px-margin-mobile md:px-margin-desktop text-center">
+        <div className="max-w-container-max mx-auto">
+          <h2 className="font-headline-lg text-headline-lg text-on-primary mb-4">
+            Profesyonel destek mi gerekiyor?
+          </h2>
+          <p className="font-body-md text-body-md text-on-primary-container mb-8 max-w-xl mx-auto">
+            İstanbul genelinde 7/24 tesisat ekibimiz yazılı teklif ve garantili işçilik ile hizmet verir.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4 mb-10">
+            <a
+              href={getPhoneHref(settings.phone)}
+              className="inline-flex items-center gap-2 px-8 py-4 bg-secondary text-on-secondary rounded-xl font-label-md hover:bg-on-secondary-container transition-colors shadow-lg"
+            >
+              Hemen Ara
+            </a>
+            <Link
+              href="/iletisim"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-surface text-primary rounded-xl font-label-md hover:bg-surface-variant transition-colors shadow-lg"
+            >
+              Servis Talebi
+            </Link>
+          </div>
+          <ContextualLinks
+            title="İlgili sayfalar"
+            links={primaryHubLinks}
+            className="[&_a]:bg-white/10 [&_a]:text-on-primary [&_a]:border-white/20 [&_a:hover]:bg-white/20"
+          />
+        </div>
+      </section>
     </SiteLayout>
   );
 }

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { SiteLayout } from "@/components/layout/SiteLayout";
 import { buildMetadata } from "@/lib/services/seoService";
 import { staticPageSeo } from "@/data/mock/seo";
@@ -41,6 +42,17 @@ export default function CerezPolitikasiPage() {
             <p>
               Çerez politikası hakkında sorularınız için info@724tesisatci.com adresinden bize ulaşabilirsiniz.
             </p>
+            <div className="flex flex-wrap gap-4 pt-6 border-t border-outline-variant">
+              <Link href="/gizlilik-politikasi" className="text-secondary font-label-md hover:text-primary transition-colors">
+                Gizlilik Politikası
+              </Link>
+              <Link href="/iletisim" className="text-secondary font-label-md hover:text-primary transition-colors">
+                İletişim
+              </Link>
+              <Link href="/" className="text-secondary font-label-md hover:text-primary transition-colors">
+                Ana Sayfa
+              </Link>
+            </div>
           </div>
         </div>
       </section>

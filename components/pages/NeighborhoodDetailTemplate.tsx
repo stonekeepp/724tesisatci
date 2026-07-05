@@ -184,6 +184,26 @@ export function NeighborhoodDetailTemplate({
           <p className="font-body-lg text-body-lg text-on-primary-container mb-8 max-w-2xl mx-auto">
             {neighborhood.title} mahallesinde 7/24 acil tesisat ekibimiz ortalama 15–30 dakika içinde adresinize ulaşır.
           </p>
+          <div className="flex flex-wrap justify-center gap-4 mb-8">
+            <Link
+              href="/hizmetler"
+              className="text-on-primary-container hover:text-secondary-container font-label-md transition-colors"
+            >
+              Tüm Hizmetler →
+            </Link>
+            <Link
+              href={district.canonicalPath}
+              className="text-on-primary-container hover:text-secondary-container font-label-md transition-colors"
+            >
+              {district.title} İlçe Sayfası →
+            </Link>
+            <Link
+              href="/sss"
+              className="text-on-primary-container hover:text-secondary-container font-label-md transition-colors"
+            >
+              SSS →
+            </Link>
+          </div>
           <a
             href={getPhoneHref(siteSettings.phone)}
             className="inline-flex items-center gap-2 px-8 py-4 bg-secondary text-on-secondary rounded-xl font-label-md hover:bg-on-secondary-container transition-colors shadow-lg"

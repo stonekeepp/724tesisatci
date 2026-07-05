@@ -1,13 +1,15 @@
 "use client";
 
-import { useState } from "react";
 import Link from "next/link";
+import { useState } from "react";
 import { SiteLayout } from "@/components/layout/SiteLayout";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
+import { ContextualLinks } from "@/components/ui/ContextualLinks";
 import { StitchImage } from "@/components/ui/StitchImage";
 import { faqCategories } from "@/data/mock/faqs";
 import { pageImages } from "@/data/mock/images";
 import { getPhoneHref, getWhatsAppHref, siteSettings } from "@/data/mock/siteSettings";
+import { getInternalLinkLabel, popularServiceLinks, primaryHubLinks } from "@/lib/utils/internalLinks";
 import type { FAQItem } from "@/types";
 
 interface SSSPageClientProps {
@@ -74,14 +76,24 @@ export function SSSPageClient({ faqs }: SSSPageClientProps) {
                       <Link
                         key={href}
                         href={href}
-                        className="text-secondary font-label-md hover:underline"
+                        className="px-4 py-2 rounded-full bg-secondary-container/30 text-secondary font-label-md hover:bg-secondary-container transition-colors"
                       >
-                        {href}
+                        {getInternalLinkLabel(href)}
                       </Link>
                     ))}
                   </div>
                 </div>
               )}
+              <ContextualLinks
+                title="Popüler hizmetler"
+                links={popularServiceLinks}
+                className="mt-8 pt-8 border-t border-outline-variant"
+              />
+              <ContextualLinks
+                title="Diğer sayfalar"
+                links={primaryHubLinks}
+                className="mt-8"
+              />
             </div>
           </div>
         </div>

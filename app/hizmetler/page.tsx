@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { SiteLayout } from "@/components/layout/SiteLayout";
+import { ContextualLinks } from "@/components/ui/ContextualLinks";
 import { getAllServices } from "@/lib/services/serviceService";
 import { buildMetadata } from "@/lib/services/seoService";
 import { staticPageSeo } from "@/data/mock/seo";
@@ -10,6 +11,7 @@ import {
   getWhatsAppHref,
   siteSettings,
 } from "@/data/mock/siteSettings";
+import { primaryHubLinks } from "@/lib/utils/internalLinks";
 
 export const metadata = buildMetadata(staticPageSeo.hizmetler);
 
@@ -235,7 +237,19 @@ export default async function HizmetlerPage() {
               Sık Sorulan Sorular
               <span className="material-symbols-outlined text-sm" aria-hidden="true">arrow_forward</span>
             </Link>
+            <Link
+              href="/hizmet-bolgeleri"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-surface text-primary border border-outline-variant rounded-xl font-label-md hover:bg-surface-variant transition-colors"
+            >
+              Hizmet Bölgeleri
+              <span className="material-symbols-outlined text-sm" aria-hidden="true">arrow_forward</span>
+            </Link>
           </div>
+          <ContextualLinks
+            title="Keşfedin"
+            links={primaryHubLinks}
+            className="mt-12 pt-8 border-t border-outline-variant/40"
+          />
         </div>
       </section>
     </SiteLayout>

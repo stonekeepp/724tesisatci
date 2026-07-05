@@ -1,8 +1,10 @@
 import Link from "next/link";
 import { SiteLayout } from "@/components/layout/SiteLayout";
+import { ContextualLinks } from "@/components/ui/ContextualLinks";
 import { getPublishedBlogPosts } from "@/lib/services/blogService";
 import { buildMetadata } from "@/lib/services/seoService";
 import { staticPageSeo } from "@/data/mock/seo";
+import { popularServiceLinks, primaryHubLinks } from "@/lib/utils/internalLinks";
 
 export const metadata = buildMetadata(staticPageSeo.blog);
 
@@ -60,6 +62,11 @@ export default async function BlogPage() {
               </article>
             ))}
           </div>
+          <ContextualLinks
+            title="Hizmetlerimiz ve kaynaklar"
+            links={[...popularServiceLinks, ...primaryHubLinks.slice(0, 4)]}
+            className="mt-16 pt-12 border-t border-outline-variant"
+          />
         </div>
       </section>
     </SiteLayout>

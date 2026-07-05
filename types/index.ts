@@ -8,6 +8,7 @@ export interface FAQItem {
   answer: string;
   category: string;
   relatedPage?: string;
+  relatedPageLabel?: string;
 }
 
 export interface SiteSettings {

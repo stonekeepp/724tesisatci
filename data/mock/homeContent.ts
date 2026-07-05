@@ -53,21 +53,27 @@ export const homeTestimonials = [
   {
     name: "Ayşe K.",
     district: "Kağıthane",
+    districtHref: "/hizmet-bolgeleri/kagithane",
     service: "Su Kaçağı Tespiti",
+    serviceHref: "/hizmetler/su-kacagi-tespit-ve-onarim",
     rating: 5,
     text: "Duvar arkasındaki gizli kaçağı termal kamera ile kırmadan buldular. Fiyatı önceden yazılı verdiler, iş sonrası alanı tertemiz bıraktılar. Kesinlikle tavsiye ederim.",
   },
   {
     name: "Mehmet Y.",
     district: "Beşiktaş",
+    districtHref: "/hizmet-bolgeleri/besiktas",
     service: "Tıkanıklık Açma",
+    serviceHref: "/hizmetler/tikaniklik-acma",
     rating: 5,
     text: "Gece yarısı tuvalet tıkanıklığı için aradım, 40 dakikada geldiler. Robot cihazla açtılar, tekrar etmedi. WhatsApp üzerinden hızlı randevu almak çok kolaydı.",
   },
   {
     name: "Elif S.",
     district: "Kadıköy",
+    districtHref: "/hizmet-bolgeleri/kadikoy",
     service: "Petek Temizleme",
+    serviceHref: "/hizmetler/petek-temizleme",
     rating: 5,
     text: "Petekler yarım ısınıyordu, temizlik sonrası fark gece gündüz. Kombi daha az çalışıyor, fatura düştü. Profesyonel ve güler yüzlü ekip.",
   },
@@ -80,6 +86,7 @@ export const homeFaqs: FAQItem[] = [
       "Kağıthane merkezli operasyonumuzla İstanbul'un 39 ilçesinde (Avrupa ve Anadolu Yakası) 7/24 tesisat hizmeti sunuyoruz. Hizmet bölgeleri sayfasından ilçe ve mahalle detaylarına ulaşabilirsiniz.",
     category: "genel",
     relatedPage: "/hizmet-bolgeleri",
+    relatedPageLabel: "Hizmet bölgelerimizi inceleyin",
   },
   {
     question: "Acil durumlarda ne kadar sürede adresime gelirsiniz?",
@@ -87,6 +94,7 @@ export const homeFaqs: FAQItem[] = [
       "Merkez ilçelere ortalama 30–45 dakika, İstanbul geneline 45–90 dakika içinde ulaşmayı hedefliyoruz. Su kaçağı ve geri taşma gibi acil vakalara öncelik verilir.",
     category: "genel",
     relatedPage: "/iletisim",
+    relatedPageLabel: "Servis talebi oluşturun",
   },
   {
     question: "Su kaçağı tespiti gerçekten kırmadan yapılabilir mi?",
@@ -94,6 +102,7 @@ export const homeFaqs: FAQItem[] = [
       "Evet. Termal kamera, akustik dinleme ve nem ölçer cihazlarımızla kaçak noktasını belirliyoruz. Onarım yalnızca tespit edilen bölgede minimum müdahale ile yapılır.",
     category: "su-kacagi",
     relatedPage: "/hizmetler/su-kacagi-tespit-ve-onarim",
+    relatedPageLabel: "Su kaçağı tespiti hizmeti",
   },
   {
     question: "Fiyat teklifi işlem öncesinde net olarak veriliyor mu?",
@@ -101,6 +110,7 @@ export const homeFaqs: FAQItem[] = [
       "Keşif ve cihazla tespit sonrası malzeme ve işçilik kalemlerini içeren yazılı fiyat teklifi sunulur. Onayınız alınmadan hiçbir işleme başlanmaz; gizli maliyet uygulanmaz.",
     category: "fiyatlandirma",
     relatedPage: "/iletisim",
+    relatedPageLabel: "Servis talebi oluşturun",
   },
   {
     question: "Hizmetleriniz garantili mi?",
@@ -135,6 +145,7 @@ export const homeFaqs: FAQItem[] = [
       "Standart keşiflerde ücret alınmaz. Onarım yapılması durumunda keşif bedeli işlem tutarından düşülür.",
     category: "fiyatlandirma",
     relatedPage: "/iletisim",
+    relatedPageLabel: "Servis talebi oluşturun",
   },
   {
     question: "WhatsApp veya telefon ile nasıl randevu alabilirim?",
@@ -142,5 +153,6 @@ export const homeFaqs: FAQItem[] = [
       "7/24 çağrı hattımızdan veya WhatsApp hattımızdan arıza detayını iletmeniz yeterli. Size en yakın mobil ekip yönlendirilir; dilerseniz online servis talebi formunu da kullanabilirsiniz.",
     category: "genel",
     relatedPage: "/iletisim",
+    relatedPageLabel: "Servis talebi oluşturun",
   },
 ];

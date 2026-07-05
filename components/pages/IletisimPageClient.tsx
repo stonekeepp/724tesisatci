@@ -1,14 +1,36 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import { SiteLayout } from "@/components/layout/SiteLayout";
+import { ContextualLinks } from "@/components/ui/ContextualLinks";
 import { siteSettings, getPhoneHref, getWhatsAppHref } from "@/data/mock/siteSettings";
 import { pageImages } from "@/data/mock/images";
 import { StitchImage } from "@/components/ui/StitchImage";
+import { popularServiceLinks, primaryHubLinks } from "@/lib/utils/internalLinks";
+import {
+  contactDistrictOptions,
+  formatContactLocation,
+  getContactNeighborhoodOptions,
+} from "@/data/mock/contactLocations";
+
+const selectClassName =
+  "w-full h-12 bg-surface border border-outline-variant rounded-lg px-4 form-input-focus font-body-md text-body-md appearance-none cursor-pointer";
 
 export function ContactForm() {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [errors, setErrors] = useState<Record<string, string[]>>({});
+  const [districtSlug, setDistrictSlug] = useState("");
+  const [neighborhood, setNeighborhood] = useState("");
+
+  const neighborhoodOptions = districtSlug
+    ? getContactNeighborhoodOptions(districtSlug)
+    : [];
+
+  function handleDistrictChange(value: string) {
+    setDistrictSlug(value);
+    setNeighborhood("");
+  }
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -20,7 +42,7 @@ export function ContactForm() {
     const payload = {
       fullName: formData.get("fullName") as string,
       phone: formData.get("phone") as string,
-      district: formData.get("district") as string,
+      district: formatContactLocation(districtSlug, neighborhood),
       serviceType: formData.get("serviceType") as string,
       description: formData.get("description") as string,
     };
@@ -39,6 +61,8 @@ export function ContactForm() {
       }
       setStatus("success");
       form.reset();
+      setDistrictSlug("");
+      setNeighborhood("");
     } catch {
       setStatus("error");
       setErrors({ general: ["Bağlantı hatası. Lütfen tekrar deneyin."] });
@@ -76,15 +100,48 @@ export function ContactForm() {
           <p className="text-error text-sm mt-1">{errors.phone[0]}</p>
         )}
       </div>
-      <div>
-        <label className="block font-label-md text-label-md text-on-surface mb-2">
-          İlçe / Mahalle
-        </label>
-        <input
-          name="district"
-          className="w-full h-12 bg-surface border-outline-variant rounded-lg px-4 form-input-focus font-body-md text-body-md border"
-          placeholder="Örn: Kağıthane, Merkez Mah."
-        />
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div>
+          <label htmlFor="district" className="block font-label-md text-label-md text-on-surface mb-2">
+            İlçe
+          </label>
+          <select
+            id="district"
+            name="districtSlug"
+            value={districtSlug}
+            onChange={(e) => handleDistrictChange(e.target.value)}
+            className={selectClassName}
+          >
+            <option value="">Seçiniz</option>
+            {contactDistrictOptions.map((district) => (
+              <option key={district.slug} value={district.slug}>
+                {district.title}
+              </option>
+            ))}
+          </select>
+        </div>
+        <div>
+          <label htmlFor="neighborhood" className="block font-label-md text-label-md text-on-surface mb-2">
+            Mahalle
+          </label>
+          <select
+            id="neighborhood"
+            name="neighborhood"
+            value={neighborhood}
+            onChange={(e) => setNeighborhood(e.target.value)}
+            className={selectClassName}
+            disabled={!districtSlug}
+          >
+            <option value="">
+              {districtSlug ? "Mahalle seçiniz" : "Önce ilçe seçiniz"}
+            </option>
+            {neighborhoodOptions.map((option) => (
+              <option key={option.value} value={option.value}>
+                {option.label}
+              </option>
+            ))}
+          </select>
+        </div>
       </div>
       <div>
         <label className="block font-label-md text-label-md text-on-surface mb-2">
@@ -148,7 +205,11 @@ export function IletisimPageClient() {
               İletişim
             </h1>
             <p className="font-body-lg text-body-lg text-on-surface-variant mb-8">
-              Servis talebi oluşturun veya doğrudan arayın. 7/24 acil tesisat desteği.
+              Servis talebi oluşturun veya doğrudan arayın. 7/24 acil tesisat desteği.{" "}
+              <Link href="/hizmet-bolgeleri/kagithane" className="text-secondary hover:text-primary transition-colors">
+                Kağıthane merkez
+              </Link>
+              {" "}operasyonumuzdan İstanbul geneline yönlendirme yapıyoruz.
             </p>
             <ContactForm />
           </div>
@@ -219,6 +280,17 @@ export function IletisimPageClient() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="py-section-padding bg-surface-container-low px-margin-mobile md:px-margin-desktop">
+        <div className="max-w-container-max mx-auto">
+          <ContextualLinks title="Popüler hizmetlerimiz" links={popularServiceLinks} />
+          <ContextualLinks
+            title="Site genelinde gezinin"
+            links={primaryHubLinks}
+            className="mt-10 pt-8 border-t border-outline-variant"
+          />
         </div>
       </section>
     </SiteLayout>

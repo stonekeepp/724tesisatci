@@ -271,23 +271,46 @@ function ServiceDetailBody({
                 </Link>
               ))}
             </div>
-            <div className="flex flex-wrap justify-center gap-4 mt-8">
-              <Link
-                href="/hizmet-bolgeleri/kagithane"
-                className="text-secondary font-label-md hover:text-on-secondary-container transition-colors"
-              >
-                Kağıthane Hizmet Bölgesi →
-              </Link>
-              <Link
-                href="/hizmet-bolgeleri/istanbul"
-                className="text-secondary font-label-md hover:text-on-secondary-container transition-colors"
-              >
-                İstanbul Hizmet Bölgeleri →
-              </Link>
-            </div>
           </div>
         </section>
       )}
+
+      <section className="py-8 bg-surface-bright px-margin-mobile md:px-margin-desktop">
+        <div className="max-w-container-max mx-auto">
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link
+              href="/hizmetler"
+              className="text-secondary font-label-md hover:text-on-secondary-container transition-colors"
+            >
+              Tüm Hizmetler →
+            </Link>
+            <Link
+              href="/hizmet-bolgeleri"
+              className="text-secondary font-label-md hover:text-on-secondary-container transition-colors"
+            >
+              Hizmet Bölgeleri →
+            </Link>
+            <Link
+              href="/hizmet-bolgeleri/kagithane"
+              className="text-secondary font-label-md hover:text-on-secondary-container transition-colors"
+            >
+              Kağıthane →
+            </Link>
+            <Link
+              href="/sss"
+              className="text-secondary font-label-md hover:text-on-secondary-container transition-colors"
+            >
+              SSS →
+            </Link>
+            <Link
+              href="/blog"
+              className="text-secondary font-label-md hover:text-on-secondary-container transition-colors"
+            >
+              Blog →
+            </Link>
+          </div>
+        </div>
+      </section>
 
       <section className="py-section-padding bg-primary-container text-on-primary">
         <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center">

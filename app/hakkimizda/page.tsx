@@ -174,7 +174,7 @@ export default async function HakkimizdaPage() {
                   <span
                     className="material-symbols-outlined text-[28px]"
                     style={
-                      item.filled
+                      "filled" in item && item.filled
                         ? { fontVariationSettings: "'FILL' 1" }
                         : undefined
                     }
@@ -311,6 +311,18 @@ export default async function HakkimizdaPage() {
           >
             <span className="material-symbols-outlined" aria-hidden="true">mail</span>
             Servis Talebi Oluştur
+          </Link>
+          <Link
+            href="/blog"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-surface text-primary border border-outline-variant rounded-xl font-label-md hover:bg-surface-variant transition-colors"
+          >
+            Tesisat Blog
+          </Link>
+          <Link
+            href="/sss"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-surface text-primary border border-outline-variant rounded-xl font-label-md hover:bg-surface-variant transition-colors"
+          >
+            Sık Sorulan Sorular
           </Link>
           <a
             href={getPhoneHref(settings.phone)}

@@ -15,7 +15,7 @@ export const staticPageSeo: Record<string, SEOData> = {
     canonicalPath: "/hizmetler",
   },
   "hizmet-bolgeleri": {
-    title: "İstanbul Tesisatçı Hizmet Bölgeleri | 39 İlçe 7/24 — 724 Tesisatçı",
+    title: "İstanbul İlçe Listesi | 39 İlçede 7/24 Tesisat — 724 Tesisatçı",
     description:
       "İstanbul'un 39 ilçesinde 7/24 tesisat hizmeti. Kağıthane merkez operasyon, 19 mahalle, Avrupa ve Anadolu Yakası'na hızlı mobil ekip yönlendirmesi.",
     canonicalPath: "/hizmet-bolgeleri",

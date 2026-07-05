@@ -292,7 +292,7 @@ export const istanbulCityLocation: Location = {
       category: "istanbul",
     },
   ],
-  seoTitle: "İstanbul Tesisatçı Hizmeti | 39 İlçe 7/24 — 724 Tesisatçı",
+  seoTitle: "İstanbul Geneli Tesisatçı | Avrupa & Anadolu 7/24 — 724 Tesisatçı",
   seoDescription:
     "İstanbul'un 39 ilçesinde 7/24 tesisatçı hizmeti. Su kaçağı, tıkanıklık, petek temizleme, kombi servisi. Kağıthane merkez operasyon, cihazlı tespit, garantili işçilik.",
   canonicalPath: "/hizmet-bolgeleri/istanbul",

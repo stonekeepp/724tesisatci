@@ -2,8 +2,8 @@ import type { SiteSettings } from "@/types";
 
 export const siteSettings: SiteSettings = {
   siteName: "724 Tesisatçı",
-  phone: "+905321234567",
-  whatsapp: "+905321234567",
+  phone: "+90 530 241 20 50",
+  whatsapp: "+90 530 241 20 50",
   whatsappMessage:
     "Merhaba, tesisat hizmeti hakkında bilgi almak istiyorum.",
   email: "info@724tesisatci.com",

@@ -220,6 +220,19 @@ export function DistrictDetailTemplate({
             <div className="max-w-3xl mx-auto">
               <FAQAccordion items={location.faq} variant="premium" />
             </div>
+            <p className="text-center mt-8 font-body-md text-body-md text-on-surface-variant">
+              <Link href="/hizmetler" className="text-secondary font-label-md hover:text-primary transition-colors">
+                Tüm hizmetlerimiz
+              </Link>
+              {" · "}
+              <Link href="/sss" className="text-secondary font-label-md hover:text-primary transition-colors">
+                SSS
+              </Link>
+              {" · "}
+              <Link href="/blog" className="text-secondary font-label-md hover:text-primary transition-colors">
+                Blog
+              </Link>
+            </p>
           </div>
         </section>
       )}
@@ -231,7 +244,7 @@ export function DistrictDetailTemplate({
               Diğer İstanbul İlçeleri
             </h2>
             <div className="flex flex-wrap justify-center gap-2">
-              {otherDistricts.slice(0, 20).map((d) => (
+              {otherDistricts.map((d) => (
                 <Link
                   key={d.slug}
                   href={d.canonicalPath}
