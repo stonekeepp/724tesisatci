@@ -1,9 +1,9 @@
 import type { SEOData } from "@/types";
 
 export const defaultSeo: SEOData = {
-  title: "İstanbul Geneli 7/24 Tesisatçı Hizmeti | 724 Tesisatçı",
+  title: "İstanbul Geneli 7/24 Tesisatçı | Su Kaçağı, Tıkanıklık, Kombi — 724 Tesisatçı",
   description:
-    "İstanbul genelinde 7/24 profesyonel tesisatçı hizmeti. Su kaçağı tespiti, tıkanıklık açma, petek temizleme, kombi servisi ve daha fazlası. Kırmadan, cihazla tespit.",
+    "İstanbul genelinde 7/24 profesyonel tesisat hizmeti. Su kaçağı tespiti, tıkanıklık açma, petek temizleme, kombi servisi, pimaş yıkama ve doğalgaz tesisatı. Cihazlı tespit, yazılı teklif, garantili işçilik, aynı gün servis.",
   canonicalPath: "/",
 };
 
