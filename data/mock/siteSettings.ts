@@ -8,6 +8,7 @@ export const siteSettings: SiteSettings = {
     "Merhaba, tesisat hizmeti hakkında bilgi almak istiyorum.",
   email: "info@724tesisatci.com",
   address: "Merkez Mahallesi, Tesisat Sokak No: 12, Kağıthane / İstanbul",
+  mapsDestination: "Merkez Mahallesi, Kağıthane, İstanbul",
   city: "İstanbul",
   workingHours: "7/24 Acil Servis",
 };
@@ -22,4 +23,10 @@ export function getWhatsAppHref(
 ): string {
   const number = whatsapp.replace(/[^0-9]/g, "");
   return `https://wa.me/${number}?text=${encodeURIComponent(message)}`;
+}
+
+export function getMapsDirectionsHref(
+  destination: string = siteSettings.mapsDestination
+): string {
+  return `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(destination)}`;
 }

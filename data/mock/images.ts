@@ -6,6 +6,7 @@ export const pageImages = {
     "https://lh3.googleusercontent.com/aida-public/AB6AXuAdp0hKM6252200tvGfJI78EvJsepIL7VY1Q-t6ryffPStjmjIouvHmt6Coo09tswbQavAj6kkKaEKsmTFxK01USV82fXri7GB1G8VfeKHXQPnB_6qwIm9qDighA-ylv_lYIVDj2U5Jm1MI981RsybDToKKSxGVHQUP53x1FXMqXx3uD-ChGbYM5s1F4l_vbWyKdPpwX_ZpqXuYXP9rj_0LgXw-q108VROT-l0FwWoxCpPxmp8YdWG1xA",
   hizmetlerHeroBg:
     "https://lh3.googleusercontent.com/aida-public/AB6AXuAdp0hKM6252200tvGfJI78EvJsepIL7VY1Q-t6ryffPStjmjIouvHmt6Coo09tswbQavAj6kkKaEKsmTFxK01USV82fXri7GB1G8VfeKHXQPnB_6qwIm9qDighA-ylv_lYIVDj2U5Jm1MI981RsybDToKKSxGVHQUP53x1FXMqXx3uD-ChGbYM5s1F4l_vbWyKdPpwX_ZpqXuYXP9rj_0LgXw-q108VROT-l0FwWoxCpPxmp8YdWG1xA",
+  hizmetBolgeleriHero: "/images/hizmet-bolgeleri-hero.png",
   istanbulMap:
     "https://lh3.googleusercontent.com/aida-public/AB6AXuCjEmqurxC1OPVoLXANZLy214MDCvtCu9SIwBwjgsyd3j2rEP_TbioALqkj85EJ-oR3K0wakMmjac-3VY8xB25phHWzOe3Sd6IwckURyssBkUdIFXpOXStgQ7ySdabLyIimkG3PSkz8bK8kUx5g0ucNGhfjd3wdguyPxqVdLOEQEd5BMbSO_NfJUFU_5fPgaDcX9OrSn23z1Z1_mh3ic8IxR5Zt3n6H35Sg_Ezl2JYM0jNVry9_G5v3iw",
   kagithaneHero:
@@ -17,13 +18,15 @@ export const pageImages = {
   hakkimizdaServiceMap: "/images/hakkimizda-service-map.png",
   hakkimizdaTeam:
     "https://lh3.googleusercontent.com/aida-public/AB6AXuDCIOlqPpoM-k6-4h1-Ju1aFE4SYcHY7bkPRviY5zWimOjG476gfnXobylrdRgXqpdsMOQPngr3m5EBkCZMnZoljlnKIi-zQReqHSZ_MNednBH7NDGTFfJc3FrtaYvUcmZNEAifte48q449HhDVg73VdNlkjbWGhLUlbQvjW8xuIi2c5nu6q6EfbOXu9fDgtr5wBHSDMFsl0DDQDo3yvCG91fi6_Cr_pHugTB7bX3chUMyvMUENOreq8A",
-  iletisimMap:
-    "https://lh3.googleusercontent.com/aida-public/AB6AXuC0X7h9XvfA7G94JZ-s28Y0o8DPG_tkizFMYAEUqwiCTbNbZKExlkWDNkNZ6v712Z3ZqAFhsLZ3tBsNlqecawFEQjAP96cv2kbhmMPqDxWzvfdCDvZ63DFm15De4QGHVAbNwGSN6Z64_7ZBVxx2M3tKHtyZCtn0bOhkFc3J3IYEWxbsO_QZOE8DV-lxoLBZjI0SQbMfPxXsNrQWYuu-XoYN-rQWLg2imtWdsJ_4F4tc1d28Zksv6-_tjg",
+  iletisimMap: "/images/iletisim-kagithane-merkez-map.png",
   sssCta:
     "https://lh3.googleusercontent.com/aida-public/AB6AXuBznL5vkpIw0o5_M_-3nU6odpu1XtfjwjyJtJNFJ-rHDlgu343LhrYkXRrsB7_X1QMW1VGiX6-lbWbYzFhZzNLN-xfpUDU5E7at_RVjKagPne5iFcHQSGxHygzn2riX4TJQgRFJHp5UEP_VCfuhuVVko6zOlaeWeliElw7wKNB6vOUOaj8lVHpLiev-bGtp2ujnMcuFB4HJ6BrQevA8OX1urKddiJYQ_aGNWrEmQYELbgsEsiedQUI3Hg",
 } as const;
 
-export const serviceHeroImages: Record<string, { src: string; alt: string; variant?: "default" | "dark" }> = {
+export const serviceHeroImages: Record<
+  string,
+  { src: string; alt: string; variant?: "default" | "dark"; imageClassName?: string }
+> = {
   "su-tesisati": {
     src: "https://lh3.googleusercontent.com/aida-public/AB6AXuDz9iXBWaIPpbcJSdk0IT6zIA-NfMGKgZlMI4ElKFgGILwsxGeqVaseGZAolynEYnzjLEpQQKxESXxHee1Tayde0vLaYRWTvi1i61ujca4J4u2LQCAcI3wAXj313ZQR3tx7e1NOrordrRv8smz1a-KqjlLo8k4RbR7DH2VgzOugnHIJy1Iau6HoVTUepdJHF25OQp-S2X5WowJDvlU-ug5n6V00xESlejNlpdyZ5U3uKJopcxZnBKnylQ",
     alt: "Profesyonel su tesisatı kurulumu",
@@ -33,8 +36,9 @@ export const serviceHeroImages: Record<string, { src: string; alt: string; varia
     alt: "Kombi servisi ve tesisat kurulumu",
   },
   "kalorifer-tesisati": {
-    src: "https://lh3.googleusercontent.com/aida-public/AB6AXuDbdTuF_zXBzbmNDjoDwZUIdT8_UvuTEGkxrkP9ZtKTCbUVXI2HHE2A2nORpeZZ4cL429RBtzAkeATBp_XPRhTu9hXb3Bh29heg6UNbboO-wIzFofdYPWmFoC-m8TtywoXjqJa3EPlXETSk1Rfa73kpfU8R7Ux43yBhnVmPA-gp5M1iCJhDKMcz0BotcLy2cNPNpzuTq7kIhiD0Tou9-nfMF81U3A74Fc_FuKUbS3jBG5h99NExY_bcbA",
-    alt: "Kalorifer tesisatı termal görüntüleme",
+    src: "/images/kalorifer-tesisati-hero.png",
+    alt: "Kalorifer tesisatı kurulumu — radyatör boru bağlantısı",
+    imageClassName: "object-cover object-center",
   },
   "su-kacagi-tespit-ve-onarim": {
     src: "https://lh3.googleusercontent.com/aida-public/AB6AXuAPpZ7yp-v-DIqPvKzKJd6wSSKZ14tyffvxCp7c494fsSu5SVodEqLcD3ok9sE9DbkccyHuv7IpberAuRX_zr8xXJ-6ys01TSUb2IXN0V7wQNSjecm9t6LnGzb6qVmIHAsLPWT9QrTKphMof_phVAA_ABWj4-joCjdfiNZbk-K_8ZBLdKNzGj-WA5V3r0qUaTbgRC4P1kU9De-zyxmA7bPG8TU-dpdcWfmOVm1yJLSWRMzcYmjIVdatEQ",
@@ -53,8 +57,9 @@ export const serviceHeroImages: Record<string, { src: string; alt: string; varia
     alt: "Kameralı tesisat görüntüleme",
   },
   "pimas-tesisati": {
-    src: "https://lh3.googleusercontent.com/aida-public/AB6AXuBuA6pwckSo8qdApTM6ZaKK9hjNl1-BsEQF4p0Z9nuoGhy-5G6t-jkydoU87hhKtrp86q54dUFVQggCSGbPFGTfxA7zqkP-eOXBKNyNaZmdP6KDHedglaC9cF7CfKkFA-baCOKFQUuui-szRvZl3lmGLZ9BhkDrGJLQQz0F08-q6A10UrjnLultpuXLmbLQbYA8_E8XPBzVkTjmL8O056XFgB9K3gy1QsYfcSG1TbeiPQYymxkzI1XhUw",
-    alt: "Pimaş tesisatı kurulum ve onarım",
+    src: "/images/pimas-tesisati-hero.png",
+    alt: "Pimaş tesisatı kurulumu — PVC gider borusu montajı",
+    imageClassName: "object-cover object-center",
   },
   "dogalgaz-tesisati": {
     src: "https://lh3.googleusercontent.com/aida-public/AB6AXuD4QLlN-gZZ0tKHo-JqNR7q-KixshtbT3_MQbEsbGQjK-3N1vPzcKjtkRIzdIOU2onEPPjOu6roJXLRXs20hpOp3Opn0bQnM9U_4OFZjZ3ziuNzFV1Deo9-jGcGyh_vtfddppfuvBnlIvzSruGK6GFDi6SS2TpDAWIFtNFM_zS2GnDwbEp3qTVn1n50ZeFU_McudLESi_ohi_k9y1N7TdN7xVPduqTwt06hB_O0RkZh33spIa_krdYndA",
@@ -63,6 +68,14 @@ export const serviceHeroImages: Record<string, { src: string; alt: string; varia
   "pimas-yikama": {
     src: "https://lh3.googleusercontent.com/aida-public/AB6AXuDQmjt3NEgWXnMK9YatotsW4oBDwaCXfN6C0w-k0Bf9jxqzLjl2-bJhbqcsBvBG3uOKtfpZyKH7wTtLiyeMj5YebyXjj_msf-z8LTwfGz4n1gkJITrA7DNsDWTN4E56LXGeb5UhYL4t0lhpSJCqSFuC4u_DdHmndMa3cNE0EKUOQpZ-OUZLCrNuZCyj2-AVgCsVQXDKd4OFx72ukjRTtbyGkmB-3nyyRCgCLEkrQepowr4IQxVbYhXkxQ",
     alt: "Pimaş yıkama robotik kamera sistemi",
+  },
+  "gomme-rezervuar-tamiri": {
+    src: "/images/gomme-rezervuar-hero.png",
+    alt: "Gömme rezervuar tamiri — duvar içi rezervuar mekanizma onarımı",
+  },
+  "batarya-musluk-montaj": {
+    src: "/images/batarya-musluk-hero.png",
+    alt: "Batarya ve musluk montaj — mutfak ve banyo armatür kurulumu",
   },
 };
 

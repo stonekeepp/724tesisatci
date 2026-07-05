@@ -16,6 +16,8 @@ export const ALL_SERVICE_SLUGS = [
   "pimas-tesisati",
   "dogalgaz-tesisati",
   "pimas-yikama",
+  "gomme-rezervuar-tamiri",
+  "batarya-musluk-montaj",
 ] as const;
 
 export function getLocationHeroPath(slug: string): string {

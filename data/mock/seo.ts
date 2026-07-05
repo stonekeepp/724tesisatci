@@ -3,7 +3,7 @@ import type { SEOData } from "@/types";
 export const defaultSeo: SEOData = {
   title: "İstanbul Geneli 7/24 Tesisatçı | Su Kaçağı, Tıkanıklık, Kombi — 724 Tesisatçı",
   description:
-    "İstanbul genelinde 7/24 profesyonel tesisat hizmeti. Su kaçağı tespiti, tıkanıklık açma, petek temizleme, kombi servisi, pimaş yıkama ve doğalgaz tesisatı. Cihazlı tespit, yazılı teklif, garantili işçilik, aynı gün servis.",
+    "İstanbul genelinde 7/24 profesyonel tesisat hizmeti. Su kaçağı tespiti, tıkanıklık açma, petek temizleme, kombi servisi, gömme rezervuar tamiri, batarya musluk montaj, pimaş yıkama ve doğalgaz tesisatı. Cihazlı tespit, yazılı teklif, garantili işçilik, aynı gün servis.",
   canonicalPath: "/",
 };
 
@@ -11,7 +11,7 @@ export const staticPageSeo: Record<string, SEOData> = {
   hizmetler: {
     title: "İstanbul Tesisat Hizmetleri | Su Kaçağı, Tıkanıklık, Kombi — 724 Tesisatçı",
     description:
-      "İstanbul genelinde 10 uzmanlık alanında premium tesisat hizmeti: su kaçağı tespiti, tıkanıklık açma, petek temizleme, kombi servisi, pimaş yıkama ve doğalgaz tesisatı. Cihazlı tespit, yazılı teklif, garantili işçilik, 7/24 acil servis.",
+      "İstanbul genelinde 12 uzmanlık alanında premium tesisat hizmeti: su kaçağı tespiti, tıkanıklık açma, petek temizleme, kombi servisi, gömme rezervuar tamiri, batarya musluk montaj, pimaş yıkama ve doğalgaz tesisatı. Cihazlı tespit, yazılı teklif, garantili işçilik, 7/24 acil servis.",
     canonicalPath: "/hizmetler",
   },
   "hizmet-bolgeleri": {

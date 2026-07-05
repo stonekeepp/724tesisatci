@@ -38,7 +38,7 @@ export const services: Service[] = [
       { title: "Banyo/Mutfak Yenileme", description: "Anahtar teslim tesisat yenileme: gider bağlantıları, temiz su hatları, duş ve klozet montajı dahil komple çözüm." },
     ],
     faq: getServiceFaq("su-tesisati"),
-    relatedServices: ["su-kacagi-tespit-ve-onarim", "tikaniklik-acma", "kamerali-tesisat-goruntuleme-ve-onarim"],
+    relatedServices: ["su-kacagi-tespit-ve-onarim", "batarya-musluk-montaj", "gomme-rezervuar-tamiri"],
     relatedLocations: ["istanbul", "kagithane"],
     seoTitle: "İstanbul Su Tesisatı Tamir ve Yenileme | 724 Tesisatçı",
     seoDescription: "İstanbul su tesisatı tamir, yenileme, vana-musluk onarımı ve banyo-mutfak tesisatı. PPRC-bakır boru, basınç testi, yazılı teklif. 7/24 acil su tesisatçı.",
@@ -423,6 +423,91 @@ export const services: Service[] = [
     seoTitle: "İstanbul Pimaş Yıkama ve Gider Temizliği | 724 Tesisatçı",
     seoDescription: "İstanbul pimaş yıkama ve gider temizliği. 150 bar basınçlı su, kameralı kontrol, kalıcı çözüm. Restoran ve site hatları için periyodik bakım.",
     canonicalPath: "/hizmetler/pimas-yikama",
+  },
+  {
+    id: "11",
+    title: "Gömme Rezervuar Tamiri",
+    slug: "gomme-rezervuar-tamiri",
+    shortDescription:
+      "Geberit, Vitra, ECA ve tüm marka gömme rezervuar arıza tespiti, iç takım değişimi, sızıntı onarımı ve montaj. Sürekli su akması, zayıf sifon ve klozet arkası nem sorunlarına kalıcı çözüm.",
+    longDescription:
+      "Gömme rezervuar sistemleri modern banyolarda estetik ve alan tasarrufu sağlar; ancak iç mekanizma arızaları, contasız bağlantılar veya yanlış montaj ciddi su israfına ve duvar içi kaçaklara yol açabilir. Rezervuar kapağı arkasında nem, zayıf sifon sesi, sürekli su akışı veya klozet taşması en sık görülen belirtilerdir.\n\n724 Tesisatçı olarak İstanbul genelinde tüm marka gömme rezervuarlarda arıza tespiti, iç takım (sifon mekanizması, doldurma ventili, contalar) değişimi, sızıntı onarımı ve yeni montaj hizmetleri sunuyoruz. Duvar içi hat bağlantılarını kontrol ediyor, gereksiz kırım yapmadan erişilebilir noktalardan müdahale ediyoruz.\n\nGömme rezervuardan kaynaklanan gizli su kaçakları yüksek su faturası ve komşu dairelere sızıntı riski oluşturur. Erken müdahale hem maliyeti düşürür hem de duvar içi yapısal hasarı önler. İşlem öncesi yazılı teklif sunuyor, kullanılan parçaların marka bilgisini servis formuna işliyoruz.\n\nGeberit, Vitra, ECA, Kale ve diğer marka gömme rezervuar tamiri için Kağıthane merkezli ekiplerimizle İstanbul'un 39 ilçesinde 7/24 servis veriyoruz. Acil sızıntı, zayıf sifon veya mekanizma arızalarında hemen arayın veya WhatsApp üzerinden randevu oluşturun.",
+    aboutHighlights: [
+      "Geberit, Vitra, ECA ve tüm marka gömme rezervuar servisi",
+      "İç takım, conta ve doldurma ventili değişimi",
+      "Gizli sızıntılarda termal kamera destekli tespit",
+      "Minimum kırım ile duvar içi bağlantı onarımı",
+    ],
+    wideCard: true,
+    heroTitle: "İstanbul Gömme Rezervuar Tamiri ve Montaj",
+    heroDescription:
+      "Tüm marka gömme rezervuar arıza tespiti, iç takım değişimi, sızıntı onarımı ve montaj. Sürekli su akması, zayıf sifon ve duvar arkası nem sorunlarına 7/24 acil müdahale.",
+    icon: "plumbing",
+    symptoms: [
+      { title: "Sürekli Su Akışı", description: "Rezervuar dolduktan sonra bile su akıyorsa doldurma ventili veya sifon contası arızalıdır. Günde onlarca litre su israfına ve yüksek faturaya yol açar.", icon: "water_drop" },
+      { title: "Zayıf veya Çalışmayan Sifon", description: "Sifon tuşuna basıldığında su az geliyor veya hiç gelmiyorsa mekanizma kırılmış veya bağlantı gevşemiş olabilir. Erken müdahale tam arızayı önler.", icon: "plumbing" },
+      { title: "Duvar Arkasında Nem", description: "Gömme rezervuar kapağı çevresinde nem, küf veya koku duvar içi sızıntıya işaret eder. Termal kamera ile kaçak noktası tespit edilebilir.", icon: "water_damage" },
+      { title: "Klozet Taşması", description: "Taşma veya geri basma durumunda tıkanıklık veya rezervuar debisi uyumsuzluğu olabilir. Robotik tıkanıklık açma ile birlikte kalıcı çözüm sağlanır.", icon: "water_damage" },
+    ],
+    processSteps: [
+      { step: 1, title: "Arıza Tespiti", description: "Gömme rezervuar kapağı açılarak iç mekanizma, doldurma ventili, sifon contası ve duvar bağlantıları kontrol edilir. Su akış testi yapılır." },
+      { step: 2, title: "Parça Değişimi / Onarım", description: "Arızalı iç takım, conta veya ventil orijinal veya eşdeğer kaliteli parça ile değiştirilir. Bağlantı noktaları sıkılarak sızdırmazlık sağlanır." },
+      { step: 3, title: "Sızıntı Kontrolü", description: "Duvar içi hat ve rezervuar gövdesi su testi ile kontrol edilir. Gizli kaçak şüphesinde termal kamera ile ek inceleme yapılır." },
+      { step: 4, title: "Test ve Garanti", description: "Sifon, doldurma ve debi testleri tamamlanır. Servis formu düzenlenir, işçilik garantisi teslim edilir." },
+    ],
+    methods: [
+      { title: "İç Takım Değişimi", description: "Sifon mekanizması, doldurma ventili, yüzen vanalar ve contaların marka uyumlu parçalarla değişimi. Geberit, Vitra, ECA ve diğer markalarda uzman uygulama." },
+      { title: "Sızıntı Onarımı", description: "Rezervuar-duvar bağlantı contaları, gider bağlantısı ve doldurma hattı sızıntılarının tespiti ve onarımı. Minimum müdahale ile kalıcı çözüm." },
+      { title: "Yeni Montaj", description: "Banyo tadilatı veya yenileme projelerinde gömme rezervuar montajı, klozet bağlantısı ve basınç testi. Standartlara uygun güvenli kurulum." },
+    ],
+    faq: getServiceFaq("gomme-rezervuar-tamiri"),
+    relatedServices: ["su-tesisati", "tikaniklik-acma", "su-kacagi-tespit-ve-onarim"],
+    relatedLocations: ["istanbul", "kagithane"],
+    seoTitle: "İstanbul Gömme Rezervuar Tamiri | Geberit, Vitra, ECA — 724 Tesisatçı",
+    seoDescription: "İstanbul gömme rezervuar tamiri ve montaj. Geberit, Vitra, ECA iç takım değişimi, sızıntı onarımı, zayıf sifon çözümü. Yazılı teklif, garantili işçilik, 7/24 acil servis.",
+    canonicalPath: "/hizmetler/gomme-rezervuar-tamiri",
+  },
+  {
+    id: "12",
+    title: "Batarya Musluk Montaj",
+    slug: "batarya-musluk-montaj",
+    shortDescription:
+      "Mutfak, banyo ve lavabo batarya-musluk montajı, değişimi ve tamiri. Damlayan musluk, eski batarya yenileme, mutfak evye ve duş bataryası montajı. Tüm markalarda garantili işçilik.",
+    longDescription:
+      "Damlayan musluk, sızıntı yapan batarya veya eskiyen armatürler hem su israfına hem de alt dolap ve tezgah hasarına yol açar. Yanlış montaj, uyumsuz bağlantı veya yıpranmış contalar kısa sürede tekrarlayan arızalara neden olur.\n\n724 Tesisatçı olarak İstanbul genelinde mutfak evye bataryası, banyo lavabo bataryası, duş ve küvet bataryası montajı, değişimi ve tamiri hizmetleri sunuyoruz. Grohe, ECA, Kale, Artema ve diğer tüm marka armatürlerde profesyonel montaj yapıyor, eski hat bağlantılarını kontrol ederek sızdırmazlığı garanti altına alıyoruz.\n\nYeni batarya montajında flex hortum, contalar ve bağlantı rekorları kaliteli malzeme ile değiştirilir. Banyo ve mutfak tadilat projelerinde anahtar teslim batarya-musluk montajı, su basıncı ayarı ve test ile teslim edilir.\n\nDamlayan musluk, düşük basınç veya batarya değişimi ihtiyaçlarınız için İstanbul genelinde 7/24 servis hattımıza ulaşabilirsiniz. Keşif sonrası yazılı teklif, garantili işçilik ve hızlı montaj avantajından yararlanın.",
+    aboutHighlights: [
+      "Mutfak, banyo ve lavabo batarya-musluk montajı",
+      "Grohe, ECA, Kale ve tüm marka armatür servisi",
+      "Damlayan musluk tamiri ve conta değişimi",
+      "Tadilat projelerinde anahtar teslim montaj",
+    ],
+    heroTitle: "İstanbul Batarya ve Musluk Montaj Hizmeti",
+    heroDescription:
+      "Mutfak, banyo ve lavabo batarya-musluk montajı, değişimi ve tamiri. Damlayan musluk onarımı, eski batarya yenileme ve garantili montaj. 7/24 acil servis.",
+    icon: "faucet",
+    symptoms: [
+      { title: "Damlayan Musluk", description: "Musluk ucu veya contadan sürekli damlama günde 20 litreye kadar su israfına yol açar. Conta veya kartuş değişimi ile hızlı ve ekonomik çözüm sağlanır.", icon: "water_damage" },
+      { title: "Düşük Su Basıncı", description: "Bataryadan zayıf su akışı aeratör tıkanıklığı, vana arızası veya hat basınç düşüşünden kaynaklanabilir. Montaj sırasında hat ve filtre kontrol edilir.", icon: "speed" },
+      { title: "Eski veya Arızalı Batarya", description: "Paslanmış, kireçlenmiş veya kırık armatürler su kalitesini ve estetiği olumsuz etkiler. Yeni batarya montajı ile hijyen ve konfor artar.", icon: "build" },
+      { title: "Tezgah Altı Sızıntı", description: "Batarya bağlantı noktalarından veya flex hortumlardan sızıntı dolap ve zemin hasarına yol açar. Acil müdahale ile hasar büyümeden giderilir.", icon: "plumbing" },
+    ],
+    processSteps: [
+      { step: 1, title: "Keşif ve Ölçüm", description: "Mevcut batarya, bağlantı noktaları ve tezgah/lavabo uyumu kontrol edilir. Yeni armatür ölçüleri ve montaj tipi belirlenir." },
+      { step: 2, title: "Söküm ve Hazırlık", description: "Eski batarya ve musluk sökülür, contalar ve flex hortumlar yenilenir. Hat uçları temizlenir ve basınç kontrol edilir." },
+      { step: 3, title: "Montaj ve Bağlantı", description: "Yeni batarya standartlara uygun monte edilir, contalar sıkılarak sızdırmazlık sağlanır. Aeratör ve perlatör ayarı yapılır." },
+      { step: 4, title: "Test ve Teslim", description: "Sıcak-soğuk su testi, basınç kontrolü ve sızıntı testi yapılır. Servis formu düzenlenir, işçilik garantisi teslim edilir." },
+    ],
+    methods: [
+      { title: "Batarya Montajı", description: "Mutfak evye, banyo lavabo, duş ve küvet bataryası montajı. Tek delik, çift delik ve duvar tipi armatürlerde profesyonel uygulama." },
+      { title: "Musluk Tamiri", description: "Damlayan musluk, sıkışan vana ve conta değişimi. Kartuş, aeratör ve bağlantı rekoru onarımı ile su israfını önleme." },
+      { title: "Tadilat Montajı", description: "Banyo-mutfak yenileme projelerinde anahtar teslim batarya montajı, duvar içi hat bağlantısı ve basınç testi." },
+    ],
+    faq: getServiceFaq("batarya-musluk-montaj"),
+    relatedServices: ["su-tesisati", "gomme-rezervuar-tamiri", "su-kacagi-tespit-ve-onarim"],
+    relatedLocations: ["istanbul", "kagithane"],
+    seoTitle: "İstanbul Batarya Musluk Montaj ve Tamiri | 724 Tesisatçı",
+    seoDescription: "İstanbul batarya musluk montaj, değişim ve tamiri. Mutfak ve banyo armatür montajı, damlayan musluk onarımı. Tüm markalar, yazılı teklif, 7/24 servis.",
+    canonicalPath: "/hizmetler/batarya-musluk-montaj",
   },
 ];
 

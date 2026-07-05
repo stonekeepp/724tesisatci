@@ -1,12 +1,27 @@
 import { z } from "zod";
+import { formatContactLocation } from "@/data/mock/contactLocations";
+import { isValidTurkishMobilePhone } from "@/lib/utils/phone";
 
-export const contactFormSchema = z.object({
-  fullName: z.string().min(2, "Ad soyad en az 2 karakter olmalıdır"),
-  phone: z.string().min(10, "Geçerli bir telefon numarası giriniz"),
-  district: z.string().optional(),
-  serviceType: z.string().optional(),
-  description: z.string().min(10, "Açıklama en az 10 karakter olmalıdır"),
-});
+export const contactFormSchema = z
+  .object({
+    fullName: z.string().min(2, "Ad soyad en az 2 karakter olmalıdır"),
+    phone: z
+      .string()
+      .trim()
+      .min(1, "Telefon numarası zorunludur")
+      .refine(
+        isValidTurkishMobilePhone,
+        "Geçerli bir Türkiye cep telefonu numarası giriniz (05XX XXX XX XX)"
+      ),
+    districtSlug: z.string().min(1, "İlçe seçimi zorunludur"),
+    neighborhood: z.string().min(1, "Mahalle seçimi zorunludur"),
+    serviceType: z.string().min(1, "Hizmet türü seçimi zorunludur"),
+    description: z.string().min(10, "Açıklama en az 10 karakter olmalıdır"),
+  })
+  .transform(({ districtSlug, neighborhood, ...rest }) => ({
+    ...rest,
+    district: formatContactLocation(districtSlug, neighborhood),
+  }));
 
 export const blogFormSchema = z.object({
   title: z.string().min(3, "Başlık zorunludur"),

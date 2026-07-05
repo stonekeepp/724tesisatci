@@ -38,7 +38,7 @@ export const faqs: FAQItem[] = [
   {
     question: "724 Tesisatçı hangi hizmetleri sunuyor?",
     answer:
-      "Su kaçağı tespiti ve onarımı, tıkanıklık açma, pimaş yıkama, petek temizleme, kombi bakım ve onarım, kalorifer tesisatı, musluk ve batarya montajı, klozet ve rezervuar tamiri, su sayacı ve vana işlemleri ile genel tesisat onarım hizmetleri sunuyoruz. Tüm hizmetler için Hizmetler sayfamıza göz atabilirsiniz.",
+      "Su kaçağı tespiti ve onarımı, tıkanıklık açma, pimaş yıkama, petek temizleme, kombi bakım ve onarım, gömme rezervuar tamiri, batarya musluk montaj, kalorifer tesisatı, kameralı tesisat görüntüleme, doğalgaz tesisatı ve genel tesisat onarım hizmetleri sunuyoruz. Tüm hizmetler için Hizmetler sayfamıza göz atabilirsiniz.",
     category: "genel",
     relatedPage: "/hizmetler",
   },

@@ -61,6 +61,8 @@ export function ServiceDetailTemplate({
             <HeroImagePanel
               src={heroMeta.src}
               alt={heroMeta.alt}
+              variant={heroMeta.variant}
+              imageClassName={heroMeta.imageClassName}
               overlay={
                 service.slug === "su-kacagi-tespit-ve-onarim" ? (
                   <div className="absolute bottom-6 left-6 right-6 p-4 glass-card rounded-xl">

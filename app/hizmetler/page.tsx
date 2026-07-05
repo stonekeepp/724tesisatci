@@ -67,7 +67,7 @@ export default async function HizmetlerPage() {
               İstanbul Geneli Profesyonel Tesisat Çözümleri
             </h1>
             <p className="font-body-lg text-body-lg text-on-surface-variant max-w-xl leading-relaxed">
-              Su kaçağı tespitinden kombi servisine, petek temizliğinden pimaş yıkamaya kadar on uzmanlık alanında cihazlı tespit, kırmadan onarım ve garantili işçilik sunuyoruz. İşlem öncesi yazılı teklif; onayınız olmadan müdahaleye başlanmaz.
+              Su kaçağı tespitinden kombi servisine, gömme rezervuar tamiri ve batarya montajından pimaş yıkamaya kadar 12 uzmanlık alanında cihazlı tespit, kırmadan onarım ve garantili işçilik sunuyoruz. İşlem öncesi yazılı teklif; onayınız olmadan müdahaleye başlanmaz.
             </p>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
               {trustPoints.map((point) => (
@@ -161,7 +161,7 @@ export default async function HizmetlerPage() {
         <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
           <div className="mb-14 md:text-center max-w-3xl md:mx-auto">
             <span className="inline-block py-1 px-3 rounded-full bg-secondary-container/30 text-secondary font-label-md text-label-md mb-4">
-              10 Uzmanlık Alanı
+              12 Uzmanlık Alanı
             </span>
             <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-4 font-bold">
               Kapsamlı Tesisat Hizmetleri

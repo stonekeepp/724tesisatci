@@ -31,7 +31,7 @@ const problemTiles = [
   { icon: "plumbing", label: "Lavabo ya da tuvalet geri mi basıyor?", href: "/hizmetler/tikaniklik-acma" },
   { icon: "hvac", label: "Petekler yeterince ısınmıyor mu?", href: "/hizmetler/petek-temizleme" },
   { icon: "air", label: "Banyoda kötü koku mu var?", href: "/hizmetler/pimas-yikama" },
-  { icon: "water_damage", label: "Pimaş hattı sık sık tıkanıyor mu?", href: "/hizmetler/pimas-yikama" },
+  { icon: "water_damage", label: "Pimaş hattı sık sık tıkanıyor mu?", href: "/hizmetler/pimas-tesisati" },
 ] as const;
 
 const homeServices = services.map((service) => ({
@@ -280,7 +280,7 @@ export default async function HomePage() {
               Hizmetlerimiz
             </h2>
             <p className="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
-              İstanbul genelinde 10 uzmanlık alanında cihazlı tespit, yazılı teklif, garantili işçilik ve 7/24 acil servis ile profesyonel tesisat çözümleri sunuyoruz.
+              İstanbul genelinde 12 uzmanlık alanında cihazlı tespit, yazılı teklif, garantili işçilik ve 7/24 acil servis ile profesyonel tesisat çözümleri sunuyoruz.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">

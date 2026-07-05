@@ -408,6 +408,82 @@ export const serviceSpecificFaq: Record<string, FAQItem[]> = {
       category: "pimas-yikama",
     },
   ],
+  "gomme-rezervuar-tamiri": [
+    {
+      question: "Hangi marka gömme rezervuarlara servis veriyorsunuz?",
+      answer:
+        "Geberit, Vitra, ECA, Kale, Creavit ve diğer tüm marka gömme rezervuarlarda iç takım değişimi, sızıntı onarımı ve montaj hizmeti sunuyoruz. Parça uyumluluğu keşif sırasında kontrol edilir.",
+      category: "gomme-rezervuar",
+    },
+    {
+      question: "Gömme rezervuar sürekli su akıyorsa ne yapmalıyım?",
+      answer:
+        "Sürekli su akışı doldurma ventili veya sifon contası arızasına işaret eder. Su vanasını kapatıp bize ulaşın; iç takım değişimi ile genellikle aynı gün içinde sorun giderilir.",
+      category: "gomme-rezervuar",
+    },
+    {
+      question: "Gömme rezervuar tamiri duvar kırımı gerektirir mi?",
+      answer:
+        "Çoğu arıza rezervuar kapağı açılarak iç mekanizmadan giderilir; duvar kırımı gerekmez. Duvar içi hat sızıntısında minimum müdahale ile erişilebilir noktalardan onarım yapılır.",
+      category: "gomme-rezervuar",
+    },
+    {
+      question: "Gömme rezervuar sızıntısı su kaçağı sayılır mı?",
+      answer:
+        "Evet. Duvar içi rezervuar sızıntıları gizli su kaçağı oluşturur ve su faturasını artırır. Termal kamera ile kaçak noktası tespit edilerek kalıcı onarım sağlanır.",
+      category: "gomme-rezervuar",
+    },
+    {
+      question: "Yeni gömme rezervuar montajı ne kadar sürer?",
+      answer:
+        "Standart montaj ve klozet bağlantısı genellikle yarım gün içinde tamamlanır. Tadilat kapsamına göre süre değişebilir; keşif sonrası net süre bildirilir.",
+      category: "gomme-rezervuar",
+    },
+    {
+      question: "Gömme rezervuar tamiri fiyatları nasıl belirlenir?",
+      answer:
+        "Arıza tipi, değişecek parça, marka uyumluluğu ve erişim zorluğuna göre fiyatlandırılır. Keşif sonrası malzeme ve işçilik kalemlerini içeren yazılı teklif sunulur.",
+      category: "gomme-rezervuar",
+    },
+  ],
+  "batarya-musluk-montaj": [
+    {
+      question: "Batarya musluk montajı ne kadar sürer?",
+      answer:
+        "Tek batarya değişimi ve montajı genellikle 30–60 dakika sürer. Mutfak evye, banyo lavabo veya duş bataryası montajında bağlantı durumuna göre süre değişebilir.",
+      category: "batarya-musluk",
+    },
+    {
+      question: "Damlayan musluk tamiri mi yoksa değişim mi gerekir?",
+      answer:
+        "Conta, kartuş veya aeratör arızalarında tamir yeterli olabilir. Paslanmış, kırık veya çok eski armatürlerde yeni batarya montajı daha ekonomik ve kalıcı çözümdür.",
+      category: "batarya-musluk",
+    },
+    {
+      question: "Hangi marka bataryalara montaj yapıyorsunuz?",
+      answer:
+        "Grohe, ECA, Kale, Artema, Vitra ve diğer tüm marka mutfak-banyo bataryalarında montaj, değişim ve tamir hizmeti veriyoruz. Müşteri temin ettiği armatür montajı da yapılır.",
+      category: "batarya-musluk",
+    },
+    {
+      question: "Batarya montajında flex hortum değiştirilir mi?",
+      answer:
+        "Evet. Montaj sırasında eski flex hortum, contalar ve bağlantı rekorları kontrol edilir; yıpranmış parçalar kaliteli malzeme ile yenilenir. Sızıntı riski minimize edilir.",
+      category: "batarya-musluk",
+    },
+    {
+      question: "Mutfak ve banyo batarya montajı farklı mı?",
+      answer:
+        "Mutfak evye bataryaları genellikle tek veya çift delik montaj; banyo lavabo ve duş bataryaları duvar veya tezgah tipine göre değişir. Keşif sırasında uygun montaj yöntemi belirlenir.",
+      category: "batarya-musluk",
+    },
+    {
+      question: "Batarya musluk montaj fiyatları nasıl hesaplanır?",
+      answer:
+        "Montaj tipi, armatür sayısı, eski söküm ihtiyacı ve ek parça (flex, conta, vana) kullanımına göre fiyat belirlenir. Keşif sonrası yazılı teklif sunulur.",
+      category: "batarya-musluk",
+    },
+  ],
 };
 
 export function getServiceFaq(slug: string): FAQItem[] {

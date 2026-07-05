@@ -66,8 +66,13 @@ export default async function HizmetBolgeleriPage() {
               </Link>
             </div>
           </div>
-          <div className="relative w-full h-[380px] rounded-2xl overflow-hidden soft-shadow border border-outline-variant bg-surface-container-low mt-8 md:mt-0">
-            <StitchImage src={pageImages.istanbulMap} alt="İstanbul hizmet bölgeleri haritası" fill className="opacity-90" />
+          <div className="relative w-full h-[280px] sm:h-[340px] md:h-[420px] lg:h-[480px] rounded-2xl overflow-hidden soft-shadow border border-outline-variant bg-surface-container-low mt-8 md:mt-0">
+            <StitchImage
+              src={pageImages.hizmetBolgeleriHero}
+              alt="İstanbul geneli 7/24 tesisat hizmet bölgeleri — mobil ekip yönlendirmesi"
+              fill
+              className="object-cover object-[center_42%]"
+            />
           </div>
         </div>
       </section>

@@ -4,15 +4,18 @@ import Link from "next/link";
 import { useState } from "react";
 import { SiteLayout } from "@/components/layout/SiteLayout";
 import { ContextualLinks } from "@/components/ui/ContextualLinks";
-import { siteSettings, getPhoneHref, getWhatsAppHref } from "@/data/mock/siteSettings";
+import { siteSettings, getPhoneHref, getWhatsAppHref, getMapsDirectionsHref } from "@/data/mock/siteSettings";
 import { pageImages } from "@/data/mock/images";
 import { StitchImage } from "@/components/ui/StitchImage";
 import { popularServiceLinks, primaryHubLinks } from "@/lib/utils/internalLinks";
 import {
   contactDistrictOptions,
-  formatContactLocation,
   getContactNeighborhoodOptions,
 } from "@/data/mock/contactLocations";
+import {
+  isValidTurkishMobilePhone,
+  sanitizePhoneInput,
+} from "@/lib/utils/phone";
 
 const selectClassName =
   "w-full h-12 bg-surface border border-outline-variant rounded-lg px-4 form-input-focus font-body-md text-body-md appearance-none cursor-pointer";
@@ -39,11 +42,38 @@ export function ContactForm() {
 
     const form = e.currentTarget;
     const formData = new FormData(form);
+    const phone = (formData.get("phone") as string).trim();
+    const serviceType = formData.get("serviceType") as string;
+
+    const clientErrors: Record<string, string[]> = {};
+
+    if (!isValidTurkishMobilePhone(phone)) {
+      clientErrors.phone = [
+        "Geçerli bir Türkiye cep telefonu numarası giriniz (05XX XXX XX XX)",
+      ];
+    }
+    if (!districtSlug) {
+      clientErrors.districtSlug = ["İlçe seçimi zorunludur"];
+    }
+    if (!neighborhood) {
+      clientErrors.neighborhood = ["Mahalle seçimi zorunludur"];
+    }
+    if (!serviceType) {
+      clientErrors.serviceType = ["Hizmet türü seçimi zorunludur"];
+    }
+
+    if (Object.keys(clientErrors).length > 0) {
+      setErrors(clientErrors);
+      setStatus("error");
+      return;
+    }
+
     const payload = {
       fullName: formData.get("fullName") as string,
-      phone: formData.get("phone") as string,
-      district: formatContactLocation(districtSlug, neighborhood),
-      serviceType: formData.get("serviceType") as string,
+      phone,
+      districtSlug,
+      neighborhood,
+      serviceType,
       description: formData.get("description") as string,
     };
 
@@ -93,6 +123,13 @@ export function ContactForm() {
           name="phone"
           required
           type="tel"
+          inputMode="tel"
+          autoComplete="tel"
+          pattern="[\d+\s()-]+"
+          title="Geçerli bir Türkiye cep telefonu numarası giriniz (05XX XXX XX XX)"
+          onInput={(e) => {
+            e.currentTarget.value = sanitizePhoneInput(e.currentTarget.value);
+          }}
           className="w-full h-12 bg-surface border border-outline-variant rounded-lg px-4 form-input-focus font-body-md text-body-md"
           placeholder="05XX XXX XX XX"
         />
@@ -103,13 +140,14 @@ export function ContactForm() {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
           <label htmlFor="district" className="block font-label-md text-label-md text-on-surface mb-2">
-            İlçe
+            İlçe *
           </label>
           <select
             id="district"
             name="districtSlug"
             value={districtSlug}
             onChange={(e) => handleDistrictChange(e.target.value)}
+            required
             className={selectClassName}
           >
             <option value="">Seçiniz</option>
@@ -119,16 +157,20 @@ export function ContactForm() {
               </option>
             ))}
           </select>
+          {errors.districtSlug && (
+            <p className="text-error text-sm mt-1">{errors.districtSlug[0]}</p>
+          )}
         </div>
         <div>
           <label htmlFor="neighborhood" className="block font-label-md text-label-md text-on-surface mb-2">
-            Mahalle
+            Mahalle *
           </label>
           <select
             id="neighborhood"
             name="neighborhood"
             value={neighborhood}
             onChange={(e) => setNeighborhood(e.target.value)}
+            required
             className={selectClassName}
             disabled={!districtSlug}
           >
@@ -141,14 +183,18 @@ export function ContactForm() {
               </option>
             ))}
           </select>
+          {errors.neighborhood && (
+            <p className="text-error text-sm mt-1">{errors.neighborhood[0]}</p>
+          )}
         </div>
       </div>
       <div>
         <label className="block font-label-md text-label-md text-on-surface mb-2">
-          Hizmet Türü
+          Hizmet Türü *
         </label>
         <select
           name="serviceType"
+          required
           className="w-full h-12 bg-surface border border-outline-variant rounded-lg px-4 form-input-focus font-body-md text-body-md"
         >
           <option value="">Seçiniz</option>
@@ -158,6 +204,9 @@ export function ContactForm() {
           <option value="kombi">Kombi Servisi</option>
           <option value="diger">Diğer</option>
         </select>
+        {errors.serviceType && (
+          <p className="text-error text-sm mt-1">{errors.serviceType[0]}</p>
+        )}
       </div>
       <div>
         <label className="block font-label-md text-label-md text-on-surface mb-2">
@@ -266,10 +315,15 @@ export function IletisimPageClient() {
               </a>
             </div>
             <div className="bg-surface-container-lowest rounded-xl overflow-hidden border border-outline-variant/30 soft-shadow h-64 md:h-full min-h-[300px] relative">
-              <StitchImage src={pageImages.iletisimMap} alt="Kağıthane bölgesi haritası" fill />
+              <StitchImage
+                src={pageImages.iletisimMap}
+                alt="Kağıthane Merkez Mahallesi haritası"
+                fill
+                className="object-cover object-center"
+              />
               <div className="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/80 to-transparent flex items-end p-6">
                 <a
-                  href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(siteSettings.address)}`}
+                  href={getMapsDirectionsHref()}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-surface text-on-surface font-label-md text-label-md px-4 py-2 rounded-lg border border-outline-variant shadow-sm hover:bg-surface-variant flex items-center gap-2"

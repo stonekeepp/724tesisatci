@@ -18,6 +18,7 @@ export interface SiteSettings {
   whatsappMessage: string;
   email: string;
   address: string;
+  mapsDestination: string;
   city: string;
   workingHours: string;
 }
