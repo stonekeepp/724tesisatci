@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="Bakirkoy tesisat">
+  <defs><linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#131b2e"/><stop offset="100%" stop-color="hsl(195,55%,32%)"/></linearGradient></defs>
+  <rect width="800" height="500" fill="url(#g)"/>
+  <text x="48" y="200" font-family="Inter,Arial,sans-serif" font-size="48" font-weight="700" fill="#fff">Bakirkoy</text>
+  <text x="48" y="250" font-family="Inter,Arial,sans-serif" font-size="22" fill="#76dcff">7/24 Tesisat</text>
+</svg>

@@ -66,6 +66,8 @@ export interface Service {
   seoDescription: string;
   canonicalPath: string;
   featured?: boolean;
+  wideCard?: boolean;
+  aboutHighlights?: string[];
 }
 
 export interface Neighborhood {
@@ -80,6 +82,7 @@ export interface Neighborhood {
   seoTitle: string;
   seoDescription: string;
   canonicalPath: string;
+  heroImage?: string;
 }
 
 export interface Location {
@@ -88,6 +91,8 @@ export interface Location {
   slug: string;
   city: string;
   district?: string;
+  side?: "avrupa" | "anadolu";
+  isHeadquarters?: boolean;
   description: string;
   shortDescription: string;
   neighborhoods: string[];
@@ -136,8 +141,12 @@ export interface NavLink {
   href: string;
 }
 
+export interface NavItem extends NavLink {
+  children?: NavLink[];
+}
+
 export interface Navigation {
-  header: NavLink[];
+  header: NavItem[];
   footer: {
     services: NavLink[];
     company: NavLink[];

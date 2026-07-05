@@ -1,8 +1,9 @@
 /** Stitch HTML mockup'larından alınan görsel URL'leri */
 
 export const pageImages = {
-  homeHero:
-    "https://lh3.googleusercontent.com/aida/AP1WRLvB6aUMGU99WbzG2j1V9ZTcuGOxPTFI4T3azh5SOEHkJpxNlC2fTPB0u3rpvgzlsrIC7QHPxYPx5iQjMRilBKK32bWiaPwaXUH6Q99aIFzzezIOmW9rzvb_b-aE3-cx4-fkk_kDEnI4dU49LlPHKZdbyXFVv4xAh_rHenfenkMveCa9H3bkUuNzQQ20AwWUgLYXUwI_izXhacdRPEMzsXilOjefxDj4_B5MkQMh8-VQnq6EQEigCMgGaMI",
+  homeHero: "/images/home-hero.png",
+  hizmetlerHero:
+    "https://lh3.googleusercontent.com/aida-public/AB6AXuAdp0hKM6252200tvGfJI78EvJsepIL7VY1Q-t6ryffPStjmjIouvHmt6Coo09tswbQavAj6kkKaEKsmTFxK01USV82fXri7GB1G8VfeKHXQPnB_6qwIm9qDighA-ylv_lYIVDj2U5Jm1MI981RsybDToKKSxGVHQUP53x1FXMqXx3uD-ChGbYM5s1F4l_vbWyKdPpwX_ZpqXuYXP9rj_0LgXw-q108VROT-l0FwWoxCpPxmp8YdWG1xA",
   hizmetlerHeroBg:
     "https://lh3.googleusercontent.com/aida-public/AB6AXuAdp0hKM6252200tvGfJI78EvJsepIL7VY1Q-t6ryffPStjmjIouvHmt6Coo09tswbQavAj6kkKaEKsmTFxK01USV82fXri7GB1G8VfeKHXQPnB_6qwIm9qDighA-ylv_lYIVDj2U5Jm1MI981RsybDToKKSxGVHQUP53x1FXMqXx3uD-ChGbYM5s1F4l_vbWyKdPpwX_ZpqXuYXP9rj_0LgXw-q108VROT-l0FwWoxCpPxmp8YdWG1xA",
   istanbulMap:
@@ -13,8 +14,7 @@ export const pageImages = {
     "https://lh3.googleusercontent.com/aida-public/AB6AXuAWNBOn-uLuDEMtrw1omAl2PsDWQJBSwL0cu9VYYfqjVl2KFiH7X4imwVCKewvOtunKxCvsdRjGZD0Et9Y3fiMwOzgst3ZOR_A0qcoQufn_8VshEx4BlMX_rXCq6m58gwQFQ2MHU0_v0ztsmGAx6Sz_I0Fe1UQrk6pWBRwxHh3bs_2_WyhFhHPbidAKprBAn7H6YLArJkBF2dbloFO2Ge7efHcn71ueblTxI3sKUHRZQXXstd8v-fYRyA",
   hakkimizdaLeakDevice:
     "https://lh3.googleusercontent.com/aida-public/AB6AXuDGPTkRQquVx0R7THB_JVFrfrrdiJgpNqpN83QT1v_c5tqunwO8p0yFMq8mm0vcfTqyeGZ7sFAzB_tgvIYTY2GphMWhUZgYinJAWdqNvZj-ECy5nVjJjb7zgfv7lWIClz2YU0eDwFnsxoYrV3c6T4UPe7qAVbj8RrkjObNinciykeux1dDiA-VkWrgJ9InRP2oWz0T0Xvmf9oQ1WyudoizjHk3Tf0d8ntO2EBHbSt3212e32OvccHDqvA",
-  hakkimizdaServiceMap:
-    "https://lh3.googleusercontent.com/aida-public/AB6AXuDahdYjF2R7cVtxjJvc-tGSl87LQD05YP00yKV4BKhM5kHEoicO93jKQBSUe60bZ8NdEy9Px8lfz6XgIco0HyNgaQkSklQ4s3q9IYFpIJONobFmyYoV8PXb_Kcu6uDm8oUSA5pyw0qyds-UWUW2z5IkfnDolor5IikBw8MW7DoaplSIWE-AMZjypG5zTajlvxM8ZKj8kK0ALGXJ_24ph_M6K4MtlYQDnaNIzKOaaKC86LoUJZ_tuKOYoQ",
+  hakkimizdaServiceMap: "/images/hakkimizda-service-map.png",
   hakkimizdaTeam:
     "https://lh3.googleusercontent.com/aida-public/AB6AXuDCIOlqPpoM-k6-4h1-Ju1aFE4SYcHY7bkPRviY5zWimOjG476gfnXobylrdRgXqpdsMOQPngr3m5EBkCZMnZoljlnKIi-zQReqHSZ_MNednBH7NDGTFfJc3FrtaYvUcmZNEAifte48q449HhDVg73VdNlkjbWGhLUlbQvjW8xuIi2c5nu6q6EfbOXu9fDgtr5wBHSDMFsl0DDQDo3yvCG91fi6_Cr_pHugTB7bX3chUMyvMUENOreq8A",
   iletisimMap:
@@ -47,7 +47,6 @@ export const serviceHeroImages: Record<string, { src: string; alt: string; varia
   "petek-temizleme": {
     src: "https://lh3.googleusercontent.com/aida-public/AB6AXuCGQs1tBkFUfZYHv2feXSa-mD_EULzCU6e5fklKiXfevDKgzTYqk-9aB2wJIgFGIaurX7fh5dCwmwImIjeOsZZmWIhC4joo2vmt6A1CiFSA-AP_1oXqStP1n_-WXg-7uC3IpjExAWm_-EnmzAqAQXSOefheKCC2CqugygBFsZou6NN-WUMxBrz5-yk5dnOhTD8-vV3jb5Y7fZtXmGvndkKnEGOJ1POefMZt9RuBIECZX7gLeP7jmWgaSg",
     alt: "Petek temizleme uygulaması",
-    variant: "dark",
   },
   "kamerali-tesisat-goruntuleme-ve-onarim": {
     src: "https://lh3.googleusercontent.com/aida-public/AB6AXuAFMZ7Ps8hWc0Kpp4BLitfl0dPdyVjMSe7kVmNu-31JJG2KdHtFPmbjSdOv27GuXBgoF0sLodd09Zlv0VDuMjl6Hs8i970XoRUlY6kF9UvfZjM0_zmO3Kllv2EDx07Kte7q3GEp2t13yijjw7XlnOXMhDtOUwfhnn0K722IXQVkGlP70vRXrLqoZUDDGSWKvHr_Dx3cySYKjHQeahefAVnO3354BRPJvnpRuUY8-4PRgSkPSgCU-has8A",

@@ -5,9 +5,9 @@ import { getNeighborhoodsByDistrict } from "@/lib/services/neighborhoodService";
 import { buildMetadata } from "@/lib/services/seoService";
 
 export const metadata = buildMetadata({
-  title: "Kağıthane Mahalleleri | 724 Tesisatçı",
+  title: "Kağıthane Mahalleleri | 19 Mahalle 7/24 Tesisatçı — 724 Tesisatçı",
   description:
-    "Kağıthane mahallelerine özel tesisat hizmeti. Çağlayan, Gültepe, Seyrantepe, Merkez, Çeliktepe ve tüm mahallelere 7/24 servis.",
+    "Kağıthane'nin 19 mahallesine özel 7/24 tesisat hizmeti. Çağlayan, Gültepe, Seyrantepe, Talatpaşa, Emniyet Evleri ve tüm mahallelere 15–30 dk varış.",
   canonicalPath: "/hizmet-bolgeleri/kagithane-mahalleleri",
 });
 
@@ -30,7 +30,7 @@ export default async function KagithaneMahalleleriPage() {
             Kağıthane Mahalleleri
           </h1>
           <p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto text-center mb-12">
-            Kağıthane&apos;nin tüm mahallelerine 7/24 tesisat hizmeti sunuyoruz. Size en yakın ekibimiz dakikalar içinde adresinizde.
+            Kağıthane&apos;nin 19 mahallesine 7/24 tesisat hizmeti sunuyoruz. Merkez operasyonumuza yakın konumda ortalama 15–30 dakikada adresinizdeyiz.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {neighborhoods.map((n) => (

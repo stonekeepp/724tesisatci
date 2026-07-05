@@ -10,7 +10,6 @@ import {
 } from "@/lib/services/schemaService";
 import { defaultSeo } from "@/data/mock/seo";
 import { getPhoneHref, getWhatsAppHref } from "@/data/mock/siteSettings";
-import { pageImages } from "@/data/mock/images";
 
 export const metadata = buildMetadata(defaultSeo);
 
@@ -134,6 +133,14 @@ const processSteps = [
   },
 ] as const;
 
+const heroBadges = [
+  { icon: "timer", label: "7/24 Acil Destek" },
+  { icon: "radar", label: "Cihazlı Tespit" },
+  { icon: "handyman", label: "Kırmadan Çözüm" },
+  { icon: "cleaning_services", label: "Temiz İşçilik" },
+  { icon: "flash_on", label: "Hızlı Servis" },
+] as const;
+
 const heroOverlayCards = [
   { icon: "timer", label: "7/24 Acil Destek" },
   { icon: "radar", label: "Cihazlı Tespit" },
@@ -163,7 +170,19 @@ export default async function HomePage() {
               <span>İstanbul Geneli Hizmet</span>
             </div>
             <h1 className="font-display-lg text-display-lg text-primary md:font-display-lg text-headline-lg-mobile font-bold tracking-tight md:text-display-lg leading-tight tracking-tighter">
-              İstanbul Geneli 7/24 Profesyonel Tesisatçı Hizmeti
+              <span className="inline-flex flex-wrap items-center gap-x-2.5 gap-y-1">
+                <span>İstanbul Geneli</span>
+                <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-secondary text-on-secondary font-extrabold shadow-md ring-2 ring-secondary/25 whitespace-nowrap shrink-0">
+                  <span
+                    className="material-symbols-outlined text-[20px] leading-none"
+                    aria-hidden="true"
+                  >
+                    schedule
+                  </span>
+                  7/24
+                </span>
+              </span>{" "}
+              Profesyonel Tesisatçı Hizmeti
             </h1>
             <p className="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
               Su kaçağı tespiti, tıkanıklık açma, petek temizleme, pimaş yıkama, kombi, kalorifer ve doğalgaz tesisatı işlemlerinde İstanbul genelinde cihazlı, temiz ve hızlı çözümler sunuyoruz.
@@ -196,39 +215,45 @@ export default async function HomePage() {
                 <span className="material-symbols-outlined">arrow_forward</span>
               </Link>
             </div>
-            <div className="flex flex-wrap gap-6 pt-6 border-t border-outline-variant/30 mt-4">
-              {[
-                { icon: "timer", label: "7/24 Acil Destek" },
-                { icon: "radar", label: "Cihazlı Tespit" },
-                { icon: "handyman", label: "Kırmadan Çözüm" },
-                { icon: "cleaning_services", label: "Temiz İşçilik" },
-                { icon: "flash_on", label: "Hızlı Servis" },
-              ].map((badge) => (
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 pt-6 border-t border-outline-variant/30 mt-4">
+              {heroBadges.map((badge) => (
                 <div
                   key={badge.label}
-                  className="flex items-center gap-2 text-on-surface-variant group hover:text-secondary transition-colors cursor-default"
+                  className="flex flex-col items-center gap-2 p-3 rounded-xl bg-surface-container/70 border border-outline-variant/40 text-center"
                 >
-                  <span className="material-symbols-outlined text-secondary">{badge.icon}</span>
-                  <span className="font-label-md text-label-md">{badge.label}</span>
+                  <div className="w-10 h-10 rounded-xl bg-secondary/10 flex items-center justify-center shrink-0">
+                    <span
+                      className="material-symbols-outlined text-secondary text-[22px] leading-none"
+                      aria-hidden="true"
+                    >
+                      {badge.icon}
+                    </span>
+                  </div>
+                  <span className="font-label-md text-xs text-on-surface-variant leading-tight">
+                    {badge.label}
+                  </span>
                 </div>
               ))}
             </div>
           </div>
-          <div className="relative hidden lg:block h-[500px] w-full rounded-2xl overflow-hidden soft-shadow">
+          <div className="relative hidden lg:block h-[500px] w-full rounded-2xl overflow-hidden soft-shadow border border-outline-variant/30">
             <div
               className="bg-cover bg-center w-full h-full absolute inset-0"
-              style={{ backgroundImage: `url('${pageImages.homeHero}')` }}
+              style={{ backgroundImage: "url('/images/home-hero.png')" }}
             />
+            <div className="absolute inset-0 bg-gradient-to-t from-primary-container/30 via-transparent to-transparent pointer-events-none" />
             <div className="absolute bottom-8 right-8 flex flex-col gap-4 z-10">
               {heroOverlayCards.map((card) => (
                 <div
                   key={card.label}
-                  className="glass-card p-3 rounded-xl flex items-center gap-3 bg-white/70 backdrop-blur-md border-white/20 shadow-lg"
+                  className="glass-card p-3 rounded-xl flex items-center gap-3 bg-white/85 backdrop-blur-md border-white/30 shadow-lg"
                 >
-                  <div className="w-8 h-8 rounded-full bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed">
-                    <span className="material-symbols-outlined text-sm">{card.icon}</span>
+                  <div className="w-9 h-9 rounded-full bg-[#131b2e] flex items-center justify-center shrink-0">
+                    <span className="material-symbols-outlined text-sm text-secondary-container" aria-hidden="true">
+                      {card.icon}
+                    </span>
                   </div>
-                  <span className="font-label-md text-label-md text-primary">{card.label}</span>
+                  <span className="font-label-md text-label-md text-[#131b2e] whitespace-nowrap">{card.label}</span>
                 </div>
               ))}
             </div>
@@ -237,20 +262,37 @@ export default async function HomePage() {
       </section>
 
       {/* Problem Selector */}
-      <section className="py-24 md:py-32 px-margin-mobile md:px-margin-desktop bg-surface">
+      <section className="py-24 md:py-32 px-margin-mobile md:px-margin-desktop bg-primary-container">
         <div className="max-w-container-max mx-auto">
-          <h2 className="font-headline-md text-headline-md text-primary font-bold mb-8 text-center">
-            Hangi tesisat sorununu yaşıyorsunuz?
-          </h2>
+          <div className="text-center mb-12 md:mb-16">
+            <span className="inline-block py-1 px-3 rounded-full bg-white/10 text-secondary-container border border-white/20 font-label-md text-label-md mb-4">
+              Hızlı Yönlendirme
+            </span>
+            <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-primary font-bold mb-4">
+              Hangi tesisat sorununu yaşıyorsunuz?
+            </h2>
+            <p className="font-body-lg text-body-lg text-on-primary-container max-w-2xl mx-auto">
+              Yaşadığınız sorunu seçin; ilgili hizmet sayfasına yönlendirilir, cihazlı tespit ve kalıcı çözüm seçeneklerini inceleyebilirsiniz.
+            </p>
+          </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
             {problemTiles.map((tile) => (
               <Link
                 key={tile.label}
                 href={tile.href}
-                className="bg-surface-container-lowest p-4 rounded-xl border border-outline-variant/50 text-center hover:border-secondary transition-colors cursor-pointer soft-shadow"
+                className="group flex flex-col items-center gap-3 bg-white/10 backdrop-blur-sm p-5 rounded-xl border border-white/15 text-center hover:bg-white/15 hover:border-secondary-container transition-all duration-300 soft-shadow min-h-[140px] justify-center"
               >
-                <span className="material-symbols-outlined text-secondary mb-2 block">{tile.icon}</span>
-                <span className="font-label-md text-sm text-on-surface">{tile.label}</span>
+                <div className="w-12 h-12 rounded-xl bg-secondary/20 flex items-center justify-center shrink-0 group-hover:bg-secondary/30 transition-colors">
+                  <span
+                    className="material-symbols-outlined text-secondary-container text-[28px] leading-none"
+                    aria-hidden="true"
+                  >
+                    {tile.icon}
+                  </span>
+                </div>
+                <span className="font-label-md text-sm text-on-primary leading-snug block">
+                  {tile.label}
+                </span>
               </Link>
             ))}
           </div>
@@ -293,22 +335,32 @@ export default async function HomePage() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-section-padding px-margin-mobile md:px-margin-desktop bg-surface">
+      <section className="py-section-padding px-margin-mobile md:px-margin-desktop bg-primary-container">
         <div className="max-w-container-max mx-auto">
-          <h2 className="font-headline-lg text-headline-lg md:font-headline-lg text-headline-lg-mobile text-primary font-bold mb-12 text-center">
-            Neden 724 Tesisatçı?
-          </h2>
+          <div className="text-center mb-12 md:mb-16">
+            <span className="inline-block py-1 px-3 rounded-full bg-white/10 text-secondary-container border border-white/20 font-label-md text-label-md mb-4">
+              Güvenilir Hizmet
+            </span>
+            <h2 className="font-headline-lg text-headline-lg md:font-headline-lg text-headline-lg-mobile text-on-primary font-bold mb-4">
+              Neden 724 Tesisatçı?
+            </h2>
+            <p className="font-body-lg text-body-lg text-on-primary-container max-w-2xl mx-auto">
+              İstanbul genelinde cihazlı tespit, şeffaf fiyatlandırma ve garantili işçilik ile tesisat sorunlarınıza kalıcı çözüm sunuyoruz.
+            </p>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {valueProps.map((item) => (
               <div
                 key={item.title}
-                className="bg-surface-container-lowest p-6 rounded-2xl border border-outline-variant/30 soft-shadow flex flex-col gap-3"
+                className="bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/15 soft-shadow flex flex-col gap-4 hover:bg-white/15 hover:border-secondary-container/50 transition-all duration-300"
               >
-                <div className="flex items-center gap-3 text-secondary">
-                  <span className="material-symbols-outlined">{item.icon}</span>
-                  <h4 className="font-bold text-primary">{item.title}</h4>
+                <div className="w-12 h-12 rounded-xl bg-secondary/20 flex items-center justify-center">
+                  <span className="material-symbols-outlined text-secondary-container text-2xl">
+                    {item.icon}
+                  </span>
                 </div>
-                <p className="text-sm text-on-surface-variant">{item.description}</p>
+                <h4 className="font-headline-md text-headline-md font-bold text-on-primary">{item.title}</h4>
+                <p className="text-sm text-on-primary-container leading-relaxed">{item.description}</p>
               </div>
             ))}
           </div>

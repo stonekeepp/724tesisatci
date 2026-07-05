@@ -9,15 +9,15 @@ export const defaultSeo: SEOData = {
 
 export const staticPageSeo: Record<string, SEOData> = {
   hizmetler: {
-    title: "Tesisat Hizmetlerimiz | 724 Tesisatçı - İstanbul",
+    title: "İstanbul Tesisat Hizmetleri | Su Kaçağı, Tıkanıklık, Kombi — 724 Tesisatçı",
     description:
-      "İstanbul'da su kaçağı, tıkanıklık, petek temizleme, kombi servisi ve tüm tesisat hizmetleri. Profesyonel ekip, garantili işçilik.",
+      "İstanbul genelinde 10 uzmanlık alanında premium tesisat hizmeti: su kaçağı tespiti, tıkanıklık açma, petek temizleme, kombi servisi, pimaş yıkama ve doğalgaz tesisatı. Cihazlı tespit, yazılı teklif, garantili işçilik, 7/24 acil servis.",
     canonicalPath: "/hizmetler",
   },
   "hizmet-bolgeleri": {
-    title: "İstanbul Tesisatçı Hizmet Bölgeleri | 724 Tesisatçı",
+    title: "İstanbul Tesisatçı Hizmet Bölgeleri | 39 İlçe 7/24 — 724 Tesisatçı",
     description:
-      "İstanbul'un tüm ilçelerine 7/24 tesisat hizmeti. Kağıthane merkezli, Avrupa ve Anadolu Yakası'na hızlı müdahale.",
+      "İstanbul'un 39 ilçesinde 7/24 tesisat hizmeti. Kağıthane merkez operasyon, 19 mahalle, Avrupa ve Anadolu Yakası'na hızlı mobil ekip yönlendirmesi.",
     canonicalPath: "/hizmet-bolgeleri",
   },
   blog: {
@@ -33,9 +33,9 @@ export const staticPageSeo: Record<string, SEOData> = {
     canonicalPath: "/sss",
   },
   hakkimizda: {
-    title: "Hakkımızda | 724 Tesisatçı - Profesyonel Servis",
+    title: "Hakkımızda | 724 Tesisatçı — İstanbul Tesisat Uzmanları",
     description:
-      "724 Tesisatçı olarak İstanbul genelinde 7/24 profesyonel tesisat hizmeti sunuyoruz. Deneyimli ekip, garantili işçilik.",
+      "724 Tesisatçı: Kağıthane merkezli, İstanbul genelinde 7/24 profesyonel tesisat hizmeti. Termal kamera ile kırmadan tespit, yazılı teklif, garantili işçilik ve 15+ yıl tecrübe.",
     canonicalPath: "/hakkimizda",
   },
   iletisim: {

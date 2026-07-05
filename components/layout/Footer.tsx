@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { SiteLogo } from "@/components/layout/SiteLogo";
 import { navigation } from "@/data/mock/navigation";
 import { siteSettings } from "@/data/mock/siteSettings";
 
@@ -8,9 +9,7 @@ export function Footer() {
       <div className="max-w-container-max mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           <div className="md:col-span-1">
-            <h3 className="font-headline-md text-headline-md font-bold text-on-primary mb-4">
-              724 Tesisatçı
-            </h3>
+            <SiteLogo variant="dark" className="mb-4" imageClassName="h-14 md:h-16 w-auto" />
             <p className="font-body-md text-body-md text-on-primary-container opacity-80 mb-4">
               İstanbul genelinde 7/24 profesyonel tesisat hizmeti. Kırmadan,
               cihazla tespit, garantili işçilik.
