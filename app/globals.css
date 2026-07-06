@@ -88,6 +88,10 @@
   max-height: 500px;
 }
 
+.footer-accordion-content.open {
+  max-height: 1200px;
+}
+
 @layer components {
   .accordion-toggle-icon {
     position: relative;
