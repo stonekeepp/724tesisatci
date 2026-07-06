@@ -1,0 +1,26 @@
+# dependencies
+node_modules
+npm-debug.log*
+
+# next.js
+.next
+out
+
+# env (inject at build/run time)
+.env
+.env*.local
+
+# git / editor
+.git
+.gitignore
+.cursor
+
+# docker
+Dockerfile
+docker-compose*.yml
+.dockerignore
+
+# misc
+README.md
+*.md
+!data/**/*.md

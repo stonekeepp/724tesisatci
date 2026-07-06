@@ -138,6 +138,28 @@ types/              → Entity tipleri
 
 ## Production Deploy (Ubuntu)
 
+### Docker (mock data — önerilen)
+
+```bash
+cp .env.docker.example .env.docker
+# .env.docker içinde NEXT_PUBLIC_SITE_URL ve ADMIN_PASSWORD güncelleyin
+
+docker compose --env-file .env.docker up -d --build
+```
+
+Site: `http://localhost:3000` (veya `APP_PORT` ile belirlediğiniz port)
+
+- `DATA_SOURCE=mock` — Postgres gerekmez
+- Admin blog yazıları `blog_runtime` volume'unda kalıcıdır
+- Domain değişirse image'ı yeniden build edin (`NEXT_PUBLIC_SITE_URL` build arg)
+
+```bash
+docker compose --env-file .env.docker down
+docker compose --env-file .env.docker logs -f web
+```
+
+### Manuel (Node)
+
 ```bash
 npm install
 npm run build
