@@ -11,7 +11,7 @@ export function SiteLayout({ children, activePath }: SiteLayoutProps) {
   return (
     <>
       <Header activePath={activePath} />
-      <main className="pb-24 md:pb-0">{children}</main>
+      <main>{children}</main>
       <Footer />
       <MobileNav activePath={activePath} />
     </>

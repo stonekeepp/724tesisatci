@@ -456,7 +456,7 @@ export default async function HomePage() {
       </section>
 
       {/* Pre-footer CTA */}
-      <section className="bg-primary-container py-20 px-margin-mobile md:px-margin-desktop text-center">
+      <section className="bg-primary-container pt-16 pb-12 md:py-20 px-margin-mobile md:px-margin-desktop text-center">
         <div className="max-w-container-max mx-auto">
           <h2 className="text-display-lg text-white font-bold mb-6">
             Tesisat Sorunlarınıza Profesyonel Çözüm
