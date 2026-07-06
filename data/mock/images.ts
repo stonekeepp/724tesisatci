@@ -1,14 +1,8 @@
-/** Stitch HTML mockup'larından alınan görsel URL'leri */
+/** Sayfa görsel URL'leri */
 
 export const pageImages = {
-  homeHero: "/images/home-hero.png",
   hizmetlerHero: "/images/hizmetler-hero.png",
-  hizmetlerHeroBg: "/images/hizmetler-hero.png",
   hizmetBolgeleriHero: "/images/hizmet-bolgeleri-hero.png",
-  istanbulMap:
-    "https://lh3.googleusercontent.com/aida-public/AB6AXuCjEmqurxC1OPVoLXANZLy214MDCvtCu9SIwBwjgsyd3j2rEP_TbioALqkj85EJ-oR3K0wakMmjac-3VY8xB25phHWzOe3Sd6IwckURyssBkUdIFXpOXStgQ7ySdabLyIimkG3PSkz8bK8kUx5g0ucNGhfjd3wdguyPxqVdLOEQEd5BMbSO_NfJUFU_5fPgaDcX9OrSn23z1Z1_mh3ic8IxR5Zt3n6H35Sg_Ezl2JYM0jNVry9_G5v3iw",
-  kagithaneHero:
-    "https://lh3.googleusercontent.com/aida-public/AB6AXuDXROHpsb_0ShFS7c0dnlOKy3EOPIofJkje84hhQd4-GVB9XnCjMIzvrZ5X2q4OQoeCIPyWaz3MmqW5dvpXLrJFdnTFykO99M14x4XEavWa1lePcpoxQ1RARtwz9mE-z5kc-6hjlwrEmINiG6ZQfk-bl6DR5Hmds-z__QO83Co83C6IPwG5vra4scmUvZA2dYTTHzpEWf8qEWXwT-ItwBdInjlbzQCyoU4PtwA_aB4zzryg4oXqKVA-DA",
   hakkimizdaHero:
     "https://lh3.googleusercontent.com/aida-public/AB6AXuAWNBOn-uLuDEMtrw1omAl2PsDWQJBSwL0cu9VYYfqjVl2KFiH7X4imwVCKewvOtunKxCvsdRjGZD0Et9Y3fiMwOzgst3ZOR_A0qcoQufn_8VshEx4BlMX_rXCq6m58gwQFQ2MHU0_v0ztsmGAx6Sz_I0Fe1UQrk6pWBRwxHh3bs_2_WyhFhHPbidAKprBAn7H6YLArJkBF2dbloFO2Ge7efHcn71ueblTxI3sKUHRZQXXstd8v-fYRyA",
   hakkimizdaLeakDevice:

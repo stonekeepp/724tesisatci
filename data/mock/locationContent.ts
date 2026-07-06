@@ -20,14 +20,6 @@ export const ALL_SERVICE_SLUGS = [
   "batarya-musluk-montaj",
 ] as const;
 
-export function getLocationHeroPath(slug: string): string {
-  return `/images/locations/${slug}.svg`;
-}
-
-export function getNeighborhoodHeroPath(slug: string): string {
-  return `/images/neighborhoods/${slug}.svg`;
-}
-
 function buildDistrictFaq(title: string, slug: string): FAQItem[] {
   const isHQ = slug === "kagithane";
   const arrival = isHQ
@@ -197,7 +189,6 @@ function buildDistrictLocation(d: IstanbulDistrictMeta): Location {
       ? `${d.title} merkez operasyon tesisatçı hizmeti. 19 mahalle, su kaçağı tespiti, tıkanıklık açma, petek temizleme. 20–30 dk varış, garantili işçilik.`
       : `${d.title} tesisatçı hizmeti. Su kaçağı, tıkanıklık, petek temizleme, kombi servisi. 7/24 acil müdahale, cihazlı tespit, garantili işçilik.`,
     canonicalPath: `/hizmet-bolgeleri/${d.slug}`,
-    heroImage: getLocationHeroPath(d.slug),
     stats: isHQ
       ? [
           { label: "Tamamlanan İş", value: "2.450+" },
@@ -229,7 +220,6 @@ function buildNeighborhood(n: { slug: string; title: string }): Neighborhood {
     seoTitle: `${n.title} Tesisatçı | Kağıthane 724 Tesisatçı`,
     seoDescription: `${n.title} mahallesi tesisatçı hizmeti. Su kaçağı, tıkanıklık açma, petek temizleme, kombi servisi. 7/24 acil servis, 15–30 dk varış.`,
     canonicalPath: `/hizmet-bolgeleri/kagithane/${n.slug}`,
-    heroImage: getNeighborhoodHeroPath(n.slug),
   };
 }
 
@@ -298,7 +288,6 @@ export const istanbulCityLocation: Location = {
   seoDescription:
     "İstanbul'un 39 ilçesinde 7/24 tesisatçı hizmeti. Su kaçağı, tıkanıklık, petek temizleme, kombi servisi. Kağıthane merkez operasyon, cihazlı tespit, garantili işçilik.",
   canonicalPath: "/hizmet-bolgeleri/istanbul",
-  heroImage: getLocationHeroPath("istanbul"),
   stats: [
     { label: "Hizmet Verilen İlçe", value: "39" },
     { label: "Tamamlanan İş", value: "15.000+" },

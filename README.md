@@ -145,5 +145,3 @@ DATA_SOURCE=mock npm run start
 # veya PM2/systemd ile:
 # DATA_SOURCE=postgres NEXT_PUBLIC_SITE_URL=https://724tesisatci.com npm run start
 ```
-
-Orijinal Stitch HTML mockup'ları proje kökündeki klasörlerde referans olarak durmaktadır.

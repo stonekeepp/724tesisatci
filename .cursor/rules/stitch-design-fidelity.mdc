@@ -1,15 +1,20 @@
 ---
-description: Stitch HTML mockup tasarımına bire bir sadakat — görsel/layout değişikliği yasak
+description: Mevcut site tasarımına sadakat — görsel/layout değişikliği yasak
 alwaysApply: true
 ---
 
-# Stitch Tasarım Sadakati (Zorunlu)
+# Tasarım Sadakati (Zorunlu)
 
-724 Tesisatçı sitesinde **görsel tasarım Stitch export HTML dosyalarından bire bir aynı kalır**. Renk, font, spacing, layout, section sırası, className'ler ve görseller değiştirilmez.
+724 Tesisatçı sitesinde **görsel tasarım mevcut Next.js sayfa ve component'lerinde bire bir aynı kalır**. Renk, font, spacing, layout, section sırası, className'ler ve görseller değiştirilmez.
 
 ## Kaynak dosyalar
 
-Proje kökündeki Stitch klasörleri (`Ana sayfa/code.html`, `hakk_m_zda_.../code.html`, vb.) tek tasarım referansıdır. `plumbing_excellence_system/DESIGN.md` token referansıdır; Stitch HTML ile çelişirse **Stitch HTML kazanır**.
+Canlı implementasyon tek tasarım referansıdır:
+
+- [`app/`](app/) — sayfa rotaları
+- [`components/`](components/) — layout ve sayfa component'leri
+- [`data/mock/images.ts`](data/mock/images.ts) — görsel URL'leri
+- [`app/globals.css`](app/globals.css) — global stiller
 
 ## Yapılabilir (sadece altyapı)
 
@@ -17,33 +22,19 @@ Proje kökündeki Stitch klasörleri (`Ana sayfa/code.html`, `hakk_m_zda_.../cod
 - Form submit → API bağlantısı
 - `generateMetadata`, JSON-LD, sitemap
 - Mock data / repository katmanı
-- Admin CMS (Stitch mockup'ı yok)
+- Admin CMS
 
 ## Yapılamaz
 
-- Section ekleme, çıkarma veya sadeleştirme
-- Generic şablonla sayfa-specific Stitch layout'unu değiştirme
+- Section ekleme, çıkarma veya sadeleştirme (kullanıcı açıkça istemedikçe)
+- Generic şablonla sayfa-specific layout'u değiştirme
 - Renk, font, spacing token veya Tailwind class değiştirme
-- Placeholder ikon/gri kutu ile Stitch görselinin yerine geçme
-- "Benzer" veya "yaklaşık" layout — **bire bir port** gerekir
+- Placeholder ikon/gri kutu ile mevcut görselin yerine geçme
+- "Benzer" veya "yaklaşık" layout — **mevcut tasarıma sadakat** gerekir
 
-## Port prosedürü
+## Değişiklik prosedürü
 
-1. İlgili `**/code.html` dosyasını aç
-2. `<main>` içeriğini (header/footer hariç) className'leri koruyarak TSX'e çevir
-3. Görseller: HTML'deki `src` / `background-image` URL'lerini aynen kullan (`data/mock/images.ts`)
-4. Stitch'te olmayan sayfa için en yakın mockup klonlanır; yine bire bir
-
-## Route → Stitch eşlemesi
-
-| Route | Stitch klasörü |
-|---|---|
-| `/` | `Ana sayfa` |
-| `/hizmetler` | `i_stanbul_tesisat_hizmetleri_724_tesisat` |
-| `/hizmetler/[slug]` | Her hizmetin kendi klasörü |
-| `/hizmet-bolgeleri` | `hizmet_b_lgeleri_724_tesisat_servis_a` |
-| `/hizmet-bolgeleri/kagithane` | `ka_thane_tesisat_724_tesisat` |
-| `/hakkimizda` | `hakk_m_zda_724_tesisat_profesyonel_servis` |
-| `/iletisim` | `i_leti_im_724_tesisat_servis_talebi` |
-| `/sss` | `s_k_a_sorulan_sorular_724_tesisat_bilgi_bankas` |
-| `/blog` | `tesisat_blog_724_tesisat_uzman_yaz_lar` |
+1. İlgili sayfa/component dosyasını aç
+2. Mevcut className, section sırası ve görsel kullanımını koru
+3. Yeni görsel eklerken `data/mock/images.ts` veya `public/images/` kullan
+4. Tasarım değişikliği yalnızca kullanıcı açıkça talep ettiğinde yapılır
