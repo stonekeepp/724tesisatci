@@ -142,12 +142,12 @@ types/              → Entity tipleri
 
 ```bash
 cp .env.docker.example .env.docker
-# .env.docker içinde NEXT_PUBLIC_SITE_URL ve ADMIN_PASSWORD güncelleyin
+# .env.docker içinde NEXT_PUBLIC_SITE_URL ve ADMIN_* değerlerini güncelleyin
 
 docker compose --env-file .env.docker up -d --build
 ```
 
-Site: `http://localhost:3000` (veya `APP_PORT` ile belirlediğiniz port)
+Site: `http://localhost:3080` (varsayılan `APP_PORT`; nginx upstream: `127.0.0.1:3080`)
 
 - `DATA_SOURCE=mock` — Postgres gerekmez
 - Admin blog yazıları `blog_runtime` volume'unda kalıcıdır

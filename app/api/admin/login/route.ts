@@ -10,12 +10,24 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "Invalid credentials" }, { status: 400 });
     }
 
-    const adminUser = process.env.ADMIN_USERNAME || "admin";
-    const adminPass = process.env.ADMIN_PASSWORD || "admin123";
+    const adminUser = process.env.ADMIN_USERNAME;
+    const adminPass = process.env.ADMIN_PASSWORD;
+
+    if (!adminUser || !adminPass) {
+      if (process.env.NODE_ENV === "production") {
+        return NextResponse.json(
+          { error: "Admin login unavailable" },
+          { status: 503 }
+        );
+      }
+    }
+
+    const expectedUser = adminUser ?? "admin";
+    const expectedPass = adminPass ?? "admin123";
 
     if (
-      parsed.data.username !== adminUser ||
-      parsed.data.password !== adminPass
+      parsed.data.username !== expectedUser ||
+      parsed.data.password !== expectedPass
     ) {
       return NextResponse.json({ error: "Invalid credentials" }, { status: 401 });
     }
