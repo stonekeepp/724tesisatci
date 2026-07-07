@@ -6,8 +6,15 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "build:icons": "node scripts/extract-material-icons.mjs && node scripts/build-material-icons-font.mjs"
   },
+  "browserslist": [
+    "chrome >= 111",
+    "edge >= 111",
+    "firefox >= 111",
+    "safari >= 16.4"
+  ],
   "dependencies": {
     "@swc/helpers": "^0.5.15",
     "next": "^15.3.3",

@@ -1,7 +1,7 @@
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import { SiteLayout } from "@/components/layout/SiteLayout";
 import { JsonLdScript } from "@/components/seo/JsonLdScript";
-import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { ContextualLinks } from "@/components/ui/ContextualLinks";
 import { getSiteSettings } from "@/lib/services/settingsService";
 import { buildMetadata } from "@/lib/services/seoService";
@@ -22,6 +22,14 @@ import {
 } from "@/data/mock/homeContent";
 import { getPhoneHref, getWhatsAppHref } from "@/data/mock/siteSettings";
 import { primaryHubLinks } from "@/lib/utils/internalLinks";
+
+const FAQAccordion = dynamic(
+  () =>
+    import("@/components/ui/FAQAccordion").then((mod) => ({
+      default: mod.FAQAccordion,
+    })),
+  { ssr: true }
+);
 
 export const metadata = buildMetadata(defaultSeo);
 
@@ -88,7 +96,11 @@ const heroOverlayCards = [
 
 function StarRating({ rating }: { rating: number }) {
   return (
-    <div className="flex gap-0.5" aria-label={`${rating} üzerinden 5 yıldız`}>
+    <div
+      className="flex gap-0.5"
+      role="img"
+      aria-label={`${rating} üzerinden 5 yıldız`}
+    >
       {Array.from({ length: 5 }).map((_, index) => (
         <span
           key={index}
