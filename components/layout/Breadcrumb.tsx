@@ -9,7 +9,7 @@ export function Breadcrumb({ items }: BreadcrumbProps) {
   return (
     <nav
       aria-label="Breadcrumb"
-      className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-4"
+      className="hidden md:block max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-4"
     >
       <ol className="flex flex-wrap items-center gap-2 font-body-md text-body-md text-on-surface-variant">
         {items.map((item, index) => (
