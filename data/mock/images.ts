@@ -1,16 +1,16 @@
 /** Sayfa görsel URL'leri */
 
 export const pageImages = {
-  hizmetlerHero: "/images/hizmetler-hero.png",
-  hizmetBolgeleriHero: "/images/hizmet-bolgeleri-hero.png",
+  hizmetlerHero: "/images/hizmetler-hero.webp",
+  hizmetBolgeleriHero: "/images/hizmet-bolgeleri-hero.webp",
   hakkimizdaHero:
     "https://lh3.googleusercontent.com/aida-public/AB6AXuAWNBOn-uLuDEMtrw1omAl2PsDWQJBSwL0cu9VYYfqjVl2KFiH7X4imwVCKewvOtunKxCvsdRjGZD0Et9Y3fiMwOzgst3ZOR_A0qcoQufn_8VshEx4BlMX_rXCq6m58gwQFQ2MHU0_v0ztsmGAx6Sz_I0Fe1UQrk6pWBRwxHh3bs_2_WyhFhHPbidAKprBAn7H6YLArJkBF2dbloFO2Ge7efHcn71ueblTxI3sKUHRZQXXstd8v-fYRyA",
   hakkimizdaLeakDevice:
     "https://lh3.googleusercontent.com/aida-public/AB6AXuDGPTkRQquVx0R7THB_JVFrfrrdiJgpNqpN83QT1v_c5tqunwO8p0yFMq8mm0vcfTqyeGZ7sFAzB_tgvIYTY2GphMWhUZgYinJAWdqNvZj-ECy5nVjJjb7zgfv7lWIClz2YU0eDwFnsxoYrV3c6T4UPe7qAVbj8RrkjObNinciykeux1dDiA-VkWrgJ9InRP2oWz0T0Xvmf9oQ1WyudoizjHk3Tf0d8ntO2EBHbSt3212e32OvccHDqvA",
-  hakkimizdaServiceMap: "/images/hakkimizda-service-map.png",
+  hakkimizdaServiceMap: "/images/hakkimizda-service-map.webp",
   hakkimizdaTeam:
     "https://lh3.googleusercontent.com/aida-public/AB6AXuDCIOlqPpoM-k6-4h1-Ju1aFE4SYcHY7bkPRviY5zWimOjG476gfnXobylrdRgXqpdsMOQPngr3m5EBkCZMnZoljlnKIi-zQReqHSZ_MNednBH7NDGTFfJc3FrtaYvUcmZNEAifte48q449HhDVg73VdNlkjbWGhLUlbQvjW8xuIi2c5nu6q6EfbOXu9fDgtr5wBHSDMFsl0DDQDo3yvCG91fi6_Cr_pHugTB7bX3chUMyvMUENOreq8A",
-  iletisimMap: "/images/iletisim-kagithane-merkez-map.png",
+  iletisimMap: "/images/iletisim-kagithane-merkez-map.webp",
   sssCta:
     "https://lh3.googleusercontent.com/aida-public/AB6AXuBznL5vkpIw0o5_M_-3nU6odpu1XtfjwjyJtJNFJ-rHDlgu343LhrYkXRrsB7_X1QMW1VGiX6-lbWbYzFhZzNLN-xfpUDU5E7at_RVjKagPne5iFcHQSGxHygzn2riX4TJQgRFJHp5UEP_VCfuhuVVko6zOlaeWeliElw7wKNB6vOUOaj8lVHpLiev-bGtp2ujnMcuFB4HJ6BrQevA8OX1urKddiJYQ_aGNWrEmQYELbgsEsiedQUI3Hg",
 } as const;
@@ -28,7 +28,7 @@ export const serviceHeroImages: Record<
     alt: "Kombi servisi ve tesisat kurulumu",
   },
   "kalorifer-tesisati": {
-    src: "/images/kalorifer-tesisati-hero.png",
+    src: "/images/kalorifer-tesisati-hero.webp",
     alt: "Kalorifer tesisatı kurulumu — radyatör boru bağlantısı",
     imageClassName: "object-cover object-center",
   },
@@ -49,7 +49,7 @@ export const serviceHeroImages: Record<
     alt: "Kameralı tesisat görüntüleme",
   },
   "pimas-tesisati": {
-    src: "/images/pimas-tesisati-hero.png",
+    src: "/images/pimas-tesisati-hero.webp",
     alt: "Pimaş tesisatı kurulumu — PVC gider borusu montajı",
     imageClassName: "object-cover object-center",
   },
@@ -62,11 +62,11 @@ export const serviceHeroImages: Record<
     alt: "Pimaş yıkama robotik kamera sistemi",
   },
   "gomme-rezervuar-tamiri": {
-    src: "/images/gomme-rezervuar-hero.png",
+    src: "/images/gomme-rezervuar-hero.webp",
     alt: "Gömme rezervuar tamiri — duvar içi rezervuar mekanizma onarımı",
   },
   "batarya-musluk-montaj": {
-    src: "/images/batarya-musluk-hero.png",
+    src: "/images/batarya-musluk-hero.webp",
     alt: "Batarya ve musluk montaj — mutfak ve banyo armatür kurulumu",
   },
 };

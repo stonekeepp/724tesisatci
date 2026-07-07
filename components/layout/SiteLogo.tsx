@@ -12,7 +12,7 @@ export function SiteLogo({
   className = "",
   imageClassName = "h-14 md:h-16 w-auto",
 }: SiteLogoProps) {
-  const src = variant === "dark" ? "/logo-dark.png" : "/logo.png";
+  const src = variant === "dark" ? "/logo-dark.webp" : "/logo.webp";
 
   return (
     <Link

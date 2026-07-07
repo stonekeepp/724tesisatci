@@ -212,7 +212,7 @@ export default async function HomePage() {
           <div className="relative hidden lg:block h-[500px] w-full rounded-2xl overflow-hidden soft-shadow border border-outline-variant/30">
             <div
               className="bg-cover bg-center w-full h-full absolute inset-0"
-              style={{ backgroundImage: "url('/images/home-hero.png')" }}
+              style={{ backgroundImage: "url('/images/home-hero.webp')" }}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-primary-container/30 via-transparent to-transparent pointer-events-none" />
             <div className="absolute bottom-8 right-8 flex flex-col gap-4 z-10">
