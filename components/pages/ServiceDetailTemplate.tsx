@@ -23,6 +23,24 @@ export function ServiceDetailTemplate({
   breadcrumbs,
 }: ServiceDetailTemplateProps) {
   const heroMeta = serviceHeroImages[service.slug];
+  const heroOverlay =
+    service.slug === "su-kacagi-tespit-ve-onarim" ? (
+      <div className="absolute bottom-6 left-6 right-6 p-4 glass-card rounded-xl">
+        <div className="flex items-center gap-4">
+          <div className="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center">
+            <span className="material-symbols-outlined text-on-secondary-container">
+              precision_manufacturing
+            </span>
+          </div>
+          <div>
+            <h3 className="font-semibold text-primary">%100 Noktasal Tespit</h3>
+            <p className="text-sm text-on-surface-variant">
+              Gereksiz kırma işlemine son.
+            </p>
+          </div>
+        </div>
+      </div>
+    ) : undefined;
 
   return (
     <>
@@ -37,6 +55,17 @@ export function ServiceDetailTemplate({
             <h1 className="font-display-lg text-display-lg md:text-display-lg text-primary leading-tight">
               {service.heroTitle}
             </h1>
+            {heroMeta ? (
+              <div className="md:hidden">
+                <HeroImagePanel
+                  src={heroMeta.src}
+                  alt={heroMeta.alt}
+                  variant={heroMeta.variant}
+                  imageClassName={heroMeta.imageClassName}
+                  overlay={heroOverlay}
+                />
+              </div>
+            ) : null}
             <p className="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
               {service.heroDescription}
             </p>
@@ -58,31 +87,15 @@ export function ServiceDetailTemplate({
             </div>
           </div>
           {heroMeta ? (
-            <HeroImagePanel
-              src={heroMeta.src}
-              alt={heroMeta.alt}
-              variant={heroMeta.variant}
-              imageClassName={heroMeta.imageClassName}
-              overlay={
-                service.slug === "su-kacagi-tespit-ve-onarim" ? (
-                  <div className="absolute bottom-6 left-6 right-6 p-4 glass-card rounded-xl">
-                    <div className="flex items-center gap-4">
-                      <div className="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center">
-                        <span className="material-symbols-outlined text-on-secondary-container">
-                          precision_manufacturing
-                        </span>
-                      </div>
-                      <div>
-                        <h3 className="font-semibold text-primary">%100 Noktasal Tespit</h3>
-                        <p className="text-sm text-on-surface-variant">
-                          Gereksiz kırma işlemine son.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                ) : undefined
-              }
-            />
+            <div className="hidden md:block">
+              <HeroImagePanel
+                src={heroMeta.src}
+                alt={heroMeta.alt}
+                variant={heroMeta.variant}
+                imageClassName={heroMeta.imageClassName}
+                overlay={heroOverlay}
+              />
+            </div>
           ) : null}
         </div>
       </section>
