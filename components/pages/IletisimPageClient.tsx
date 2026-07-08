@@ -317,7 +317,7 @@ export function IletisimPageClient() {
             <div className="bg-surface-container-lowest rounded-xl overflow-hidden border border-outline-variant/30 soft-shadow h-64 md:h-full min-h-[300px] relative">
               <StitchImage
                 src={pageImages.iletisimMap}
-                alt="Kağıthane Merkez Mahallesi haritası"
+                alt="Kağıthane Emniyet Evleri haritası"
                 fill
                 className="object-cover object-center"
               />

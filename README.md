@@ -106,9 +106,26 @@ Admin panel yalnızca blog yönetimi içindir. Hizmet ve lokasyon içerikleri mo
 ## SEO Yapısı
 
 - Her sayfada `generateMetadata` ile dinamik title, description, canonical, Open Graph, Twitter Card
-- JSON-LD: Organization, LocalBusiness, Service, FAQPage, BreadcrumbList, Article, WebSite
-- Sitemap: `/sitemap.xml` (draft blog hariç)
-- Robots: `/robots.txt` (`/admin` disallow)
+- Varsayılan OG görseli: `/logo.webp`
+- JSON-LD: Organization, LocalBusiness (PostalAddress + geo + logo), Service, FAQPage, BreadcrumbList, Article, WebSite
+- Sitemap: `/sitemap.xml` (draft blog ve `indexable: false` ilçeler hariç; `lastmod` sabit içerik sürümü)
+- Robots: `/robots.txt` (`/admin` disallow); admin layout `noindex`
+
+### Google Search Console checklist
+
+1. Sitemap durumu: `https://724tesisatci.com/sitemap.xml` → Başarılı olmalı
+2. Deploy öncesi: `NEXT_PUBLIC_SITE_URL=https://724tesisatci.com` (www varsa apex’e 301)
+3. Google İşletme Profili (GBP) adresi site ile birebir aynı olmalı:
+   `Emniyet Evleri, Semerkant Sk. 14/A, 34415 Kağıthane/İstanbul`
+4. URL Denetimi → Dizin oluşturmayı iste (ilk 2–3 hafta, günde limitli):
+   - `/`
+   - `/hizmetler`
+   - `/hizmet-bolgeleri`
+   - `/hizmet-bolgeleri/kagithane`
+   - 3–5 öncelikli hizmet slug’ı (örn. `/hizmetler/su-kacagi-tespit-ve-onarim`)
+   - 2–3 Kağıthane mahalle sayfası
+5. Sayfalar raporunda uzak ilçelerin “noindex ile dışlandı” görünmesi normaldir
+6. Büyük içerik güncellemesinden sonra `lib/services/sitemapService.ts` içindeki `CONTENT_LAST_UPDATED` tarihini değiştiğinizden emin olun
 
 ## Mimari
 

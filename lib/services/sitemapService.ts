@@ -5,9 +5,11 @@ import { getPublishedBlogPosts } from "./blogService";
 import { getSiteUrl } from "./seoService";
 import { staticPageSeo } from "@/data/mock/seo";
 
+/** Büyük içerik sürümü — her büyük içerik güncellemesinde bu tarihi güncelleyin */
+const CONTENT_LAST_UPDATED = new Date("2026-07-08");
+
 export async function generateSitemapEntries() {
   const siteUrl = getSiteUrl();
-  const now = new Date();
 
   const staticPages = [
     "/",
@@ -23,32 +25,32 @@ export async function generateSitemapEntries() {
   const entries = [
     ...staticPages.map((path) => ({
       url: `${siteUrl}${path}`,
-      lastModified: now,
+      lastModified: CONTENT_LAST_UPDATED,
       changeFrequency: "weekly" as const,
       priority: path === "/" ? 1 : 0.8,
     })),
     ...services.map((s) => ({
       url: `${siteUrl}${s.canonicalPath}`,
-      lastModified: now,
+      lastModified: CONTENT_LAST_UPDATED,
       changeFrequency: "monthly" as const,
       priority: 0.9,
     })),
     ...locations
       .filter((l) => l.indexable !== false)
       .map((l) => ({
-      url: `${siteUrl}${l.canonicalPath}`,
-      lastModified: now,
-      changeFrequency: "monthly" as const,
-      priority: 0.8,
-    })),
+        url: `${siteUrl}${l.canonicalPath}`,
+        lastModified: CONTENT_LAST_UPDATED,
+        changeFrequency: "monthly" as const,
+        priority: 0.8,
+      })),
     ...neighborhoods
       .filter((n) => n.indexable !== false)
       .map((n) => ({
-      url: `${siteUrl}${n.canonicalPath}`,
-      lastModified: now,
-      changeFrequency: "monthly" as const,
-      priority: 0.7,
-    })),
+        url: `${siteUrl}${n.canonicalPath}`,
+        lastModified: CONTENT_LAST_UPDATED,
+        changeFrequency: "monthly" as const,
+        priority: 0.7,
+      })),
     ...blogPosts.map((p) => ({
       url: `${siteUrl}${p.canonicalPath}`,
       lastModified: new Date(p.updatedAt),

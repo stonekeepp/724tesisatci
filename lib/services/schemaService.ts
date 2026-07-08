@@ -1,8 +1,35 @@
 import type { BreadcrumbItem, BlogPost, FAQItem, Service, SiteSettings } from "@/types";
 import { getSiteUrl } from "./seoService";
 
+/** Emniyet Evleri, Semerkant Sk. 14/A — yaklaşık koordinat */
+const BUSINESS_GEO = {
+  latitude: 41.072,
+  longitude: 28.998,
+} as const;
+
+function buildPostalAddress() {
+  return {
+    "@type": "PostalAddress" as const,
+    streetAddress: "Emniyet Evleri, Semerkant Sk. 14/A",
+    addressLocality: "Kağıthane",
+    addressRegion: "İstanbul",
+    postalCode: "34415",
+    addressCountry: "TR",
+  };
+}
+
+function buildBusinessGeo() {
+  return {
+    "@type": "GeoCoordinates" as const,
+    latitude: BUSINESS_GEO.latitude,
+    longitude: BUSINESS_GEO.longitude,
+  };
+}
+
 export function buildOrganizationSchema(settings: SiteSettings) {
   const siteUrl = getSiteUrl();
+  const logoUrl = `${siteUrl}/logo.webp`;
+
   return {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -10,18 +37,16 @@ export function buildOrganizationSchema(settings: SiteSettings) {
     url: siteUrl,
     telephone: settings.phone,
     email: settings.email,
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: settings.address,
-      addressLocality: "Kağıthane",
-      addressRegion: "İstanbul",
-      addressCountry: "TR",
-    },
+    logo: logoUrl,
+    image: logoUrl,
+    address: buildPostalAddress(),
   };
 }
 
 export function buildLocalBusinessSchema(settings: SiteSettings, area?: string) {
   const siteUrl = getSiteUrl();
+  const logoUrl = `${siteUrl}/logo.webp`;
+
   return {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
@@ -29,13 +54,10 @@ export function buildLocalBusinessSchema(settings: SiteSettings, area?: string) 
     url: siteUrl,
     telephone: settings.phone,
     email: settings.email,
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: settings.address,
-      addressLocality: "Kağıthane",
-      addressRegion: "İstanbul",
-      addressCountry: "TR",
-    },
+    logo: logoUrl,
+    image: logoUrl,
+    address: buildPostalAddress(),
+    geo: buildBusinessGeo(),
     openingHours: "Mo-Su 00:00-23:59",
     ...(area ? { areaServed: area } : {}),
   };
@@ -69,13 +91,7 @@ export function buildAreaServiceSchema(
       "@type": "LocalBusiness",
       name: settings.siteName,
       telephone: settings.phone,
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: settings.address,
-        addressLocality: "Kağıthane",
-        addressRegion: "İstanbul",
-        addressCountry: "TR",
-      },
+      address: buildPostalAddress(),
     },
     areaServed: {
       "@type": "AdministrativeArea",
@@ -114,6 +130,7 @@ export function buildServiceSchema(service: Service, settings: SiteSettings) {
       "@type": "LocalBusiness",
       name: settings.siteName,
       telephone: settings.phone,
+      address: buildPostalAddress(),
     },
     areaServed: "İstanbul",
   };
@@ -165,6 +182,10 @@ export function buildArticleSchema(post: BlogPost, settings: SiteSettings) {
     publisher: {
       "@type": "Organization",
       name: settings.siteName,
+      logo: {
+        "@type": "ImageObject",
+        url: `${siteUrl}/logo.webp`,
+      },
     },
     url: `${siteUrl}${post.canonicalPath}`,
   };

@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import type { SEOData } from "@/types";
 
+const DEFAULT_OG_IMAGE = "/logo.webp";
+
 export function getSiteUrl(): string {
   return process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
 }
@@ -8,6 +10,10 @@ export function getSiteUrl(): string {
 export function buildMetadata(seo: SEOData): Metadata {
   const siteUrl = getSiteUrl();
   const canonical = `${siteUrl}${seo.canonicalPath}`;
+  const ogImagePath = seo.ogImage || DEFAULT_OG_IMAGE;
+  const ogImageUrl = ogImagePath.startsWith("http")
+    ? ogImagePath
+    : `${siteUrl}${ogImagePath}`;
 
   return {
     title: seo.title,
@@ -20,13 +26,13 @@ export function buildMetadata(seo: SEOData): Metadata {
       siteName: "724 Tesisatçı",
       locale: "tr_TR",
       type: "website",
-      ...(seo.ogImage ? { images: [{ url: seo.ogImage }] } : {}),
+      images: [{ url: ogImageUrl }],
     },
     twitter: {
       card: "summary_large_image",
       title: seo.title,
       description: seo.description,
-      ...(seo.ogImage ? { images: [seo.ogImage] } : {}),
+      images: [ogImageUrl],
     },
     ...(seo.noindex
       ? { robots: { index: false, follow: true } }
