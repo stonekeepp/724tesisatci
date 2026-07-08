@@ -12,17 +12,29 @@ import {
   siteSettings,
 } from "@/data/mock/siteSettings";
 
+interface ServiceDetailDisplayOverrides {
+  heroTitle?: string;
+  heroDescription?: string;
+  displayTitle?: string;
+}
+
 interface ServiceDetailTemplateProps {
   service: Service;
   relatedServiceItems: Service[];
   breadcrumbs: { label: string; href: string }[];
+  displayOverrides?: ServiceDetailDisplayOverrides;
 }
 
 export function ServiceDetailTemplate({
   service,
   relatedServiceItems,
   breadcrumbs,
+  displayOverrides,
 }: ServiceDetailTemplateProps) {
+  const heroTitle = displayOverrides?.heroTitle ?? service.heroTitle;
+  const heroDescription =
+    displayOverrides?.heroDescription ?? service.heroDescription;
+  const displayTitle = displayOverrides?.displayTitle ?? service.title;
   const heroMeta = serviceHeroImages[service.slug];
   const relatedBlogPosts = blogPosts
     .filter(
@@ -60,7 +72,7 @@ export function ServiceDetailTemplate({
               Kırmadan Dökmeden Çözüm
             </span>
             <h1 className="font-display-lg text-display-lg md:text-display-lg text-primary leading-tight">
-              {service.heroTitle}
+              {heroTitle}
             </h1>
             {heroMeta ? (
               <div className="md:hidden">
@@ -75,7 +87,7 @@ export function ServiceDetailTemplate({
               </div>
             ) : null}
             <p className="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
-              {service.heroDescription}
+              {heroDescription}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mt-4">
               <a
@@ -110,6 +122,7 @@ export function ServiceDetailTemplate({
       </section>
       <ServiceDetailBody
         service={service}
+        displayTitle={displayTitle}
         relatedServiceItems={relatedServiceItems}
         heroImage={heroMeta ? { src: heroMeta.src, alt: heroMeta.alt } : undefined}
         relatedBlogPosts={relatedBlogPosts}
@@ -120,11 +133,13 @@ export function ServiceDetailTemplate({
 
 function ServiceDetailBody({
   service,
+  displayTitle,
   relatedServiceItems,
   heroImage,
   relatedBlogPosts,
 }: {
   service: Service;
+  displayTitle: string;
   relatedServiceItems: Service[];
   heroImage?: { src: string; alt: string };
   relatedBlogPosts: BlogPost[];
@@ -138,10 +153,10 @@ function ServiceDetailBody({
           <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
             <div className="text-center mb-16">
               <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-4">
-                {service.title} Belirtileri — Ne Zaman Müdahale Gerekir?
+                {displayTitle} Belirtileri — Ne Zaman Müdahale Gerekir?
               </h2>
               <p className="font-body-lg text-body-lg text-on-surface-variant max-w-3xl mx-auto">
-                {service.title} sorunları genellikle küçük belirtilerle başlar ve ihmal edildiğinde komşu dairelere, yapıya ve bütçenize ciddi zarar verebilir. Aşağıdaki işaretleri fark ettiğinizde erken müdahale hem maliyeti düşürür hem de kalıcı çözüm sağlar.
+                {displayTitle} sorunları genellikle küçük belirtilerle başlar ve ihmal edildiğinde komşu dairelere, yapıya ve bütçenize ciddi zarar verebilir. Aşağıdaki işaretleri fark ettiğinizde erken müdahale hem maliyeti düşürür hem de kalıcı çözüm sağlar.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -179,7 +194,7 @@ function ServiceDetailBody({
                 Kullandığımız Yöntemler ve Ekipmanlar
               </h2>
               <p className="font-body-lg text-body-lg text-on-surface-variant max-w-3xl mx-auto">
-                724 Tesisatçı olarak {service.title.toLowerCase()} hizmetinde amatör yöntemler yerine sektör standardı ekipman ve kanıtlanmış teknikler kullanıyoruz. Her yöntem, sorunun türüne göre seçilir ve işlem sonrası test ile doğrulanır.
+                724 Tesisatçı olarak {displayTitle.toLowerCase()} hizmetinde amatör yöntemler yerine sektör standardı ekipman ve kanıtlanmış teknikler kullanıyoruz. Her yöntem, sorunun türüne göre seçilir ve işlem sonrası test ile doğrulanır.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -211,10 +226,10 @@ function ServiceDetailBody({
           <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
             <div className="text-center mb-12">
               <h2 className="font-headline-lg text-headline-lg text-on-background mb-4">
-                {service.title} Servis Sürecimiz
+                {displayTitle} Servis Sürecimiz
               </h2>
               <p className="font-body-lg text-body-lg text-on-surface-variant max-w-3xl mx-auto">
-                İstanbul genelinde sunduğumuz {service.title.toLowerCase()} hizmetinde her adımı şeffaf biçimde planlıyor, işlem öncesi bilgilendirme yapıyor ve onayınız olmadan müdahaleye başlamıyoruz.
+                İstanbul genelinde sunduğumuz {displayTitle.toLowerCase()} hizmetinde her adımı şeffaf biçimde planlıyor, işlem öncesi bilgilendirme yapıyor ve onayınız olmadan müdahaleye başlamıyoruz.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -247,10 +262,10 @@ function ServiceDetailBody({
                 Bilgi Bankası
               </span>
               <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-4 font-bold">
-                {service.title} Hakkında Sık Sorulan Sorular
+                {displayTitle} Hakkında Sık Sorulan Sorular
               </h2>
               <p className="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
-                {service.title.toLowerCase()} hizmeti, fiyatlandırma, süre, garanti ve acil müdahale konularında en çok merak edilen {service.faq.length} sorunun yanıtı.
+                {displayTitle.toLowerCase()} hizmeti, fiyatlandırma, süre, garanti ve acil müdahale konularında en çok merak edilen {service.faq.length} sorunun yanıtı.
               </p>
             </div>
             <div className="max-w-3xl mx-auto">
@@ -306,7 +321,7 @@ function ServiceDetailBody({
         <section className="py-section-padding bg-surface-bright">
           <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
             <h2 className="font-headline-lg text-headline-lg text-primary mb-4 text-center">
-              {service.title} Rehberleri
+              {displayTitle} Rehberleri
             </h2>
             <p className="font-body-md text-body-md text-on-surface-variant text-center max-w-2xl mx-auto mb-8">
               Bu hizmetle ilgili belirtiler, erken müdahale ve servis süreci
@@ -375,10 +390,10 @@ function ServiceDetailBody({
       <section className="py-section-padding bg-primary-container text-on-primary">
         <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center">
           <h2 className="font-headline-lg text-headline-lg md:text-[40px] font-bold text-on-primary mb-4">
-            Acil {service.title} Mi Gerekiyor?
+            Acil {displayTitle} Mi Gerekiyor?
           </h2>
           <p className="font-body-lg text-body-lg text-on-primary-container mb-8 max-w-2xl mx-auto">
-            İstanbul genelinde 7/24 acil {service.title.toLowerCase()} ekibimiz ortalama 30 dakika içinde adresinize ulaşır. Cihazlı tespit, yazılı teklif ve garantili işçilik ile hizmet veriyoruz.
+            İstanbul genelinde 7/24 acil {displayTitle.toLowerCase()} ekibimiz ortalama 30 dakika içinde adresinize ulaşır. Cihazlı tespit, yazılı teklif ve garantili işçilik ile hizmet veriyoruz.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
