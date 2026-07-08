@@ -13,6 +13,7 @@ import { getAllServices } from "@/lib/services/serviceService";
 import { getSiteSettings } from "@/lib/services/settingsService";
 import { buildMetadata, seoFromEntity } from "@/lib/services/seoService";
 import {
+  buildAreaServiceSchema,
   buildBreadcrumbSchema,
   buildFAQSchema,
   buildLocalBusinessSchema,
@@ -60,13 +61,18 @@ export default async function NeighborhoodPage({ params }: Props) {
     { label: neighborhood.title, href: neighborhood.canonicalPath },
   ];
 
+  const areaLabel = `${neighborhood.title}, ${district.title}, İstanbul`;
+  const isIndexable = neighborhood.indexable !== false;
+
   const schemas = [
-    buildLocalBusinessSchema(
+    buildLocalBusinessSchema(settings),
+    buildAreaServiceSchema(
       settings,
-      `${neighborhood.title}, ${district.title}, İstanbul`
+      areaLabel,
+      neighborhood.shortDescription
     ),
     buildBreadcrumbSchema(breadcrumbs),
-    buildFAQSchema(neighborhood.faq),
+    isIndexable ? buildFAQSchema(neighborhood.faq) : null,
   ].filter(Boolean);
 
   return (

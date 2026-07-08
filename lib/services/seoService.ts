@@ -28,7 +28,9 @@ export function buildMetadata(seo: SEOData): Metadata {
       description: seo.description,
       ...(seo.ogImage ? { images: [seo.ogImage] } : {}),
     },
-    ...(seo.noindex ? { robots: { index: false, follow: false } } : {}),
+    ...(seo.noindex
+      ? { robots: { index: false, follow: true } }
+      : {}),
   };
 }
 
@@ -37,11 +39,13 @@ export function seoFromEntity(entity: {
   seoDescription: string;
   canonicalPath: string;
   ogImage?: string;
+  indexable?: boolean;
 }): SEOData {
   return {
     title: entity.seoTitle,
     description: entity.seoDescription,
     canonicalPath: entity.canonicalPath,
     ogImage: entity.ogImage,
+    noindex: entity.indexable === false,
   };
 }

@@ -314,7 +314,7 @@ export const services: Service[] = [
     heroTitle: "İstanbul Pimaş Tesisatı Kurulum ve Onarım",
     heroDescription:
       "PVC pimaş boru döşeme, bağlantı onarımı ve hat yenileme. Kameralı kontrol ile kesin teşhis, sızdırmazlık testi ve garantili işçilik.",
-    icon: "pipe",
+    icon: "water_damage",
     symptoms: [
       { title: "Sık Tıkanıklık", description: "Sürekli tekrarlayan tıkanıklık hat eğimi hatası, boru çürümesi veya yetersiz çap göstergesidir. Kamera ile kesin teşhis yapılmalıdır.", icon: "block" },
       { title: "Koku Problemi", description: "Banyo ve mutfaktan gelen pis koku sifon su kaybı, kırık pimaş veya hatalı bağlantıdan kaynaklanır. Sağlık açısından önemlidir.", icon: "air" },

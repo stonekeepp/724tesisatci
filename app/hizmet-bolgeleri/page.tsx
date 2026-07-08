@@ -1,9 +1,14 @@
 import Link from "next/link";
 import { SiteLayout } from "@/components/layout/SiteLayout";
+import { JsonLdScript } from "@/components/seo/JsonLdScript";
 import { ContextualLinks } from "@/components/ui/ContextualLinks";
 import { getDistrictLocations, getLocationBySlug } from "@/data/mock/locations";
 import { getNeighborhoodsByDistrict } from "@/lib/services/neighborhoodService";
 import { buildMetadata } from "@/lib/services/seoService";
+import {
+  buildBreadcrumbSchema,
+  buildItemListSchema,
+} from "@/lib/services/schemaService";
 import { staticPageSeo } from "@/data/mock/seo";
 import { pageImages } from "@/data/mock/images";
 import { StitchImage } from "@/components/ui/StitchImage";
@@ -24,8 +29,26 @@ export default async function HizmetBolgeleriPage() {
   const kagithane = getLocationBySlug("kagithane");
   const kagithaneNeighborhoods = await getNeighborhoodsByDistrict("kagithane");
 
+  const breadcrumbs = [
+    { label: "Ana Sayfa", href: "/" },
+    { label: "Hizmet Bölgeleri", href: "/hizmet-bolgeleri" },
+  ];
+
+  const indexableDistricts = districts.filter((d) => d.indexable !== false);
+  const schemas = [
+    buildBreadcrumbSchema(breadcrumbs),
+    buildItemListSchema(
+      "İstanbul Hizmet Bölgeleri",
+      indexableDistricts.map((d) => ({
+        name: d.title,
+        url: d.canonicalPath,
+      }))
+    ),
+  ];
+
   return (
     <SiteLayout activePath="/hizmet-bolgeleri">
+      <JsonLdScript data={schemas} />
       <section className="hero-bg py-section-padding px-margin-mobile md:px-margin-desktop border-b border-outline-variant">
         <div className="max-w-container-max mx-auto grid md:grid-cols-2 gap-gutter items-center">
           <div className="flex flex-col gap-stack-lg">

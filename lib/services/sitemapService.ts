@@ -33,13 +33,17 @@ export async function generateSitemapEntries() {
       changeFrequency: "monthly" as const,
       priority: 0.9,
     })),
-    ...locations.map((l) => ({
+    ...locations
+      .filter((l) => l.indexable !== false)
+      .map((l) => ({
       url: `${siteUrl}${l.canonicalPath}`,
       lastModified: now,
       changeFrequency: "monthly" as const,
       priority: 0.8,
     })),
-    ...neighborhoods.map((n) => ({
+    ...neighborhoods
+      .filter((n) => n.indexable !== false)
+      .map((n) => ({
       url: `${siteUrl}${n.canonicalPath}`,
       lastModified: now,
       changeFrequency: "monthly" as const,

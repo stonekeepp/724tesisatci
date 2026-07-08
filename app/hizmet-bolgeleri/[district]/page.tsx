@@ -12,6 +12,7 @@ import { getAllServices } from "@/lib/services/serviceService";
 import { getSiteSettings } from "@/lib/services/settingsService";
 import { buildMetadata, seoFromEntity } from "@/lib/services/seoService";
 import {
+  buildAreaServiceSchema,
   buildBreadcrumbSchema,
   buildFAQSchema,
   buildLocalBusinessSchema,
@@ -45,7 +46,12 @@ export default async function DistrictPage({ params }: Props) {
       ? await getNeighborhoodsByDistrict(slug)
       : [];
   const settings = await getSiteSettings();
-  const allDistricts = getDistrictLocations();
+  const allDistricts = getDistrictLocations().sort((a, b) => {
+    const aIndex = a.indexable !== false ? 0 : 1;
+    const bIndex = b.indexable !== false ? 0 : 1;
+    if (aIndex !== bIndex) return aIndex - bIndex;
+    return a.title.localeCompare(b.title, "tr");
+  });
 
   const breadcrumbs = [
     { label: "Ana Sayfa", href: "/" },
@@ -58,10 +64,19 @@ export default async function DistrictPage({ params }: Props) {
       ? "İstanbul"
       : `${location.title}, İstanbul`;
 
+  const isIndexable = location.indexable !== false;
+
   const schemas = [
-    buildLocalBusinessSchema(settings, areaLabel),
+    isIndexable
+      ? buildLocalBusinessSchema(settings)
+      : buildLocalBusinessSchema(settings, areaLabel),
+    isIndexable
+      ? buildAreaServiceSchema(settings, areaLabel, location.shortDescription)
+      : null,
     buildBreadcrumbSchema(breadcrumbs),
-    location.faq.length > 0 ? buildFAQSchema(location.faq) : null,
+    isIndexable && location.faq.length > 0
+      ? buildFAQSchema(location.faq)
+      : null,
   ].filter(Boolean);
 
   return (

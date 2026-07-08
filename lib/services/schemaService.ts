@@ -51,6 +51,57 @@ export function buildWebSiteSchema(settings: SiteSettings) {
   };
 }
 
+export function buildAreaServiceSchema(
+  settings: SiteSettings,
+  areaName: string,
+  description?: string
+) {
+  const siteUrl = getSiteUrl();
+  return {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: `${areaName} Tesisatçı Hizmeti`,
+    description:
+      description ??
+      `${areaName} bölgesinde 7/24 profesyonel tesisat hizmeti.`,
+    url: siteUrl,
+    provider: {
+      "@type": "LocalBusiness",
+      name: settings.siteName,
+      telephone: settings.phone,
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: settings.address,
+        addressLocality: "Kağıthane",
+        addressRegion: "İstanbul",
+        addressCountry: "TR",
+      },
+    },
+    areaServed: {
+      "@type": "AdministrativeArea",
+      name: areaName,
+    },
+  };
+}
+
+export function buildItemListSchema(
+  name: string,
+  items: { name: string; url: string }[]
+) {
+  const siteUrl = getSiteUrl();
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name,
+    itemListElement: items.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.name,
+      url: item.url.startsWith("http") ? item.url : `${siteUrl}${item.url}`,
+    })),
+  };
+}
+
 export function buildServiceSchema(service: Service, settings: SiteSettings) {
   const siteUrl = getSiteUrl();
   return {

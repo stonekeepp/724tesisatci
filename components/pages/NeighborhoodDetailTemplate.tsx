@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Location, Neighborhood, Service } from "@/types";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { LocationHeroImage } from "@/components/ui/LocationHeroImage";
+import { getNeighborhoodArrivalStat } from "@/data/mock/districtArrivalTimes";
 import {
   getPhoneHref,
   getWhatsAppHref,
@@ -21,6 +22,8 @@ export function NeighborhoodDetailTemplate({
   allServices,
   siblingNeighborhoods,
 }: NeighborhoodDetailTemplateProps) {
+  const arrivalStat = getNeighborhoodArrivalStat(neighborhood.slug);
+
   return (
     <>
       <section className="py-section-padding bg-surface-container-lowest px-margin-mobile md:px-margin-desktop">
@@ -43,7 +46,7 @@ export function NeighborhoodDetailTemplate({
             </p>
             <div className="flex flex-wrap gap-3 mb-8">
               {[
-                { icon: "schedule", label: "15–30 Dk Varış" },
+                { icon: "schedule", label: `${arrivalStat} Varış` },
                 { icon: "home_pin", label: "Merkez Operasyon Yakını" },
                 { icon: "verified", label: "Garantili İşçilik" },
               ].map((item) => (
@@ -182,7 +185,7 @@ export function NeighborhoodDetailTemplate({
             {neighborhood.title} Acil Tesisat Desteği
           </h2>
           <p className="font-body-lg text-body-lg text-on-primary-container mb-8 max-w-2xl mx-auto">
-            {neighborhood.title} mahallesinde 7/24 acil tesisat ekibimiz ortalama 15–30 dakika içinde adresinize ulaşır.
+            {neighborhood.title} mahallesinde 7/24 acil tesisat ekibimiz ortalama {arrivalStat} içinde adresinize ulaşır.
           </p>
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             <Link

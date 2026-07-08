@@ -85,6 +85,7 @@ export interface Neighborhood {
   seoDescription: string;
   canonicalPath: string;
   heroImage?: string;
+  indexable?: boolean;
 }
 
 export interface Location {
@@ -105,6 +106,7 @@ export interface Location {
   canonicalPath: string;
   heroImage?: string;
   stats?: { label: string; value: string }[];
+  indexable?: boolean;
 }
 
 export type BlogPostStatus = "draft" | "published";

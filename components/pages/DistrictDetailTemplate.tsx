@@ -49,6 +49,34 @@ export function DistrictDetailTemplate({
             <p className="font-body-lg text-body-lg text-on-surface-variant mb-8 leading-relaxed">
               {location.description}
             </p>
+            {location.indexable === false && (
+              <div className="mb-8 p-4 rounded-xl border border-outline-variant bg-surface-container-low">
+                <p className="font-body-md text-sm text-on-surface-variant mb-3">
+                  Bu bölge uzak ilçe kapsamındadır. En hızlı müdahale için ana
+                  hizmet bölgelerimizi inceleyin:
+                </p>
+                <div className="flex flex-wrap gap-3">
+                  <Link
+                    href="/hizmet-bolgeleri/kagithane"
+                    className="inline-flex items-center gap-1 text-secondary font-label-md text-sm hover:text-on-secondary-container transition-colors"
+                  >
+                    Kağıthane Merkez
+                    <span className="material-symbols-outlined text-sm" aria-hidden="true">
+                      arrow_forward
+                    </span>
+                  </Link>
+                  <Link
+                    href="/hizmet-bolgeleri/istanbul"
+                    className="inline-flex items-center gap-1 text-secondary font-label-md text-sm hover:text-on-secondary-container transition-colors"
+                  >
+                    İstanbul Geneli
+                    <span className="material-symbols-outlined text-sm" aria-hidden="true">
+                      arrow_forward
+                    </span>
+                  </Link>
+                </div>
+              </div>
+            )}
             {location.stats && location.stats.length > 0 && (
               <div className="grid grid-cols-3 gap-4 mb-8">
                 {location.stats.map((stat) => (

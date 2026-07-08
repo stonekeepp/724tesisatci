@@ -1,8 +1,13 @@
 import Link from "next/link";
 import { SiteLayout } from "@/components/layout/SiteLayout";
 import { Breadcrumb } from "@/components/layout/Breadcrumb";
+import { JsonLdScript } from "@/components/seo/JsonLdScript";
 import { getNeighborhoodsByDistrict } from "@/lib/services/neighborhoodService";
 import { buildMetadata } from "@/lib/services/seoService";
+import {
+  buildBreadcrumbSchema,
+  buildItemListSchema,
+} from "@/lib/services/schemaService";
 
 export const metadata = buildMetadata({
   title: "Kağıthane Mahalleleri | 19 Mahalle 7/24 Tesisatçı — 724 Tesisatçı",
@@ -21,8 +26,20 @@ export default async function KagithaneMahalleleriPage() {
     { label: "Mahalleler", href: "/hizmet-bolgeleri/kagithane-mahalleleri" },
   ];
 
+  const schemas = [
+    buildBreadcrumbSchema(breadcrumbs),
+    buildItemListSchema(
+      "Kağıthane Mahalleleri",
+      neighborhoods.map((n) => ({
+        name: n.title,
+        url: n.canonicalPath,
+      }))
+    ),
+  ];
+
   return (
     <SiteLayout activePath="/hizmet-bolgeleri">
+      <JsonLdScript data={schemas} />
       <Breadcrumb items={breadcrumbs} />
       <section className="py-section-padding bg-surface-container-lowest px-margin-mobile md:px-margin-desktop">
         <div className="max-w-container-max mx-auto">
