@@ -75,7 +75,7 @@ Hemen arayın veya WhatsApp üzerinden ulaşın — 7/24 hizmetinizdeyiz.
     canonicalPath: "/blog/kombi-basinci-neden-duser",
     relatedServices: ["kombi-servisi-ve-tesisati", "petek-temizleme"],
     faq: [],
-    status: "published",
+    status: "draft",
     image: blogImages["kombi-basinci-neden-duser"],
   },
   {
@@ -94,7 +94,7 @@ Hemen arayın veya WhatsApp üzerinden ulaşın — 7/24 hizmetinizdeyiz.
     canonicalPath: "/blog/lavabo-tikanikligi-nasil-acilir",
     relatedServices: ["tikaniklik-acma", "kamerali-tesisat-goruntuleme-ve-onarim"],
     faq: [],
-    status: "published",
+    status: "draft",
     image: blogImages["lavabo-tikanikligi-nasil-acilir"],
   },
   {
@@ -113,7 +113,7 @@ Hemen arayın veya WhatsApp üzerinden ulaşın — 7/24 hizmetinizdeyiz.
     canonicalPath: "/blog/periyodik-tesisat-bakimi",
     relatedServices: ["su-tesisati", "pimas-yikama"],
     faq: [],
-    status: "published",
+    status: "draft",
     image: blogImages["periyodik-tesisat-bakimi"],
   },
 ];

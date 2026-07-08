@@ -1,5 +1,6 @@
 import Link from "next/link";
 import dynamic from "next/dynamic";
+import Image from "next/image";
 import { SiteLayout } from "@/components/layout/SiteLayout";
 import { JsonLdScript } from "@/components/seo/JsonLdScript";
 import { ContextualLinks } from "@/components/ui/ContextualLinks";
@@ -222,9 +223,13 @@ export default async function HomePage() {
             </div>
           </div>
           <div className="relative hidden lg:block h-[500px] w-full rounded-2xl overflow-hidden soft-shadow border border-outline-variant/30">
-            <div
-              className="bg-cover bg-center w-full h-full absolute inset-0"
-              style={{ backgroundImage: "url('/images/home-hero.webp')" }}
+            <Image
+              src="/images/home-hero.webp"
+              alt="İstanbul'da tesisat arızasına müdahale eden profesyonel ekip"
+              fill
+              priority
+              sizes="(min-width: 1024px) 50vw, 100vw"
+              className="object-cover object-center"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-primary-container/30 via-transparent to-transparent pointer-events-none" />
             <div className="absolute bottom-8 right-8 flex flex-col gap-4 z-10">

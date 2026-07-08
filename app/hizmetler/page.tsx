@@ -119,6 +119,8 @@ export default async function HizmetlerPage() {
             <StitchImage
               src={pageImages.hizmetlerHero}
               alt="İstanbul geneli profesyonel tesisat çözümleri — mobil servis ekibi"
+              priority
+              sizes="(max-width: 1024px) 100vw, 50vw"
               className="relative w-full h-[380px] md:h-[480px] object-cover object-[center_40%] rounded-2xl soft-shadow border border-outline-variant z-10"
             />
           </div>

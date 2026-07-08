@@ -2,9 +2,22 @@ import type { Metadata } from "next";
 import type { SEOData } from "@/types";
 
 const DEFAULT_OG_IMAGE = "/logo.webp";
+const LOCAL_SITE_URL = "http://localhost:3000";
 
 export function getSiteUrl(): string {
-  return process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || LOCAL_SITE_URL;
+  const isProduction = process.env.NODE_ENV === "production";
+  const isLocalhost = /^https?:\/\/(localhost|127\.0\.0\.1)(:\d+)?\/?$/i.test(
+    siteUrl
+  );
+
+  if (isProduction && (!process.env.NEXT_PUBLIC_SITE_URL || isLocalhost)) {
+    throw new Error(
+      "NEXT_PUBLIC_SITE_URL must be set to the production domain for SEO metadata."
+    );
+  }
+
+  return siteUrl.replace(/\/$/, "");
 }
 
 export function buildMetadata(seo: SEOData): Metadata {

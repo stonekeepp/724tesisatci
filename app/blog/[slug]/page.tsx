@@ -10,7 +10,7 @@ import { getAllServices } from "@/lib/services/serviceService";
 import { getSiteSettings } from "@/lib/services/settingsService";
 import { buildMetadata, seoFromEntity } from "@/lib/services/seoService";
 import {
-  buildArticleSchema,
+  buildBlogPostingSchema,
   buildBreadcrumbSchema,
   buildFAQSchema,
 } from "@/lib/services/schemaService";
@@ -37,17 +37,33 @@ export async function generateMetadata({ params }: Props) {
 function renderContent(content: string) {
   return content.split("\n\n").map((block, i) => {
     if (block.startsWith("## ")) {
+      const [heading, ...body] = block.replace("## ", "").split("\n");
       return (
-        <h2 key={i} className="font-headline-md text-headline-md text-primary mt-8 mb-4">
-          {block.replace("## ", "")}
-        </h2>
+        <div key={i}>
+          <h2 className="font-headline-md text-headline-md text-primary mt-8 mb-4">
+            {heading}
+          </h2>
+          {body.length > 0 && (
+            <p className="font-body-md text-body-md text-on-surface-variant mb-4 leading-relaxed">
+              {body.join("\n")}
+            </p>
+          )}
+        </div>
       );
     }
     if (block.startsWith("### ")) {
+      const [heading, ...body] = block.replace("### ", "").split("\n");
       return (
-        <h3 key={i} className="font-headline-md text-xl text-primary mt-6 mb-3">
-          {block.replace("### ", "")}
-        </h3>
+        <div key={i}>
+          <h3 className="font-headline-md text-xl text-primary mt-6 mb-3">
+            {heading}
+          </h3>
+          {body.length > 0 && (
+            <p className="font-body-md text-body-md text-on-surface-variant mb-4 leading-relaxed">
+              {body.join("\n")}
+            </p>
+          )}
+        </div>
       );
     }
     return (
@@ -80,7 +96,7 @@ export default async function BlogDetailPage({ params }: Props) {
   ];
 
   const schemas = [
-    buildArticleSchema(post, settings),
+    buildBlogPostingSchema(post, settings),
     buildBreadcrumbSchema(breadcrumbs),
     buildFAQSchema(post.faq),
   ].filter(Boolean);
@@ -188,7 +204,17 @@ export default async function BlogDetailPage({ params }: Props) {
           </div>
           <ContextualLinks
             title="İlgili sayfalar"
-            links={primaryHubLinks}
+            links={[
+              {
+                href: "/hizmet-bolgeleri/kagithane",
+                label: "Kağıthane merkez tesisat ekibi",
+              },
+              {
+                href: "/hizmet-bolgeleri/istanbul",
+                label: "İstanbul geneli tesisat hizmeti",
+              },
+              ...primaryHubLinks,
+            ]}
             className="[&_a]:bg-white/10 [&_a]:text-on-primary [&_a]:border-white/20 [&_a:hover]:bg-white/20"
           />
         </div>

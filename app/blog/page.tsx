@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { SiteLayout } from "@/components/layout/SiteLayout";
 import { ContextualLinks } from "@/components/ui/ContextualLinks";
 import { getPublishedBlogPosts } from "@/lib/services/blogService";
@@ -31,10 +32,12 @@ export default async function BlogPage() {
               >
                 <div className="h-48 bg-surface-container-low relative">
                   {post.image && (
-                    <img
+                    <Image
                       src={post.image}
                       alt={post.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      fill
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                   )}
                   <div className="absolute top-4 left-4 bg-tertiary-container text-on-tertiary-container px-3 py-1 rounded-md font-label-md text-label-md shadow-sm">

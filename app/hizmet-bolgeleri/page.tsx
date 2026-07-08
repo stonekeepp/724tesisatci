@@ -94,6 +94,8 @@ export default async function HizmetBolgeleriPage() {
               src={pageImages.hizmetBolgeleriHero}
               alt="İstanbul geneli 7/24 tesisat hizmet bölgeleri — mobil ekip yönlendirmesi"
               fill
+              priority
+              sizes="(max-width: 768px) 100vw, 50vw"
               className="object-cover object-[center_42%]"
             />
           </div>

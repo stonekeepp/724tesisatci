@@ -1,12 +1,6 @@
 import type { BreadcrumbItem, BlogPost, FAQItem, Service, SiteSettings } from "@/types";
 import { getSiteUrl } from "./seoService";
 
-/** Emniyet Evleri, Semerkant Sk. 14/A — yaklaşık koordinat */
-const BUSINESS_GEO = {
-  latitude: 41.072,
-  longitude: 28.998,
-} as const;
-
 function buildPostalAddress() {
   return {
     "@type": "PostalAddress" as const,
@@ -15,14 +9,6 @@ function buildPostalAddress() {
     addressRegion: "İstanbul",
     postalCode: "34415",
     addressCountry: "TR",
-  };
-}
-
-function buildBusinessGeo() {
-  return {
-    "@type": "GeoCoordinates" as const,
-    latitude: BUSINESS_GEO.latitude,
-    longitude: BUSINESS_GEO.longitude,
   };
 }
 
@@ -53,11 +39,9 @@ export function buildLocalBusinessSchema(settings: SiteSettings, area?: string) 
     name: settings.siteName,
     url: siteUrl,
     telephone: settings.phone,
-    email: settings.email,
     logo: logoUrl,
     image: logoUrl,
     address: buildPostalAddress(),
-    geo: buildBusinessGeo(),
     openingHours: "Mo-Su 00:00-23:59",
     ...(area ? { areaServed: area } : {}),
   };
@@ -166,11 +150,11 @@ export function buildBreadcrumbSchema(items: BreadcrumbItem[]) {
   };
 }
 
-export function buildArticleSchema(post: BlogPost, settings: SiteSettings) {
+export function buildBlogPostingSchema(post: BlogPost, settings: SiteSettings) {
   const siteUrl = getSiteUrl();
   return {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "BlogPosting",
     headline: post.title,
     description: post.excerpt,
     datePublished: post.publishedAt,
@@ -188,5 +172,11 @@ export function buildArticleSchema(post: BlogPost, settings: SiteSettings) {
       },
     },
     url: `${siteUrl}${post.canonicalPath}`,
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `${siteUrl}${post.canonicalPath}`,
+    },
   };
 }
+
+export const buildArticleSchema = buildBlogPostingSchema;

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { SiteLayout } from "@/components/layout/SiteLayout";
 import { JsonLdScript } from "@/components/seo/JsonLdScript";
-import { buildMetadata } from "@/lib/services/seoService";
+import { buildMetadata, getSiteUrl } from "@/lib/services/seoService";
 import { getSiteSettings } from "@/lib/services/settingsService";
 import {
   buildBreadcrumbSchema,
@@ -57,6 +57,7 @@ const expertiseItems = [
 
 export default async function HakkimizdaPage() {
   const settings = await getSiteSettings();
+  const siteUrl = getSiteUrl();
 
   const breadcrumbs = [
     { label: "Ana Sayfa", href: "/" },
@@ -72,7 +73,7 @@ export default async function HakkimizdaPage() {
       "@type": "AboutPage",
       name: "724 Tesisatçı Hakkımızda",
       description: staticPageSeo.hakkimizda.description,
-      url: `${process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"}/hakkimizda`,
+      url: `${siteUrl}/hakkimizda`,
       mainEntity: {
         "@type": "Organization",
         name: settings.siteName,
@@ -148,6 +149,8 @@ export default async function HakkimizdaPage() {
             <StitchImage
               src={pageImages.hakkimizdaHero}
               alt="724 Tesisatçı profesyonel tesisat ekibi — İstanbul geneli 7/24 su tesisatı ve kaçak tespiti hizmeti"
+              priority
+              sizes="(max-width: 768px) 100vw, 50vw"
               className="relative w-full h-[400px] md:h-[500px] object-cover rounded-2xl soft-shadow border border-outline-variant z-10"
             />
           </div>

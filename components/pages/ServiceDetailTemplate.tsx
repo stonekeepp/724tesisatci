@@ -1,9 +1,10 @@
 import Link from "next/link";
-import type { Service } from "@/types";
+import type { BlogPost, Service } from "@/types";
 import { Breadcrumb } from "@/components/layout/Breadcrumb";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { ServiceAboutSection } from "@/components/pages/ServiceAboutSection";
 import { HeroImagePanel } from "@/components/ui/StitchImage";
+import { blogPosts } from "@/data/mock/blogPosts";
 import { serviceHeroImages } from "@/data/mock/images";
 import {
   getPhoneHref,
@@ -23,6 +24,12 @@ export function ServiceDetailTemplate({
   breadcrumbs,
 }: ServiceDetailTemplateProps) {
   const heroMeta = serviceHeroImages[service.slug];
+  const relatedBlogPosts = blogPosts
+    .filter(
+      (post) =>
+        post.status === "published" && post.relatedServices.includes(service.slug)
+    )
+    .slice(0, 3);
   const heroOverlay =
     service.slug === "su-kacagi-tespit-ve-onarim" ? (
       <div className="absolute bottom-6 left-6 right-6 p-4 glass-card rounded-xl">
@@ -63,6 +70,7 @@ export function ServiceDetailTemplate({
                   variant={heroMeta.variant}
                   imageClassName={heroMeta.imageClassName}
                   overlay={heroOverlay}
+                  priority
                 />
               </div>
             ) : null}
@@ -94,6 +102,7 @@ export function ServiceDetailTemplate({
                 variant={heroMeta.variant}
                 imageClassName={heroMeta.imageClassName}
                 overlay={heroOverlay}
+                priority
               />
             </div>
           ) : null}
@@ -103,6 +112,7 @@ export function ServiceDetailTemplate({
         service={service}
         relatedServiceItems={relatedServiceItems}
         heroImage={heroMeta ? { src: heroMeta.src, alt: heroMeta.alt } : undefined}
+        relatedBlogPosts={relatedBlogPosts}
       />
     </>
   );
@@ -112,10 +122,12 @@ function ServiceDetailBody({
   service,
   relatedServiceItems,
   heroImage,
+  relatedBlogPosts,
 }: {
   service: Service;
   relatedServiceItems: Service[];
   heroImage?: { src: string; alt: string };
+  relatedBlogPosts: BlogPost[];
 }) {
   return (
     <>
@@ -282,6 +294,39 @@ function ServiceDetailBody({
                   </h3>
                   <p className="font-body-md text-body-md text-on-surface-variant">
                     {related.shortDescription}
+                  </p>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {relatedBlogPosts.length > 0 && (
+        <section className="py-section-padding bg-surface-bright">
+          <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+            <h2 className="font-headline-lg text-headline-lg text-primary mb-4 text-center">
+              {service.title} Rehberleri
+            </h2>
+            <p className="font-body-md text-body-md text-on-surface-variant text-center max-w-2xl mx-auto mb-8">
+              Bu hizmetle ilgili belirtiler, erken müdahale ve servis süreci
+              hakkında hazırladığımız kullanıcı odaklı rehberler.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {relatedBlogPosts.map((post) => (
+                <Link
+                  key={post.slug}
+                  href={post.canonicalPath}
+                  className="bg-surface-container-lowest rounded-xl p-6 border border-outline-variant soft-shadow service-card-hover transition-all"
+                >
+                  <span className="font-label-md text-label-md text-secondary">
+                    {post.category}
+                  </span>
+                  <h3 className="font-headline-md text-headline-md text-primary mt-3 mb-3">
+                    {post.title}
+                  </h3>
+                  <p className="font-body-md text-body-md text-on-surface-variant line-clamp-3">
+                    {post.excerpt}
                   </p>
                 </Link>
               ))}
