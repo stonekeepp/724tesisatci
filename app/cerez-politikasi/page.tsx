@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { SiteLayout } from "@/components/layout/SiteLayout";
+import { ContactEmailLink } from "@/components/ui/ContactEmailLink";
 import { buildMetadata } from "@/lib/services/seoService";
 import { staticPageSeo } from "@/data/mock/seo";
 
@@ -40,7 +41,8 @@ export default function CerezPolitikasiPage() {
               İletişim
             </h2>
             <p>
-              Çerez politikası hakkında sorularınız için info@724tesisatci.com adresinden bize ulaşabilirsiniz.
+              Çerez politikası hakkında sorularınız için{" "}
+              <ContactEmailLink /> adresinden bize ulaşabilirsiniz.
             </p>
             <div className="flex flex-wrap gap-4 pt-6 border-t border-outline-variant">
               <Link href="/gizlilik-politikasi" className="text-secondary font-label-md hover:text-primary transition-colors">

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { SiteLayout } from "@/components/layout/SiteLayout";
+import { ContactEmailLink } from "@/components/ui/ContactEmailLink";
 import { buildMetadata } from "@/lib/services/seoService";
 import { staticPageSeo } from "@/data/mock/seo";
 
@@ -33,13 +34,15 @@ export default function GizlilikPolitikasiPage() {
               KVKK Haklarınız
             </h2>
             <p>
-              6698 sayılı Kişisel Verilerin Korunması Kanunu kapsamında verilerinize erişim, düzeltme, silme ve itiraz etme haklarına sahipsiniz. Talepleriniz için info@724tesisatci.com adresine başvurabilirsiniz.
+              6698 sayılı Kişisel Verilerin Korunması Kanunu kapsamında verilerinize erişim, düzeltme, silme ve itiraz etme haklarına sahipsiniz. Talepleriniz için{" "}
+              <ContactEmailLink /> adresine başvurabilirsiniz.
             </p>
             <h2 className="font-headline-md text-headline-md text-primary pt-4">
               İletişim
             </h2>
             <p>
-              Gizlilik politikası hakkında sorularınız için info@724tesisatci.com adresinden bize ulaşabilirsiniz.
+              Gizlilik politikası hakkında sorularınız için{" "}
+              <ContactEmailLink /> adresinden bize ulaşabilirsiniz.
             </p>
             <div className="flex flex-wrap gap-4 pt-6 border-t border-outline-variant">
               <Link href="/cerez-politikasi" className="text-secondary font-label-md hover:text-primary transition-colors">
