@@ -111,6 +111,11 @@ export interface Location {
 
 export type BlogPostStatus = "draft" | "published";
 
+export interface BlogRelatedLink {
+  href: string;
+  label: string;
+}
+
 export interface BlogPost {
   id: string;
   title: string;
@@ -128,6 +133,12 @@ export interface BlogPost {
   faq: FAQItem[];
   status: BlogPostStatus;
   image?: string;
+  imageAlt?: string;
+  localFocus?: string;
+  editorialReviewedBy?: string;
+  editorialReviewedAt?: string;
+  editorialNote?: string;
+  relatedLinks?: BlogRelatedLink[];
 }
 
 export interface ContactLead {
@@ -176,5 +187,13 @@ export interface BlogFormInput {
   seoTitle: string;
   seoDescription: string;
   relatedServices: string[];
+  faq?: FAQItem[];
+  image?: string;
+  imageAlt?: string;
+  localFocus?: string;
+  editorialReviewedBy?: string;
+  editorialReviewedAt?: string;
+  editorialNote?: string;
+  relatedLinks?: BlogRelatedLink[];
   publishedAt?: string;
 }

@@ -21,9 +21,9 @@ export const staticPageSeo: Record<string, SEOData> = {
     canonicalPath: "/hizmet-bolgeleri",
   },
   blog: {
-    title: "Tesisat Blog | 724 Tesisatçı Uzman Yazıları",
+    title: "Tesisat Blog | Kağıthane Su Kaçağı, Tıkanıklık, Kombi",
     description:
-      "Su kaçağı, tıkanıklık, kombi bakımı ve tesisat konularında uzman rehberler ve pratik bilgiler.",
+      "Kağıthane merkezli tesisat rehberleri: su kaçağı, tıkanıklık, kombi basıncı, petek temizleme ve periyodik bakım için pratik bilgiler.",
     canonicalPath: "/blog",
   },
   sss: {

@@ -6,7 +6,7 @@ import { getSiteUrl } from "./seoService";
 import { staticPageSeo } from "@/data/mock/seo";
 
 /** Büyük içerik sürümü — her büyük içerik güncellemesinde bu tarihi güncelleyin */
-const CONTENT_LAST_UPDATED = new Date("2026-07-08");
+const CONTENT_LAST_UPDATED = new Date("2026-07-09");
 
 export async function generateSitemapEntries() {
   const siteUrl = getSiteUrl();

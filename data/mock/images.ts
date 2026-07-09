@@ -72,4 +72,8 @@ export const blogImages: Record<string, string> = {
   "kombi-basinci-neden-duser": "/images/blog-kombi-basinci.webp",
   "lavabo-tikanikligi-nasil-acilir": "/images/blog-lavabo-tikanikligi.webp",
   "periyodik-tesisat-bakimi": "/images/blog-periyodik-bakim.webp",
+  "kagithane-su-kacagi-tespiti": "/images/su-kacagi-tespit-hero.webp",
+  "kagithane-tikaniklik-acma": "/images/tikaniklik-acma-hero.webp",
+  "kagithane-kombi-petek-sorunlari": "/images/kombi-servisi-hero.webp",
+  "celiktepe-merkez-operasyon-mahalle-servisi": "/images/iletisim-kagithane-merkez-map.webp",
 };

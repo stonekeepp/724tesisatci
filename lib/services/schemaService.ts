@@ -152,11 +152,27 @@ export function buildBreadcrumbSchema(items: BreadcrumbItem[]) {
 
 export function buildBlogPostingSchema(post: BlogPost, settings: SiteSettings) {
   const siteUrl = getSiteUrl();
+  const imageUrl = post.image
+    ? post.image.startsWith("http")
+      ? post.image
+      : `${siteUrl}${post.image}`
+    : `${siteUrl}/logo.webp`;
+
   return {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     headline: post.title,
     description: post.excerpt,
+    image: imageUrl,
+    articleSection: post.category,
+    ...(post.localFocus
+      ? {
+          about: {
+            "@type": "Place",
+            name: post.localFocus,
+          },
+        }
+      : {}),
     datePublished: post.publishedAt,
     dateModified: post.updatedAt,
     author: {
@@ -171,6 +187,14 @@ export function buildBlogPostingSchema(post: BlogPost, settings: SiteSettings) {
         url: `${siteUrl}/logo.webp`,
       },
     },
+    ...(post.editorialReviewedBy
+      ? {
+          reviewedBy: {
+            "@type": "Organization",
+            name: post.editorialReviewedBy,
+          },
+        }
+      : {}),
     url: `${siteUrl}${post.canonicalPath}`,
     mainEntityOfPage: {
       "@type": "WebPage",

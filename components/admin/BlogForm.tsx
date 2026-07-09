@@ -13,6 +13,16 @@ export function BlogForm({ initialData }: BlogFormProps) {
   const [loading, setLoading] = useState(false);
   const [errors, setErrors] = useState<Record<string, string[]>>({});
 
+  function parseJsonArray(value: FormDataEntryValue | null) {
+    if (!value || typeof value !== "string" || value.trim() === "") return [];
+    try {
+      const parsed = JSON.parse(value);
+      return Array.isArray(parsed) ? parsed : [];
+    } catch {
+      return [];
+    }
+  }
+
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setLoading(true);
@@ -34,6 +44,14 @@ export function BlogForm({ initialData }: BlogFormProps) {
       relatedServices: relatedRaw
         ? relatedRaw.split(",").map((s) => s.trim()).filter(Boolean)
         : [],
+      faq: parseJsonArray(formData.get("faq")),
+      image: formData.get("image") as string,
+      imageAlt: formData.get("imageAlt") as string,
+      localFocus: formData.get("localFocus") as string,
+      editorialReviewedBy: formData.get("editorialReviewedBy") as string,
+      editorialReviewedAt: formData.get("editorialReviewedAt") as string,
+      editorialNote: formData.get("editorialNote") as string,
+      relatedLinks: parseJsonArray(formData.get("relatedLinks")),
       publishedAt: formData.get("publishedAt") as string,
     };
 
@@ -109,6 +127,80 @@ export function BlogForm({ initialData }: BlogFormProps) {
           defaultValue={initialData?.relatedServices?.join(", ")}
           placeholder="su-kacagi-tespit-ve-onarim, tikaniklik-acma"
           className="w-full border rounded px-3 py-2"
+        />
+      </div>
+      <div>
+        <label className="block text-sm font-medium mb-1">Görsel URL</label>
+        <input
+          name="image"
+          defaultValue={initialData?.image}
+          placeholder="/images/blog-su-kacagi-belirtileri.webp"
+          className="w-full border rounded px-3 py-2"
+        />
+      </div>
+      <div>
+        <label className="block text-sm font-medium mb-1">Görsel Alt Metni</label>
+        <input
+          name="imageAlt"
+          defaultValue={initialData?.imageAlt}
+          placeholder="Kağıthane'de cihazlı su kaçağı kontrolü"
+          className="w-full border rounded px-3 py-2"
+        />
+      </div>
+      <div className="grid grid-cols-2 gap-4">
+        <div>
+          <label className="block text-sm font-medium mb-1">Yerel Odak</label>
+          <input
+            name="localFocus"
+            defaultValue={initialData?.localFocus}
+            placeholder="Kağıthane"
+            className="w-full border rounded px-3 py-2"
+          />
+        </div>
+        <div>
+          <label className="block text-sm font-medium mb-1">İnceleme Tarihi</label>
+          <input
+            name="editorialReviewedAt"
+            type="date"
+            defaultValue={initialData?.editorialReviewedAt}
+            className="w-full border rounded px-3 py-2"
+          />
+        </div>
+      </div>
+      <div>
+        <label className="block text-sm font-medium mb-1">Editoryal İnceleyen</label>
+        <input
+          name="editorialReviewedBy"
+          defaultValue={initialData?.editorialReviewedBy}
+          placeholder="724 Tesisatçı saha ekibi"
+          className="w-full border rounded px-3 py-2"
+        />
+      </div>
+      <div>
+        <label className="block text-sm font-medium mb-1">Editoryal Not</label>
+        <textarea
+          name="editorialNote"
+          rows={2}
+          defaultValue={initialData?.editorialNote}
+          className="w-full border rounded px-3 py-2"
+        />
+      </div>
+      <div>
+        <label className="block text-sm font-medium mb-1">FAQ JSON</label>
+        <textarea
+          name="faq"
+          rows={5}
+          defaultValue={JSON.stringify(initialData?.faq ?? [], null, 2)}
+          className="w-full border rounded px-3 py-2 font-mono text-xs"
+        />
+      </div>
+      <div>
+        <label className="block text-sm font-medium mb-1">Ek İç Linkler JSON</label>
+        <textarea
+          name="relatedLinks"
+          rows={4}
+          defaultValue={JSON.stringify(initialData?.relatedLinks ?? [], null, 2)}
+          className="w-full border rounded px-3 py-2 font-mono text-xs"
         />
       </div>
       <div>

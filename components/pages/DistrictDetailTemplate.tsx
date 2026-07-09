@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Location, Neighborhood, Service } from "@/types";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
+import { ContextualLinks } from "@/components/ui/ContextualLinks";
 import { LocationHeroImage } from "@/components/ui/LocationHeroImage";
 import {
   getPhoneHref,
@@ -230,6 +231,34 @@ export function DistrictDetailTemplate({
           </div>
         </div>
       </section>
+
+      {isHQ && (
+        <section className="py-10 bg-surface-container-low px-margin-mobile md:px-margin-desktop">
+          <div className="max-w-container-max mx-auto">
+            <ContextualLinks
+              title="Kağıthane yerel tesisat rehberleri"
+              links={[
+                {
+                  href: "/blog/kagithane-su-kacagi-tespiti",
+                  label: "Kağıthane su kaçağı tespiti",
+                },
+                {
+                  href: "/blog/kagithane-tikaniklik-acma",
+                  label: "Kağıthane tıkanıklık açma",
+                },
+                {
+                  href: "/blog/kagithane-kombi-petek-sorunlari",
+                  label: "Kağıthane kombi ve petek",
+                },
+                {
+                  href: "/blog/celiktepe-merkez-operasyon-mahalle-servisi",
+                  label: "Çeliktepe merkez operasyon",
+                },
+              ]}
+            />
+          </div>
+        </section>
+      )}
 
       {location.faq.length > 0 && (
         <section className="py-section-padding bg-surface-container-low px-margin-mobile md:px-margin-desktop">

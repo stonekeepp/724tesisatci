@@ -1,11 +1,15 @@
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { SiteLayout } from "@/components/layout/SiteLayout";
 import { Breadcrumb } from "@/components/layout/Breadcrumb";
 import { JsonLdScript } from "@/components/seo/JsonLdScript";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { ContextualLinks } from "@/components/ui/ContextualLinks";
-import { getBlogPostBySlug } from "@/lib/services/blogService";
+import {
+  getBlogPostBySlug,
+  getPublishedBlogPosts,
+} from "@/lib/services/blogService";
 import { getAllServices } from "@/lib/services/serviceService";
 import { getSiteSettings } from "@/lib/services/settingsService";
 import { buildMetadata, seoFromEntity } from "@/lib/services/seoService";
@@ -14,8 +18,7 @@ import {
   buildBreadcrumbSchema,
   buildFAQSchema,
 } from "@/lib/services/schemaService";
-import { blogPosts } from "@/data/mock/blogPosts";
-import { getPhoneHref, getWhatsAppHref } from "@/data/mock/siteSettings";
+import { getPhoneHref } from "@/data/mock/siteSettings";
 import { primaryHubLinks } from "@/lib/utils/internalLinks";
 
 interface Props {
@@ -23,7 +26,7 @@ interface Props {
 }
 
 export async function generateStaticParams() {
-  const published = blogPosts.filter((p) => p.status === "published");
+  const published = await getPublishedBlogPosts();
   return published.map((p) => ({ slug: p.slug }));
 }
 
@@ -31,7 +34,12 @@ export async function generateMetadata({ params }: Props) {
   const { slug } = await params;
   const post = await getBlogPostBySlug(slug);
   if (!post || post.status !== "published") return {};
-  return buildMetadata(seoFromEntity(post));
+  return buildMetadata(
+    seoFromEntity({
+      ...post,
+      ogImage: post.image,
+    })
+  );
 }
 
 function renderContent(content: string) {
@@ -74,20 +82,27 @@ function renderContent(content: string) {
   });
 }
 
+function formatDate(date: string) {
+  return new Date(date).toLocaleDateString("tr-TR");
+}
+
 export default async function BlogDetailPage({ params }: Props) {
   const { slug } = await params;
   const post = await getBlogPostBySlug(slug);
   if (!post || post.status !== "published") notFound();
 
-  const allServices = await getAllServices();
+  const [allServices, publishedPosts, settings] = await Promise.all([
+    getAllServices(),
+    getPublishedBlogPosts(),
+    getSiteSettings(),
+  ]);
+
   const relatedServices = allServices.filter((s) =>
     post.relatedServices.includes(s.slug)
   );
-  const relatedPosts = blogPosts
-    .filter((p) => p.status === "published" && p.slug !== post.slug)
+  const relatedPosts = publishedPosts
+    .filter((p) => p.slug !== post.slug)
     .slice(0, 3);
-
-  const settings = await getSiteSettings();
 
   const breadcrumbs = [
     { label: "Ana Sayfa", href: "/" },
@@ -115,11 +130,56 @@ export default async function BlogDetailPage({ params }: Props) {
           </h1>
           <div className="flex items-center gap-4 font-label-md text-label-md text-on-surface-variant mb-8 pb-8 border-b border-outline-variant">
             <time dateTime={post.publishedAt}>
-              {new Date(post.publishedAt).toLocaleDateString("tr-TR")}
+              {formatDate(post.publishedAt)}
+            </time>
+            <time dateTime={post.updatedAt}>
+              Güncellendi: {formatDate(post.updatedAt)}
             </time>
             <span>{post.readingTime} dk okuma</span>
           </div>
+          {post.image && (
+            <div className="relative w-full aspect-[16/9] rounded-2xl overflow-hidden mb-10 soft-shadow">
+              <Image
+                src={post.image}
+                alt={post.imageAlt ?? post.title}
+                fill
+                sizes="(max-width: 768px) 100vw, 768px"
+                className="object-cover"
+                priority
+              />
+            </div>
+          )}
           <div className="prose-content">{renderContent(post.content)}</div>
+          {(post.editorialReviewedBy || post.localFocus) && (
+            <aside className="mt-10 rounded-xl border border-outline-variant bg-surface-container-low p-5">
+              <p className="font-label-md text-label-md text-secondary mb-2">
+                Editoryal kontrol
+              </p>
+              <p className="font-body-md text-body-md text-on-surface-variant">
+                {post.editorialReviewedBy && (
+                  <>
+                    {post.editorialReviewedBy}
+                    {post.editorialReviewedAt
+                      ? ` tarafından ${formatDate(post.editorialReviewedAt)} tarihinde incelendi.`
+                      : " tarafından incelendi."}
+                  </>
+                )}
+                {post.localFocus && ` Yerel odak: ${post.localFocus}.`}
+              </p>
+              {post.editorialNote && (
+                <p className="font-body-md text-sm text-on-surface-variant mt-2">
+                  {post.editorialNote}
+                </p>
+              )}
+            </aside>
+          )}
+          {post.relatedLinks && post.relatedLinks.length > 0 && (
+            <ContextualLinks
+              title="Bu rehberle ilgili sayfalar"
+              links={post.relatedLinks}
+              className="mt-10 pt-8 border-t border-outline-variant"
+            />
+          )}
         </div>
       </article>
 
@@ -139,6 +199,9 @@ export default async function BlogDetailPage({ params }: Props) {
                   <h3 className="font-headline-md text-headline-md text-primary">
                     {service.title}
                   </h3>
+                  <p className="font-body-md text-body-md text-on-surface-variant mt-2 line-clamp-2">
+                    {service.shortDescription}
+                  </p>
                 </Link>
               ))}
             </div>
@@ -168,11 +231,27 @@ export default async function BlogDetailPage({ params }: Props) {
                 <Link
                   key={related.slug}
                   href={related.canonicalPath}
-                  className="bg-surface-container-lowest rounded-xl p-4 border border-outline-variant hover:border-secondary transition-colors"
+                  className="bg-surface-container-lowest rounded-xl overflow-hidden border border-outline-variant hover:border-secondary transition-colors group"
                 >
-                  <h3 className="font-headline-md text-sm text-primary line-clamp-2">
-                    {related.title}
-                  </h3>
+                  {related.image && (
+                    <div className="relative h-32 bg-surface-container-low">
+                      <Image
+                        src={related.image}
+                        alt={related.imageAlt ?? related.title}
+                        fill
+                        sizes="(max-width: 768px) 100vw, 33vw"
+                        className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                    </div>
+                  )}
+                  <div className="p-4">
+                    <span className="font-label-md text-label-md text-secondary mb-2 block">
+                      {related.category}
+                    </span>
+                    <h3 className="font-headline-md text-sm text-primary line-clamp-2">
+                      {related.title}
+                    </h3>
+                  </div>
                 </Link>
               ))}
             </div>
@@ -186,7 +265,7 @@ export default async function BlogDetailPage({ params }: Props) {
             Profesyonel destek mi gerekiyor?
           </h2>
           <p className="font-body-md text-body-md text-on-primary-container mb-8 max-w-xl mx-auto">
-            İstanbul genelinde 7/24 tesisat ekibimiz yazılı teklif ve garantili işçilik ile hizmet verir.
+            Kağıthane Çeliktepe merkezli 7/24 tesisat ekibimiz yazılı teklif ve garantili işçilik ile hizmet verir.
           </p>
           <div className="flex flex-wrap justify-center gap-4 mb-10">
             <a
@@ -213,7 +292,9 @@ export default async function BlogDetailPage({ params }: Props) {
                 href: "/hizmet-bolgeleri/istanbul",
                 label: "İstanbul geneli tesisat hizmeti",
               },
-              ...primaryHubLinks,
+              ...primaryHubLinks.filter(
+                (link) => link.href !== "/hizmet-bolgeleri/kagithane"
+              ),
             ]}
             className="[&_a]:bg-white/10 [&_a]:text-on-primary [&_a]:border-white/20 [&_a:hover]:bg-white/20"
           />

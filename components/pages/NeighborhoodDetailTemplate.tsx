@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Location, Neighborhood, Service } from "@/types";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
+import { ContextualLinks } from "@/components/ui/ContextualLinks";
 import { LocationHeroImage } from "@/components/ui/LocationHeroImage";
 import { getNeighborhoodArrivalStat } from "@/data/mock/districtArrivalTimes";
 import {
@@ -126,6 +127,32 @@ export function NeighborhoodDetailTemplate({
               </Link>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="py-10 bg-surface-container-low px-margin-mobile md:px-margin-desktop">
+        <div className="max-w-container-max mx-auto">
+          <ContextualLinks
+            title={`${neighborhood.title} için Kağıthane kaynakları`}
+            links={[
+              {
+                href: district.canonicalPath,
+                label: "Kağıthane ana tesisat sayfası",
+              },
+              {
+                href: "/hizmet-bolgeleri/kagithane-mahalleleri",
+                label: "Tüm Kağıthane mahalleleri",
+              },
+              {
+                href: "/blog/celiktepe-merkez-operasyon-mahalle-servisi",
+                label: "Çeliktepe merkez operasyon rehberi",
+              },
+              {
+                href: "/blog/kagithane-su-kacagi-tespiti",
+                label: "Kağıthane su kaçağı tespiti",
+              },
+            ]}
+          />
         </div>
       </section>
 

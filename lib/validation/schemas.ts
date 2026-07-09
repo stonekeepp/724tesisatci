@@ -36,6 +36,31 @@ export const blogFormSchema = z.object({
   seoTitle: z.string().max(70, "Meta title en fazla 70 karakter olmalıdır"),
   seoDescription: z.string().max(160, "Meta description en fazla 160 karakter olmalıdır"),
   relatedServices: z.array(z.string()).default([]),
+  faq: z
+    .array(
+      z.object({
+        question: z.string().min(3),
+        answer: z.string().min(3),
+        category: z.string().min(1),
+        relatedPage: z.string().optional(),
+        relatedPageLabel: z.string().optional(),
+      })
+    )
+    .default([]),
+  image: z.string().optional(),
+  imageAlt: z.string().optional(),
+  localFocus: z.string().optional(),
+  editorialReviewedBy: z.string().optional(),
+  editorialReviewedAt: z.string().optional(),
+  editorialNote: z.string().optional(),
+  relatedLinks: z
+    .array(
+      z.object({
+        href: z.string().min(1),
+        label: z.string().min(1),
+      })
+    )
+    .default([]),
   publishedAt: z.string().optional(),
 });
 
