@@ -4,9 +4,13 @@ import Link from "next/link";
 import { useState } from "react";
 import { SiteLayout } from "@/components/layout/SiteLayout";
 import { ContextualLinks } from "@/components/ui/ContextualLinks";
-import { siteSettings, getPhoneHref, getWhatsAppHref, getMapsDirectionsHref } from "@/data/mock/siteSettings";
-import { pageImages } from "@/data/mock/images";
-import { StitchImage } from "@/components/ui/StitchImage";
+import {
+  siteSettings,
+  getPhoneHref,
+  getWhatsAppHref,
+  getMapsDirectionsHref,
+  getMapsEmbedSrc,
+} from "@/data/mock/siteSettings";
 import { popularServiceLinks, primaryHubLinks } from "@/lib/utils/internalLinks";
 import {
   contactDistrictOptions,
@@ -315,18 +319,20 @@ export function IletisimPageClient() {
               </a>
             </div>
             <div className="bg-surface-container-lowest rounded-xl overflow-hidden border border-outline-variant/30 soft-shadow h-64 md:h-full min-h-[300px] relative">
-              <StitchImage
-                src={pageImages.iletisimMap}
-                alt="Kağıthane Emniyet Evleri haritası"
-                fill
-                className="object-cover object-center"
+              <iframe
+                title="724 Tesisatçı — Emniyet Evleri, Semerkant Sk. 14/A, Kağıthane"
+                src={getMapsEmbedSrc()}
+                className="absolute inset-0 w-full h-full border-0"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                allowFullScreen
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/80 to-transparent flex items-end p-6">
+              <div className="absolute inset-x-0 bottom-0 flex items-end p-6 pointer-events-none">
                 <a
                   href={getMapsDirectionsHref()}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-surface text-on-surface font-label-md text-label-md px-4 py-2 rounded-lg border border-outline-variant shadow-sm hover:bg-surface-variant flex items-center gap-2"
+                  className="pointer-events-auto bg-surface text-on-surface font-label-md text-label-md px-4 py-2 rounded-lg border border-outline-variant shadow-sm hover:bg-surface-variant flex items-center gap-2"
                 >
                   <span className="material-symbols-outlined text-[20px]">directions</span>
                   Yol Tarifi Al

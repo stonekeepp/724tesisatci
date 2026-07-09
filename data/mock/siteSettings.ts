@@ -30,3 +30,9 @@ export function getMapsDirectionsHref(
 ): string {
   return `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(destination)}`;
 }
+
+export function getMapsEmbedSrc(
+  destination: string = siteSettings.mapsDestination
+): string {
+  return `https://www.google.com/maps?q=${encodeURIComponent(destination)}&hl=tr&z=16&output=embed`;
+}
