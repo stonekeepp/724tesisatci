@@ -61,9 +61,9 @@ export function FooterNavSections({ sections }: FooterNavSectionsProps) {
               />
             </button>
 
-            <h4 className={`hidden md:block ${footerHeadingClass} mb-5`}>
+            <p className={`hidden md:block ${footerHeadingClass} mb-5`}>
               {section.title}
-            </h4>
+            </p>
 
             <div
               id={`footer-section-${section.id}`}

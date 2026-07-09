@@ -181,7 +181,7 @@ export function HeaderMobileMenu({ activePath }: HeaderMobileMenuProps) {
                 )}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 px-6 py-3 bg-[#25D366] text-white rounded-xl font-label-md hover:bg-[#128C7E] transition-colors shadow-md"
+                className="flex items-center justify-center gap-2 px-6 py-3 bg-[#075E54] text-white rounded-xl font-label-md hover:bg-[#054A42] transition-colors shadow-md"
               >
                 <span className="material-symbols-outlined text-xl" aria-hidden="true">
                   chat

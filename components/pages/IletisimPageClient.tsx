@@ -308,7 +308,7 @@ export function IletisimPageClient() {
                 href={getWhatsAppHref(siteSettings.whatsapp, siteSettings.whatsappMessage)}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-[#25D366] text-white rounded-lg font-label-md mt-6"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-[#075E54] text-white rounded-lg font-label-md mt-6 hover:bg-[#054A42] transition-colors"
               >
                 <span className="material-symbols-outlined">chat</span>
                 WhatsApp

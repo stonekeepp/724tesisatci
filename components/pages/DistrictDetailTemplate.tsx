@@ -123,7 +123,7 @@ export function DistrictDetailTemplate({
                 href={getWhatsAppHref(siteSettings.whatsapp, siteSettings.whatsappMessage)}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-[#25D366] text-white rounded-xl font-label-md hover:bg-[#128C7E] transition-colors shadow-lg"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-[#075E54] text-white rounded-xl font-label-md hover:bg-[#054A42] transition-colors shadow-lg"
               >
                 <span className="material-symbols-outlined" aria-hidden="true">chat</span>
                 WhatsApp

@@ -46,7 +46,7 @@ const config: Config = {
         "on-tertiary-container": "#cf6721",
         "inverse-primary": "#bec6e0",
         "on-tertiary-fixed-variant": "#763300",
-        "on-primary-container": "#7c839b",
+        "on-primary-container": "#b8bfcc",
         "inverse-surface": "#2d3133",
         "secondary-container": "#76dcff",
         "surface-container": "#eceef0",

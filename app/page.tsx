@@ -195,7 +195,7 @@ export default async function HomePage() {
                 href={getWhatsAppHref(settings.whatsapp, settings.whatsappMessage)}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-8 py-4 bg-[#25D366] text-white font-label-md text-label-md rounded-lg hover:bg-[#128C7E] transition-colors shadow-lg flex items-center gap-2 rounded-xl px-10"
+                className="px-8 py-4 bg-[#075E54] text-white font-label-md text-label-md rounded-lg hover:bg-[#054A42] transition-colors shadow-lg flex items-center gap-2 rounded-xl px-10"
               >
                 <span className="material-symbols-outlined" aria-hidden="true">chat</span>
                 WhatsApp
@@ -358,7 +358,7 @@ export default async function HomePage() {
                     {item.icon}
                   </span>
                 </div>
-                <h4 className="font-headline-md text-headline-md font-bold text-on-primary">{item.title}</h4>
+                <h3 className="font-headline-md text-headline-md font-bold text-on-primary">{item.title}</h3>
                 <p className="text-sm text-on-primary-container leading-relaxed">{item.description}</p>
               </div>
             ))}
@@ -388,7 +388,7 @@ export default async function HomePage() {
                 >
                   {step.step}
                 </div>
-                <h4 className="font-bold text-primary mb-2">{step.title}</h4>
+                <h3 className="font-bold text-primary mb-2">{step.title}</h3>
                 <p className="text-sm text-on-surface-variant leading-relaxed">{step.description}</p>
               </div>
             ))}
@@ -493,7 +493,7 @@ export default async function HomePage() {
               href={getWhatsAppHref(settings.whatsapp, settings.whatsappMessage)}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-10 py-4 bg-[#25D366] text-white font-bold rounded-xl hover:bg-[#128C7E] transition-all shadow-lg flex items-center gap-2"
+              className="px-10 py-4 bg-[#075E54] text-white font-bold rounded-xl hover:bg-[#054A42] transition-all shadow-lg flex items-center gap-2"
             >
               <span className="material-symbols-outlined" aria-hidden="true">chat</span>
               WhatsApp
