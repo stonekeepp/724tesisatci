@@ -1,9 +1,9 @@
 import type { SEOData } from "@/types";
 
 export const defaultSeo: SEOData = {
-  title: "İstanbul Geneli 7/24 Tesisatçı | Su Kaçağı, Tıkanıklık, Kombi — 724 Tesisatçı",
+  title: "Kağıthane Tesisatçı | 7/24 Su Tesisatı, Tıkanıklık",
   description:
-    "İstanbul genelinde 7/24 profesyonel tesisat hizmeti. Su kaçağı tespiti, tıkanıklık açma, petek temizleme, kombi servisi, gömme rezervuar tamiri, batarya musluk montaj, pimaş yıkama ve doğalgaz tesisatı. Cihazlı tespit, yazılı teklif, garantili işçilik, aynı gün servis.",
+    "Kağıthane Çeliktepe merkezli tesisatçı. Su kaçağı, tıkanıklık, pimaş, petek ve kombi tesisatı için 7/24 servis, cihazlı tespit.",
   canonicalPath: "/",
 };
 

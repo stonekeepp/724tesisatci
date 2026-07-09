@@ -3,6 +3,7 @@ import type { Location, Neighborhood, Service } from "@/types";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { ContextualLinks } from "@/components/ui/ContextualLinks";
 import { LocationHeroImage } from "@/components/ui/LocationHeroImage";
+import { localServiceLandingPages } from "@/data/mock/localServiceLandingPages";
 import {
   getPhoneHref,
   getWhatsAppHref,
@@ -26,10 +27,19 @@ export function DistrictDetailTemplate({
   const isHQ = location.isHeadquarters;
   const heroTitle = isCity
     ? "İstanbul Tesisatçı"
-    : `${location.title} Tesisatçı`;
+    : isHQ
+      ? "Kağıthane Tesisat Hizmet Bölgeleri"
+      : `${location.title} Tesisatçı`;
   const heroSubtitle = isHQ
-    ? "Merkez Operasyon · 19 Mahalle"
+    ? "19 Mahalle · Servis Yönlendirme Hub’ı"
     : "7/24 Profesyonel Tesisat";
+  const localLandingLinks = localServiceLandingPages
+    .filter((page) => page.indexable !== false)
+    .map((page) => ({
+      href: page.canonicalPath,
+      label: page.h1,
+      description: page.description,
+    }));
 
   return (
     <>
@@ -149,6 +159,81 @@ export function DistrictDetailTemplate({
           </div>
         </div>
       </section>
+
+      {isHQ && (
+        <section className="py-section-padding bg-surface-bright px-margin-mobile md:px-margin-desktop">
+          <div className="max-w-container-max mx-auto">
+            <div className="text-center mb-12 max-w-3xl mx-auto">
+              <span className="inline-block py-1 px-3 rounded-full bg-secondary-container/30 text-secondary font-label-md text-label-md mb-4">
+                Kağıthane Yerel Rehber
+              </span>
+              <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary font-bold mb-4">
+                Kağıthane&apos;de Tesisat Sorunları ve Servis Planı
+              </h2>
+              <p className="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                Kağıthane ilçe sayfası ana yerel hedef sayfadır. Çeliktepe merkezli operasyon,
+                19 mahalleye servis yönlendirmesi, bina tiplerine göre arıza analizi ve acil
+                durumda yapılacaklar bu sayfada bir araya getirilir.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+              {[
+                {
+                  title: "Bina tipleri",
+                  text: "Eski apartmanlarda galvaniz boru, şaft geçişi ve pimaş eğimi; yeni sitelerde kollektör, gömme hat ve basınç dengesi kontrol edilir.",
+                },
+                {
+                  title: "Sık sorunlar",
+                  text: "Alt kata su akması, mutfak gideri tıkanması, pimaş geri tepmesi, peteklerin yarım ısınması ve rezervuar su kaçırması sık görülür.",
+                },
+                {
+                  title: "Acil durumda",
+                  text: "Ana vanayı kapatın, elektrik riski olan alanları kullanmayın, suyun geldiği noktayı fotoğraflayın ve ekip gelene kadar kimyasal dökmeyin.",
+                },
+                {
+                  title: "Fiyat faktörleri",
+                  text: "Arıza tipi, cihazlı tespit ihtiyacı, hat erişimi, parça değişimi ve onarım sonrası test süreci fiyatı etkiler.",
+                },
+              ].map((item) => (
+                <article
+                  key={item.title}
+                  className="bg-surface-container-lowest rounded-xl p-6 border border-outline-variant soft-shadow"
+                >
+                  <h3 className="font-headline-md text-headline-md text-primary font-semibold mb-3">
+                    {item.title}
+                  </h3>
+                  <p className="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                    {item.text}
+                  </p>
+                </article>
+              ))}
+            </div>
+
+            <div>
+              <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary font-bold mb-6 text-center">
+                Kağıthane&apos;de Verdiğimiz Hizmetler
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+                {localLandingLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="bg-surface-container-lowest rounded-xl p-5 border border-outline-variant soft-shadow service-card-hover transition-all group"
+                  >
+                    <h3 className="font-headline-md text-headline-md text-primary group-hover:text-secondary transition-colors mb-2">
+                      {link.label}
+                    </h3>
+                    <p className="font-body-md text-sm text-on-surface-variant line-clamp-3">
+                      {link.description}
+                    </p>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
 
       {neighborhoods.length > 0 && (
         <section className="py-section-padding bg-surface-container-low px-margin-mobile md:px-margin-desktop">

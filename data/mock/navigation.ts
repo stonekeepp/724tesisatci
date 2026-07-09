@@ -10,6 +10,32 @@ const districtNavItems = getDistrictLocations().map((d) => ({
 export const navigation: Navigation = {
   header: [
     {
+      label: "Kağıthane",
+      href: "/hizmet-bolgeleri/kagithane",
+      children: [
+        {
+          label: "Kağıthane Su Kaçağı Tespiti",
+          href: "/kagithane-su-kacagi-tespiti",
+        },
+        {
+          label: "Kağıthane Tıkanıklık Açma",
+          href: "/kagithane-tikaniklik-acma",
+        },
+        {
+          label: "Kağıthane Pimaş Açma",
+          href: "/kagithane-pimas-acma",
+        },
+        {
+          label: "Kağıthane Petek Temizleme",
+          href: "/kagithane-petek-temizleme",
+        },
+        {
+          label: "Kağıthane Kombi Servisi",
+          href: "/kagithane-kombi-servisi",
+        },
+      ],
+    },
+    {
       label: "Hizmetlerimiz",
       href: "/hizmetler",
       children: services.map((service) => ({
@@ -18,7 +44,7 @@ export const navigation: Navigation = {
       })),
     },
     {
-      label: "Hizmet Bölgeleri",
+      label: "Bölgeler",
       href: "/hizmet-bolgeleri",
       children: [
         { label: "İstanbul Geneli", href: "/hizmet-bolgeleri/istanbul" },
@@ -31,7 +57,6 @@ export const navigation: Navigation = {
     },
     { label: "Blog", href: "/blog" },
     { label: "Hakkımızda", href: "/hakkimizda" },
-    { label: "SSS", href: "/sss" },
     { label: "İletişim", href: "/iletisim" },
   ],
   footer: {
@@ -54,4 +79,4 @@ export const navigation: Navigation = {
     ],
   },
 };
-
+

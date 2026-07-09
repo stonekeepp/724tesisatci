@@ -31,6 +31,29 @@ export interface SEOData {
   noindex?: boolean;
 }
 
+export interface LocalLandingSection {
+  title: string;
+  body: string;
+  items?: string[];
+}
+
+export interface LocalServiceLanding {
+  slug: string;
+  serviceSlug: string;
+  title: string;
+  description: string;
+  h1: string;
+  heroDescription: string;
+  intro: string;
+  serviceType: string;
+  canonicalPath: string;
+  sections: LocalLandingSection[];
+  faq: FAQItem[];
+  relatedLocalSlugs: string[];
+  imageAlt: string;
+  indexable?: boolean;
+}
+
 export interface ServiceSymptom {
   title: string;
   description: string;

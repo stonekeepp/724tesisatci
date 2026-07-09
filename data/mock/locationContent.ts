@@ -176,11 +176,11 @@ function buildDistrictLocation(d: IstanbulDistrictMeta): Location {
   const indexable = isDistrictIndexable(d.slug);
 
   const fallbackDescription = isHQ
-    ? `${d.title} merkezli operasyonumuz ile ilçenin 19 mahallesine ortalama ${arrivalStat} içinde ulaşıyoruz. Su kaçağı tespiti, tıkanıklık açma, petek temizleme, kombi servisi ve tüm tesisat ihtiyaçlarınızda cihazlı tespit, yazılı teklif ve garantili işçilik sunuyoruz.`
+    ? `Kağıthane tesisat hizmet bölgelerinde Çeliktepe merkezli ekiplerimiz 19 mahalleye yönlendirilir. Apartman, site ve iş yerlerinde bina tipine göre su kaçağı, tıkanıklık, pimaş, petek ve kombi tesisatı için mahalle mahalle servis planı yapılır. Ortalama ${arrivalStat} varış ile ilgili hizmet sayfalarına buradan geçebilirsiniz.`
     : `724 Tesisatçı olarak ${d.title} ilçesinde 7/24 profesyonel tesisat hizmeti veriyoruz. Kağıthane Çeliktepe merkezli mobil ekiplerimizle su kaçağı tespiti, tıkanıklık açma, petek temizleme, kombi servisi ve tüm tesisat ihtiyaçlarınızda ortalama ${arrivalStat} içinde adresinize ulaşıyoruz. Termal kamera ve robotik cihazlarla kırmadan, noktasal müdahale.`;
 
   const fallbackShort = isHQ
-    ? `${d.title} merkez operasyon — 19 mahalle, 7/24 acil servis, ${arrivalStat} varış.`
+    ? `Kağıthane tesisat hizmet bölgeleri — 19 mahalle, bina tipi ve servis yönlendirme hub’ı.`
     : `${d.title} ilçesinde 7/24 tesisat hizmeti. Ortalama ${arrivalStat} varış, garantili işçilik.`;
 
   const profile = getDistrictProfile(
@@ -207,10 +207,10 @@ function buildDistrictLocation(d: IstanbulDistrictMeta): Location {
     relatedServices: [...ALL_SERVICE_SLUGS],
     faq: buildDistrictFaq(d.title, d.slug),
     seoTitle: isHQ
-      ? `${d.title} Tesisatçı | Merkez Operasyon — 724 Tesisatçı`
+      ? "Kağıthane Tesisat Hizmet Bölgeleri | Mahalle Mahalle Servis"
       : `${d.title} Tesisatçı | 7/24 Cihazlı Tesisat — 724 Tesisatçı`,
     seoDescription: isHQ
-      ? `${d.title} merkez operasyon tesisatçı hizmeti. 19 mahalle, su kaçağı tespiti, tıkanıklık açma, petek temizleme. ${arrivalStat} varış, garantili işçilik.`
+      ? "Kağıthane tesisat hizmet bölgeleri: 19 mahalle, apartman ve site servisi. Su kaçağı, tıkanıklık, pimaş, petek ve kombi için mahalle mahalle yönlendirme."
       : `${d.title} tesisatçı hizmeti. Su kaçağı, tıkanıklık, petek temizleme, kombi servisi. Ortalama ${arrivalStat} varış, 7/24 acil müdahale, garantili işçilik.`,
     canonicalPath: `/hizmet-bolgeleri/${d.slug}`,
     stats: isHQ

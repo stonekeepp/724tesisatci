@@ -1,4 +1,11 @@
-import type { BreadcrumbItem, BlogPost, FAQItem, Service, SiteSettings } from "@/types";
+import type {
+  BreadcrumbItem,
+  BlogPost,
+  FAQItem,
+  LocalServiceLanding,
+  Service,
+  SiteSettings,
+} from "@/types";
 import { getSiteUrl } from "./seoService";
 
 function buildPostalAddress() {
@@ -117,6 +124,45 @@ export function buildServiceSchema(service: Service, settings: SiteSettings) {
       address: buildPostalAddress(),
     },
     areaServed: "İstanbul",
+  };
+}
+
+export function buildLocalLandingServiceSchema(
+  landing: LocalServiceLanding,
+  service: Service,
+  settings: SiteSettings
+) {
+  const siteUrl = getSiteUrl();
+  return {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: landing.h1,
+    serviceType: landing.serviceType,
+    description: landing.description,
+    url: `${siteUrl}${landing.canonicalPath}`,
+    provider: {
+      "@type": "Plumber",
+      name: settings.siteName,
+      telephone: settings.phone,
+      address: buildPostalAddress(),
+    },
+    areaServed: {
+      "@type": "AdministrativeArea",
+      name: "Kağıthane, İstanbul",
+    },
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: `${landing.h1} hizmet kapsamı`,
+      itemListElement: landing.sections.slice(0, 4).map((section) => ({
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: section.title,
+          description: section.body,
+          serviceType: service.title,
+        },
+      })),
+    },
   };
 }
 

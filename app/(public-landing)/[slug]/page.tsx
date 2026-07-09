@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import { SiteLayout } from "@/components/layout/SiteLayout";
 import { ServiceDetailTemplate } from "@/components/pages/ServiceDetailTemplate";
 import { AcilTesisatciLandingTemplate } from "@/components/pages/AcilTesisatciLandingTemplate";
+import { LocalServiceLandingTemplate } from "@/components/pages/LocalServiceLandingTemplate";
 import { JsonLdScript } from "@/components/seo/JsonLdScript";
 import { getAllServices, getServiceBySlug } from "@/lib/services/serviceService";
 import { getSiteSettings } from "@/lib/services/settingsService";
@@ -13,9 +14,16 @@ import {
   mergeServiceWithAdOverrides,
 } from "@/lib/services/adLandingService";
 import {
+  getAllLocalLandingSlugs,
+  getLocalLandingBySlug,
+  getLocalLandingSeo,
+  getRelatedLocalLandings,
+} from "@/lib/services/localLandingService";
+import {
   buildBreadcrumbSchema,
   buildFAQSchema,
   buildLocalBusinessSchema,
+  buildLocalLandingServiceSchema,
   buildServiceSchema,
 } from "@/lib/services/schemaService";
 import { acilTesisatciFaqs } from "@/data/mock/adLandingPages";
@@ -25,18 +33,63 @@ interface Props {
 }
 
 export async function generateStaticParams() {
-  return getAllAdLandingSlugs().map((slug) => ({ slug }));
+  const localSlugs = getAllLocalLandingSlugs();
+  const localSlugSet = new Set(localSlugs);
+  const adSlugs = getAllAdLandingSlugs().filter((slug) => !localSlugSet.has(slug));
+
+  return [...localSlugs, ...adSlugs].map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({ params }: Props) {
   const { slug } = await params;
-  const landing = getAdLandingBySlug(slug);
-  if (!landing) return {};
-  return buildMetadata(getAdLandingSeo(landing));
+  const localLanding = getLocalLandingBySlug(slug);
+
+  if (localLanding) {
+    return buildMetadata(getLocalLandingSeo(localLanding));
+  }
+
+  const adLanding = getAdLandingBySlug(slug);
+  if (!adLanding) return {};
+
+  return buildMetadata(getAdLandingSeo(adLanding));
 }
 
-export default async function AdLandingPage({ params }: Props) {
+export default async function PublicLandingPage({ params }: Props) {
   const { slug } = await params;
+  const localLanding = getLocalLandingBySlug(slug);
+
+  if (localLanding) {
+    const settings = await getSiteSettings();
+    const service = await getServiceBySlug(localLanding.serviceSlug);
+    if (!service) notFound();
+
+    const relatedLocalLandings = getRelatedLocalLandings(localLanding);
+    const breadcrumbs = [
+      { label: "Ana Sayfa", href: "/" },
+      { label: "Kağıthane Tesisat Hizmet Bölgeleri", href: "/hizmet-bolgeleri/kagithane" },
+      { label: localLanding.h1, href: localLanding.canonicalPath },
+    ];
+
+    const schemas = [
+      buildLocalBusinessSchema(settings, "Kağıthane, İstanbul"),
+      buildLocalLandingServiceSchema(localLanding, service, settings),
+      buildBreadcrumbSchema(breadcrumbs),
+      buildFAQSchema(localLanding.faq),
+    ].filter(Boolean);
+
+    return (
+      <SiteLayout activePath="/hizmet-bolgeleri/kagithane">
+        <JsonLdScript data={schemas} />
+        <LocalServiceLandingTemplate
+          landing={localLanding}
+          service={service}
+          relatedLocalLandings={relatedLocalLandings}
+          breadcrumbs={breadcrumbs}
+        />
+      </SiteLayout>
+    );
+  }
+
   const landing = getAdLandingBySlug(slug);
   if (!landing) notFound();
 

@@ -1,12 +1,24 @@
 import { SiteLogo } from "@/components/layout/SiteLogo";
 import { FooterNavSections } from "@/components/layout/FooterNavSections";
 import { navigation } from "@/data/mock/navigation";
+import { localServiceLandingPages } from "@/data/mock/localServiceLandingPages";
 import { siteSettings } from "@/data/mock/siteSettings";
 
 const footerMetaClass =
   "text-sm leading-[1.7] tracking-[0.015em] text-on-primary/78";
 
 const footerSections = [
+  {
+    id: "kagithane",
+    title: "Kağıthane Hizmetleri",
+    links: localServiceLandingPages
+      .filter((page) => page.indexable !== false)
+      .map((page) => ({
+        label: page.h1,
+        href: page.canonicalPath,
+      })),
+    highlightLink: { label: "Kağıthane Tesisat Hizmet Bölgeleri →", href: "/hizmet-bolgeleri/kagithane" },
+  },
   {
     id: "services",
     title: "Hizmetler",
@@ -29,7 +41,7 @@ export function Footer() {
   return (
     <footer className="bg-primary-container text-on-primary-container pt-10 md:pt-section-padding pb-24 md:pb-section-padding px-margin-mobile md:px-margin-desktop">
       <div className="max-w-container-max mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-12 mb-12">
           <div className="md:col-span-1 pb-2 md:pb-0">
             <SiteLogo variant="dark" className="mb-5" imageClassName="h-14 md:h-16 w-auto" />
             <p className={`${footerMetaClass} mb-4 max-w-xs`}>

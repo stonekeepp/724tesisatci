@@ -6,6 +6,7 @@ import { ServiceAboutSection } from "@/components/pages/ServiceAboutSection";
 import { HeroImagePanel } from "@/components/ui/StitchImage";
 import { blogPosts } from "@/data/mock/blogPosts";
 import { serviceHeroImages } from "@/data/mock/images";
+import { getLocalLandingByServiceSlug } from "@/lib/services/localLandingService";
 import {
   getPhoneHref,
   getWhatsAppHref,
@@ -42,6 +43,7 @@ export function ServiceDetailTemplate({
         post.status === "published" && post.relatedServices.includes(service.slug)
     )
     .slice(0, 3);
+  const localLanding = getLocalLandingByServiceSlug(service.slug);
   const heroOverlay =
     service.slug === "su-kacagi-tespit-ve-onarim" ? (
       <div className="absolute bottom-6 left-6 right-6 p-4 glass-card rounded-xl">
@@ -126,6 +128,7 @@ export function ServiceDetailTemplate({
         relatedServiceItems={relatedServiceItems}
         heroImage={heroMeta ? { src: heroMeta.src, alt: heroMeta.alt } : undefined}
         relatedBlogPosts={relatedBlogPosts}
+        localLanding={localLanding}
       />
     </>
   );
@@ -137,16 +140,50 @@ function ServiceDetailBody({
   relatedServiceItems,
   heroImage,
   relatedBlogPosts,
+  localLanding,
 }: {
   service: Service;
   displayTitle: string;
   relatedServiceItems: Service[];
   heroImage?: { src: string; alt: string };
   relatedBlogPosts: BlogPost[];
+  localLanding?: ReturnType<typeof getLocalLandingByServiceSlug>;
 }) {
   return (
     <>
       <ServiceAboutSection service={service} heroImage={heroImage} />
+
+      {localLanding && (
+        <section className="py-12 bg-surface-container-low px-margin-mobile md:px-margin-desktop">
+          <div className="max-w-container-max mx-auto">
+            <div className="bg-surface-container-lowest rounded-xl border border-outline-variant p-6 md:p-8 flex flex-col md:flex-row md:items-center md:justify-between gap-6 soft-shadow">
+              <div>
+                <span className="inline-flex items-center gap-2 text-secondary font-label-md text-sm mb-3">
+                  <span className="material-symbols-outlined text-lg" aria-hidden="true">
+                    location_on
+                  </span>
+                  Kağıthane&apos;de bu hizmet
+                </span>
+                <h2 className="font-headline-md text-headline-md text-primary font-semibold mb-2">
+                  {localLanding.h1}
+                </h2>
+                <p className="font-body-md text-body-md text-on-surface-variant max-w-3xl leading-relaxed">
+                  Bu genel hizmet sayfası İstanbul niyetini korur. Kağıthane, Çeliktepe ve çevre mahallelerde aynı hizmetin yerel süreç, belirti ve fiyat faktörlerini incelemek için ilgili yerel sayfaya geçebilirsiniz.
+                </p>
+              </div>
+              <Link
+                href={localLanding.canonicalPath}
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-secondary text-on-secondary rounded-xl font-label-md hover:bg-on-secondary-container transition-colors shrink-0"
+              >
+                Kağıthane sayfası
+                <span className="material-symbols-outlined text-lg" aria-hidden="true">
+                  arrow_forward
+                </span>
+              </Link>
+            </div>
+          </div>
+        </section>
+      )}
 
       {service.symptoms.length > 0 && (
         <section className="py-section-padding bg-surface-bright">

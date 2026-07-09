@@ -8,9 +8,9 @@ export const districtProfiles: Record<
 > = {
   kagithane: {
     description:
-      "Kağıthane Çeliktepe merkezli operasyonumuz ile ilçenin 19 mahallesine ortalama 10–15 dakika içinde ulaşıyoruz. Yoğun konut ve yeni dönüşüm projelerinde su kaçağı tespiti, tıkanıklık açma, petek temizleme ve kombi servisi sunuyoruz. Cihazlı tespit, yazılı teklif ve garantili işçilik standart hizmetimizdir.",
+      "Kağıthane tesisat hizmet bölgelerinde Çeliktepe merkezli ekiplerimiz 19 mahalleye yönlendirilir. Apartman, site ve iş yerlerinde bina tipine göre su kaçağı, tıkanıklık, pimaş, petek ve kombi tesisatı için mahalle mahalle servis planı yapılır. Bu sayfa ilçe hub’ıdır; ilgili hizmet sayfalarına ve mahalle listesine buradan geçebilirsiniz.",
     shortDescription:
-      "Kağıthane merkez operasyon — 19 mahalle, 7/24 acil servis, Çeliktepe'den hızlı varış.",
+      "Kağıthane tesisat hizmet bölgeleri — 19 mahalle, bina tipi ve servis yönlendirme hub’ı.",
   },
   besiktas: {
     description:

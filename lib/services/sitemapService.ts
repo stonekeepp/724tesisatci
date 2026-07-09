@@ -3,6 +3,7 @@ import { getAllLocations } from "./locationService";
 import { getAllNeighborhoods } from "./neighborhoodService";
 import { getPublishedBlogPosts } from "./blogService";
 import { getSiteUrl } from "./seoService";
+import { getIndexableLocalLandingPages } from "./localLandingService";
 import { staticPageSeo } from "@/data/mock/seo";
 
 /** Büyük içerik sürümü — her büyük içerik güncellemesinde bu tarihi güncelleyin */
@@ -21,6 +22,7 @@ export async function generateSitemapEntries() {
   const locations = await getAllLocations();
   const neighborhoods = await getAllNeighborhoods();
   const blogPosts = await getPublishedBlogPosts();
+  const localLandingPages = getIndexableLocalLandingPages();
 
   const entries = [
     ...staticPages.map((path) => ({
@@ -34,6 +36,12 @@ export async function generateSitemapEntries() {
       lastModified: CONTENT_LAST_UPDATED,
       changeFrequency: "monthly" as const,
       priority: 0.9,
+    })),
+    ...localLandingPages.map((page) => ({
+      url: `${siteUrl}${page.canonicalPath}`,
+      lastModified: CONTENT_LAST_UPDATED,
+      changeFrequency: "weekly" as const,
+      priority: 0.85,
     })),
     ...locations
       .filter((l) => l.indexable !== false)

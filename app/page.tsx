@@ -35,12 +35,22 @@ const FAQAccordion = dynamic(
 export const metadata = buildMetadata(defaultSeo);
 
 const problemTiles = [
-  { icon: "water_drop", label: "Alt kata su mu akıyor?", href: "/hizmetler/su-kacagi-tespit-ve-onarim" },
-  { icon: "speed", label: "Kombi basıncı sürekli düşüyor mu?", href: "/hizmetler/kombi-servisi-ve-tesisati" },
-  { icon: "plumbing", label: "Lavabo ya da tuvalet geri mi basıyor?", href: "/hizmetler/tikaniklik-acma" },
-  { icon: "hvac", label: "Petekler yeterince ısınmıyor mu?", href: "/hizmetler/petek-temizleme" },
-  { icon: "air", label: "Banyoda kötü koku mu var?", href: "/hizmetler/pimas-yikama" },
-  { icon: "water_damage", label: "Pimaş hattı sık sık tıkanıyor mu?", href: "/hizmetler/pimas-tesisati" },
+  { icon: "water_drop", label: "Alt kata su mu akıyor?", href: "/kagithane-su-kacagi-tespiti" },
+  { icon: "speed", label: "Kombi basıncı sürekli düşüyor mu?", href: "/kagithane-kombi-servisi" },
+  { icon: "plumbing", label: "Lavabo ya da tuvalet geri mi basıyor?", href: "/kagithane-tikaniklik-acma" },
+  { icon: "hvac", label: "Petekler yeterince ısınmıyor mu?", href: "/kagithane-petek-temizleme" },
+  { icon: "air", label: "Banyoda kötü koku mu var?", href: "/kagithane-kamerali-tesisat-goruntuleme" },
+  { icon: "water_damage", label: "Pimaş hattı sık sık tıkanıyor mu?", href: "/kagithane-pimas-acma" },
+] as const;
+
+const kagithanePriorityLinks = [
+  { href: "/hizmet-bolgeleri/kagithane", label: "Kağıthane tesisat hizmet bölgeleri" },
+  { href: "/kagithane-su-kacagi-tespiti", label: "Kağıthane su kaçağı tespiti" },
+  { href: "/kagithane-tikaniklik-acma", label: "Kağıthane tıkanıklık açma" },
+  { href: "/kagithane-pimas-acma", label: "Kağıthane pimaş açma" },
+  { href: "/kagithane-petek-temizleme", label: "Kağıthane petek temizleme" },
+  { href: "/kagithane-kombi-servisi", label: "Kağıthane kombi tesisat kontrolü" },
+  { href: "/kagithane-kamerali-tesisat-goruntuleme", label: "Kağıthane kameralı tesisat görüntüleme" },
 ] as const;
 
 const homeServices = services.map((service) => ({
@@ -62,7 +72,7 @@ const processSteps = [
     step: "2",
     title: "Hızlı Yönlendirme",
     description:
-      "Kağıthane merkez operasyonumuzdan bölgenize en yakın mobil ekip ortalama 30–45 dakikada adresinize ulaşır.",
+      "Çeliktepe merkez operasyonumuzdan Kağıthane içindeki en yakın mobil ekip acil talep için hızlıca yönlendirilir.",
     active: false,
   },
   {
@@ -91,7 +101,7 @@ const processSteps = [
 const heroOverlayCards = [
   { icon: "timer", label: "7/24 Acil Destek" },
   { icon: "radar", label: "Cihazlı Tespit" },
-  { icon: "location_on", label: "İstanbul Geneli Servis" },
+  { icon: "location_on", label: "Kağıthane Merkez" },
   { icon: "cleaning_services", label: "Temiz İşçilik" },
 ] as const;
 
@@ -153,7 +163,7 @@ export default async function HomePage() {
             </div>
             <h1 className="font-display-lg text-display-lg text-primary md:font-display-lg text-headline-lg-mobile font-bold tracking-tight md:text-display-lg leading-tight tracking-tighter">
               <span className="inline-flex flex-wrap items-center gap-x-2.5 gap-y-1">
-                <span>İstanbul Geneli</span>
+                <span>Kağıthane Merkezli</span>
                 <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-secondary text-on-secondary font-extrabold shadow-md ring-2 ring-secondary/25 whitespace-nowrap shrink-0">
                   <span className="material-symbols-outlined text-[20px] leading-none" aria-hidden="true">
                     schedule
@@ -161,17 +171,21 @@ export default async function HomePage() {
                   7/24
                 </span>
               </span>{" "}
-              Tesisat ve Kaçak Tespitinde Güvenilir Çözüm
+              Tesisatçı
             </h1>
             <p className="font-body-lg text-body-lg text-on-surface-variant max-w-xl leading-relaxed">
-              Deneyimli teknik ekibimizle su kaçağı tespiti, tıkanıklık açma, petek temizleme, pimaş yıkama, kombi, kalorifer ve doğalgaz tesisatı arızalarınız için hızlı, güvenilir ve profesyonel servis sunuyoruz.
+              Kağıthane ve Çeliktepe merkezli ekiplerle su kaçağı tespiti, tıkanıklık açma, pimaş, petek ve kombi tesisatı sorunlarında 7/24 acil servis, cihazlı tespit ve telefon/WhatsApp ile hızlı yönlendirme.
             </p>
             <p className="font-body-md text-body-md text-on-surface-variant/80 italic">
-              Kağıthane merkezli ekiplerle{" "}
+              İstanbul geneli hizmet ağımız ikincil destek olarak devam eder; öncelik{" "}
+              <Link href="/hizmet-bolgeleri/kagithane" className="text-secondary hover:text-primary transition-colors">
+                Kağıthane ilçe servisidir
+              </Link>
+              .{" "}
               <Link href="/hizmet-bolgeleri" className="text-secondary hover:text-primary transition-colors">
                 İstanbul&apos;un 39 ilçesine
               </Link>{" "}
-              aynı gün servis yönlendirmesi.{" "}
+              planlı yönlendirme yapılır.{" "}
               <Link href="/hakkimizda" className="text-secondary hover:text-primary transition-colors">
                 Ekibimiz hakkında
               </Link>
@@ -286,6 +300,15 @@ export default async function HomePage() {
               </Link>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="py-10 px-margin-mobile md:px-margin-desktop bg-surface-container-low">
+        <div className="max-w-container-max mx-auto">
+          <ContextualLinks
+            title="Kağıthane öncelikli servis sayfaları"
+            links={kagithanePriorityLinks}
+          />
         </div>
       </section>
 
@@ -476,10 +499,10 @@ export default async function HomePage() {
       <section className="bg-primary-container pt-16 pb-12 md:py-20 px-margin-mobile md:px-margin-desktop text-center">
         <div className="max-w-container-max mx-auto">
           <h2 className="text-display-lg text-white font-bold mb-6">
-            Tesisat Sorunlarınıza Profesyonel Çözüm
+            Kağıthane Tesisat Sorunlarınıza Profesyonel Çözüm
           </h2>
           <p className="text-body-lg text-white/80 mb-10 max-w-2xl mx-auto leading-relaxed">
-            İstanbul&apos;un 39 ilçesinde ortalama 30–45 dakikada servis. Kırmadan, dökmeden cihazlı tespit; yazılı teklif ve garantili işçilik.
+            Kağıthane, Çeliktepe ve çevre mahallelerde cihazlı tespit, açık bilgilendirme ve 7/24 acil tesisat desteği. İstanbul geneli yönlendirme ikincil hizmet ağı olarak devam eder.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a

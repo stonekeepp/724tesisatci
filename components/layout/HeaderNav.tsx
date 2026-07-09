@@ -46,7 +46,7 @@ export function HeaderNav({ activePath }: HeaderNavProps) {
   }, [closeMenus]);
 
   return (
-    <nav ref={navRef} className="hidden md:flex gap-8 lg:gap-10 items-center">
+    <nav ref={navRef} className="hidden lg:flex flex-nowrap items-center justify-center gap-3 xl:gap-5 2xl:gap-7 min-w-0">
       {navigation.header.map((item) => {
         const active = isNavActive(item, activePath);
         const hasChildren = Boolean(item.children?.length);
@@ -58,8 +58,8 @@ export function HeaderNav({ activePath }: HeaderNavProps) {
               href={item.href}
               className={
                 active
-                  ? "text-secondary font-bold border-b-2 border-secondary pb-1 font-label-md text-label-md"
-                  : "text-on-surface-variant font-medium hover:text-secondary transition-colors duration-200 font-label-md text-label-md"
+                  ? "shrink-0 whitespace-nowrap text-secondary font-bold border-b-2 border-secondary pb-1 font-label-md text-label-md"
+                  : "shrink-0 whitespace-nowrap text-on-surface-variant font-medium hover:text-secondary transition-colors duration-200 font-label-md text-label-md"
               }
             >
               {item.label}
@@ -72,7 +72,7 @@ export function HeaderNav({ activePath }: HeaderNavProps) {
         return (
           <div
             key={item.href}
-            className="relative"
+            className="relative shrink-0"
             onMouseEnter={() => setOpenMenu(item.href)}
             onMouseLeave={() => setOpenMenu(null)}
           >
@@ -82,8 +82,8 @@ export function HeaderNav({ activePath }: HeaderNavProps) {
               aria-haspopup="true"
               className={
                 active
-                  ? "inline-flex items-center gap-1 text-secondary font-bold border-b-2 border-secondary pb-1 font-label-md text-label-md"
-                  : "inline-flex items-center gap-1 text-on-surface-variant font-medium hover:text-secondary transition-colors duration-200 font-label-md text-label-md"
+                  ? "inline-flex items-center gap-0.5 whitespace-nowrap text-secondary font-bold border-b-2 border-secondary pb-1 font-label-md text-label-md"
+                  : "inline-flex items-center gap-0.5 whitespace-nowrap text-on-surface-variant font-medium hover:text-secondary transition-colors duration-200 font-label-md text-label-md"
               }
             >
               {item.label}
@@ -95,7 +95,7 @@ export function HeaderNav({ activePath }: HeaderNavProps) {
             </Link>
 
             {isOpen && (
-              <div className="absolute left-0 top-full pt-2 z-50 min-w-[280px]">
+              <div className="absolute left-0 top-full pt-2 z-[60] min-w-[280px]">
                 <div className="bg-surface-container-lowest border border-outline-variant rounded-xl shadow-lg py-2 max-h-[70vh] overflow-y-auto">
                   <Link
                     href={item.href}
