@@ -8,6 +8,7 @@ import { buildMetadata, seoFromEntity } from "@/lib/services/seoService";
 import {
   buildBreadcrumbSchema,
   buildFAQSchema,
+  buildLocalBusinessSchema,
   buildServiceSchema,
 } from "@/lib/services/schemaService";
 import { getAllServiceSlugs } from "@/data/mock/services";
@@ -45,6 +46,7 @@ export default async function ServiceDetailPage({ params }: Props) {
   ];
 
   const schemas = [
+    buildLocalBusinessSchema(settings, "İstanbul"),
     buildServiceSchema(service, settings),
     buildBreadcrumbSchema(breadcrumbs),
     buildFAQSchema(service.faq),

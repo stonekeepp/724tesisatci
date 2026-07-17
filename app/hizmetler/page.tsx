@@ -183,8 +183,7 @@ export default async function HizmetlerPage() {
                   <div className="flex items-start justify-between gap-3 mb-6">
                     <div className="w-14 h-14 bg-secondary-container rounded-xl flex items-center justify-center group-hover:bg-secondary/20 transition-colors">
                       <span
-                        className="material-symbols-outlined text-secondary text-3xl"
-                        style={{ fontVariationSettings: "'FILL' 1" }}
+                        className="material-symbols-outlined fill text-secondary text-3xl"
                         aria-hidden="true"
                       >
                         {service.icon}

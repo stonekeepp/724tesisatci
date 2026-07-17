@@ -116,9 +116,10 @@ function StarRating({ rating }: { rating: number }) {
         <span
           key={index}
           className={`material-symbols-outlined text-[20px] leading-none ${
-            index < rating ? "text-secondary" : "text-outline-variant/50"
+            index < rating
+              ? "fill text-secondary"
+              : "text-outline-variant/50"
           }`}
-          style={index < rating ? { fontVariationSettings: "'FILL' 1" } : undefined}
           aria-hidden="true"
         >
           star

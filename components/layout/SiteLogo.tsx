@@ -23,8 +23,8 @@ export function SiteLogo({
       <Image
         src={src}
         alt="724 Tesisatçı"
-        width={280}
-        height={93}
+        width={1024}
+        height={341}
         sizes="(max-width: 768px) 160px, 220px"
         className={imageClassName}
         priority={variant === "light"}

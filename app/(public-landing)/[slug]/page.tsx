@@ -126,6 +126,7 @@ export default async function PublicLandingPage({ params }: Props) {
   );
 
   const schemas = [
+    buildLocalBusinessSchema(settings, "İstanbul"),
     buildServiceSchema(displayService, settings),
     buildBreadcrumbSchema(breadcrumbs),
     buildFAQSchema(displayService.faq),

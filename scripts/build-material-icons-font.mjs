@@ -17,7 +17,7 @@ const icons = JSON.parse(fs.readFileSync(iconsPath, "utf8"));
 const iconNames = icons.join(",");
 const cssUrl =
   "https://fonts.googleapis.com/css2?" +
-  "family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" +
+  "family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0..1,0" +
   `&icon_names=${encodeURIComponent(iconNames)}` +
   "&display=swap";
 

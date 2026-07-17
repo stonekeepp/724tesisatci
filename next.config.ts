@@ -2,6 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   output: "standalone",
+  skipTrailingSlashRedirect: true,
   images: {
     formats: ["image/webp"],
     minimumCacheTTL: 31536000,
@@ -11,6 +12,40 @@ const nextConfig: NextConfig = {
         hostname: "lh3.googleusercontent.com",
       },
     ],
+  },
+  async redirects() {
+    return [
+      {
+        source: "/besiktas-tesisatci-tamir-onarim-servisi",
+        destination: "/hizmet-bolgeleri/besiktas",
+        permanent: true,
+      },
+      {
+        source: "/seyrantepe-tesisatci-tamir-onarim-servisi",
+        destination: "/hizmet-bolgeleri/kagithane/seyrantepe",
+        permanent: true,
+      },
+      {
+        source: "/mecidiyekoy-tesisatci-tamir-onarim-servisi",
+        destination: "/hizmet-bolgeleri/sisli",
+        permanent: true,
+      },
+      {
+        source: "/levent-tesisatci-tamir-onarim-servisi",
+        destination: "/hizmet-bolgeleri/besiktas",
+        permanent: true,
+      },
+      {
+        source: "/bebek-tesisatci-tamir-onarim-servisi",
+        destination: "/hizmet-bolgeleri/besiktas",
+        permanent: true,
+      },
+      {
+        source: "/:path+/",
+        destination: "/:path+",
+        permanent: true,
+      },
+    ];
   },
   async headers() {
     return [

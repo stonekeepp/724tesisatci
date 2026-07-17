@@ -92,8 +92,7 @@ export default async function HakkimizdaPage() {
           <div className="md:col-span-6 flex flex-col gap-stack-lg">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-high w-fit">
               <span
-                className="material-symbols-outlined text-[16px] text-secondary"
-                style={{ fontVariationSettings: "'FILL' 1" }}
+                className="material-symbols-outlined fill text-[16px] text-secondary"
                 aria-hidden="true"
               >
                 verified_user
@@ -175,12 +174,9 @@ export default async function HakkimizdaPage() {
               >
                 <div className="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-secondary">
                   <span
-                    className="material-symbols-outlined text-[28px]"
-                    style={
-                      "filled" in item && item.filled
-                        ? { fontVariationSettings: "'FILL' 1" }
-                        : undefined
-                    }
+                    className={`material-symbols-outlined text-[28px] ${
+                      "filled" in item && item.filled ? "fill" : ""
+                    }`}
                     aria-hidden="true"
                   >
                     {item.icon}
@@ -256,8 +252,7 @@ export default async function HakkimizdaPage() {
               </p>
               <div className="bg-surface rounded-lg p-4 border border-outline-variant mt-4 flex items-center gap-4">
                 <span
-                  className="material-symbols-outlined text-secondary text-[32px]"
-                  style={{ fontVariationSettings: "'FILL' 1" }}
+                  className="material-symbols-outlined fill text-secondary text-[32px]"
                   aria-hidden="true"
                 >
                   location_on

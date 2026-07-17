@@ -22,13 +22,37 @@ export default function GizlilikPolitikasiPage() {
               Toplanan Veriler
             </h2>
             <p>
-              İletişim formu aracılığıyla ad soyad, telefon numarası, adres bilgisi ve hizmet talebi açıklaması toplanabilir. Bu veriler yalnızca hizmet sunumu amacıyla kullanılır.
+              İletişim formu aracılığıyla ad soyad, telefon numarası, adres
+              bilgisi ve hizmet talebi açıklaması toplanabilir. Analitik çerez
+              izni verdiğinizde Google Analytics 4 aracılığıyla ziyaret edilen
+              sayfalar, etkileşimler, yaklaşık konum, cihaz/tarayıcı bilgileri
+              ve sayfa performans metrikleri de işlenebilir.
             </p>
             <h2 className="font-headline-md text-headline-md text-primary pt-4">
               Verilerin Kullanım Amacı
             </h2>
             <p>
-              Toplanan kişisel veriler; servis talebinizin karşılanması, sizinle iletişim kurulması ve yasal yükümlülüklerin yerine getirilmesi amacıyla işlenir.
+              İletişim verileri; servis talebinizin karşılanması, sizinle
+              iletişim kurulması ve yasal yükümlülüklerin yerine getirilmesi
+              amacıyla işlenir. İzinli analitik veriler ise site kullanımını ve
+              teknik performansı değerlendirmek için kullanılır. Reklam
+              kişiselleştirmesi yapılmaz.
+            </p>
+            <h2 className="font-headline-md text-headline-md text-primary pt-4">
+              Analitik Tercihiniz
+            </h2>
+            <p>
+              Google Analytics 4 analitik depolaması başlangıçta kapalıdır.
+              Analitik çerezleri kabul edebilir, reddedebilir ve tercihinizi{" "}
+              <Link
+                href="/cerez-politikasi"
+                className="text-secondary font-label-md hover:text-primary transition-colors"
+              >
+                Çerez Politikası
+              </Link>{" "}
+              sayfasından daha sonra değiştirebilirsiniz. Reklam depolama,
+              reklam kullanıcı verileri ve reklam kişiselleştirmesi sürekli
+              kapalı tutulur.
             </p>
             <h2 className="font-headline-md text-headline-md text-primary pt-4">
               KVKK Haklarınız

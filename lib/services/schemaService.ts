@@ -19,6 +19,31 @@ function buildPostalAddress() {
   };
 }
 
+function buildBusinessId(siteUrl: string) {
+  return `${siteUrl}/#business`;
+}
+
+function buildSchemaTelephone(phone: string) {
+  return phone.replace(/\s/g, "");
+}
+
+function buildOpeningHoursSpecification() {
+  return {
+    "@type": "OpeningHoursSpecification" as const,
+    dayOfWeek: [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday",
+    ],
+    opens: "00:00",
+    closes: "23:59",
+  };
+}
+
 export function buildOrganizationSchema(settings: SiteSettings) {
   const siteUrl = getSiteUrl();
   const logoUrl = `${siteUrl}/logo.webp`;
@@ -42,15 +67,23 @@ export function buildLocalBusinessSchema(settings: SiteSettings, area?: string) 
 
   return {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    "@type": "Plumber",
+    "@id": buildBusinessId(siteUrl),
     name: settings.siteName,
     url: siteUrl,
-    telephone: settings.phone,
+    telephone: buildSchemaTelephone(settings.phone),
     logo: logoUrl,
     image: logoUrl,
     address: buildPostalAddress(),
     openingHours: "Mo-Su 00:00-23:59",
-    ...(area ? { areaServed: area } : {}),
+    openingHoursSpecification: buildOpeningHoursSpecification(),
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: buildSchemaTelephone(settings.phone),
+      contactType: "customer service",
+      availableLanguage: ["tr"],
+    },
+    areaServed: area ?? settings.city,
   };
 }
 
@@ -79,10 +112,7 @@ export function buildAreaServiceSchema(
       `${areaName} bölgesinde 7/24 profesyonel tesisat hizmeti.`,
     url: siteUrl,
     provider: {
-      "@type": "LocalBusiness",
-      name: settings.siteName,
-      telephone: settings.phone,
-      address: buildPostalAddress(),
+      "@id": buildBusinessId(siteUrl),
     },
     areaServed: {
       "@type": "AdministrativeArea",
@@ -118,10 +148,7 @@ export function buildServiceSchema(service: Service, settings: SiteSettings) {
     description: service.shortDescription,
     url: `${siteUrl}${service.canonicalPath}`,
     provider: {
-      "@type": "LocalBusiness",
-      name: settings.siteName,
-      telephone: settings.phone,
-      address: buildPostalAddress(),
+      "@id": buildBusinessId(siteUrl),
     },
     areaServed: "İstanbul",
   };
@@ -141,10 +168,7 @@ export function buildLocalLandingServiceSchema(
     description: landing.description,
     url: `${siteUrl}${landing.canonicalPath}`,
     provider: {
-      "@type": "Plumber",
-      name: settings.siteName,
-      telephone: settings.phone,
-      address: buildPostalAddress(),
+      "@id": buildBusinessId(siteUrl),
     },
     areaServed: {
       "@type": "AdministrativeArea",

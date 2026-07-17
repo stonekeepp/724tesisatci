@@ -58,7 +58,7 @@ export default async function KagithaneMahalleleriPage() {
               >
                 <div>
                   <div className="flex items-center gap-3 mb-4 text-secondary">
-                    <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>
+                    <span className="material-symbols-outlined fill">
                       location_on
                     </span>
                     <h2 className="font-headline-md text-headline-md text-on-surface font-semibold">

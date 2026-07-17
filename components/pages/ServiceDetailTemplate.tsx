@@ -204,8 +204,7 @@ function ServiceDetailBody({
                 >
                   <div className="w-14 h-14 bg-secondary-container rounded-lg flex items-center justify-center mb-6">
                     <span
-                      className="material-symbols-outlined text-secondary text-3xl"
-                      style={{ fontVariationSettings: "'FILL' 1" }}
+                      className="material-symbols-outlined fill text-secondary text-3xl"
                     >
                       {symptom.icon}
                     </span>

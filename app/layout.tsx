@@ -1,5 +1,9 @@
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
+import {
+  Analytics,
+  AnalyticsHead,
+} from "@/components/analytics/Analytics";
 import { getSiteUrl } from "@/lib/services/seoService";
 import "./globals.css";
 
@@ -33,11 +37,13 @@ export default function RootLayout({
           type="font/woff2"
           crossOrigin="anonymous"
         />
+        <AnalyticsHead />
       </head>
       <body
         className={`${inter.variable} bg-background text-on-background font-body-lg antialiased`}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );

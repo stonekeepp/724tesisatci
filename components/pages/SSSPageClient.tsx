@@ -125,7 +125,7 @@ export function SSSPageClient({ faqs }: SSSPageClientProps) {
                   href={getPhoneHref(siteSettings.phone)}
                   className="inline-flex items-center justify-center gap-2 bg-secondary text-on-secondary px-6 py-3 rounded-xl font-label-md text-label-md hover:bg-on-secondary-container transition-colors shadow-sm"
                 >
-                  <span className="material-symbols-outlined text-[20px]" style={{ fontVariationSettings: "'FILL' 1" }}>
+                  <span className="material-symbols-outlined fill text-[20px]">
                     call
                   </span>
                   Hemen Arayın

@@ -298,8 +298,7 @@ export function DistrictDetailTemplate({
               >
                 <div className="w-10 h-10 bg-secondary-container rounded-lg flex items-center justify-center mb-3 group-hover:bg-secondary/20 transition-colors">
                   <span
-                    className="material-symbols-outlined text-secondary text-xl"
-                    style={{ fontVariationSettings: "'FILL' 1" }}
+                    className="material-symbols-outlined fill text-secondary text-xl"
                     aria-hidden="true"
                   >
                     {service.icon}

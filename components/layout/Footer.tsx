@@ -2,7 +2,7 @@ import { SiteLogo } from "@/components/layout/SiteLogo";
 import { FooterNavSections } from "@/components/layout/FooterNavSections";
 import { navigation } from "@/data/mock/navigation";
 import { localServiceLandingPages } from "@/data/mock/localServiceLandingPages";
-import { siteSettings } from "@/data/mock/siteSettings";
+import { getPhoneHref, siteSettings } from "@/data/mock/siteSettings";
 
 const footerMetaClass =
   "text-sm leading-[1.7] tracking-[0.015em] text-on-primary/78";
@@ -48,9 +48,17 @@ export function Footer() {
               İstanbul genelinde 7/24 profesyonel tesisat hizmeti. Kırmadan,
               cihazla tespit, garantili işçilik.
             </p>
-            <p className={`${footerMetaClass} text-on-primary/62`}>
-              {siteSettings.address}
-            </p>
+            <address
+              className={`${footerMetaClass} text-on-primary/62 not-italic flex flex-col items-start gap-1`}
+            >
+              <span>{siteSettings.address}</span>
+              <a
+                href={getPhoneHref(siteSettings.phone)}
+                className="hover:text-on-primary transition-colors"
+              >
+                {siteSettings.phone}
+              </a>
+            </address>
           </div>
 
           <FooterNavSections sections={[...footerSections]} />

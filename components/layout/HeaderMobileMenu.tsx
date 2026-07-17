@@ -66,7 +66,7 @@ export function HeaderMobileMenu({ activePath }: HeaderMobileMenuProps) {
     <>
       <button
         type="button"
-        className="md:hidden text-primary p-1 -mr-1"
+        className="lg:hidden text-primary p-1 -mr-1"
         aria-label={open ? "Menüyü kapat" : "Menüyü aç"}
         aria-expanded={open}
         onClick={() => setOpen((prev) => !prev)}
@@ -80,12 +80,12 @@ export function HeaderMobileMenu({ activePath }: HeaderMobileMenuProps) {
         <>
           <button
             type="button"
-            className="md:hidden fixed inset-0 top-20 bg-black/40 z-40"
+            className="lg:hidden fixed inset-0 top-20 md:top-[5.5rem] bg-black/40 z-40"
             aria-label="Menüyü kapat"
             onClick={close}
           />
           <div
-            className="md:hidden fixed inset-x-0 top-20 bottom-0 z-40 bg-surface-container-lowest border-t border-outline-variant overflow-y-auto overscroll-contain"
+            className="lg:hidden fixed inset-x-0 top-20 md:top-[5.5rem] bottom-0 z-40 bg-surface-container-lowest border-t border-outline-variant overflow-y-auto overscroll-contain"
             role="dialog"
             aria-modal="true"
             aria-label="Mobil menü"
