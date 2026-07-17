@@ -52,6 +52,18 @@ const fontBuffer = Buffer.from(await fontResponse.arrayBuffer());
 fs.mkdirSync(outputDir, { recursive: true });
 fs.writeFileSync(outputFont, fontBuffer);
 
+const embeddedCssPath = path.join(root, "app", "material-symbols-font.css");
+const embeddedCss = `@font-face {
+  font-family: "Material Symbols Outlined";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("data:font/woff2;base64,${fontBuffer.toString("base64")}") format("woff2");
+}
+`;
+fs.writeFileSync(embeddedCssPath, embeddedCss);
+
 console.log(
   `Built subset font (${(fontBuffer.length / 1024).toFixed(1)} KiB) for ${icons.length} icons -> ${outputFont}`
 );
+console.log(`Embedded font CSS -> ${embeddedCssPath}`);
