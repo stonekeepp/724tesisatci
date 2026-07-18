@@ -22,7 +22,6 @@ import {
 import {
   buildBreadcrumbSchema,
   buildFAQSchema,
-  buildLocalBusinessSchema,
   buildLocalLandingServiceSchema,
   buildServiceSchema,
 } from "@/lib/services/schemaService";
@@ -71,7 +70,6 @@ export default async function PublicLandingPage({ params }: Props) {
     ];
 
     const schemas = [
-      buildLocalBusinessSchema(settings, "Kağıthane, İstanbul"),
       buildLocalLandingServiceSchema(localLanding, service, settings),
       buildBreadcrumbSchema(breadcrumbs),
       buildFAQSchema(localLanding.faq),
@@ -101,7 +99,6 @@ export default async function PublicLandingPage({ params }: Props) {
 
   if (landing.slug === "acil-tesisatci") {
     const schemas = [
-      buildLocalBusinessSchema(settings, "İstanbul"),
       buildBreadcrumbSchema(breadcrumbs),
       buildFAQSchema(acilTesisatciFaqs),
     ].filter(Boolean);
@@ -126,7 +123,6 @@ export default async function PublicLandingPage({ params }: Props) {
   );
 
   const schemas = [
-    buildLocalBusinessSchema(settings, "İstanbul"),
     buildServiceSchema(displayService, settings),
     buildBreadcrumbSchema(breadcrumbs),
     buildFAQSchema(displayService.faq),

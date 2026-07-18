@@ -7,18 +7,18 @@ export const services: Service[] = [
     title: "Su Tesisatı",
     slug: "su-tesisati",
     shortDescription:
-      "Temiz su hattı çekimi, vana ve musluk onarımı, banyo-mutfak yenileme ve gizli kaçak tespiti. PPRC ve bakır boru ile garantili işçilik, basınç testi ve yazılı servis formu.",
+      "Temiz su hattı çekimi, vana ve musluk onarımı, banyo-mutfak yenileme ve gizli kaçak tespiti. PPRC ve bakır boru ile yazılı teklif, basınç testi ve yazılı servis formu.",
     longDescription:
       "Su tesisatı, konut ve iş yerlerinin en kritik altyapı sistemlerinden biridir. Yanlış yapılan bir bağlantı, kalitesiz malzeme veya amatör müdahaleler kısa süre içinde su israfına, nem ve küf oluşumuna, komşu dairelere sızıntıya ve yüksek su faturalarına yol açabilir.\n\n724 Tesisatçı olarak İstanbul genelinde temiz su hattı çekimi, vana arızaları, musluk ve batarya montajı, banyo-mutfak tesisat yenileme ve gizli su kaçağı tespiti hizmetleri sunuyoruz. PPRC ve bakır boru sistemlerinde sektör standardı malzemeler kullanıyor, her işlem sonrası basınç testi yaparak sızdırmazlığı doğruluyoruz.\n\nEvinizde düşük su basıncı, paslı su, sürekli damlayan musluk veya duvarlarda nem fark ediyorsanız erken müdahale hem maliyeti düşürür hem de yapısal hasarı önler. İşlem öncesi yazılı teklif sunuyor, onayınız olmadan çalışmaya başlamıyoruz.\n\nKağıthane merkezli ekiplerimizle İstanbul'un Avrupa ve Anadolu Yakası'nda su tesisatı tamiri, yenileme ve acil müdahale hizmeti veriyoruz. Konut, apartman, ofis ve ticari alanlarda 7/24 ulaşabileceğiniz profesyonel su tesisatçı ekibimiz için hemen arayın veya online servis talebi oluşturun.",
     aboutHighlights: [
       "PPRC ve bakır boru ile standartlara uygun tesisat döşeme",
-      "Basınç testi, servis formu ve işçilik garantisi",
+      "Basınç testi, yazılı servis formu",
       "Banyo-mutfak anahtar teslim tesisat yenileme",
       "Gizli kaçaklarda termal kamera destekli tespit",
     ],
     heroTitle: "İstanbul Su Tesisatı Tamir ve Yenileme",
     heroDescription:
-      "Temiz su hattı çekimi, vana arızaları, musluk-batarya montajı ve banyo-mutfak tesisat yenileme. PPRC ve bakır boru ile garantili işçilik, basınç testi ve 7/24 acil servis.",
+      "Temiz su hattı çekimi, vana arızaları, musluk-batarya montajı ve banyo-mutfak tesisat yenileme. PPRC ve bakır boru ile yazılı teklif, basınç testi ve 7/24 acil servis.",
     icon: "plumbing",
     symptoms: [
       { title: "Düşük Su Basıncı", description: "Musluklardan zayıf su akışı genellikle boru tıkanıklığı, vana arızası veya ana hat basınç düşüşüne işaret eder. Uzun süre ihmal edilirse cihazlarınız düzgün çalışmaz ve tesisat hattında ek yük oluşur.", icon: "water_drop" },
@@ -30,7 +30,7 @@ export const services: Service[] = [
       { step: 1, title: "Keşif ve Tespit", description: "Adresinize gelen uzman ekibimiz boru hattını, vanaları ve bağlantı noktalarını cihazla kontrol eder. Sorunun kaynağı net biçimde belirlenir ve size sözlü bilgilendirme yapılır." },
       { step: 2, title: "Teklif ve Onay", description: "Malzeme ve işçilik kalemlerini içeren yazılı fiyat teklifi sunulur. Onayınız alınmadan hiçbir işleme başlanmaz." },
       { step: 3, title: "Profesyonel Onarım", description: "PPRC, bakır boru veya uygun malzeme ile kalıcı bağlantı ve montaj yapılır. Çalışma alanı işlem sonrası temiz bırakılır." },
-      { step: 4, title: "Test ve Garanti", description: "Basınç testi ile sızdırmazlık doğrulanır, servis formu düzenlenir ve işçilik garantisi teslim edilir." },
+      { step: 4, title: "Test ve Teslim", description: "Basınç testi ile sızdırmazlık doğrulanır, yazılı servis formu düzenlenir ve teslim edilir." },
     ],
     methods: [
       { title: "Temiz Su Hattı Çekimi", description: "Yeni bina, tadilat veya yenileme projelerinde PPRC ve bakır boru ile sıhhi tesisat döşeme. Hat güzergahı minimum duvar kırımı ile planlanır." },
@@ -51,7 +51,7 @@ export const services: Service[] = [
     shortDescription:
       "Vaillant, Bosch, Buderus ve tüm marka kombilerde arıza tespiti, periyodik bakım, yedek parça değişimi ve tesisat bağlantısı. Basınç düşüşü, petek ısınmama ve su kaçağı sorunlarına kalıcı çözüm.",
     longDescription:
-      "Kombi sistemi, kış aylarında evinizin konforunu doğrudan belirleyen kritik bir altyapıdır. Düşük basınç, peteklerin ısınmaması, kombi altından su akması veya anormal sesler hem enerji verimliliğini düşürür hem de güvenlik riski oluşturabilir.\n\n724 Tesisatçı olarak İstanbul genelinde tüm marka kombilerde arıza tespiti, periyodik bakım, yedek parça değişimi, tesisat bağlantı onarımı ve yeni kombi montajı hizmetleri sunuyoruz. Dijital arıza tespit cihazları ile sorunun kaynağını hızlıca belirliyor, orijinal veya eşdeğer kaliteli parçalarla garantili onarım yapıyoruz.\n\nKombi basıncının sürekli düşmesi çoğu zaman gizli su kaçağına işaret eder; bu durumda termal kamera destekli tespit ile birlikte kalıcı çözüm sağlıyoruz. Kış sezonu öncesi periyodik bakım yaptırarak arıza riskini minimize etmenizi öneriyoruz.\n\nVaillant, Bosch, Buderus, Demirdöküm ve ECA dahil tüm markalarda İstanbul geneli kombi servisi sunuyoruz. Acil arıza, basınç düşüşü veya ısınma sorunlarında 7/24 ekibimize ulaşabilir, yazılı teklif ve garantili onarım avantajından yararlanabilirsiniz.",
+      "Kombi sistemi, kış aylarında evinizin konforunu doğrudan belirleyen kritik bir altyapıdır. Düşük basınç, peteklerin ısınmaması, kombi altından su akması veya anormal sesler hem enerji verimliliğini düşürür hem de güvenlik riski oluşturabilir.\n\n724 Tesisatçı olarak İstanbul genelinde tüm marka kombilerde arıza tespiti, periyodik bakım, yedek parça değişimi, tesisat bağlantı onarımı ve yeni kombi montajı hizmetleri sunuyoruz. Dijital arıza tespit cihazları ile sorunun kaynağını hızlıca belirliyor, orijinal veya eşdeğer kaliteli parçalarla kalıcı onarım yapıyoruz.\n\nKombi basıncının sürekli düşmesi çoğu zaman gizli su kaçağına işaret eder; bu durumda termal kamera destekli tespit ile birlikte kalıcı çözüm sağlıyoruz. Kış sezonu öncesi periyodik bakım yaptırarak arıza riskini minimize etmenizi öneriyoruz.\n\nVaillant, Bosch, Buderus, Demirdöküm ve ECA dahil tüm markalarda İstanbul geneli kombi servisi sunuyoruz. Acil arıza, basınç düşüşü veya ısınma sorunlarında 7/24 ekibimize ulaşabilir, yazılı teklif ve kalıcı onarım avantajından yararlanabilirsiniz.",
     aboutHighlights: [
       "Tüm marka kombilerde dijital arıza tespiti",
       "Orijinal ve kaliteli yedek parça garantisi",
@@ -102,7 +102,7 @@ export const services: Service[] = [
     ],
     heroTitle: "İstanbul Kalorifer Tesisatı Kurulum ve Onarım",
     heroDescription:
-      "Kalorifer tesisatı kurulumu, petek montajı, sirkülasyon pompası onarımı ve sistem dengeleme. Termal kamera ile kaçak tespiti, garantili işçilik ve 7/24 servis.",
+      "Kalorifer tesisatı kurulumu, petek montajı, sirkülasyon pompası onarımı ve sistem dengeleme. Termal kamera ile kaçak tespiti, yazılı teklif ve 7/24 servis.",
     icon: "thermostat",
     symptoms: [
       { title: "Eşit Isınmayan Petekler", description: "Bazı odalar ısınmıyor veya peteklerin yalnızca bir kısmı sıcaksa tesisatta denge problemi, tıkanıklık veya yetersiz pompa debisi vardır. Vana ayarı veya temizlik gerekebilir.", icon: "thermostat" },
@@ -125,7 +125,7 @@ export const services: Service[] = [
     relatedServices: ["kombi-servisi-ve-tesisati", "petek-temizleme", "su-kacagi-tespit-ve-onarim"],
     relatedLocations: ["istanbul", "kagithane"],
     seoTitle: "İstanbul Kalorifer Tesisatı Kurulum ve Onarım | 724 Tesisatçı",
-    seoDescription: "İstanbul kalorifer tesisatı kurulum, petek montajı, pompa onarımı ve sistem dengeleme. Termal kamera ile kaçak tespiti, garantili işçilik.",
+    seoDescription: "İstanbul kalorifer tesisatı kurulum, petek montajı, pompa onarımı ve sistem dengeleme. Termal kamera ile kaçak tespiti, yazılı teklif.",
     canonicalPath: "/hizmetler/kalorifer-tesisati",
   },
   {
@@ -135,7 +135,7 @@ export const services: Service[] = [
     shortDescription:
       "Termal kamera, akustik dinleme ve nem ölçer ile kırmadan noktasal su kaçağı tespiti. Gizli kaçak, yerden ısıtma arızası ve yüksek su faturası sorunlarına kalıcı onarım.",
     longDescription:
-      "Gizli su kaçağı, ev ve iş yerlerinde en sık karşılaşılan ve en maliyetli tesisat sorunlarından biridir. Duvar içinde, parke altında veya tavan arasında kalan kaçaklar uzun süre fark edilmez; nem, küf, boya dökülmesi ve komşu dairelere sızıntı gibi ciddi hasarlara yol açar.\n\n724 Tesisatçı olarak İstanbul genelinde termal kamera, akustik dinleme cihazı ve nem ölçer ile kırmadan noktasal su kaçağı tespiti ve onarım hizmeti sunuyoruz. Geleneksel yöntemlerde tüm duvar kırılarak arama yapılırken, cihazlı tespit sayesinde yalnızca kaçak noktasına müdahale edilir.\n\nSu sayacınız tüm musluklar kapalıyken dönüyorsa, su faturanız aniden arttıysa veya duvarlarda nem lekesi görüyorsanız acil tespit yaptırmanızı öneriyoruz. Tespit sonrası yazılı rapor sunuyor, onayınız ile noktasal onarım yapıyor ve basınç testi ile kaçağın giderildiğini doğruluyoruz.\n\nİstanbul'da su kaçağı tespiti ve onarımı için 7/24 acil ekibimiz ortalama 30 dakikada adresinize ulaşır. Gereksiz kırım maliyetinden kaçının; termal kamera ile kırmadan tespit, noktasal onarım ve işçilik garantisi için hemen bizi arayın.",
+      "Gizli su kaçağı, ev ve iş yerlerinde en sık karşılaşılan ve en maliyetli tesisat sorunlarından biridir. Duvar içinde, parke altında veya tavan arasında kalan kaçaklar uzun süre fark edilmez; nem, küf, boya dökülmesi ve komşu dairelere sızıntı gibi ciddi hasarlara yol açar.\n\n724 Tesisatçı olarak İstanbul genelinde termal kamera, akustik dinleme cihazı ve nem ölçer ile kırmadan noktasal su kaçağı tespiti ve onarım hizmeti sunuyoruz. Geleneksel yöntemlerde tüm duvar kırılarak arama yapılırken, cihazlı tespit sayesinde yalnızca kaçak noktasına müdahale edilir.\n\nSu sayacınız tüm musluklar kapalıyken dönüyorsa, su faturanız aniden arttıysa veya duvarlarda nem lekesi görüyorsanız acil tespit yaptırmanızı öneriyoruz. Tespit sonrası yazılı rapor sunuyor, onayınız ile noktasal onarım yapıyor ve basınç testi ile kaçağın giderildiğini doğruluyoruz.\n\nİstanbul'da su kaçağı tespiti ve onarımı için 7/24 acil ekibimiz trafik ve ekip uygunluğuna göre adresinize yönlendirilir. Gereksiz kırım maliyetinden kaçının; termal kamera ile kırmadan tespit, noktasal onarım ve yazılı servis formu için hemen bizi arayın.",
     aboutHighlights: [
       "Termal kamera, akustik dinleme ve nem ölçer",
       "Kırmadan noktasal tespit ve minimum müdahale",
@@ -144,7 +144,7 @@ export const services: Service[] = [
     ],
     heroTitle: "İstanbul Su Kaçağı Tespit ve Onarım",
     heroDescription:
-      "Termal kamera, akustik dinleme ve nem ölçer ile kırmadan su kaçağı tespiti. Noktasal onarım, gereksiz kırım yok, garantili işçilik ve 7/24 acil servis.",
+      "Termal kamera, akustik dinleme ve nem ölçer ile kırmadan su kaçağı tespiti. Noktasal onarım, gereksiz kırım yok, yazılı teklif ve 7/24 acil servis.",
     icon: "water_drop",
     featured: true,
     symptoms: [
@@ -157,7 +157,7 @@ export const services: Service[] = [
       { step: 1, title: "Cihazla Tespit", description: "Termal kamera ile sıcaklık farkları, akustik dinleme ile boru içi su sesi ve nem ölçer ile duvar içi nem oranı analiz edilir. Kaçak noktası harita üzerinde işaretlenir." },
       { step: 2, title: "Noktasal Müdahale", description: "Yalnızca tespit edilen noktada kontrollü açılım yapılır. Gereksiz duvar veya zemin kırımı yapılmaz." },
       { step: 3, title: "Onarım", description: "Arızalı boru, ek veya vana değiştirilir veya onarılır. Kaliteli malzeme ile kalıcı bağlantı sağlanır." },
-      { step: 4, title: "Kontrol ve Garanti", description: "Basınç testi ile kaçağın tamamen giderildiği doğrulanır. İşlem raporu ve işçilik garantisi teslim edilir." },
+      { step: 4, title: "Kontrol ve Teslim", description: "Basınç testi ile kaçağın tamamen giderildiği doğrulanır. İşlem raporu ve yazılı servis formu teslim edilir." },
     ],
     methods: [
       { title: "Termal Kamera", description: "Duvar, tavan ve zemin arkasındaki sıcaklık ve nem farklarını görüntüleyerek kaçak bölgesini daraltır. Kırmadan geniş alan taranır." },
@@ -168,7 +168,7 @@ export const services: Service[] = [
     relatedServices: ["kamerali-tesisat-goruntuleme-ve-onarim", "su-tesisati", "tikaniklik-acma"],
     relatedLocations: ["istanbul", "kagithane"],
     seoTitle: "İstanbul Su Kaçağı Tespit ve Onarım | 724 Tesisatçı",
-    seoDescription: "İstanbul su kaçağı tespit ve onarım. Termal kamera ile kırmadan tespit, noktasal onarım, garantili işçilik. 7/24 acil servis.",
+    seoDescription: "İstanbul su kaçağı tespit ve onarım. Termal kamera ile kırmadan tespit, noktasal onarım, yazılı teklif. 7/24 acil servis.",
     canonicalPath: "/hizmetler/su-kacagi-tespit-ve-onarim",
   },
   {
@@ -252,7 +252,7 @@ export const services: Service[] = [
     relatedServices: ["kombi-servisi-ve-tesisati", "kalorifer-tesisati", "su-kacagi-tespit-ve-onarim"],
     relatedLocations: ["istanbul", "kagithane"],
     seoTitle: "İstanbul Petek Temizleme Hizmeti | 724 Tesisatçı",
-    seoDescription: "İstanbul petek temizleme ve kalorifer sistem yıkama. Makineli temizlik ile %30 verimlilik artışı. Profesyonel ekip, garantili işçilik.",
+    seoDescription: "İstanbul petek temizleme ve kalorifer sistem yıkama. Makineli temizlik ile %30 verimlilik artışı. Profesyonel ekip, yazılı teklif.",
     canonicalPath: "/hizmetler/petek-temizleme",
   },
   {
@@ -304,7 +304,7 @@ export const services: Service[] = [
     shortDescription:
       "PVC pimaş boru döşeme, bağlantı onarımı ve hat yenileme. Sık tıkanan hatlar, koku problemi ve alt kata sızıntıya kameralı teşhis ile kalıcı çözüm.",
     longDescription:
-      "Pimaş tesisatı, binaların atık su sisteminin omurgasıdır. Yanlış eğim, eskiyen borular, gevşek ek yerleri veya yanlış çap seçimi sık tıkanıklık, koku ve alt kata su sızıntısı gibi ciddi sorunlara yol açar.\n\n724 Tesisatçı olarak İstanbul genelinde PVC pimaş boru döşeme, bağlantı onarımı, hat yenileme ve kameralı kontrol hizmetleri sunuyoruz. Yeni bina, tadilat veya eski hat yenileme projelerinde minimum müdahale ile kalıcı çözüm sağlıyoruz.\n\n30 yıldan eski binalarda pimaş hatlarının komple yenilenmesi uzun vadede tıkanıklık ve sızıntı maliyetlerini önemli ölçüde düşürür. Keşif sonrası yazılı teklif ve işçilik garantisi sunuyoruz.\n\nİstanbul'da pimaş tesisatı kurulum, onarım ve hat yenileme ihtiyaçlarınız için kameralı teşhis ve PVC boru ile garantili işçilik sunuyoruz. Sık tıkanan hatlar, koku problemi veya alt kata sızıntı durumlarında 7/24 ekibimize ulaşın.",
+      "Pimaş tesisatı, binaların atık su sisteminin omurgasıdır. Yanlış eğim, eskiyen borular, gevşek ek yerleri veya yanlış çap seçimi sık tıkanıklık, koku ve alt kata su sızıntısı gibi ciddi sorunlara yol açar.\n\n724 Tesisatçı olarak İstanbul genelinde PVC pimaş boru döşeme, bağlantı onarımı, hat yenileme ve kameralı kontrol hizmetleri sunuyoruz. Yeni bina, tadilat veya eski hat yenileme projelerinde minimum müdahale ile kalıcı çözüm sağlıyoruz.\n\n30 yıldan eski binalarda pimaş hatlarının komple yenilenmesi uzun vadede tıkanıklık ve sızıntı maliyetlerini önemli ölçüde düşürür. Keşif sonrası yazılı teklif ve yazılı servis formu sunuyoruz.\n\nİstanbul'da pimaş tesisatı kurulum, onarım ve hat yenileme ihtiyaçlarınız için kameralı teşhis ve PVC boru ile yazılı teklif sunuyoruz. Sık tıkanan hatlar, koku problemi veya alt kata sızıntı durumlarında 7/24 ekibimize ulaşın.",
     aboutHighlights: [
       "Standart PVC pimaş boru ile döşeme ve yenileme",
       "Kameralı kontrol ile kesin teşhis",
@@ -313,7 +313,7 @@ export const services: Service[] = [
     ],
     heroTitle: "İstanbul Pimaş Tesisatı Kurulum ve Onarım",
     heroDescription:
-      "PVC pimaş boru döşeme, bağlantı onarımı ve hat yenileme. Kameralı kontrol ile kesin teşhis, sızdırmazlık testi ve garantili işçilik.",
+      "PVC pimaş boru döşeme, bağlantı onarımı ve hat yenileme. Kameralı kontrol ile kesin teşhis, sızdırmazlık testi ve yazılı teklif.",
     icon: "water_damage",
     symptoms: [
       { title: "Sık Tıkanıklık", description: "Sürekli tekrarlayan tıkanıklık hat eğimi hatası, boru çürümesi veya yetersiz çap göstergesidir. Kamera ile kesin teşhis yapılmalıdır.", icon: "block" },
@@ -336,7 +336,7 @@ export const services: Service[] = [
     relatedServices: ["pimas-yikama", "tikaniklik-acma", "kamerali-tesisat-goruntuleme-ve-onarim"],
     relatedLocations: ["istanbul", "kagithane"],
     seoTitle: "İstanbul Pimaş Tesisatı Kurulum ve Onarım | 724 Tesisatçı",
-    seoDescription: "İstanbul pimaş tesisatı kurulum, onarım ve hat yenileme. Kameralı kontrol, PVC boru, garantili işçilik. 7/24 servis.",
+    seoDescription: "İstanbul pimaş tesisatı kurulum, onarım ve hat yenileme. Kameralı kontrol, PVC boru, yazılı teklif. 7/24 servis.",
     canonicalPath: "/hizmetler/pimas-tesisati",
   },
   {
@@ -346,7 +346,7 @@ export const services: Service[] = [
     shortDescription:
       "Doğalgaz tesisatı projelendirme, boru montajı, cihaz bağlantısı ve periyodik güvenlik kontrolü. Lisanslı ekip, sızdırmazlık testi ve standartlara uygun uygulama.",
     longDescription:
-      "Doğalgaz tesisatı güvenlik açısından en kritik altyapı sistemlerinden biridir. Hatalı montaj, eskiyen borular veya periyodik kontrolün yapılmaması ciddi güvenlik riskleri oluşturur.\n\n724 Tesisatçı olarak İstanbul genelinde doğalgaz tesisatı projelendirme, boru montajı, kombi-ocak-soba bağlantısı, sızdırmazlık testi ve periyodik güvenlik kontrolü hizmetleri sunuyoruz. Tüm uygulamalar ilgili standartlara uygun, lisanslı ekip tarafından gerçekleştirilir.\n\nGaz kokusu fark ettiğinizde vanayı kapatıp pencere açın ve acil olarak bizi arayın. Periyodik kontrol süresi dolmuş tesisatlar ceza riski taşır; yıllık kontrol yaptırmanızı öneriyoruz.\n\nİstanbul'da doğalgaz tesisatı projelendirme, montaj ve yıllık periyodik güvenlik kontrolü için lisanslı ekibimizle iletişime geçin. Sızdırmazlık testi, basınç kontrolü ve standartlara uygun uygulama ile güvenliğinizi garanti altına alıyoruz.",
+      "Doğalgaz tesisatı güvenlik açısından en kritik altyapı sistemlerinden biridir. Hatalı montaj, eskiyen borular veya periyodik kontrolün yapılmaması ciddi güvenlik riskleri oluşturur.\n\n724 Tesisatçı olarak İstanbul genelinde doğalgaz tesisatı projelendirme, boru montajı, kombi-ocak-soba bağlantısı, sızdırmazlık testi ve periyodik güvenlik kontrolü hizmetleri sunuyoruz. Tüm uygulamalar ilgili standartlara uygun, standartlara uygun şekilde planlanır.\n\nGaz kokusu fark ettiğinizde vanayı kapatıp pencere açın ve acil olarak bizi arayın. Periyodik kontrol süresi dolmuş tesisatlar ceza riski taşır; yıllık kontrol yaptırmanızı öneriyoruz.\n\nİstanbul'da doğalgaz tesisatı projelendirme, montaj ve yıllık periyodik güvenlik kontrolü için ekibimizle iletişime geçin. Sızdırmazlık testi, basınç kontrolü ve standartlara uygun uygulama ile güvenliğinizi garanti altına alıyoruz.",
     aboutHighlights: [
       "Lisanslı ekip ile standartlara uygun montaj",
       "Basınç testi ve sızdırmazlık kontrolü",
@@ -453,7 +453,7 @@ export const services: Service[] = [
       { step: 1, title: "Arıza Tespiti", description: "Gömme rezervuar kapağı açılarak iç mekanizma, doldurma ventili, sifon contası ve duvar bağlantıları kontrol edilir. Su akış testi yapılır." },
       { step: 2, title: "Parça Değişimi / Onarım", description: "Arızalı iç takım, conta veya ventil orijinal veya eşdeğer kaliteli parça ile değiştirilir. Bağlantı noktaları sıkılarak sızdırmazlık sağlanır." },
       { step: 3, title: "Sızıntı Kontrolü", description: "Duvar içi hat ve rezervuar gövdesi su testi ile kontrol edilir. Gizli kaçak şüphesinde termal kamera ile ek inceleme yapılır." },
-      { step: 4, title: "Test ve Garanti", description: "Sifon, doldurma ve debi testleri tamamlanır. Servis formu düzenlenir, işçilik garantisi teslim edilir." },
+      { step: 4, title: "Test ve Teslim", description: "Sifon, doldurma ve debi testleri tamamlanır. Servis formu düzenlenir, yazılı servis formu teslim edilir." },
     ],
     methods: [
       { title: "İç Takım Değişimi", description: "Sifon mekanizması, doldurma ventili, yüzen vanalar ve contaların marka uyumlu parçalarla değişimi. Geberit, Vitra, ECA ve diğer markalarda uzman uygulama." },
@@ -464,7 +464,7 @@ export const services: Service[] = [
     relatedServices: ["su-tesisati", "tikaniklik-acma", "su-kacagi-tespit-ve-onarim"],
     relatedLocations: ["istanbul", "kagithane"],
     seoTitle: "İstanbul Gömme Rezervuar Tamiri | Geberit, Vitra, ECA — 724 Tesisatçı",
-    seoDescription: "İstanbul gömme rezervuar tamiri ve montaj. Geberit, Vitra, ECA iç takım değişimi, sızıntı onarımı, zayıf sifon çözümü. Yazılı teklif, garantili işçilik, 7/24 acil servis.",
+    seoDescription: "İstanbul gömme rezervuar tamiri ve montaj. Geberit, Vitra, ECA iç takım değişimi, sızıntı onarımı, zayıf sifon çözümü. Yazılı teklif, yazılı teklif, 7/24 acil servis.",
     canonicalPath: "/hizmetler/gomme-rezervuar-tamiri",
   },
   {
@@ -472,9 +472,9 @@ export const services: Service[] = [
     title: "Batarya Musluk Montaj",
     slug: "batarya-musluk-montaj",
     shortDescription:
-      "Mutfak, banyo ve lavabo batarya-musluk montajı, değişimi ve tamiri. Damlayan musluk, eski batarya yenileme, mutfak evye ve duş bataryası montajı. Tüm markalarda garantili işçilik.",
+      "Mutfak, banyo ve lavabo batarya-musluk montajı, değişimi ve tamiri. Damlayan musluk, eski batarya yenileme, mutfak evye ve duş bataryası montajı. Tüm markalarda yazılı teklif.",
     longDescription:
-      "Damlayan musluk, sızıntı yapan batarya veya eskiyen armatürler hem su israfına hem de alt dolap ve tezgah hasarına yol açar. Yanlış montaj, uyumsuz bağlantı veya yıpranmış contalar kısa sürede tekrarlayan arızalara neden olur.\n\n724 Tesisatçı olarak İstanbul genelinde mutfak evye bataryası, banyo lavabo bataryası, duş ve küvet bataryası montajı, değişimi ve tamiri hizmetleri sunuyoruz. Grohe, ECA, Kale, Artema ve diğer tüm marka armatürlerde profesyonel montaj yapıyor, eski hat bağlantılarını kontrol ederek sızdırmazlığı garanti altına alıyoruz.\n\nYeni batarya montajında flex hortum, contalar ve bağlantı rekorları kaliteli malzeme ile değiştirilir. Banyo ve mutfak tadilat projelerinde anahtar teslim batarya-musluk montajı, su basıncı ayarı ve test ile teslim edilir.\n\nDamlayan musluk, düşük basınç veya batarya değişimi ihtiyaçlarınız için İstanbul genelinde 7/24 servis hattımıza ulaşabilirsiniz. Keşif sonrası yazılı teklif, garantili işçilik ve hızlı montaj avantajından yararlanın.",
+      "Damlayan musluk, sızıntı yapan batarya veya eskiyen armatürler hem su israfına hem de alt dolap ve tezgah hasarına yol açar. Yanlış montaj, uyumsuz bağlantı veya yıpranmış contalar kısa sürede tekrarlayan arızalara neden olur.\n\n724 Tesisatçı olarak İstanbul genelinde mutfak evye bataryası, banyo lavabo bataryası, duş ve küvet bataryası montajı, değişimi ve tamiri hizmetleri sunuyoruz. Grohe, ECA, Kale, Artema ve diğer tüm marka armatürlerde profesyonel montaj yapıyor, eski hat bağlantılarını kontrol ederek sızdırmazlığı garanti altına alıyoruz.\n\nYeni batarya montajında flex hortum, contalar ve bağlantı rekorları kaliteli malzeme ile değiştirilir. Banyo ve mutfak tadilat projelerinde anahtar teslim batarya-musluk montajı, su basıncı ayarı ve test ile teslim edilir.\n\nDamlayan musluk, düşük basınç veya batarya değişimi ihtiyaçlarınız için İstanbul genelinde 7/24 servis hattımıza ulaşabilirsiniz. Keşif sonrası yazılı teklif, yazılı teklif ve hızlı montaj avantajından yararlanın.",
     aboutHighlights: [
       "Mutfak, banyo ve lavabo batarya-musluk montajı",
       "Grohe, ECA, Kale ve tüm marka armatür servisi",
@@ -483,7 +483,7 @@ export const services: Service[] = [
     ],
     heroTitle: "İstanbul Batarya ve Musluk Montaj Hizmeti",
     heroDescription:
-      "Mutfak, banyo ve lavabo batarya-musluk montajı, değişimi ve tamiri. Damlayan musluk onarımı, eski batarya yenileme ve garantili montaj. 7/24 acil servis.",
+      "Mutfak, banyo ve lavabo batarya-musluk montajı, değişimi ve tamiri. Damlayan musluk onarımı, eski batarya yenileme ve profesyonel montaj. 7/24 acil servis.",
     icon: "faucet",
     symptoms: [
       { title: "Damlayan Musluk", description: "Musluk ucu veya contadan sürekli damlama günde 20 litreye kadar su israfına yol açar. Conta veya kartuş değişimi ile hızlı ve ekonomik çözüm sağlanır.", icon: "water_damage" },
@@ -495,7 +495,7 @@ export const services: Service[] = [
       { step: 1, title: "Keşif ve Ölçüm", description: "Mevcut batarya, bağlantı noktaları ve tezgah/lavabo uyumu kontrol edilir. Yeni armatür ölçüleri ve montaj tipi belirlenir." },
       { step: 2, title: "Söküm ve Hazırlık", description: "Eski batarya ve musluk sökülür, contalar ve flex hortumlar yenilenir. Hat uçları temizlenir ve basınç kontrol edilir." },
       { step: 3, title: "Montaj ve Bağlantı", description: "Yeni batarya standartlara uygun monte edilir, contalar sıkılarak sızdırmazlık sağlanır. Aeratör ve perlatör ayarı yapılır." },
-      { step: 4, title: "Test ve Teslim", description: "Sıcak-soğuk su testi, basınç kontrolü ve sızıntı testi yapılır. Servis formu düzenlenir, işçilik garantisi teslim edilir." },
+      { step: 4, title: "Test ve Teslim", description: "Sıcak-soğuk su testi, basınç kontrolü ve sızıntı testi yapılır. Servis formu düzenlenir, yazılı servis formu teslim edilir." },
     ],
     methods: [
       { title: "Batarya Montajı", description: "Mutfak evye, banyo lavabo, duş ve küvet bataryası montajı. Tek delik, çift delik ve duvar tipi armatürlerde profesyonel uygulama." },

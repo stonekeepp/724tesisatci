@@ -15,7 +15,6 @@ import {
   buildAreaServiceSchema,
   buildBreadcrumbSchema,
   buildFAQSchema,
-  buildLocalBusinessSchema,
 } from "@/lib/services/schemaService";
 import { getDistrictLocations } from "@/data/mock/locations";
 
@@ -67,9 +66,6 @@ export default async function DistrictPage({ params }: Props) {
   const isIndexable = location.indexable !== false;
 
   const schemas = [
-    isIndexable
-      ? buildLocalBusinessSchema(settings)
-      : buildLocalBusinessSchema(settings, areaLabel),
     isIndexable
       ? buildAreaServiceSchema(settings, areaLabel, location.shortDescription)
       : null,

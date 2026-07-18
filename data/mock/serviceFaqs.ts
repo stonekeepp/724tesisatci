@@ -16,7 +16,7 @@ export const commonServiceFaq: FAQItem[] = [
   {
     question: "Yapılan işlemlere garanti veriliyor mu?",
     answer:
-      "Evet. Tüm hizmetlerimizde işçilik garantisi sunuyoruz. Kullanılan malzemelerin marka ve garanti bilgileri resmi servis formunda belirtilir. İşlem sonrası test ve kontrol ile kalite doğrulanır.",
+      "Keşif sonrası yazılı teklif sunulur; kullanılan malzemelerin marka bilgileri resmi servis formunda belirtilir. İşlem sonrası test ve kontrol ile kalite doğrulanır.",
     category: "genel",
   },
   {
@@ -132,7 +132,7 @@ export const serviceSpecificFaq: Record<string, FAQItem[]> = {
     {
       question: "Kalorifer tesisatı yenileme fiyatı neye göre belirlenir?",
       answer:
-        "Petek sayısı, boru metrajı, malzeme kalitesi ve erişim zorluğuna göre fiyatlandırılır. Keşif sonrası detaylı yazılı teklif ve işçilik garantisi sunulur.",
+        "Petek sayısı, boru metrajı, malzeme kalitesi ve erişim zorluğuna göre fiyatlandırılır. Keşif sonrası detaylı yazılı teklif sunulur.",
       category: "kalorifer",
     },
     {
@@ -346,9 +346,9 @@ export const serviceSpecificFaq: Record<string, FAQItem[]> = {
       category: "dogalgaz",
     },
     {
-      question: "Doğalgaz tesisatı montajı lisanslı ekip tarafından mı yapılır?",
+      question: "Doğalgaz tesisatı montajı nasıl yapılır?",
       answer:
-        "Evet. Tüm uygulamalar ilgili standartlara uygun, yetkili ve lisanslı ekip tarafından gerçekleştirilir. Sızdırmazlık testi ve basınç kontrolü zorunludur.",
+        "Tüm uygulamalar ilgili standartlara uygun şekilde planlanır. Sızdırmazlık testi ve basınç kontrolü zorunludur.",
       category: "dogalgaz",
     },
     {

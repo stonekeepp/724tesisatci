@@ -8,26 +8,31 @@ import type {
 } from "@/types";
 import { getSiteUrl } from "./seoService";
 
-function buildPostalAddress() {
+function buildPostalAddress(settings: SiteSettings) {
   return {
     "@type": "PostalAddress" as const,
-    streetAddress: "Emniyet Evleri, Semerkant Sk. 14/A",
-    addressLocality: "Kağıthane",
-    addressRegion: "İstanbul",
-    postalCode: "34415",
+    streetAddress: settings.streetAddress,
+    addressLocality: settings.addressLocality,
+    addressRegion: settings.addressRegion,
+    postalCode: settings.postalCode,
     addressCountry: "TR",
   };
 }
 
-function buildBusinessId(siteUrl: string) {
-  return `${siteUrl}/#business`;
+export function buildBusinessId(siteUrl?: string) {
+  return `${siteUrl ?? getSiteUrl()}/#business`;
 }
 
 function buildSchemaTelephone(phone: string) {
   return phone.replace(/\s/g, "");
 }
 
-function buildOpeningHoursSpecification() {
+function buildOpeningHoursSpecification(settings: SiteSettings) {
+  const hours = settings.openingHours || "Mo-Su 00:00-23:59";
+  const is247 = /Mo-Su\s+00:00-23:59/i.test(hours);
+  if (!is247) {
+    return undefined;
+  }
   return {
     "@type": "OpeningHoursSpecification" as const,
     dayOfWeek: [
@@ -51,40 +56,64 @@ export function buildOrganizationSchema(settings: SiteSettings) {
   return {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: settings.siteName,
+    name: settings.businessName || settings.siteName,
     url: siteUrl,
-    telephone: settings.phone,
+    telephone: settings.telephone || settings.phone,
     email: settings.email,
     logo: logoUrl,
     image: logoUrl,
-    address: buildPostalAddress(),
+    address: buildPostalAddress(settings),
   };
 }
 
 export function buildLocalBusinessSchema(settings: SiteSettings, area?: string) {
   const siteUrl = getSiteUrl();
   const logoUrl = `${siteUrl}/logo.webp`;
+  const telephone = buildSchemaTelephone(
+    settings.telephone || settings.phone
+  );
+  const openingHours =
+    settings.openingHours || "Mo-Su 00:00-23:59";
+  const openingHoursSpecification =
+    buildOpeningHoursSpecification(settings);
 
-  return {
+  const schema: Record<string, unknown> = {
     "@context": "https://schema.org",
     "@type": "Plumber",
     "@id": buildBusinessId(siteUrl),
-    name: settings.siteName,
+    name: settings.businessName || settings.siteName,
     url: siteUrl,
-    telephone: buildSchemaTelephone(settings.phone),
+    telephone,
     logo: logoUrl,
     image: logoUrl,
-    address: buildPostalAddress(),
-    openingHours: "Mo-Su 00:00-23:59",
-    openingHoursSpecification: buildOpeningHoursSpecification(),
+    address: buildPostalAddress(settings),
+    openingHours,
     contactPoint: {
       "@type": "ContactPoint",
-      telephone: buildSchemaTelephone(settings.phone),
+      telephone,
       contactType: "customer service",
       availableLanguage: ["tr"],
     },
-    areaServed: area ?? settings.city,
+    areaServed: area ?? settings.serviceArea ?? settings.city,
   };
+
+  if (openingHoursSpecification) {
+    schema.openingHoursSpecification = openingHoursSpecification;
+  }
+
+  if (settings.latitude && settings.longitude) {
+    schema.geo = {
+      "@type": "GeoCoordinates",
+      latitude: settings.latitude,
+      longitude: settings.longitude,
+    };
+  }
+
+  if (settings.sameAs && settings.sameAs.length > 0) {
+    schema.sameAs = settings.sameAs;
+  }
+
+  return schema;
 }
 
 export function buildWebSiteSchema(settings: SiteSettings) {

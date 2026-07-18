@@ -67,7 +67,7 @@ export default async function HizmetlerPage() {
               İstanbul Geneli Profesyonel Tesisat Çözümleri
             </h1>
             <p className="font-body-lg text-body-lg text-on-surface-variant max-w-xl leading-relaxed">
-              Su kaçağı tespitinden kombi servisine, gömme rezervuar tamiri ve batarya montajından pimaş yıkamaya kadar 12 uzmanlık alanında cihazlı tespit, kırmadan onarım ve garantili işçilik sunuyoruz. İşlem öncesi yazılı teklif; onayınız olmadan müdahaleye başlanmaz.
+              Su kaçağı tespitinden kombi servisine, gömme rezervuar tamiri ve batarya montajından pimaş yıkamaya kadar 12 uzmanlık alanında cihazlı tespit, kırmadan onarım ve yazılı teklif sunuyoruz. İşlem öncesi yazılı teklif; onayınız olmadan müdahaleye başlanmaz.
             </p>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
               {trustPoints.map((point) => (

@@ -11,7 +11,7 @@ export const localServiceLandingPages: LocalServiceLanding[] = [
     heroDescription:
       "Alt kata su sızması, tavanda nem veya kabarma, yüksek fatura ve sayaç hareketinde termal kamera, akustik dinleme ve nem ölçerle kaçak noktası daraltılır; sonuç yazılı olarak paylaşılır.",
     intro:
-      "Kağıthane'de su kaçağı çoğu zaman banyo, mutfak, temiz su borusu veya kalorifer hattından başlar. Çeliktepe merkezli ekibimiz önce belirtileri dinler; gereksiz kırma yapmadan termal, akustik ve nem ölçümle kaynağı doğrulamaya odaklanır.",
+      "Kağıthane'de su kaçağı çoğu zaman banyo, mutfak, temiz su borusu veya kalorifer hattından başlar. Ekibimiz önce belirtileri dinler; gereksiz kırma yapmadan termal, akustik ve nem ölçümle kaynağı doğrulamaya odaklanır.",
     serviceType: "Su kaçağı tespiti",
     canonicalPath: "/kagithane-su-kacagi-tespiti",
     imageAlt:

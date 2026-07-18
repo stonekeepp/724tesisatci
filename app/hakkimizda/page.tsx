@@ -5,7 +5,6 @@ import { buildMetadata, getSiteUrl } from "@/lib/services/seoService";
 import { getSiteSettings } from "@/lib/services/settingsService";
 import {
   buildBreadcrumbSchema,
-  buildLocalBusinessSchema,
   buildOrganizationSchema,
 } from "@/lib/services/schemaService";
 import { staticPageSeo } from "@/data/mock/seo";
@@ -23,7 +22,7 @@ const coreValues = [
     icon: "speed",
     title: "Hız ve Zamanlama",
     description:
-      "İstanbul genelinde randevu saatlerine tam riayet eder; su kaçağı, tıkanıklık ve kombi arızalarına en kısa sürede kalıcı müdahalede bulunuruz. Acil çağrılarda ortalama 30–45 dakika varış hedefliyoruz.",
+      "İstanbul genelinde randevu saatlerine tam riayet eder; su kaçağı, tıkanıklık ve kombi arızalarına trafik ve ekip uygunluğuna göre hızlı müdahalede bulunuruz.",
   },
   {
     icon: "policy",
@@ -66,7 +65,6 @@ export default async function HakkimizdaPage() {
 
   const schemas = [
     buildOrganizationSchema(settings),
-    buildLocalBusinessSchema(settings, "İstanbul"),
     buildBreadcrumbSchema(breadcrumbs),
     {
       "@context": "https://schema.org",
@@ -106,7 +104,7 @@ export default async function HakkimizdaPage() {
               <span className="text-secondary">Yeni Nesil Uzmanlık.</span>
             </h1>
             <p className="font-body-lg text-body-lg text-on-surface-variant max-w-lg leading-relaxed">
-              724 Tesisatçı olarak Kağıthane merkezli operasyonumuzla İstanbul&apos;un 39 ilçesinde 7/24 profesyonel tesisat hizmeti sunuyoruz. Termal kamera, akustik dinleme ve robotik cihazlarla kırmadan tespit; yazılı teklif ve garantili işçilik ile şeffaf, kalıcı çözümler üretiyoruz.
+              724 Tesisatçı olarak Kağıthane merkezli hizmet ağımızla İstanbul&apos;un 39 ilçesinde 7/24 profesyonel tesisat hizmeti sunuyoruz. Termal kamera, akustik dinleme ve robotik cihazlarla kırmadan tespit; yazılı teklif ile şeffaf, kalıcı çözümler üretiyoruz.
             </p>
             <div className="flex gap-4 pt-2">
               <div className="flex flex-col border-l-2 border-outline-variant pl-4">
@@ -242,7 +240,7 @@ export default async function HakkimizdaPage() {
                 İstanbul Geneli Servis Ağı
               </h2>
               <p className="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-                Kağıthane merkez operasyonumuzdan Avrupa ve Anadolu Yakası&apos;na yönlendirilen mobil ekiplerimizle acil tesisat çağrılarınıza ortalama 30–45 dakikada yanıt veriyoruz.{" "}
+                Kağıthane merkezli hizmet ağımızdan Avrupa ve Anadolu Yakası&apos;na yönlendirilen mobil ekiplerimizle acil tesisat çağrılarınıza trafik ve ekip uygunluğuna göre yanıt veriyoruz.{" "}
                 <Link
                   href="/hizmet-bolgeleri"
                   className="text-secondary font-label-md hover:text-on-secondary-container transition-colors"
@@ -259,16 +257,22 @@ export default async function HakkimizdaPage() {
                 </span>
                 <div>
                   <p className="font-label-md text-label-md text-on-background font-bold">
-                    Ortalama Varış Süresi
+                    Hizmet Ağı
                   </p>
-                  <p className="font-headline-md text-headline-md text-secondary">30 - 45 Dk</p>
+                  <p className="font-headline-md text-headline-md text-secondary">7/24</p>
                 </div>
               </div>
+              <Link
+                href="/"
+                className="text-secondary font-label-md hover:text-on-secondary-container transition-colors"
+              >
+                Kağıthane tesisatçı ana sayfası →
+              </Link>
               <Link
                 href="/hizmet-bolgeleri/kagithane"
                 className="text-secondary font-label-md hover:text-on-secondary-container transition-colors"
               >
-                Kağıthane merkez operasyon →
+                Kağıthane tesisat hizmet bölgeleri →
               </Link>
             </div>
             <div className="md:w-2/3 w-full h-[400px] rounded-2xl overflow-hidden border border-outline-variant relative soft-shadow bg-surface-container-lowest">

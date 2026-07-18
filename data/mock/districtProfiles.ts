@@ -8,7 +8,7 @@ export const districtProfiles: Record<
 > = {
   kagithane: {
     description:
-      "Kağıthane tesisat hizmet bölgelerinde Çeliktepe merkezli ekiplerimiz 19 mahalleye yönlendirilir. Apartman, site ve iş yerlerinde bina tipine göre su kaçağı, tıkanıklık, pimaş, petek ve kombi tesisatı için mahalle mahalle servis planı yapılır. Bu sayfa ilçe hub’ıdır; ilgili hizmet sayfalarına ve mahalle listesine buradan geçebilirsiniz.",
+      "Kağıthane tesisat hizmet bölgelerinde ekiplerimiz 19 mahalleye yönlendirilir. Apartman, site ve iş yerlerinde bina tipine göre su kaçağı, tıkanıklık, pimaş, petek ve kombi tesisatı için mahalle mahalle servis planı yapılır. Bu sayfa ilçe hub’ıdır; ilgili hizmet sayfalarına ve mahalle listesine buradan geçebilirsiniz.",
     shortDescription:
       "Kağıthane tesisat hizmet bölgeleri — 19 mahalle, bina tipi ve servis yönlendirme hub’ı.",
   },
@@ -20,19 +20,19 @@ export const districtProfiles: Record<
   },
   sisli: {
     description:
-      "Şişli'nin yoğun ticaret ve konut dokusunda ofis binaları, apartmanlar ve otellerde acil tesisat müdahalesi gerektiren arızalar sık yaşanır. Merkez operasyonumuza komşu ilçe konumunda olduğumuz için en kısa varış sürelerinden birini sunuyoruz.",
+      "Şişli'nin yoğun ticaret ve konut dokusunda ofis binaları, apartmanlar ve otellerde acil tesisat müdahalesi gerektiren arızalar sık yaşanır. Kağıthane merkezli hizmet ağımıza yakın konumda olduğumuz için hızlı yönlendirme sağlıyoruz.",
     shortDescription:
-      "Şişli merkez ve çevresinde 7/24 tesisat. Hızlı varış, yazılı teklif.",
+      "Şişli merkez ve çevresinde 7/24 tesisat. Hızlı yönlendirme, yazılı teklif.",
   },
   beyoglu: {
     description:
       "Beyoğlu'ndaki tarihi bina stoğu ve yoğun restoran-gayrimenkul karışımında eski boru hatları, pimaş tıkanıklığı ve su kaçağı riski yüksektir. Ticari işletme ve konut müdahalelerinde deneyimli ekibimizle 7/24 hizmet veriyoruz.",
     shortDescription:
-      "Beyoğlu tarihi bina ve ticari tesisat. Kırmadan tespit, garantili işçilik.",
+      "Beyoğlu tarihi bina ve ticari tesisat. Kırmadan tespit, yazılı teklif.",
   },
   eyupsultan: {
     description:
-      "Eyüpsultan'da Haliç kıyısı ve yeni konut projelerinde kombi, kalorifer ve su tesisatı arızalarına hızlı müdahale sağlıyoruz. Merkez operasyonumuza yakın konum sayesinde acil çağrılarda öncelikli yönlendirme uygulanır.",
+      "Eyüpsultan'da Haliç kıyısı ve yeni konut projelerinde kombi, kalorifer ve su tesisatı arızalarına hızlı müdahale sağlıyoruz. Kağıthane merkezli hizmet ağımıza yakın konum sayesinde acil çağrılarda öncelikli yönlendirme uygulanır.",
     shortDescription:
       "Eyüpsultan Haliç ve çevresi tesisatçı. 7/24 acil servis, cihazlı tespit.",
   },
@@ -65,7 +65,7 @@ export const districtProfiles: Record<
     description:
       "Esenler'de merkezi konumdaki konut ve ticaret alanlarında acil tesisat müdahaleleri için mobil ekiplerimizi hızla yönlendiriyoruz. Otogar çevresi ve mahalle içi erişimde deneyimli ekibimizle 7/24 hizmet sunuyoruz.",
     shortDescription:
-      "Esenler merkez tesisatçı. Acil müdahale, garantili işçilik.",
+      "Esenler merkez tesisatçı. Acil müdahale, yazılı teklif.",
   },
   gungoren: {
     description:
@@ -75,7 +75,7 @@ export const districtProfiles: Record<
   },
   sariyer: {
     description:
-      "Sarıyer'in villaları, site konutları ve Boğaz hattı yapılarında kalorifer, su tesisatı ve dış hat arızalarına özel çözümler sunuyoruz. Maslak ve Tarabya hattında cihazlı tespit ve garantili onarım yapıyoruz.",
+      "Sarıyer'in villaları, site konutları ve Boğaz hattı yapılarında kalorifer, su tesisatı ve dış hat arızalarına özel çözümler sunuyoruz. Maslak ve Tarabya hattında cihazlı tespit ve kalıcı onarım yapıyoruz.",
     shortDescription:
       "Sarıyer villa ve site tesisatçı. Boğaz hattı uzmanlığı, 7/24 destek.",
   },
@@ -95,7 +95,7 @@ export const districtProfiles: Record<
     description:
       "Bağcılar'da yüksek katlı konut blokları ve yoğun ticaret alanlarında tesisat altyapısı sürekli test edilir. Tıkanıklık açma, su kaçağı tespiti ve kombi servisinde ilçe geneline mobil ekip gönderiyoruz.",
     shortDescription:
-      "Bağcılar yoğun konut tesisatı. 7/24 acil servis, garantili işçilik.",
+      "Bağcılar yoğun konut tesisatı. 7/24 acil servis, yazılı teklif.",
   },
   bahcelievler: {
     description:
@@ -131,7 +131,7 @@ export const districtProfiles: Record<
     description:
       "Ümraniye'de hızla gelişen konut projeleri ve sanayi bölgelerinde su tesisatı, kombi ve pimaş hattı arızalarına mobil ekip yönlendirmesi yapıyoruz. Çamlıca ve merkez hattına kısa sürede ulaşım sağlıyoruz.",
     shortDescription:
-      "Ümraniye yeni proje ve konut tesisatçı. Hızlı varış, garantili işçilik.",
+      "Ümraniye yeni proje ve konut tesisatçı. Hızlı yönlendirme, yazılı teklif.",
   },
   cekmekoy: {
     description:
@@ -173,7 +173,7 @@ export const districtProfiles: Record<
     description:
       "Sultanbeyli'deki yoğun konut yerleşiminde tıkanıklık, su kaçağı ve kombi arızalarına mobil ekip gönderiyoruz. Yeni bina ve eski yapı stoğunda kameralı tesisat kontrolü ile kesin teşhis sunuyoruz.",
     shortDescription:
-      "Sultanbeyli konut tesisatçı. Kameralı kontrol, garantili işçilik.",
+      "Sultanbeyli konut tesisatçı. Kameralı kontrol, yazılı teklif.",
   },
   kucukcekmece: {
     description:

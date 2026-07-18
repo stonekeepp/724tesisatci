@@ -46,7 +46,7 @@ export function Footer() {
             <SiteLogo variant="dark" className="mb-5" imageClassName="h-14 md:h-16 w-auto" />
             <p className={`${footerMetaClass} mb-4 max-w-xs`}>
               İstanbul genelinde 7/24 profesyonel tesisat hizmeti. Kırmadan,
-              cihazla tespit, garantili işçilik.
+              cihazla tespit, yazılı teklif.
             </p>
             <address
               className={`${footerMetaClass} text-on-primary/62 not-italic flex flex-col items-start gap-1`}

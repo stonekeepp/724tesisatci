@@ -11,6 +11,18 @@ export const siteSettings: SiteSettings = {
   mapsDestination: "Emniyet Evleri, Semerkant Sk. 14/A, 34415 Kağıthane/İstanbul",
   city: "İstanbul",
   workingHours: "7/24 Acil Servis",
+  businessName: "724 Tesisatçı",
+  telephone: "+90 532 346 87 69",
+  streetAddress: "Emniyet Evleri, Semerkant Sk. 14/A",
+  addressLocality: "Kağıthane",
+  addressRegion: "İstanbul",
+  postalCode: "34415",
+  serviceArea: "Kağıthane, İstanbul",
+  openingHours: "Mo-Su 00:00-23:59",
+  googleBusinessProfileUrl: undefined,
+  latitude: undefined,
+  longitude: undefined,
+  sameAs: undefined,
 };
 
 export function getPhoneHref(phone: string): string {

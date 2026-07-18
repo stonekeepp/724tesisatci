@@ -3,7 +3,6 @@ import type { Location, Neighborhood, Service } from "@/types";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { ContextualLinks } from "@/components/ui/ContextualLinks";
 import { LocationHeroImage } from "@/components/ui/LocationHeroImage";
-import { getNeighborhoodArrivalStat } from "@/data/mock/districtArrivalTimes";
 import {
   getPhoneHref,
   getWhatsAppHref,
@@ -23,8 +22,6 @@ export function NeighborhoodDetailTemplate({
   allServices,
   siblingNeighborhoods,
 }: NeighborhoodDetailTemplateProps) {
-  const arrivalStat = getNeighborhoodArrivalStat(neighborhood.slug);
-
   return (
     <>
       <section className="py-section-padding bg-surface-container-lowest px-margin-mobile md:px-margin-desktop">
@@ -40,16 +37,16 @@ export function NeighborhoodDetailTemplate({
               {district.title} İlçesi
             </Link>
             <h1 className="font-display-lg text-headline-lg-mobile md:text-display-lg text-primary mb-6 font-bold leading-tight">
-              {neighborhood.title} Tesisatçı
+              {neighborhood.title} Tesisat Hizmeti
             </h1>
             <p className="font-body-lg text-body-lg text-on-surface-variant mb-8 leading-relaxed">
               {neighborhood.description}
             </p>
             <div className="flex flex-wrap gap-3 mb-8">
               {[
-                { icon: "schedule", label: `${arrivalStat} Varış` },
-                { icon: "home_pin", label: "Merkez Operasyon Yakını" },
-                { icon: "verified", label: "Garantili İşçilik" },
+                { icon: "schedule", label: "7/24 Destek" },
+                { icon: "home_pin", label: "Kağıthane Odaklı" },
+                { icon: "verified", label: "Yazılı Teklif" },
               ].map((item) => (
                 <span
                   key={item.label}
@@ -135,16 +132,16 @@ export function NeighborhoodDetailTemplate({
             title={`${neighborhood.title} için Kağıthane kaynakları`}
             links={[
               {
+                href: "/",
+                label: "Kağıthane tesisatçı",
+              },
+              {
                 href: district.canonicalPath,
-                label: "Kağıthane ana tesisat sayfası",
+                label: "Kağıthane tesisat hizmet bölgeleri",
               },
               {
                 href: "/hizmet-bolgeleri/kagithane-mahalleleri",
                 label: "Tüm Kağıthane mahalleleri",
-              },
-              {
-                href: "/blog/celiktepe-merkez-operasyon-mahalle-servisi",
-                label: "Çeliktepe merkez operasyon rehberi",
               },
               {
                 href: "/blog/kagithane-su-kacagi-tespiti",
@@ -211,7 +208,7 @@ export function NeighborhoodDetailTemplate({
             {neighborhood.title} Acil Tesisat Desteği
           </h2>
           <p className="font-body-lg text-body-lg text-on-primary-container mb-8 max-w-2xl mx-auto">
-            {neighborhood.title} mahallesinde 7/24 acil tesisat ekibimiz ortalama {arrivalStat} içinde adresinize ulaşır.
+            {neighborhood.title} mahallesinde 7/24 acil tesisat desteği için trafik ve ekip uygunluğuna göre yönlendirme yapılır.
           </p>
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             <Link

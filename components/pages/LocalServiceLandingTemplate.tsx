@@ -36,7 +36,7 @@ export function LocalServiceLandingTemplate({
               <span className="material-symbols-outlined text-base" aria-hidden="true">
                 location_on
               </span>
-              Kağıthane · Çeliktepe Merkez
+              Kağıthane Odaklı
             </span>
             <h1 className="font-display-lg text-headline-lg-mobile md:text-display-lg text-primary font-bold leading-tight">
               {landing.h1}
@@ -139,10 +139,16 @@ export function LocalServiceLandingTemplate({
               </h2>
               <div className="flex flex-col gap-3">
                 <Link
+                  href="/"
+                  className="text-secondary font-label-md hover:text-primary transition-colors"
+                >
+                  Kağıthane tesisatçı
+                </Link>
+                <Link
                   href="/hizmet-bolgeleri/kagithane"
                   className="text-secondary font-label-md hover:text-primary transition-colors"
                 >
-                  Kağıthane tesisatçı ana sayfası
+                  Kağıthane tesisat hizmet bölgeleri
                 </Link>
                 <Link
                   href={service.canonicalPath}
@@ -187,7 +193,11 @@ export function LocalServiceLandingTemplate({
             Kağıthane&apos;de {landing.serviceType} için destek alın
           </h2>
           <p className="font-body-lg text-body-lg text-on-primary-container mb-8 max-w-2xl mx-auto">
-            Çeliktepe merkezli ekip yönlendirmesi, cihazlı kontrol ve işlem öncesi açık bilgilendirme için 7/24 arayabilir veya WhatsApp üzerinden fotoğraf gönderebilirsiniz.
+            Kağıthane merkezli ekip yönlendirmesi, cihazlı kontrol ve işlem öncesi açık bilgilendirme için 7/24 arayabilir veya WhatsApp üzerinden fotoğraf gönderebilirsiniz. Ana yerel hedef için{" "}
+            <Link href="/" className="text-on-primary underline underline-offset-2 hover:text-secondary transition-colors">
+              Kağıthane tesisat hizmeti
+            </Link>
+            &apos;ne de bakabilirsiniz.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a

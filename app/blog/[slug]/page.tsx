@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import type { ReactNode } from "react";
 import { notFound } from "next/navigation";
 import { SiteLayout } from "@/components/layout/SiteLayout";
 import { Breadcrumb } from "@/components/layout/Breadcrumb";
@@ -42,6 +43,33 @@ export async function generateMetadata({ params }: Props) {
   );
 }
 
+function renderInline(text: string) {
+  const parts: ReactNode[] = [];
+  const pattern = /\[([^\]]+)\]\((\/[^)]*|https?:\/\/[^)]+)\)/g;
+  let lastIndex = 0;
+  let match: RegExpExecArray | null;
+  let key = 0;
+  while ((match = pattern.exec(text)) !== null) {
+    if (match.index > lastIndex) {
+      parts.push(text.slice(lastIndex, match.index));
+    }
+    parts.push(
+      <Link
+        key={`inl-${key++}`}
+        href={match[2]}
+        className="text-secondary hover:text-primary transition-colors"
+      >
+        {match[1]}
+      </Link>
+    );
+    lastIndex = match.index + match[0].length;
+  }
+  if (lastIndex < text.length) {
+    parts.push(text.slice(lastIndex));
+  }
+  return parts.length > 0 ? parts : text;
+}
+
 function renderContent(content: string) {
   return content.split("\n\n").map((block, i) => {
     if (block.startsWith("## ")) {
@@ -53,7 +81,7 @@ function renderContent(content: string) {
           </h2>
           {body.length > 0 && (
             <p className="font-body-md text-body-md text-on-surface-variant mb-4 leading-relaxed">
-              {body.join("\n")}
+              {renderInline(body.join("\n"))}
             </p>
           )}
         </div>
@@ -68,7 +96,7 @@ function renderContent(content: string) {
           </h3>
           {body.length > 0 && (
             <p className="font-body-md text-body-md text-on-surface-variant mb-4 leading-relaxed">
-              {body.join("\n")}
+              {renderInline(body.join("\n"))}
             </p>
           )}
         </div>
@@ -76,7 +104,7 @@ function renderContent(content: string) {
     }
     return (
       <p key={i} className="font-body-md text-body-md text-on-surface-variant mb-4 leading-relaxed">
-        {block}
+        {renderInline(block)}
       </p>
     );
   });
@@ -265,7 +293,11 @@ export default async function BlogDetailPage({ params }: Props) {
             Profesyonel destek mi gerekiyor?
           </h2>
           <p className="font-body-md text-body-md text-on-primary-container mb-8 max-w-xl mx-auto">
-            Kağıthane Çeliktepe merkezli 7/24 tesisat ekibimiz yazılı teklif ve garantili işçilik ile hizmet verir.
+            Kağıthane merkezli 7/24 tesisat ekibimiz yazılı teklif ile hizmet verir. Ana yerel hedef için{" "}
+            <Link href="/" className="text-secondary hover:text-primary transition-colors">
+              Kağıthane acil tesisat desteği
+            </Link>
+            &apos;ne bakın.
           </p>
           <div className="flex flex-wrap justify-center gap-4 mb-10">
             <a

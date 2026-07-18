@@ -3,7 +3,7 @@ import type { FAQItem } from "@/types";
 export const homeTrustPills = [
   { icon: "verified", label: "İstanbul Geneli Hizmet" },
   { icon: "timer", label: "Aynı Gün Servis" },
-  { icon: "verified_user", label: "Garantili İşçilik" },
+  { icon: "verified_user", label: "Şeffaf İşçilik" },
 ] as const;
 
 export const homeHeroBadges = [
@@ -19,7 +19,7 @@ export const homeValueProps = [
     icon: "location_on",
     title: "İstanbul Geneli Servis",
     description:
-      "Kağıthane merkez operasyonumuzla Avrupa ve Anadolu Yakası'nda 39 ilçeye mobil ekip yönlendirmesi. Acil çağrılarda ortalama 30–45 dakika varış hedefi.",
+      "Kağıthane merkezli hizmet ağımızla Avrupa ve Anadolu Yakası'nda 39 ilçeye mobil ekip yönlendirmesi. Acil çağrılarda trafik ve ekip uygunluğuna göre hızlı yönlendirme yapılır.",
     iconBg: "bg-secondary/30",
     iconColor: "text-secondary-container",
   },
@@ -41,41 +41,11 @@ export const homeValueProps = [
   },
   {
     icon: "verified",
-    title: "Şeffaf ve Garantili Hizmet",
+    title: "Şeffaf Hizmet",
     description:
-      "Keşif sonrası yazılı teklif, resmi servis formu ve işçilik garantisi. Onayınız olmadan işleme başlanmaz; gizli maliyet uygulanmaz.",
+      "Keşif sonrası yazılı teklif ve resmi servis formu. Onayınız olmadan işleme başlanmaz; gizli maliyet uygulanmaz.",
     iconBg: "bg-secondary/30",
     iconColor: "text-secondary-container",
-  },
-] as const;
-
-export const homeTestimonials = [
-  {
-    name: "Ayşe K.",
-    district: "Kağıthane",
-    districtHref: "/hizmet-bolgeleri/kagithane",
-    service: "Su Kaçağı Tespiti",
-    serviceHref: "/hizmetler/su-kacagi-tespit-ve-onarim",
-    rating: 5,
-    text: "Duvar arkasındaki gizli kaçağı termal kamera ile kırmadan buldular. Fiyatı önceden yazılı verdiler, iş sonrası alanı tertemiz bıraktılar. Kesinlikle tavsiye ederim.",
-  },
-  {
-    name: "Mehmet Y.",
-    district: "Beşiktaş",
-    districtHref: "/hizmet-bolgeleri/besiktas",
-    service: "Tıkanıklık Açma",
-    serviceHref: "/hizmetler/tikaniklik-acma",
-    rating: 5,
-    text: "Gece yarısı tuvalet tıkanıklığı için aradım, 40 dakikada geldiler. Robot cihazla açtılar, tekrar etmedi. WhatsApp üzerinden hızlı randevu almak çok kolaydı.",
-  },
-  {
-    name: "Elif S.",
-    district: "Kadıköy",
-    districtHref: "/hizmet-bolgeleri/kadikoy",
-    service: "Petek Temizleme",
-    serviceHref: "/hizmetler/petek-temizleme",
-    rating: 5,
-    text: "Petekler yarım ısınıyordu, temizlik sonrası fark gece gündüz. Kombi daha az çalışıyor, fatura düştü. Profesyonel ve güler yüzlü ekip.",
   },
 ] as const;
 
@@ -83,7 +53,7 @@ export const homeFaqs: FAQItem[] = [
   {
     question: "724 Tesisatçı hangi bölgelere hizmet veriyor?",
     answer:
-      "Kağıthane merkezli operasyonumuzla İstanbul'un 39 ilçesinde (Avrupa ve Anadolu Yakası) 7/24 tesisat hizmeti sunuyoruz. Hizmet bölgeleri sayfasından ilçe ve mahalle detaylarına ulaşabilirsiniz.",
+      "Kağıthane merkezli hizmet ağımızla İstanbul'un 39 ilçesinde (Avrupa ve Anadolu Yakası) 7/24 tesisat hizmeti sunuyoruz. Hizmet bölgeleri sayfasından ilçe ve mahalle detaylarına ulaşabilirsiniz.",
     category: "genel",
     relatedPage: "/hizmet-bolgeleri",
     relatedPageLabel: "Hizmet bölgelerimizi inceleyin",
@@ -91,7 +61,7 @@ export const homeFaqs: FAQItem[] = [
   {
     question: "Acil durumlarda ne kadar sürede adresime gelirsiniz?",
     answer:
-      "Merkez ilçelere ortalama 30–45 dakika, İstanbul geneline 45–90 dakika içinde ulaşmayı hedefliyoruz. Su kaçağı ve geri taşma gibi acil vakalara öncelik verilir.",
+      "Trafik ve ekip uygunluğuna göre hızlı yönlendirme yapılır. Su kaçağı ve geri taşma gibi acil vakalara öncelik verilir.",
     category: "genel",
     relatedPage: "/iletisim",
     relatedPageLabel: "Servis talebi oluşturun",
@@ -113,9 +83,9 @@ export const homeFaqs: FAQItem[] = [
     relatedPageLabel: "Servis talebi oluşturun",
   },
   {
-    question: "Hizmetleriniz garantili mi?",
+    question: "Hizmetleriniz nasıl teslim edilir?",
     answer:
-      "Tüm işçilik hizmetlerimiz yazılı servis formu ve işçilik garantisi ile teslim edilir. Kullanılan malzemeler üretici garantisi kapsamındadır.",
+      "Tüm işçilik hizmetlerimiz yazılı servis formu ile teslim edilir. Kullanılan malzemeler üretici koşullarına tabidir.",
     category: "genel",
   },
   {

@@ -21,6 +21,19 @@ export interface SiteSettings {
   mapsDestination: string;
   city: string;
   workingHours: string;
+  /** Structured NAP — preferred for schema; keep in sync with `address` / `phone`. */
+  businessName: string;
+  telephone: string;
+  streetAddress: string;
+  addressLocality: string;
+  addressRegion: string;
+  postalCode: string;
+  serviceArea: string;
+  openingHours: string;
+  googleBusinessProfileUrl?: string;
+  latitude?: string;
+  longitude?: string;
+  sameAs?: string[];
 }
 
 export interface SEOData {
@@ -109,6 +122,13 @@ export interface Neighborhood {
   canonicalPath: string;
   heroImage?: string;
   indexable?: boolean;
+  localIntroduction?: string;
+  buildingTypes?: string[];
+  commonProblems?: string[];
+  realCaseStudy?: string;
+  caseStudyDate?: string;
+  caseStudyImage?: string;
+  serviceNotes?: string;
 }
 
 export interface Location {

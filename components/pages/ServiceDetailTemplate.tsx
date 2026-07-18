@@ -429,7 +429,7 @@ function ServiceDetailBody({
             Acil {displayTitle} Mi Gerekiyor?
           </h2>
           <p className="font-body-lg text-body-lg text-on-primary-container mb-8 max-w-2xl mx-auto">
-            İstanbul genelinde 7/24 acil {displayTitle.toLowerCase()} ekibimiz ortalama 30 dakika içinde adresinize ulaşır. Cihazlı tespit, yazılı teklif ve garantili işçilik ile hizmet veriyoruz.
+            İstanbul genelinde 7/24 acil {displayTitle.toLowerCase()} ekibimiz trafik ve ekip uygunluğuna göre adresinize yönlendirilir. Cihazlı tespit ve yazılı teklif ile hizmet veriyoruz.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a

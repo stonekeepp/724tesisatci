@@ -16,7 +16,7 @@ export const acilTesisatciFaqs: FAQItem[] = [
   {
     question: "Acil tesisatçı ne kadar sürede gelir?",
     answer:
-      "Kağıthane merkezli ekiplerimiz İstanbul genelinde acil çağrılara ortalama 30–45 dakika içinde ulaşmayı hedefler. Su kaçağı ve geri taşma gibi vakalara öncelik verilir.",
+      "Kağıthane merkezli ekiplerimiz İstanbul genelinde acil çağrılara trafik ve ekip uygunluğuna göre yönlendirme yapar. Su kaçağı ve geri taşma gibi vakalara öncelik verilir.",
     category: "Acil Servis",
   },
   {
@@ -83,10 +83,10 @@ export const adLandingPages: AdLandingPage[] = [
     slug: "acil-tesisatci",
     heroTitle: "Acil Tesisatçı İstanbul",
     heroDescription:
-      "Su kaçağı, tıkanıklık, pimaş tıkanması ve kombi arızalarında 7/24 acil tesisat ekibi. Kağıthane merkezli operasyonla İstanbul geneline ortalama 30–45 dakikada ulaşım.",
+      "Su kaçağı, tıkanıklık, pimaş tıkanması ve kombi arızalarında 7/24 acil tesisat ekibi. Kağıthane merkezli yönlendirme ile İstanbul geneline mobil destek.",
     seoTitle: "Acil Tesisatçı İstanbul | 7/24 Hızlı Müdahale",
     seoDescription:
-      "İstanbul acil tesisatçı: su kaçağı, tıkanıklık, pimaş açma. 7/24 mobil ekip, cihazlı tespit, yazılı teklif, garantili işçilik.",
+      "İstanbul acil tesisatçı: su kaçağı, tıkanıklık, pimaş açma. 7/24 mobil ekip, cihazlı tespit, yazılı teklif.",
     breadcrumbLabel: "Acil Tesisatçı",
     noindex: true,
   },

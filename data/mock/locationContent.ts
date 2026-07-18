@@ -4,12 +4,7 @@ import {
   kagithaneNeighborhoodNames,
   type IstanbulDistrictMeta,
 } from "./istanbulDistricts";
-import {
-  getDistrictArrivalStat,
-  getIstanbulArrivalStat,
-  getNeighborhoodArrivalStat,
-  isDistrictIndexable,
-} from "./districtArrivalTimes";
+import { isDistrictIndexable } from "./districtArrivalTimes";
 import { getDistrictProfile } from "./districtProfiles";
 
 export const ALL_SERVICE_SLUGS = [
@@ -28,11 +23,10 @@ export const ALL_SERVICE_SLUGS = [
 ] as const;
 
 function buildDistrictFaq(title: string, slug: string): FAQItem[] {
-  const arrivalStat = getDistrictArrivalStat(slug);
   const isHQ = slug === "kagithane";
   const arrival = isHQ
-    ? `Merkez operasyonumuz Kağıthane Çeliktepe'de olduğu için ilçe genelinde ortalama ${arrivalStat} içinde adresinize ulaşıyoruz.`
-    : `Kağıthane Çeliktepe merkezli mobil ekiplerimizle ${title} ilçesine ortalama ${arrivalStat} içinde servis yönlendirmesi yapıyoruz. Acil su kaçağı ve geri taşma durumlarında öncelikli müdahale uygulanır.`;
+    ? `Kağıthane merkezli hizmet ağımızla ilçe genelinde trafik ve ekip uygunluğuna göre hızlı yönlendirme yapılır. Acil su kaçağı ve geri taşma durumlarında öncelikli müdahale uygulanır.`
+    : `Kağıthane merkezli mobil ekiplerimizle ${title} ilçesine trafik ve ekip uygunluğuna göre servis yönlendirmesi yapıyoruz. Acil su kaçağı ve geri taşma durumlarında öncelikli müdahale uygulanır.`;
 
   return [
     {
@@ -61,8 +55,8 @@ function buildDistrictFaq(title: string, slug: string): FAQItem[] {
       category: slug,
     },
     {
-      question: `${title}'de yapılan işlemlere garanti veriliyor mu?`,
-      answer: `Tüm ${title} tesisat işlemlerimizde işçilik garantisi sunuyoruz. Kullanılan malzemeler servis formunda belirtilir; işlem sonrası test ile kalite doğrulanır.`,
+      question: `${title}'de yapılan işlemler nasıl teslim edilir?`,
+      answer: `Tüm ${title} tesisat işlemlerimizde yazılı servis formu düzenlenir. Kullanılan malzemeler formda belirtilir; işlem sonrası test ile kalite doğrulanır.`,
       category: slug,
     },
     {
@@ -81,14 +75,12 @@ function buildDistrictFaq(title: string, slug: string): FAQItem[] {
 function buildNeighborhoodFaq(
   mahalle: string,
   districtTitle: string,
-  neighborhoodSlug: string
+  _neighborhoodSlug: string
 ): FAQItem[] {
-  const arrivalStat = getNeighborhoodArrivalStat(neighborhoodSlug);
-
   return [
     {
       question: `${mahalle} mahallesine ne kadar sürede gelirsiniz?`,
-      answer: `Merkez operasyonumuz Kağıthane Çeliktepe'de olduğu için ${mahalle} mahallesine ortalama ${arrivalStat} içinde ulaşıyoruz. Acil durumlarda öncelikli yönlendirme yapılır.`,
+      answer: `Kağıthane merkezli hizmet ağımızla ${mahalle} mahallesine trafik ve ekip uygunluğuna göre hızlı yönlendirme yapılır. Acil durumlarda öncelikli sıra uygulanır.`,
       category: "kagithane",
     },
     {
@@ -122,8 +114,8 @@ function buildNeighborhoodFaq(
       category: "kagithane",
     },
     {
-      question: `${districtTitle} ${mahalle} bölgesinde garanti veriliyor mu?`,
-      answer: `Tüm ${mahalle} tesisat işlemlerimizde işçilik garantisi sunuyoruz. Resmi servis formu düzenlenir ve işlem sonrası test yapılır.`,
+      question: `${districtTitle} ${mahalle} bölgesinde işlemler nasıl teslim edilir?`,
+      answer: `Tüm ${mahalle} tesisat işlemlerimizde yazılı servis formu düzenlenir ve işlem sonrası test yapılır.`,
       category: "kagithane",
     },
   ];
@@ -131,15 +123,15 @@ function buildNeighborhoodFaq(
 
 const neighborhoodDescriptions: Record<string, string> = {
   caglayan:
-    "Adliye çevresi ve yoğun konut alanlarında su kaçağı, tıkanıklık ve tesisat arızalarına 7/24 hızlı müdahale sağlıyoruz. Yoğun trafik saatlerinde alternatif rota planlaması ile varış süresini kısaltıyoruz.",
+    "Adliye çevresi ve yoğun konut alanlarında su kaçağı, tıkanıklık ve tesisat arızalarına 7/24 destek sağlıyoruz. Yoğun trafik saatlerinde alternatif rota planlaması uygulanır.",
   celiktepe:
-    "Merkez operasyon noktamızın bulunduğu mahallede en kısa varış sürelerini sunuyoruz. Petek temizleme, kombi servisi ve su kaçağı tespitinde öncelikli ekip yönlendirmesi uygulanır.",
+    "Çeliktepe mahallesinde petek temizleme, kombi servisi ve su kaçağı tespiti için 7/24 ekip yönlendirmesi yapılır.",
   "emniyet-evleri":
-    "Prestijli konut alanında gizli su kaçağı tespiti, gömme rezervuar onarımı ve tesisat yenileme hizmetleri veriyoruz. Site ve apartman girişlerine hızlı erişim sağlıyoruz.",
+    "Prestijli konut alanında gizli su kaçağı tespiti, gömme rezervuar onarımı ve tesisat yenileme hizmetleri veriyoruz. Site ve apartman girişlerine erişim planlanır.",
   gulbag:
-    "Merkezi konumda su tesisatı onarımı, tıkanıklık açma ve kombi servisi hizmetleri sunuyoruz. Yoğun konut bloklarında acil çağrılara öncelik tanıyoruz.",
+    "Konut yoğunluğunda su tesisatı onarımı, tıkanıklık açma ve kombi servisi hizmetleri sunuyoruz. Acil çağrılara öncelik tanıyoruz.",
   gursel:
-    "Konut ve ticaret alanlarında cihazlı tespit ve garantili tesisat onarımı yapıyoruz. Ticari işletme ve evsel müdahalelerde yazılı teklif sunuyoruz.",
+    "Konut ve ticaret alanlarında cihazlı tespit ve şeffaf tesisat onarımı yapıyoruz. Ticari işletme ve evsel müdahalelerde yazılı teklif sunuyoruz.",
   gultepe:
     "Eski yapı stoğunda kırmadan cihazla su kaçağı tespiti ve tesisat yenileme uzmanlığı sunuyoruz. Eski boru hatlarında kameralı kontrol ile kesin teşhis yapıyoruz.",
   hamidiye:
@@ -149,7 +141,7 @@ const neighborhoodDescriptions: Record<string, string> = {
   hurriyet:
     "Mahalle genelinde 7/24 tesisat hizmeti, hızlı müdahale ve yazılı teklif standartlarımız geçerlidir. Acil su kaçağı çağrılarında öncelikli sıra uygulanır.",
   merkez:
-    "Operasyon merkezimize en yakın mahallelerden biri olarak en hızlı müdahale süresini sunuyoruz. 7/24 acil servis hattımız doğrudan bu bölgeye öncelik verir.",
+    "Kağıthane Merkez mahallesinde 7/24 acil tesisat desteği sunuyoruz. Trafik ve ekip uygunluğuna göre yönlendirme yapılır.",
   nurtepe:
     "Konut alanlarında su kaçağı, tıkanıklık ve kalorifer tesisatı çözümleri sunuyoruz. Yeni dönüşüm projelerinde tesisat yenileme hizmeti de veriyoruz.",
   ortabayir:
@@ -161,7 +153,7 @@ const neighborhoodDescriptions: Record<string, string> = {
   sirintepe:
     "Mahalle genelinde su kaçağı tespiti, tıkanıklık açma ve kombi servisi hizmetleri sunuyoruz. Termal kamera ile gizli kaçak tespitinde deneyimli ekibimiz görev alır.",
   talatpasa:
-    "Merkezi konumda acil tesisat müdahalesi, cihazlı tespit ve garantili işçilik sunuyoruz. Çeliktepe merkezine yakınlık sayesinde kısa varış süreleri sağlıyoruz.",
+    "Talatpaşa mahallesinde acil tesisat müdahalesi, cihazlı tespit ve yazılı teklif sunuyoruz.",
   telsizler:
     "Konut bölgesinde petek temizleme, su tesisatı onarımı ve acil servis hizmetleri veriyoruz. Kombi basınç düşüşü ve petek sorunlarında hızlı müdahale ediyoruz.",
   "yahya-kemal":
@@ -172,16 +164,15 @@ const neighborhoodDescriptions: Record<string, string> = {
 
 function buildDistrictLocation(d: IstanbulDistrictMeta): Location {
   const isHQ = d.slug === "kagithane";
-  const arrivalStat = getDistrictArrivalStat(d.slug);
   const indexable = isDistrictIndexable(d.slug);
 
   const fallbackDescription = isHQ
-    ? `Kağıthane tesisat hizmet bölgelerinde Çeliktepe merkezli ekiplerimiz 19 mahalleye yönlendirilir. Apartman, site ve iş yerlerinde bina tipine göre su kaçağı, tıkanıklık, pimaş, petek ve kombi tesisatı için mahalle mahalle servis planı yapılır. Ortalama ${arrivalStat} varış ile ilgili hizmet sayfalarına buradan geçebilirsiniz.`
-    : `724 Tesisatçı olarak ${d.title} ilçesinde 7/24 profesyonel tesisat hizmeti veriyoruz. Kağıthane Çeliktepe merkezli mobil ekiplerimizle su kaçağı tespiti, tıkanıklık açma, petek temizleme, kombi servisi ve tüm tesisat ihtiyaçlarınızda ortalama ${arrivalStat} içinde adresinize ulaşıyoruz. Termal kamera ve robotik cihazlarla kırmadan, noktasal müdahale.`;
+    ? `Kağıthane tesisat hizmet bölgelerinde ekiplerimiz 19 mahalleye yönlendirilir. Apartman, site ve iş yerlerinde bina tipine göre su kaçağı, tıkanıklık, pimaş, petek ve kombi tesisatı için mahalle mahalle servis planı yapılır. İlgili hizmet sayfalarına buradan geçebilirsiniz.`
+    : `724 Tesisatçı olarak ${d.title} ilçesinde 7/24 profesyonel tesisat hizmeti veriyoruz. Kağıthane merkezli mobil ekiplerimizle su kaçağı tespiti, tıkanıklık açma, petek temizleme, kombi servisi ve tüm tesisat ihtiyaçlarınızda trafik ve ekip uygunluğuna göre adresinize yönlendirme yapıyoruz. Termal kamera ve robotik cihazlarla kırmadan, noktasal müdahale.`;
 
   const fallbackShort = isHQ
     ? `Kağıthane tesisat hizmet bölgeleri — 19 mahalle, bina tipi ve servis yönlendirme hub’ı.`
-    : `${d.title} ilçesinde 7/24 tesisat hizmeti. Ortalama ${arrivalStat} varış, garantili işçilik.`;
+    : `${d.title} ilçesinde 7/24 tesisat hizmeti. Cihazlı tespit, yazılı teklif.`;
 
   const profile = getDistrictProfile(
     d.slug,
@@ -211,18 +202,18 @@ function buildDistrictLocation(d: IstanbulDistrictMeta): Location {
       : `${d.title} Tesisatçı | 7/24 Cihazlı Tesisat — 724 Tesisatçı`,
     seoDescription: isHQ
       ? "Kağıthane tesisat hizmet bölgeleri: 19 mahalle, apartman ve site servisi. Su kaçağı, tıkanıklık, pimaş, petek ve kombi için mahalle mahalle yönlendirme."
-      : `${d.title} tesisatçı hizmeti. Su kaçağı, tıkanıklık, petek temizleme, kombi servisi. Ortalama ${arrivalStat} varış, 7/24 acil müdahale, garantili işçilik.`,
+      : `${d.title} tesisatçı hizmeti. Su kaçağı, tıkanıklık, petek temizleme, kombi servisi. 7/24 acil müdahale, yazılı teklif.`,
     canonicalPath: `/hizmet-bolgeleri/${d.slug}`,
     stats: isHQ
       ? [
-          { label: "Tamamlanan İş", value: "2.450+" },
-          { label: "Ortalama Varış", value: arrivalStat },
+          { label: "Hizmet", value: "7/24" },
           { label: "Mahalle", value: "19" },
+          { label: "Odak", value: "Kağıthane" },
         ]
       : [
-          { label: "Ortalama Varış", value: arrivalStat },
           { label: "Hizmet", value: "7/24" },
-          { label: "Garanti", value: "İşçilik" },
+          { label: "Tespit", value: "Cihazlı" },
+          { label: "Teklif", value: "Yazılı" },
         ],
   };
 }
@@ -231,7 +222,6 @@ function buildNeighborhood(n: { slug: string; title: string }): Neighborhood {
   const desc =
     neighborhoodDescriptions[n.slug] ??
     `${n.title} mahallesinde 7/24 profesyonel tesisat hizmeti.`;
-  const arrivalStat = getNeighborhoodArrivalStat(n.slug);
 
   return {
     id: n.slug,
@@ -240,16 +230,14 @@ function buildNeighborhood(n: { slug: string; title: string }): Neighborhood {
     districtSlug: "kagithane",
     indexable: true,
     shortDescription: desc,
-    description: `${n.title} mahallesi, Kağıthane ilçesinde 724 Tesisatçı Çeliktepe merkez operasyonuna yakın konumda yer alır. ${desc} Su kaçağı tespiti, tıkanıklık açma, petek temizleme, kombi servisi ve tüm tesisat ihtiyaçlarınızda cihazlı tespit, yazılı teklif ve garantili işçilik sunuyoruz.`,
+    description: `${n.title} mahallesi, Kağıthane ilçesinde yer alır. ${desc} Su kaçağı tespiti, tıkanıklık açma, petek temizleme, kombi servisi ve tüm tesisat ihtiyaçlarınızda cihazlı tespit ve yazılı teklif sunuyoruz.`,
     relatedServices: [...ALL_SERVICE_SLUGS],
     faq: buildNeighborhoodFaq(n.title, "Kağıthane", n.slug),
-    seoTitle: `${n.title} Tesisatçı | Kağıthane 724 Tesisatçı`,
-    seoDescription: `${n.title} mahallesi tesisatçı hizmeti. Su kaçağı, tıkanıklık açma, petek temizleme, kombi servisi. 7/24 acil servis, ${arrivalStat} varış.`,
+    seoTitle: `${n.title} Tesisat Hizmeti | Kağıthane`,
+    seoDescription: `${n.title} mahallesinde tesisat hizmeti. Su kaçağı, tıkanıklık açma, petek temizleme, kombi servisi. 7/24 destek, yazılı teklif.`,
     canonicalPath: `/hizmet-bolgeleri/kagithane/${n.slug}`,
   };
 }
-
-const istanbulArrivalStat = getIstanbulArrivalStat();
 
 export const istanbulCityLocation: Location = {
   id: "istanbul",
@@ -258,21 +246,22 @@ export const istanbulCityLocation: Location = {
   city: "İstanbul",
   indexable: true,
   description:
-    "724 Tesisatçı olarak İstanbul'un 39 ilçesinde 7/24 profesyonel tesisat hizmeti sunuyoruz. Merkez operasyonumuz Kağıthane Çeliktepe'de olup, Avrupa ve Anadolu Yakası'na hızlı mobil ekip yönlendirmesi yapıyoruz. Su kaçağı tespiti, tıkanıklık açma, petek temizleme, kombi servisi ve tüm tesisat ihtiyaçlarınızda cihazlı tespit, yazılı teklif ve garantili işçilik.",
+    "724 Tesisatçı olarak İstanbul'un 39 ilçesinde 7/24 profesyonel tesisat hizmeti sunuyoruz. Kağıthane merkezli hizmet ağımızla Avrupa ve Anadolu Yakası'na mobil ekip yönlendirmesi yapıyoruz. Su kaçağı tespiti, tıkanıklık açma, petek temizleme, kombi servisi ve tüm tesisat ihtiyaçlarınızda cihazlı tespit ve yazılı teklif.",
   shortDescription:
-    `İstanbul'un 39 ilçesinde 7/24 tesisat hizmeti. Kağıthane Çeliktepe merkez, ${istanbulArrivalStat} varış aralığı.`,
+    "İstanbul'un 39 ilçesinde 7/24 tesisat hizmeti. Kağıthane merkezli yönlendirme.",
   neighborhoods: [],
   relatedServices: [...ALL_SERVICE_SLUGS],
   faq: [
     {
       question: "İstanbul'un hangi ilçelerine hizmet veriyorsunuz?",
       answer:
-        "İstanbul'un 39 ilçesinin tamamına 7/24 mobil ekip yönlendirmesi yapıyoruz. Merkez operasyonumuz Kağıthane Çeliktepe'de olup, Avrupa ve Anadolu Yakası'na hızlı erişim sağlıyoruz.",
+        "İstanbul'un 39 ilçesinin tamamına 7/24 mobil ekip yönlendirmesi yapıyoruz. Kağıthane merkezli hizmet ağımızla Avrupa ve Anadolu Yakası'na erişim sağlıyoruz.",
       category: "istanbul",
     },
     {
       question: "İstanbul genelinde ne kadar sürede gelirsiniz?",
-      answer: `Kağıthane Çeliktepe merkez operasyonumuza yakın ilçelerde 10–15 dakika, orta mesafe ilçelerde 15–35 dakika, uzak ilçelerde ${istanbulArrivalStat} aralığında adresinize ulaşıyoruz. Acil durumlarda öncelikli yönlendirme uygulanır.`,
+      answer:
+        "Trafik ve ekip uygunluğuna göre hızlı yönlendirme yapılır. Acil durumlarda öncelikli sıra uygulanır.",
       category: "istanbul",
     },
     {
@@ -300,25 +289,26 @@ export const istanbulCityLocation: Location = {
       category: "istanbul",
     },
     {
-      question: "İstanbul'da yapılan işlemlere garanti veriliyor mu?",
+      question: "İstanbul'da yapılan işlemler nasıl teslim edilir?",
       answer:
-        "Tüm İstanbul tesisat işlemlerimizde işçilik garantisi sunuyoruz. Resmi servis formu düzenlenir ve işlem sonrası test yapılır.",
+        "Tüm İstanbul tesisat işlemlerimizde yazılı servis formu düzenlenir ve işlem sonrası test yapılır.",
       category: "istanbul",
     },
     {
-      question: "Merkez operasyonunuz nerede?",
+      question: "Hizmet ağınız nerede odaklanır?",
       answer:
-        "Merkez operasyonumuz Kağıthane Çeliktepe mahallesindedir. Kağıthane'nin 19 mahallesine en hızlı müdahale süresini sunarken, tüm İstanbul ilçelerine mobil ekip yönlendirmesi yapıyoruz.",
+        "Hizmet ağımız Kağıthane odaklıdır. Kağıthane'nin 19 mahallesine öncelikli destek sunarken, tüm İstanbul ilçelerine mobil ekip yönlendirmesi yapıyoruz.",
       category: "istanbul",
     },
   ],
   seoTitle: "İstanbul Geneli Tesisatçı | Avrupa & Anadolu 7/24 — 724 Tesisatçı",
-  seoDescription: `İstanbul'un 39 ilçesinde 7/24 tesisatçı hizmeti. Su kaçağı, tıkanıklık, petek temizleme, kombi servisi. Kağıthane Çeliktepe merkez, ${istanbulArrivalStat} varış, garantili işçilik.`,
+  seoDescription:
+    "İstanbul'un 39 ilçesinde 7/24 tesisatçı hizmeti. Su kaçağı, tıkanıklık, petek temizleme, kombi servisi. Kağıthane merkezli yönlendirme, yazılı teklif.",
   canonicalPath: "/hizmet-bolgeleri/istanbul",
   stats: [
     { label: "Hizmet Verilen İlçe", value: "39" },
-    { label: "Tamamlanan İş", value: "15.000+" },
-    { label: "Ortalama Varış", value: istanbulArrivalStat },
+    { label: "Hizmet", value: "7/24" },
+    { label: "Odak", value: "Kağıthane" },
   ],
 };
 

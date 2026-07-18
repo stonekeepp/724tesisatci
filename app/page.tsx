@@ -17,7 +17,6 @@ import { services } from "@/data/mock/services";
 import {
   homeFaqs,
   homeHeroBadges,
-  homeTestimonials,
   homeTrustPills,
   homeValueProps,
 } from "@/data/mock/homeContent";
@@ -72,7 +71,7 @@ const processSteps = [
     step: "2",
     title: "Hızlı Yönlendirme",
     description:
-      "Çeliktepe merkez operasyonumuzdan Kağıthane içindeki en yakın mobil ekip acil talep için hızlıca yönlendirilir.",
+      "Kağıthane merkezli hizmet ağımızdan trafik ve ekip uygunluğuna göre en yakın mobil ekip yönlendirilir.",
     active: false,
   },
   {
@@ -93,7 +92,7 @@ const processSteps = [
     step: "5",
     title: "Kalite Kontrol",
     description:
-      "Sistem test edilir, alan temizlenir; servis formu ve işçilik garantisi teslim edilerek süreç tamamlanır.",
+      "Sistem test edilir, alan temizlenir; yazılı servis formu teslim edilerek süreç tamamlanır.",
     active: true,
   },
 ] as const;
@@ -105,30 +104,6 @@ const heroOverlayCards = [
   { icon: "cleaning_services", label: "Temiz İşçilik" },
 ] as const;
 
-function StarRating({ rating }: { rating: number }) {
-  return (
-    <div
-      className="flex gap-0.5"
-      role="img"
-      aria-label={`${rating} üzerinden 5 yıldız`}
-    >
-      {Array.from({ length: 5 }).map((_, index) => (
-        <span
-          key={index}
-          className={`material-symbols-outlined text-[20px] leading-none ${
-            index < rating
-              ? "fill text-secondary"
-              : "text-outline-variant/50"
-          }`}
-          aria-hidden="true"
-        >
-          star
-        </span>
-      ))}
-    </div>
-  );
-}
-
 export default async function HomePage() {
   const settings = await getSiteSettings();
 
@@ -136,7 +111,7 @@ export default async function HomePage() {
 
   const schemas = [
     buildOrganizationSchema(settings),
-    buildLocalBusinessSchema(settings, "İstanbul"),
+    buildLocalBusinessSchema(settings, "Kağıthane, İstanbul"),
     buildWebSiteSchema(settings),
     ...(faqSchema ? [faqSchema] : []),
   ];
@@ -175,7 +150,9 @@ export default async function HomePage() {
               Tesisatçı
             </h1>
             <p className="font-body-lg text-body-lg text-on-surface-variant max-w-xl leading-relaxed">
-              Kağıthane ve Çeliktepe merkezli ekiplerle su kaçağı tespiti, tıkanıklık açma, pimaş, petek ve kombi tesisatı sorunlarında 7/24 acil servis, cihazlı tespit ve telefon/WhatsApp ile hızlı yönlendirme.
+              Kağıthane merkezli tesisat hizmetimizle su kaçağı tespiti, tıkanıklık açma, pimaş, musluk ve rezervuar
+              sorunlarında 7/24 destek sunuyoruz. Telefon veya WhatsApp ile ulaşın; trafik ve ekip uygunluğuna göre
+              hızlı yönlendirme yapılır.
             </p>
             <p className="font-body-md text-body-md text-on-surface-variant/80 italic">
               İstanbul geneli hizmet ağımız ikincil destek olarak devam eder; öncelik{" "}
@@ -321,7 +298,7 @@ export default async function HomePage() {
               Hizmetlerimiz
             </h2>
             <p className="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
-              İstanbul genelinde 12 uzmanlık alanında cihazlı tespit, yazılı teklif, garantili işçilik ve 7/24 acil servis ile profesyonel tesisat çözümleri sunuyoruz.
+              İstanbul genelinde 12 uzmanlık alanında cihazlı tespit, yazılı teklif ve 7/24 acil servis ile profesyonel tesisat çözümleri sunuyoruz.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
@@ -368,7 +345,7 @@ export default async function HomePage() {
               Neden 724 Tesisatçı?
             </h2>
             <p className="font-body-lg text-body-lg text-on-primary-container max-w-2xl mx-auto leading-relaxed">
-              İstanbul genelinde cihazlı tespit, şeffaf fiyatlandırma ve garantili işçilik ile tesisat sorunlarınıza kalıcı, premium ve profesyonel çözüm sunuyoruz.
+              İstanbul genelinde cihazlı tespit, şeffaf fiyatlandırma ve yazılı teklif ile tesisat sorunlarınıza kalıcı, premium ve profesyonel çözüm sunuyoruz.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -397,7 +374,7 @@ export default async function HomePage() {
             Servis Sürecimiz Nasıl İlerler?
           </h2>
           <p className="font-body-md text-body-md text-on-surface-variant text-center max-w-2xl mx-auto mb-12 leading-relaxed">
-            Talep kaydından kalite kontrolüne kadar her adımda şeffaf iletişim, yazılı teklif ve garantili teslimat standardı uyguluyoruz.
+            Talep kaydından kalite kontrolüne kadar her adımda şeffaf iletişim, yazılı teklif ve temiz teslimat standardı uyguluyoruz.
           </p>
           <div className="flex flex-col md:flex-row justify-between items-center md:items-start gap-8 relative">
             <div className="hidden md:block absolute top-12 left-0 right-0 h-0.5 bg-secondary/20 z-0" />
@@ -415,48 +392,6 @@ export default async function HomePage() {
                 <h3 className="font-bold text-primary mb-2">{step.title}</h3>
                 <p className="text-sm text-on-surface-variant leading-relaxed">{step.description}</p>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Müşterilerimiz Ne Diyor? */}
-      <section className="py-section-padding px-margin-mobile md:px-margin-desktop bg-surface">
-        <div className="max-w-container-max mx-auto">
-          <div className="text-center mb-12 md:mb-16">
-            <span className="inline-block py-1 px-3 rounded-full bg-secondary-container text-on-secondary-container font-label-md text-label-md mb-4">
-              Müşteri Deneyimi
-            </span>
-            <h2 className="font-headline-lg text-headline-lg md:font-headline-lg text-headline-lg-mobile text-primary font-bold mb-4">
-              Müşterilerimiz Ne Diyor?
-            </h2>
-            <p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto leading-relaxed">
-              İstanbul genelinde hizmet verdiğimiz müşterilerimizin su kaçağı, tıkanıklık ve petek temizliği deneyimlerinden bazıları.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {homeTestimonials.map((review) => (
-              <article
-                key={review.name}
-                className="bg-surface-container-lowest p-6 rounded-2xl border border-outline-variant/40 soft-shadow flex flex-col gap-4"
-              >
-                <StarRating rating={review.rating} />
-                <p className="font-body-md text-body-md text-on-surface-variant leading-relaxed flex-grow">
-                  &ldquo;{review.text}&rdquo;
-                </p>
-                <div className="pt-4 border-t border-outline-variant/40">
-                  <p className="font-label-md text-label-md text-primary font-semibold">{review.name}</p>
-                  <p className="font-body-md text-sm text-on-surface-variant">
-                    <Link href={review.districtHref} className="hover:text-secondary transition-colors">
-                      {review.district}
-                    </Link>
-                    {" · "}
-                    <Link href={review.serviceHref} className="hover:text-secondary transition-colors">
-                      {review.service}
-                    </Link>
-                  </p>
-                </div>
-              </article>
             ))}
           </div>
         </div>
@@ -503,7 +438,7 @@ export default async function HomePage() {
             Kağıthane Tesisat Sorunlarınıza Profesyonel Çözüm
           </h2>
           <p className="text-body-lg text-white/80 mb-10 max-w-2xl mx-auto leading-relaxed">
-            Kağıthane, Çeliktepe ve çevre mahallelerde cihazlı tespit, açık bilgilendirme ve 7/24 acil tesisat desteği. İstanbul geneli yönlendirme ikincil hizmet ağı olarak devam eder.
+            Kağıthane ve çevre mahallelerde cihazlı tespit, açık bilgilendirme ve 7/24 acil tesisat desteği. İstanbul geneli yönlendirme ikincil hizmet ağı olarak devam eder.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a

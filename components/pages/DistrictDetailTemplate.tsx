@@ -51,7 +51,7 @@ export function DistrictDetailTemplate({
                 <span className="material-symbols-outlined text-base" aria-hidden="true">
                   home_pin
                 </span>
-                Merkez Operasyon
+                Mahalle / Hizmet Hub’ı
               </span>
             )}
             <h1 className="font-display-lg text-headline-lg-mobile md:text-display-lg text-primary mb-6 font-bold leading-tight">
@@ -60,6 +60,15 @@ export function DistrictDetailTemplate({
             <p className="font-body-lg text-body-lg text-on-surface-variant mb-8 leading-relaxed">
               {location.description}
             </p>
+            {isHQ && (
+              <p className="font-body-md text-body-md text-on-surface-variant mb-8 leading-relaxed">
+                Ana yerel hedef için{" "}
+                <Link href="/" className="text-secondary font-label-md hover:text-primary transition-colors">
+                  Kağıthane tesisatçı ana sayfası
+                </Link>
+                &apos;na göz atın.
+              </p>
+            )}
             {location.indexable === false && (
               <div className="mb-8 p-4 rounded-xl border border-outline-variant bg-surface-container-low">
                 <p className="font-body-md text-sm text-on-surface-variant mb-3">
@@ -71,7 +80,7 @@ export function DistrictDetailTemplate({
                     href="/hizmet-bolgeleri/kagithane"
                     className="inline-flex items-center gap-1 text-secondary font-label-md text-sm hover:text-on-secondary-container transition-colors"
                   >
-                    Kağıthane Merkez
+                    Kağıthane Tesisat Hizmet Bölgeleri
                     <span className="material-symbols-outlined text-sm" aria-hidden="true">
                       arrow_forward
                     </span>
@@ -171,9 +180,13 @@ export function DistrictDetailTemplate({
                 Kağıthane&apos;de Tesisat Sorunları ve Servis Planı
               </h2>
               <p className="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
-                Kağıthane ilçe sayfası ana yerel hedef sayfadır. Çeliktepe merkezli operasyon,
-                19 mahalleye servis yönlendirmesi, bina tiplerine göre arıza analizi ve acil
-                durumda yapılacaklar bu sayfada bir araya getirilir.
+                Bu sayfa mahalle ve hizmet yönlendirme hub’ıdır. 19 mahalleye servis planı,
+                bina tiplerine göre arıza analizi ve acil durumda yapılacaklar burada bir araya
+                getirilir. Ana yerel hedef{" "}
+                <Link href="/" className="text-secondary hover:text-primary transition-colors">
+                  Kağıthane tesisatçı ana sayfası
+                </Link>
+                &apos;dır.
               </p>
             </div>
 
@@ -336,7 +349,7 @@ export function DistrictDetailTemplate({
                 },
                 {
                   href: "/blog/celiktepe-merkez-operasyon-mahalle-servisi",
-                  label: "Çeliktepe merkez operasyon",
+                  label: "Kağıthane mahalle servis planı",
                 },
               ]}
             />

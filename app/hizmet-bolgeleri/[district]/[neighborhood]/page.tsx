@@ -16,7 +16,6 @@ import {
   buildAreaServiceSchema,
   buildBreadcrumbSchema,
   buildFAQSchema,
-  buildLocalBusinessSchema,
 } from "@/lib/services/schemaService";
 
 interface Props {
@@ -65,7 +64,6 @@ export default async function NeighborhoodPage({ params }: Props) {
   const isIndexable = neighborhood.indexable !== false;
 
   const schemas = [
-    buildLocalBusinessSchema(settings),
     buildAreaServiceSchema(
       settings,
       areaLabel,
