@@ -99,8 +99,7 @@ function CookieConsent({ gaId }: { gaId?: string }) {
   return (
     <aside
       className="fixed inset-x-4 bottom-24 z-[70] mx-auto max-w-lg rounded-xl border border-outline-variant bg-surface-container-lowest p-4 shadow-2xl md:inset-x-8 md:bottom-4"
-      role="dialog"
-      aria-modal="false"
+      role="region"
       aria-labelledby="cookie-consent-title"
       aria-describedby="cookie-consent-description"
     >

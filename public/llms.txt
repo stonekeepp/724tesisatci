@@ -1,33 +1,27 @@
 # 724 Tesisatçı
 
-Official website: https://724tesisatci.com/
+> Kağıthane merkezli, İstanbul geneli 7/24 tesisatçı. Cihazlı tespit, yazılı teklif, işçilik garantisi.
 
-Business name: 724 Tesisatçı
+Telefon: +90 532 346 87 69. Adres: Emniyet Evleri, Semerkant Sk. 14/A, 34415 Kağıthane/İstanbul. Koordinatlar: 41.0843817, 29.0005683.
 
-Phone: +90 532 346 87 69
+## Ana sayfalar
 
-Address: Emniyet Evleri, Semerkant Sk. 14/A, 34415 Kağıthane/İstanbul
+- [Ana Sayfa](https://724tesisatci.com/): Kağıthane tesisatçı hub, acil çağrı ve hizmet özeti
+- [Hizmetler](https://724tesisatci.com/hizmetler): Su kaçağı, tıkanıklık, kombi, kalorifer ve diğer tesisat hizmetleri
+- [Hizmet Bölgeleri](https://724tesisatci.com/hizmet-bolgeleri): İstanbul ilçe ve mahalle hizmet ağı
+- [Kağıthane Tesisatçı](https://724tesisatci.com/hizmet-bolgeleri/kagithane): Merkez ilçe hub sayfası
+- [Hakkımızda](https://724tesisatci.com/hakkimizda): Ekip, tecrübe ve çalışma yaklaşımı
+- [İletişim](https://724tesisatci.com/iletisim): Telefon, WhatsApp, adres ve harita
 
-Coordinates: 41.0843817, 29.0005683
+## Kağıthane yerel hizmetler
 
-Primary service area: Kağıthane and supported districts in İstanbul
-
-Main pages:
-- https://724tesisatci.com/
-- https://724tesisatci.com/hizmetler
-- https://724tesisatci.com/hizmet-bolgeleri
-- https://724tesisatci.com/hizmet-bolgeleri/kagithane
-- https://724tesisatci.com/iletisim
-- https://724tesisatci.com/hakkimizda
-
-Kağıthane local service landings:
-- https://724tesisatci.com/kagithane-su-kacagi-tespiti
-- https://724tesisatci.com/kagithane-tikaniklik-acma
-- https://724tesisatci.com/kagithane-pimas-acma
-- https://724tesisatci.com/kagithane-petek-temizleme
-- https://724tesisatci.com/kagithane-kombi-servisi
-- https://724tesisatci.com/kagithane-gomme-rezervuar-tamiri
-- https://724tesisatci.com/kagithane-musluk-tamiri
-- https://724tesisatci.com/kagithane-kalorifer-tesisati
-- https://724tesisatci.com/kagithane-kamerali-tesisat-goruntuleme
-- https://724tesisatci.com/kagithane-dogalgaz-tesisati
+- [Kağıthane Su Kaçağı Tespiti](https://724tesisatci.com/kagithane-su-kacagi-tespiti): Kırmadan cihazlı kaçak tespiti
+- [Kağıthane Tıkanıklık Açma](https://724tesisatci.com/kagithane-tikaniklik-acma): Robot ve spiral ile gider açma
+- [Kağıthane Pimaş Açma](https://724tesisatci.com/kagithane-pimas-acma): Ana hat ve pimaş tıkanıklığı
+- [Kağıthane Petek Temizleme](https://724tesisatci.com/kagithane-petek-temizleme): Makineli petek temizliği
+- [Kağıthane Kombi Servisi](https://724tesisatci.com/kagithane-kombi-servisi): Kombi arıza ve bakım
+- [Kağıthane Gömme Rezervuar](https://724tesisatci.com/kagithane-gomme-rezervuar-tamiri): Gömme rezervuar tamiri
+- [Kağıthane Musluk Tamiri](https://724tesisatci.com/kagithane-musluk-tamiri): Batarya ve musluk montaj/tamir
+- [Kağıthane Kalorifer Tesisatı](https://724tesisatci.com/kagithane-kalorifer-tesisati): Kalorifer hattı ve petek işleri
+- [Kağıthane Kameralı Görüntüleme](https://724tesisatci.com/kagithane-kamerali-tesisat-goruntuleme): Tesisat içi kamera inceleme
+- [Kağıthane Doğalgaz Tesisatı](https://724tesisatci.com/kagithane-dogalgaz-tesisati): Doğalgaz bağlantı ve kontrol
