@@ -45,6 +45,11 @@ export async function PUT(request: NextRequest, { params }: Props) {
     if (!post) {
       return NextResponse.json({ error: "Blog post not found" }, { status: 404 });
     }
+    if (post.status === "published" && post.canonicalPath) {
+      const { getSiteUrl } = await import("@/lib/services/seoService");
+      const { pingIndexNowUrls } = await import("@/lib/seo/indexNow");
+      pingIndexNowUrls([`${getSiteUrl()}${post.canonicalPath}`]);
+    }
     return NextResponse.json({ data: post });
   } catch {
     return NextResponse.json({ error: "Internal server error" }, { status: 500 });

@@ -1,11 +1,19 @@
+import dynamic from "next/dynamic";
 import { HeaderNav } from "@/components/layout/HeaderNav";
-import { HeaderMobileMenu } from "@/components/layout/HeaderMobileMenu";
 import { SiteLogo } from "@/components/layout/SiteLogo";
 import {
   getPhoneHref,
   getWhatsAppHref,
   siteSettings,
 } from "@/data/mock/siteSettings";
+
+const HeaderMobileMenu = dynamic(
+  () =>
+    import("@/components/layout/HeaderMobileMenu").then(
+      (m) => m.HeaderMobileMenu
+    ),
+  { loading: () => null }
+);
 
 interface HeaderProps {
   activePath?: string;

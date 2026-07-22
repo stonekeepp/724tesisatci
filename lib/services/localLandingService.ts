@@ -1,5 +1,6 @@
 import { localServiceLandingPages } from "@/data/mock/localServiceLandingPages";
-import type { LocalServiceLanding, SEOData } from "@/types";
+import { workmanshipWarrantyFaq } from "@/data/mock/serviceFaqs";
+import type { FAQItem, LocalServiceLanding, SEOData } from "@/types";
 
 export function getLocalLandingBySlug(
   slug: string
@@ -37,4 +38,24 @@ export function getRelatedLocalLandings(
   return landing.relatedLocalSlugs
     .map((slug) => getLocalLandingBySlug(slug))
     .filter((page): page is LocalServiceLanding => Boolean(page));
+}
+
+/** Append shared 6-month workmanship warranty FAQ when missing. */
+export function enrichLocalLandingFaq(faq: FAQItem[]): FAQItem[] {
+  const hasWarranty = faq.some(
+    (item) =>
+      /garanti/i.test(item.question) ||
+      item.question === workmanshipWarrantyFaq.question
+  );
+  if (hasWarranty) return faq;
+  return [...faq, workmanshipWarrantyFaq];
+}
+
+export function withLocalLandingFaqs(
+  landing: LocalServiceLanding
+): LocalServiceLanding {
+  return {
+    ...landing,
+    faq: enrichLocalLandingFaq(landing.faq),
+  };
 }

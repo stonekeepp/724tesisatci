@@ -1,5 +1,12 @@
 import type { FAQItem } from "@/types";
 
+export const workmanshipWarrantyFaq: FAQItem = {
+  question: "Yapılan işlemlere garanti veriliyor mu?",
+  answer:
+    "Evet. Yaptığımız işçilik için 6 ay garanti veriyoruz; kapsam yazılı servis formunda belirtilir. Kullanılan malzemeler üretici/marka garantisine tabidir ve formda not edilir. İşlem sonrası test ve kontrol ile kalite doğrulanır.",
+  category: "genel",
+};
+
 export const commonServiceFaq: FAQItem[] = [
   {
     question: "Fiyatlandırma nasıl yapılıyor?",
@@ -13,12 +20,7 @@ export const commonServiceFaq: FAQItem[] = [
       "Kağıthane merkezli ekiplerimizle İstanbul'un Avrupa ve Anadolu Yakası'ndaki tüm ilçelere 7/24 servis yönlendirmesi yapıyoruz. Acil durumlarda trafik ve ekip uygunluğuna göre adresinize yönlendirme yapılır.",
     category: "genel",
   },
-  {
-    question: "Yapılan işlemlere garanti veriliyor mu?",
-    answer:
-      "Evet. Yaptığımız işçilik için 6 ay garanti veriyoruz; kapsam yazılı servis formunda belirtilir. Kullanılan malzemeler üretici/marka garantisine tabidir ve formda not edilir. İşlem sonrası test ve kontrol ile kalite doğrulanır.",
-    category: "genel",
-  },
+  workmanshipWarrantyFaq,
   {
     question: "Acil servis için nasıl ulaşabilirim?",
     answer:

@@ -33,6 +33,11 @@ export async function POST(request: NextRequest) {
     }
 
     const post = await getBlogRepository().create(parsed.data);
+    if (post.status === "published" && post.canonicalPath) {
+      const { getSiteUrl } = await import("@/lib/services/seoService");
+      const { pingIndexNowUrls } = await import("@/lib/seo/indexNow");
+      pingIndexNowUrls([`${getSiteUrl()}${post.canonicalPath}`]);
+    }
     return NextResponse.json({ data: post }, { status: 201 });
   } catch {
     return NextResponse.json({ error: "Internal server error" }, { status: 500 });

@@ -18,6 +18,7 @@ import {
   getLocalLandingBySlug,
   getLocalLandingSeo,
   getRelatedLocalLandings,
+  withLocalLandingFaqs,
 } from "@/lib/services/localLandingService";
 import {
   buildBreadcrumbSchema,
@@ -62,24 +63,25 @@ export default async function PublicLandingPage({ params }: Props) {
     const service = await getServiceBySlug(localLanding.serviceSlug);
     if (!service) notFound();
 
+    const landing = withLocalLandingFaqs(localLanding);
     const relatedLocalLandings = getRelatedLocalLandings(localLanding);
     const breadcrumbs = [
       { label: "Ana Sayfa", href: "/" },
       { label: "Kağıthane Tesisat Hizmet Bölgeleri", href: "/hizmet-bolgeleri/kagithane" },
-      { label: localLanding.h1, href: localLanding.canonicalPath },
+      { label: landing.h1, href: landing.canonicalPath },
     ];
 
     const schemas = [
-      buildLocalLandingServiceSchema(localLanding, service, settings),
+      buildLocalLandingServiceSchema(landing, service, settings),
       buildBreadcrumbSchema(breadcrumbs),
-      buildFAQSchema(localLanding.faq),
+      buildFAQSchema(landing.faq),
     ].filter(Boolean);
 
     return (
-      <SiteLayout activePath={localLanding.canonicalPath}>
+      <SiteLayout activePath={landing.canonicalPath}>
         <JsonLdScript data={schemas} />
         <LocalServiceLandingTemplate
-          landing={localLanding}
+          landing={landing}
           service={service}
           relatedLocalLandings={relatedLocalLandings}
           breadcrumbs={breadcrumbs}
