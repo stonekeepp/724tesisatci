@@ -387,7 +387,7 @@ Komşu daireye su sızması, elektrik hattına yakın nem, tavanda damlama veya 
     publishedAt: "2026-07-09T08:30:00.000Z",
     updatedAt: "2026-07-09T09:00:00.000Z",
     readingTime: 4,
-    seoTitle: "Kağıthane’de Su Kaçağı Nasıl Anlaşılır? | Kontrol Rehberi",
+    seoTitle: "Kağıthane’de Su Kaçağı Belirtileri | Evde Kontrol Rehberi",
     seoDescription:
       "Kağıthane’de su kaçağı nasıl anlaşılır? Sayaç kontrolü, nem ve kabarma belirtileri, ne zaman cihazlı kontrol gerektiği hakkında rehber.",
     canonicalPath: "/blog/kagithane-su-kacagi-tespiti",
@@ -450,7 +450,7 @@ Tuvaletten geri tepme, kötü koku, bodrumda taşma veya apartmanda birden fazla
     publishedAt: "2026-07-08T10:00:00.000Z",
     updatedAt: "2026-07-09T09:00:00.000Z",
     readingTime: 4,
-    seoTitle: "Kağıthane’de Gider Tıkanıklığı Neden Olur? | Pratik Rehber",
+    seoTitle: "Kağıthane’de Gider Tıkanıklığı Nedenleri | Pratik Rehber",
     seoDescription:
       "Kağıthane’de gider tıkanıklığı neden olur? Lavabo, tuvalet ve ana hat belirtileri, koku, geri tepme ve ne zaman kamera kontrolü gerekir.",
     canonicalPath: "/blog/kagithane-tikaniklik-acma",
@@ -514,7 +514,7 @@ Gaz hattı, kombinin kapalı gövdesi veya elektrikli parçalar kullanıcı tara
     publishedAt: "2026-07-07T10:00:00.000Z",
     updatedAt: "2026-07-09T09:00:00.000Z",
     readingTime: 4,
-    seoTitle: "Kağıthane’de Kombi Basıncı ve Petek Isınması | Evde Kontrol Rehberi",
+    seoTitle: "Kağıthane’de Kombi Basıncı ve Petek | Evde Kontrol Rehberi",
     seoDescription:
       "Kağıthane’de kombi basınç düşmesi ve petek ısınmama nedenleri. Evde güvenli kontroller, tesisat kaçağı şüphesi ve servis zamanı.",
     canonicalPath: "/blog/kagithane-kombi-petek-sorunlari",

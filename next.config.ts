@@ -17,7 +17,7 @@ const nextConfig: NextConfig = {
     return [
       {
         source: "/besiktas-tesisatci-tamir-onarim-servisi",
-        destination: "/hizmet-bolgeleri/besiktas",
+        destination: "/hizmet-bolgeleri/kagithane",
         permanent: true,
       },
       {
@@ -27,17 +27,17 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/mecidiyekoy-tesisatci-tamir-onarim-servisi",
-        destination: "/hizmet-bolgeleri/sisli",
+        destination: "/hizmet-bolgeleri/kagithane",
         permanent: true,
       },
       {
         source: "/levent-tesisatci-tamir-onarim-servisi",
-        destination: "/hizmet-bolgeleri/besiktas",
+        destination: "/hizmet-bolgeleri/kagithane",
         permanent: true,
       },
       {
         source: "/bebek-tesisatci-tamir-onarim-servisi",
-        destination: "/hizmet-bolgeleri/besiktas",
+        destination: "/hizmet-bolgeleri/kagithane",
         permanent: true,
       },
       {

@@ -86,6 +86,7 @@ export function NeighborhoodDetailTemplate({
               timingNote="Trafik ve ekip uygunluğuna göre planlanır"
               imageAlt={`${neighborhood.title} mahallesinde tesisat hizmeti`}
               className="w-full h-full"
+              priority
             />
           </div>
         </div>

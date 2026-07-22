@@ -85,7 +85,7 @@ export const homeFaqs: FAQItem[] = [
   {
     question: "Hizmetleriniz nasıl teslim edilir?",
     answer:
-      "Tüm işçilik hizmetlerimiz yazılı servis formu ile teslim edilir. Kullanılan malzemeler üretici koşullarına tabidir.",
+      "Tüm işçilik hizmetlerimiz yazılı servis formu ile teslim edilir. İşçilik için 6 ay garanti verilir; kullanılan malzemeler üretici koşullarına tabidir.",
     category: "genel",
   },
   {

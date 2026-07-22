@@ -184,6 +184,7 @@ export function DistrictDetailTemplate({
               timingNote={heroTimingNote}
               imageAlt={`${location.title} bölgesinde profesyonel tesisat hizmeti`}
               className="w-full h-full"
+              priority
             />
           </div>
         </div>

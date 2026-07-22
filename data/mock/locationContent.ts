@@ -56,7 +56,7 @@ function buildDistrictFaq(title: string, slug: string): FAQItem[] {
     },
     {
       question: `${title}'de yapılan işlemler nasıl teslim edilir?`,
-      answer: `Tüm ${title} tesisat işlemlerimizde yazılı servis formu düzenlenir. Kullanılan malzemeler formda belirtilir; işlem sonrası test ile kalite doğrulanır.`,
+      answer: `Tüm ${title} tesisat işlemlerimizde yazılı servis formu düzenlenir. İşçilik için 6 ay garanti verilir; kullanılan malzemeler üretici garantisine tabidir ve formda belirtilir. İşlem sonrası test ile kalite doğrulanır.`,
       category: slug,
     },
     {
@@ -115,7 +115,7 @@ function buildNeighborhoodFaq(
     },
     {
       question: `${districtTitle} ${mahalle} bölgesinde işlemler nasıl teslim edilir?`,
-      answer: `Tüm ${mahalle} tesisat işlemlerimizde yazılı servis formu düzenlenir ve işlem sonrası test yapılır.`,
+      answer: `Tüm ${mahalle} tesisat işlemlerimizde yazılı servis formu düzenlenir. İşçilik için 6 ay garanti verilir; malzemeler üretici garantisine tabidir. İşlem sonrası test yapılır.`,
       category: "kagithane",
     },
   ];
@@ -291,7 +291,7 @@ export const istanbulCityLocation: Location = {
     {
       question: "İstanbul'da yapılan işlemler nasıl teslim edilir?",
       answer:
-        "Tüm İstanbul tesisat işlemlerimizde yazılı servis formu düzenlenir ve işlem sonrası test yapılır.",
+        "Tüm İstanbul tesisat işlemlerimizde yazılı servis formu düzenlenir. İşçilik için 6 ay garanti verilir; malzemeler üretici garantisine tabidir. İşlem sonrası test yapılır.",
       category: "istanbul",
     },
     {

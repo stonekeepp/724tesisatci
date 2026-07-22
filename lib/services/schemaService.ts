@@ -64,19 +64,36 @@ export function buildOrganizationSchema(settings: SiteSettings) {
   const siteUrl = getSiteUrl();
   const logoUrl = `${siteUrl}/logo.webp`;
   const sameAs = buildSameAs(settings);
+  const telephone = buildSchemaTelephone(
+    settings.telephone || settings.phone
+  );
 
-  return {
+  const schema: Record<string, unknown> = {
     "@context": "https://schema.org",
     "@type": "Organization",
+    "@id": buildBusinessId(siteUrl),
     name: settings.businessName || settings.siteName,
     url: siteUrl,
-    telephone: settings.telephone || settings.phone,
+    telephone,
     email: settings.email,
     logo: logoUrl,
     image: logoUrl,
     address: buildPostalAddress(settings),
-    ...(sameAs ? { sameAs } : {}),
   };
+
+  if (settings.latitude && settings.longitude) {
+    schema.geo = {
+      "@type": "GeoCoordinates",
+      latitude: settings.latitude,
+      longitude: settings.longitude,
+    };
+  }
+
+  if (sameAs) {
+    schema.sameAs = sameAs;
+  }
+
+  return schema;
 }
 
 export function buildContactPageSchema(_settings: SiteSettings) {
@@ -159,9 +176,15 @@ export function buildWebSiteSchema(settings: SiteSettings) {
 export function buildAreaServiceSchema(
   settings: SiteSettings,
   areaName: string,
-  description?: string
+  description?: string,
+  pagePath?: string
 ) {
   const siteUrl = getSiteUrl();
+  const pageUrl = pagePath
+    ? pagePath.startsWith("http")
+      ? pagePath
+      : `${siteUrl}${pagePath}`
+    : siteUrl;
   return {
     "@context": "https://schema.org",
     "@type": "Service",
@@ -169,7 +192,7 @@ export function buildAreaServiceSchema(
     description:
       description ??
       `${areaName} bölgesinde 7/24 profesyonel tesisat hizmeti.`,
-    url: siteUrl,
+    url: pageUrl,
     provider: {
       "@id": buildBusinessId(siteUrl),
     },

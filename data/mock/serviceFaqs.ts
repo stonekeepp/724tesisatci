@@ -16,7 +16,7 @@ export const commonServiceFaq: FAQItem[] = [
   {
     question: "Yapılan işlemlere garanti veriliyor mu?",
     answer:
-      "Keşif sonrası yazılı teklif sunulur; kullanılan malzemelerin marka bilgileri resmi servis formunda belirtilir. İşlem sonrası test ve kontrol ile kalite doğrulanır.",
+      "Evet. Yaptığımız işçilik için 6 ay garanti veriyoruz; kapsam yazılı servis formunda belirtilir. Kullanılan malzemeler üretici/marka garantisine tabidir ve formda not edilir. İşlem sonrası test ve kontrol ile kalite doğrulanır.",
     category: "genel",
   },
   {

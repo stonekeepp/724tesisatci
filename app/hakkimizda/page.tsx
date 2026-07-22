@@ -112,8 +112,8 @@ export default async function HakkimizdaPage() {
                 <span className="font-label-md text-label-md text-on-surface-variant">Yıllık Tecrübe</span>
               </div>
               <div className="flex flex-col border-l-2 border-outline-variant pl-4">
-                <span className="font-headline-md text-headline-md text-primary">10.000+</span>
-                <span className="font-label-md text-label-md text-on-surface-variant">Mutlu Müşteri</span>
+                <span className="font-headline-md text-headline-md text-primary">Binlerce</span>
+                <span className="font-label-md text-label-md text-on-surface-variant">Tamamlanan İş</span>
               </div>
             </div>
             <div className="flex flex-wrap gap-3 pt-2">

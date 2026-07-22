@@ -67,7 +67,12 @@ export default async function DistrictPage({ params }: Props) {
 
   const schemas = [
     isIndexable
-      ? buildAreaServiceSchema(settings, areaLabel, location.shortDescription)
+      ? buildAreaServiceSchema(
+          settings,
+          areaLabel,
+          location.shortDescription,
+          location.canonicalPath
+        )
       : null,
     buildBreadcrumbSchema(breadcrumbs),
     isIndexable && location.faq.length > 0

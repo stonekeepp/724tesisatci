@@ -27,7 +27,7 @@ export function SiteLogo({
         height={341}
         sizes="(max-width: 768px) 160px, 220px"
         className={imageClassName}
-        priority={variant === "light"}
+        priority={false}
       />
     </Link>
   );

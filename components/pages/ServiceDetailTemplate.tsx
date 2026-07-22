@@ -54,7 +54,7 @@ export function ServiceDetailTemplate({
             </span>
           </div>
           <div>
-            <h3 className="font-semibold text-primary">%100 Noktasal Tespit</h3>
+            <h3 className="font-semibold text-primary">Cihazlı Noktasal Tespit</h3>
             <p className="text-sm text-on-surface-variant">
               Gereksiz kırma işlemine son.
             </p>

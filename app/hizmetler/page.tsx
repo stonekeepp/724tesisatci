@@ -1,8 +1,13 @@
 import Link from "next/link";
 import { SiteLayout } from "@/components/layout/SiteLayout";
 import { ContextualLinks } from "@/components/ui/ContextualLinks";
+import { JsonLdScript } from "@/components/seo/JsonLdScript";
 import { getAllServices } from "@/lib/services/serviceService";
-import { buildMetadata } from "@/lib/services/seoService";
+import { buildMetadata, getSiteUrl } from "@/lib/services/seoService";
+import {
+  buildBreadcrumbSchema,
+  buildItemListSchema,
+} from "@/lib/services/schemaService";
 import { staticPageSeo } from "@/data/mock/seo";
 import { pageImages } from "@/data/mock/images";
 import { StitchImage } from "@/components/ui/StitchImage";
@@ -51,8 +56,25 @@ export default async function HizmetlerPage() {
     return 0;
   });
 
+  const siteUrl = getSiteUrl();
+  const breadcrumbs = [
+    { label: "Ana Sayfa", href: "/" },
+    { label: "Hizmetler", href: "/hizmetler" },
+  ];
+  const schemas = [
+    buildBreadcrumbSchema(breadcrumbs),
+    buildItemListSchema(
+      "İstanbul Tesisat Hizmetleri",
+      sorted.map((s) => ({
+        name: s.title,
+        url: `${siteUrl}${s.canonicalPath}`,
+      }))
+    ),
+  ];
+
   return (
     <SiteLayout activePath="/hizmetler">
+      <JsonLdScript data={schemas} />
       {/* Hero */}
       <section className="hero-bg relative pt-16 md:pt-24 pb-20 md:pb-28 px-margin-mobile md:px-margin-desktop border-b border-outline-variant">
         <div className="max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-2 gap-gutter items-center">

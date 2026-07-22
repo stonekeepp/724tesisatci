@@ -9,6 +9,7 @@ interface LocationHeroImageProps {
   timingNote?: string;
   imageSrc?: string;
   imageAlt?: string;
+  priority?: boolean;
 }
 
 function slugHue(slug: string): number {
@@ -23,6 +24,7 @@ export function LocationHeroImage({
   timingNote,
   imageSrc = pageImages.hizmetBolgeleriHero,
   imageAlt,
+  priority = false,
 }: LocationHeroImageProps) {
   const accent = 168 + slugHue(slug);
 
@@ -38,7 +40,7 @@ export function LocationHeroImage({
         fill
         sizes="(max-width: 1024px) 100vw, 50vw"
         className="object-cover object-center"
-        priority={false}
+        priority={priority}
       />
       <div
         className="absolute inset-0"

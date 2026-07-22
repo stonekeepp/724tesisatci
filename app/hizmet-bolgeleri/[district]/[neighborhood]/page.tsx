@@ -67,7 +67,8 @@ export default async function NeighborhoodPage({ params }: Props) {
     buildAreaServiceSchema(
       settings,
       areaLabel,
-      neighborhood.shortDescription
+      neighborhood.shortDescription,
+      neighborhood.canonicalPath
     ),
     buildBreadcrumbSchema(breadcrumbs),
     isIndexable ? buildFAQSchema(neighborhood.faq) : null,

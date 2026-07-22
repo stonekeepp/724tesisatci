@@ -18,7 +18,7 @@ export const faqs: FAQItem[] = [
   {
     question: "Hizmetleriniz için belge veriyor musunuz?",
     answer:
-      "Evet. Keşif sonrası yazılı teklif sunuyoruz; işlem tamamlandığında yapılan iş ve kullanılan malzemeler yazılı servis formunda belirtilir. Malzeme üretici garantisi varsa formda ayrıca not edilir.",
+      "Evet. Keşif sonrası yazılı teklif sunuyoruz; işlem tamamlandığında yapılan iş ve kullanılan malzemeler yazılı servis formunda belirtilir. İşçilik için 6 ay garanti verilir; malzeme üretici garantisi varsa formda ayrıca not edilir.",
     category: "genel",
   },
   {
