@@ -219,28 +219,29 @@ export default async function HomePage() {
               ))}
             </div>
           </div>
-          <div className="relative hidden lg:block h-[500px] w-full rounded-2xl overflow-hidden soft-shadow border border-outline-variant/30">
+          <div className="relative order-first lg:order-none h-[240px] sm:h-[320px] lg:h-[500px] w-full rounded-2xl overflow-hidden soft-shadow border border-outline-variant/30">
             <Image
               src="/images/home-hero.webp"
               alt="İstanbul'da tesisat arızasına müdahale eden profesyonel ekip"
               fill
               priority
+              fetchPriority="high"
               sizes="(min-width: 1024px) 50vw, 100vw"
               className="object-cover object-center"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-primary-container/30 via-transparent to-transparent pointer-events-none" />
-            <div className="absolute bottom-8 right-8 flex flex-col gap-4 z-10">
+            <div className="absolute bottom-4 right-4 lg:bottom-8 lg:right-8 flex flex-col gap-2 lg:gap-4 z-10">
               {heroOverlayCards.map((card) => (
                 <div
                   key={card.label}
-                  className="glass-card p-3 rounded-xl flex items-center gap-3 bg-white/85 backdrop-blur-md border-white/30 shadow-lg"
+                  className="glass-card p-2 lg:p-3 rounded-xl flex items-center gap-2 lg:gap-3 bg-white/85 backdrop-blur-md border-white/30 shadow-lg"
                 >
-                  <div className="w-9 h-9 rounded-full bg-[#131b2e] flex items-center justify-center shrink-0">
+                  <div className="w-8 h-8 lg:w-9 lg:h-9 rounded-full bg-[#131b2e] flex items-center justify-center shrink-0">
                     <span className="material-symbols-outlined text-sm text-secondary-container" aria-hidden="true">
                       {card.icon}
                     </span>
                   </div>
-                  <span className="font-label-md text-label-md text-[#131b2e] whitespace-nowrap">{card.label}</span>
+                  <span className="font-label-md text-xs lg:text-label-md text-[#131b2e] whitespace-nowrap">{card.label}</span>
                 </div>
               ))}
             </div>

@@ -31,6 +31,13 @@ export default function RootLayout({
   return (
     <html lang="tr">
       <head>
+        <link
+          rel="preload"
+          href="/fonts/material-symbols-subset.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
         <AnalyticsHead />
       </head>
       <body

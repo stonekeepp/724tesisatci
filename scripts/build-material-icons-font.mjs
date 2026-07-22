@@ -58,7 +58,7 @@ const embeddedCss = `@font-face {
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("data:font/woff2;base64,${fontBuffer.toString("base64")}") format("woff2");
+  src: url("/fonts/material-symbols-subset.woff2") format("woff2");
 }
 `;
 fs.writeFileSync(embeddedCssPath, embeddedCss);
@@ -66,4 +66,4 @@ fs.writeFileSync(embeddedCssPath, embeddedCss);
 console.log(
   `Built subset font (${(fontBuffer.length / 1024).toFixed(1)} KiB) for ${icons.length} icons -> ${outputFont}`
 );
-console.log(`Embedded font CSS -> ${embeddedCssPath}`);
+console.log(`Font-face CSS (file URL) -> ${embeddedCssPath}`);

@@ -1,5 +1,6 @@
 "use client";
 
+import Script from "next/script";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { useReportWebVitals } from "next/web-vitals";
 
@@ -201,6 +202,60 @@ function WebVitalsReporter() {
   return null;
 }
 
+function ConsentGatedGaScripts({ gaId }: { gaId: string }) {
+  const [shouldLoad, setShouldLoad] = useState(false);
+
+  useEffect(() => {
+    const sync = (consent: AnalyticsConsent) => {
+      setShouldLoad(consent === "granted");
+    };
+
+    sync(readStoredConsent());
+
+    const onConsent = (event: Event) => {
+      sync((event as CustomEvent<AnalyticsConsent>).detail);
+    };
+    window.addEventListener(CONSENT_EVENT, onConsent);
+    return () => window.removeEventListener(CONSENT_EVENT, onConsent);
+  }, []);
+
+  useEffect(() => {
+    if (!shouldLoad) return;
+    const link = document.createElement("link");
+    link.rel = "preconnect";
+    link.href = "https://www.googletagmanager.com";
+    document.head.appendChild(link);
+    return () => {
+      link.remove();
+    };
+  }, [shouldLoad]);
+
+  if (!shouldLoad) return null;
+
+  return (
+    <>
+      <Script
+        id="google-analytics"
+        src={`https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(gaId)}`}
+        strategy="lazyOnload"
+      />
+      <Script
+        id="google-analytics-config"
+        strategy="lazyOnload"
+        dangerouslySetInnerHTML={{
+          __html: `
+window.gtag("js", new Date());
+window.gtag("config", ${JSON.stringify(gaId)}, {
+  allow_google_signals: false,
+  allow_ad_personalization_signals: false
+});
+          `.trim(),
+        }}
+      />
+    </>
+  );
+}
+
 export function CookiePreferencesButton() {
   return (
     <button
@@ -222,6 +277,7 @@ export function AnalyticsClient({
 }) {
   return (
     <>
+      {enabled && gaId ? <ConsentGatedGaScripts gaId={gaId} /> : null}
       {enabled && <WebVitalsReporter />}
       <CookieConsent gaId={gaId} />
     </>

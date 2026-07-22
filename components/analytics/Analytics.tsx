@@ -1,4 +1,3 @@
-import Script from "next/script";
 import { AnalyticsClient } from "./AnalyticsClient";
 
 const CONSENT_STORAGE_KEY = "724tesisatci-analytics-consent";
@@ -54,32 +53,6 @@ export function Analytics() {
   const { gaId, enabled } = getAnalyticsSettings();
 
   return (
-    <>
-      {enabled && (
-        <>
-          <Script
-            id="google-analytics"
-            src={`https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(gaId)}`}
-            strategy="afterInteractive"
-          />
-          <Script
-            id="google-analytics-config"
-            strategy="afterInteractive"
-            dangerouslySetInnerHTML={{
-              __html: `
-window.gtag("js", new Date());
-if (window.__analyticsConsent === "granted") {
-  window.gtag("config", ${JSON.stringify(gaId)}, {
-    allow_google_signals: false,
-    allow_ad_personalization_signals: false
-  });
-}
-              `.trim(),
-            }}
-          />
-        </>
-      )}
-      <AnalyticsClient enabled={enabled} gaId={enabled ? gaId : undefined} />
-    </>
+    <AnalyticsClient enabled={enabled} gaId={enabled ? gaId : undefined} />
   );
 }
