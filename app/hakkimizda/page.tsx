@@ -104,7 +104,7 @@ export default async function HakkimizdaPage() {
               <span className="text-secondary">Yeni Nesil Uzmanlık.</span>
             </h1>
             <p className="font-body-lg text-body-lg text-on-surface-variant max-w-lg leading-relaxed">
-              724 Tesisatçı olarak Kağıthane merkezli hizmet ağımızla İstanbul&apos;un 39 ilçesinde 7/24 profesyonel tesisat hizmeti sunuyoruz. Termal kamera, akustik dinleme ve robotik cihazlarla kırmadan tespit; yazılı teklif ile şeffaf, kalıcı çözümler üretiyoruz.
+              724 Tesisatçı olarak Kağıthane merkezli hizmet ağımızla İstanbul&apos;un 39 ilçesinde 7/24 profesyonel tesisat hizmeti sunuyoruz. Termal kamera, akustik dinleme ve robotik cihazlarla kırmadan tespit; yazılı teklif ile şeffaf onarım planları üretiyoruz.
             </p>
             <div className="flex gap-4 pt-2">
               <div className="flex flex-col border-l-2 border-outline-variant pl-4">

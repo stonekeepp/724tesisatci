@@ -76,7 +76,13 @@ export default async function DistrictPage({ params }: Props) {
   ].filter(Boolean);
 
   return (
-    <SiteLayout activePath="/hizmet-bolgeleri">
+    <SiteLayout
+      activePath={
+        location.slug === "kagithane"
+          ? location.canonicalPath
+          : "/hizmet-bolgeleri"
+      }
+    >
       <JsonLdScript data={schemas} />
       <Breadcrumb items={breadcrumbs} />
       <DistrictDetailTemplate

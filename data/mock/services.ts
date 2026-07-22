@@ -49,12 +49,12 @@ export const services: Service[] = [
     title: "Kombi Servisi ve Kombi Tesisatı",
     slug: "kombi-servisi-ve-tesisati",
     shortDescription:
-      "Vaillant, Bosch, Buderus ve tüm marka kombilerde arıza tespiti, periyodik bakım, yedek parça değişimi ve tesisat bağlantısı. Basınç düşüşü, petek ısınmama ve su kaçağı sorunlarına kalıcı çözüm.",
+      "Vaillant, Bosch, Buderus ve tüm marka kombilerde arıza tespiti, periyodik bakım, yedek parça değişimi ve tesisat bağlantısı. Basınç düşüşü, petek ısınmama ve su kaçağı sorunlarına uygun onarım.",
     longDescription:
-      "Kombi sistemi, kış aylarında evinizin konforunu doğrudan belirleyen kritik bir altyapıdır. Düşük basınç, peteklerin ısınmaması, kombi altından su akması veya anormal sesler hem enerji verimliliğini düşürür hem de güvenlik riski oluşturabilir.\n\n724 Tesisatçı olarak İstanbul genelinde tüm marka kombilerde arıza tespiti, periyodik bakım, yedek parça değişimi, tesisat bağlantı onarımı ve yeni kombi montajı hizmetleri sunuyoruz. Dijital arıza tespit cihazları ile sorunun kaynağını hızlıca belirliyor, orijinal veya eşdeğer kaliteli parçalarla kalıcı onarım yapıyoruz.\n\nKombi basıncının sürekli düşmesi çoğu zaman gizli su kaçağına işaret eder; bu durumda termal kamera destekli tespit ile birlikte kalıcı çözüm sağlıyoruz. Kış sezonu öncesi periyodik bakım yaptırarak arıza riskini minimize etmenizi öneriyoruz.\n\nVaillant, Bosch, Buderus, Demirdöküm ve ECA dahil tüm markalarda İstanbul geneli kombi servisi sunuyoruz. Acil arıza, basınç düşüşü veya ısınma sorunlarında 7/24 ekibimize ulaşabilir, yazılı teklif ve kalıcı onarım avantajından yararlanabilirsiniz.",
+      "Kombi sistemi, kış aylarında evinizin konforunu doğrudan belirleyen kritik bir altyapıdır. Düşük basınç, peteklerin ısınmaması, kombi altından su akması veya anormal sesler hem enerji verimliliğini düşürür hem de güvenlik riski oluşturabilir.\n\n724 Tesisatçı olarak İstanbul genelinde tüm marka kombilerde arıza tespiti, periyodik bakım, yedek parça değişimi, tesisat bağlantı onarımı ve yeni kombi montajı hizmetleri sunuyoruz. Dijital arıza tespit cihazları ile sorunun kaynağını hızlıca belirliyor, orijinal veya eşdeğer kaliteli parçalarla uygun onarım yapıyoruz.\n\nKağıthane öncelikli hizmet bölgemizdir: Emniyet Evleri, Çeliktepe, Seyrantepe ve çevre mahallelerde kombi arızası, basınç düşüşü ve petek ısınmama şikayetlerinde trafik ve ekip uygunluğuna göre yönlendirme yapılır. Yerel süreç ve belirtiler için Kağıthane kombi servisi sayfamızı inceleyebilirsiniz.\n\nKombi basıncının sürekli düşmesi çoğu zaman gizli su kaçağına işaret eder; bu durumda termal kamera destekli tespit ile birlikte uygun onarım sağlıyoruz. Kış sezonu öncesi periyodik bakım yaptırarak arıza riskini azaltmanızı öneriyoruz; bakım sıklığı için periyodik tesisat bakımı rehberimize bakabilirsiniz.\n\nVaillant, Bosch, Buderus, Demirdöküm ve ECA dahil tüm markalarda İstanbul geneli kombi servisi sunuyoruz. Acil arıza, basınç düşüşü veya ısınma sorunlarında 7/24 ekibimize ulaşabilir, keşif sonrası yazılı teklif ve net onarım planı alabilirsiniz.",
     aboutHighlights: [
       "Tüm marka kombilerde dijital arıza tespiti",
-      "Orijinal ve kaliteli yedek parça garantisi",
+      "Orijinal ve kaliteli yedek parça kullanımı",
       "Gizli kaçaklarda termal kamera ile birlikte çözüm",
       "Kış öncesi periyodik bakım ve basınç ayarı",
     ],
@@ -76,15 +76,17 @@ export const services: Service[] = [
     ],
     methods: [
       { title: "Periyodik Bakım", description: "Yıllık kombi bakımı: brülör temizliği, baca gazı kontrolü, basınç ayarı, emniyet ventili testi. Verimlilik artışı ve arıza önleme sağlar." },
-      { title: "Arıza Onarımı", description: "Vaillant, Bosch, Buderus, Demirdöküm, ECA ve diğer markalarda uzman servis. Dijital arıza tespiti ile hızlı çözüm." },
+      { title: "Arıza Onarımı", description: "Vaillant, Bosch, Buderus, Demirdöküm, ECA ve diğer yaygın markalarda arıza tespiti ve onarım. Dijital arıza tespiti ile hızlı çözüm." },
       { title: "Tesisat Bağlantısı", description: "Yeni kombi montajı, eski hat yenileme, petek bağlantıları ve genleşme tankı kurulumu. Standartlara uygun güvenli uygulama." },
     ],
     faq: getServiceFaq("kombi-servisi-ve-tesisati"),
     relatedServices: ["petek-temizleme", "kalorifer-tesisati", "su-kacagi-tespit-ve-onarim"],
     relatedLocations: ["istanbul", "kagithane"],
     seoTitle: "İstanbul Kombi Servisi ve Tesisatı | 724 Tesisatçı",
-    seoDescription: "İstanbul kombi servisi, arıza tespiti, periyodik bakım ve tesisat onarımı. Tüm markalar, orijinal yedek parça, 7/24 acil kombi servisi.",
+    seoDescription:
+      "İstanbul kombi servisi: arıza tespiti, periyodik bakım, yedek parça ve tesisat onarımı. Kağıthane öncelikli, tüm markalar, 7/24 acil destek.",
     canonicalPath: "/hizmetler/kombi-servisi-ve-tesisati",
+    ogImage: "/images/kombi-servisi-hero.webp",
   },
   {
     id: "3",
@@ -93,7 +95,7 @@ export const services: Service[] = [
     shortDescription:
       "Kalorifer tesisatı kurulumu, petek montajı, sirkülasyon pompası onarımı ve sistem dengeleme. Eşit ısınmayan petekler, boru kaçağı ve hava birikimi sorunlarına profesyonel çözüm.",
     longDescription:
-      "Kalorifer tesisatı, kombi veya merkezi sistemden gelen ısıyı evinizin her odasına eşit biçimde dağıtan altyapıdır. Hatalı döşeme, eskiyen borular veya denge ayarı yapılmamış vanalar hem konforu düşürür hem de enerji faturalarınızı artırır.\n\n724 Tesisatçı olarak İstanbul genelinde kalorifer tesisatı kurulumu, petek montajı ve değişimi, sirkülasyon pompası onarımı, boru hattı yenileme ve sistem dengeleme hizmetleri sunuyoruz. Termal kamera ile gizli boru kaçaklarını kırmadan tespit ediyor, minimum müdahale ile kalıcı onarım sağlıyoruz.\n\nBazı odalar ısınmıyor, peteklerden gurgulama sesi geliyor veya duvarlarda ıslaklık fark ediyorsanız tesisatınızın kontrol edilmesi gerekir. Yeni bina ve tadilat projelerinde projeye uygun boru çapı ve petek kapasitesi hesaplaması yapıyoruz.\n\nİstanbul'da kalorifer tesisatı kurulum, onarım ve petek dengeleme ihtiyaçlarınız için 7/24 servis hattımız açıktır. Isınma verimliliğinizi artırmak, enerji maliyetlerinizi düşürmek ve kış konforunuzu güvence altına almak için uzman ekibimizle iletişime geçin.",
+      "Kalorifer tesisatı, kombi veya merkezi sistemden gelen ısıyı evinizin her odasına eşit biçimde dağıtan altyapıdır. Hatalı döşeme, eskiyen borular veya denge ayarı yapılmamış vanalar hem konforu düşürür hem de enerji faturalarınızı artırır.\n\n724 Tesisatçı olarak İstanbul genelinde kalorifer tesisatı kurulumu, petek montajı ve değişimi, sirkülasyon pompası onarımı, boru hattı yenileme ve sistem dengeleme hizmetleri sunuyoruz. Termal kamera ile gizli boru kaçaklarını kırmadan tespit ediyor, minimum müdahale ile uygun onarım sağlıyoruz.\n\nBazı odalar ısınmıyor, peteklerden gurgulama sesi geliyor veya duvarlarda ıslaklık fark ediyorsanız tesisatınızın kontrol edilmesi gerekir. Yeni bina ve tadilat projelerinde projeye uygun boru çapı ve petek kapasitesi hesaplaması yapıyoruz.\n\nİstanbul'da kalorifer tesisatı kurulum, onarım ve petek dengeleme ihtiyaçlarınız için 7/24 servis hattımız açıktır. Isınma verimliliğinizi artırmak, enerji maliyetlerinizi düşürmek ve kış konforunuzu güvence altına almak için uzman ekibimizle iletişime geçin.",
     aboutHighlights: [
       "Petek montajı, değişimi ve sistem dengeleme",
       "Termal kamera ile gizli boru kaçağı tespiti",
@@ -133,7 +135,7 @@ export const services: Service[] = [
     title: "Su Kaçağı Tespit ve Onarım",
     slug: "su-kacagi-tespit-ve-onarim",
     shortDescription:
-      "Termal kamera, akustik dinleme ve nem ölçer ile kırmadan noktasal su kaçağı tespiti. Gizli kaçak, yerden ısıtma arızası ve yüksek su faturası sorunlarına kalıcı onarım.",
+      "Termal kamera, akustik dinleme ve nem ölçer ile kırmadan noktasal su kaçağı tespiti. Gizli kaçak, yerden ısıtma arızası ve yüksek su faturası sorunlarına uygun onarım.",
     longDescription:
       "Gizli su kaçağı, ev ve iş yerlerinde en sık karşılaşılan ve en maliyetli tesisat sorunlarından biridir. Duvar içinde, parke altında veya tavan arasında kalan kaçaklar uzun süre fark edilmez; nem, küf, boya dökülmesi ve komşu dairelere sızıntı gibi ciddi hasarlara yol açar.\n\n724 Tesisatçı olarak İstanbul genelinde termal kamera, akustik dinleme cihazı ve nem ölçer ile kırmadan noktasal su kaçağı tespiti ve onarım hizmeti sunuyoruz. Geleneksel yöntemlerde tüm duvar kırılarak arama yapılırken, cihazlı tespit sayesinde yalnızca kaçak noktasına müdahale edilir.\n\nSu sayacınız tüm musluklar kapalıyken dönüyorsa, su faturanız aniden arttıysa veya duvarlarda nem lekesi görüyorsanız acil tespit yaptırmanızı öneriyoruz. Tespit sonrası yazılı rapor sunuyor, onayınız ile noktasal onarım yapıyor ve basınç testi ile kaçağın giderildiğini doğruluyoruz.\n\nİstanbul'da su kaçağı tespiti ve onarımı için 7/24 acil ekibimiz trafik ve ekip uygunluğuna göre adresinize yönlendirilir. Gereksiz kırım maliyetinden kaçının; termal kamera ile kırmadan tespit, noktasal onarım ve yazılı servis formu için hemen bizi arayın.",
     aboutHighlights: [
@@ -176,9 +178,9 @@ export const services: Service[] = [
     title: "Tıkanıklık Açma",
     slug: "tikaniklik-acma",
     shortDescription:
-      "Robotik spiral makine ve kameralı kontrol ile tuvalet, lavabo, duş gideri ve ana pimaş hattı tıkanıklıklarını kırmadan açma. Geri taşma, kötü koku ve yavaş boşalmaya kalıcı çözüm.",
+      "Robotik spiral makine ve kameralı kontrol ile tuvalet, lavabo, duş gideri ve ana pimaş hattı tıkanıklıklarını kırmadan açma. Geri taşma, kötü koku ve yavaş boşalmaya uygun onarım.",
     longDescription:
-      "Tıkanıklık sorunları günlük yaşamı doğrudan etkiler: lavabo su taşır, tuvalet geri basar, mutfak giderinden koku gelir. Kimyasal dökücüler borulara zarar verebilir ve sorunu geçici olarak gizler; asıl tıkanıklık kısa sürede tekrarlar.\n\n724 Tesisatçı olarak İstanbul genelinde tuvalet, lavabo, banyo gideri, mutfak piyasası ve ana pimaş hattı tıkanıklıklarını robotik spiral makine ve kameralı kontrol ile kırmadan açıyoruz. Tıkanıklığın sebebini (yağ birikimi, yabancı cisim, boru eğimi hatası) görsel olarak tespit ederek kalıcı çözüm sunuyoruz.\n\nAcil geri taşma durumlarında 7/24 müdahale ekibimiz ortalama 30 dakika içinde adresinize ulaşır. İşlem sonrası kamera ile hattın tamamen açıldığı doğrulanır.\n\nİstanbul'da tuvalet, lavabo, mutfak gideri ve ana hat tıkanıklıkları için robotik cihazlarla kırmadan açma hizmeti sunuyoruz. Kimyasal kullanmadan, boruya zarar vermeden kalıcı çözüm için 7/24 acil tıkanıklık açma ekibimizi arayın.",
+      "Tıkanıklık sorunları günlük yaşamı doğrudan etkiler: lavabo su taşır, tuvalet geri basar, mutfak giderinden koku gelir. Kimyasal dökücüler borulara zarar verebilir ve sorunu geçici olarak gizler; asıl tıkanıklık kısa sürede tekrarlar.\n\n724 Tesisatçı olarak İstanbul genelinde tuvalet, lavabo, banyo gideri, mutfak piyasası ve ana pimaş hattı tıkanıklıklarını robotik spiral makine ve kameralı kontrol ile kırmadan açıyoruz. Tıkanıklığın sebebini (yağ birikimi, yabancı cisim, boru eğimi hatası) görsel olarak tespit ederek uygun onarım sunuyoruz.\n\nAcil geri taşma durumlarında 7/24 müdahale ekibimiz trafik ve ekip uygunluğuna göre adresinize yönlendirilir. İşlem sonrası kamera ile hattın tamamen açıldığı doğrulanır.\n\nİstanbul'da tuvalet, lavabo, mutfak gideri ve ana hat tıkanıklıkları için robotik cihazlarla kırmadan açma hizmeti sunuyoruz. Kimyasal kullanmadan, boruya zarar vermeden uygun onarım için 7/24 acil tıkanıklık açma ekibimizi arayın.",
     aboutHighlights: [
       "Robotik spiral makine ile kırmadan açma",
       "Kameralı kontrol ile tıkanıklık sebebi tespiti",
@@ -203,7 +205,7 @@ export const services: Service[] = [
     ],
     methods: [
       { title: "Robotik Spiral Makine", description: "Farklı çap ve uzunlukta spiral uçlarla tuvalet, lavabo ve ana hat tıkanıklıkları açılır. Elektrikli motor ile kontrollü müdahale." },
-      { title: "Kameralı Görüntüleme", description: "Tıkanıklık sebebini (yağ, saç, yabancı cisim, kök) görsel olarak tespit eder. Tekrarlayan sorunlarda kalıcı çözüm planlanır." },
+      { title: "Kameralı Görüntüleme", description: "Tıkanıklık sebebini (yağ, saç, yabancı cisim, kök) görsel olarak tespit eder. Tekrarlayan sorunlarda uygun onarım planlanır." },
       { title: "Basınçlı Yıkama", description: "150 bar basınçlı su ile boru içi yağ, kireç ve birikim temizliği. Restoran ve site ana hatlarında önerilir." },
     ],
     faq: getServiceFaq("tikaniklik-acma"),
@@ -218,7 +220,7 @@ export const services: Service[] = [
     title: "Petek Temizleme",
     slug: "petek-temizleme",
     shortDescription:
-      "Makineli petek temizliği ve sistem kimyasal yıkama ile ısınma verimliliğini artırın. Peteklerin yarı sıcak kalması, yüksek doğalgaz faturası ve uzun ısınma süresine kalıcı çözüm.",
+      "Makineli petek temizliği ve sistem kimyasal yıkama ile ısınma verimliliğini artırın. Peteklerin yarı sıcak kalması, yüksek doğalgaz faturası ve uzun ısınma süresine uygun onarım.",
     longDescription:
       "Kalorifer peteklerinin içinde zamanla çamur, pas, kireç ve magnetit birikir. Bu birikim su dolaşımını engeller, peteklerin yalnızca alt kısmının ısınmasına neden olur ve kombinizin daha fazla enerji harcamasına yol açar.\n\n724 Tesisatçı olarak İstanbul genelinde makineli petek temizliği ve sistem kimyasal yıkama hizmeti sunuyoruz. Özel petek temizleme makinesi ile her petekten tortu çıkarılır, ardından tüm kalorifer hattı kimyasal ile yıkanır. Temizlik sonrası koruyucu kimyasal eklenerek birikimin tekrarlanması geciktirilir.\n\nKış sezonu öncesi petek temizliği yaptırarak ısınma verimliliğinizi %30'a kadar artırabilir, doğalgaz faturanızı düşürebilirsiniz. Temizlik öncesi ve sonrası ısınma karşılaştırması yaparak farkı somut biçimde gösteriyoruz.\n\nİstanbul genelinde makineli petek temizliği ve kalorifer sistem yıkama hizmeti için randevu alın. Doğalgaz faturanızı düşürmek, peteklerin eşit ısınmasını sağlamak ve kombi ömrünü uzatmak için kışa girmeden petek temizliği yaptırmanızı öneriyoruz.",
     aboutHighlights: [
@@ -229,7 +231,7 @@ export const services: Service[] = [
     ],
     heroTitle: "İstanbul Petek Temizleme Hizmeti",
     heroDescription:
-      "Makineli petek temizliği ve sistem yıkama ile ısınma verimliliğinizi artırın, doğalgaz faturalarınızı düşürün. Garantili temizlik, hızlı servis ve 7/24 randevu.",
+      "Makineli petek temizliği ve sistem yıkama ile ısınma verimliliğinizi artırın, doğalgaz faturalarınızı düşürün. Yazılı servis formu, hızlı servis ve 7/24 randevu.",
     icon: "heat",
     symptoms: [
       { title: "Petekler Yarı Sıcak", description: "Alt kısım sıcak üst soğuksa petek içinde çamur ve pas birikimi vardır. Temizlik yapılmazsa kombi yükü artar ve arıza riski oluşur.", icon: "thermostat" },
@@ -260,9 +262,9 @@ export const services: Service[] = [
     title: "Kameralı Tesisat Görüntüleme ve Onarım",
     slug: "kamerali-tesisat-goruntuleme-ve-onarim",
     shortDescription:
-      "HD kamera robotu ile pimaş ve boru hatlarının iç görüntülenmesi, çatlak-tıkanıklık tespiti ve noktasal onarım. Tekrarlayan tıkanıklık ve gider kokusuna kesin teşhis.",
+      "HD kamera robotu ile pimaş ve boru hatlarının iç görüntülenmesi, çatlak-tıkanıklık tespiti ve noktasal onarım. Tekrarlayan tıkanıklık ve gider kokusuna cihazlı tespit.",
     longDescription:
-      "Pimaş ve atık su hatlarının içi gözle görülemez; sorunlar genellikle tıkanıklık açıldıktan kısa süre sonra tekrar eder veya kötü koku şeklinde kendini gösterir. Kör müdahale hem maliyetli hem de geçici çözüm sağlar.\n\n724 Tesisatçı olarak İstanbul genelinde HD kamera robotları ile pimaş, atık su ve yağmur suyu hatlarının iç görüntülenmesi, çatlak-tıkanıklık-eğim hatası tespiti ve noktasal onarım hizmeti sunuyoruz. 100 metreye kadar hat boyunca kayıt alınır, sorun noktası derinlik ve mesafe bilgisi ile işaretlenir.\n\n20 yıldan eski binalarda, sık tıkanan hatlarda ve tadilat öncesi mutlaka kameralı kontrol yaptırmanızı öneriyoruz. Görüntü kaydı size teslim edilir; sigorta ve site yönetimi süreçlerinde kullanılabilir.\n\nİstanbul'da kameralı tesisat görüntüleme ve onarım hizmeti ile boru içini görmeden müdahale etmiyoruz. Tekrarlayan tıkanıklık, gider kokusu veya eski bina tesisatı sorunlarında HD kamera robotu ile kesin teşhis için bizimle iletişime geçin.",
+      "Pimaş ve atık su hatlarının içi gözle görülemez; sorunlar genellikle tıkanıklık açıldıktan kısa süre sonra tekrar eder veya kötü koku şeklinde kendini gösterir. Kör müdahale hem maliyetli hem de geçici çözüm sağlar.\n\n724 Tesisatçı olarak İstanbul genelinde HD kamera robotları ile pimaş, atık su ve yağmur suyu hatlarının iç görüntülenmesi, çatlak-tıkanıklık-eğim hatası tespiti ve noktasal onarım hizmeti sunuyoruz. 100 metreye kadar hat boyunca kayıt alınır, sorun noktası derinlik ve mesafe bilgisi ile işaretlenir.\n\n20 yıldan eski binalarda, sık tıkanan hatlarda ve tadilat öncesi mutlaka kameralı kontrol yaptırmanızı öneriyoruz. Görüntü kaydı size teslim edilir; sigorta ve site yönetimi süreçlerinde kullanılabilir.\n\nİstanbul'da kameralı tesisat görüntüleme ve onarım hizmeti ile boru içini görmeden müdahale etmiyoruz. Tekrarlayan tıkanıklık, gider kokusu veya eski bina tesisatı sorunlarında HD kamera robotu ile cihazlı tespit için bizimle iletişime geçin.",
     aboutHighlights: [
       "100 metreye kadar HD kamera ile boru içi görüntüleme",
       "Çatlak, eğim hatası ve birikim tespiti",
@@ -271,7 +273,7 @@ export const services: Service[] = [
     ],
     heroTitle: "Kameralı Tesisat Görüntüleme ve Onarım",
     heroDescription:
-      "HD kamera robotları ile pimaş ve boru hatlarının iç görüntülenmesi. Çatlak, tıkanıklık ve bağlantı hatalarına kesin teşhis, minimum müdahale, kalıcı onarım.",
+      "HD kamera robotları ile pimaş ve boru hatlarının iç görüntülenmesi. Çatlak, tıkanıklık ve bağlantı hatalarına cihazlı tespit, minimum müdahale, uygun onarım.",
     icon: "videocam",
     symptoms: [
       { title: "Tekrarlayan Tıkanıklık", description: "Sık tekrarlayan tıkanıklık boru hasarı, eğim hatası veya kök girişine işaret eder. Kamera ile kesin sebep belirlenir.", icon: "replay" },
@@ -302,21 +304,21 @@ export const services: Service[] = [
     title: "Pimaş Tesisatı",
     slug: "pimas-tesisati",
     shortDescription:
-      "PVC pimaş boru döşeme, bağlantı onarımı ve hat yenileme. Sık tıkanan hatlar, koku problemi ve alt kata sızıntıya kameralı teşhis ile kalıcı çözüm.",
+      "PVC pimaş boru döşeme, bağlantı onarımı ve hat yenileme. Sık tıkanan hatlar, koku problemi ve alt kata sızıntıya kameralı teşhis ile uygun onarım.",
     longDescription:
-      "Pimaş tesisatı, binaların atık su sisteminin omurgasıdır. Yanlış eğim, eskiyen borular, gevşek ek yerleri veya yanlış çap seçimi sık tıkanıklık, koku ve alt kata su sızıntısı gibi ciddi sorunlara yol açar.\n\n724 Tesisatçı olarak İstanbul genelinde PVC pimaş boru döşeme, bağlantı onarımı, hat yenileme ve kameralı kontrol hizmetleri sunuyoruz. Yeni bina, tadilat veya eski hat yenileme projelerinde minimum müdahale ile kalıcı çözüm sağlıyoruz.\n\n30 yıldan eski binalarda pimaş hatlarının komple yenilenmesi uzun vadede tıkanıklık ve sızıntı maliyetlerini önemli ölçüde düşürür. Keşif sonrası yazılı teklif ve yazılı servis formu sunuyoruz.\n\nİstanbul'da pimaş tesisatı kurulum, onarım ve hat yenileme ihtiyaçlarınız için kameralı teşhis ve PVC boru ile yazılı teklif sunuyoruz. Sık tıkanan hatlar, koku problemi veya alt kata sızıntı durumlarında 7/24 ekibimize ulaşın.",
+      "Pimaş tesisatı, binaların atık su sisteminin omurgasıdır. Yanlış eğim, eskiyen borular, gevşek ek yerleri veya yanlış çap seçimi sık tıkanıklık, koku ve alt kata su sızıntısı gibi ciddi sorunlara yol açar.\n\n724 Tesisatçı olarak İstanbul genelinde PVC pimaş boru döşeme, bağlantı onarımı, hat yenileme ve kameralı kontrol hizmetleri sunuyoruz. Yeni bina, tadilat veya eski hat yenileme projelerinde minimum müdahale ile uygun onarım sağlıyoruz.\n\n30 yıldan eski binalarda pimaş hatlarının komple yenilenmesi uzun vadede tıkanıklık ve sızıntı maliyetlerini önemli ölçüde düşürür. Keşif sonrası yazılı teklif ve yazılı servis formu sunuyoruz.\n\nİstanbul'da pimaş tesisatı kurulum, onarım ve hat yenileme ihtiyaçlarınız için kameralı teşhis ve PVC boru ile yazılı teklif sunuyoruz. Sık tıkanan hatlar, koku problemi veya alt kata sızıntı durumlarında 7/24 ekibimize ulaşın.",
     aboutHighlights: [
       "Standart PVC pimaş boru ile döşeme ve yenileme",
-      "Kameralı kontrol ile kesin teşhis",
+      "Kameralı kontrol ile cihazlı tespit",
       "Minimum kırım ile hat onarımı",
       "Su testi ile sızdırmazlık garantisi",
     ],
     heroTitle: "İstanbul Pimaş Tesisatı Kurulum ve Onarım",
     heroDescription:
-      "PVC pimaş boru döşeme, bağlantı onarımı ve hat yenileme. Kameralı kontrol ile kesin teşhis, sızdırmazlık testi ve yazılı teklif.",
+      "PVC pimaş boru döşeme, bağlantı onarımı ve hat yenileme. Kameralı kontrol ile cihazlı tespit, sızdırmazlık testi ve yazılı teklif.",
     icon: "water_damage",
     symptoms: [
-      { title: "Sık Tıkanıklık", description: "Sürekli tekrarlayan tıkanıklık hat eğimi hatası, boru çürümesi veya yetersiz çap göstergesidir. Kamera ile kesin teşhis yapılmalıdır.", icon: "block" },
+      { title: "Sık Tıkanıklık", description: "Sürekli tekrarlayan tıkanıklık hat eğimi hatası, boru çürümesi veya yetersiz çap göstergesidir. Kamera ile cihazlı tespit yapılmalıdır.", icon: "block" },
       { title: "Koku Problemi", description: "Banyo ve mutfaktan gelen pis koku sifon su kaybı, kırık pimaş veya hatalı bağlantıdan kaynaklanır. Sağlık açısından önemlidir.", icon: "air" },
       { title: "Su Sızıntısı", description: "Pimaş ek yerlerinden veya manşonlardan sızıntı alt kata nem ve hasar verir. Erken müdahale komşu ilişkilerini ve yapıyı korur.", icon: "water_damage" },
       { title: "Eski Boru Sistemi", description: "30 yıldan eski pimaş hatları çatlama ve deformasyona açıktır. Yenileme uzun vadede en ekonomik çözümdür.", icon: "history" },
@@ -386,7 +388,7 @@ export const services: Service[] = [
     title: "Pimaş Yıkama",
     slug: "pimas-yikama",
     shortDescription:
-      "150 bar basınçlı su ve kameralı robot ile pimaş hatlarının derin temizliği. Kötü koku, yavaş gider ve tekrarlayan tıkanıklığa kalıcı çözüm. Restoran ve site hatları için periyodik bakım.",
+      "150 bar basınçlı su ve kameralı robot ile pimaş hatlarının derin temizliği. Kötü koku, yavaş gider ve tekrarlayan tıkanıklığa uygun onarım. Restoran ve site hatları için periyodik bakım.",
     longDescription:
       "Pimaş hatlarında biriken yağ, kireç, sabun kalıntısı ve organik atıklar zamanla boru çapını daraltır. Bu durum yavaş gider, kötü koku ve sık tekrarlayan tıkanıklık olarak kendini gösterir. Kimyasal dökücüler geçici rahatlama sağlar ancak boruya zarar verebilir.\n\n724 Tesisatçı olarak İstanbul genelinde 150 bar basınçlı su, kameralı robot ve kimyasal yıkama ile pimaş hatlarının derin temizliği hizmeti sunuyoruz. Önce kamera ile hat durumu incelenir, ardından basınçlı su ve gerekirse spiral makine ile birikim tamamen temizlenir.\n\nRestoran, apartman site yönetimleri ve yağlı atık yoğun mutfaklar için yılda en az bir kez periyodik pimaş yıkama öneriyoruz. Temizlik sonrası kamera ile hattın tamamen açıldığı doğrulanır.\n\nİstanbul'da pimaş yıkama ve gider temizliği için 150 bar basınçlı su, kameralı robot ve profesyonel yağ çözücü ile derin temizlik sunuyoruz. Restoran, site ve iş yerleri için periyodik bakım programı oluşturmak üzere ekibimizle iletişime geçin.",
     aboutHighlights: [
@@ -398,12 +400,12 @@ export const services: Service[] = [
     wideCard: true,
     heroTitle: "İstanbul Pimaş Yıkama ve Gider Temizliği",
     heroDescription:
-      "150 bar basınçlı su ve kameralı robot ile pimaş hatlarınızı derinlemesine temizliyoruz. Kötü koku, yavaş gider ve tekrarlayan tıkanıklığa kalıcı çözüm.",
+      "150 bar basınçlı su ve kameralı robot ile pimaş hatlarınızı derinlemesine temizliyoruz. Kötü koku, yavaş gider ve tekrarlayan tıkanıklığa uygun onarım.",
     icon: "water_pump",
     symptoms: [
       { title: "Kötü Koku", description: "Giderlerden gelen pis koku yağ ve organik birikime işaret eder. Havalandırma hattı da kontrol edilmelidir.", icon: "air" },
       { title: "Yavaş Gider", description: "Boru çapında yağ tabakası ve kireç birikimi akışı yavaşlatır. Basınçlı yıkama ile tabaka tamamen temizlenir.", icon: "hourglass_empty" },
-      { title: "Tekrarlayan Tıkanıklık", description: "Açılan tıkanıklık kısa sürede tekrarlıyorsa boru içi birikim vardır. Yıkama kalıcı çözüm sağlar.", icon: "replay" },
+      { title: "Tekrarlayan Tıkanıklık", description: "Açılan tıkanıklık kısa sürede tekrarlıyorsa boru içi birikim vardır. Yıkama tekrar riskini azaltmaya yardımcı olur.", icon: "replay" },
       { title: "Restoran / Yoğun Mutfak", description: "Yağlı atık yoğun ortamlarda periyodik pimaş yıkama zorunludur. İşletme hijyeni ve tıkanıklık önleme için planlı bakım sunuyoruz.", icon: "restaurant" },
     ],
     processSteps: [
@@ -421,7 +423,7 @@ export const services: Service[] = [
     relatedServices: ["tikaniklik-acma", "pimas-tesisati", "kamerali-tesisat-goruntuleme-ve-onarim"],
     relatedLocations: ["istanbul", "kagithane"],
     seoTitle: "İstanbul Pimaş Yıkama ve Gider Temizliği | 724 Tesisatçı",
-    seoDescription: "İstanbul pimaş yıkama ve gider temizliği. 150 bar basınçlı su, kameralı kontrol, kalıcı çözüm. Restoran ve site hatları için periyodik bakım.",
+    seoDescription: "İstanbul pimaş yıkama ve gider temizliği. 150 bar basınçlı su, kameralı kontrol, uygun onarım. Restoran ve site hatları için periyodik bakım.",
     canonicalPath: "/hizmetler/pimas-yikama",
   },
   {
@@ -429,7 +431,7 @@ export const services: Service[] = [
     title: "Gömme Rezervuar Tamiri",
     slug: "gomme-rezervuar-tamiri",
     shortDescription:
-      "Geberit, Vitra, ECA ve tüm marka gömme rezervuar arıza tespiti, iç takım değişimi, sızıntı onarımı ve montaj. Sürekli su akması, zayıf sifon ve klozet arkası nem sorunlarına kalıcı çözüm.",
+      "Geberit, Vitra, ECA ve tüm marka gömme rezervuar arıza tespiti, iç takım değişimi, sızıntı onarımı ve montaj. Sürekli su akması, zayıf sifon ve klozet arkası nem sorunlarına uygun onarım.",
     longDescription:
       "Gömme rezervuar sistemleri modern banyolarda estetik ve alan tasarrufu sağlar; ancak iç mekanizma arızaları, contasız bağlantılar veya yanlış montaj ciddi su israfına ve duvar içi kaçaklara yol açabilir. Rezervuar kapağı arkasında nem, zayıf sifon sesi, sürekli su akışı veya klozet taşması en sık görülen belirtilerdir.\n\n724 Tesisatçı olarak İstanbul genelinde tüm marka gömme rezervuarlarda arıza tespiti, iç takım (sifon mekanizması, doldurma ventili, contalar) değişimi, sızıntı onarımı ve yeni montaj hizmetleri sunuyoruz. Duvar içi hat bağlantılarını kontrol ediyor, gereksiz kırım yapmadan erişilebilir noktalardan müdahale ediyoruz.\n\nGömme rezervuardan kaynaklanan gizli su kaçakları yüksek su faturası ve komşu dairelere sızıntı riski oluşturur. Erken müdahale hem maliyeti düşürür hem de duvar içi yapısal hasarı önler. İşlem öncesi yazılı teklif sunuyor, kullanılan parçaların marka bilgisini servis formuna işliyoruz.\n\nGeberit, Vitra, ECA, Kale ve diğer marka gömme rezervuar tamiri için Kağıthane merkezli ekiplerimizle İstanbul'un 39 ilçesinde 7/24 servis veriyoruz. Acil sızıntı, zayıf sifon veya mekanizma arızalarında hemen arayın veya WhatsApp üzerinden randevu oluşturun.",
     aboutHighlights: [
@@ -447,7 +449,7 @@ export const services: Service[] = [
       { title: "Sürekli Su Akışı", description: "Rezervuar dolduktan sonra bile su akıyorsa doldurma ventili veya sifon contası arızalıdır. Günde onlarca litre su israfına ve yüksek faturaya yol açar.", icon: "water_drop" },
       { title: "Zayıf veya Çalışmayan Sifon", description: "Sifon tuşuna basıldığında su az geliyor veya hiç gelmiyorsa mekanizma kırılmış veya bağlantı gevşemiş olabilir. Erken müdahale tam arızayı önler.", icon: "plumbing" },
       { title: "Duvar Arkasında Nem", description: "Gömme rezervuar kapağı çevresinde nem, küf veya koku duvar içi sızıntıya işaret eder. Termal kamera ile kaçak noktası tespit edilebilir.", icon: "water_damage" },
-      { title: "Klozet Taşması", description: "Taşma veya geri basma durumunda tıkanıklık veya rezervuar debisi uyumsuzluğu olabilir. Robotik tıkanıklık açma ile birlikte kalıcı çözüm sağlanır.", icon: "water_damage" },
+      { title: "Klozet Taşması", description: "Taşma veya geri basma durumunda tıkanıklık veya rezervuar debisi uyumsuzluğu olabilir. Robotik tıkanıklık açma ile birlikte uygun onarım sağlanır.", icon: "water_damage" },
     ],
     processSteps: [
       { step: 1, title: "Arıza Tespiti", description: "Gömme rezervuar kapağı açılarak iç mekanizma, doldurma ventili, sifon contası ve duvar bağlantıları kontrol edilir. Su akış testi yapılır." },
@@ -457,7 +459,7 @@ export const services: Service[] = [
     ],
     methods: [
       { title: "İç Takım Değişimi", description: "Sifon mekanizması, doldurma ventili, yüzen vanalar ve contaların marka uyumlu parçalarla değişimi. Geberit, Vitra, ECA ve diğer markalarda uzman uygulama." },
-      { title: "Sızıntı Onarımı", description: "Rezervuar-duvar bağlantı contaları, gider bağlantısı ve doldurma hattı sızıntılarının tespiti ve onarımı. Minimum müdahale ile kalıcı çözüm." },
+      { title: "Sızıntı Onarımı", description: "Rezervuar-duvar bağlantı contaları, gider bağlantısı ve doldurma hattı sızıntılarının tespiti ve onarımı. Minimum müdahale ile uygun onarım." },
       { title: "Yeni Montaj", description: "Banyo tadilatı veya yenileme projelerinde gömme rezervuar montajı, klozet bağlantısı ve basınç testi. Standartlara uygun güvenli kurulum." },
     ],
     faq: getServiceFaq("gomme-rezervuar-tamiri"),

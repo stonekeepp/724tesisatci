@@ -3,26 +3,16 @@
 import Link from "next/link";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { navigation } from "@/data/mock/navigation";
-import type { NavItem } from "@/types";
+import { isNavActive, isNavChildActive } from "@/lib/utils/navActive";
 
 interface HeaderNavProps {
   activePath?: string;
 }
 
-function isNavActive(item: NavItem, activePath?: string) {
-  if (!activePath) return false;
-  if (activePath === item.href) return true;
-  return item.children?.some((child) => activePath === child.href || activePath.startsWith(`${child.href}/`)) ?? false;
-}
-
-function isChildActive(href: string, activePath?: string) {
-  if (!activePath) return false;
-  return activePath === href || activePath.startsWith(`${href}/`);
-}
-
 export function HeaderNav({ activePath }: HeaderNavProps) {
   const [openMenu, setOpenMenu] = useState<string | null>(null);
   const navRef = useRef<HTMLElement>(null);
+  const headerItems = navigation.header;
 
   const closeMenus = useCallback(() => setOpenMenu(null), []);
 
@@ -47,8 +37,8 @@ export function HeaderNav({ activePath }: HeaderNavProps) {
 
   return (
     <nav ref={navRef} className="hidden lg:flex flex-nowrap items-center justify-center gap-3 xl:gap-5 2xl:gap-7 min-w-0">
-      {navigation.header.map((item) => {
-        const active = isNavActive(item, activePath);
+      {headerItems.map((item) => {
+        const active = isNavActive(item, activePath, headerItems);
         const hasChildren = Boolean(item.children?.length);
 
         if (!hasChildren) {
@@ -110,7 +100,7 @@ export function HeaderNav({ activePath }: HeaderNavProps) {
                       href={child.href}
                       onClick={closeMenus}
                       className={
-                        isChildActive(child.href, activePath)
+                        isNavChildActive(child.href, activePath)
                           ? "block px-4 py-2 font-body-md text-body-md text-secondary bg-secondary-container/30 font-medium"
                           : "block px-4 py-2 font-body-md text-body-md text-on-surface-variant hover:bg-surface-container hover:text-primary transition-colors"
                       }

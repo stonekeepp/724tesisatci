@@ -18,7 +18,7 @@ export const metadata = buildMetadata(staticPageSeo.hizmetler);
 const trustPoints = [
   { icon: "schedule", label: "7/24 Acil Servis" },
   { icon: "radar", label: "Cihazlı Tespit" },
-  { icon: "verified", label: "Garantili İşçilik" },
+  { icon: "verified", label: "Yazılı Servis Formu" },
   { icon: "receipt_long", label: "Yazılı Teklif" },
 ] as const;
 
@@ -169,7 +169,7 @@ export default async function HizmetlerPage() {
               Kapsamlı Tesisat Hizmetleri
             </h2>
             <p className="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
-              Her hizmetimizde termal kamera, akustik dinleme ve robotik cihazlar gibi profesyonel ekipmanlar kullanıyor; keşif sonrası yazılı teklif sunarak şeffaf, garantili ve kalıcı çözümler sağlıyoruz.
+              Her hizmetimizde termal kamera, akustik dinleme ve robotik cihazlar gibi profesyonel ekipmanlar kullanıyor; keşif sonrası yazılı teklif sunarak şeffaf süreç ve yazılı servis formu ile ilerliyoruz.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -221,7 +221,7 @@ export default async function HizmetlerPage() {
             Hangi Hizmete İhtiyacınız Var?
           </h2>
           <p className="font-body-lg text-body-lg text-on-surface-variant mb-8 max-w-2xl mx-auto leading-relaxed">
-            Sorununuzu bilmiyorsanız endişelenmeyin — ekibimiz telefonda veya WhatsApp üzerinden yönlendirme yapar. İstanbul genelinde 7/24 acil servis; ortalama 30 dakikada kapınızdayız.
+            Sorununuzu bilmiyorsanız endişelenmeyin — ekibimiz telefonda veya WhatsApp üzerinden yönlendirme yapar. İstanbul genelinde 7/24 acil servis; trafik ve ekip uygunluğuna göre yönlendirme yapılır.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a

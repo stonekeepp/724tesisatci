@@ -11,14 +11,14 @@ export const faqs: FAQItem[] = [
   {
     question: "Acil durumlarda ne kadar sürede gelirsiniz?",
     answer:
-      "Kağıthane merkezli operasyonumuz sayesinde merkez ilçelere ortalama 30-45 dakika, İstanbul geneline ise 45-90 dakika içinde ulaşıyoruz. Acil su kaçağı, geri taşma ve kombi arızalarında öncelikli yönlendirme yapılır.",
+      "Kağıthane merkezli operasyonumuz sayesinde trafik ve ekip uygunluğuna göre adresinize yönlendirme yapılır. Acil su kaçağı, geri taşma ve kombi arızalarında öncelikli yönlendirme uygulanır.",
     category: "genel",
     relatedPage: "/iletisim",
   },
   {
-    question: "Hizmetleriniz garantili mi?",
+    question: "Hizmetleriniz için belge veriyor musunuz?",
     answer:
-      "Evet. Tüm işçilik hizmetlerimiz yazılı garanti belgesi ile teslim edilir. Kullanılan malzemeler de üretici garantisi kapsamındadır; servis formunda marka ve garanti bilgileri ayrıca belirtilir.",
+      "Evet. Keşif sonrası yazılı teklif sunuyoruz; işlem tamamlandığında yapılan iş ve kullanılan malzemeler yazılı servis formunda belirtilir. Malzeme üretici garantisi varsa formda ayrıca not edilir.",
     category: "genel",
   },
   {
@@ -101,14 +101,14 @@ export const faqs: FAQItem[] = [
   {
     question: "Tuvalet tıkanıklığı acil müdahale gerektirir mi?",
     answer:
-      "Evet. Tuvalet tıkanıklığında geri taşma riski yüksektir ve hızlı müdahale gerekir. Kimyasal dökücü kullanmak borulara zarar verebilir; robotik tıkanıklık açma ile güvenli ve kalıcı çözüm sağlıyoruz.",
+      "Evet. Tuvalet tıkanıklığında geri taşma riski yüksektir ve hızlı müdahale gerekir. Kimyasal dökücü kullanmak borulara zarar verebilir; robotik tıkanıklık açma ile güvenli müdahale ve tekrar riskini azaltmaya yönelik onarım planı sunuyoruz.",
     category: "tikaniklik",
     relatedPage: "/hizmetler/tikaniklik-acma",
   },
   {
     question: "Lavabo tıkanıklığını kendi başıma açabilir miyim?",
     answer:
-      "Hafif tıkanıklıklarda pompaj veya sıcak su denenebilir; ancak tekrarlayan sorunlarda boru içinde birikim vardır. Yanlış müdahale boru eklem yerlerine zarar verebilir. Kalıcı çözüm için profesyonel tıkanıklık açma hizmeti almanızı öneririz.",
+      "Hafif tıkanıklıklarda pompaj veya sıcak su denenebilir; ancak tekrarlayan sorunlarda boru içinde birikim vardır. Yanlış müdahale boru eklem yerlerine zarar verebilir. Tekrar riskini azaltmaya yönelik profesyonel tıkanıklık açma hizmeti almanızı öneririz.",
     category: "tikaniklik",
     relatedPage: "/hizmetler/tikaniklik-acma",
   },

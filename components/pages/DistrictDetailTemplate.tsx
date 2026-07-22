@@ -3,6 +3,7 @@ import type { Location, Neighborhood, Service } from "@/types";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { ContextualLinks } from "@/components/ui/ContextualLinks";
 import { LocationHeroImage } from "@/components/ui/LocationHeroImage";
+import { getDistrictArrivalDisplay } from "@/data/mock/districtArrivalTimes";
 import { localServiceLandingPages } from "@/data/mock/localServiceLandingPages";
 import {
   getPhoneHref,
@@ -25,6 +26,7 @@ export function DistrictDetailTemplate({
 }: DistrictDetailTemplateProps) {
   const isCity = location.slug === "istanbul";
   const isHQ = location.isHeadquarters;
+  const arrivalDisplay = getDistrictArrivalDisplay(location.slug);
   const heroTitle = isCity
     ? "İstanbul Tesisatçı"
     : isHQ
@@ -33,6 +35,9 @@ export function DistrictDetailTemplate({
   const heroSubtitle = isHQ
     ? "19 Mahalle · Servis Yönlendirme Hub’ı"
     : "7/24 Profesyonel Tesisat";
+  const heroTimingNote = isHQ
+    ? "Kağıthane odaklı yönlendirme"
+    : "Trafik ve ekip uygunluğuna göre planlanır";
   const localLandingLinks = localServiceLandingPages
     .filter((page) => page.indexable !== false)
     .map((page) => ({
@@ -69,32 +74,45 @@ export function DistrictDetailTemplate({
                 &apos;na göz atın.
               </p>
             )}
-            {location.indexable === false && (
-              <div className="mb-8 p-4 rounded-xl border border-outline-variant bg-surface-container-low">
-                <p className="font-body-md text-sm text-on-surface-variant mb-3">
-                  Bu bölge uzak ilçe kapsamındadır. En hızlı müdahale için ana
-                  hizmet bölgelerimizi inceleyin:
+            {!isHQ && (
+              <div className="mb-8 p-4 rounded-xl border border-outline-variant bg-surface-container-low space-y-3">
+                <p className="font-body-md text-sm text-on-surface-variant leading-relaxed">
+                  {isCity ? (
+                    <>
+                      İstanbul&apos;un 39 ilçesinin tamamında 7/24 tesisat hizmeti
+                      veriyoruz. Randevu ve varış saati trafik ile ekip
+                      uygunluğuna göre planlanır.
+                    </>
+                  ) : (
+                    <>
+                      <span className="font-semibold text-on-surface">
+                        {location.title}
+                      </span>{" "}
+                      ilçesinde de 7/24 tesisat hizmeti veriyoruz. Tahmini
+                      planlama aralığı yaklaşık{" "}
+                      <span className="font-semibold text-secondary">
+                        {arrivalDisplay}
+                      </span>
+                      ; kesin saat yalnızca trafik ve ekip uygunluğuna göre
+                      netleşir.
+                    </>
+                  )}
                 </p>
-                <div className="flex flex-wrap gap-3">
+                {!isCity && location.shortDescription ? (
+                  <p className="font-body-md text-sm text-on-surface-variant leading-relaxed border-t border-outline-variant/60 pt-3">
+                    <span className="font-semibold text-on-surface">Yerel not: </span>
+                    {location.shortDescription}
+                  </p>
+                ) : null}
+                <p className="font-body-md text-sm text-on-surface-variant">
+                  Birincil yerel hub:{" "}
                   <Link
-                    href="/hizmet-bolgeleri/kagithane"
-                    className="inline-flex items-center gap-1 text-secondary font-label-md text-sm hover:text-on-secondary-container transition-colors"
+                    href="/"
+                    className="text-secondary font-label-md hover:text-primary transition-colors"
                   >
-                    Kağıthane Tesisat Hizmet Bölgeleri
-                    <span className="material-symbols-outlined text-sm" aria-hidden="true">
-                      arrow_forward
-                    </span>
+                    Kağıthane tesisatçı
                   </Link>
-                  <Link
-                    href="/hizmet-bolgeleri/istanbul"
-                    className="inline-flex items-center gap-1 text-secondary font-label-md text-sm hover:text-on-secondary-container transition-colors"
-                  >
-                    İstanbul Geneli
-                    <span className="material-symbols-outlined text-sm" aria-hidden="true">
-                      arrow_forward
-                    </span>
-                  </Link>
-                </div>
+                </p>
               </div>
             )}
             {location.stats && location.stats.length > 0 && (
@@ -116,7 +134,7 @@ export function DistrictDetailTemplate({
             )}
             <div className="flex flex-wrap gap-3 mb-8">
               {[
-                { icon: "verified", label: "Garantili İşçilik" },
+                { icon: "verified", label: "Yazılı Servis Formu" },
                 { icon: "schedule", label: "7/24 Acil Servis" },
                 { icon: "radar", label: "Cihazlı Tespit" },
               ].map((item) => (
@@ -163,7 +181,9 @@ export function DistrictDetailTemplate({
               title={location.title}
               subtitle={heroSubtitle}
               slug={location.slug}
-              className="w-full h-full object-cover"
+              timingNote={heroTimingNote}
+              imageAlt={`${location.title} bölgesinde profesyonel tesisat hizmeti`}
+              className="w-full h-full"
             />
           </div>
         </div>

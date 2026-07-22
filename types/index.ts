@@ -103,6 +103,7 @@ export interface Service {
   seoTitle: string;
   seoDescription: string;
   canonicalPath: string;
+  ogImage?: string;
   featured?: boolean;
   wideCard?: boolean;
   aboutHighlights?: string[];

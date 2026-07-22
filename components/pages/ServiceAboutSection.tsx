@@ -14,9 +14,9 @@ interface ServiceAboutSectionProps {
 
 const trustStats = [
   { icon: "schedule", label: "7/24 Acil Servis" },
-  { icon: "verified", label: "Garantili İşçilik" },
+  { icon: "verified", label: "Yazılı Servis Formu" },
   { icon: "location_on", label: "İstanbul Geneli" },
-  { icon: "speed", label: "~30 Dk Varış" },
+  { icon: "speed", label: "Ekip ve Trafik Durumuna Göre" },
 ] as const;
 
 export function ServiceAboutSection({

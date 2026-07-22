@@ -98,7 +98,7 @@ export const homeFaqs: FAQItem[] = [
   {
     question: "Kombi basıncı sürekli düşüyorsa ne yapmalıyım?",
     answer:
-      "Sürekli basınç kaybı çoğu zaman gizli su kaçağına işaret eder. Kombi servisi ile birlikte termal kamera destekli kaçak tespiti yaparak kalıcı çözüm sağlıyoruz.",
+      "Sürekli basınç kaybı çoğu zaman gizli su kaçağına işaret eder. Kombi servisi ile birlikte termal kamera destekli kaçak tespiti yaparak uygun onarım planı sunuyoruz.",
     category: "genel",
     relatedPage: "/hizmetler/kombi-servisi-ve-tesisati",
   },

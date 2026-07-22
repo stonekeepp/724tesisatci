@@ -9,7 +9,12 @@ export async function submitContactForm(data: ContactFormData) {
   }
 
   const lead = await getContactRepository().create(parsed.data);
-  await emailService.sendContactNotification(parsed.data);
+
+  try {
+    await emailService.sendContactNotification(parsed.data);
+  } catch (error) {
+    console.error("[contactService] Email notification failed:", error);
+  }
 
   return { success: true as const, data: lead };
 }

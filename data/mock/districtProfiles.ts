@@ -75,7 +75,7 @@ export const districtProfiles: Record<
   },
   sariyer: {
     description:
-      "Sarıyer'in villaları, site konutları ve Boğaz hattı yapılarında kalorifer, su tesisatı ve dış hat arızalarına özel çözümler sunuyoruz. Maslak ve Tarabya hattında cihazlı tespit ve kalıcı onarım yapıyoruz.",
+      "Sarıyer'in villaları, site konutları ve Boğaz hattı yapılarında kalorifer, su tesisatı ve dış hat arızalarına özel çözümler sunuyoruz. Maslak ve Tarabya hattında cihazlı tespit ve uygun onarım yapıyoruz.",
     shortDescription:
       "Sarıyer villa ve site tesisatçı. Boğaz hattı uzmanlığı, 7/24 destek.",
   },
@@ -123,7 +123,7 @@ export const districtProfiles: Record<
   },
   atasehir: {
     description:
-      "Ataşehir'deki site yönetimli konutlar ve plaza binalarında kalorifer dengesizliği, gizli kaçak ve ortak alan tesisat arızalarına profesyonel çözüm sunuyoruz. Site ve bağımsız bölüm müdahalelerinde yazılı teklif ve garanti sağlıyoruz.",
+      "Ataşehir'deki site yönetimli konutlar ve plaza binalarında kalorifer dengesizliği, gizli kaçak ve ortak alan tesisat arızalarına profesyonel çözüm sunuyoruz. Site ve bağımsız bölüm müdahalelerinde keşif sonrası yazılı teklif sunuyoruz.",
     shortDescription:
       "Ataşehir site ve plaza tesisatı. Yönetim planlı bakım, 7/24 acil.",
   },
@@ -171,7 +171,7 @@ export const districtProfiles: Record<
   },
   sultanbeyli: {
     description:
-      "Sultanbeyli'deki yoğun konut yerleşiminde tıkanıklık, su kaçağı ve kombi arızalarına mobil ekip gönderiyoruz. Yeni bina ve eski yapı stoğunda kameralı tesisat kontrolü ile kesin teşhis sunuyoruz.",
+      "Sultanbeyli'deki yoğun konut yerleşiminde tıkanıklık, su kaçağı ve kombi arızalarına mobil ekip gönderiyoruz. Yeni bina ve eski yapı stoğunda kameralı tesisat kontrolü ile cihazlı tespit sunuyoruz.",
     shortDescription:
       "Sultanbeyli konut tesisatçı. Kameralı kontrol, yazılı teklif.",
   },
@@ -213,19 +213,19 @@ export const districtProfiles: Record<
   },
   buyukcekmece: {
     description:
-      "Büyükçekmece gölü çevresi ve sahil konutlarında su kaçağı, tesisat korozonu ve dış hat arızalarına uzak ilçe planlaması ile müdahale ediyoruz. Varış süresi önceden bildirilir; acil çağrılarda öncelikli sıra uygulanır.",
+      "Büyükçekmece gölü çevresi ve sahil konutlarında su kaçağı, tesisat korozonu ve dış hat arızalarına mobil ekip yönlendiriyoruz. Varış süresi trafik ve ekip uygunluğuna göre planlanır; acil çağrılarda öncelikli sıra uygulanır.",
     shortDescription:
       "Büyükçekmece göl çevresi tesisatçı. Planlı varış, 7/24 servis.",
   },
   catalca: {
     description:
-      "Çatalca'nın geniş kırsal alanında konut ve ticari yapılarda tesisat arızalarına uzak mesafe ekibi yönlendirmesi yapıyoruz. Randevulu servis planlaması ile varış süresi önceden paylaşılır.",
+      "Çatalca'nın geniş kırsal alanında konut ve ticari yapılarda tesisat arızalarına mobil ekip yönlendiriyoruz. Randevu ve varış saati trafik ile ekip uygunluğuna göre planlanır.",
     shortDescription:
       "Çatalca geniş alan tesisat servisi. Randevulu planlama.",
   },
   silivri: {
     description:
-      "Silivri sahil ve iç kesim konutlarında su tesisatı, kombi ve pimaş arızalarına uzak ilçe mobil ekibi gönderiyoruz. Yazlık ve sürekli konut yapılarında sezon öncesi bakım hizmeti de sunuyoruz.",
+      "Silivri sahil ve iç kesim konutlarında su tesisatı, kombi ve pimaş arızalarına mobil ekip yönlendiriyoruz. Yazlık ve sürekli konut yapılarında sezon öncesi bakım hizmeti de sunuyoruz.",
     shortDescription:
       "Silivri sahil ve kırsal tesisatçı. Sezon bakımı, acil servis.",
   },

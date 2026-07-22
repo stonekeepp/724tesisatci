@@ -10,7 +10,7 @@ export const commonServiceFaq: FAQItem[] = [
   {
     question: "İstanbul'un hangi ilçelerine hizmet veriyorsunuz?",
     answer:
-      "Kağıthane merkezli ekiplerimizle İstanbul'un Avrupa ve Anadolu Yakası'ndaki tüm ilçelere 7/24 servis yönlendirmesi yapıyoruz. Acil durumlarda en yakın mobil ekibimiz ortalama 30 dakika içinde adresinize ulaşır.",
+      "Kağıthane merkezli ekiplerimizle İstanbul'un Avrupa ve Anadolu Yakası'ndaki tüm ilçelere 7/24 servis yönlendirmesi yapıyoruz. Acil durumlarda trafik ve ekip uygunluğuna göre adresinize yönlendirme yapılır.",
     category: "genel",
   },
   {
@@ -70,7 +70,7 @@ export const serviceSpecificFaq: Record<string, FAQItem[]> = {
     {
       question: "Kombi basıncı neden sürekli düşer?",
       answer:
-        "Sürekli basınç kaybı gizli su kaçağı, genleşme tankı arızası, otomatik doldurma vanası sorunu veya radyatör vanası kaçağından kaynaklanabilir. Dijital arıza tespiti ile kaynak belirlenir ve kalıcı onarım yapılır.",
+        "Sürekli basınç kaybı gizli su kaçağı, genleşme tankı arızası, otomatik doldurma vanası sorunu veya radyatör vanası kaçağından kaynaklanabilir. Dijital arıza tespiti ile kaynak belirlenir ve uygun onarım planlanır.",
       category: "kombi",
     },
     {
@@ -196,13 +196,13 @@ export const serviceSpecificFaq: Record<string, FAQItem[]> = {
     {
       question: "Tuvalet tıkanıklığı acil müdahale gerektirir mi?",
       answer:
-        "Geri taşma durumunda acil müdahale şarttır; alt kata ve komşu dairelere hasar riski vardır. 7/24 ekibimiz ortalama 30 dakika içinde adresinize ulaşır.",
+        "Geri taşma durumunda acil müdahale şarttır; alt kata ve komşu dairelere hasar riski vardır. 7/24 ekibimiz trafik ve ekip uygunluğuna göre adresinize yönlendirilir.",
       category: "tikaniklik",
     },
     {
       question: "Tekrarlayan tıkanıklık neden olur?",
       answer:
-        "Yağ birikimi, boru eğim hatası, kök girişi veya boru hasarı tekrarlayan tıkanıklığa yol açar. Kameralı görüntüleme ile kök sebep tespit edilerek kalıcı çözüm planlanır.",
+        "Yağ birikimi, boru eğim hatası, kök girişi veya boru hasarı tekrarlayan tıkanıklığa yol açar. Kameralı görüntüleme ile kök sebep tespit edilerek onarım planı hazırlanır.",
       category: "tikaniklik",
     },
     {
@@ -310,7 +310,7 @@ export const serviceSpecificFaq: Record<string, FAQItem[]> = {
     {
       question: "Alt kata su sızıntısı pimaş arızası mı?",
       answer:
-        "Evet, pimaş ek yerleri, manşon veya boru çatlaklarından sızıntı alt kata nem ve hasar verir. Kameralı teşhis ile nokta tespit edilerek kalıcı onarım yapılır.",
+        "Evet, pimaş ek yerleri, manşon veya boru çatlaklarından sızıntı alt kata nem ve hasar verir. Kameralı teşhis ile nokta tespit edilerek uygun onarım yapılır.",
       category: "pimas",
     },
     {
@@ -322,7 +322,7 @@ export const serviceSpecificFaq: Record<string, FAQItem[]> = {
     {
       question: "Pimaş hattında koku neden oluşur?",
       answer:
-        "Sifon su kaybı, kırık boru, hatalı bağlantı veya boru içi birikim koku yapar. Kameralı kontrol ile kaynak belirlenir; onarım veya yıkama ile kalıcı çözüm sağlanır.",
+        "Sifon su kaybı, kırık boru, hatalı bağlantı veya boru içi birikim koku yapar. Kameralı kontrol ile kaynak belirlenir; onarım veya yıkama ile tekrar riskini azaltmaya yönelik müdahale uygulanır.",
       category: "pimas",
     },
     {
@@ -430,7 +430,7 @@ export const serviceSpecificFaq: Record<string, FAQItem[]> = {
     {
       question: "Gömme rezervuar sızıntısı su kaçağı sayılır mı?",
       answer:
-        "Evet. Duvar içi rezervuar sızıntıları gizli su kaçağı oluşturur ve su faturasını artırır. Termal kamera ile kaçak noktası tespit edilerek kalıcı onarım sağlanır.",
+        "Evet. Duvar içi rezervuar sızıntıları gizli su kaçağı oluşturur ve su faturasını artırır. Termal kamera ile kaçak noktası tespit edilerek uygun onarım planlanır.",
       category: "gomme-rezervuar",
     },
     {
@@ -456,7 +456,7 @@ export const serviceSpecificFaq: Record<string, FAQItem[]> = {
     {
       question: "Damlayan musluk tamiri mi yoksa değişim mi gerekir?",
       answer:
-        "Conta, kartuş veya aeratör arızalarında tamir yeterli olabilir. Paslanmış, kırık veya çok eski armatürlerde yeni batarya montajı daha ekonomik ve kalıcı çözümdür.",
+        "Conta, kartuş veya aeratör arızalarında tamir yeterli olabilir. Paslanmış, kırık veya çok eski armatürlerde yeni batarya montajı çoğu zaman daha ekonomik ve uzun ömürlü bir seçenektir.",
       category: "batarya-musluk",
     },
     {

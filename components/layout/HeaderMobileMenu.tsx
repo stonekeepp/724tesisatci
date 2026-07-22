@@ -8,31 +8,16 @@ import {
   getWhatsAppHref,
   siteSettings,
 } from "@/data/mock/siteSettings";
-import type { NavItem } from "@/types";
+import { isNavActive, isNavChildActive } from "@/lib/utils/navActive";
 
 interface HeaderMobileMenuProps {
   activePath?: string;
 }
 
-function isNavActive(item: NavItem, activePath?: string) {
-  if (!activePath) return false;
-  if (activePath === item.href) return true;
-  return (
-    item.children?.some(
-      (child) =>
-        activePath === child.href || activePath.startsWith(`${child.href}/`)
-    ) ?? false
-  );
-}
-
-function isChildActive(href: string, activePath?: string) {
-  if (!activePath) return false;
-  return activePath === href || activePath.startsWith(`${href}/`);
-}
-
 export function HeaderMobileMenu({ activePath }: HeaderMobileMenuProps) {
   const [open, setOpen] = useState(false);
   const [expanded, setExpanded] = useState<string | null>(null);
+  const headerItems = navigation.header;
 
   const close = useCallback(() => {
     setOpen(false);
@@ -91,8 +76,8 @@ export function HeaderMobileMenu({ activePath }: HeaderMobileMenuProps) {
             aria-label="Mobil menü"
           >
             <nav className="px-margin-mobile py-4 flex flex-col gap-1">
-              {navigation.header.map((item) => {
-                const active = isNavActive(item, activePath);
+              {headerItems.map((item) => {
+                const active = isNavActive(item, activePath, headerItems);
                 const hasChildren = Boolean(item.children?.length);
                 const isExpanded = expanded === item.href;
 
@@ -149,7 +134,7 @@ export function HeaderMobileMenu({ activePath }: HeaderMobileMenuProps) {
                             href={child.href}
                             onClick={close}
                             className={
-                              isChildActive(child.href, activePath)
+                              isNavChildActive(child.href, activePath)
                                 ? "px-4 py-2 font-body-md text-body-md text-secondary bg-secondary-container/20 rounded-lg font-medium"
                                 : "px-4 py-2 font-body-md text-body-md text-on-surface-variant hover:bg-surface-container hover:text-primary rounded-lg transition-colors"
                             }

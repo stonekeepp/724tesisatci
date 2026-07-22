@@ -76,7 +76,7 @@ export default async function PublicLandingPage({ params }: Props) {
     ].filter(Boolean);
 
     return (
-      <SiteLayout activePath="/hizmet-bolgeleri/kagithane">
+      <SiteLayout activePath={localLanding.canonicalPath}>
         <JsonLdScript data={schemas} />
         <LocalServiceLandingTemplate
           landing={localLanding}

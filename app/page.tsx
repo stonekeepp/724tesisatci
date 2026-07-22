@@ -85,7 +85,7 @@ const processSteps = [
     step: "4",
     title: "Profesyonel Onarım",
     description:
-      "Yazılı teklif onayınız sonrası kalıcı onarım veya temizlik işlemi temiz işçilik standardıyla uygulanır.",
+      "Yazılı teklif onayınız sonrası uygun onarım veya temizlik işlemi temiz işçilik standardıyla uygulanır.",
     active: false,
   },
   {
@@ -141,9 +141,14 @@ export default async function HomePage() {
               <span className="inline-flex flex-wrap items-center gap-x-2.5 gap-y-1">
                 <span>Kağıthane Merkezli</span>
                 <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-secondary text-on-secondary font-extrabold shadow-md ring-2 ring-secondary/25 whitespace-nowrap shrink-0">
-                  <span className="material-symbols-outlined text-[20px] leading-none" aria-hidden="true">
-                    schedule
-                  </span>
+                  <svg
+                    className="w-5 h-5 shrink-0"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.2 3.2.8-1.3-4.5-2.7V7z" />
+                  </svg>
                   7/24
                 </span>
               </span>{" "}
@@ -254,7 +259,7 @@ export default async function HomePage() {
               Hangi tesisat sorununu yaşıyorsunuz?
             </h2>
             <p className="font-body-lg text-body-lg text-on-primary-container max-w-2xl mx-auto leading-relaxed">
-              Yaşadığınız sorunu seçin; ilgili hizmet sayfasına yönlendirilir, cihazlı tespit ve kalıcı çözüm seçeneklerini inceleyebilirsiniz.
+              Yaşadığınız sorunu seçin; ilgili hizmet sayfasına yönlendirilir, cihazlı tespit ve onarım planı seçeneklerini inceleyebilirsiniz.
             </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">

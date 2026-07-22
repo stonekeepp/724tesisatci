@@ -193,7 +193,7 @@ function ServiceDetailBody({
                 {displayTitle} Belirtileri — Ne Zaman Müdahale Gerekir?
               </h2>
               <p className="font-body-lg text-body-lg text-on-surface-variant max-w-3xl mx-auto">
-                {displayTitle} sorunları genellikle küçük belirtilerle başlar ve ihmal edildiğinde komşu dairelere, yapıya ve bütçenize ciddi zarar verebilir. Aşağıdaki işaretleri fark ettiğinizde erken müdahale hem maliyeti düşürür hem de kalıcı çözüm sağlar.
+                {displayTitle} sorunları genellikle küçük belirtilerle başlar ve ihmal edildiğinde komşu dairelere, yapıya ve bütçenize ciddi zarar verebilir. Aşağıdaki işaretleri fark ettiğinizde erken müdahale hem maliyeti düşürür hem de tekrar riskini azaltmaya yardımcı olur.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

@@ -48,7 +48,7 @@ export const adLandingPages: AdLandingPage[] = [
       "Termal kamera, akustik dinleme ve nem ölçer ile kırmadan su kaçağı tespiti. Noktasal onarım, gereksiz kırım yok, 7/24 acil servis.",
     seoTitle: "Su Kaçağı Tespiti İstanbul | 7/24 Kırmadan",
     seoDescription:
-      "İstanbul su kaçağı tespiti: termal kamera ile kırmadan noktasal tespit, yazılı rapor, garantili onarım. 7/24 acil ekip.",
+      "İstanbul su kaçağı tespiti: termal kamera ile kırmadan noktasal tespit, yazılı rapor, yazılı servis formu. 7/24 acil ekip.",
     breadcrumbLabel: "Su Kaçağı Tespiti",
     displayTitle: "Su Kaçağı Tespiti",
     noindex: true,

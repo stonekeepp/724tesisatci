@@ -83,7 +83,9 @@ export function NeighborhoodDetailTemplate({
               title={neighborhood.title}
               subtitle={`${district.title} · Mahalle`}
               slug={neighborhood.slug}
-              className="w-full h-full object-cover"
+              timingNote="Trafik ve ekip uygunluğuna göre planlanır"
+              imageAlt={`${neighborhood.title} mahallesinde tesisat hizmeti`}
+              className="w-full h-full"
             />
           </div>
         </div>

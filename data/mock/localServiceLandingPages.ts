@@ -148,7 +148,7 @@ export const localServiceLandingPages: LocalServiceLanding[] = [
     heroDescription:
       "Ana hat geri tepmesi, giderlerden koku, bodrum taşması veya sık tekrarlayan tıkanıklıklarda pimaş hattı cihazla açılır; gerekirse eğim, kök ve çökme için kamera kullanılır.",
     intro:
-      "Pimaş sorunu tek lavabo tıkanıklığından farklıdır; apartman ana giderinde yağ, kireç, kök girişi veya hat çökmesi olabilir. Hamidiye ve Emniyet Evleri çevresindeki binalarda kolon hattı ve bodrum çıkışı birlikte değerlendirilir.",
+      "Pimaş sorunu tek lavabo tıkanıklığından farklıdır; apartman ana giderinde yağ, kireç, kök girişi veya hat çökmesi olabilir. Hamidiye ve Emniyet Evleri çevresindeki binalarda kolon hattı ve bodrum çıkışı birlikte değerlendirilir. Kağıthane merkezli ekibimiz aynı gün cihazlı açma ve gerekirse kameralı kontrol planlar; genel süreç için pimaş yıkama hizmet sayfasını, bakım için periyodik tesisat bakımı rehberini inceleyebilirsiniz.",
     serviceType: "Pimaş açma",
     canonicalPath: "/kagithane-pimas-acma",
     imageAlt: "Kağıthane'de kameralı kontrol ile pimaş açma hizmeti",
@@ -172,12 +172,23 @@ export const localServiceLandingPages: LocalServiceLanding[] = [
       {
         title: "Hamidiye ve Emniyet Evleri apartman hatları",
         body:
-          "Hamidiye ve Emniyet Evleri'nde apartman ana gideri ve kolon hattı ortak kullanım nedeniyle daha hızlı yüklenir. Ortabayır'daki eski pimaş hatlarında ise daralma ve ek yeri sorunları sık görülür.",
+          "Hamidiye ve Emniyet Evleri'nde apartman ana gideri ve kolon hattı ortak kullanım nedeniyle daha hızlı yüklenir. Ortabayır'daki eski pimaş hatlarında ise daralma ve ek yeri sorunları sık görülür. Çeliktepe ve Seyrantepe sanayi-konut karışık bölgelerde yağ birikimi daha hızlı oluşabilir.",
+      },
+      {
+        title: "Cihazlı açma adımları",
+        body:
+          "Önce kullanım durdurulur, ana hat erişim noktası belirlenir. Robot veya spiral ile tıkanıklık temizlenir; gerekirse basınçlı yıkama uygulanır. Tekrar riski yüksekse kamera kaydı alınır ve yazılı bilgilendirme yapılır.",
+        items: [
+          "Erişim noktası ve ana hat tespiti",
+          "Robot / spiral ile açma",
+          "Gerekirse basınçlı yıkama",
+          "Kamera kontrolü ve yazılı özet",
+        ],
       },
       {
         title: "Pimaş hattında maliyeti artıran durumlar",
         body:
-          "Ana hat uzunluğu, tıkanıklığın derinliği, kamera ihtiyacı, basınçlı yıkama ve kök/çökme şüphesi maliyeti artırır. Tekrarlayan hatlarda yalnızca açma değil sebep analizi de yapılır.",
+          "Ana hat uzunluğu, tıkanıklığın derinliği, kamera ihtiyacı, basınçlı yıkama ve kök/çökme şüphesi maliyeti artırır. Tekrarlayan hatlarda yalnızca açma değil sebep analizi de yapılır. Keşif sonrası net fiyat yazılı teklifle paylaşılır.",
       },
     ],
     faq: [
@@ -198,6 +209,12 @@ export const localServiceLandingPages: LocalServiceLanding[] = [
         answer:
           "Birikim sık nedendir; sifon veya havalandırma da kokuyu artırabilir. Akış ve gerekirse kamera ile sebep ayrıştırılır.",
         category: "Koku",
+      },
+      {
+        question: "Kağıthane'de aynı gün pimaş açma yapılır mı?",
+        answer:
+          "Trafik ve ekip uygunluğuna göre aynı gün cihazlı müdahale planlanır. Telefon veya WhatsApp ile mahalle ve belirtiyi iletmeniz yönlendirmeyi hızlandırır.",
+        category: "Süre",
       },
     ],
     relatedLocalSlugs: [

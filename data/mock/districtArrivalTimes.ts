@@ -91,18 +91,24 @@ const districtArrivalRanges = Object.fromEntries(
   })
 ) as Record<string, { min: number; max: number; display: string }>;
 
-/** Çeliktepe merkezinden max varış bu eşiğin altındaki ilçeler indexlenir */
-export const INDEXABLE_ARRIVAL_MAX_MINUTES = 45;
-
-const TIER_A_DISTRICT_SLUGS = new Set(["istanbul", "kagithane"]);
-
 export function getDistrictArrivalMaxMinutes(slug: string): number {
   return districtArrivalRanges[slug]?.max ?? 60;
 }
 
+/** Tahmini yönlendirme aralığı (trafik/ekip ile değişir); kesin vaat değildir. */
+export function getDistrictArrivalDisplay(slug: string): string {
+  return districtArrivalRanges[slug]?.display ?? "trafik ve ekibe göre";
+}
+
+/**
+ * Indexable ilçe allowlist.
+ * Yeni ilçe eklemek için: özgün yerel içerik, doğrulanabilir hizmet kapsamı
+ * ve ilçeye özel kanıt/vaka içeriği gerekir.
+ */
+export const INDEXABLE_DISTRICT_ALLOWLIST = new Set(["kagithane"]);
+
 export function isDistrictIndexable(slug: string): boolean {
-  if (TIER_A_DISTRICT_SLUGS.has(slug)) return true;
-  return getDistrictArrivalMaxMinutes(slug) <= INDEXABLE_ARRIVAL_MAX_MINUTES;
+  return INDEXABLE_DISTRICT_ALLOWLIST.has(slug);
 }
 
 /** Mahalle koordinatları (yaklaşık) */

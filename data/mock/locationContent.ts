@@ -133,7 +133,7 @@ const neighborhoodDescriptions: Record<string, string> = {
   gursel:
     "Konut ve ticaret alanlarında cihazlı tespit ve şeffaf tesisat onarımı yapıyoruz. Ticari işletme ve evsel müdahalelerde yazılı teklif sunuyoruz.",
   gultepe:
-    "Eski yapı stoğunda kırmadan cihazla su kaçağı tespiti ve tesisat yenileme uzmanlığı sunuyoruz. Eski boru hatlarında kameralı kontrol ile kesin teşhis yapıyoruz.",
+    "Eski yapı stoğunda kırmadan cihazla su kaçağı tespiti ve tesisat yenileme uzmanlığı sunuyoruz. Eski boru hatlarında kameralı kontrol ile cihazlı tespit yapıyoruz.",
   hamidiye:
     "Yoğun yerleşimde acil tıkanıklık açma, su kaçağı tespiti ve tesisat bakımı hizmetleri veriyoruz. Dar sokak erişiminde mobil ekip planlaması uyguluyoruz.",
   harmantepe:
@@ -212,7 +212,7 @@ function buildDistrictLocation(d: IstanbulDistrictMeta): Location {
         ]
       : [
           { label: "Hizmet", value: "7/24" },
-          { label: "Tespit", value: "Cihazlı" },
+          { label: "Yönlendirme", value: "Trafiğe göre" },
           { label: "Teklif", value: "Yazılı" },
         ],
   };
@@ -244,7 +244,7 @@ export const istanbulCityLocation: Location = {
   title: "İstanbul",
   slug: "istanbul",
   city: "İstanbul",
-  indexable: true,
+  indexable: false,
   description:
     "724 Tesisatçı olarak İstanbul'un 39 ilçesinde 7/24 profesyonel tesisat hizmeti sunuyoruz. Kağıthane merkezli hizmet ağımızla Avrupa ve Anadolu Yakası'na mobil ekip yönlendirmesi yapıyoruz. Su kaçağı tespiti, tıkanıklık açma, petek temizleme, kombi servisi ve tüm tesisat ihtiyaçlarınızda cihazlı tespit ve yazılı teklif.",
   shortDescription:

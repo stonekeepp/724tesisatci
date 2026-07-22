@@ -49,9 +49,21 @@ function buildOpeningHoursSpecification(settings: SiteSettings) {
   };
 }
 
+function buildSameAs(settings: SiteSettings): string[] | undefined {
+  const links = new Set<string>();
+  if (settings.googleBusinessProfileUrl) {
+    links.add(settings.googleBusinessProfileUrl);
+  }
+  for (const url of settings.sameAs ?? []) {
+    if (url) links.add(url);
+  }
+  return links.size > 0 ? [...links] : undefined;
+}
+
 export function buildOrganizationSchema(settings: SiteSettings) {
   const siteUrl = getSiteUrl();
   const logoUrl = `${siteUrl}/logo.webp`;
+  const sameAs = buildSameAs(settings);
 
   return {
     "@context": "https://schema.org",
@@ -63,6 +75,23 @@ export function buildOrganizationSchema(settings: SiteSettings) {
     logo: logoUrl,
     image: logoUrl,
     address: buildPostalAddress(settings),
+    ...(sameAs ? { sameAs } : {}),
+  };
+}
+
+export function buildContactPageSchema(_settings: SiteSettings) {
+  const siteUrl = getSiteUrl();
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    name: "İletişim | 724 Tesisatçı",
+    description:
+      "724 Tesisatçı servis talebi ve iletişim. Telefon, WhatsApp veya form ile 7/24 ulaşın.",
+    url: `${siteUrl}/iletisim`,
+    mainEntity: {
+      "@id": buildBusinessId(siteUrl),
+    },
   };
 }
 
@@ -109,8 +138,9 @@ export function buildLocalBusinessSchema(settings: SiteSettings, area?: string) 
     };
   }
 
-  if (settings.sameAs && settings.sameAs.length > 0) {
-    schema.sameAs = settings.sameAs;
+  const sameAs = buildSameAs(settings);
+  if (sameAs) {
+    schema.sameAs = sameAs;
   }
 
   return schema;

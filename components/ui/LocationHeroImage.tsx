@@ -1,12 +1,18 @@
+import Image from "next/image";
+import { pageImages } from "@/data/mock/images";
+
 interface LocationHeroImageProps {
   title: string;
   subtitle?: string;
   slug: string;
   className?: string;
+  timingNote?: string;
+  imageSrc?: string;
+  imageAlt?: string;
 }
 
 function slugHue(slug: string): number {
-  return slug.split("").reduce((acc, c) => acc + c.charCodeAt(0), 0) % 40;
+  return slug.split("").reduce((acc, c) => acc + c.charCodeAt(0), 0) % 36;
 }
 
 export function LocationHeroImage({
@@ -14,86 +20,75 @@ export function LocationHeroImage({
   subtitle = "7/24 Tesisat Hizmeti",
   slug,
   className = "w-full h-full",
+  timingNote,
+  imageSrc = pageImages.hizmetBolgeleriHero,
+  imageAlt,
 }: LocationHeroImageProps) {
-  const accent = 175 + slugHue(slug);
+  const accent = 168 + slugHue(slug);
 
   return (
-    <svg
-      viewBox="0 0 800 500"
-      xmlns="http://www.w3.org/2000/svg"
-      className={className}
+    <div
+      className={`relative overflow-hidden ${className}`}
       role="img"
-      aria-label={`${title} tesisatçı hizmeti`}
+      aria-label={imageAlt ?? `${title} tesisatçı hizmeti`}
     >
-      <defs>
-        <linearGradient id={`hero-${slug}`} x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stopColor="#131b2e" />
-          <stop offset="55%" stopColor="#0a3d4a" />
-          <stop offset="100%" stopColor={`hsl(${accent}, 55%, 32%)`} />
-        </linearGradient>
-        <pattern
-          id={`grid-${slug}`}
-          width="40"
-          height="40"
-          patternUnits="userSpaceOnUse"
-        >
-          <path
-            d="M 40 0 L 0 0 0 40"
-            fill="none"
-            stroke="rgba(255,255,255,0.04)"
-            strokeWidth="1"
-          />
-        </pattern>
-      </defs>
-      <rect width="800" height="500" fill={`url(#hero-${slug})`} />
-      <rect width="800" height="500" fill={`url(#grid-${slug})`} />
-      <circle cx="680" cy="120" r="180" fill={`hsla(${accent}, 70%, 50%, 0.12)`} />
-      <circle cx="120" cy="400" r="140" fill="rgba(118, 220, 255, 0.08)" />
-      <g transform="translate(48, 340)">
-        <path
-          d="M0 0h48v48h-48z"
-          fill="rgba(118,220,255,0.15)"
-          rx="12"
-        />
-        <text
-          x="24"
-          y="32"
-          textAnchor="middle"
-          fontFamily="Inter, Arial, sans-serif"
-          fontSize="22"
-          fill="#76dcff"
-        >
-          724
-        </text>
-      </g>
-      <text
-        x="48"
-        y="200"
-        fontFamily="Inter, Arial, sans-serif"
-        fontSize="52"
-        fontWeight="700"
-        fill="#ffffff"
-      >
-        {title}
-      </text>
-      <text
-        x="48"
-        y="250"
-        fontFamily="Inter, Arial, sans-serif"
-        fontSize="22"
-        fill="#76dcff"
-      >
-        {subtitle}
-      </text>
-      <text
-        x="48"
-        y="290"
-        fontFamily="Inter, Arial, sans-serif"
-        fontSize="16"
-        fill="rgba(255,255,255,0.75)"
-      >
-        Cihazlı Tespit · Yazılı Teklif · Garantili İşçilik
-      </text>
-    </svg>
+      <Image
+        src={imageSrc}
+        alt={imageAlt ?? `${title} bölgesinde tesisat hizmeti`}
+        fill
+        sizes="(max-width: 1024px) 100vw, 50vw"
+        className="object-cover object-center"
+        priority={false}
+      />
+      <div
+        className="absolute inset-0"
+        style={{
+          background: `linear-gradient(145deg, rgba(19,27,46,0.88) 0%, rgba(10,61,74,0.78) 48%, hsla(${accent}, 48%, 22%, 0.72) 100%)`,
+        }}
+      />
+      <div
+        className="absolute -right-16 -top-20 h-72 w-72 rounded-full blur-2xl pointer-events-none"
+        style={{ background: `hsla(${accent}, 70%, 48%, 0.22)` }}
+      />
+      <div className="absolute -left-10 bottom-0 h-56 w-56 rounded-full bg-secondary/15 blur-2xl pointer-events-none" />
+
+      <div className="relative z-10 flex h-full flex-col justify-between p-6 md:p-8">
+        <div className="flex flex-wrap items-center gap-2">
+          <span className="inline-flex items-center gap-1.5 rounded-full bg-secondary/20 px-3 py-1 font-label-md text-label-md text-secondary backdrop-blur-sm">
+            <span className="material-symbols-outlined text-base" aria-hidden="true">
+              location_on
+            </span>
+            {title}
+          </span>
+          <span className="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-3 py-1 font-label-md text-label-md text-white/90 backdrop-blur-sm">
+            <span className="material-symbols-outlined text-base" aria-hidden="true">
+              schedule
+            </span>
+            7/24
+          </span>
+        </div>
+
+        <div className="max-w-md">
+          <p className="mb-2 font-label-md text-xs uppercase tracking-[0.18em] text-secondary">
+            724 Tesisatçı
+          </p>
+          <h2 className="font-display-lg text-headline-lg-mobile md:text-headline-lg font-bold leading-tight text-white">
+            {title}
+          </h2>
+          <p className="mt-3 font-body-lg text-body-lg text-secondary">{subtitle}</p>
+          {timingNote ? (
+            <p className="mt-3 inline-flex items-center gap-2 rounded-xl border border-white/15 bg-black/25 px-3 py-2 font-body-md text-sm text-white/85 backdrop-blur-sm">
+              <span className="material-symbols-outlined text-secondary text-lg" aria-hidden="true">
+                directions_car
+              </span>
+              {timingNote}
+            </p>
+          ) : null}
+          <p className="mt-4 font-body-md text-sm text-white/70">
+            Cihazlı Tespit · Yazılı Teklif · Yazılı Servis Formu
+          </p>
+        </div>
+      </div>
+    </div>
   );
 }

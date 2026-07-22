@@ -151,6 +151,12 @@ export function LocalServiceLandingTemplate({
                   Kağıthane tesisat hizmet bölgeleri
                 </Link>
                 <Link
+                  href="/blog/periyodik-tesisat-bakimi"
+                  className="text-secondary font-label-md hover:text-primary transition-colors"
+                >
+                  Periyodik tesisat bakımı
+                </Link>
+                <Link
                   href={service.canonicalPath}
                   className="text-secondary font-label-md hover:text-primary transition-colors"
                 >
