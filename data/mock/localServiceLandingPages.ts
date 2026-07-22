@@ -356,7 +356,7 @@ export const localServiceLandingPages: LocalServiceLanding[] = [
     relatedLocalSlugs: [
       "kagithane-petek-temizleme",
       "kagithane-kalorifer-tesisati",
-      "kagithane-su-kacagi-tespiti",
+      "kagithane-dogalgaz-tesisati",
     ],
   },
   {
@@ -560,7 +560,7 @@ export const localServiceLandingPages: LocalServiceLanding[] = [
     relatedLocalSlugs: [
       "kagithane-petek-temizleme",
       "kagithane-kombi-servisi",
-      "kagithane-su-kacagi-tespiti",
+      "kagithane-dogalgaz-tesisati",
     ],
   },
   {
@@ -628,6 +628,80 @@ export const localServiceLandingPages: LocalServiceLanding[] = [
     relatedLocalSlugs: [
       "kagithane-pimas-acma",
       "kagithane-tikaniklik-acma",
+      "kagithane-su-kacagi-tespiti",
+    ],
+  },
+  {
+    slug: "kagithane-dogalgaz-tesisati",
+    serviceSlug: "dogalgaz-tesisati",
+    title: "Kağıthane Doğalgaz Tesisatı | Bağlantı ve Sızdırmazlık",
+    description:
+      "Kağıthane doğalgaz tesisatı: kombi-ocak bağlantısı, hat kontrolü ve sızdırmazlık testi. Keşif sonrası yazılı teklif; trafik ve ekibe göre yönlendirme.",
+    h1: "Kağıthane Doğalgaz Tesisatı",
+    heroDescription:
+      "Kombi veya ocak bağlantısı, doğalgaz hattı kontrolü ve sızdırmazlık testi ihtiyaçlarında keşif yapılır; kapsam yazılı teklifle netleştirilir. Gaz kokusu varsa vanayı kapatıp pencere açın ve hemen arayın.",
+    intro:
+      "Doğalgaz hattı, güvenlik açısından en kritik tesisat kollarından biridir. Emniyet Evleri ve Çeliktepe apartmanlarında kombi değişimi, ocak bağlantısı veya eski hat kontrolü sık talep edilir. Odak; bağlantı, sızdırmazlık ve standartlara uygun uygulamadır. Kesin varış saati trafik ve ekip uygunluğuna göre planlanır.",
+    serviceType: "Doğalgaz tesisatı",
+    canonicalPath: "/kagithane-dogalgaz-tesisati",
+    imageAlt: "Kağıthane'de doğalgaz bağlantısı ve sızdırmazlık kontrolü",
+    sections: [
+      {
+        title: "Bağlantı, hat kontrolü ve gaz kokusu",
+        body:
+          "Yeni kombi/ocak bağlantısı, hat yenileme veya şüpheli koku durumunda önce güvenlik adımları uygulanır. Koku hissedilirse cihazlar kullanılmaz; vana kapatılır ve acil destek alınır.",
+        items: [
+          "Kombi ve ocak doğalgaz bağlantısı",
+          "Hat sızdırmazlık ve basınç kontrolü",
+          "Eski bağlantı ve fleks yenileme ihtiyacı",
+          "Gaz kokusu durumunda acil güvenlik yönlendirmesi",
+        ],
+      },
+      {
+        title: "Keşif, sızdırmazlık testi ve yazılı teklif",
+        body:
+          "Keşifte mevcut hat, cihaz tipi ve bağlantı noktaları incelenir. Uygun görülen işlerde sızdırmazlık/basınç kontrolü planlanır. İş kapsamı ve malzeme ihtiyacı keşif sonrası yazılı teklifle paylaşılır; onay olmadan işe başlanmaz.",
+      },
+      {
+        title: "Emniyet Evleri ve Çeliktepe apartman bağlantıları",
+        body:
+          "Emniyet Evleri'ndeki site ve yeni dairelerde kollektör/cihaz bağlantısı; Çeliktepe eski stokta fleks, vana ve ek yerleri daha sık kontrol edilir. Hamidiye ve Merkez mahallelerinde kombi değişimi ile birlikte hat uygunluğu değerlendirilir.",
+      },
+      {
+        title: "Kapsam ve planlamayı etkileyen unsurlar",
+        body:
+          "Hat uzunluğu, cihaz tipi, erişim, malzeme ihtiyacı ve güvenlik testi ihtiyacı kapsamı etkiler. Acil koku çağrılarında öncelik güvenliktedir; planlı montajlarda randevu trafik ve ekibe göre ayarlanır.",
+      },
+    ],
+    faq: [
+      {
+        question: "Gaz kokusu alırsam ne yapmalıyım?",
+        answer:
+          "Cihazları ve elektrik düğmelerini kullanmayın, vanayı kapatın, pencereleri açın ve dışarıdan acil hattı arayın. Kokuyu doğrulamak için ateş veya çakmak kullanmayın.",
+        category: "Güvenlik",
+      },
+      {
+        question: "Kombi değişiminde doğalgaz bağlantısı yapılır mı?",
+        answer:
+          "Evet. Uygun hat ve cihaz uyumu keşifte değerlendirilir; bağlantı ve sızdırmazlık kontrolü planlanır. Cihaz içi üretici servisi gereken durumda ayrıca yönlendirme yapılır.",
+        category: "Bağlantı",
+      },
+      {
+        question: "Sızdırmazlık testi ne zaman gerekir?",
+        answer:
+          "Yeni bağlantı, hat müdahalesi veya şüpheli koku sonrası güvenlik kontrolü için önerilir. Test kapsamı keşifte netleştirilir.",
+        category: "Test",
+      },
+      {
+        question: "Kağıthane'de aynı gün doğalgaz işi yapılır mı?",
+        answer:
+          "Acil güvenlik durumlarında öncelikli yönlendirme yapılır. Planlı montaj ve hat işleri trafik ile ekip uygunluğuna göre randevulanır.",
+        category: "Planlama",
+      },
+    ],
+    relatedLocalSlugs: [
+      "kagithane-kombi-servisi",
+      "kagithane-kalorifer-tesisati",
       "kagithane-su-kacagi-tespiti",
     ],
   },

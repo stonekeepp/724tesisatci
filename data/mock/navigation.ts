@@ -33,6 +33,10 @@ export const navigation: Navigation = {
           label: "Kağıthane Kombi Servisi",
           href: "/kagithane-kombi-servisi",
         },
+        {
+          label: "Kağıthane Doğalgaz Tesisatı",
+          href: "/kagithane-dogalgaz-tesisati",
+        },
       ],
     },
     {
