@@ -25,7 +25,7 @@ export const ALL_SERVICE_SLUGS = [
 function buildDistrictFaq(title: string, slug: string): FAQItem[] {
   const isHQ = slug === "kagithane";
   const arrival = isHQ
-    ? `Kağıthane merkezli hizmet ağımızla ilçe genelinde trafik ve ekip uygunluğuna göre hızlı yönlendirme yapılır. Acil su kaçağı ve geri taşma durumlarında öncelikli müdahale uygulanır.`
+    ? `Kağıthane merkezli hizmet ağımızla ilçe genelinde trafik ve ekip uygunluğuna göre hızlı yönlendirme yapılır. Acil su kaçağı ve geri taşma durumlarında öncelikli müdahale uygulanır. Çağlayan, Gültepe, Seyrantepe, Emniyet Evleri ve Merkez gibi yoğun mahallelerde rota planı trafik saatine göre güncellenir; WhatsApp üzerinden mahalle ve belirti paylaşımı yönlendirmeyi hızlandırır. Gece ve hafta sonu acil çağrılarda da aynı hat üzerinden ekip atanır; varış süresi trafik ve iş yoğunluğuna göre değişir, sabit dakika vaadi verilmez.`
     : `Kağıthane merkezli mobil ekiplerimizle ${title} ilçesine trafik ve ekip uygunluğuna göre servis yönlendirmesi yapıyoruz. Acil su kaçağı ve geri taşma durumlarında öncelikli müdahale uygulanır.`;
 
   return [
@@ -51,7 +51,9 @@ function buildDistrictFaq(title: string, slug: string): FAQItem[] {
     },
     {
       question: `${title}'de kırmadan su kaçağı tespiti yapılıyor mu?`,
-      answer: `Evet. Termal kamera, akustik dinleme ve nem ölçer cihazlarımızla ${title} ilçesinde kırmadan noktasal su kaçağı tespiti ve onarım hizmeti veriyoruz.`,
+      answer: isHQ
+        ? `Evet. Termal kamera, akustik dinleme ve nem ölçer cihazlarımızla Kağıthane ilçesinde kırmadan noktasal su kaçağı tespiti ve onarım hizmeti veriyoruz. Eski apartman stokunda kaçak çoğu zaman banyo şaftı, mutfak duvar birleşimi veya kalorifer hattından çıkar; önce sayaç testi yapılır, ardından cihazlı tarama ile nokta daraltılır. Gültepe, Çeliktepe ve Emniyet Evleri mahallelerinde alt kata sızıntı şikâyetlerinde termal ve akustik veriler birlikte yorumlanır. Kırım gerekiyorsa yalnızca tespit edilen alana müdahale edilir; sonuç yazılı özet ve onay sonrası teklif olarak paylaşılır.`
+        : `Evet. Termal kamera, akustik dinleme ve nem ölçer cihazlarımızla ${title} ilçesinde kırmadan noktasal su kaçağı tespiti ve onarım hizmeti veriyoruz.`,
       category: slug,
     },
     {

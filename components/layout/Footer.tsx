@@ -1,8 +1,16 @@
+import dynamic from "next/dynamic";
 import { SiteLogo } from "@/components/layout/SiteLogo";
-import { FooterNavSections } from "@/components/layout/FooterNavSections";
 import { navigation } from "@/data/mock/navigation";
 import { localServiceLandingPages } from "@/data/mock/localServiceLandingPages";
 import { getPhoneHref, siteSettings } from "@/data/mock/siteSettings";
+
+const FooterNavSections = dynamic(
+  () =>
+    import("@/components/layout/FooterNavSections").then(
+      (m) => m.FooterNavSections
+    ),
+  { loading: () => null, ssr: true }
+);
 
 const footerMetaClass =
   "text-sm leading-[1.7] tracking-[0.015em] text-on-primary/78";

@@ -19,8 +19,7 @@ export const siteSettings: SiteSettings = {
   postalCode: "34415",
   serviceArea: "Kağıthane, İstanbul",
   openingHours: "Mo-Su 00:00-23:59",
-  // GBP URL doldurulunca sameAs'a eklenir. geo lat/lng set.
-  googleBusinessProfileUrl: undefined,
+  googleBusinessProfileUrl: "https://maps.app.goo.gl/KsSSPtbQLBUNFqqT8",
   latitude: "41.0843817",
   longitude: "29.0005683",
   sameAs: undefined,

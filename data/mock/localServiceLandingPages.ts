@@ -36,7 +36,7 @@ export const localServiceLandingPages: LocalServiceLanding[] = [
       {
         title: "Çeliktepe ve Gültepe dairelerinde sık senaryolar",
         body:
-          "Çeliktepe ve Gültepe'deki eski borulu dairelerde ek yerleri ve şaft geçişleri; Ortabayır ve Merkez'deki daha yeni yapılarda gömme hat bağlantıları dikkatle kontrol edilir. Her binada aynı noktadan başlanmaz.",
+          "Çeliktepe ve Gültepe'deki eski borulu dairelerde ek yerleri ve şaft geçişleri; Ortabayır ve Merkez'deki daha yeni yapılarda gömme hat bağlantıları dikkatle kontrol edilir. Her binada aynı noktadan başlanmaz. Saha notu (Gültepe, Şubat 2026): Alt kata su sızması şikâyetiyle gelen 1990’lar apartman dairesinde sayaç testi ve termal tarama sonrası banyo-duvar birleşimindeki eski flex bağlantı kaynak gösterildi. Yalnızca ilgili duvar bölgesinde noktasal müdahale yapıldı; alt komşu dairesindeki nem izi kuruduktan sonra yazılı servis formu teslim edildi.",
       },
       {
         title: "Su kaçağı tespit ücretini ne belirler?",
@@ -48,7 +48,7 @@ export const localServiceLandingPages: LocalServiceLanding[] = [
       {
         question: "Kağıthane'de su kaçağı tespiti için duvar kırılıyor mu?",
         answer:
-          "Öncelik kırmadan cihazlı tespittir. Termal kamera, akustik dinleme ve nem ölçer ile nokta daraltılır; kırma gerekiyorsa yalnızca tespit edilen alana müdahale edilir.",
+          "Öncelik kırmadan cihazlı tespittir. Termal kamera, akustik dinleme ve nem ölçer ile nokta daraltılır; kırma gerekiyorsa yalnızca tespit edilen alana müdahale edilir. Kağıthane’de eski apartman stokunda kaçak çoğu zaman banyo şaftı, mutfak duvar birleşimi veya kalorifer hattı bağlantılarından çıkar; bu yüzden önce sayaç testi ve cihazlı tarama yapılır, geniş alan kırımı önerilmez. Gültepe, Çeliktepe ve Emniyet Evleri gibi mahallelerde alt kata sızıntı şikâyetlerinde termal görüntü ve akustik ölçüm birlikte yorumlanır; sonuç yazılı özet ve onay sonrası teklif olarak paylaşılır. İşlem sonrası nem kontrolü tekrarlanır ve 6 ay işçilik garantisi servis formunda belirtilir.",
         category: "Kağıthane su kaçağı",
       },
       {
@@ -104,7 +104,7 @@ export const localServiceLandingPages: LocalServiceLanding[] = [
       {
         title: "Seyrantepe ve Sanayi'de sık görülen tıkanıklıklar",
         body:
-          "Seyrantepe ve Sanayi iş yerlerinde yoğun mutfak kullanımı yağ birikimini hızlandırır. Çağlayan ve Merkez apartmanlarında ise peçete, saç ve eski gider daralmaları öne çıkar; her durumda aynı yöntem uygulanmaz.",
+          "Seyrantepe ve Sanayi iş yerlerinde yoğun mutfak kullanımı yağ birikimini hızlandırır. Çağlayan ve Merkez apartmanlarında ise peçete, saç ve eski gider daralmaları öne çıkar; her durumda aynı yöntem uygulanmaz. Saha notu (Seyrantepe, Ocak 2026): Sanayi çevresindeki iş yerinde mutfak gideri yavaş akıyor ve koku şikâyeti vardı. Robot cihazla açım sonrası kamera kontrolünde yağ tabakası ve daralmış hat eğimi görüldü; tekrar riski için basınçlı yıkama planlandı. Akış testi sonrası koku kayboldu, işlem yazılı form ile teslim edildi.",
       },
       {
         title: "Tıkanıklık açma fiyatı hangi duruma göre değişir?",
@@ -116,7 +116,7 @@ export const localServiceLandingPages: LocalServiceLanding[] = [
       {
         question: "Kağıthane'de tıkanıklık açma kırmadan yapılır mı?",
         answer:
-          "Çoğu lavabo, tuvalet ve banyo gideri robot veya spiral ile kırmadan açılır. Kırık hat veya çökme şüphesinde kamera kontrolü önerilir.",
+          "Çoğu lavabo, tuvalet ve banyo gideri robot veya spiral ile kırmadan açılır. Kırık hat veya çökme şüphesinde kamera kontrolü önerilir. Kağıthane’de Seyrantepe ve Sanayi çevresindeki mutfak hatlarında yağ birikimi; Çağlayan ve Merkez apartmanlarında ise saç, peçete ve eski PVC daralmaları sık görülür. Tek noktada yavaş akış varsa sifon ve yakın hat kontrol edilir; birden fazla gider etkileniyorsa ana pimaş hattı değerlendirilir. Kimyasal dökmek conta ve boruya zarar verebilir; özellikle tuvalet taşıyorsa cihazlı müdahale daha güvenlidir. Açma sonrası akış testi yapılır, tekrarlayan tıkanıklıkta kamera kaydı alınır ve sonuç yazılı olarak paylaşılır.",
         category: "Tıkanıklık",
       },
       {
@@ -325,7 +325,7 @@ export const localServiceLandingPages: LocalServiceLanding[] = [
       {
         title: "Merkez ve Çeliktepe'de kış öncesi tesisat kontrolü",
         body:
-          "Merkez ve Çeliktepe'deki eski kalorifer hatlarında kaçak ile tortu birlikte görülebilir. Hamidiye'deki daha yeni sistemlerde kollektör, vana ayarı ve petek bağlantıları öne çıkar.",
+          "Merkez ve Çeliktepe'deki eski kalorifer hatlarında kaçak ile tortu birlikte görülebilir. Hamidiye'deki daha yeni sistemlerde kollektör, vana ayarı ve petek bağlantıları öne çıkar. Saha notu (Çeliktepe, Aralık 2025): Kombi basıncı haftada iki kez 1 barın altına inen dairede petek altında nem ve boru bağlantısında hafif damlama tespit edildi. Tesisat hattı kontrolü sonrası bağlantı sıkıldı ve kaçak noktası onarıldı; basınç 48 saat stabil kaldı. Cihaz içi arıza bulunmadığı için kullanıcıya yalnızca tesisat tarafı müdahalesi yapıldı, servis formu ile teslim edildi.",
       },
       {
         title: "Kombi basınç ve tesisat kontrolünde kapsam nasıl belirlenir?",
@@ -337,7 +337,7 @@ export const localServiceLandingPages: LocalServiceLanding[] = [
       {
         question: "Kombi basıncı düşüyorsa tesisat kaçağı olabilir mi?",
         answer:
-          "Evet. Kalorifer hattındaki küçük kaçaklar basıncı düşürebilir. Tesisat hattı, petek bağlantıları ve nemli noktalar kontrol edilir.",
+          "Evet. Kalorifer hattındaki küçük kaçaklar basıncı düşürebilir. Tesisat hattı, petek bağlantıları ve nemli noktalar kontrol edilir. Kağıthane’de Merkez ve Çeliktepe’deki eski apartmanlarda petek altı nem, vana contası veya boru ek yerinden mikro sızıntı basıncı düşürür; Hamidiye’deki daha yeni sistemlerde kollektör ve genleşme hattı bağlantıları da kontrol edilir. Sürekli basınç kaybı her zaman cihaz arızası değildir; önce tesisat tarafı değerlendirilir, cihaz içi arıza şüphesi varsa güvenli yönlendirme yapılır. Gerekirse su kaçağı tespiti veya petek temizliği ayrı planlanır; onay sonrası yazılı teklif paylaşılır ve işlem servis formu ile teslim edilir.",
         category: "Kombi basıncı",
       },
       {

@@ -53,7 +53,7 @@ export const homeFaqs: FAQItem[] = [
   {
     question: "724 Tesisatçı hangi bölgelere hizmet veriyor?",
     answer:
-      "Kağıthane merkezli hizmet ağımızla İstanbul'un 39 ilçesinde (Avrupa ve Anadolu Yakası) 7/24 tesisat hizmeti sunuyoruz. Hizmet bölgeleri sayfasından ilçe ve mahalle detaylarına ulaşabilirsiniz.",
+      "Kağıthane merkezli hizmet ağımızla İstanbul'un 39 ilçesinde (Avrupa ve Anadolu Yakası) 7/24 tesisat hizmeti sunuyoruz. Hizmet bölgeleri sayfasından ilçe ve mahalle detaylarına ulaşabilirsiniz. Kağıthane'de 19 mahalle için öncelikli yönlendirme yapılır; Çağlayan, Gültepe, Seyrantepe, Emniyet Evleri ve Merkez gibi yoğun bölgelerde rota trafik saatine göre planlanır. Diğer ilçelerde mobil ekip yönlendirmesi aynı hat üzerinden yapılır; acil su kaçağı, geri taşma ve kombi basınç kaybı çağrıları önceliklendirilir. Yerel landing sayfalarında su kaçağı, tıkanıklık, pimaş, petek ve kombi tesisatı için mahalle bazlı rehberler bulunur.",
     category: "genel",
     relatedPage: "/hizmet-bolgeleri",
     relatedPageLabel: "Hizmet bölgelerimizi inceleyin",
@@ -61,7 +61,7 @@ export const homeFaqs: FAQItem[] = [
   {
     question: "Acil durumlarda ne kadar sürede adresime gelirsiniz?",
     answer:
-      "Trafik ve ekip uygunluğuna göre hızlı yönlendirme yapılır. Su kaçağı ve geri taşma gibi acil vakalara öncelik verilir.",
+      "Trafik ve ekip uygunluğuna göre hızlı yönlendirme yapılır. Su kaçağı ve geri taşma gibi acil vakalara öncelik verilir. Kağıthane içinde mahalle bilgisi ve belirti fotoğrafı paylaşımı yönlendirmeyi hızlandırır; gece ve hafta sonu acil çağrılarda da aynı 7/24 hat aktiftir. Varış süresi trafik, iş yoğunluğu ve çağrı tipine göre değişir; sabit dakika vaadi verilmez. Acil durumda ana vanayı kapatmanız, elektrik riski olan alanlardan uzak durmanız ve sızıntı bölgesinin fotoğrafını çekmeniz ekip hazırlığını kolaylaştırır.",
     category: "genel",
     relatedPage: "/iletisim",
     relatedPageLabel: "Servis talebi oluşturun",
@@ -69,7 +69,7 @@ export const homeFaqs: FAQItem[] = [
   {
     question: "Su kaçağı tespiti gerçekten kırmadan yapılabilir mi?",
     answer:
-      "Evet. Termal kamera, akustik dinleme ve nem ölçer cihazlarımızla kaçak noktasını belirliyoruz. Onarım yalnızca tespit edilen bölgede minimum müdahale ile yapılır.",
+      "Evet. Termal kamera, akustik dinleme ve nem ölçer cihazlarımızla kaçak noktasını belirliyoruz. Onarım yalnızca tespit edilen bölgede minimum müdahale ile yapılır. Kağıthane'deki eski apartman stokunda kaçak çoğu zaman banyo şaftı, mutfak duvar birleşimi veya kalorifer hattı bağlantılarından çıkar; önce tüm musluklar kapalıyken sayaç testi yapılır. Termal görüntü yüzey sıcaklık farklarını, akustik cihaz su sesini, nem ölçer ise duvar nemini değerlendirir; tek bir cihaz sonucuyla geniş kırım kararı verilmez. Alt kata sızıntı, elektrik hattına yakın nem veya hızla artan fatura varsa beklemek hasarı büyütür; sonuç yazılı özet ve onay sonrası teklif olarak paylaşılır.",
     category: "su-kacagi",
     relatedPage: "/hizmetler/su-kacagi-tespit-ve-onarim",
     relatedPageLabel: "Su kaçağı tespiti hizmeti",
@@ -77,7 +77,7 @@ export const homeFaqs: FAQItem[] = [
   {
     question: "Fiyat teklifi işlem öncesinde net olarak veriliyor mu?",
     answer:
-      "Keşif ve cihazla tespit sonrası malzeme ve işçilik kalemlerini içeren yazılı fiyat teklifi sunulur. Onayınız alınmadan hiçbir işleme başlanmaz; gizli maliyet uygulanmaz.",
+      "Keşif ve cihazla tespit sonrası malzeme ve işçilik kalemlerini içeren yazılı fiyat teklifi sunulur. Onayınız alınmadan hiçbir işleme başlanmaz; gizli maliyet uygulanmaz. Su kaçağı, tıkanıklık, pimaş, petek ve kombi tesisatı işlemlerinde kapsam keşif sonrası netleşir; malzeme markası, işçilik süresi ve garanti koşulları ayrı satırlarda belirtilir. Standart keşiflerde ücret alınmaz; onarım yapılması durumunda keşif bedeli işlem tutarından düşülür. İşlem sonrası yazılı servis formu düzenlenir ve 6 ay işçilik garantisi formda yer alır.",
     category: "fiyatlandirma",
     relatedPage: "/iletisim",
     relatedPageLabel: "Servis talebi oluşturun",

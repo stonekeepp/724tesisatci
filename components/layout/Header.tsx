@@ -1,11 +1,15 @@
 import dynamic from "next/dynamic";
-import { HeaderNav } from "@/components/layout/HeaderNav";
 import { SiteLogo } from "@/components/layout/SiteLogo";
 import {
   getPhoneHref,
   getWhatsAppHref,
   siteSettings,
 } from "@/data/mock/siteSettings";
+
+const HeaderNav = dynamic(
+  () => import("@/components/layout/HeaderNav").then((m) => m.HeaderNav),
+  { loading: () => null, ssr: true }
+);
 
 const HeaderMobileMenu = dynamic(
   () =>

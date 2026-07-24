@@ -8,7 +8,7 @@ export const districtProfiles: Record<
 > = {
   kagithane: {
     description:
-      "Kağıthane tesisat hizmet bölgelerinde ekiplerimiz 19 mahalleye yönlendirilir. Apartman, site ve iş yerlerinde bina tipine göre su kaçağı, tıkanıklık, pimaş, petek ve kombi tesisatı için mahalle mahalle servis planı yapılır. Bu sayfa ilçe hub’ıdır; ilgili hizmet sayfalarına ve mahalle listesine buradan geçebilirsiniz.",
+      "Kağıthane tesisat hizmet bölgelerinde ekiplerimiz 19 mahalleye yönlendirilir. Apartman, site ve iş yerlerinde bina tipine göre su kaçağı, tıkanıklık, pimaş, petek ve kombi tesisatı için mahalle mahalle servis planı yapılır. Bu sayfa ilçe hub’ıdır; ilgili hizmet sayfalarına ve mahalle listesine buradan geçebilirsiniz. Saha notu (Emniyet Evleri, Mart 2026): Site girişinde ana pimaş geri tepmesi şikâyetiyle çağrılan apartmanda robot açma sonrası kamera ile hat eğimi sorunu tespit edildi; tekrar riski yazılı olarak site yönetimine iletildi ve basınçlı yıkama planlandı.",
     shortDescription:
       "Kağıthane tesisat hizmet bölgeleri — 19 mahalle, bina tipi ve servis yönlendirme hub’ı.",
   },
