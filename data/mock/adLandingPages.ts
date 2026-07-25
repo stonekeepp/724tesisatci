@@ -9,7 +9,7 @@ export interface AdLandingPage {
   seoDescription: string;
   breadcrumbLabel: string;
   displayTitle?: string;
-  noindex: true;
+  noindex: boolean;
 }
 
 export const acilTesisatciFaqs: FAQItem[] = [
@@ -51,7 +51,7 @@ export const adLandingPages: AdLandingPage[] = [
       "İstanbul su kaçağı tespiti: termal kamera ile kırmadan noktasal tespit, yazılı rapor, yazılı servis formu. 7/24 acil ekip.",
     breadcrumbLabel: "Su Kaçağı Tespiti",
     displayTitle: "Su Kaçağı Tespiti",
-    noindex: true,
+    noindex: false,
   },
   {
     slug: "tikaniklik-acma",
@@ -64,7 +64,7 @@ export const adLandingPages: AdLandingPage[] = [
       "İstanbul tıkanıklık açma: lavabo, tuvalet, pimaş. Robotik cihazlarla kırmadan açma, kameralı kontrol. 7/24 acil servis.",
     breadcrumbLabel: "Tıkanıklık Açma",
     displayTitle: "Tıkanıklık Açma",
-    noindex: true,
+    noindex: false,
   },
   {
     slug: "pimas-acma",
@@ -77,7 +77,7 @@ export const adLandingPages: AdLandingPage[] = [
       "İstanbul pimaş açma: ana hat ve bina pimaş tıkanıklıkları. Robotik cihaz, kameralı kontrol, basınçlı yıkama. 7/24 acil servis.",
     breadcrumbLabel: "Pimaş Açma",
     displayTitle: "Pimaş Açma",
-    noindex: true,
+    noindex: false,
   },
   {
     slug: "acil-tesisatci",
@@ -88,7 +88,7 @@ export const adLandingPages: AdLandingPage[] = [
     seoDescription:
       "İstanbul acil tesisatçı: su kaçağı, tıkanıklık, pimaş açma. 7/24 mobil ekip, cihazlı tespit, yazılı teklif.",
     breadcrumbLabel: "Acil Tesisatçı",
-    noindex: true,
+    noindex: false,
   },
 ];
 

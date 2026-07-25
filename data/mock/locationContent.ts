@@ -248,7 +248,7 @@ export const istanbulCityLocation: Location = {
   title: "İstanbul",
   slug: "istanbul",
   city: "İstanbul",
-  indexable: false,
+  indexable: true,
   description:
     "724 Tesisatçı olarak İstanbul'un 39 ilçesinde 7/24 profesyonel tesisat hizmeti sunuyoruz. Kağıthane merkezli hizmet ağımızla Avrupa ve Anadolu Yakası'na mobil ekip yönlendirmesi yapıyoruz. Su kaçağı tespiti, tıkanıklık açma, petek temizleme, kombi servisi ve tüm tesisat ihtiyaçlarınızda cihazlı tespit ve yazılı teklif.",
   shortDescription:

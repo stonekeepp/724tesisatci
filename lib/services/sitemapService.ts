@@ -4,10 +4,11 @@ import { getAllNeighborhoods } from "./neighborhoodService";
 import { getPublishedBlogPosts } from "./blogService";
 import { getSiteUrl } from "./seoService";
 import { getIndexableLocalLandingPages } from "./localLandingService";
+import { getAllAdLandingSlugs, getAdLandingBySlug } from "./adLandingService";
 import { staticPageSeo } from "@/data/mock/seo";
 
 /** Büyük içerik sürümü — her büyük içerik güncellemesinde bu tarihi güncelleyin */
-const CONTENT_LAST_UPDATED = new Date("2026-07-25"); // ranking-lift: home/hub/spoke money keyword pass
+const CONTENT_LAST_UPDATED = new Date("2026-07-25"); // indexable: all districts + ad landings
 
 export async function generateSitemapEntries() {
   const siteUrl = getSiteUrl();
@@ -23,6 +24,11 @@ export async function generateSitemapEntries() {
   const neighborhoods = await getAllNeighborhoods();
   const blogPosts = await getPublishedBlogPosts();
   const localLandingPages = getIndexableLocalLandingPages();
+  const indexableAdLandings = getAllAdLandingSlugs()
+    .map((slug) => getAdLandingBySlug(slug))
+    .filter((landing): landing is NonNullable<typeof landing> =>
+      Boolean(landing && landing.noindex !== true)
+    );
 
   const entries = [
     ...staticPages.map((path) => ({
@@ -42,6 +48,12 @@ export async function generateSitemapEntries() {
       lastModified: CONTENT_LAST_UPDATED,
       changeFrequency: "weekly" as const,
       priority: 0.85,
+    })),
+    ...indexableAdLandings.map((landing) => ({
+      url: `${siteUrl}/${landing.slug}`,
+      lastModified: CONTENT_LAST_UPDATED,
+      changeFrequency: "weekly" as const,
+      priority: 0.8,
     })),
     ...locations
       .filter((l) => l.indexable !== false)
