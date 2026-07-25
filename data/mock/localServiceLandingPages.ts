@@ -48,19 +48,19 @@ export const localServiceLandingPages: LocalServiceLanding[] = [
       {
         question: "Kağıthane'de su kaçağı tespiti için duvar kırılıyor mu?",
         answer:
-          "Öncelik kırmadan cihazlı tespittir. Termal kamera, akustik dinleme ve nem ölçer ile nokta daraltılır; kırma gerekiyorsa yalnızca tespit edilen alana müdahale edilir. Kağıthane’de eski apartman stokunda kaçak çoğu zaman banyo şaftı, mutfak duvar birleşimi veya kalorifer hattı bağlantılarından çıkar; bu yüzden önce sayaç testi ve cihazlı tarama yapılır, geniş alan kırımı önerilmez. Gültepe, Çeliktepe ve Emniyet Evleri gibi mahallelerde alt kata sızıntı şikâyetlerinde termal görüntü ve akustik ölçüm birlikte yorumlanır; sonuç yazılı özet ve onay sonrası teklif olarak paylaşılır. İşlem sonrası nem kontrolü tekrarlanır ve 6 ay işçilik garantisi servis formunda belirtilir.",
+          "Öncelik kırmadan cihazlı tespittir. Termal kamera, akustik dinleme ve nem ölçer ile nokta daraltılır; kırma gerekiyorsa yalnızca tespit edilen alana müdahale edilir. Kağıthane’de eski apartman stokunda kaçak çoğu zaman banyo şaftı, mutfak duvar birleşimi, gömme rezervuar çevresi veya kalorifer hattı bağlantılarından çıkar; bu yüzden önce tüm musluklar kapalıyken sayaç testi ve cihazlı tarama yapılır, geniş alan kırımı önerilmez. Gültepe, Çeliktepe ve Emniyet Evleri gibi mahallelerde alt kata sızıntı şikâyetlerinde termal görüntü, akustik ölçüm ve nem değerleri birlikte yorumlanır. Ortabayır ve Hamidiye’deki daha yeni yapılarda gömme hat geçişleri dikkatle kontrol edilir. Sonuç yazılı özet ve onay sonrası teklif olarak paylaşılır; onay olmadan onarıma başlanmaz. İşlem sonrası nem kontrolü tekrarlanır ve 6 ay işçilik garantisi servis formunda belirtilir. WhatsApp ile mahalle ve nem fotoğrafı göndermeniz yönlendirmeyi hızlandırır. Sabit süre vaadi verilmez; trafik ve ekip uygunluğuna göre gelinir. Abartılı yüzde yüz iddiası kullanılmaz.",
         category: "Kağıthane su kaçağı",
       },
       {
         question: "Alt kata su akıyorsa önce ne yapmalıyım?",
         answer:
-          "Ana vanayı kapatın, elektrik riski olan alanları kullanmayın ve sızıntı bölgesinin fotoğrafını çekin. Ekip gelince sayaç, hat testi ve cihazlı ölçümle kaynak doğrulanır.",
+          "Ana vanayı kapatın, elektrik riski olan alanları kullanmayın ve sızıntı bölgesinin fotoğrafını çekin. Mümkünse komşu daireye suyun nereden geldiğini not edin; tavan nemi, şaft kokusu veya musluklar kapalıyken sayaç hareketi varsa bunları da kaydedin. Ekip gelince sayaç testi, hat kontrolü ve cihazlı ölçümle kaynak doğrulanır. Kağıthane’de Çağlayan, Gültepe ve Merkez apartmanlarında alt kata sızıntı çoğu zaman banyo veya mutfak hattından başlar; gecikme hasarı büyütür. Kimyasal tıkayıcı dökmek önerilmez. WhatsApp üzerinden fotoğraf ve mahalle bilgisi paylaşmanız aynı gün yönlendirmeyi kolaylaştırır; keşif sonrası kapsam yazılı teklifle netleşir. Acil durumda 7/24 hattı arayabilirsiniz; sabit dakika vaadi verilmez, trafik ve ekip uygunluğuna göre gelinir. Onay olmadan onarıma başlanmaz; sonuçlar yazılı özetlenir. 6 ay işçilik garantisi ilgili onarımda formda belirtilir. Abartılı yüzde yüz iddiası kullanılmaz.",
         category: "Acil durum",
       },
       {
         question: "Yüksek fatura tek başına kaçak belirtisi midir?",
         answer:
-          "Tek başına kesin kanıt değildir; ancak sayaç hareketi, nem izi veya alt kata sızıntı ile birlikteyse cihazlı kontrol önerilir. Sonuçlar yazılı olarak özetlenir.",
+          "Tek başına kesin kanıt değildir; ancak sayaç hareketi, nem izi, boya kabarması veya alt kata sızıntı ile birlikteyse cihazlı kontrol önerilir. Tüm musluklar kapalıyken sayaç dönüyorsa aktif kaçak olasılığı artar. Kağıthane’de eski hatlı dairelerde küçük sızıntılar aylarca fark edilmeden fatura ve duvar hasarını büyütebilir. Fatura artışı bazen kaçak dışı nedenlerden (kullanım değişimi, sayaç arızası) da kaynaklanabilir; bu yüzden yalnızca faturaya bakarak kırım kararı verilmez. Termal, akustik ve nem ölçümü birlikte yorumlanır; sonuçlar yazılı olarak özetlenir. Şüphede ana vanayı kapatıp servis çağırmak hasarı sınırlar. Onay sonrası onarım noktasal yapılır; 6 ay işçilik garantisi formda belirtilir.",
         category: "Fatura",
       },
     ],
@@ -116,19 +116,19 @@ export const localServiceLandingPages: LocalServiceLanding[] = [
       {
         question: "Kağıthane'de tıkanıklık açma kırmadan yapılır mı?",
         answer:
-          "Çoğu lavabo, tuvalet ve banyo gideri robot veya spiral ile kırmadan açılır. Kırık hat veya çökme şüphesinde kamera kontrolü önerilir. Kağıthane’de Seyrantepe ve Sanayi çevresindeki mutfak hatlarında yağ birikimi; Çağlayan ve Merkez apartmanlarında ise saç, peçete ve eski PVC daralmaları sık görülür. Tek noktada yavaş akış varsa sifon ve yakın hat kontrol edilir; birden fazla gider etkileniyorsa ana pimaş hattı değerlendirilir. Kimyasal dökmek conta ve boruya zarar verebilir; özellikle tuvalet taşıyorsa cihazlı müdahale daha güvenlidir. Açma sonrası akış testi yapılır, tekrarlayan tıkanıklıkta kamera kaydı alınır ve sonuç yazılı olarak paylaşılır.",
+          "Çoğu lavabo, tuvalet ve banyo gideri robot veya spiral ile kırmadan açılır. Kırık hat veya çökme şüphesinde kamera kontrolü önerilir. Kağıthane’de Seyrantepe ve Sanayi çevresindeki mutfak hatlarında yağ birikimi; Çağlayan ve Merkez apartmanlarında ise saç, peçete ve eski PVC daralmaları sık görülür. Tek noktada yavaş akış varsa sifon ve yakın hat kontrol edilir; birden fazla gider etkileniyorsa ana pimaş hattı değerlendirilir. Kimyasal dökmek conta ve boruya zarar verebilir; özellikle tuvalet taşıyorsa cihazlı müdahale daha güvenlidir. Açma sonrası akış testi yapılır; tekrarlayan tıkanıklıkta kamera kaydı alınır, eğim veya yağ tabakası görülürse basınçlı yıkama planlanabilir. Sonuç yazılı olarak paylaşılır; onay olmadan geniş müdahale yapılmaz. WhatsApp ile mahalle ve gider tipi bilgisini iletmeniz yönlendirmeyi hızlandırır. 6 ay işçilik garantisi ilgili onarım kalemlerinde servis formunda belirtilir. Hamidiye ve Emniyet Evleri apartman ana hatlarında ortak kullanım nedeniyle tekrar riski ayrıca not edilir. Abartılı yüzde yüz iddiası kullanılmaz.",
         category: "Tıkanıklık",
       },
       {
         question: "Mutfak kokusu tıkanıklık belirtisi midir?",
         answer:
-          "Sıkça evet. Yağ birikimi ve sifon sorunları kokuyu artırır. Açma sonrası akış ve koku kontrolü yapılır; tekrarlıyorsa kamera ile hat incelenir.",
+          "Sıkça evet. Yağ birikimi, sifon kuruması veya kısmi tıkanıklık mutfak kokusunu artırır. Kağıthane’de Seyrantepe ve Sanayi iş yerlerinde yoğun mutfak kullanımı yağ tabakasını hızlandırır; konutlarda ise yağ artığı ve gıda atığı birikimi öne çıkar. Açma sonrası akış ve koku kontrolü yapılır; koku kısa sürede geri geliyorsa kamera ile hat eğimi, daralma veya kırık değerlendirilir. Kimyasal gider açıcı geçici rahatlama verse de conta ve PVC bağlantılara zarar verebilir. Tek lavabo etkileniyorsa noktasal açma yeterli olabilir; birden fazla gider aynı anda yavaşlıyorsa ana hat kontrolü gerekir. Keşif sonrası kapsam yazılı teklifle paylaşılır; işlem sonrası test yapılır.",
         category: "Mutfak",
       },
       {
         question: "Kimyasal gider açıcı kullanmalı mıyım?",
         answer:
-          "Yoğun kimyasal conta ve boru bağlantılarına zarar verebilir. Özellikle tuvalet taşıyorsa cihazlı müdahale daha güvenlidir.",
+          "Yoğun kimyasal conta, keçe ve boru bağlantılarına zarar verebilir; özellikle tuvalet taşıyorsa cihazlı müdahale daha güvenlidir. Kağıthane çağrılarında kimyasal sonrası sertleşmiş tortu veya conta sızıntısı ile karşılaşmak nadir değildir. Robot veya spiral ile kontrollü açma, boru tipine uygun uç seçimi ve akış testi daha kalıcı sonuç verir. Tekrarlayan tıkanıklıkta kamera ile sebep analizi yapılır; yalnızca açmak yetmeyebilir. Acil taşmada kullanımı durdurun, ana vanayı kapatmayın (gider hattı) ama elektrik riskine dikkat edin ve ekip çağırın. WhatsApp fotoğrafı yönlendirmeyi hızlandırır; fiyat keşif sonrası yazılı netleşir.",
         category: "Güvenlik",
       },
     ],
@@ -337,19 +337,19 @@ export const localServiceLandingPages: LocalServiceLanding[] = [
       {
         question: "Kombi basıncı düşüyorsa tesisat kaçağı olabilir mi?",
         answer:
-          "Evet. Kalorifer hattındaki küçük kaçaklar basıncı düşürebilir. Tesisat hattı, petek bağlantıları ve nemli noktalar kontrol edilir. Kağıthane’de Merkez ve Çeliktepe’deki eski apartmanlarda petek altı nem, vana contası veya boru ek yerinden mikro sızıntı basıncı düşürür; Hamidiye’deki daha yeni sistemlerde kollektör ve genleşme hattı bağlantıları da kontrol edilir. Sürekli basınç kaybı her zaman cihaz arızası değildir; önce tesisat tarafı değerlendirilir, cihaz içi arıza şüphesi varsa güvenli yönlendirme yapılır. Gerekirse su kaçağı tespiti veya petek temizliği ayrı planlanır; onay sonrası yazılı teklif paylaşılır ve işlem servis formu ile teslim edilir.",
+          "Evet. Kalorifer hattındaki küçük kaçaklar basıncı düşürebilir. Tesisat hattı, petek bağlantıları ve nemli noktalar kontrol edilir. Kağıthane’de Merkez ve Çeliktepe’deki eski apartmanlarda petek altı nem, vana contası veya boru ek yerinden mikro sızıntı basıncı düşürür; Hamidiye’deki daha yeni sistemlerde kollektör ve genleşme hattı bağlantıları da kontrol edilir. Sürekli basınç kaybı her zaman cihaz arızası değildir; önce tesisat tarafı değerlendirilir, cihaz içi arıza şüphesi varsa güvenli yönlendirme yapılır. Basıncı sık sık doldurmak geçici çözümdür; asıl kaynak bulunmadan tekrar eder. Gerekirse su kaçağı tespiti veya petek temizliği ayrı planlanır; onay sonrası yazılı teklif paylaşılır ve işlem servis formu ile teslim edilir. WhatsApp ile basınç göstergesi ve petek altı fotoğrafı göndermeniz ön değerlendirmeyi hızlandırır. Bu sayfa cihaz içi marka bakımını kapsamaz. 6 ay işçilik garantisi tesisat onarım kalemlerinde formda belirtilir. Sonuçlar dürüst ve şeffaf paylaşılır. Abartılı yüzde yüz iddiası kullanılmaz.",
         category: "Kombi basıncı",
       },
       {
         question: "Bu hizmet cihaz içi kombi bakımını kapsar mı?",
         answer:
-          "Hayır. Sayfa kombiyle ilişkili tesisat kontrollerine odaklanır. Cihaz içi arıza veya üretici bakımı gereken durumda güvenli yönlendirme yapılır.",
+          "Hayır. Sayfa kombiyle ilişkili tesisat kontrollerine odaklanır: basınç düşmesi, petek bağlantısı, hat nemi ve genleşme/tesisat tarafı. Cihaz içi arıza, kart, fan veya üretici periyodik bakımı gereken durumda kullanıcı güvenli şekilde uygun servis kanalına yönlendirilir; bu sayfada marka içi işlem sunulmaz. Kağıthane’de kış öncesi çağrılarda basınç kaybı ile tortu birlikte görülebilir; tesisat tarafı netleşmeden cihaz sökülmez. Keşif sonrası kapsam yazılı teklifle ayrıştırılır. Petek temizliği veya su kaçağı tespiti ayrı hizmet olarak planlanabilir. Onay olmadan işleme başlanmaz.",
         category: "Kapsam",
       },
       {
         question: "Petekler ısınmıyorsa sorun tesisatta mı?",
         answer:
-          "Hava, tortu, vana ayarı veya kaçak şüphesi tesisat tarafında kontrol edilir. Belirtiler cihaz içi arızaya işaret ederse uygun servis kanalına yönlendirilirsiniz.",
+          "Hava, tortu, vana ayarı, kaçak şüphesi veya dengesiz dağılım tesisat tarafında kontrol edilir. Bazı odalar ısınıp bazıları soğuk kalıyorsa önce petek vanası, hava alma ve hat dengesi bakılır. Kağıthane’de eski kalorifer hatlarında tortu birikimi sık görülür; yeni sistemlerde kollektör ayarı öne çıkar. Belirtiler cihaz içi arızaya (ateşleme, kart, sensör) işaret ederse uygun servis kanalına yönlendirilirsiniz. Sürekli basınç düşmesiyle birlikte ısınmama varsa kaçak ihtimali güçlenir. Keşif sonrası kapsam netleşir; yazılı teklif paylaşılır. Makineli petek temizliği ayrı planlanabilir. Sabit sonuç garantisi verilmez; her daire hattı farklıdır.",
         category: "Isınma",
       },
     ],

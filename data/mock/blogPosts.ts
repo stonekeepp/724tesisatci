@@ -319,7 +319,7 @@ Bodrum taşması, aktif su kaçağı, gaz kokusu veya kombi altından sürekli s
     `.trim(),
     category: "Genel Bakım",
     publishedAt: "2025-03-01T10:00:00.000Z",
-    updatedAt: "2026-07-22T10:00:00.000Z",
+    updatedAt: "2026-07-25T10:00:00.000Z",
     readingTime: 7,
     seoTitle: "Periyodik Tesisat Bakımı Neden Önemli? | 724 Tesisatçı",
     seoDescription:
