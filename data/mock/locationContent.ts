@@ -131,13 +131,13 @@ const neighborhoodDescriptions: Record<string, string> = {
   celiktepe:
     "Çeliktepe mahallesinde petek temizleme, kombi servisi ve su kaçağı tespiti için 7/24 ekip yönlendirmesi yapılır.",
   "emniyet-evleri":
-    "Prestijli konut alanında gizli su kaçağı tespiti, gömme rezervuar onarımı ve tesisat yenileme hizmetleri veriyoruz. Site ve apartman girişlerine erişim planlanır.",
+    "Prestijli site ve apartman stoğunda gizli su kaçağı, gömme rezervuar ve ortak pimaş hatları sık kontrol edilir. Site giriş izinleri önceden planlanır; şaft ve bodrum erişimi yazılı teklifte netleştirilir.",
   gulbag:
     "Konut yoğunluğunda su tesisatı onarımı, tıkanıklık açma ve kombi servisi hizmetleri sunuyoruz. Acil çağrılara öncelik tanıyoruz.",
   gursel:
     "Konut ve ticaret alanlarında cihazlı tespit ve şeffaf tesisat onarımı yapıyoruz. Ticari işletme ve evsel müdahalelerde yazılı teklif sunuyoruz.",
   gultepe:
-    "Eski yapı stoğunda kırmadan cihazla su kaçağı tespiti ve tesisat yenileme uzmanlığı sunuyoruz. Eski boru hatlarında kameralı kontrol ile cihazlı tespit yapıyoruz.",
+    "1990’lar ve öncesi apartman stoğunda eski boru, flex ve şaft birleşimleri kaçak riskini artırır. Kırmadan termal/akustik tespit ve noktasal onarım odaklı çalışılır; alt kata sızıntı çağrıları önceliklendirilir.",
   hamidiye:
     "Yoğun yerleşimde acil tıkanıklık açma, su kaçağı tespiti ve tesisat bakımı hizmetleri veriyoruz. Dar sokak erişiminde mobil ekip planlaması uyguluyoruz.",
   harmantepe:
@@ -153,7 +153,7 @@ const neighborhoodDescriptions: Record<string, string> = {
   sanayi:
     "Sanayi ve konut karışık alanda endüstriyel ve evsel tesisat çözümleri sunuyoruz. Atölye ve iş yeri gider hatlarında profesyonel müdahale sağlıyoruz.",
   seyrantepe:
-    "Sanayi sitesi ve konut projelerinde pimaş, tıkanıklık ve tesisat hizmetleri veriyoruz. Yoğun yağlı atık hatlarında pimaş yıkama hizmeti de sunuyoruz.",
+    "Sanayi sitesi ve konut karışımında yağlı mutfak gideri, pimaş daralması ve tıkanıklık sık görülür. Robot açma sonrası kamera ile eğim/yağ tabakası kontrol edilir; tekrar riski yazılı paylaşılır.",
   sirintepe:
     "Mahalle genelinde su kaçağı tespiti, tıkanıklık açma ve kombi servisi hizmetleri sunuyoruz. Termal kamera ile gizli kaçak tespitinde deneyimli ekibimiz görev alır.",
   talatpasa:

@@ -19,7 +19,7 @@ export const homeValueProps = [
     icon: "location_on",
     title: "İstanbul Geneli Servis",
     description:
-      "Kağıthane merkezli hizmet ağımızla Avrupa ve Anadolu Yakası'nda 39 ilçeye mobil ekip yönlendirmesi. Acil çağrılarda trafik ve ekip uygunluğuna göre hızlı yönlendirme yapılır.",
+      "Kağıthane merkezli tesisat ağımızla 19 mahalleye öncelikli, 39 ilçeye mobil yönlendirme. Çağlayan, Gültepe, Seyrantepe ve Emniyet Evleri çağrılarında trafik ve ekip uygunluğuna göre plan yapılır; sabit varış dakikası vaadi verilmez.",
     iconBg: "bg-secondary/30",
     iconColor: "text-secondary-container",
   },
@@ -27,7 +27,7 @@ export const homeValueProps = [
     icon: "radar",
     title: "Cihazlı ve Noktasal Tespit",
     description:
-      "Termal kamera, akustik dinleme ve robotik cihazlarla kırmadan tespit. Gereksiz duvar kırımını önleyerek maliyet ve süreyi minimuma indiriyoruz.",
+      "Termal kamera, akustik dinleme ve robotik cihazlarla kırmadan tespit. Kağıthane eski apartman stokunda şaft, flex ve kalorifer bağlantıları öncelikli taranır; geniş kırım önerilmez.",
     iconBg: "bg-secondary/30",
     iconColor: "text-secondary-container",
   },
@@ -35,7 +35,7 @@ export const homeValueProps = [
     icon: "handyman",
     title: "Gereksiz Kırımı Önleme",
     description:
-      "Yalnızca arızalı bölgeye müdahale ederek evinizi şantiye alanına çevirmeden kalıcı, temiz ve profesyonel çözümler sunuyoruz.",
+      "Yalnızca arızalı bölgeye müdahale ederek evi şantiye alanına çevirmeden temiz işçilik sunuyoruz. Onay sonrası noktasal onarım; işlem bitiminde test ve yazılı servis formu.",
     iconBg: "bg-secondary/30",
     iconColor: "text-secondary-container",
   },
@@ -43,7 +43,7 @@ export const homeValueProps = [
     icon: "verified",
     title: "Şeffaf Hizmet",
     description:
-      "Keşif sonrası yazılı teklif ve resmi servis formu. Onayınız olmadan işleme başlanmaz; gizli maliyet uygulanmaz.",
+      "Keşif sonrası yazılı teklif ve resmi servis formu. Onayınız olmadan işleme başlanmaz; gizli maliyet uygulanmaz. 6 ay işçilik garantisi formda belirtilir.",
     iconBg: "bg-secondary/30",
     iconColor: "text-secondary-container",
   },
@@ -57,6 +57,22 @@ export const homeFaqs: FAQItem[] = [
     category: "genel",
     relatedPage: "/hizmet-bolgeleri",
     relatedPageLabel: "Hizmet bölgelerimizi inceleyin",
+  },
+  {
+    question: "Kağıthane tesisatçı fiyatları nasıl belirlenir?",
+    answer:
+      "Kağıthane tesisatçı fiyatları arızanın türüne, erişim kolaylığına, cihaz ihtiyacına ve malzeme kalemine göre değişir; tek sabit paket fiyatı her arıza için doğru olmaz. Su kaçağı tespiti, tıkanıklık açma, pimaş, petek temizleme, musluk veya rezervuar onarımı farklı kapsamlar taşır. Standart keşiflerde ücret alınmaz; onarım yapılırsa keşif bedeli işlem tutarından düşülür. Keşif ve cihazlı ölçüm sonrası malzeme ve işçilik satırlarını içeren yazılı teklif sunulur; onayınız olmadan işleme başlanmaz, gizli maliyet uygulanmaz. Site veya apartman ortak alanı müdahalelerinde yetkili onayı teklif öncesi netleştirilir. Çağlayan, Gültepe, Seyrantepe ve Emniyet Evleri gibi mahallelerde bina tipi ve şaft erişimi maliyeti etkileyebilir. WhatsApp ile mahalle, kat ve belirti fotoğrafı paylaşmanız ön değerlendirmeyi hızlandırır; nihai tutar yerinde ölçüm sonrası kesinleşir. 6 ay işçilik garantisi servis formunda belirtilir; malzemeler üretici garantisine tabidir. Abartılı yüzde yüz veya sabit dakika vaadi kullanılmaz.",
+    category: "fiyatlandirma",
+    relatedPage: "/iletisim",
+    relatedPageLabel: "Servis talebi oluşturun",
+  },
+  {
+    question: "Kağıthane'de acil tesisatçı hizmeti 7/24 var mı?",
+    answer:
+      "Evet. Kağıthane'de su kaçağı, alt kata sızıntı, gider taşması, tıkanıklık ve ani tesisat arızalarında 7/24 acil tesisatçı hattımız aktiftir. Gece, hafta sonu ve resmi tatilde de aynı numara üzerinden yönlendirme yapılır. Acil durumda mümkünse ana vanayı kapatın, elektrik riski olan alanlardan uzak durun ve sızıntı veya taşma bölgesinin fotoğrafını çekin; mahalle, kat ve belirti bilgisi ekip hazırlığını hızlandırır. Seyrantepe, Sanayi ve Çağlayan gibi yoğun arterlerde alternatif rota planlanır; Emniyet Evleri site girişlerinde güvenlik/izin bilgisi önceden alınırsa bekleme azalır. Varış süresi trafik, iş yoğunluğu ve çağrı tipine göre değişir; sabit dakika veya her zaman aynı sürede varış vaadi verilmez. Keşif sonrası kapsam yazılı teklifle paylaşılır; onay olmadan onarıma başlanmaz. Gültepe, Merkez, Hamidiye, Ortabayır, Talatpaşa ve Nurtepe mahallelerinde de aynı acil öncelik standardı geçerlidir. Sonuçlar dürüst ve şeffaf özetlenir; 6 ay işçilik garantisi ilgili onarımda formda belirtilir.",
+    category: "genel",
+    relatedPage: "/iletisim",
+    relatedPageLabel: "Servis talebi oluşturun",
   },
   {
     question: "Acil durumlarda ne kadar sürede adresime gelirsiniz?",

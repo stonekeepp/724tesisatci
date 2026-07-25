@@ -67,11 +67,11 @@ export function DistrictDetailTemplate({
             </p>
             {isHQ && (
               <p className="font-body-md text-body-md text-on-surface-variant mb-8 leading-relaxed">
-                Ana yerel hedef için{" "}
+                Kağıthane tesisatçı ve tesisat çağrıları için ana sayfa{" "}
                 <Link href="/" className="text-secondary font-label-md hover:text-primary transition-colors">
-                  Kağıthane tesisatçı ana sayfası
+                  Kağıthane tesisatçı
                 </Link>
-                &apos;na göz atın.
+                {" "}adresidir; bu sayfa mahalle ve hizmet yönlendirme hub’ıdır.
               </p>
             )}
             {!isHQ && (
@@ -203,11 +203,11 @@ export function DistrictDetailTemplate({
               <p className="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
                 Bu sayfa mahalle ve hizmet yönlendirme hub’ıdır. 19 mahalleye servis planı,
                 bina tiplerine göre arıza analizi ve acil durumda yapılacaklar burada bir araya
-                getirilir. Ana yerel hedef{" "}
+                getirilir.                 Ana yerel hedef{" "}
                 <Link href="/" className="text-secondary hover:text-primary transition-colors">
-                  Kağıthane tesisatçı ana sayfası
+                  Kağıthane tesisatçı
                 </Link>
-                &apos;dır.
+                {" "}ana sayfasıdır.
               </p>
             </div>
 

@@ -7,7 +7,7 @@ import { getIndexableLocalLandingPages } from "./localLandingService";
 import { staticPageSeo } from "@/data/mock/seo";
 
 /** Büyük içerik sürümü — her büyük içerik güncellemesinde bu tarihi güncelleyin */
-const CONTENT_LAST_UPDATED = new Date("2026-07-25");
+const CONTENT_LAST_UPDATED = new Date("2026-07-25"); // ranking-lift: home/hub/spoke money keyword pass
 
 export async function generateSitemapEntries() {
   const siteUrl = getSiteUrl();

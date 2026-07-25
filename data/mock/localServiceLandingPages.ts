@@ -11,7 +11,7 @@ export const localServiceLandingPages: LocalServiceLanding[] = [
     heroDescription:
       "Alt kata su sızması, tavanda nem veya kabarma, yüksek fatura ve sayaç hareketinde termal kamera, akustik dinleme ve nem ölçerle kaçak noktası daraltılır; sonuç yazılı olarak paylaşılır.",
     intro:
-      "Kağıthane'de su kaçağı çoğu zaman banyo, mutfak, temiz su borusu veya kalorifer hattından başlar. Ekibimiz önce belirtileri dinler; gereksiz kırma yapmadan termal, akustik ve nem ölçümle kaynağı doğrulamaya odaklanır.",
+      "Kağıthane'de su kaçağı çoğu zaman banyo, mutfak, temiz su borusu veya kalorifer hattından başlar. Ekibimiz önce belirtileri dinler; gereksiz kırma yapmadan termal, akustik ve nem ölçümle kaynağı doğrulamaya odaklanır. Genel Kağıthane tesisatçı çağrıları için ana sayfayı, mahalle yönlendirme için Kağıthane hizmet bölgeleri hub’ını kullanın.",
     serviceType: "Su kaçağı tespiti",
     canonicalPath: "/kagithane-su-kacagi-tespiti",
     imageAlt:
@@ -80,7 +80,7 @@ export const localServiceLandingPages: LocalServiceLanding[] = [
     heroDescription:
       "Lavabo yavaş akıyorsa, tuvalet taşıyorsa veya mutfaktan koku geliyorsa gider tipine göre robot cihaz, spiral veya kameralı kontrol ile tıkanıklık açılır.",
     intro:
-      "Kağıthane'de tıkanıklık çoğu zaman yağ, kireç, saç veya yabancı cisim birikiminden kaynaklanır. Seyrantepe ve Sanayi çevresindeki mutfaklarda yağ; Çağlayan dairelerinde ise lavabo ve tuvalet noktasal tıkanıklıkları sık görülür. Yöntem, gider tipine göre seçilir.",
+      "Kağıthane'de tıkanıklık çoğu zaman yağ, kireç, saç veya yabancı cisim birikiminden kaynaklanır. Seyrantepe ve Sanayi çevresindeki mutfaklarda yağ; Çağlayan dairelerinde ise lavabo ve tuvalet noktasal tıkanıklıkları sık görülür. Yöntem, gider tipine göre seçilir. Genel Kağıthane tesisatçı çağrıları için ana sayfayı, mahalle yönlendirme için Kağıthane hizmet bölgeleri hub’ını kullanın.",
     serviceType: "Tıkanıklık açma",
     canonicalPath: "/kagithane-tikaniklik-acma",
     imageAlt: "Kağıthane'de robot cihaz ile lavabo tıkanıklığı açma",

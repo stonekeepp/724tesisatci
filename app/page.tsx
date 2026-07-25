@@ -155,9 +155,16 @@ export default async function HomePage() {
               Tesisatçı
             </h1>
             <p className="font-body-lg text-body-lg text-on-surface-variant max-w-xl leading-relaxed">
-              Kağıthane merkezli tesisat hizmetimizle su kaçağı tespiti, tıkanıklık açma, pimaş, musluk ve rezervuar
-              sorunlarında 7/24 destek sunuyoruz. Telefon veya WhatsApp ile ulaşın; trafik ve ekip uygunluğuna göre
-              hızlı yönlendirme yapılır.
+              Kağıthane tesisatçı ekibimizle su kaçağı tespiti, tıkanıklık açma, pimaş, musluk ve rezervuar
+              sorunlarında 7/24 tesisat desteği sunuyoruz.{" "}
+              <Link href="/kagithane-su-kacagi-tespiti" className="text-secondary hover:text-primary transition-colors">
+                Su kaçağı tespiti
+              </Link>
+              {" "}ve{" "}
+              <Link href="/kagithane-tikaniklik-acma" className="text-secondary hover:text-primary transition-colors">
+                tıkanıklık açma
+              </Link>
+              {" "}için telefon veya WhatsApp ile ulaşın; trafik ve ekip uygunluğuna göre yönlendirme yapılır.
             </p>
             <p className="font-body-md text-body-md text-on-surface-variant/80 italic">
               İstanbul geneli hizmet ağımız ikincil destek olarak devam eder; öncelik{" "}

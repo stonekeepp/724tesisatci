@@ -47,15 +47,15 @@ export default async function KagithaneMahalleleriPage() {
             Kağıthane Mahalleleri
           </h1>
           <p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto text-center mb-12">
-            Kağıthane&apos;nin 19 mahallesine 7/24 tesisat yönlendirmesi sunuyoruz. Ana yerel hedef için{" "}
+            Kağıthane&apos;nin 19 mahallesine 7/24 tesisat yönlendirmesi sunuyoruz. Ana yerel hedef{" "}
             <Link href="/" className="text-secondary hover:text-primary transition-colors">
-              Kağıthane tesisatçı ana sayfası
+              Kağıthane tesisatçı
             </Link>
-            &apos;na, mahalle/hizmet hub’ı için{" "}
+            {" "}ana sayfası; mahalle/hizmet hub’ı için{" "}
             <Link href="/hizmet-bolgeleri/kagithane" className="text-secondary hover:text-primary transition-colors">
               Kağıthane tesisat hizmet bölgeleri
             </Link>
-            &apos;ne bakın.
+            .
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {neighborhoods.map((n) => (
