@@ -2,10 +2,12 @@ import type { FAQItem, Location, Neighborhood } from "@/types";
 import {
   istanbulDistricts,
   kagithaneNeighborhoodNames,
+  REGION_GROUP_LABELS,
   type IstanbulDistrictMeta,
 } from "./istanbulDistricts";
 import { isDistrictIndexable } from "./districtArrivalTimes";
 import { getDistrictProfile } from "./districtProfiles";
+import { getTurkishLocative } from "@/lib/utils/turkishSuffix";
 
 export const ALL_SERVICE_SLUGS = [
   "su-tesisati",
@@ -22,58 +24,95 @@ export const ALL_SERVICE_SLUGS = [
   "batarya-musluk-montaj",
 ] as const;
 
-function buildDistrictFaq(title: string, slug: string): FAQItem[] {
-  const isHQ = slug === "kagithane";
-  const arrival = isHQ
-    ? `Kağıthane merkezli hizmet ağımızla ilçe genelinde trafik ve ekip uygunluğuna göre hızlı yönlendirme yapılır. Acil su kaçağı, alt kata sızıntı ve geri taşma durumlarında öncelikli müdahale uygulanır. Çağlayan, Gültepe, Seyrantepe, Emniyet Evleri, Merkez, Hamidiye ve Ortabayır gibi yoğun mahallelerde rota planı trafik saatine göre güncellenir; WhatsApp üzerinden mahalle, kat ve belirti paylaşımı yönlendirmeyi hızlandırır. Gece ve hafta sonu acil çağrılarda da aynı hat üzerinden ekip atanır; varış süresi trafik, iş yoğunluğu ve çağrı tipine göre değişir, sabit dakika vaadi verilmez. Site girişlerinde güvenlik/izin bilgisi önceden alınırsa bekleme azalır. Acil durumda ana vanayı kapatmanız ve sızıntı fotoğrafı çekmeniz ekip hazırlığını kolaylaştırır. Keşif sonrası kapsam yazılı teklifle netleşir. Talatpaşa, Nurtepe ve Yahya Kemal mahallelerinde de aynı acil öncelik standardı uygulanır. Sonuçlar dürüst ve şeffaf paylaşılır; abartılı süre iddiası kullanılmaz. Onay olmadan onarıma başlanmaz.`
-    : `Kağıthane merkezli mobil ekiplerimizle ${title} ilçesine trafik ve ekip uygunluğuna göre servis yönlendirmesi yapıyoruz. Acil su kaçağı ve geri taşma durumlarında öncelikli müdahale uygulanır.`;
+const KAGITHANE_LANDING_SLUGS = [
+  "kagithane-su-kacagi-tespiti",
+  "kagithane-tikaniklik-acma",
+  "kagithane-pimas-acma",
+  "kagithane-petek-temizleme",
+  "kagithane-kombi-servisi",
+  "kagithane-kalorifer-tesisati",
+  "kagithane-kamerali-tesisat-goruntuleme",
+] as const;
 
-  return [
-    {
-      question: `${title} ilçesine ne kadar sürede gelirsiniz?`,
-      answer: arrival,
-      category: slug,
-    },
-    {
-      question: `${title} tesisatçı hizmeti 7/24 açık mı?`,
-      answer: `Evet. ${title} ilçesinde su kaçağı tespiti, tıkanıklık açma, kombi arızası ve acil tesisat müdahaleleri için 7/24 servis hattımız aktiftir.`,
-      category: slug,
-    },
-    {
-      question: `${title}'de hangi tesisat hizmetlerini veriyorsunuz?`,
-      answer: `${title} ilçesinde su tesisatı, su kaçağı tespiti, tıkanıklık açma, petek temizleme, kombi servisi, kalorifer tesisatı, pimaş yıkama, pimaş tesisatı, doğalgaz tesisatı ve kameralı tesisat görüntüleme hizmetleri sunuyoruz.`,
-      category: slug,
-    },
+function buildDistrictFaq(d: IstanbulDistrictMeta): FAQItem[] {
+  const title = d.title;
+  const locative = getTurkishLocative(title);
+  const slug = d.slug;
+  const regionLabel = REGION_GROUP_LABELS[d.regionGroup];
+  const isHQ = slug === "kagithane";
+
+  const generic: FAQItem[] = [
     {
       question: `${title} tesisatçı fiyatları nasıl belirlenir?`,
-      answer: isHQ
-        ? `Keşif ve cihazla tespit sonrası Kağıthane ilçesi için net, yazılı fiyat teklifi sunulur. Malzeme ve işçilik kalemleri ayrı ayrı belirtilir; onay olmadan işleme başlanmaz. Su kaçağı, tıkanıklık, pimaş, petek ve kombi tesisatı işlemlerinde kapsam mahalle, bina tipi ve erişim kolaylığına göre değişir. Standart keşiflerde ücret alınmaz; onarım yapılırsa keşif bedeli işlem tutarından düşülür. Site yönetimi ortak alan müdahalelerinde yetkili onayı teklif öncesi netleştirilir. Gizli maliyet uygulanmaz; 6 ay işçilik garantisi servis formunda yer alır. WhatsApp fotoğrafı ile ön değerlendirme alınabilir; nihai fiyat yerinde ölçüm sonrası kesinleşir. Sonuçlar dürüst ve şeffaf paylaşılır; abartılı süre veya yüzde yüz iddiası kullanılmaz. Test ve kalite kontrolü işlem bitiminde yapılır. Kağıthane 19 mahallede aynı teklif standardı uygulanır.`
-        : `Keşif ve cihazla tespit sonrası ${title} ilçesi için net, yazılı fiyat teklifi sunulur. Malzeme ve işçilik kalemleri ayrı ayrı belirtilir; onay olmadan işleme başlanmaz.`,
+      answer: `Keşif ve cihazla değerlendirme sonrası ${title} için yazılı teklif sunulur. Malzeme ve işçilik kalemleri ayrı belirtilir; onay olmadan işleme başlanmaz.`,
       category: "fiyatlandirma",
+      source: "generic-service-area",
     },
     {
-      question: `${title}'de kırmadan su kaçağı tespiti yapılıyor mu?`,
-      answer: isHQ
-        ? `Evet. Termal kamera, akustik dinleme ve nem ölçer cihazlarımızla Kağıthane ilçesinde kırmadan noktasal su kaçağı tespiti ve onarım hizmeti veriyoruz. Eski apartman stokunda kaçak çoğu zaman banyo şaftı, mutfak duvar birleşimi, gömme rezervuar çevresi veya kalorifer hattından çıkar; önce tüm musluklar kapalıyken sayaç testi yapılır, ardından cihazlı tarama ile nokta daraltılır. Gültepe, Çeliktepe, Emniyet Evleri ve Merkez mahallelerinde alt kata sızıntı şikâyetlerinde termal ve akustik veriler birlikte yorumlanır. Ortabayır ve Hamidiye’deki daha yeni yapılarda gömme hat geçişleri dikkatle kontrol edilir. Kırım gerekiyorsa yalnızca tespit edilen alana müdahale edilir; geniş alan kırımı önerilmez. Sonuç yazılı özet ve onay sonrası teklif olarak paylaşılır; onay olmadan onarıma başlanmaz. İşlem sonrası nem kontrolü tekrarlanır ve 6 ay işçilik garantisi servis formunda belirtilir. WhatsApp ile mahalle ve nem fotoğrafı göndermeniz yönlendirmeyi hızlandırır. Abartılı yüzde yüz iddiası kullanılmaz. Sabit süre vaadi verilmez.`
-        : `Evet. Termal kamera, akustik dinleme ve nem ölçer cihazlarımızla ${title} ilçesinde kırmadan noktasal su kaçağı tespiti ve onarım hizmeti veriyoruz.`,
+      question: `${title} tesisat hizmeti 7/24 açık mı?`,
+      answer: `Evet. Su kaçağı, tıkanıklık, kombi ve acil tesisat çağrıları için 7/24 hat aktiftir. Yönlendirme trafik ve ekip uygunluğuna göre planlanır; sabit dakika vaadi verilmez.`,
       category: slug,
-    },
-    {
-      question: `${title}'de yapılan işlemler nasıl teslim edilir?`,
-      answer: `Tüm ${title} tesisat işlemlerimizde yazılı servis formu düzenlenir. İşçilik için 6 ay garanti verilir; kullanılan malzemeler üretici garantisine tabidir ve formda belirtilir. İşlem sonrası test ile kalite doğrulanır.`,
-      category: slug,
-    },
-    {
-      question: `${title} ilçesinde acil tıkanıklık açma hizmeti var mı?`,
-      answer: `Evet. Tuvalet, lavabo, mutfak gideri ve ana pimaş hattı tıkanıklıklarında ${title} ilçesine robotik cihazlarla kırmadan acil müdahale sağlıyoruz.`,
-      category: slug,
-    },
-    {
-      question: `${title} petek temizleme ve kombi servisi yapıyor musunuz?`,
-      answer: `Evet. ${title} ilçesinde makineli petek temizliği, kombi arıza tespiti, periyodik bakım ve kalorifer tesisatı onarım hizmetleri sunuyoruz.`,
-      category: slug,
+      source: "generic-service-area",
     },
   ];
+
+  const regionFaq: FAQItem = {
+    question: `${regionLabel} hattında hangi ilçelere yönlendirme yapıyorsunuz?`,
+    answer: `${regionLabel} grubundaki ilçelere Kağıthane merkezli mobil ekiplerle servis yönlendirmesi yapılır. ${locative} çağrılarda yakın ilçe planı ve trafik durumu birlikte değerlendirilir.`,
+    category: d.regionGroup,
+    source: "region-specific",
+  };
+
+  if (isHQ) {
+    return [
+      {
+        question: "Hangi Kağıthane mahallelerine hizmet veriliyor?",
+        answer:
+          "Kağıthane’nin 19 mahallesine (Çağlayan, Gültepe, Seyrantepe, Emniyet Evleri, Merkez ve diğerleri) tesisat, su kaçağı, tıkanıklık, kombi ve petek hizmeti yönlendirilir. Mahalle listesi hizmet bölgeleri sayfasında yer alır.",
+        category: "kagithane",
+        source: "district-specific",
+      },
+      {
+        question: "Su kaçağı tespitinde hangi yöntemler kullanılabilir?",
+        answer:
+          "Termal kamera, akustik dinleme ve nem ölçümü birlikte değerlendirilir. Amaç gereksiz kırım yapmadan olası noktayı daraltmaktır; tek belirtiye dayalı kesin teşhis dili kullanılmaz.",
+        category: "kagithane",
+        source: "district-specific",
+        needsTechnicalReview: true,
+      },
+      {
+        question: "Tıkanıklık işleminden önce hangi bilgiler istenir?",
+        answer:
+          "Mahalle, kat, hangi giderlerin etkilendiği, taşma/geri tepme olup olmadığı ve mümkünse fotoğraf/video istenir. Bu bilgiler yöntem seçimini (açma, yıkama, kamera) netleştirir.",
+        category: "kagithane",
+        source: "district-specific",
+      },
+      {
+        question: "Varış süresi nasıl belirlenir?",
+        answer:
+          "Varış; trafik, ekip uygunluğu, çağrı tipi ve site giriş koşullarına göre değişir. Sabit dakika veya kesin varış vaadi verilmez; acil sızıntı/taşma çağrıları önceliklendirilir.",
+        category: "kagithane",
+        source: "district-specific",
+      },
+      {
+        question: "İşlem öncesinde fiyat nasıl açıklanır?",
+        answer:
+          "Keşif/tespit sonrası kapsam yazılı teklifle paylaşılır. Onay olmadan onarıma başlanmaz; gizli maliyet uygulanmaz.",
+        category: "fiyatlandirma",
+        source: "district-specific",
+      },
+    ];
+  }
+
+  // Non-HQ: 1 district-safe + 1 region + 1–2 generic (no invented local claims)
+  const districtSafe: FAQItem = {
+    question: `${locative} hangi tesisat hizmetleri sunuluyor?`,
+    answer: `${locative} su kaçağı tespiti, tıkanıklık açma, petek temizleme, kombi servisi ve ilgili tesisat işlemleri için yönlendirme yapılır. Kapsam keşif sonrası yazılı netleşir.`,
+    category: slug,
+    source: "district-specific",
+  };
+
+  return [districtSafe, regionFaq, generic[0], generic[1]].slice(0, 5);
 }
 
 function buildNeighborhoodFaq(
@@ -81,46 +120,31 @@ function buildNeighborhoodFaq(
   districtTitle: string,
   _neighborhoodSlug: string
 ): FAQItem[] {
+  const locative = getTurkishLocative(mahalle);
   return [
     {
       question: `${mahalle} mahallesine ne kadar sürede gelirsiniz?`,
-      answer: `Kağıthane merkezli hizmet ağımızla ${mahalle} mahallesine trafik ve ekip uygunluğuna göre hızlı yönlendirme yapılır. Acil durumlarda öncelikli sıra uygulanır.`,
+      answer: `Kağıthane merkezli hizmet ağımızla ${mahalle} mahallesine trafik ve ekip uygunluğuna göre yönlendirme yapılır. Acil durumlarda öncelikli sıra uygulanır; sabit dakika vaadi verilmez.`,
       category: "kagithane",
+      source: "district-specific",
     },
     {
       question: `${mahalle} tesisatçı hizmeti 7/24 açık mı?`,
       answer: `Evet. ${mahalle} mahallesinde su kaçağı, tıkanıklık, kombi arızası ve acil tesisat müdahaleleri için 7/24 servis hattımız aktiftir.`,
       category: "kagithane",
+      source: "generic-service-area",
     },
     {
-      question: `${mahalle}'de hangi tesisat hizmetlerini veriyorsunuz?`,
-      answer: `${mahalle} mahallesinde su tesisatı, su kaçağı tespiti, tıkanıklık açma, petek temizleme, kombi servisi, kalorifer tesisatı, pimaş yıkama, pimaş tesisatı, doğalgaz tesisatı ve kameralı tesisat görüntüleme hizmetleri sunuyoruz.`,
+      question: `${locative} hangi tesisat hizmetlerini veriyorsunuz?`,
+      answer: `${locative} su tesisatı, su kaçağı tespiti, tıkanıklık açma, petek temizleme, kombi servisi ve ilgili tesisat işlemleri sunulur.`,
       category: "kagithane",
+      source: "district-specific",
     },
     {
       question: `${mahalle} tesisatçı fiyatları nasıl belirlenir?`,
-      answer: `Keşif sonrası ${mahalle} mahallesi için net, yazılı fiyat teklifi sunulur. Malzeme ve işçilik kalemleri ayrı ayrı belirtilir; onay olmadan işleme başlanmaz.`,
+      answer: `Keşif sonrası ${mahalle} mahallesi için yazılı fiyat teklifi sunulur. Malzeme ve işçilik kalemleri ayrı belirtilir; onay olmadan işleme başlanmaz.`,
       category: "fiyatlandirma",
-    },
-    {
-      question: `${mahalle}'de kırmadan su kaçağı tespiti yapılıyor mu?`,
-      answer: `Evet. Termal kamera ve akustik dinleme cihazlarımızla ${mahalle} mahallesinde kırmadan noktasal su kaçağı tespiti ve onarım hizmeti veriyoruz.`,
-      category: "kagithane",
-    },
-    {
-      question: `${mahalle}'de acil tıkanıklık açma hizmeti var mı?`,
-      answer: `Evet. ${mahalle} mahallesinde tuvalet, lavabo ve pimaş tıkanıklıklarına robotik cihazlarla kırmadan acil müdahale sağlıyoruz.`,
-      category: "kagithane",
-    },
-    {
-      question: `${mahalle} petek temizleme ve kombi servisi yapıyor musunuz?`,
-      answer: `Evet. ${mahalle} mahallesinde makineli petek temizliği, kombi arıza tespiti ve kalorifer tesisatı onarım hizmetleri sunuyoruz.`,
-      category: "kagithane",
-    },
-    {
-      question: `${districtTitle} ${mahalle} bölgesinde işlemler nasıl teslim edilir?`,
-      answer: `Tüm ${mahalle} tesisat işlemlerimizde yazılı servis formu düzenlenir. İşçilik için 6 ay garanti verilir; malzemeler üretici garantisine tabidir. İşlem sonrası test yapılır.`,
-      category: "kagithane",
+      source: "generic-service-area",
     },
   ];
 }
@@ -194,19 +218,24 @@ function buildDistrictLocation(d: IstanbulDistrictMeta): Location {
     side: d.side,
     isHeadquarters: isHQ,
     indexable,
+    regionGroup: d.regionGroup,
+    nearbyDistrictSlugs: d.nearbyDistrictSlugs,
+    isPriority: d.isPriority,
+    indexStatus: d.indexStatus,
+    relatedLocalLandingSlugs: isHQ ? [...KAGITHANE_LANDING_SLUGS] : undefined,
     description: profile.description,
     shortDescription: profile.shortDescription,
     neighborhoods: isHQ
       ? kagithaneNeighborhoodNames.map((n) => n.slug)
       : [],
     relatedServices: [...ALL_SERVICE_SLUGS],
-    faq: buildDistrictFaq(d.title, d.slug),
+    faq: buildDistrictFaq(d),
     seoTitle: isHQ
       ? "Kağıthane Tesisat Hizmet Bölgeleri | Mahalle Mahalle Servis"
-      : `${d.title} Tesisatçı | 7/24 Cihazlı Tesisat — 724 Tesisatçı`,
+      : `${d.title} Tesisatçı Hizmetleri | 724 Tesisatçı`,
     seoDescription: isHQ
       ? "Kağıthane tesisat hizmet bölgeleri: 19 mahalle, apartman ve site servisi. Su kaçağı, tıkanıklık, pimaş, petek ve kombi için mahalle mahalle yönlendirme."
-      : `${d.title} tesisatçı hizmeti. Su kaçağı, tıkanıklık, petek temizleme, kombi servisi. 7/24 acil müdahale, yazılı teklif.`,
+      : `${getTurkishLocative(d.title)} su kaçağı tespiti, tıkanıklık açma ve tesisat işlemleri için sunulan hizmetleri ve çalışma sürecini inceleyin.`,
     canonicalPath: `/hizmet-bolgeleri/${d.slug}`,
     stats: isHQ
       ? [

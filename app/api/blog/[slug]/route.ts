@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
-import { getBlogPostBySlug } from "@/lib/services/blogService";
+import { getPublishedBlogPostBySlug } from "@/lib/services/blogService";
+import { toPublicBlogPost } from "@/lib/utils/publication";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -8,11 +9,11 @@ interface Props {
 export async function GET(_request: Request, { params }: Props) {
   try {
     const { slug } = await params;
-    const post = await getBlogPostBySlug(slug);
+    const post = await getPublishedBlogPostBySlug(slug);
     if (!post) {
       return NextResponse.json({ error: "Blog post not found" }, { status: 404 });
     }
-    return NextResponse.json({ data: post });
+    return NextResponse.json({ data: toPublicBlogPost(post) });
   } catch {
     return NextResponse.json({ error: "Internal server error" }, { status: 500 });
   }

@@ -1,3 +1,89 @@
+/** Shared verification status for business claims and expert/case records. */
+export type VerificationStatus =
+  | "verified"
+  | "needs-verification"
+  | "not-applicable";
+
+export type SearchIntent = "informational" | "commercial" | "local";
+
+export type ContentCluster = "su-kacagi" | "tikaniklik" | "isitma";
+
+/**
+ * Publication lifecycle for content entities.
+ * Legacy blog posts without an explicit status are treated as published
+ * via `isPublishedContent()` — do not treat missing status as draft.
+ */
+export type PublicationStatus = "draft" | "published" | "archived";
+
+export interface SiteSettingsVerification {
+  businessName: VerificationStatus;
+  phone: VerificationStatus;
+  whatsapp: VerificationStatus;
+  email: VerificationStatus;
+  address: VerificationStatus;
+  coordinates: VerificationStatus;
+  workingHours: VerificationStatus;
+  serviceAreas: VerificationStatus;
+  licenses: VerificationStatus;
+  certificates: VerificationStatus;
+  experienceClaims: VerificationStatus;
+  customerCountClaims: VerificationStatus;
+}
+
+export interface ExpertCertificate {
+  name: string;
+  issuer?: string;
+  documentNumber?: string;
+  verificationUrl?: string;
+  verificationStatus: VerificationStatus;
+}
+
+/**
+ * Separated expert verification dimensions.
+ * Do not collapse credentials into a single overall "verified" flag.
+ */
+export interface ExpertVerification {
+  identity: VerificationStatus;
+  writtenApproval: VerificationStatus;
+  experienceClaim: VerificationStatus;
+  credentials: VerificationStatus;
+}
+
+export interface ExpertProfile {
+  id: string;
+  name: string;
+  role: string;
+  bio?: string;
+  experienceYears?: number;
+  specialties: string[];
+  image?: string;
+  verification: ExpertVerification;
+  /** Professional certificates — only include independently verified documents. */
+  credentials?: ExpertCertificate[];
+  /** @deprecated Prefer `credentials`. Kept for compatibility while empty. */
+  certificates?: ExpertCertificate[];
+  /** Internal audit notes — never expose via public API/schema/UI. */
+  internalNotes?: string[];
+}
+
+export interface LocalCase {
+  slug: string;
+  title: string;
+  district: string;
+  neighborhood?: string;
+  problem: string;
+  symptoms: string[];
+  diagnosis: string;
+  equipmentUsed: string[];
+  solution: string;
+  durationNote?: string;
+  beforeImages?: string[];
+  afterImages?: string[];
+  completedAt?: string;
+  privacyApproved: boolean;
+  verificationStatus: VerificationStatus;
+}
+
 export interface BreadcrumbItem {
   label: string;
   href: string;
@@ -9,6 +95,8 @@ export interface FAQItem {
   category: string;
   relatedPage?: string;
   relatedPageLabel?: string;
+  source?: LocationFaqSource;
+  needsTechnicalReview?: boolean;
 }
 
 export interface SiteSettings {
@@ -34,6 +122,8 @@ export interface SiteSettings {
   latitude?: string;
   longitude?: string;
   sameAs?: string[];
+  /** Field-level verification metadata — not rendered to end users. */
+  verification?: SiteSettingsVerification;
 }
 
 export interface SEOData {
@@ -100,6 +190,11 @@ export interface Service {
   faq: FAQItem[];
   relatedServices: string[];
   relatedLocations: string[];
+  /** Guide article slugs (published + draft OK in data; UI filters published). */
+  relatedGuideSlugs?: string[];
+  /** Kağıthane (or other) local landing slugs. */
+  relatedLocalLandingSlugs?: string[];
+  needsTechnicalReview?: boolean;
   seoTitle: string;
   seoDescription: string;
   canonicalPath: string;
@@ -132,6 +227,23 @@ export interface Neighborhood {
   serviceNotes?: string;
 }
 
+export type RegionGroup =
+  | "avrupa-merkez"
+  | "avrupa-kuzey"
+  | "avrupa-bati"
+  | "anadolu-merkez"
+  | "anadolu-kuzey"
+  | "anadolu-dogu"
+  | "adalar";
+
+/** Internal audit flag only — never drives robots/noindex. */
+export type ServiceAreaIndexStatus = "index" | "review";
+
+export type LocationFaqSource =
+  | "district-specific"
+  | "region-specific"
+  | "generic-service-area";
+
 export interface Location {
   id: string;
   title: string;
@@ -150,10 +262,19 @@ export interface Location {
   canonicalPath: string;
   heroImage?: string;
   stats?: { label: string; value: string }[];
+  /** Crawl/index robots flag — independent of internal indexStatus audit. */
   indexable?: boolean;
+  /** Navigation / topical grouping (not an official administrative region). */
+  regionGroup?: RegionGroup;
+  nearbyDistrictSlugs?: string[];
+  isPriority?: boolean;
+  /** Internal audit only — must not drive noindex/robots. */
+  indexStatus?: ServiceAreaIndexStatus;
+  relatedLocalLandingSlugs?: string[];
 }
 
-export type BlogPostStatus = "draft" | "published";
+/** @deprecated Prefer PublicationStatus — kept for admin form compatibility. */
+export type BlogPostStatus = PublicationStatus;
 
 export interface BlogRelatedLink {
   href: string;
@@ -175,7 +296,11 @@ export interface BlogPost {
   canonicalPath: string;
   relatedServices: string[];
   faq: FAQItem[];
-  status: BlogPostStatus;
+  /**
+   * Explicit status for new posts. Existing posts set this to "published".
+   * If ever omitted, treat as published via `isPublishedContent()`.
+   */
+  status?: PublicationStatus;
   image?: string;
   imageAlt?: string;
   localFocus?: string;
@@ -183,6 +308,74 @@ export interface BlogPost {
   editorialReviewedAt?: string;
   editorialNote?: string;
   relatedLinks?: BlogRelatedLink[];
+  cluster?: ContentCluster;
+  searchIntent?: SearchIntent;
+  primaryKeyword?: string;
+  secondaryKeywords?: string[];
+  relatedServiceSlugs?: string[];
+  relatedArticleSlugs?: string[];
+  needsTechnicalReview?: boolean;
+  /** Internal only — never expose via public API/schema/UI. */
+  technicalReview?: TechnicalReviewData;
+  authorId?: string;
+  reviewerId?: string;
+}
+
+export type TechnicalReviewItemStatus =
+  | "pending"
+  | "verified"
+  | "revision-required";
+
+export interface TechnicalReviewItem {
+  topic: string;
+  /**
+   * `verified` means the technical explanation was reviewed by an eligible
+   * reviewer — NOT that professional credentials/certificates were verified.
+   */
+  status: TechnicalReviewItemStatus;
+  note: string;
+}
+
+export interface TechnicalReviewData {
+  items: TechnicalReviewItem[];
+  reviewedByExpertId?: string;
+  reviewedAt?: string;
+}
+
+/**
+ * Formal technical-review decision recorded by a verified expert.
+ * Separate from per-item `TechnicalReviewItemStatus`.
+ */
+export type TechnicalReviewDecision =
+  | "pending"
+  | "approved"
+  | "changes-required"
+  | "rejected";
+
+/**
+ * Immutable approval record — never invent entries without a real expert.
+ * Internal only; never expose via public API/schema/UI.
+ */
+export interface TechnicalReviewApproval {
+  slug: string;
+  reviewerExpertId: string;
+  reviewedAt: string;
+  decision: TechnicalReviewDecision;
+  approvedItemTopics: string[];
+  notes: string;
+  evidenceReferences?: string[];
+}
+
+export interface TechnicalReviewValidationResult {
+  valid: boolean;
+  blockers: string[];
+  warnings: string[];
+}
+
+export interface PublicationReadinessResult {
+  ready: boolean;
+  blockers: string[];
+  warnings: string[];
 }
 
 export interface ContactLead {

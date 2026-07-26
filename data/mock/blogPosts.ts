@@ -1,5 +1,7 @@
 import type { BlogPost } from "@/types";
 import { blogImages } from "@/data/mock/images";
+import { draftBlogPosts } from "@/data/mock/blogDrafts";
+import { isPublishedContent } from "@/lib/utils/publication";
 
 const editorialReviewedBy = "724 Tesisatçı saha ekibi";
 const editorialReviewedAt = "2026-07-24";
@@ -105,6 +107,19 @@ Kaçak noktası netleştikten sonra işlem kapsamı, malzeme seçimi ve işçili
       },
     ],
     status: "published",
+    cluster: "su-kacagi",
+    searchIntent: "informational",
+    primaryKeyword: "su kaçağı belirtileri",
+    secondaryKeywords: [
+      "gizli su kaçağı belirtileri",
+      "su sayacı dönüyor",
+      "duvar nemlenmesi",
+    ],
+    relatedServiceSlugs: [
+      "su-kacagi-tespit-ve-onarim",
+      "kamerali-tesisat-goruntuleme-ve-onarim",
+    ],
+    relatedArticleSlugs: ["kagithane-su-kacagi-tespiti"],
     image: blogImages["su-kacagi-belirtileri"],
     imageAlt: "Termal kamera ile gizli su kaçağı belirtisi kontrolü",
     localFocus: "Kağıthane",
@@ -180,6 +195,16 @@ Kağıthane'de özellikle eski apartmanlarda ve yoğun kullanılan petek hatlar�
       },
     ],
     status: "published",
+    cluster: "isitma",
+    searchIntent: "informational",
+    primaryKeyword: "kombi basıncı neden düşer",
+    secondaryKeywords: [
+      "kombi su basıncı",
+      "kalorifer basınç düşmesi",
+      "petek hattı kaçak",
+    ],
+    relatedServiceSlugs: ["kombi-servisi-ve-tesisati", "kalorifer-tesisati"],
+    relatedArticleSlugs: ["kagithane-kombi-petek-sorunlari"],
     image: blogImages["kombi-basinci-neden-duser"],
     imageAlt: "Kombi basınç göstergesi ve petek hattı kontrolü",
     localFocus: "Kağıthane",
@@ -257,6 +282,19 @@ Kağıthane'de yoğun kullanılan apartman hatlarında mutfak gideri ve ana pima
       },
     ],
     status: "published",
+    cluster: "tikaniklik",
+    searchIntent: "informational",
+    primaryKeyword: "lavabo tıkanıklığı nasıl açılır",
+    secondaryKeywords: [
+      "gider tıkanıklığı",
+      "lavabo açma",
+      "tıkanıklık belirtileri",
+    ],
+    relatedServiceSlugs: [
+      "tikaniklik-acma",
+      "kamerali-tesisat-goruntuleme-ve-onarim",
+    ],
+    relatedArticleSlugs: ["kagithane-tikaniklik-acma"],
     image: blogImages["lavabo-tikanikligi-nasil-acilir"],
     imageAlt: "Kameralı sistemle lavabo gider hattı kontrolü",
     localFocus: "Kağıthane",
@@ -427,6 +465,16 @@ Kaçak noktası belirlendikten sonra kırım gerekip gerekmediği, malzeme tipi 
       },
     ],
     status: "published",
+    cluster: "su-kacagi",
+    searchIntent: "local",
+    primaryKeyword: "kağıthane su kaçağı tespiti",
+    secondaryKeywords: [
+      "kağıthane su kaçağı",
+      "termal kamera kaçak",
+      "gizli su kaçağı kağıthane",
+    ],
+    relatedServiceSlugs: ["su-kacagi-tespit-ve-onarim"],
+    relatedArticleSlugs: ["su-kacagi-belirtileri"],
     image: blogImages["kagithane-su-kacagi-tespiti"],
     imageAlt: "Kağıthane'de termal kamera ile su kaçağı tespiti",
     localFocus: "Kağıthane",
@@ -498,6 +546,16 @@ Aynı hat kısa sürede tekrar tıkanıyorsa yalnızca açma yeterli olmayabilir
       },
     ],
     status: "published",
+    cluster: "tikaniklik",
+    searchIntent: "local",
+    primaryKeyword: "kağıthane tıkanıklık açma",
+    secondaryKeywords: [
+      "kağıthane gider tıkanıklığı",
+      "kağıthane pimaş",
+      "gider açma kağıthane",
+    ],
+    relatedServiceSlugs: ["tikaniklik-acma", "pimas-yikama"],
+    relatedArticleSlugs: ["lavabo-tikanikligi-nasil-acilir"],
     image: blogImages["kagithane-tikaniklik-acma"],
     imageAlt: "Kağıthane'de kameralı gider hattı tıkanıklık kontrolü",
     localFocus: "Kağıthane",
@@ -562,6 +620,20 @@ Gaz hattı, kombinin kapalı gövdesi veya elektrikli parçalar kullanıcı tara
       },
     ],
     status: "published",
+    cluster: "isitma",
+    searchIntent: "local",
+    primaryKeyword: "kağıthane kombi petek sorunları",
+    secondaryKeywords: [
+      "kağıthane kombi servisi",
+      "petek ısınmıyor kağıthane",
+      "kombi basıncı kağıthane",
+    ],
+    relatedServiceSlugs: [
+      "kombi-servisi-ve-tesisati",
+      "petek-temizleme",
+      "kalorifer-tesisati",
+    ],
+    relatedArticleSlugs: ["kombi-basinci-neden-duser"],
     image: blogImages["kagithane-kombi-petek-sorunlari"],
     imageAlt: "Kağıthane'de kombi basıncı ve petek ısınma kontrolü",
     localFocus: "Kağıthane",
@@ -640,12 +712,21 @@ Blog rehberleri, kullanıcıların sorunu tanımasına ve doğru servise yönelm
       { href: "/hizmetler", label: "Tüm tesisat hizmetleri" },
     ],
   },
+  ...draftBlogPosts,
 ];
 
 export function getBlogPostBySlug(slug: string): BlogPost | undefined {
   return blogPosts.find((p) => p.slug === slug);
 }
 
+/** Published posts only. Missing status is treated as published (legacy). */
 export function getPublishedBlogPosts(): BlogPost[] {
-  return blogPosts.filter((p) => p.status === "published");
+  return blogPosts.filter((p) => isPublishedContent(p));
+}
+
+export function getPublishedBlogPostBySlug(
+  slug: string
+): BlogPost | undefined {
+  const post = getBlogPostBySlug(slug);
+  return post && isPublishedContent(post) ? post : undefined;
 }

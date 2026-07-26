@@ -1,0 +1,13 @@
+[
+  {
+    "slug": "CONTENT_SLUG",
+    "reviewerExpertId": "VERIFIED_EXPERT_ID",
+    "reviewedAt": "YYYY-MM-DDTHH:mm:ss+03:00",
+    "decision": "approved",
+    "approvedItemTopics": [
+      "EXACT_TECHNICAL_REVIEW_TOPIC"
+    ],
+    "notes": "Reviewer tarafından yazılan gerçek inceleme notu.",
+    "evidenceReferences": []
+  }
+]

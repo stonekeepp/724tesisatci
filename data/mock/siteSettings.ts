@@ -23,6 +23,20 @@ export const siteSettings: SiteSettings = {
   latitude: "41.0843817",
   longitude: "29.0005683",
   sameAs: undefined,
+  verification: {
+    businessName: "verified",
+    phone: "verified",
+    whatsapp: "verified",
+    email: "needs-verification",
+    address: "needs-verification",
+    coordinates: "needs-verification",
+    workingHours: "needs-verification",
+    serviceAreas: "needs-verification",
+    licenses: "needs-verification",
+    certificates: "needs-verification",
+    experienceClaims: "needs-verification",
+    customerCountClaims: "not-applicable",
+  },
 };
 
 export function getPhoneHref(phone: string): string {

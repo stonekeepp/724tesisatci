@@ -9,6 +9,7 @@ import {
   getWhatsAppHref,
   siteSettings,
 } from "@/data/mock/siteSettings";
+import { getPublishedGuidesForLocalLanding } from "@/lib/utils/locationRelations";
 
 interface LocalServiceLandingTemplateProps {
   landing: LocalServiceLanding;
@@ -24,6 +25,10 @@ export function LocalServiceLandingTemplate({
   breadcrumbs,
 }: LocalServiceLandingTemplateProps) {
   const heroMeta = serviceHeroImages[service.slug];
+  const relatedGuides = getPublishedGuidesForLocalLanding(landing.slug).slice(
+    0,
+    3
+  );
 
   return (
     <>
@@ -162,6 +167,15 @@ export function LocalServiceLandingTemplate({
                 >
                   {service.title} genel hizmet sayfası
                 </Link>
+                {relatedGuides.map((guide) => (
+                  <Link
+                    key={guide.slug}
+                    href={guide.canonicalPath}
+                    className="text-secondary font-label-md hover:text-primary transition-colors"
+                  >
+                    {guide.title}
+                  </Link>
+                ))}
                 {relatedLocalLandings.map((related) => (
                   <Link
                     key={related.slug}

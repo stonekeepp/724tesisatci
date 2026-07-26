@@ -146,77 +146,77 @@ export const serviceSpecificFaq: Record<string, FAQItem[]> = {
   ],
   "su-kacagi-tespit-ve-onarim": [
     {
-      question: "Su kaçağı tespiti kırmadan yapılabilir mi?",
+      question: "Her su kaçağı kırmadan bulunabilir mi?",
       answer:
-        "Evet. Termal kamera, akustik dinleme ve nem ölçer cihazlarımız ile kaçak noktasını kırmadan tespit ediyoruz. Onarım aşamasında yalnızca tespit edilen noktaya müdahale edilir.",
+        "Çoğu gizli kaçakta termal, akustik ve nem ölçümü ile nokta daraltılır. Erişim ve hat tipine göre sınırlı kırım gerekebilir; bu durum keşif sonrası açıklanır. Yüzde yüz kırmadan sonuç vaadi verilmez.",
+      category: "su-kacagi",
+      needsTechnicalReview: true,
+    },
+    {
+      question:
+        "Su kaçağının temiz su hattında mı giderde mi olduğu nasıl değerlendirilir?",
+      answer:
+        "Sayaç hareketi, kullanım anına bağlı ıslaklık ve basınç değişimleri yönlendirici olabilir. Ayrım için hat ve nem kontrolleri birlikte yorumlanır; tek belirtiye dayalı teşhis yeterli değildir.",
+      category: "su-kacagi",
+      needsTechnicalReview: true,
+    },
+    {
+      question: "Tespit işleminden sonra onarım aynı gün yapılabilir mi?",
+      answer:
+        "Nokta netleşir, malzeme ve erişim uygunsa aynı gün onarım planlanabilir. Kapsam yazılı teklifle onaylandıktan sonra başlanır; her vakada aynı gün bitiş garantisi verilmez.",
       category: "su-kacagi",
     },
     {
-      question: "Su kaçağı tespiti ne kadar sürer?",
+      question: "Su kaçağı tespit süresini hangi etkenler değiştirir?",
       answer:
-        "Standart bir daire tespiti 1–2 saat sürer. Onarım dahil toplam süre genellikle yarım günü geçmez. Kaçağın konumu ve erişim zorluğuna göre süre değişebilir.",
+        "Daire büyüklüğü, şaft erişimi, birden fazla ıslak hacim ve alt kata sızıntı süresi etkiler. Standart dairelerde süre genellikle saat mertebesindedir; karmaşık hatlarda uzayabilir.",
       category: "su-kacagi",
+      needsTechnicalReview: true,
     },
     {
-      question: "Sigorta su kaçağı tespitini karşılar mı?",
+      question: "Alt kata su sızması her zaman boru kaçağı mıdır?",
       answer:
-        "Birçok konut sigortası ani su hasarlarını kapsar. Tespit raporumuz sigorta sürecinizde kullanılabilir. Poliçenizi sigorta şirketinizden teyit etmenizi öneririz.",
+        "Hayır. İzolasyon, derz/silikon, klozet bağlantısı veya ortak hat da kaynak olabilir. Su görülen yer, kaçağın başladığı yer olmayabilir.",
       category: "su-kacagi",
     },
     {
       question: "Musluklar kapalıyken sayaç dönüyorsa ne yapmalıyım?",
       answer:
-        "Bu aktif su kaçağı belirtisidir. Ana vanayı kapatıp acil tespit ekibimizi arayın. Gizli kaçak komşu dairelere ve yapıya ciddi hasar verebilir; erken müdahale kritiktir.",
-      category: "su-kacagi",
-    },
-    {
-      question: "Yerden ısıtma kaçağı nasıl tespit edilir?",
-      answer:
-        "Termal kamera ile zemin altı sıcaklık farkları taranır; kaçak bölgesi harita üzerinde işaretlenir. Noktasal müdahale ile parke veya fayans alanı minimum düzeyde açılır.",
-      category: "su-kacagi",
-    },
-    {
-      question: "Su kaçağı tespit fiyatları nasıl belirlenir?",
-      answer:
-        "Alan büyüklüğü, kaçak şüphesi bölgesi ve kullanılacak cihaz türüne göre fiyatlandırılır. Tespit sonrası onarım teklifi ayrı kalemler halinde sunulur.",
+        "Aktif kaçak şüphesi güçlenir. Güvenli şekilde kullanımı azaltın, mümkünse ana vanayı zorlamadan kontrol edin ve profesyonel tespit isteyin.",
       category: "su-kacagi",
     },
   ],
   "tikaniklik-acma": [
     {
-      question: "Tıkanıklık açma işlemi ne kadar sürer?",
+      question: "Robotla açma her tıkanıklıkta uygulanır mı?",
       answer:
-        "Lavabo ve duş gideri tıkanıklıkları genellikle 30–60 dakikada açılır. Ana pimaş hattı veya tuvalet tıkanıklıkları 1–2 saat sürebilir. Kameralı kontrol ile kesin süre keşifte belirlenir.",
+        "Hayır. Yabancı cisim, yağ birikimi veya ana hat sorununda yöntem değişebilir. Uygun yöntem hat tipine ve tıkanıklık karakterine göre seçilir.",
+      category: "tikaniklik",
+      needsTechnicalReview: true,
+    },
+    {
+      question: "Kameralı görüntüleme ne zaman gerekir?",
+      answer:
+        "Tekrarlayan tıkanıklık, deformasyon şüphesi veya birden fazla giderin aynı anda yavaşlamasında kamera ayrımı kolaylaştırır. Her açma işleminden önce zorunlu değildir.",
       category: "tikaniklik",
     },
     {
-      question: "Kimyasal dökücü kullanmak boruya zarar verir mi?",
+      question: "Tıkanıklığın tekrar etmesinin nedeni nedir?",
       answer:
-        "Ev tipi kimyasallar PVC borulara ve contalara zarar verebilir, sorunu geçici gizler. Robotik spiral makine ile mekanik açma kalıcı ve güvenli çözümdür.",
+        "Kısmi temizlik, yağ/tortu tabakası, eğim bozukluğu, yabancı cisim veya ana gider sorunu tekrar üretebilir. Kimyasallar kalıcı çözüm sanılmamalıdır.",
+      category: "tikaniklik",
+      needsTechnicalReview: true,
+    },
+    {
+      question: "Kimyasal gider açıcı kullanmak boruya zarar verir mi?",
+      answer:
+        "Ev tipi kimyasallar PVC ve contalara zarar verebilir, sorunu geçici gizleyebilir. Mekanik açma veya uygun yıkama daha güvenli adaylardır.",
       category: "tikaniklik",
     },
     {
-      question: "Tuvalet tıkanıklığı acil müdahale gerektirir mi?",
+      question: "Ana gider tıkanıklığı nasıl anlaşılır?",
       answer:
-        "Geri taşma durumunda acil müdahale şarttır; alt kata ve komşu dairelere hasar riski vardır. 7/24 ekibimiz trafik ve ekip uygunluğuna göre adresinize yönlendirilir.",
-      category: "tikaniklik",
-    },
-    {
-      question: "Tekrarlayan tıkanıklık neden olur?",
-      answer:
-        "Yağ birikimi, boru eğim hatası, kök girişi veya boru hasarı tekrarlayan tıkanıklığa yol açar. Kameralı görüntüleme ile kök sebep tespit edilerek onarım planı hazırlanır.",
-      category: "tikaniklik",
-    },
-    {
-      question: "Mutfak gideri tıkanıklığı nasıl açılır?",
-      answer:
-        "Robotik spiral makine ile yağ ve gıda birikimi parçalanır; gerekirse basınçlı su ile hat derinlemesine temizlenir. Kimyasal kullanılmadan boruya zarar verilmeden işlem yapılır.",
-      category: "tikaniklik",
-    },
-    {
-      question: "Tıkanıklık açma fiyatları neye göre belirlenir?",
-      answer:
-        "Tıkanıklık türü (lavabo, tuvalet, ana hat), erişim zorluğu ve kullanılacak ekipmana göre fiyatlandırılır. İşlem öncesi yazılı teklif sunulur.",
+        "Birden fazla giderin aynı anda yavaşlaması, geri tepme veya komşu dairelerde benzer şikâyet ana gider şüphesini güçlendirir. Kesin nokta için hat kontrolü gerekir.",
       category: "tikaniklik",
     },
   ],
@@ -490,5 +490,10 @@ export const serviceSpecificFaq: Record<string, FAQItem[]> = {
 
 export function getServiceFaq(slug: string): FAQItem[] {
   const specific = serviceSpecificFaq[slug] ?? [];
-  return [...specific, ...commonServiceFaq];
+  // Avoid identical 4-item common FAQ stacks on every service page.
+  const sharedTail = [
+    commonServiceFaq.find((f) => f.category === "fiyatlandirma"),
+    workmanshipWarrantyFaq,
+  ].filter(Boolean) as FAQItem[];
+  return [...specific, ...sharedTail];
 }

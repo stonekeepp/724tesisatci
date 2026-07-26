@@ -1,5 +1,23 @@
+export {
+  getClusterForPost,
+  getPublishedRelatedArticles,
+  getRelatedServicesForPost,
+  validateInternalReferences,
+} from "@/lib/utils/contentRelations";
+
+export {
+  getNearbyDistricts,
+  getDistrictsByRegion,
+  getRelatedDistrictsForDisplay,
+  getRelatedLocalLandingsForService,
+  getRelatedServicesForDistrict,
+  getPublishedGuidesForService,
+  getPublishedGuidesForLocalLanding,
+  validateLocationRelations,
+} from "@/lib/utils/locationRelations";
+
 import { services } from "@/data/mock/services";
-import { blogPosts } from "@/data/mock/blogPosts";
+import { getPublishedBlogPosts } from "@/data/mock/blogPosts";
 
 const STATIC_LABELS: Record<string, string> = {
   "/": "Kağıthane tesisatçı",
@@ -20,7 +38,7 @@ for (const service of services) {
   STATIC_LABELS[service.canonicalPath] = service.title;
 }
 
-for (const post of blogPosts.filter((p) => p.status === "published")) {
+for (const post of getPublishedBlogPosts()) {
   STATIC_LABELS[post.canonicalPath] = post.title;
 }
 

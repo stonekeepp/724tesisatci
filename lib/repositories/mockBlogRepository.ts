@@ -3,6 +3,7 @@ import path from "path";
 import { blogPosts as seedPosts } from "@/data/mock/blogPosts";
 import type { BlogPost, BlogFormInput } from "@/types";
 import type { IBlogRepository } from "./interfaces";
+import { isPublishedContent } from "@/lib/utils/publication";
 
 const RUNTIME_PATH = path.join(process.cwd(), "data/runtime/blog.json");
 
@@ -40,7 +41,7 @@ export class MockBlogRepository implements IBlogRepository {
 
   async findPublished() {
     const all = await this.getAllMerged();
-    return all.filter((p) => p.status === "published");
+    return all.filter((p) => isPublishedContent(p));
   }
 
   async findBySlug(slug: string) {

@@ -7,6 +7,8 @@ import type {
   SiteSettings,
 } from "@/types";
 import { getSiteUrl } from "./seoService";
+import { normalizeSameAs } from "@/lib/utils/sameAs";
+import { expertProfiles } from "@/data/mock/experts";
 
 function buildPostalAddress(settings: SiteSettings) {
   return {
@@ -50,14 +52,11 @@ function buildOpeningHoursSpecification(settings: SiteSettings) {
 }
 
 function buildSameAs(settings: SiteSettings): string[] | undefined {
-  const links = new Set<string>();
-  if (settings.googleBusinessProfileUrl) {
-    links.add(settings.googleBusinessProfileUrl);
-  }
-  for (const url of settings.sameAs ?? []) {
-    if (url) links.add(url);
-  }
-  return links.size > 0 ? [...links] : undefined;
+  const normalized = normalizeSameAs([
+    settings.googleBusinessProfileUrl,
+    ...(settings.sameAs ?? []),
+  ]);
+  return normalized.length > 0 ? normalized : undefined;
 }
 
 export function buildOrganizationSchema(settings: SiteSettings) {
@@ -339,14 +338,26 @@ export function buildBlogPostingSchema(post: BlogPost, settings: SiteSettings) {
         url: `${siteUrl}/logo.webp`,
       },
     },
-    ...(post.editorialReviewedBy
-      ? {
-          reviewedBy: {
-            "@type": "Organization",
-            name: post.editorialReviewedBy,
-          },
-        }
-      : {}),
+    ...(post.reviewerId
+      ? (() => {
+          const reviewer = expertProfiles.find((e) => e.id === post.reviewerId);
+          return reviewer?.name
+            ? {
+                reviewedBy: {
+                  "@type": "Person" as const,
+                  name: reviewer.name,
+                },
+              }
+            : {};
+        })()
+      : post.editorialReviewedBy
+        ? {
+            reviewedBy: {
+              "@type": "Organization",
+              name: post.editorialReviewedBy,
+            },
+          }
+        : {}),
     url: `${siteUrl}${post.canonicalPath}`,
     mainEntityOfPage: {
       "@type": "WebPage",

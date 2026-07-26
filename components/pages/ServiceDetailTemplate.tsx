@@ -4,9 +4,9 @@ import { Breadcrumb } from "@/components/layout/Breadcrumb";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { ServiceAboutSection } from "@/components/pages/ServiceAboutSection";
 import { HeroImagePanel } from "@/components/ui/StitchImage";
-import { blogPosts } from "@/data/mock/blogPosts";
 import { serviceHeroImages } from "@/data/mock/images";
 import { getLocalLandingByServiceSlug } from "@/lib/services/localLandingService";
+import { getPublishedGuidesForService } from "@/lib/utils/locationRelations";
 import {
   getPhoneHref,
   getWhatsAppHref,
@@ -37,12 +37,10 @@ export function ServiceDetailTemplate({
     displayOverrides?.heroDescription ?? service.heroDescription;
   const displayTitle = displayOverrides?.displayTitle ?? service.title;
   const heroMeta = serviceHeroImages[service.slug];
-  const relatedBlogPosts = blogPosts
-    .filter(
-      (post) =>
-        post.status === "published" && post.relatedServices.includes(service.slug)
-    )
-    .slice(0, 3);
+  const relatedBlogPosts = getPublishedGuidesForService(service.slug).slice(
+    0,
+    3
+  );
   const localLanding = getLocalLandingByServiceSlug(service.slug);
   const heroOverlay =
     service.slug === "su-kacagi-tespit-ve-onarim" ? (

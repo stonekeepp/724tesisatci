@@ -8,10 +8,9 @@ import { JsonLdScript } from "@/components/seo/JsonLdScript";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { ContextualLinks } from "@/components/ui/ContextualLinks";
 import {
-  getBlogPostBySlug,
+  getPublishedBlogPostBySlug,
   getPublishedBlogPosts,
 } from "@/lib/services/blogService";
-import { getAllServices } from "@/lib/services/serviceService";
 import { getSiteSettings } from "@/lib/services/settingsService";
 import { buildMetadata, seoFromEntity } from "@/lib/services/seoService";
 import {
@@ -21,6 +20,10 @@ import {
 } from "@/lib/services/schemaService";
 import { getPhoneHref } from "@/data/mock/siteSettings";
 import { primaryHubLinks } from "@/lib/utils/internalLinks";
+import {
+  getPublishedRelatedArticles,
+  getRelatedServicesForPost,
+} from "@/lib/utils/contentRelations";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -31,10 +34,13 @@ export async function generateStaticParams() {
   return published.map((p) => ({ slug: p.slug }));
 }
 
+/** Draft/unknown slugs must not resolve via dynamic fallback in production. */
+export const dynamicParams = false;
+
 export async function generateMetadata({ params }: Props) {
   const { slug } = await params;
-  const post = await getBlogPostBySlug(slug);
-  if (!post || post.status !== "published") return {};
+  const post = await getPublishedBlogPostBySlug(slug);
+  if (!post) return {};
   return buildMetadata(
     seoFromEntity({
       ...post,
@@ -116,21 +122,20 @@ function formatDate(date: string) {
 
 export default async function BlogDetailPage({ params }: Props) {
   const { slug } = await params;
-  const post = await getBlogPostBySlug(slug);
-  if (!post || post.status !== "published") notFound();
+  const post = await getPublishedBlogPostBySlug(slug);
+  if (!post) notFound();
 
-  const [allServices, publishedPosts, settings] = await Promise.all([
-    getAllServices(),
+  const [publishedPosts, settings] = await Promise.all([
     getPublishedBlogPosts(),
     getSiteSettings(),
   ]);
 
-  const relatedServices = allServices.filter((s) =>
-    post.relatedServices.includes(s.slug)
-  );
-  const relatedPosts = publishedPosts
-    .filter((p) => p.slug !== post.slug)
-    .slice(0, 3);
+  const relatedServices = getRelatedServicesForPost(post);
+  const relatedFromField = getPublishedRelatedArticles(post);
+  const relatedPosts =
+    relatedFromField.length > 0
+      ? relatedFromField.slice(0, 3)
+      : publishedPosts.filter((p) => p.slug !== post.slug).slice(0, 3);
 
   const breadcrumbs = [
     { label: "Ana Sayfa", href: "/" },

@@ -35,7 +35,7 @@ export const staticPageSeo: Record<string, SEOData> = {
   hakkimizda: {
     title: "Hakkımızda | 724 Tesisatçı — İstanbul Tesisat Uzmanları",
     description:
-      "724 Tesisatçı: Kağıthane merkezli, İstanbul genelinde 7/24 profesyonel tesisat hizmeti. Termal kamera ile kırmadan tespit, yazılı teklif ve 15+ yıl tecrübe.",
+      "724 Tesisatçı: Kağıthane merkezli, İstanbul genelinde 7/24 profesyonel tesisat hizmeti. Termal kamera ile kırmadan tespit, yazılı teklif ve saha deneyimine dayalı uygulama.",
     canonicalPath: "/hakkimizda",
   },
   iletisim: {

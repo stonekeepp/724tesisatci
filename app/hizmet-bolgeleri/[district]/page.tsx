@@ -17,6 +17,7 @@ import {
   buildFAQSchema,
 } from "@/lib/services/schemaService";
 import { getDistrictLocations } from "@/data/mock/locations";
+import { getRelatedDistrictsForDisplay } from "@/lib/utils/locationRelations";
 
 interface Props {
   params: Promise<{ district: string }>;
@@ -45,12 +46,15 @@ export default async function DistrictPage({ params }: Props) {
       ? await getNeighborhoodsByDistrict(slug)
       : [];
   const settings = await getSiteSettings();
-  const allDistricts = getDistrictLocations().sort((a, b) => {
-    const aIndex = a.indexable !== false ? 0 : 1;
-    const bIndex = b.indexable !== false ? 0 : 1;
-    if (aIndex !== bIndex) return aIndex - bIndex;
-    return a.title.localeCompare(b.title, "tr");
-  });
+  const otherDistricts =
+    location.slug === "istanbul"
+      ? getDistrictLocations().sort((a, b) => {
+          const aIndex = a.indexable !== false ? 0 : 1;
+          const bIndex = b.indexable !== false ? 0 : 1;
+          if (aIndex !== bIndex) return aIndex - bIndex;
+          return a.title.localeCompare(b.title, "tr");
+        })
+      : getRelatedDistrictsForDisplay(location.slug);
 
   const breadcrumbs = [
     { label: "Ana Sayfa", href: "/" },
@@ -94,7 +98,7 @@ export default async function DistrictPage({ params }: Props) {
         location={location}
         allServices={allServices}
         neighborhoods={neighborhoods}
-        otherDistricts={allDistricts}
+        otherDistricts={otherDistricts}
       />
     </SiteLayout>
   );

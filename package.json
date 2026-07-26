@@ -7,6 +7,11 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "typecheck": "tsc --noEmit",
+    "test": "node --experimental-strip-types --test tests/turkishSuffix.test.mjs tests/publication.test.mjs tests/sameAs.test.mjs tests/contentClusters.test.mjs tests/draftBlogPosts.test.mjs tests/locationRelations.test.mjs tests/pr4PublicationReadiness.test.mjs tests/pr5aTechnicalReview.test.mjs tests/pr5bReviewerPublication.test.mjs",
+    "seo:audit": "node --experimental-strip-types scripts/seo-audit-report.mjs",
+    "review:validate": "node --experimental-strip-types scripts/validate-blog-review-approvals.mjs",
+    "production:verify": "node scripts/verify-production-deployment.mjs",
     "build:icons": "node scripts/extract-material-icons.mjs && node scripts/build-material-icons-font.mjs",
     "ping:indexnow": "node scripts/ping-indexnow-sitemap.mjs"
   },

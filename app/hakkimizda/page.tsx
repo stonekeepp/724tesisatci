@@ -297,12 +297,12 @@ export default async function HakkimizdaPage() {
         <div className="w-full max-w-4xl h-[300px] md:h-[450px] relative rounded-3xl overflow-hidden soft-shadow mb-12">
           <StitchImage
             src={pageImages.hakkimizdaTeam}
-            alt="724 Tesisatçı sertifikalı tesisat ekibi — İstanbul profesyonel su tesisatı ve acil servis"
+            alt="724 Tesisatçı tesisat ekibi — İstanbul profesyonel su tesisatı ve acil servis"
             fill
           />
           <div className="absolute inset-0 bg-gradient-to-t from-primary-container/80 to-transparent flex items-end justify-center pb-8">
             <p className="font-headline-md text-headline-md text-white">
-              Alanında Uzman, Sertifikalı Personel
+              Alanında Deneyimli Ekip
             </p>
           </div>
         </div>
