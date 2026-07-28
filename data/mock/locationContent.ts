@@ -25,6 +25,7 @@ export const ALL_SERVICE_SLUGS = [
 ] as const;
 
 const KAGITHANE_LANDING_SLUGS = [
+  "kagithane-su-tesisati",
   "kagithane-su-kacagi-tespiti",
   "kagithane-tikaniklik-acma",
   "kagithane-pimas-acma",
@@ -32,6 +33,7 @@ const KAGITHANE_LANDING_SLUGS = [
   "kagithane-kombi-servisi",
   "kagithane-kalorifer-tesisati",
   "kagithane-kamerali-tesisat-goruntuleme",
+  "kagithane-dogalgaz-tesisati",
 ] as const;
 
 function buildDistrictFaq(d: IstanbulDistrictMeta): FAQItem[] {

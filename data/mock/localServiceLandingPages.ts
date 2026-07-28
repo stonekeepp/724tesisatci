@@ -11,7 +11,7 @@ export const localServiceLandingPages: LocalServiceLanding[] = [
     heroDescription:
       "Alt kata su sızması, tavanda nem veya kabarma, yüksek fatura ve sayaç hareketinde termal kamera, akustik dinleme ve nem ölçerle kaçak noktası daraltılır; sonuç yazılı olarak paylaşılır.",
     intro:
-      "Kağıthane'de su kaçağı çoğu zaman banyo, mutfak, temiz su borusu veya kalorifer hattından başlar. Ekibimiz önce belirtileri dinler; gereksiz kırma yapmadan termal, akustik ve nem ölçümle kaynağı doğrulamaya odaklanır. Genel Kağıthane tesisatçı çağrıları için ana sayfayı, mahalle yönlendirme için Kağıthane hizmet bölgeleri hub’ını kullanın.",
+      "Kağıthane'de su kaçağı çoğu zaman banyo, mutfak, temiz su borusu veya kalorifer hattından başlar. Ekibimiz önce belirtileri dinler; gereksiz kırma yapmadan termal, akustik ve nem ölçümle kaynağı doğrulamaya odaklanır. Genel çağrılar için ana sayfa, mahalle seçimi için Kağıthane hizmet bölgeleri hub’ı kullanılır.",
     serviceType: "Su kaçağı tespiti",
     canonicalPath: "/kagithane-su-kacagi-tespiti",
     imageAlt:
@@ -65,6 +65,7 @@ export const localServiceLandingPages: LocalServiceLanding[] = [
       },
     ],
     relatedLocalSlugs: [
+      "kagithane-su-tesisati",
       "kagithane-kamerali-tesisat-goruntuleme",
       "kagithane-kalorifer-tesisati",
       "kagithane-kombi-servisi",
@@ -80,7 +81,7 @@ export const localServiceLandingPages: LocalServiceLanding[] = [
     heroDescription:
       "Lavabo yavaş akıyorsa, tuvalet taşıyorsa veya mutfaktan koku geliyorsa gider tipine göre robot cihaz, spiral veya kameralı kontrol ile tıkanıklık açılır.",
     intro:
-      "Kağıthane'de tıkanıklık çoğu zaman yağ, kireç, saç veya yabancı cisim birikiminden kaynaklanır. Seyrantepe ve Sanayi çevresindeki mutfaklarda yağ; Çağlayan dairelerinde ise lavabo ve tuvalet noktasal tıkanıklıkları sık görülür. Yöntem, gider tipine göre seçilir. Genel Kağıthane tesisatçı çağrıları için ana sayfayı, mahalle yönlendirme için Kağıthane hizmet bölgeleri hub’ını kullanın.",
+      "Kağıthane'de tıkanıklık çoğu zaman yağ, kireç, saç veya yabancı cisim birikiminden kaynaklanır. Seyrantepe ve Sanayi çevresindeki mutfaklarda yağ; Çağlayan dairelerinde ise lavabo ve tuvalet noktasal tıkanıklıkları sık görülür. Yöntem gider tipine göre seçilir; acil taşma ve koku çağrıları için ana sayfa üzerinden de iletişime geçilebilir.",
     serviceType: "Tıkanıklık açma",
     canonicalPath: "/kagithane-tikaniklik-acma",
     imageAlt: "Kağıthane'de robot cihaz ile lavabo tıkanıklığı açma",
@@ -172,7 +173,7 @@ export const localServiceLandingPages: LocalServiceLanding[] = [
       {
         title: "Hamidiye ve Emniyet Evleri apartman hatları",
         body:
-          "Hamidiye ve Emniyet Evleri'nde apartman ana gideri ve kolon hattı ortak kullanım nedeniyle daha hızlı yüklenir. Ortabayır'daki eski pimaş hatlarında ise daralma ve ek yeri sorunları sık görülür. Çeliktepe ve Seyrantepe sanayi-konut karışık bölgelerde yağ birikimi daha hızlı oluşabilir.",
+          "Hamidiye ve Emniyet Evleri'nde apartman ana gideri ve kolon hattı ortak kullanım nedeniyle daha hızlı yüklenir. Ortabayır'daki eski pimaş hatlarında ise daralma ve ek yeri sorunları sık görülür. Çeliktepe ve Seyrantepe sanayi-konut karışık bölgelerde yağ birikimi daha hızlı oluşabilir. Saha notu (Seyrantepe, Şubat 2026): Sanayi çevresindeki iş yerinde birden fazla gider aynı anda yavaşlıyor ve bodrumda koku vardı. Robotla ana hat açımı sonrası kamera kontrolünde yoğun yağ tabakası görüldü; basınçlı yıkama planlandı. Akış testi sonrası koku azaldı, işlem yazılı form ile teslim edildi.",
       },
       {
         title: "Cihazlı açma adımları",
@@ -195,32 +196,32 @@ export const localServiceLandingPages: LocalServiceLanding[] = [
       {
         question: "Pimaş açma ile lavabo tıkanıklığı açma aynı mı?",
         answer:
-          "Her zaman değil. Lavabo tıkanıklığı noktasal olabilir; pimaş açma çoğu zaman apartman ana gideri, kolon hattı ve tekrarlayan sorunların kontrolünü kapsar.",
+          "Her zaman değil. Tek lavabo veya sifon tıkanıklığı çoğu zaman noktasal robot/spiral ile çözülür. Pimaş açma ise apartman ana gideri, kolon hattı, bodrum çıkışı ve birden fazla giderin aynı anda yavaşladığı senaryoları kapsar. Hamidiye ve Emniyet Evleri apartmanlarında ortak hat yükü hızlı artar; Seyrantepe iş yerlerinde yağ birikimi ana hattı daha çabuk etkiler. Yalnızca bir lavabo etkileniyorsa önce noktasal açma denenir; klozet ile yer süzgeci birlikte yükseliyorsa ana hat kontrolü gerekir. Tekrarlayan tıkanıklıkta kamera ile eğim, yağ tabakası veya çökme değerlendirilir. Kimyasal dökmek conta ve PVC’ye zarar verebilir. Keşif sonrası kapsam yazılı teklifle ayrıştırılır; onay olmadan geniş müdahale yapılmaz. WhatsApp ile mahalle ve hangi giderlerin etkilendiğini yazmanız yönlendirmeyi hızlandırır. Sabit süre vaadi verilmez; trafik ve ekip uygunluğuna göre gelinir.",
         category: "Pimaş",
       },
       {
         question: "Bodrumda taşma varsa ne yapılmalı?",
         answer:
-          "Kullanımı durdurun, elektrik riskine dikkat edin ve ana hat için cihazlı ekip çağırın. Gecikme alt katlarda hasarı büyütür.",
+          "Önce kullanımı durdurun; özellikle çamaşır makinesi, bulaşık makinesi ve çoklu musluk kullanımını kesin. Elektrik riski olan ıslak alanlara basmayın, rögar çevresini boşaltmaya çalışırken tek başınıza zorlamayın. Bodrum taşması çoğu zaman ana hat veya pimaş çıkışında birikim, yağ tabakası veya kısmi çökme işaretidir; gecikme alt kat hasarını büyütür. Ortabayır ve Çeliktepe eski stokta daralmış ek yerleri, Seyrantepe’de yağ birikimi sık görülür. Ekip gelince erişim noktası belirlenir, robot/spiral ile açma yapılır; tekrar riski yüksekse kamera kaydı alınır. Sonuç yazılı paylaşılır; kapsam keşif sonrası netleşir. Sabit süre vaadi verilmez; trafik ve ekip uygunluğuna göre gelinir. WhatsApp ile taşma fotoğrafı yönlendirmeyi hızlandırır.",
         category: "Ana hat",
       },
       {
         question: "Kötü koku her zaman pimaş tıkanıklığı mıdır?",
         answer:
-          "Birikim sık nedendir; sifon veya havalandırma da kokuyu artırabilir. Akış ve gerekirse kamera ile sebep ayrıştırılır.",
+          "Birikim sık nedendir; ancak sifon kuruması, havalandırma zayıflığı veya noktasal lavabo tıkanıklığı da kokuyu artırabilir. Birden fazla giderden koku geliyor, fokurdama duyuluyor veya kısa sürede tıkanıklık tekrarlıyorsa ana hat / pimaş kontrolü güçlenir. Tek lavaboda koku varsa önce sifon ve yakın hat bakılır. Kamera, yağ tabakası ile kırık/eğim ayrımını netleştirir; yalnızca koku için hemen kırma önerilmez. Keşif sonrası yöntem yazılı teklifle paylaşılır. Onay olmadan geniş müdahale yapılmaz.",
         category: "Koku",
       },
       {
         question: "Kağıthane'de aynı gün pimaş açma yapılır mı?",
         answer:
-          "Trafik ve ekip uygunluğuna göre aynı gün cihazlı müdahale planlanır. Telefon veya WhatsApp ile mahalle ve belirtiyi iletmeniz yönlendirmeyi hızlandırır.",
+          "Acil geri tepme, bodrum taşması veya birden fazla giderin aynı anda yükselmesi durumunda öncelikli cihazlı yönlendirme yapılır. Planlı kamera ve yıkama işleri ise erişim ve ekip uygunluğuna göre randevulanır. Sabit aynı gün garantisi verilmez; trafik belirleyicidir. Mahalle, taşma fotoğrafı ve etkilenen giderleri WhatsApp ile iletmeniz yönlendirmeyi hızlandırır. Onay sonrası işlem yazılı form ile teslim edilir.",
         category: "Süre",
       },
     ],
     relatedLocalSlugs: [
       "kagithane-tikaniklik-acma",
       "kagithane-kamerali-tesisat-goruntuleme",
-      "kagithane-musluk-tamiri",
+      "kagithane-su-kacagi-tespiti",
     ],
   },
   {
@@ -233,7 +234,7 @@ export const localServiceLandingPages: LocalServiceLanding[] = [
     heroDescription:
       "Peteklerin altı soğuk üstü sıcak kalıyorsa, son petek ısınmıyorsa veya kombi çalıştığı halde ev ısınmıyorsa tesisat içi çamur ve tortu makineyle temizlenir.",
     intro:
-      "Kağıthane'de kış öncesi petek temizliği, özellikle eski kalorifer hatlarında ısı verimini korur. Gültepe ve Ortabayır dairelerinde çamurlaşma sık görülür; temizlik makinesi ve uygun koruyucu kimyasalla dolaşım yeniden dengelenir.",
+      "Kağıthane'de kış öncesi petek temizliği, özellikle eski kalorifer hatlarında ısı verimini korur ve dolaşım zayıflığını azaltır. Gültepe ve Ortabayır dairelerinde çamurlaşma sık görülür; Çeliktepe kollektörlü sistemlerde vana dengesi de temizlikle birlikte kontrol edilir. Temizlik makinesi ve uygun koruyucu kimyasalla sirkülasyon yeniden dengelenir; işlem sonrası ısı dağılımı test edilir.",
     serviceType: "Petek temizleme",
     canonicalPath: "/kagithane-petek-temizleme",
     imageAlt: "Kağıthane'de makine ile petek temizleme işlemi",
@@ -257,7 +258,7 @@ export const localServiceLandingPages: LocalServiceLanding[] = [
       {
         title: "Gültepe ve Ortabayır'da kış öncesi bakım",
         body:
-          "Gültepe ve Ortabayır'daki eski dairelerde tesisat içi tortu daha sık birikir. Çeliktepe'deki kollektörlü sistemlerde ise vana ayarı ve petek dengesi temizlikle birlikte kontrol edilir.",
+          "Gültepe ve Ortabayır'daki eski dairelerde tesisat içi tortu daha sık birikir. Çeliktepe'deki kollektörlü sistemlerde ise vana ayarı ve petek dengesi temizlikle birlikte kontrol edilir. Saha notu (Gültepe, Kasım 2025): Salon peteği altı soğuk, oda ısınmıyor şikâyetiyle gelen dairede makineyle temizlik sonrası dolaşım dengelendi; son petekler ısınmaya başladı. Basınç 48 saat izlendi, işlem yazılı form ile teslim edildi.",
       },
       {
         title: "Petek temizleme ücretinde daire ve petek sayısı etkisi",
@@ -269,19 +270,19 @@ export const localServiceLandingPages: LocalServiceLanding[] = [
       {
         question: "Petek temizliği kombiye zarar verir mi?",
         answer:
-          "Uygun makine ve doğru bağlantı ile yapılan temizlik kombiye zarar vermez. Basınç ve akış işlem boyunca kontrol altında tutulur.",
+          "Uygun makine bağlantısı, doğru vana kapatma/açma sırası ve işlem boyunca basınç-akış kontrolü ile yapılan temizlik kombiye zarar vermez. Amaç tesisat içi çamur ve tortuyu uzaklaştırıp dolaşımı dengelemektir. Gültepe ve Ortabayır eski hatlarında tortu birikimi sık görülür; Çeliktepe kollektörlü sistemlerde vana dengesi de kontrol edilir. Altı soğuk üstü sıcak petek veya hattın son peteklerinin geç ısınması tipik uyarıdır. Cihaz içi kart, fan veya üretici bakımı bu hizmetin dışındadır; cihaz arızası şüphesinde güvenli yönlendirme yapılır. Keşifte petek sayısı ve erişim öğrenilir; kapsam yazılı teklifle paylaşılır. Onay olmadan işleme başlanmaz. İşlem sonunda hava alma ve ısı dağılımı test edilir; sonuçlar servis formunda belirtilir. Sabit süre vaadi verilmez; trafik ve ekip uygunluğuna göre planlanır. WhatsApp ile petek fotoğrafı ön değerlendirmeyi hızlandırır.",
         category: "Petek temizleme",
       },
       {
         question: "Kış öncesi petek temizliği ne zaman yapılmalı?",
         answer:
-          "Isınma sezonu başlamadan önce tercih edilir. Böylece tortu kaynaklı ısınma kaybı ve gereksiz enerji tüketimi azaltılır.",
+          "Isınma sezonu başlamadan önce tercih edilir; böylece tortu kaynaklı ısınma kaybı ve gereksiz enerji tüketimi azaltılır. Altı soğuk üstü sıcak petek, hattın son peteklerinin geç ısınması veya sık hava alma ihtiyacı uyarıdır. Merkez ve Hamidiye dairelerinde kış çağrıları yoğunlaşmadan randevu almak erişimi kolaylaştırır. Temizlik tek başına her ısınma sorununu çözmez; basınç sürekli düşüyorsa kaçak kontrolü ayrı planlanır. Keşif sonrası petek sayısı ve yöntem yazılı netleşir. WhatsApp ile petek fotoğrafı ve mahalle bilgisi ön değerlendirmeyi hızlandırır. Onay sonrası işlem form ile teslim edilir.",
         category: "Bakım",
       },
       {
         question: "Temizlik sonrası basınç düşmesi düzelir mi?",
         answer:
-          "Basınç düşmesi kaçaktan kaynaklanıyorsa temizlik tek başına yetmez; tesisat kaçağı kontrolü gerekir. Belirti ayrımı işlem öncesi yapılır.",
+          "Basınç düşmesi kaçaktan kaynaklanıyorsa temizlik tek başına yetmez; kalorifer hattı, petek bağlantısı veya tesisat kaçağı kontrolü gerekir. Temizlik dolaşımı iyileştirir ama aktif sızıntıyı kapatmaz. Petek altında nem, boya kabarması veya sürekli doldurma ihtiyacı varsa önce kaçak ihtimali değerlendirilir; gerekirse su kaçağı tespiti veya kombi tesisat kontrolü ayrı planlanır. Belirti ayrımı işlem öncesi yapılır; onay sonrası kapsam yazılı teklifle paylaşılır. Abartılı yüzde yüz iddiası kullanılmaz.",
         category: "Basınç",
       },
     ],
@@ -357,6 +358,7 @@ export const localServiceLandingPages: LocalServiceLanding[] = [
       "kagithane-petek-temizleme",
       "kagithane-kalorifer-tesisati",
       "kagithane-dogalgaz-tesisati",
+      "kagithane-su-tesisati",
     ],
   },
   {
@@ -422,6 +424,7 @@ export const localServiceLandingPages: LocalServiceLanding[] = [
       },
     ],
     relatedLocalSlugs: [
+      "kagithane-su-tesisati",
       "kagithane-musluk-tamiri",
       "kagithane-su-kacagi-tespiti",
       "kagithane-tikaniklik-acma",
@@ -490,6 +493,7 @@ export const localServiceLandingPages: LocalServiceLanding[] = [
       },
     ],
     relatedLocalSlugs: [
+      "kagithane-su-tesisati",
       "kagithane-gomme-rezervuar-tamiri",
       "kagithane-su-kacagi-tespiti",
       "kagithane-tikaniklik-acma",
@@ -641,7 +645,7 @@ export const localServiceLandingPages: LocalServiceLanding[] = [
     heroDescription:
       "Kombi veya ocak bağlantısı, doğalgaz hattı kontrolü ve sızdırmazlık testi ihtiyaçlarında keşif yapılır; kapsam yazılı teklifle netleştirilir. Gaz kokusu varsa vanayı kapatıp pencere açın ve hemen arayın.",
     intro:
-      "Doğalgaz hattı, güvenlik açısından en kritik tesisat kollarından biridir. Emniyet Evleri ve Çeliktepe apartmanlarında kombi değişimi, ocak bağlantısı veya eski hat kontrolü sık talep edilir. Odak; bağlantı, sızdırmazlık ve standartlara uygun uygulamadır. Kesin varış saati trafik ve ekip uygunluğuna göre planlanır.",
+      "Doğalgaz hattı, güvenlik açısından en kritik tesisat kollarından biridir. Emniyet Evleri ve Çeliktepe apartmanlarında kombi değişimi, ocak bağlantısı veya eski hat kontrolü sık talep edilir. Odak; bağlantı uygunluğu, sızdırmazlık kontrolü ve keşif sonrası yazılı teklifle netleştirilen uygulamadır.",
     serviceType: "Doğalgaz tesisatı",
     canonicalPath: "/kagithane-dogalgaz-tesisati",
     imageAlt: "Kağıthane'de doğalgaz bağlantısı ve sızdırmazlık kontrolü",
@@ -663,12 +667,12 @@ export const localServiceLandingPages: LocalServiceLanding[] = [
           "Keşifte mevcut hat, cihaz tipi ve bağlantı noktaları incelenir. Uygun görülen işlerde sızdırmazlık/basınç kontrolü planlanır. İş kapsamı ve malzeme ihtiyacı keşif sonrası yazılı teklifle paylaşılır; onay olmadan işe başlanmaz.",
       },
       {
-        title: "Emniyet Evleri ve Çeliktepe apartman bağlantıları",
+        title: "Kombi ve ocak bağlantılarında mahalle senaryoları",
         body:
-          "Emniyet Evleri'ndeki site ve yeni dairelerde kollektör/cihaz bağlantısı; Çeliktepe eski stokta fleks, vana ve ek yerleri daha sık kontrol edilir. Hamidiye ve Merkez mahallelerinde kombi değişimi ile birlikte hat uygunluğu değerlendirilir.",
+          "Emniyet Evleri'ndeki site dairelerinde cihaz bağlantısı ve fleks yenileme; Çeliktepe eski stokta vana ve ek yerleri daha sık kontrol edilir. Hamidiye ve Merkez mahallelerinde kombi değişimi ile birlikte hat uygunluğu değerlendirilir. Saha notu (Çeliktepe, Ocak 2026): Kombi değişimi sonrası bağlantı ve fleks kontrolü yapılan dairede sızdırmazlık testi uygulandı; cihaz içi üretici bakımı gerekmediği için yalnızca tesisat bağlantı tarafı tamamlandı, yazılı form teslim edildi.",
       },
       {
-        title: "Kapsam ve planlamayı etkileyen unsurlar",
+        title: "Doğalgaz bağlantı işlerinde kapsamı ne belirler?",
         body:
           "Hat uzunluğu, cihaz tipi, erişim, malzeme ihtiyacı ve güvenlik testi ihtiyacı kapsamı etkiler. Acil koku çağrılarında öncelik güvenliktedir; planlı montajlarda randevu trafik ve ekibe göre ayarlanır.",
       },
@@ -677,32 +681,106 @@ export const localServiceLandingPages: LocalServiceLanding[] = [
       {
         question: "Gaz kokusu alırsam ne yapmalıyım?",
         answer:
-          "Cihazları ve elektrik düğmelerini kullanmayın, vanayı kapatın, pencereleri açın ve dışarıdan acil hattı arayın. Kokuyu doğrulamak için ateş veya çakmak kullanmayın.",
+          "Cihazları ve elektrik düğmelerini kullanmayın, doğalgaz vanasını kapatın, pencereleri açın ve mümkünse dışarı çıkın. Kokuyu doğrulamak için ateş, çakmak veya kibrit kullanmayın. Emniyet Evleri ve Çeliktepe apartmanlarında koku şikâyetinde önce güvenlik, sonra hat kontrolü gelir. Dışarıdan acil hattı arayın; ekip yönlendirmesi trafik ve uygunluğa göre yapılır, sabit dakika vaadi verilmez. Şüpheli bağlantı veya fleks yenileme ihtiyacı keşifte değerlendirilir; onay olmadan planlı montaja başlanmaz. WhatsApp ile mahalle bilgisi paylaşmak yönlendirmeyi kolaylaştırır ama koku anında öncelik telefonla acil iletişimdir. Planlı bağlantı işleri ayrı randevulanır; güvenlik çağrısı ile karıştırılmaz. Abartılı yüzde yüz iddiası kullanılmaz.",
         category: "Güvenlik",
       },
       {
         question: "Kombi değişiminde doğalgaz bağlantısı yapılır mı?",
         answer:
-          "Evet. Uygun hat ve cihaz uyumu keşifte değerlendirilir; bağlantı ve sızdırmazlık kontrolü planlanır. Cihaz içi üretici servisi gereken durumda ayrıca yönlendirme yapılır.",
+          "Evet. Uygun hat ve cihaz uyumu keşifte değerlendirilir; bağlantı, fleks ve sızdırmazlık kontrolü planlanır. Bu sayfa tesisat bağlantı tarafına odaklanır; cihaz içi üretici servisi veya marka bakımı gereken durumda güvenli yönlendirme yapılır. Hamidiye yeni dairelerde kollektör/cihaz mesafesi, Çeliktepe eski stokta vana ve ek yerleri daha sık incelenir. Merkez ve Ortabayır’da kombi değişimi sonrası bağlantı kontrolü sık talep edilir. Malzeme ve işçilik kalemleri yazılı teklifle paylaşılır; onay olmadan işe başlanmaz. İşlem sonrası uygun görülen sızdırmazlık/basınç kontrolü uygulanır ve servis formu teslim edilir. Petek veya kalorifer tarafı ayrı ihtiyaçsa kombi tesisat kontrolü veya kalorifer landing’i ile birlikte planlanabilir. Sabit süre vaadi verilmez; trafik ve ekip uygunluğuna göre gelinir.",
         category: "Bağlantı",
       },
       {
         question: "Sızdırmazlık testi ne zaman gerekir?",
         answer:
-          "Yeni bağlantı, hat müdahalesi veya şüpheli koku sonrası güvenlik kontrolü için önerilir. Test kapsamı keşifte netleştirilir.",
+          "Yeni bağlantı, hat müdahalesi, fleks yenileme veya şüpheli koku sonrası güvenlik kontrolü için önerilir. Test kapsamı keşifte netleştirilir; her çağrıda aynı prosedür otomatik uygulanmaz. Merkez ve Ortabayır dairelerinde kombi değişimi sonrası bağlantı kontrolü sık talep edilir. Sonuçlar yazılı özetlenir; onay sonrası planlı işler randevulanır. Sertifika veya belge iddiası bu metinde kullanılmaz; odak saha kontrolü ve şeffaf tekliftir. Trafik ve ekip uygunluğuna göre planlama yapılır.",
         category: "Test",
       },
       {
         question: "Kağıthane'de aynı gün doğalgaz işi yapılır mı?",
         answer:
-          "Acil güvenlik durumlarında öncelikli yönlendirme yapılır. Planlı montaj ve hat işleri trafik ile ekip uygunluğuna göre randevulanır.",
+          "Acil güvenlik (koku) durumlarında öncelikli yönlendirme yapılır. Planlı kombi-ocak bağlantısı ve hat işleri keşif, malzeme ve ekip uygunluğuna göre randevulanır. Sabit aynı gün garantisi verilmez. Mahalle ve cihaz tipini iletmeniz planlamayı hızlandırır; onay sonrası kapsam yazılı teklifle netleşir. Emniyet Evleri ve Çeliktepe çağrılarında erişim ve cihaz tipi önceden paylaşılırsa yönlendirme daha net planlanır.",
         category: "Planlama",
       },
     ],
     relatedLocalSlugs: [
       "kagithane-kombi-servisi",
       "kagithane-kalorifer-tesisati",
+      "kagithane-petek-temizleme",
+    ],
+  },
+  {
+    slug: "kagithane-su-tesisati",
+    serviceSlug: "su-tesisati",
+    title: "Kağıthane Su Tesisatı | Hattı Onarım ve Yenileme",
+    description:
+      "Kağıthane su tesisatı: temiz su hattı, vana-musluk onarımı, banyo-mutfak yenileme ve basınç kontrolü. Keşif sonrası yazılı teklif; trafik ve ekibe göre yönlendirme.",
+    h1: "Kağıthane Su Tesisatı",
+    heroDescription:
+      "Düşük basınç, paslı su, damlayan musluk veya banyo-mutfak tesisat yenilemede keşif yapılır; kapsam yazılı teklifle netleştirilir. Onay olmadan işe başlanmaz.",
+    intro:
+      "Su tesisatı, daire ve iş yerlerinde en sık çağrı alınan kollardan biridir. Emniyet Evleri ve Çeliktepe apartmanlarında temiz su hattı, vana arızası, musluk-batarya sızıntısı ve banyo-mutfak yenileme talepleri öne çıkar. Odak; doğru tespit, uygun malzeme, yazılı teklif ve işlem sonrası basınç testi ile kalıcı çözümdür.",
+    serviceType: "Su tesisatı",
+    canonicalPath: "/kagithane-su-tesisati",
+    imageAlt: "Kağıthane'de su tesisatı hattı onarımı ve basınç kontrolü",
+    sections: [
+      {
+        title: "Düşük basınç, paslı su ve sızıntı belirtileri",
+        body:
+          "Musluklardan zayıf akış, paslı veya bulanık su, sürekli damlama ve duvarda nem çoğu zaman hat, vana veya bağlantı sorununa işaret eder. Erken müdahale fatura ve yapı hasarını sınırlar.",
+        items: [
+          "Düşük su basıncı veya zayıf akış",
+          "Paslı, bulanık veya kötü kokulu su",
+          "Damlayan musluk ve sızdıran vana",
+          "Duvar nemi, kabarma veya ani fatura artışı",
+        ],
+      },
+      {
+        title: "Keşif, yazılı teklif ve basınç testi",
+        body:
+          "Keşifte hat, vana ve bağlantı noktaları incelenir. Malzeme ve işçilik kalemleri yazılı teklifle paylaşılır; onay olmadan çalışmaya başlanmaz. Uygun onarım sonrası basınç testi ile sızdırmazlık kontrol edilir.",
+      },
+      {
+        title: "Emniyet Evleri ve Çeliktepe'de sık su hattı senaryoları",
+        body:
+          "Emniyet Evleri'ndeki site ve yeni dairelerde kollektör ve gömme hat bağlantıları; Çeliktepe eski stokta galvaniz geçişleri, flex ve vana noktaları daha sık kontrol edilir. Hamidiye ve Merkez mahallelerinde banyo-mutfak yenileme ile birlikte hat uygunluğu değerlendirilir. Saha notu (Emniyet Evleri, Mart 2026): Düşük basınç ve lavabo altında damlayan batarya şikâyetiyle gelen dairede ara vana sızıntısı ve yıpranmış flex hortum tespit edildi. Vana ve flex değişimi sonrası basınç testi yapıldı; dolap içi ıslaklık kuruduktan sonra yazılı servis formu teslim edildi.",
+      },
+      {
+        title: "Su hattı işlerinde ücreti ve süreyi ne belirler?",
+        body:
+          "Hat uzunluğu, erişim, malzeme tipi, kaçak şüphesi ve yenileme kapsamı ücreti etkiler. Gizli kaçak şüphesinde cihazlı tespit ayrı değerlendirilir. Planlı işlerde randevu trafik ve ekibe göre ayarlanır.",
+      },
+    ],
+    faq: [
+      {
+        question: "Kağıthane'de su tesisatı onarımı nasıl planlanır?",
+        answer:
+          "Önce adres ve belirtiler dinlenir; ardından keşifte temiz su hattı, vanalar, musluk-batarya bağlantıları ve erişim noktaları incelenir. Emniyet Evleri site dairelerinde kollektör ve gömme hatlar, Çeliktepe eski stokta flex ve galvaniz geçişleri daha sık öne çıkar. Hamidiye ve Merkez’de banyo-mutfak yenileme ile hat uygunluğu birlikte değerlendirilir. Kapsam netleşince malzeme ve işçilik kalemleri yazılı teklifle paylaşılır; onay olmadan çalışmaya başlanmaz. Uygun onarım sonrası basınç testi ile sızdırmazlık kontrol edilir, işlem yazılı servis formu ile teslim edilir. Gizli kaçak, alt kata su veya sayaç hareketi varsa önce cihazlı tespit ayrı planlanır; açık damlama ve vana arızası ise doğrudan hat onarımına alınır. Paslı su veya sürekli damlayan batarya gibi belirtiler de keşif notuna eklenir. WhatsApp ile mahalle, musluk fotoğrafı ve basınç şikâyeti göndermeniz ön değerlendirmeyi hızlandırır. Sabit varış saati veya sabit dakika vaadi verilmez; trafik ve ekip uygunluğuna göre yönlendirme yapılır.",
+        category: "Planlama",
+      },
+      {
+        question: "Düşük su basıncı her zaman boru tıkanıklığı mıdır?",
+        answer:
+          "Hayır. Zayıf akış vana arızası, kısmen kapalı ara musluk, kollektör dengesizliği, aeratör tıkanıklığı, hat daralması veya bina ana hat basıncından da kaynaklanabilir. Tek musluk etkileniyorsa önce o nokta ve flex bağlantı bakılır; tüm daire düşükse kollektör veya ana hat değerlendirilir. Hamidiye ve Merkez’deki daha yeni yapılarda kollektör ayarı, Çeliktepe eski hatlarda daralma ve yıpranmış vana daha sık görülür. Keşifte kaynak daraltılır; yalnızca basınç şikâyetine bakarak geniş kırma önerilmez. Duvar nemi, boya kabarması veya musluklar kapalıyken sayaç hareketi varsa gizli kaçak ihtimali güçlenir ve su kaçağı tespiti ayrı ele alınır. Sonuçlar yazılı özetlenir; onay sonrası noktasal onarım planlanır. Abartılı yüzde yüz iddiası kullanılmaz.",
+        category: "Basınç",
+      },
+      {
+        question: "Su kaçağı ile su tesisatı işi nasıl ayrılır?",
+        answer:
+          "Gizli sızıntı, alt kata su, tavan nemi veya tüm musluklar kapalıyken sayaç hareketinde öncelik cihazlı kaçak tespitidir; gereksiz kırma yapılmaz. Açık hat onarımı, damlayan musluk, sızdıran vana, flex değişimi ve banyo-mutfak yenileme ise su tesisatı kapsamında planlanır. Şüphede önce kaynak daraltılır, sonra noktasal onarım önerilir. Gültepe ve Çağlayan apartmanlarında alt kata sızıntı çoğu zaman banyo veya mutfak hattından başlar; bu durumda tespit sayfası ile tesisat onarımı birlikte düşünülür ama iş sırası keşifte ayrıştırılır. Kimyasal tıkayıcı dökmek önerilmez. Keşif sonrası kapsam yazılı teklifle netleşir; onay olmadan onarıma başlanmaz. WhatsApp fotoğrafı yönlendirmeyi kolaylaştırır.",
+        category: "Kapsam",
+      },
+      {
+        question: "Aynı gün su tesisatı müdahalesi yapılır mı?",
+        answer:
+          "Açık sızıntı, kesik hat veya lavabo altında aktif damlama gibi acil durumlarda öncelikli yönlendirme yapılır; ana vanayı kapatmak ve elektrik riskini azaltmak ilk adımdır. Planlı banyo-mutfak yenileme, hat çekimi veya kapsamlı tadilat ise keşif ve malzeme tedariğine göre randevulanır. Seyrantepe ve Sanayi çevresi iş yerlerinde yoğun kullanım nedeniyle flex ve kartuş arızaları daha sık acil çağrı üretir; konutlarda ise damlama ve düşük basınç öne çıkar. Sabit aynı gün garantisi verilmez; trafik ve ekip uygunluğu belirleyicidir. Mahalle, belirti ve fotoğrafı WhatsApp ile iletmeniz aynı gün yönlendirmeyi kolaylaştırır. Onay sonrası işlem yazılı form ile teslim edilir.",
+        category: "Acil",
+      },
+    ],
+    relatedLocalSlugs: [
       "kagithane-su-kacagi-tespiti",
+      "kagithane-musluk-tamiri",
+      "kagithane-gomme-rezervuar-tamiri",
     ],
   },
 ];

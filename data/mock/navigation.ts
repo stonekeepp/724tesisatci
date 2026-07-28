@@ -14,6 +14,10 @@ export const navigation: Navigation = {
       href: "/hizmet-bolgeleri/kagithane",
       children: [
         {
+          label: "Kağıthane Su Tesisatı",
+          href: "/kagithane-su-tesisati",
+        },
+        {
           label: "Kağıthane Su Kaçağı Tespiti",
           href: "/kagithane-su-kacagi-tespiti",
         },
