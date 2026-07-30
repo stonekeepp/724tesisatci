@@ -29,6 +29,7 @@ const KAGITHANE_LANDING_SLUGS = [
   "kagithane-su-kacagi-tespiti",
   "kagithane-tikaniklik-acma",
   "kagithane-pimas-acma",
+  "kagithane-pimas-tesisati",
   "kagithane-petek-temizleme",
   "kagithane-kombi-servisi",
   "kagithane-kalorifer-tesisati",

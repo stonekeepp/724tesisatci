@@ -134,6 +134,7 @@ export const localServiceLandingPages: LocalServiceLanding[] = [
       },
     ],
     relatedLocalSlugs: [
+      "kagithane-pimas-tesisati",
       "kagithane-pimas-acma",
       "kagithane-kamerali-tesisat-goruntuleme",
       "kagithane-gomme-rezervuar-tamiri",
@@ -219,6 +220,7 @@ export const localServiceLandingPages: LocalServiceLanding[] = [
       },
     ],
     relatedLocalSlugs: [
+      "kagithane-pimas-tesisati",
       "kagithane-tikaniklik-acma",
       "kagithane-kamerali-tesisat-goruntuleme",
       "kagithane-su-kacagi-tespiti",
@@ -630,6 +632,7 @@ export const localServiceLandingPages: LocalServiceLanding[] = [
       },
     ],
     relatedLocalSlugs: [
+      "kagithane-pimas-tesisati",
       "kagithane-pimas-acma",
       "kagithane-tikaniklik-acma",
       "kagithane-su-kacagi-tespiti",
@@ -781,6 +784,80 @@ export const localServiceLandingPages: LocalServiceLanding[] = [
       "kagithane-su-kacagi-tespiti",
       "kagithane-musluk-tamiri",
       "kagithane-gomme-rezervuar-tamiri",
+    ],
+  },
+  {
+    slug: "kagithane-pimas-tesisati",
+    serviceSlug: "pimas-tesisati",
+    title: "Kağıthane Pimaş Tesisatı | Döşeme Onarım Yenileme",
+    description:
+      "Kağıthane pimaş tesisatı: PVC hat döşeme, ek yeri onarımı ve hat yenileme. Kameralı kontrol sonrası yazılı teklif; trafik ve ekibe göre yönlendirme.",
+    h1: "Kağıthane Pimaş Tesisatı",
+    heroDescription:
+      "Sık tıkanan hat, koku, ek yeri sızıntısı veya eski pimaş yenilemede keşif yapılır; kapsam yazılı teklifle netleştirilir. Onay olmadan işe başlanmaz.",
+    intro:
+      "Pimaş tesisatı, atık su hattının omurgasıdır. Emniyet Evleri, Hamidiye ve Ortabayır apartmanlarında yanlış eğim, eski ek yerleri veya daralmış hatlar sık tıkanıklık ve koku üretir. Bu sayfa döşeme, bağlantı onarımı ve hat yenilemeye odaklanır; anlık tıkanıklık açma için Kağıthane pimaş açma sayfası kullanılır. Odak; kamera ile durum değerlendirmesi, yazılı teklif ve uygun PVC onarımdır.",
+    serviceType: "Pimaş tesisatı",
+    canonicalPath: "/kagithane-pimas-tesisati",
+    imageAlt: "Kağıthane'de pimaş hattı döşeme ve bağlantı onarımı",
+    sections: [
+      {
+        title: "Sık tıkanıklık, koku ve ek yeri sızıntısı",
+        body:
+          "Aynı hattın kısa sürede tekrar tıkanması, banyo-mutfak kokusu veya ek yerinden nem çoğu zaman eğim, çap veya yıpranmış bağlantı sorununa işaret eder. Erken değerlendirme alt kata hasarı sınırlar.",
+        items: [
+          "Tekrarlayan tıkanıklık ve geri tepme",
+          "Banyo veya mutfaktan pis koku",
+          "Ek yeri / manşon sızıntısı",
+          "Eski ve deformasyona uğramış hatlar",
+        ],
+      },
+      {
+        title: "Keşif, kameralı kontrol ve yazılı teklif",
+        body:
+          "Keşifte erişim noktası, hat tipi ve belirtiler incelenir. Gerekirse kamera ile eğim, çökme veya ek yeri durumu netleştirilir. Malzeme ve işçilik kalemleri yazılı teklifle paylaşılır; onay olmadan çalışmaya başlanmaz.",
+      },
+      {
+        title: "Hamidiye ve Ortabayır'da pimaş hat senaryoları",
+        body:
+          "Hamidiye ve Emniyet Evleri apartmanlarında ortak kolon ve ana gider yükü; Ortabayır eski stokta daralmış ek yerleri ve eğim sorunları daha sık görülür. Seyrantepe çevresinde yağ birikimi açma ihtiyacı ile yenileme ihtiyacını ayırmak için kamera yardımcı olur. Saha notu (Ortabayır, Nisan 2026): Tekrarlayan mutfak tıkanıklığı şikâyetiyle gelen dairede kamera sonrası ek yerinde daralma ve ters eğim izi görüldü. Noktasal hat onarımı planlandı; onay sonrası PVC bağlantı yenilendi, su testi yapıldı ve yazılı form teslim edildi.",
+      },
+      {
+        title: "Pimaş döşeme ve yenilemede ücreti ne belirler?",
+        body:
+          "Hat uzunluğu, erişim, kamera ihtiyacı, kısmi onarım veya komple yenileme kapsamı ücreti etkiler. Yalnızca açma yeterliyse pimaş açma ayrı planlanır. Planlı işlerde randevu trafik ve ekibe göre ayarlanır.",
+      },
+    ],
+    faq: [
+      {
+        question: "Pimaş tesisatı ile pimaş açma aynı hizmet midir?",
+        answer:
+          "Hayır. Pimaş açma, mevcut hattaki tıkanıklığı robot, spiral veya basınçlı yıkama ile açmaya odaklanır. Pimaş tesisatı ise döşeme, ek yeri onarımı, eğim/çap düzeltmesi ve hat yenilemeyi kapsar. Hamidiye ve Emniyet Evleri apartmanlarında ortak hat yükü açma çağrısını artırır; Ortabayır eski stokta ise tekrarlayan tıkanıklık çoğu zaman yenileme ihtiyacına işaret eder. Tek noktada yavaş akış varsa önce açma denenir; kısa sürede tekrar ediyorsa kamera ile sebep ayrıştırılır. Keşif sonrası kapsam yazılı teklifle netleşir; onay olmadan geniş kırma veya yenilemeye başlanmaz. WhatsApp ile mahalle ve hangi giderlerin etkilendiğini yazmanız yönlendirmeyi hızlandırır. Sabit süre vaadi verilmez; trafik ve ekip uygunluğuna göre gelinir.",
+        category: "Kapsam",
+      },
+      {
+        question: "Tekrarlayan tıkanıklıkta hat yenileme gerekir mi?",
+        answer:
+          "Her zaman değil. Yağ birikimi veya noktasal tıkanıklık açma ile çözülebilir. Kısa sürede tekrar, birden fazla giderin aynı anda yavaşlaması, ek yeri sızıntısı veya kamerada eğim/çökme görülmesi yenileme ihtimalini güçlendirir. Çeliktepe ve Ortabayır eski hatlarda daralma sık görülür; Seyrantepe iş yerlerinde yağ tabakası önce açma ve yıkama ile değerlendirilir. Kamera kaydı karar vermeyi kolaylaştırır; yalnızca tıkanıklığa bakarak komple yenileme önerilmez. Malzeme ve işçilik kalemleri yazılı teklifle paylaşılır; onay sonrası noktasal veya kısmi yenileme planlanır.",
+        category: "Yenileme",
+      },
+      {
+        question: "Koku her zaman pimaş hattı yenilemesi midir?",
+        answer:
+          "Hayır. Sifon kuruması, havalandırma zayıflığı veya noktasal lavabo tıkanıklığı da kokuyu artırabilir. Birden fazla giderden koku geliyor, fokurdama duyuluyor veya açmadan kısa süre sonra koku dönüyorsa ana hat / ek yeri kontrolü gerekir. Tek lavaboda koku varsa önce sifon ve yakın hat bakılır. Kamera, yağ tabakası ile kırık veya eğim ayrımını netleştirir; yalnızca koku için hemen kırma önerilmez. Keşif sonrası yöntem yazılı teklifle paylaşılır; onay olmadan geniş müdahale yapılmaz.",
+        category: "Koku",
+      },
+      {
+        question: "Kağıthane'de aynı gün pimaş tesisatı yapılır mı?",
+        answer:
+          "Acil sızıntı veya taşma riskinde önce güvenlik ve gerekirse açma yönlendirmesi yapılır. Planlı döşeme, bağlantı onarımı ve hat yenileme keşif, malzeme ve ekip uygunluğuna göre randevulanır. Sabit aynı gün garantisi verilmez. Mahalle, belirti ve fotoğrafı WhatsApp ile iletmeniz planlamayı hızlandırır; onay sonrası kapsam yazılı teklifle netleşir.",
+        category: "Planlama",
+      },
+    ],
+    relatedLocalSlugs: [
+      "kagithane-pimas-acma",
+      "kagithane-tikaniklik-acma",
+      "kagithane-kamerali-tesisat-goruntuleme",
     ],
   },
 ];

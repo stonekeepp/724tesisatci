@@ -30,6 +30,10 @@ export const navigation: Navigation = {
           href: "/kagithane-pimas-acma",
         },
         {
+          label: "Kağıthane Pimaş Tesisatı",
+          href: "/kagithane-pimas-tesisati",
+        },
+        {
           label: "Kağıthane Petek Temizleme",
           href: "/kagithane-petek-temizleme",
         },
