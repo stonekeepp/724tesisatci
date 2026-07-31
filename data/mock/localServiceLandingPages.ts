@@ -66,6 +66,7 @@ export const localServiceLandingPages: LocalServiceLanding[] = [
     ],
     relatedLocalSlugs: [
       "kagithane-su-tesisati",
+      "kagithane-gizli-su-kacagi",
       "kagithane-kamerali-tesisat-goruntuleme",
       "kagithane-kalorifer-tesisati",
       "kagithane-kombi-servisi",
@@ -134,6 +135,7 @@ export const localServiceLandingPages: LocalServiceLanding[] = [
       },
     ],
     relatedLocalSlugs: [
+      "kagithane-lavabo-tikanikligi",
       "kagithane-pimas-tesisati",
       "kagithane-pimas-acma",
       "kagithane-kamerali-tesisat-goruntuleme",
@@ -857,7 +859,158 @@ export const localServiceLandingPages: LocalServiceLanding[] = [
     relatedLocalSlugs: [
       "kagithane-pimas-acma",
       "kagithane-tikaniklik-acma",
+      "kagithane-lavabo-tikanikligi",
       "kagithane-kamerali-tesisat-goruntuleme",
+    ],
+  },
+  {
+    slug: "kagithane-gizli-su-kacagi",
+    serviceSlug: "su-kacagi-tespit-ve-onarim",
+    title: "Kağıthane Gizli Su Kaçağı | Kırmadan Tespit",
+    description:
+      "Kağıthane gizli su kaçağı: duvar nemi, boya kabarması ve musluklar kapalıyken sayaç hareketinde cihazlı noktasal tespit. Yazılı teklif, gereksiz kırma yok.",
+    h1: "Kağıthane Gizli Su Kaçağı",
+    heroDescription:
+      "Gözle görünmeyen sızıntıda sayaç testi, termal kamera, akustik dinleme ve nem ölçerle nokta daraltılır; sonuç yazılı paylaşılır. Onay olmadan kırma yapılmaz.",
+    intro:
+      "Gizli su kaçağı çoğu zaman yüzeyde ıslaklık olmadan fatura artışı, nem kokusu veya alt kata sızıntı ile ortaya çıkar. Emniyet Evleri, Çeliktepe ve Gültepe apartmanlarında duvar içi hat, şaft geçişi ve gömme rezervuar çevresi sık şüphelidir. Bu sayfa görünmeyen kaçak senaryosuna odaklanır; genel tespit süreci için Kağıthane su kaçağı tespiti sayfası da kullanılabilir. Amaç, geniş kırım yerine cihazla nokta daraltmak ve yazılı teklifle ilerlemekdir.",
+    serviceType: "Gizli su kaçağı tespiti",
+    canonicalPath: "/kagithane-gizli-su-kacagi",
+    imageAlt: "Kağıthane'de gizli su kaçağı için termal kamera ile noktasal tespit",
+    sections: [
+      {
+        title: "Görünmeyen kaçakta sık uyarılar",
+        body:
+          "Musluklar kapalıyken sayaç dönmesi, ani fatura artışı, boyada kabarma, küf kokusu veya alt kata nem gizli kaçak şüphesini güçlendirir. Yalnızca faturaya bakarak kırım kararı verilmez.",
+        items: [
+          "Musluklar kapalıyken sayaç hareketi",
+          "Duvar/tavan nemi ve boya kabarması",
+          "Alt kata sızıntı veya nem izi",
+          "Ani yükselen su faturası",
+        ],
+      },
+      {
+        title: "Sayaç testi ve cihazlı nokta daraltma",
+        body:
+          "Önce kullanım noktaları kapatılıp sayaç izlenir. Ardından hat tipine göre termal, akustik ve nem ölçümü yapılır. Kaynak netleşmeden geniş alan kırımı önerilmez; tespit sonrası kapsam yazılı özetlenir.",
+      },
+      {
+        title: "Emniyet Evleri ve Çeliktepe'de gizli kaçak senaryoları",
+        body:
+          "Emniyet Evleri ve Çeliktepe eski stokta şaft ve flex bağlantılar; Gültepe dairelerinde banyo-duvar birleşimi sık görülür. Ortabayır’da gömme hat geçişleri dikkatle kontrol edilir. Saha notu (Emniyet Evleri, Mayıs 2026): Fatura artışı ve hafif küf kokusuyla gelen dairede sayaç testi pozitifti. Termal tarama sonrası rezervuar dolum hattı yakınında noktasal kaçak doğrulandı; onay sonrası sınırlı müdahale yapıldı, nem izi kuruduktan sonra yazılı form teslim edildi.",
+      },
+      {
+        title: "Gizli kaçak tespitinde ücreti ne belirler?",
+        body:
+          "Kaçağın temiz su, gider veya ısıtma hattında olması; cihaz kullanımı; erişim ve sonrasında noktasal onarım ihtiyacı ücreti etkiler. Keşif sonrası yazılı teklif sunulur; onay olmadan işe başlanmaz.",
+      },
+    ],
+    faq: [
+      {
+        question: "Gizli su kaçağı ile genel su kaçağı tespiti farkı nedir?",
+        answer:
+          "Genel tespit sayfasında alt kata su, tavan nemi ve cihazlı süreç birlikte anlatılır. Gizli kaçak sayfası ise yüzeyde belirgin ıslaklık olmadan sayaç hareketi, fatura artışı ve duvar içi nem gibi görünmeyen senaryolara odaklanır. Kağıthane’de Emniyet Evleri ve Çeliktepe’de bu tip şikâyetler sık gelir; önce sayaç testi, ardından termal/akustik/nem ölçümüyle nokta daraltılır. Geniş kırım önerilmez. Sonuç yazılı paylaşılır; onay olmadan onarıma başlanmaz. WhatsApp ile mahalle ve sayaç fotoğrafı yönlendirmeyi hızlandırır. Sabit süre vaadi verilmez.",
+        category: "Kapsam",
+      },
+      {
+        question: "Musluklar kapalıyken sayaç dönüyorsa ne yapılır?",
+        answer:
+          "Aktif kaçak ihtimali güçlenir. Önce tüm kullanım noktaları (iç/dış) kapatıldığından emin olun; rezervuar ve bahçe vanasını da kontrol edin. Sayaç fotoğrafı alıp 30–60 dakika sonra tekrar bakın. Hareket sürüyorsa cihazlı tespit planlanır. Ana vanayı zorlamayın. Keşif sonrası kapsam yazılı teklifle netleşir; onay olmadan kırma yapılmaz.",
+        category: "Sayaç",
+      },
+      {
+        question: "Gizli kaçakta duvar her zaman kırılır mı?",
+        answer:
+          "Hayır. Öncelik kırmadan nokta daraltmaktır. Kırma gerekiyorsa yalnızca tespit edilen alana müdahale edilir. Onay olmadan geniş kırım yapılmaz. İşlem sonrası nem kontrolü ve yazılı form ile teslim edilir.",
+        category: "Müdahale",
+      },
+      {
+        question: "Kağıthane'de aynı gün gizli kaçak tespiti yapılır mı?",
+        answer:
+          "Acil alt kata sızıntı veya elektrik riskinde öncelikli yönlendirme yapılır. Planlı tespit keşif, ekip ve trafiğe göre ayarlanır; sabit aynı gün garantisi verilmez. Mahalle ve belirtiyi WhatsApp ile iletmeniz planlamayı hızlandırır.",
+        category: "Planlama",
+      },
+    ],
+    relatedLocalSlugs: [
+      "kagithane-su-kacagi-tespiti",
+      "kagithane-su-tesisati",
+      "kagithane-gomme-rezervuar-tamiri",
+      "kagithane-kalorifer-tesisati",
+    ],
+  },
+  {
+    slug: "kagithane-lavabo-tikanikligi",
+    serviceSlug: "tikaniklik-acma",
+    title: "Kağıthane Lavabo Tıkanıklığı | Robot Spiral Açma",
+    description:
+      "Kağıthane lavabo tıkanıklığı: yavaş akış, fokurdama ve mutfak lavabosu tıkanmasında robot veya spiral ile kırmadan açma. Yazılı bilgilendirme.",
+    h1: "Kağıthane Lavabo Tıkanıklığı",
+    heroDescription:
+      "Lavabo yavaş akıyor, fokurduyor veya taşma riski varsa gider tipine göre robot/spiral ile açılır; gerekirse kamera ile sebep netleştirilir.",
+    intro:
+      "Lavabo tıkanıklığı çoğu zaman saç, sabun tortusu, yağ veya yabancı cisim birikiminden kaynaklanır. Çağlayan ve Merkez dairelerinde banyo lavabosu; Seyrantepe çevresinde mutfak lavabosu yağ birikimi sık görülür. Bu sayfa lavabo odaklıdır; tuvalet/ana hat için Kağıthane tıkanıklık açma sayfası kullanılır. Amaç, kimyasal riskini azaltmak, kontrollü açma yapmak ve tekrar riskinde kamera ile durumu görmektir.",
+    serviceType: "Lavabo tıkanıklığı açma",
+    canonicalPath: "/kagithane-lavabo-tikanikligi",
+    imageAlt: "Kağıthane'de lavabo tıkanıklığı için robot spiral ile açma",
+    sections: [
+      {
+        title: "Lavaboda yavaş akış ve fokurdama",
+        body:
+          "Su çekilmiyor, fokurdama sesi geliyor veya lavabo taşıyorsa hatta birikim veya daralma olabilir. Yoğun kimyasal conta ve boruya zarar verebilir; özellikle plastik hatlarda cihazlı açma daha güvenlidir.",
+        items: [
+          "Lavabonun yavaş çekmesi",
+          "Fokurdama veya gurgulama sesi",
+          "Mutfak lavabosunda yağ kokusu",
+          "Süzgeçte sık biriken tortu",
+        ],
+      },
+      {
+        title: "Robot veya spiral ile lavabo açma",
+        body:
+          "Gider çapına uygun uç seçilir; birikim parçalanır veya geri çekilir. Açma sonrası akış testi yapılır. Kısa sürede tekrar ediyorsa kamera ile eğim, yağ tabakası veya yabancı cisim değerlendirilir.",
+      },
+      {
+        title: "Çağlayan ve Seyrantepe lavabo senaryoları",
+        body:
+          "Çağlayan konutlarında saç ve sabun tortusu; Seyrantepe ve Sanayi çevresi mutfak lavabolarında yağ birikimi öne çıkar. Merkez apartmanlarında eski sifon daralmaları da sık görülür. Saha notu (Çağlayan, Haziran 2026): Banyo lavabosu sürekli yavaşlıyordu. Spiral açma sonrası kamera ile sifon sonrası yağ-saç birikimi görüldü; akış testi ve yazılı form ile teslim edildi, süzgeç kullanımı önerildi.",
+      },
+      {
+        title: "Lavabo tıkanıklığında ücreti ne belirler?",
+        body:
+          "Banyo veya mutfak lavabosu olması, erişim, robot/spiral ihtiyacı ve kamera gerekip gerekmediği ücreti etkiler. Kapsam işlem öncesi netleştirilir; onay olmadan geniş müdahale yapılmaz.",
+      },
+    ],
+    faq: [
+      {
+        question: "Lavabo tıkanıklığı ile genel tıkanıklık açma aynı mıdır?",
+        answer:
+          "Lavabo sayfası tek nokta lavabo senaryosuna odaklanır; genel tıkanıklık açma tuvalet, mutfak, ana hat ve pimaşı da kapsar. Kağıthane’de Çağlayan’da banyo lavabosu, Seyrantepe’de mutfak lavabosu sık çağrıdır. Tek lavabo etkileniyorsa noktasal açma çoğu zaman yeterlidir; birden fazla gider aynı anda yavaşlıyorsa ana hat kontrolü gerekir. Kimyasal dökmek conta riski yaratabilir. Sonuç yazılı paylaşılır; WhatsApp ile mahalle ve lavabo tipi (banyo/mutfak) yönlendirmeyi hızlandırır.",
+        category: "Kapsam",
+      },
+      {
+        question: "Kimyasal lavabo açıcı kullanmalı mıyım?",
+        answer:
+          "Yoğun kimyasal conta ve PVC bağlantılara zarar verebilir. Farklı markaları karıştırmayın. Özellikle taşma riskinde cihazlı açma daha güvenlidir. Tekrarlayan tıkanıklıkta kamera ile sebep analizi yapılır.",
+        category: "Güvenlik",
+      },
+      {
+        question: "Lavabo açıldıktan sonra neden tekrar tıkanır?",
+        answer:
+          "Kısmi açıklık, yağ tabakası veya eğim sorunu kalmış olabilir. Kısa sürede tekrar ediyorsa kamera veya yıkama değerlendirilir. Süzgeç kullanımı ve yağın lavaboya dökülmemesi tekrar riskini azaltır.",
+        category: "Tekrar",
+      },
+      {
+        question: "Kağıthane'de aynı gün lavabo açma yapılır mı?",
+        answer:
+          "Acil taşma ve koku çağrılarında öncelikli yönlendirme yapılır. Planlı işler ekip ve trafiğe göre ayarlanır; sabit aynı gün garantisi verilmez. Fotoğraf ve mahalle bilgisi WhatsApp ile planlamayı hızlandırır.",
+        category: "Planlama",
+      },
+    ],
+    relatedLocalSlugs: [
+      "kagithane-tikaniklik-acma",
+      "kagithane-pimas-acma",
+      "kagithane-kamerali-tesisat-goruntuleme",
+      "kagithane-musluk-tamiri",
     ],
   },
 ];

@@ -27,7 +27,9 @@ export const ALL_SERVICE_SLUGS = [
 const KAGITHANE_LANDING_SLUGS = [
   "kagithane-su-tesisati",
   "kagithane-su-kacagi-tespiti",
+  "kagithane-gizli-su-kacagi",
   "kagithane-tikaniklik-acma",
+  "kagithane-lavabo-tikanikligi",
   "kagithane-pimas-acma",
   "kagithane-pimas-tesisati",
   "kagithane-petek-temizleme",

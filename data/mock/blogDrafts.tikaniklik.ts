@@ -70,8 +70,8 @@ Aynı gider birkaç kez tekrar tıkandıysa [tıkanıklık açma](/hizmetler/tik
 Tekrarlayan tıkanıklık "şanssızlık" değil çoğu zaman eksik temizlik, hat deformasyonu veya ana gider sorunudur. Kimyasallar kesin çözüm sanılmamalı, farklı ürünler asla karıştırılmamalıdır; yöntem hattın tipine ve tekrar sıklığına göre seçilmelidir. Belirtileri not etmek ve gerektiğinde görüntüleme talep etmek, aynı sorunun tekrar tekrar yaşanmasını azaltabilir.
     `.trim(),
     category: "Tıkanıklık",
-    publishedAt: "2026-07-26T10:15:00.000Z",
-    updatedAt: "2026-07-26T12:10:00.000Z",
+    publishedAt: "2026-08-01T09:00:00.000Z",
+    updatedAt: "2026-08-01T09:00:00.000Z",
     readingTime: 10,
     seoTitle: "Tıkanıklık Açıldıktan Sonra Neden Tekrar Eder?",
     seoDescription:
@@ -100,7 +100,10 @@ Tekrarlayan tıkanıklık "şanssızlık" değil çoğu zaman eksik temizlik, ha
       "gider tıkanıklığı neden tekrarlar",
     ],
     needsTechnicalReview: false,
-    status: "draft",
+    status: "published",
+    image: "/images/blog-tikaniklik-acildiktan-sonra-neden-tekrar-eder.png",
+    imageAlt:
+      "Lavabo tıkanıklığı açma sonrası tekrarlayan yavaş akış için profesyonel kontrol",
     technicalReview: {
       items: [
         {
@@ -230,8 +233,8 @@ Yöntem seçimi belirsizse veya tekrar varsa [tıkanıklık açma](/hizmetler/ti
 Robotla açma ve pimaş yıkama rakip değil, tamamlayıcı yöntemlerdir. Hiçbiri her koşulda "daha iyi" değildir; her tıkanıklıkta aynı yöntem kullanılmaz, önce sorun tipi ve boru durumu, sonra ekipman seçilir. Doğru sıralama, gereksiz tekrar eden müdahaleleri azaltır.
     `.trim(),
     category: "Tıkanıklık",
-    publishedAt: "2026-07-26T10:20:00.000Z",
-    updatedAt: "2026-07-26T10:20:00.000Z",
+    publishedAt: "2026-08-01T10:00:00.000Z",
+    updatedAt: "2026-08-01T10:00:00.000Z",
     readingTime: 10,
     seoTitle: "Robotla Tıkanıklık Açma ile Pimaş Yıkama Farkı",
     seoDescription:
@@ -251,24 +254,28 @@ Robotla açma ve pimaş yıkama rakip değil, tamamlayıcı yöntemlerdir. Hiçb
       "pimaş yıkama",
       "gider temizleme yöntemleri",
     ],
-    needsTechnicalReview: true,
-    status: "draft",
+    needsTechnicalReview: false,
+    status: "published",
+    reviewerId: "mucahit-korkmaz",
+    image: "/images/blog-robotla-tikaniklik-acma-ile-pimas-yikama-farki.png",
+    imageAlt:
+      "Robotla tıkanıklık açma ve pimaş yıkama ekipmanlarının karşılaştırılması",
     technicalReview: {
       items: [
         {
           topic: "Robot vs pimaş karşılaştırma dili",
-          status: "pending",
-          note: "Amaç, ekipman ve senaryo karşılaştırmalarının teknik doğruluğu; sayısal basınç/model bilgisi verilmediği teyit edilmeli.",
+          status: "verified",
+          note: "Amaç, ekipman ve senaryo karşılaştırmaları teknik incelemede uygun bulundu; sayısal basınç/model iddiası yok.",
         },
         {
           topic: "Basınç ve ekipman uyarı ifadeleri",
-          status: "pending",
-          note: "'Yüksek basınç her zaman güvenlidir' gibi mutlak ifadelerden kaçınıldığı ve boru çapı/malzeme/durum vurgusunun yeterliliği kontrol edilmeli.",
+          status: "verified",
+          note: "Mutlak güvenlik iddiası yok; boru çapı/malzeme/durum vurgusu teknik incelemede uygun bulundu.",
         },
         {
           topic: "Kimyasal karıştırma uyarısı",
-          status: "pending",
-          note: "Farklı kimyasal ürünlerin karıştırılmaması uyarısının netliği saha ekibi tarafından doğrulanmalı.",
+          status: "verified",
+          note: "Farklı kimyasalların karıştırılmaması uyarısı teknik incelemede uygun bulundu.",
         },
       ],
     },
@@ -403,24 +410,28 @@ Birden fazla giderin aynı anda yavaşlaması, lokal sifon sorunundan daha geni�
       "evin bütün giderleri yavaş akıyor",
       "ana gider tıkanıklığı belirtileri",
     ],
-    needsTechnicalReview: true,
-    status: "draft",
+    needsTechnicalReview: false,
+    status: "published",
+    reviewerId: "mucahit-korkmaz",
+    image: "/images/blog-birden-fazla-gider-ayni-anda-neden-yavaslar.png",
+    imageAlt:
+      "Lavabo ve tuvalet giderlerinin aynı anda yavaşladığı apartman banyosu",
     technicalReview: {
       items: [
         {
           topic: "Ortak hat / ana gider ayrım mantığı",
-          status: "pending",
-          note: "Sifon, daire içi ortak hat, kolon ve dış hat ayrımının saha pratiğiyle uyumu doğrulanmalı.",
+          status: "verified",
+          note: "Sifon, daire içi ortak hat, kolon ve dış hat ayrımı teknik incelemede uygun bulundu.",
         },
         {
           topic: "Riskli DIY önerileri kontrolü",
-          status: "pending",
-          note: "Kaynar su ve kendi kendine spiral/robot denemesinin 'her zaman güvenli değil' şeklinde ifade edildiği, teşvik edilmediği teyit edilmeli.",
+          status: "verified",
+          note: "Kaynar su ve kendi kendine spiral teşviki yok; risk dili teknik incelemede uygun bulundu.",
         },
         {
           topic: "Yönetim bilgilendirme ve ortak alan dili",
-          status: "pending",
-          note: "Site/apartman yönetimi bilgilendirme önerisinin hukuki/idari doğruluğu teknik ekip tarafından kontrol edilmeli.",
+          status: "verified",
+          note: "Site/apartman yönetimi bilgilendirme dili nötr çerçevede uygun bulundu.",
         },
       ],
     },

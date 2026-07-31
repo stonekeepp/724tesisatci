@@ -43,14 +43,15 @@ describe("draft route filtering", () => {
     assert.equal(draftBlogPosts.length, 9);
     const published = draftBlogPosts.filter((p) => p.status === "published");
     const drafts = draftBlogPosts.filter((p) => p.status === "draft");
-    assert.equal(published.length, 1);
-    assert.equal(published[0]?.slug, "musluklar-kapaliyken-su-sayaci-neden-doner");
-    assert.equal(drafts.length, 8);
+    assert.equal(published.length, 6);
+    assert.equal(drafts.length, 3);
     for (const post of drafts) {
       assert.equal(isPublishedContent(post), false);
       assert.ok(PR2_DRAFT_SLUGS.includes(post.slug));
     }
-    assert.equal(isPublishedContent(published[0]), true);
+    for (const post of published) {
+      assert.equal(isPublishedContent(post), true);
+    }
   });
 
   it("excludes archived content", () => {
@@ -156,16 +157,18 @@ describe("cluster integrity for PR-2 drafts", () => {
           post.status === "draft" || post.status === "published",
           post.slug
         );
-        if (post.slug === "musluklar-kapaliyken-su-sayaci-neden-doner") {
-          assert.equal(post.needsTechnicalReview, false);
-        } else if (
+        if (
           [
+            "musluklar-kapaliyken-su-sayaci-neden-doner",
             "tikaniklik-acildiktan-sonra-neden-tekrar-eder",
             "petegin-alti-soguk-ustu-sicaksa-ne-yapilmali",
+            "robotla-tikaniklik-acma-ile-pimas-yikama-farki",
+            "birden-fazla-gider-ayni-anda-neden-yavaslar",
+            "alt-kata-su-sizmasinin-kaynagi-nasil-bulunur",
           ].includes(post.slug)
         ) {
           assert.equal(post.needsTechnicalReview, false);
-          assert.equal(post.status, "draft");
+          assert.equal(post.status, "published");
         } else {
           assert.equal(post.status, "draft");
           assert.equal(post.needsTechnicalReview, true);
@@ -210,12 +213,16 @@ describe("metadata uniqueness for PR-2 drafts", () => {
   });
 
   it("marks non-pilot drafts for technical review", () => {
+    const publishedSlugs = new Set([
+      "musluklar-kapaliyken-su-sayaci-neden-doner",
+      "tikaniklik-acildiktan-sonra-neden-tekrar-eder",
+      "petegin-alti-soguk-ustu-sicaksa-ne-yapilmali",
+      "robotla-tikaniklik-acma-ile-pimas-yikama-farki",
+      "birden-fazla-gider-ayni-anda-neden-yavaslar",
+      "alt-kata-su-sizmasinin-kaynagi-nasil-bulunur",
+    ]);
     for (const post of draftBlogPosts) {
-      if (
-        post.slug === "musluklar-kapaliyken-su-sayaci-neden-doner" ||
-        post.slug === "tikaniklik-acildiktan-sonra-neden-tekrar-eder" ||
-        post.slug === "petegin-alti-soguk-ustu-sicaksa-ne-yapilmali"
-      ) {
+      if (publishedSlugs.has(post.slug)) {
         assert.equal(post.needsTechnicalReview, false);
         continue;
       }

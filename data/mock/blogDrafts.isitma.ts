@@ -210,15 +210,15 @@ Belirtinin yalnızca bir peteği mi yoksa evdeki çoğu peteği mi etkilediği, 
 
 ## Ne zaman profesyonel destek gerekir?
 
-Vana konumları doğru olduğu halde belirti sürüyorsa, birden fazla petekte görülüyorsa, basınç aynı zamanda düşüyorsa veya genel ısınma yetersizse profesyonel değerlendirme zamanı gelmiş demektir. Bu noktada [kalorifer tesisatı](/hizmetler/kalorifer-tesisati) kontrolü ve gerektiğinde [petek temizleme](/hizmetler/petek-temizleme) birlikte planlanmalıdır. Temizlik kararı, tek başına belirtiye değil ölçüm ve sistem durumuna göre verilir. Aynı dönemde basınç düşüşü de yaşıyorsanız [kombi basıncı neden sürekli düşer](/blog/kombi-basinci-neden-surekli-duser) yazısına, kombi mi tesisat mı ayrımında şüpheniz varsa [kombi arızası ile tesisat arızası ayrımı](/blog/kombi-arizasi-ile-tesisat-arizasi-nasil-ayirt-edilir) yazısına bakılabilir. Kağıthane bölgesi için [kombi ve petek sorunları rehberi](/blog/kagithane-kombi-petek-sorunlari) de destekleyici bir kaynaktır.
+Vana konumları doğru olduğu halde belirti sürüyorsa, birden fazla petekte görülüyorsa, basınç aynı zamanda düşüyorsa veya genel ısınma yetersizse profesyonel değerlendirme zamanı gelmiş demektir. Bu noktada [kalorifer tesisatı](/hizmetler/kalorifer-tesisati) kontrolü ve gerektiğinde [petek temizleme](/hizmetler/petek-temizleme) birlikte planlanmalıdır. Temizlik kararı, tek başına belirtiye değil ölçüm ve sistem durumuna göre verilir. Aynı dönemde basınç düşüşü de yaşıyorsanız [kombi basıncı neden düşer](/blog/kombi-basinci-neden-duser) yazısına bakılabilir. Kağıthane bölgesi için [kombi ve petek sorunları rehberi](/blog/kagithane-kombi-petek-sorunlari) de destekleyici bir kaynaktır.
 
 ## Sonuç
 
 Peteğin altı soğuk üstü sıcak olması tortu ihtimalini güçlendirebilir; ancak düşük debi, vana problemi, dengeleme ve bağlantı tasarımı da aynı görüntüyü verebilir. Her durumda petek temizliği gerekir demek doğru değildir; önce vana ve tek/çoklu petek ayrımı yapılmalı, ardından gerekirse profesyonel değerlendirme planlanmalıdır.
     `.trim(),
     category: "Isıtma",
-    publishedAt: "2026-07-26T10:35:00.000Z",
-    updatedAt: "2026-07-26T12:20:00.000Z",
+    publishedAt: "2026-08-01T09:15:00.000Z",
+    updatedAt: "2026-08-01T09:15:00.000Z",
     readingTime: 7,
     seoTitle: "Peteğin Altı Soğuk, Üstü Sıcaksa Ne Yapılmalı?",
     seoDescription:
@@ -239,7 +239,10 @@ Peteğin altı soğuk üstü sıcak olması tortu ihtimalini güçlendirebilir; 
       "petek temizliği gerekir mi",
     ],
     needsTechnicalReview: false,
-    status: "draft",
+    status: "published",
+    image: "/images/blog-petegin-alti-soguk-ustu-sicaksa-ne-yapilmali.png",
+    imageAlt:
+      "Peteğin altı soğuk üstü sıcak kaldığında radyatör ısınma kontrolü",
     technicalReview: {
       items: [
         {

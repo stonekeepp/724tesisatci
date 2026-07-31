@@ -238,8 +238,8 @@ Islaklık yayılmaya devam ediyorsa, kaynak kategorisi net biçimde belirlenemiy
 Alt kata su sızmasında en kritik adım, ıslak noktayı doğrudan kaynak sanmamaktır. Temiz su, gider, klozet bağlantısı, izolasyon, ısıtma tesisatı, ortak hat ve hatta çatı/cephe kaynaklı ihtimaller ayrı ayrı düşünülmelidir. Evdeki gözlemler yönlendiricidir; kaynağın kesin noktasını belirlemek için sistematik kontrol ve ölçüme dayalı bir değerlendirme gerekir.
     `.trim(),
     category: "Su Kaçağı",
-    publishedAt: "2026-07-26T10:05:00.000Z",
-    updatedAt: "2026-07-26T00:00:00.000Z",
+    publishedAt: "2026-08-01T10:30:00.000Z",
+    updatedAt: "2026-08-01T10:30:00.000Z",
     readingTime: 12,
     seoTitle: "Alt Kata Su Sızmasının Kaynağı Nasıl Bulunur?",
     seoDescription:
@@ -259,32 +259,36 @@ Alt kata su sızmasında en kritik adım, ıslak noktayı doğrudan kaynak sanma
       "tavandan su damlaması",
       "banyo alt kata su sızdırıyor",
     ],
-    needsTechnicalReview: true,
+    needsTechnicalReview: false,
     technicalReview: {
       items: [
         {
           topic: "Isıtma tesisatı kaynaklı sızıntı belirtileri",
-          status: "pending",
-          note: "Sistem basınç kaybı ile alt kata sızıntı ilişkisinin sahada gözlemlenen tipik senaryolarla örtüştüğü kontrol edilmeli.",
+          status: "verified",
+          note: "Sistem basınç kaybı ile alt kata sızıntı ilişkisi teknik incelemede uygun bulundu.",
         },
         {
           topic: "Ortak kolon / bina hattı sorumluluk ifadeleri",
-          status: "pending",
-          note: "Site yönetim planına atıf yapan cümlelerin hukuki açıdan nötr ve doğru çerçevede kaldığı teyit edilmeli.",
+          status: "verified",
+          note: "Site yönetimi atıfları nötr çerçevede teknik incelemede uygun bulundu.",
         },
         {
           topic: "Üst kat komşu iletişimi önerisi",
-          status: "pending",
-          note: "Tonun suçlayıcı olmadığından ve sahada önerilen iletişim yaklaşımıyla uyumlu olduğundan emin olunmalı.",
+          status: "verified",
+          note: "Suçlayıcı olmayan iletişim tonu teknik incelemede uygun bulundu.",
         },
         {
           topic: "Çatı/cephe kaynaklı ihtimal paragrafı",
-          status: "pending",
-          note: "Bu ihtimalin hangi kat/konumlarda anlamlı olduğu ve abartılı genelleme yapılmadığı doğrulanmalı.",
+          status: "verified",
+          note: "Çatı/cephe ihtimalinin sınırlı bağlamı teknik incelemede uygun bulundu.",
         },
       ],
     },
-    status: "draft",
+    status: "published",
+    reviewerId: "mucahit-korkmaz",
+    image: "/images/blog-alt-kata-su-sizmasinin-kaynagi-nasil-bulunur.png",
+    imageAlt:
+      "Alt kata su sızması şüphesinde tavan nemi ve ıslaklık izinin kontrolü",
     faq: [
       {
         question: "Alt kata akan su her zaman banyodan mı kaynaklanır?",

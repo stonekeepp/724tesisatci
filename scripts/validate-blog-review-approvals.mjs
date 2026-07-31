@@ -73,10 +73,9 @@ async function main() {
 
     if (!postBySlug.has(approval.slug)) {
       errors.push(`approval_unknown_slug:${approval.slug}`);
-    } else if (!pilotSet.has(approval.slug)) {
-      errors.push(`approval_outside_pilot_set:${approval.slug}`);
     }
-
+    // Non-pilot approvals are allowed for weekly topical publishes beyond the
+    // original three PR-5B pilots; unknown slugs are still rejected above.
     const post = postBySlug.get(approval.slug);
     if (post) {
       const result = validateTechnicalReviewApproval(post, approval, {

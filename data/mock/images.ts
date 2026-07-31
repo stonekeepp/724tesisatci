@@ -76,4 +76,14 @@ export const blogImages: Record<string, string> = {
   "kagithane-tikaniklik-acma": "/images/tikaniklik-acma-hero.webp",
   "kagithane-kombi-petek-sorunlari": "/images/kombi-servisi-hero.webp",
   "celiktepe-merkez-operasyon-mahalle-servisi": "/images/iletisim-kagithane-merkez-map.webp",
+  "tikaniklik-acildiktan-sonra-neden-tekrar-eder":
+    "/images/blog-tikaniklik-acildiktan-sonra-neden-tekrar-eder.png",
+  "petegin-alti-soguk-ustu-sicaksa-ne-yapilmali":
+    "/images/blog-petegin-alti-soguk-ustu-sicaksa-ne-yapilmali.png",
+  "robotla-tikaniklik-acma-ile-pimas-yikama-farki":
+    "/images/blog-robotla-tikaniklik-acma-ile-pimas-yikama-farki.png",
+  "birden-fazla-gider-ayni-anda-neden-yavaslar":
+    "/images/blog-birden-fazla-gider-ayni-anda-neden-yavaslar.png",
+  "alt-kata-su-sizmasinin-kaynagi-nasil-bulunur":
+    "/images/blog-alt-kata-su-sizmasinin-kaynagi-nasil-bulunur.png",
 };

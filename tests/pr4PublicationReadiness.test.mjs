@@ -57,6 +57,14 @@ describe("PR-4 draft data integrity", () => {
   });
 
   it("keeps draft status and technical review flags", () => {
+    const publishedSlugs = new Set([
+      "musluklar-kapaliyken-su-sayaci-neden-doner",
+      "tikaniklik-acildiktan-sonra-neden-tekrar-eder",
+      "petegin-alti-soguk-ustu-sicaksa-ne-yapilmali",
+      "robotla-tikaniklik-acma-ile-pimas-yikama-farki",
+      "birden-fazla-gider-ayni-anda-neden-yavaslar",
+      "alt-kata-su-sizmasinin-kaynagi-nasil-bulunur",
+    ]);
     for (const post of draftBlogPosts) {
       assert.ok(post.cluster);
       assert.ok(post.searchIntent);
@@ -67,13 +75,7 @@ describe("PR-4 draft data integrity", () => {
       ];
       assert.ok(servicesForPost.length > 0, post.slug);
       assert.ok(post.technicalReview?.items?.length >= 2, post.slug);
-      if (
-        [
-          "musluklar-kapaliyken-su-sayaci-neden-doner",
-          "tikaniklik-acildiktan-sonra-neden-tekrar-eder",
-          "petegin-alti-soguk-ustu-sicaksa-ne-yapilmali",
-        ].includes(post.slug)
-      ) {
+      if (publishedSlugs.has(post.slug)) {
         assert.equal(post.needsTechnicalReview, false);
         for (const item of post.technicalReview.items) {
           assert.equal(item.status, "verified", `${post.slug}:${item.topic}`);
@@ -104,7 +106,15 @@ describe("PR-4 content depth", () => {
 });
 
 describe("PR-4 publication readiness", () => {
-  it("blocks all nine drafts", () => {
+  it("marks approved pilots ready and blocks remaining drafts", () => {
+    const readySlugs = new Set([
+      "musluklar-kapaliyken-su-sayaci-neden-doner",
+      "tikaniklik-acildiktan-sonra-neden-tekrar-eder",
+      "petegin-alti-soguk-ustu-sicaksa-ne-yapilmali",
+      "robotla-tikaniklik-acma-ile-pimas-yikama-farki",
+      "birden-fazla-gider-ayni-anda-neden-yavaslar",
+      "alt-kata-su-sizmasinin-kaynagi-nasil-bulunur",
+    ]);
     for (const post of draftBlogPosts) {
       const result = evaluateBlogPublicationReadiness(post, {
         allPosts: draftBlogPosts,
@@ -112,7 +122,7 @@ describe("PR-4 publication readiness", () => {
         approvals: blogTechnicalReviewApprovals,
         experts: expertProfiles,
       });
-      if (post.slug === "musluklar-kapaliyken-su-sayaci-neden-doner") {
+      if (readySlugs.has(post.slug)) {
         assert.equal(result.ready, true, result.blockers.join("; "));
         continue;
       }

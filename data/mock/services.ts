@@ -85,6 +85,7 @@ export const services: Service[] = [
     relatedGuideSlugs: [
       "kombi-basinci-neden-duser",
       "kagithane-kombi-petek-sorunlari",
+      "petegin-alti-soguk-ustu-sicaksa-ne-yapilmali",
       "kombi-basinci-neden-surekli-duser",
       "kombi-arizasi-ile-tesisat-arizasi-nasil-ayirt-edilir",
     ],
@@ -190,7 +191,10 @@ export const services: Service[] = [
       "alt-kata-su-sizmasinin-kaynagi-nasil-bulunur",
       "duvar-nemi-su-kacagi-mi-yogusma-mi",
     ],
-    relatedLocalLandingSlugs: ["kagithane-su-kacagi-tespiti"],
+    relatedLocalLandingSlugs: [
+      "kagithane-su-kacagi-tespiti",
+      "kagithane-gizli-su-kacagi",
+    ],
     seoTitle: "İstanbul Su Kaçağı Tespit ve Onarım | 724 Tesisatçı",
     seoDescription: "İstanbul su kaçağı tespit ve onarım. Termal kamera ile kırmadan tespit, noktasal onarım, yazılı teklif. 7/24 acil servis.",
     canonicalPath: "/hizmetler/su-kacagi-tespit-ve-onarim",
@@ -240,7 +244,10 @@ export const services: Service[] = [
       "robotla-tikaniklik-acma-ile-pimas-yikama-farki",
       "birden-fazla-gider-ayni-anda-neden-yavaslar",
     ],
-    relatedLocalLandingSlugs: ["kagithane-tikaniklik-acma"],
+    relatedLocalLandingSlugs: [
+      "kagithane-tikaniklik-acma",
+      "kagithane-lavabo-tikanikligi",
+    ],
     seoTitle: "İstanbul Tıkanıklık Açma Hizmeti | 724 Tesisatçı",
     seoDescription: "İstanbul tıkanıklık açma: tuvalet, lavabo, pimaş. Robotik cihazlarla kırmadan açma, kameralı kontrol. 7/24 acil servis.",
     canonicalPath: "/hizmetler/tikaniklik-acma",
@@ -468,6 +475,7 @@ export const services: Service[] = [
     relatedGuideSlugs: [
       "lavabo-tikanikligi-nasil-acilir",
       "kagithane-tikaniklik-acma",
+      "tikaniklik-acildiktan-sonra-neden-tekrar-eder",
       "robotla-tikaniklik-acma-ile-pimas-yikama-farki",
     ],
     relatedLocalLandingSlugs: ["kagithane-pimas-acma"],

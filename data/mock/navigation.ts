@@ -22,8 +22,16 @@ export const navigation: Navigation = {
           href: "/kagithane-su-kacagi-tespiti",
         },
         {
+          label: "Kağıthane Gizli Su Kaçağı",
+          href: "/kagithane-gizli-su-kacagi",
+        },
+        {
           label: "Kağıthane Tıkanıklık Açma",
           href: "/kagithane-tikaniklik-acma",
+        },
+        {
+          label: "Kağıthane Lavabo Tıkanıklığı",
+          href: "/kagithane-lavabo-tikanikligi",
         },
         {
           label: "Kağıthane Pimaş Açma",

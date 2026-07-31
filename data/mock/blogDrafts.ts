@@ -3,7 +3,7 @@ import { draftBlogPosts as suKacagiDrafts } from "./blogDrafts.su-kacagi";
 import { draftBlogPostsTikaniklik } from "./blogDrafts.tikaniklik";
 import { draftBlogPostsIsitma } from "./blogDrafts.isitma";
 
-/** All PR-2 topical authority drafts (status: draft). */
+/** PR-2 topical authority guides (3 published pilots + 6 drafts). */
 export const draftBlogPosts: BlogPost[] = [
   ...suKacagiDrafts,
   ...draftBlogPostsTikaniklik,

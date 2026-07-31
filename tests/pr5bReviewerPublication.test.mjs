@@ -42,7 +42,7 @@ const mucahit = expertProfiles.find((e) => e.id === "mucahit-korkmaz");
 const catalog = {
   approvals: blogTechnicalReviewApprovals,
   experts: expertProfiles,
-  nowMs: new Date("2026-07-26T18:00:00+03:00").getTime(),
+  nowMs: new Date("2026-08-01T18:00:00+03:00").getTime(),
 };
 
 describe("PR-5B reviewer profile", () => {
@@ -74,12 +74,17 @@ describe("PR-5B reviewer eligibility", () => {
 });
 
 describe("PR-5B approval records", () => {
-  it("has three valid pilot approvals", () => {
-    assert.equal(blogTechnicalReviewApprovals.length, 3);
+  it("has six valid topical approvals", () => {
+    assert.equal(blogTechnicalReviewApprovals.length, 6);
     const slugs = blogTechnicalReviewApprovals.map((a) => a.slug);
-    assert.equal(new Set(slugs).size, 3);
-    for (const slug of pilotPublicationCandidateSlugs) {
-      assert.ok(slugs.includes(slug));
+    assert.equal(new Set(slugs).size, 6);
+    for (const slug of [
+      ...pilotPublicationCandidateSlugs,
+      "robotla-tikaniklik-acma-ile-pimas-yikama-farki",
+      "birden-fazla-gider-ayni-anda-neden-yavaslar",
+      "alt-kata-su-sizmasinin-kaynagi-nasil-bulunur",
+    ]) {
+      assert.ok(slugs.includes(slug), slug);
     }
     for (const approval of blogTechnicalReviewApprovals) {
       assert.equal(approval.reviewerExpertId, "mucahit-korkmaz");
@@ -95,20 +100,19 @@ describe("PR-5B approval records", () => {
 });
 
 describe("PR-5B technical review items", () => {
-  it("verifies pilot items and keeps non-pilot pending", () => {
-    for (const post of pilots) {
+  it("verifies published guides and keeps remaining drafts pending", () => {
+    const published = posts.filter((p) => p.status === "published");
+    assert.equal(published.length, 6);
+    for (const post of published) {
       assert.equal(post.needsTechnicalReview, false);
       assert.ok((post.technicalReview?.items ?? []).length > 0);
       assert.ok(
         (post.technicalReview?.items ?? []).every((i) => i.status === "verified")
       );
     }
-    const nonPilots = posts.filter(
-      (p) => !pilotPublicationCandidateSlugs.includes(p.slug)
-    );
-    assert.equal(nonPilots.length, 6);
-    for (const post of nonPilots) {
-      assert.equal(post.status, "draft");
+    const drafts = posts.filter((p) => p.status === "draft");
+    assert.equal(drafts.length, 3);
+    for (const post of drafts) {
       assert.equal(post.needsTechnicalReview, true);
       assert.ok(
         (post.technicalReview?.items ?? []).every((i) => i.status === "pending")
@@ -118,37 +122,31 @@ describe("PR-5B technical review items", () => {
 });
 
 describe("PR-5B publication split", () => {
-  it("publishes only the meter-guide pilot", () => {
+  it("publishes six approved topical guides including three pilots", () => {
     const published = posts.filter((p) => p.status === "published");
-    assert.equal(published.length, 1);
-    assert.equal(published[0].slug, "musluklar-kapaliyken-su-sayaci-neden-doner");
-    assert.equal(isPublishedContent(published[0]), true);
+    assert.equal(published.length, 6);
+    const publishedSlugs = new Set(published.map((p) => p.slug));
+    for (const slug of pilotPublicationCandidateSlugs) {
+      assert.ok(publishedSlugs.has(slug), slug);
+    }
+    assert.equal(pilots.filter((p) => p.status === "draft").length, 0);
 
-    const draftPilots = pilots.filter((p) => p.status === "draft");
-    assert.equal(draftPilots.length, 2);
-
-    const readyPublished = evaluateBlogPublicationReadiness(published[0], {
-      allPosts: posts,
-      serviceSlugs,
-      ...catalog,
-    });
-    assert.equal(readyPublished.ready, true, readyPublished.blockers.join("; "));
-    assert.ok(
-      readyPublished.warnings.some((w) =>
-        /credentials have not been independently verified/i.test(w)
-      )
-    );
-
-    for (const post of draftPilots) {
-      const result = evaluateBlogPublicationReadiness(post, {
+    for (const post of published) {
+      assert.equal(isPublishedContent(post), true);
+      const readyPublished = evaluateBlogPublicationReadiness(post, {
         allPosts: posts,
         serviceSlugs,
         ...catalog,
       });
-      assert.equal(result.ready, false);
-      assert.deepEqual(
-        result.blockers.filter((b) => !/preferred|FAQ count/i.test(b)),
-        ["Content status is draft"]
+      assert.equal(
+        readyPublished.ready,
+        true,
+        `${post.slug}: ${readyPublished.blockers.join("; ")}`
+      );
+      assert.ok(
+        readyPublished.warnings.some((w) =>
+          /credentials have not been independently verified/i.test(w)
+        )
       );
     }
   });

@@ -53,4 +53,53 @@ export const blogTechnicalReviewApprovals: TechnicalReviewApproval[] = [
       "seo-audits/pr-5b/TECHNICAL-REVIEW-MUCAHIT-KORKMAZ.md",
     ],
   },
+  {
+    slug: "robotla-tikaniklik-acma-ile-pimas-yikama-farki",
+    reviewerExpertId: "mucahit-korkmaz",
+    reviewedAt: "2026-08-01T01:00:00+03:00",
+    decision: "approved",
+    approvedItemTopics: [
+      "Robot vs pimaş karşılaştırma dili",
+      "Basınç ve ekipman uyarı ifadeleri",
+      "Kimyasal karıştırma uyarısı",
+    ],
+    notes:
+      "Robot/pimaş yöntem ayrımı, basınç uyarıları ve kimyasal güvenlik ifadeleri teknik açıdan incelenerek uygun bulunmuştur. Reviewer kimliği ve yazılı teknik onayı doğrulanmıştır; mesleki belge dosyaları bu kayıt kapsamında doğrulanmamıştır.",
+    evidenceReferences: [
+      "seo-audits/pr-5b/TECHNICAL-REVIEW-MUCAHIT-KORKMAZ.md",
+    ],
+  },
+  {
+    slug: "birden-fazla-gider-ayni-anda-neden-yavaslar",
+    reviewerExpertId: "mucahit-korkmaz",
+    reviewedAt: "2026-08-01T01:15:00+03:00",
+    decision: "approved",
+    approvedItemTopics: [
+      "Ortak hat / ana gider ayrım mantığı",
+      "Riskli DIY önerileri kontrolü",
+      "Yönetim bilgilendirme ve ortak alan dili",
+    ],
+    notes:
+      "Ortak hat ayrımı, riskli DIY sınırları ve yönetim dili teknik açıdan incelenerek uygun bulunmuştur. Reviewer kimliği ve yazılı teknik onayı doğrulanmıştır; mesleki belge dosyaları bu kayıt kapsamında doğrulanmamıştır.",
+    evidenceReferences: [
+      "seo-audits/pr-5b/TECHNICAL-REVIEW-MUCAHIT-KORKMAZ.md",
+    ],
+  },
+  {
+    slug: "alt-kata-su-sizmasinin-kaynagi-nasil-bulunur",
+    reviewerExpertId: "mucahit-korkmaz",
+    reviewedAt: "2026-08-01T01:30:00+03:00",
+    decision: "approved",
+    approvedItemTopics: [
+      "Isıtma tesisatı kaynaklı sızıntı belirtileri",
+      "Ortak kolon / bina hattı sorumluluk ifadeleri",
+      "Üst kat komşu iletişimi önerisi",
+      "Çatı/cephe kaynaklı ihtimal paragrafı",
+    ],
+    notes:
+      "Alt kata sızıntı kaynak ayrımı, ortak hat dili ve komşu iletişim tonu teknik açıdan incelenerek uygun bulunmuştur. Reviewer kimliği ve yazılı teknik onayı doğrulanmıştır; mesleki belge dosyaları bu kayıt kapsamında doğrulanmamıştır.",
+    evidenceReferences: [
+      "seo-audits/pr-5b/TECHNICAL-REVIEW-MUCAHIT-KORKMAZ.md",
+    ],
+  },
 ];
