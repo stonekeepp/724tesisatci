@@ -34,6 +34,10 @@ export const navigation: Navigation = {
           href: "/kagithane-lavabo-tikanikligi",
         },
         {
+          label: "Kağıthane Tuvalet Tıkanıklığı",
+          href: "/kagithane-tuvalet-tikanikligi",
+        },
+        {
           label: "Kağıthane Pimaş Açma",
           href: "/kagithane-pimas-acma",
         },

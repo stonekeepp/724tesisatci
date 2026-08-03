@@ -247,6 +247,7 @@ export const services: Service[] = [
     relatedLocalLandingSlugs: [
       "kagithane-tikaniklik-acma",
       "kagithane-lavabo-tikanikligi",
+      "kagithane-tuvalet-tikanikligi",
     ],
     seoTitle: "İstanbul Tıkanıklık Açma Hizmeti | 724 Tesisatçı",
     seoDescription: "İstanbul tıkanıklık açma: tuvalet, lavabo, pimaş. Robotik cihazlarla kırmadan açma, kameralı kontrol. 7/24 acil servis.",

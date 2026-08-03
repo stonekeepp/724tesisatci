@@ -136,6 +136,7 @@ export const localServiceLandingPages: LocalServiceLanding[] = [
     ],
     relatedLocalSlugs: [
       "kagithane-lavabo-tikanikligi",
+      "kagithane-tuvalet-tikanikligi",
       "kagithane-pimas-tesisati",
       "kagithane-pimas-acma",
       "kagithane-kamerali-tesisat-goruntuleme",
@@ -224,6 +225,7 @@ export const localServiceLandingPages: LocalServiceLanding[] = [
     relatedLocalSlugs: [
       "kagithane-pimas-tesisati",
       "kagithane-tikaniklik-acma",
+      "kagithane-tuvalet-tikanikligi",
       "kagithane-kamerali-tesisat-goruntuleme",
       "kagithane-su-kacagi-tespiti",
     ],
@@ -637,6 +639,7 @@ export const localServiceLandingPages: LocalServiceLanding[] = [
       "kagithane-pimas-tesisati",
       "kagithane-pimas-acma",
       "kagithane-tikaniklik-acma",
+      "kagithane-tuvalet-tikanikligi",
       "kagithane-su-kacagi-tespiti",
     ],
   },
@@ -1008,9 +1011,85 @@ export const localServiceLandingPages: LocalServiceLanding[] = [
     ],
     relatedLocalSlugs: [
       "kagithane-tikaniklik-acma",
+      "kagithane-tuvalet-tikanikligi",
       "kagithane-pimas-acma",
       "kagithane-kamerali-tesisat-goruntuleme",
       "kagithane-musluk-tamiri",
+    ],
+  },
+  {
+    slug: "kagithane-tuvalet-tikanikligi",
+    serviceSlug: "tikaniklik-acma",
+    title: "Kağıthane Tuvalet Tıkanıklığı | Robot Spiral Açma",
+    description:
+      "Kağıthane tuvalet tıkanıklığı: geri basma, taşma ve sifon tıkanmasında robot veya spiral ile kırmadan açma. Yazılı bilgilendirme.",
+    h1: "Kağıthane Tuvalet Tıkanıklığı",
+    heroDescription:
+      "Tuvalet taşıyor, geri basıyor veya sifon yavaş çekiyorsa gider tipine göre robot/spiral ile açılır; gerekirse kamera ile sebep netleştirilir.",
+    intro:
+      "Tuvalet tıkanıklığı çoğu zaman peçete, yabancı cisim, kireç veya sifon birikiminden kaynaklanır. Çağlayan ve Merkez apartmanlarında noktasal tuvalet tıkanıklığı; Hamidiye ve Emniyet Evleri’nde ortak hat etkisiyle birden fazla dairede geri basma sık görülür. Bu sayfa tuvalet odaklıdır; lavabo için Kağıthane lavabo tıkanıklığı, genel süreç için tıkanıklık açma sayfası kullanılır. Amaç, kimyasal riskini azaltmak, kontrollü açma yapmak ve tekrar riskinde kamera ile durumu görmektir.",
+    serviceType: "Tuvalet tıkanıklığı açma",
+    canonicalPath: "/kagithane-tuvalet-tikanikligi",
+    imageAlt: "Kağıthane'de tuvalet tıkanıklığı için robot spiral ile açma",
+    sections: [
+      {
+        title: "Geri basma, taşma ve yavaş sifon",
+        body:
+          "Tuvalet suyu yükseliyor, geri basıyor veya sifon yavaş çekiyorsa hatta birikim veya daralma olabilir. Yoğun kimyasal conta ve boruya zarar verebilir; özellikle taşma riskinde cihazlı açma daha güvenlidir.",
+        items: [
+          "Tuvaletin taşıması veya su seviyesinin yükselmesi",
+          "Geri basma veya gurgulama sesi",
+          "Sifonun yavaş veya yarım çekmesi",
+          "Peçete veya yabancı cisim şüphesi",
+        ],
+      },
+      {
+        title: "Robot veya spiral ile tuvalet açma",
+        body:
+          "Gider çapına uygun uç seçilir; birikim parçalanır veya geri çekilir. Açma sonrası akış ve sifon testi yapılır. Kısa sürede tekrar ediyorsa kamera ile eğim, kireç tabakası veya yabancı cisim değerlendirilir; gerekirse gömme rezervuar da kontrol edilir.",
+      },
+      {
+        title: "Çağlayan ve Hamidiye tuvalet senaryoları",
+        body:
+          "Çağlayan ve Merkez dairelerinde peçete ve sifon daralması; Hamidiye ve Emniyet Evleri apartmanlarında ortak hat etkisiyle birden fazla tuvalette geri basma öne çıkar. Saha notu (Çağlayan, Temmuz 2026): Tuvalet sürekli geri basıyordu. Spiral açma sonrası kamera ile sifon sonrası peçete birikimi görüldü; akış testi ve yazılı form ile teslim edildi, ıslak mendil kullanımının bırakılması önerildi.",
+      },
+      {
+        title: "Tuvalet tıkanıklığında ücreti ne belirler?",
+        body:
+          "Tek daire veya ortak hat olması, erişim, robot/spiral ihtiyacı, kamera ve rezervuar kontrolü gerekip gerekmediği ücreti etkiler. Kapsam işlem öncesi netleştirilir; onay olmadan geniş müdahale yapılmaz.",
+      },
+    ],
+    faq: [
+      {
+        question: "Tuvalet tıkanıklığı ile genel tıkanıklık açma aynı mıdır?",
+        answer:
+          "Tuvalet sayfası geri basma, taşma ve sifon senaryosuna odaklanır; genel tıkanıklık açma lavabo, mutfak, ana hat ve pimaşı da kapsar. Kağıthane’de Çağlayan’da noktasal tuvalet tıkanıklığı, Hamidiye’de ortak hat geri basması sık çağrıdır. Yalnızca bir tuvalet etkileniyorsa noktasal açma çoğu zaman yeterlidir; birden fazla daire aynı anda geri basıyorsa ana hat veya pimaş kontrolü gerekir. Kimyasal dökmek conta riski yaratabilir. Sonuç yazılı paylaşılır; WhatsApp ile mahalle ve belirti (taşma/geri basma) yönlendirmeyi hızlandırır.",
+        category: "Kapsam",
+      },
+      {
+        question: "Tuvalet taşarken kimyasal açıcı kullanmalı mıyım?",
+        answer:
+          "Yoğun kimyasal conta ve PVC bağlantılara zarar verebilir; taşma anında özellikle önerilmez. Farklı markaları karıştırmayın. Elektrik riski olan alanları kullanmayın ve cihazlı açma planlayın. Tekrarlayan tıkanıklıkta kamera ile sebep analizi yapılır.",
+        category: "Güvenlik",
+      },
+      {
+        question: "Tuvalet açıldıktan sonra neden tekrar tıkanır?",
+        answer:
+          "Kısmi açıklık, peçete/ıslak mendil alışkanlığı, kireç tabakası veya ortak hat sorunu kalmış olabilir. Kısa sürede tekrar ediyorsa kamera veya pimaş kontrolü değerlendirilir. Islak mendil ve hijyen ürünlerini tuvalete atmamak tekrar riskini azaltır.",
+        category: "Tekrar",
+      },
+      {
+        question: "Kağıthane'de aynı gün tuvalet açma yapılır mı?",
+        answer:
+          "Acil taşma ve geri basma çağrılarında öncelikli yönlendirme yapılır. Planlı işler ekip ve trafiğe göre ayarlanır; sabit aynı gün garantisi verilmez. Fotoğraf ve mahalle bilgisi WhatsApp ile planlamayı hızlandırır.",
+        category: "Planlama",
+      },
+    ],
+    relatedLocalSlugs: [
+      "kagithane-tikaniklik-acma",
+      "kagithane-lavabo-tikanikligi",
+      "kagithane-pimas-acma",
+      "kagithane-kamerali-tesisat-goruntuleme",
     ],
   },
 ];
