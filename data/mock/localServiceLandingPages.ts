@@ -137,6 +137,7 @@ export const localServiceLandingPages: LocalServiceLanding[] = [
     relatedLocalSlugs: [
       "kagithane-lavabo-tikanikligi",
       "kagithane-tuvalet-tikanikligi",
+      "kagithane-mutfak-tikanikligi",
       "kagithane-pimas-tesisati",
       "kagithane-pimas-acma",
       "kagithane-kamerali-tesisat-goruntuleme",
@@ -226,6 +227,7 @@ export const localServiceLandingPages: LocalServiceLanding[] = [
       "kagithane-pimas-tesisati",
       "kagithane-tikaniklik-acma",
       "kagithane-tuvalet-tikanikligi",
+      "kagithane-mutfak-tikanikligi",
       "kagithane-kamerali-tesisat-goruntuleme",
       "kagithane-su-kacagi-tespiti",
     ],
@@ -640,6 +642,7 @@ export const localServiceLandingPages: LocalServiceLanding[] = [
       "kagithane-pimas-acma",
       "kagithane-tikaniklik-acma",
       "kagithane-tuvalet-tikanikligi",
+      "kagithane-mutfak-tikanikligi",
       "kagithane-su-kacagi-tespiti",
     ],
   },
@@ -1012,6 +1015,7 @@ export const localServiceLandingPages: LocalServiceLanding[] = [
     relatedLocalSlugs: [
       "kagithane-tikaniklik-acma",
       "kagithane-tuvalet-tikanikligi",
+      "kagithane-mutfak-tikanikligi",
       "kagithane-pimas-acma",
       "kagithane-kamerali-tesisat-goruntuleme",
       "kagithane-musluk-tamiri",
@@ -1082,6 +1086,82 @@ export const localServiceLandingPages: LocalServiceLanding[] = [
         question: "Kağıthane'de aynı gün tuvalet açma yapılır mı?",
         answer:
           "Acil taşma ve geri basma çağrılarında öncelikli yönlendirme yapılır. Planlı işler ekip ve trafiğe göre ayarlanır; sabit aynı gün garantisi verilmez. Fotoğraf ve mahalle bilgisi WhatsApp ile planlamayı hızlandırır.",
+        category: "Planlama",
+      },
+    ],
+    relatedLocalSlugs: [
+      "kagithane-tikaniklik-acma",
+      "kagithane-lavabo-tikanikligi",
+      "kagithane-mutfak-tikanikligi",
+      "kagithane-pimas-acma",
+      "kagithane-kamerali-tesisat-goruntuleme",
+    ],
+  },
+  {
+    slug: "kagithane-mutfak-tikanikligi",
+    serviceSlug: "tikaniklik-acma",
+    title: "Kağıthane Mutfak Tıkanıklığı | Yağ ve Gider Açma",
+    description:
+      "Kağıthane mutfak tıkanıklığı: yağ birikimi, koku ve tezgâh gideri yavaşlamasında robot veya spiral ile kırmadan açma. Yazılı bilgilendirme.",
+    h1: "Kağıthane Mutfak Tıkanıklığı",
+    heroDescription:
+      "Mutfak lavabosu yavaş akıyor, yağ kokusu geliyor veya tezgâh gideri tıkanıyorsa gider tipine göre robot/spiral ile açılır; gerekirse kamera ile sebep netleştirilir.",
+    intro:
+      "Mutfak tıkanıklığı çoğu zaman yağ, gıda artığı ve sifon birikiminden kaynaklanır. Seyrantepe ve Sanayi çevresindeki iş yeri ve konut mutfaklarında yağ tabakası; Merkez dairelerinde tezgâh gideri daralması sık görülür. Bu sayfa mutfak odaklıdır; banyo lavabosu için Kağıthane lavabo tıkanıklığı, tuvalet için tuvalet tıkanıklığı, genel süreç için tıkanıklık açma sayfası kullanılır. Amaç, kimyasal riskini azaltmak, kontrollü açma yapmak ve tekrar riskinde kamera veya pimaş kontrolü ile durumu görmektir.",
+    serviceType: "Mutfak tıkanıklığı açma",
+    canonicalPath: "/kagithane-mutfak-tikanikligi",
+    imageAlt: "Kağıthane'de mutfak tıkanıklığı için robot spiral ile açma",
+    sections: [
+      {
+        title: "Yağ kokusu ve yavaş mutfak gideri",
+        body:
+          "Mutfak lavabosu yavaş çekiyor, fokurduyor veya yağ kokusu geliyorsa hatta yağ tabakası veya gıda birikimi olabilir. Yoğun kimyasal conta ve PVC bağlantılara zarar verebilir; özellikle taşma riskinde cihazlı açma daha güvenlidir.",
+        items: [
+          "Mutfak lavabosunun yavaş akması",
+          "Yağ veya ekşi koku",
+          "Fokurdama / gurgulama sesi",
+          "Tezgâh süzgecinde sık biriken tortu",
+        ],
+      },
+      {
+        title: "Robot veya spiral ile mutfak açma",
+        body:
+          "Gider çapına uygun uç seçilir; yağ ve birikim parçalanır veya geri çekilir. Açma sonrası akış ve koku kontrolü yapılır. Kısa sürede tekrar ediyorsa kamera ile eğim, yağ tabakası veya daralma değerlendirilir; gerekirse basınçlı yıkama planlanır.",
+      },
+      {
+        title: "Seyrantepe ve Sanayi mutfak senaryoları",
+        body:
+          "Seyrantepe ve Sanayi iş yerlerinde yoğun mutfak kullanımı yağ birikimini hızlandırır; Merkez konutlarında gıda artığı ve yağ dökümü öne çıkar. Saha notu (Seyrantepe, Ağustos 2026): Mutfak lavabosu yavaşlıyor ve koku şikâyeti vardı. Robot açma sonrası kamera ile sifon sonrası yağ tabakası görüldü; akış testi ve yazılı form ile teslim edildi, yağın lavaboya dökülmemesi önerildi.",
+      },
+      {
+        title: "Mutfak tıkanıklığında ücreti ne belirler?",
+        body:
+          "Konut veya iş yeri mutfağı olması, erişim, robot/spiral ihtiyacı, kamera ve yıkama gerekip gerekmediği ücreti etkiler. Kapsam işlem öncesi netleştirilir; onay olmadan geniş müdahale yapılmaz.",
+      },
+    ],
+    faq: [
+      {
+        question: "Mutfak tıkanıklığı ile genel tıkanıklık açma aynı mıdır?",
+        answer:
+          "Mutfak sayfası yağ, koku ve tezgâh gideri senaryosuna odaklanır; genel tıkanıklık açma lavabo, tuvalet, ana hat ve pimaşı da kapsar. Kağıthane’de Seyrantepe ve Sanayi mutfaklarında yağ tabakası sık çağrıdır. Tek mutfak lavabosu etkileniyorsa noktasal açma çoğu zaman yeterlidir; birden fazla gider aynı anda yavaşlıyorsa ana hat veya pimaş kontrolü gerekir. Kimyasal dökmek conta riski yaratabilir. Sonuç yazılı paylaşılır; WhatsApp ile mahalle ve mutfak tipi (konut/iş yeri) yönlendirmeyi hızlandırır.",
+        category: "Kapsam",
+      },
+      {
+        question: "Mutfak lavabosuna kimyasal açıcı dökülmeli mi?",
+        answer:
+          "Yoğun kimyasal conta ve PVC bağlantılara zarar verebilir. Farklı markaları karıştırmayın. Özellikle koku ve yavaş akışta cihazlı açma daha güvenlidir. Tekrarlayan tıkanıklıkta kamera ile sebep analizi yapılır.",
+        category: "Güvenlik",
+      },
+      {
+        question: "Mutfak açıldıktan sonra neden tekrar tıkanır?",
+        answer:
+          "Kısmi açıklık, yağ tabakası veya eğim sorunu kalmış olabilir. Kısa sürede tekrar ediyorsa kamera veya basınçlı yıkama değerlendirilir. Yağın lavaboya dökülmemesi ve süzgeç kullanımı tekrar riskini azaltır.",
+        category: "Tekrar",
+      },
+      {
+        question: "Kağıthane'de aynı gün mutfak açma yapılır mı?",
+        answer:
+          "Acil taşma ve yoğun koku çağrılarında öncelikli yönlendirme yapılır. Planlı işler ekip ve trafiğe göre ayarlanır; sabit aynı gün garantisi verilmez. Fotoğraf ve mahalle bilgisi WhatsApp ile planlamayı hızlandırır.",
         category: "Planlama",
       },
     ],
