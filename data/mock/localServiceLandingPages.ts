@@ -67,6 +67,7 @@ export const localServiceLandingPages: LocalServiceLanding[] = [
     relatedLocalSlugs: [
       "kagithane-su-tesisati",
       "kagithane-gizli-su-kacagi",
+      "kagithane-alt-kata-su-siziyor",
       "kagithane-kamerali-tesisat-goruntuleme",
       "kagithane-kalorifer-tesisati",
       "kagithane-kombi-servisi",
@@ -573,6 +574,7 @@ export const localServiceLandingPages: LocalServiceLanding[] = [
       "kagithane-petek-temizleme",
       "kagithane-kombi-servisi",
       "kagithane-dogalgaz-tesisati",
+      "kagithane-alt-kata-su-siziyor",
     ],
   },
   {
@@ -790,6 +792,7 @@ export const localServiceLandingPages: LocalServiceLanding[] = [
     ],
     relatedLocalSlugs: [
       "kagithane-su-kacagi-tespiti",
+      "kagithane-alt-kata-su-siziyor",
       "kagithane-musluk-tamiri",
       "kagithane-gomme-rezervuar-tamiri",
     ],
@@ -939,6 +942,7 @@ export const localServiceLandingPages: LocalServiceLanding[] = [
     ],
     relatedLocalSlugs: [
       "kagithane-su-kacagi-tespiti",
+      "kagithane-alt-kata-su-siziyor",
       "kagithane-su-tesisati",
       "kagithane-gomme-rezervuar-tamiri",
       "kagithane-kalorifer-tesisati",
@@ -1170,6 +1174,81 @@ export const localServiceLandingPages: LocalServiceLanding[] = [
       "kagithane-lavabo-tikanikligi",
       "kagithane-pimas-acma",
       "kagithane-kamerali-tesisat-goruntuleme",
+    ],
+  },
+  {
+    slug: "kagithane-alt-kata-su-siziyor",
+    serviceSlug: "su-kacagi-tespit-ve-onarim",
+    title: "Kağıthane Alt Kata Su Sızıyor | Acil Kaynak Tespiti",
+    description:
+      "Kağıthane alt kata su sızıyor: tavan damlaması ve alt komşu sızıntısında vana kapatma, cihazlı kaynak ayrımı ve noktasal tespit. Yazılı bilgilendirme.",
+    h1: "Kağıthane Alt Kata Su Sızıyor",
+    heroDescription:
+      "Alt komşuya su akıyor veya tavandan damlıyorsa ana vana kapatılır; termal, akustik ve nem ölçümüyle kaynak daraltılır. Onay olmadan geniş kırım yapılmaz.",
+    intro:
+      "Alt kata su sızması çoğu zaman üst dairenin banyo, mutfak, temiz su veya kalorifer hattından başlar. Gültepe, Çeliktepe ve Emniyet Evleri apartmanlarında tavan damlaması ve şaft nemi sık çağrıdır. Bu sayfa alt komşu / tavan sızıntısı senaryosuna odaklanır; görünmeyen kaçak için Kağıthane gizli su kaçağı, genel süreç için su kaçağı tespiti sayfası kullanılır. Amaç, hasarı sınırlamak, kaynağı cihazla ayırmak ve yazılı teklifle ilerlemekdir.",
+    serviceType: "Alt kata su sızıntısı tespiti",
+    canonicalPath: "/kagithane-alt-kata-su-siziyor",
+    imageAlt: "Kağıthane'de alt kata su sızıntısı için cihazlı kaynak tespiti",
+    sections: [
+      {
+        title: "Tavan damlaması ve alt komşu uyarısı",
+        body:
+          "Alt daireye damlama, tavanda ıslak halka veya boya kabarması aktif sızıntıyı gösterir. Beklemek hasarı büyütür; elektrik panosu ve ıslak alanlara dikkat edilmelidir.",
+        items: [
+          "Alt kata su akması veya damlama",
+          "Tavanda ıslaklık, sararma, kabarma",
+          "Şaft veya banyo duvarında nem",
+          "Üst dairede sayaç hareketi şüphesi",
+        ],
+      },
+      {
+        title: "Önce vana, sonra cihazlı kaynak ayrımı",
+        body:
+          "Mümkünse üst dairenin ana vanası kapatılır; sızıntı fotoğraflanır. Sayaç testi, termal kamera, akustik dinleme ve nem ölçümüyle temiz su, gider veya ısıtma hattı ayrılır. Kaynak netleşmeden geniş alan kırımı önerilmez.",
+      },
+      {
+        title: "Gültepe ve Çeliktepe alt kata sızıntı senaryoları",
+        body:
+          "Gültepe ve Çeliktepe eski stokta banyo-duvar birleşimi ve flex bağlantılar; Emniyet Evleri’nde şaft geçişleri öne çıkar. Saha notu (Gültepe, Ağustos 2026): Alt komşu tavan damlaması şikâyetiyle gelindi. Üst daire vanası kapatıldıktan sonra termal tarama ile banyo flex hattı noktasal kaçak doğrulandı; onay sonrası sınırlı müdahale yapıldı, alt daire nem izi kuruduktan sonra yazılı form teslim edildi.",
+      },
+      {
+        title: "Alt kata sızıntıda ücreti ne belirler?",
+        body:
+          "Kaçağın temiz su, gider veya kalorifer hattında olması; cihaz kullanımı; erişim (üst/alt daire) ve noktasal onarım ihtiyacı ücreti etkiler. Keşif sonrası yazılı teklif sunulur; onay olmadan işe başlanmaz.",
+      },
+    ],
+    faq: [
+      {
+        question: "Alt kata su sızıyor sayfası ile genel su kaçağı tespiti farkı nedir?",
+        answer:
+          "Bu sayfa alt komşu / tavan damlaması acil senaryosuna odaklanır; genel tespit sayfası fatura, sayaç ve çeşitli kaçak tiplerini birlikte anlatır. Gizli kaçak sayfası ise yüzeyde belirgin ıslaklık olmadan sayaç ve duvar içi nem odaklıdır. Kağıthane’de Gültepe ve Çeliktepe’de alt kata sızıntı sık çağrıdır; önce vana, sonra cihazlı kaynak ayrımı yapılır. Sonuç yazılı paylaşılır; onay olmadan geniş kırım yapılmaz. WhatsApp ile mahalle ve tavan fotoğrafı yönlendirmeyi hızlandırır.",
+        category: "Kapsam",
+      },
+      {
+        question: "Alt kata su akıyorsa önce ne yapmalıyım?",
+        answer:
+          "Üst dairenin ana vanasını kapatın, elektrik riski olan alanları kullanmayın ve sızıntı bölgesinin fotoğrafını çekin. Mümkünse alt komşuya ve yönetimle durumu paylaşın. Kimyasal tıkayıcı dökmek önerilmez. Ekip gelince sayaç testi ve cihazlı ölçümle kaynak doğrulanır; kapsam yazılı teklifle netleşir.",
+        category: "Acil",
+      },
+      {
+        question: "Alt kata sızıntı her zaman üst dairenin banyosundan mı gelir?",
+        answer:
+          "Sıkça banyo veya mutfak hattı şüphelidir; ancak temiz su flex’i, gömme rezervuar, kalorifer hattı veya ortak kolon da kaynak olabilir. Bu yüzden cihazlı ayrım yapılır; varsayımla geniş kırım önerilmez.",
+        category: "Kaynak",
+      },
+      {
+        question: "Kağıthane'de aynı gün alt kata sızıntı tespiti yapılır mı?",
+        answer:
+          "Aktif damlama ve elektrik riskinde öncelikli yönlendirme yapılır. Planlı tespit ekip ve trafiğe göre ayarlanır; sabit aynı gün garantisi verilmez. Fotoğraf ve mahalle bilgisi WhatsApp ile planlamayı hızlandırır.",
+        category: "Planlama",
+      },
+    ],
+    relatedLocalSlugs: [
+      "kagithane-su-kacagi-tespiti",
+      "kagithane-gizli-su-kacagi",
+      "kagithane-kalorifer-tesisati",
+      "kagithane-su-tesisati",
     ],
   },
 ];

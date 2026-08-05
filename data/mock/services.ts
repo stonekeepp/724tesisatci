@@ -194,6 +194,7 @@ export const services: Service[] = [
     relatedLocalLandingSlugs: [
       "kagithane-su-kacagi-tespiti",
       "kagithane-gizli-su-kacagi",
+      "kagithane-alt-kata-su-siziyor",
     ],
     seoTitle: "İstanbul Su Kaçağı Tespit ve Onarım | 724 Tesisatçı",
     seoDescription: "İstanbul su kaçağı tespit ve onarım. Termal kamera ile kırmadan tespit, noktasal onarım, yazılı teklif. 7/24 acil servis.",

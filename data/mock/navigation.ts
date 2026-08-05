@@ -26,6 +26,10 @@ export const navigation: Navigation = {
           href: "/kagithane-gizli-su-kacagi",
         },
         {
+          label: "Kağıthane Alt Kata Su Sızıyor",
+          href: "/kagithane-alt-kata-su-siziyor",
+        },
+        {
           label: "Kağıthane Tıkanıklık Açma",
           href: "/kagithane-tikaniklik-acma",
         },
