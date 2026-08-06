@@ -58,6 +58,10 @@ export const navigation: Navigation = {
           href: "/kagithane-petek-temizleme",
         },
         {
+          label: "Kağıthane Petek Isınmıyor",
+          href: "/kagithane-petek-isinmiyor",
+        },
+        {
           label: "Kağıthane Kombi Servisi",
           href: "/kagithane-kombi-servisi",
         },

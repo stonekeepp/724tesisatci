@@ -298,6 +298,7 @@ export const localServiceLandingPages: LocalServiceLanding[] = [
     relatedLocalSlugs: [
       "kagithane-kombi-servisi",
       "kagithane-kalorifer-tesisati",
+      "kagithane-petek-isinmiyor",
       "kagithane-su-kacagi-tespiti",
     ],
   },
@@ -365,6 +366,7 @@ export const localServiceLandingPages: LocalServiceLanding[] = [
     ],
     relatedLocalSlugs: [
       "kagithane-petek-temizleme",
+      "kagithane-petek-isinmiyor",
       "kagithane-kalorifer-tesisati",
       "kagithane-dogalgaz-tesisati",
       "kagithane-su-tesisati",
@@ -572,6 +574,7 @@ export const localServiceLandingPages: LocalServiceLanding[] = [
     ],
     relatedLocalSlugs: [
       "kagithane-petek-temizleme",
+      "kagithane-petek-isinmiyor",
       "kagithane-kombi-servisi",
       "kagithane-dogalgaz-tesisati",
       "kagithane-alt-kata-su-siziyor",
@@ -1249,6 +1252,81 @@ export const localServiceLandingPages: LocalServiceLanding[] = [
       "kagithane-gizli-su-kacagi",
       "kagithane-kalorifer-tesisati",
       "kagithane-su-tesisati",
+    ],
+  },
+  {
+    slug: "kagithane-petek-isinmiyor",
+    serviceSlug: "petek-temizleme",
+    title: "Kağıthane Petek Isınmıyor | Hava Tortu Kontrolü",
+    description:
+      "Kağıthane petek ısınmıyor: altı soğuk üstü sıcak, son petek ısınmama ve dengesiz ısıda hava-tortu ayrımı. Yazılı bilgilendirme.",
+    h1: "Kağıthane Petek Isınmıyor",
+    heroDescription:
+      "Petek altı soğuk kalıyorsa, son petek ısınmıyorsa veya bazı odalar soğuksa hava, vana ayarı ve tortu ayrımı yapılır; gerekirse makineli temizlik planlanır.",
+    intro:
+      "Petek ısınmama çoğu zaman hava, kapalı vana, dengesiz kollektör ayarı veya tesisat tortusundan kaynaklanır. Çeliktepe ve Gültepe dairelerinde altı soğuk üstü sıcak petek; Hamidiye kollektörlü sistemlerde son peteklerin geç ısınması sık görülür. Bu sayfa ısınmama belirtisine odaklanır; periyodik/makine bakımı için Kağıthane petek temizleme, basınç düşmesi için kombi tesisat kontrolü sayfası kullanılır. Amaç, gereksiz cihaz sökümü yapmadan kaynağı ayırmak ve yazılı teklifle ilerlemekdir.",
+    serviceType: "Petek ısınmama kontrolü",
+    canonicalPath: "/kagithane-petek-isinmiyor",
+    imageAlt: "Kağıthane'de ısınmayan petek için tesisat ve hava kontrolü",
+    sections: [
+      {
+        title: "Altı soğuk, son petek ve soğuk oda uyarıları",
+        body:
+          "Petek üstü sıcak altı soğuksa, hattın son petekleri geç ısınıyorsa veya bir oda hiç ısınmıyorsa hava, vana veya tortu şüphesi güçlenir. Kombi çalışıyor diye cihaz içi arıza varsayılmaz.",
+        items: [
+          "Petek altının soğuk, üstünün sıcak kalması",
+          "Hattın son peteklerinin ısınmaması",
+          "Bazı odaların soğuk kalması",
+          "Sık hava alma ihtiyacı",
+        ],
+      },
+      {
+        title: "Hava, vana ve tortu ayrımı",
+        body:
+          "Önce petek vanası ve hava alma kontrol edilir; kollektörlü sistemlerde denge ayarı bakılır. Tortu şüphesinde makineli petek temizliği planlanır. Basınç sürekli düşüyorsa kaçak kontrolü ayrı değerlendirilir; cihaz içi arıza şüphesinde güvenli yönlendirme yapılır.",
+      },
+      {
+        title: "Çeliktepe ve Hamidiye petek ısınmama senaryoları",
+        body:
+          "Çeliktepe ve Gültepe eski hatlarında tortu; Hamidiye kollektörlü dairelerde vana dengesi öne çıkar. Saha notu (Çeliktepe, Ağustos 2026): Salon peteği altı soğuk, oda ısınmıyor şikâyetiyle gelindi. Hava alma ve vana kontrolünden sonra tortu şüphesiyle makineli temizlik yapıldı; son petekler ısındı, ısı dağılımı test edilip yazılı form ile teslim edildi.",
+      },
+      {
+        title: "Petek ısınmamada ücreti ne belirler?",
+        body:
+          "Tek petek veya tüm hat, hava alma / vana ayarı yeterli olup olmadığı, makineli temizlik ihtiyacı ve erişim ücreti etkiler. Kapsam keşif sonrası yazılı teklifle netleşir; onay olmadan işe başlanmaz.",
+      },
+    ],
+    faq: [
+      {
+        question: "Petek ısınmıyor ile petek temizleme aynı mıdır?",
+        answer:
+          "Bu sayfa ısınmama belirtisine (altı soğuk, son petek, soğuk oda) odaklanır; petek temizleme sayfası makineli bakım sürecini anlatır. Kağıthane’de Çeliktepe’de altı soğuk petek, Hamidiye’de kollektör dengesizliği sık çağrıdır. Önce hava ve vana bakılır; tortu netleşirse temizlik planlanır. Basınç düşmesi varsa kaçak ihtimali ayrı değerlendirilir. Sonuç yazılı paylaşılır; WhatsApp ile petek fotoğrafı yönlendirmeyi hızlandırır.",
+        category: "Kapsam",
+      },
+      {
+        question: "Petek ısınmıyorsa önce ne yapılmalı?",
+        answer:
+          "Petek vanasının açık olduğundan emin olun; güvenli şekilde hava alma denenebilir. Basınç düşükse kombiyi üretici aralığına göre doldurmayı zorlamayın; sürekli düşüyorsa kaçak şüphesiyle servis çağırın. Kimyasal dökmek önerilmez. Keşif sonrası kapsam yazılı teklifle netleşir.",
+        category: "İlk adım",
+      },
+      {
+        question: "Isınmama her zaman petek temizliğine mi gider?",
+        answer:
+          "Hayır. Hava, kapalı vana, kollektör ayarı veya kaçak da kaynak olabilir. Tortu şüphesinde makineli temizlik önerilir; cihaz içi arıza belirtilerinde güvenli yönlendirme yapılır. Abartılı yüzde yüz iddiası kullanılmaz.",
+        category: "Ayrım",
+      },
+      {
+        question: "Kağıthane'de aynı gün petek ısınmama kontrolü yapılır mı?",
+        answer:
+          "Soğuk ev ve kış acillerinde öncelikli yönlendirme yapılır. Planlı işler ekip ve trafiğe göre ayarlanır; sabit aynı gün garantisi verilmez. Mahalle ve petek fotoğrafı WhatsApp ile planlamayı hızlandırır.",
+        category: "Planlama",
+      },
+    ],
+    relatedLocalSlugs: [
+      "kagithane-petek-temizleme",
+      "kagithane-kombi-servisi",
+      "kagithane-kalorifer-tesisati",
+      "kagithane-dogalgaz-tesisati",
     ],
   },
 ];

@@ -8,7 +8,7 @@ import { getAllAdLandingSlugs, getAdLandingBySlug } from "./adLandingService";
 import { staticPageSeo } from "@/data/mock/seo";
 
 /** Büyük içerik sürümü — her büyük içerik güncellemesinde bu tarihi güncelleyin */
-const CONTENT_LAST_UPDATED = new Date("2026-08-05"); // Weekly: Kağıthane alt kata su sızıyor landing
+const CONTENT_LAST_UPDATED = new Date("2026-08-06"); // Weekly: Kağıthane petek ısınmıyor landing
 
 export async function generateSitemapEntries() {
   const siteUrl = getSiteUrl();

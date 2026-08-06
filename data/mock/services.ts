@@ -298,7 +298,7 @@ export const services: Service[] = [
       "petegin-alti-soguk-ustu-sicaksa-ne-yapilmali",
       "kombi-arizasi-ile-tesisat-arizasi-nasil-ayirt-edilir",
     ],
-    relatedLocalLandingSlugs: ["kagithane-petek-temizleme"],
+    relatedLocalLandingSlugs: ["kagithane-petek-temizleme", "kagithane-petek-isinmiyor"],
     seoTitle: "İstanbul Petek Temizleme Hizmeti | 724 Tesisatçı",
     seoDescription: "İstanbul petek temizleme ve kalorifer sistem yıkama. Makineli temizlik ile %30 verimlilik artışı. Profesyonel ekip, yazılı teklif.",
     canonicalPath: "/hizmetler/petek-temizleme",
