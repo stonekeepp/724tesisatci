@@ -1329,4 +1329,157 @@ export const localServiceLandingPages: LocalServiceLanding[] = [
       "kagithane-dogalgaz-tesisati",
     ],
   },
+  {
+    slug: "kagithane-tesisatci",
+    serviceSlug: "su-tesisati",
+    title: "Kağıthane Tesisatçı | 7/24 Acil Su Tesisatı",
+    description:
+      "Kağıthane tesisatçı: su kaçağı, tıkanıklık, pimaş, musluk ve rezervuar için 7/24 yönlendirme. Keşif sonrası yazılı teklif; trafik ve ekibe göre gelinir.",
+    h1: "Kağıthane Tesisatçı",
+    heroDescription:
+      "Alt kata su, tıkanan gider, damlayan musluk veya acil tesisat çağrısında önce belirti dinlenir; uygun ekip yönlendirilir. Kapsam yazılı teklifle netleşir; onay olmadan işe başlanmaz.",
+    intro:
+      "Kağıthane tesisatçı arayışında çoğu çağrı aynı anda hem acil hem de doğru yöntem ister. Emniyet Evleri, Çeliktepe, Gültepe ve Seyrantepe’de su kaçağı, tıkanıklık, pimaş, musluk-batarya ve rezervuar işleri sık gelir. Bu sayfa “hemen tesisatçı” niyetine odaklanır; hizmet türüne göre Kağıthane su kaçağı, tıkanıklık veya su tesisatı spoke sayfalarına yönlenirsiniz. Odak; keşif, yazılı teklif, cihazlı kontrol ve yumuşak iddialarla güvenilir süreçtir.",
+    serviceType: "Tesisatçı hizmeti",
+    canonicalPath: "/kagithane-tesisatci",
+    imageAlt: "Kağıthane'de acil tesisatçı keşif ve yerinde müdahale",
+    sections: [
+      {
+        title: "Ne zaman tesisatçı çağırmalısınız?",
+        body:
+          "Alt kata su, musluklar kapalıyken sayaç hareketi, tuvalet taşması, açık sızıntı veya ani basınç düşmesi beklemeyi büyütür. Erken keşif hasarı ve maliyeti sınırlar.",
+        items: [
+          "Alt kata su / tavan nemi",
+          "Lavabo, tuvalet veya mutfak tıkanıklığı",
+          "Damlayan musluk, sızdıran vana, rezervuar",
+          "Acil su kesme veya hat arızası",
+        ],
+      },
+      {
+        title: "Keşif, yazılı teklif ve güvenli süreç",
+        body:
+          "Önce adres ve belirtiler alınır; keşifte kaynak daraltılır. Malzeme ve işçilik kalemleri yazılı teklifle paylaşılır. Onay olmadan çalışmaya başlanmaz; işlem sonrası yazılı form ile teslim edilir.",
+      },
+      {
+        title: "Emniyet Evleri ve Çeliktepe'de sık tesisatçı çağrıları",
+        body:
+          "Emniyet Evleri site dairelerinde gömme hat ve kollektör; Çeliktepe eski stokta flex, vana ve şaft geçişleri öne çıkar. Gültepe alt kata sızıntı, Seyrantepe mutfak yağ tıkanıklığı sık görülür. Saha notu (Emniyet Evleri, Temmuz 2026): Gece damlayan lavabo ve alt komşu şikâyetiyle gelen dairede ara vana sızıntısı tespit edildi. Vana ve flex değişimi sonrası basınç testi yapıldı; ıslaklık kuruyunca yazılı form teslim edildi.",
+      },
+      {
+        title: "Kağıthane tesisatçı ücretini ne belirler?",
+        body:
+          "Arızanın tipi (kaçak, tıkanıklık, hat onarımı), cihaz ihtiyacı, erişim ve malzeme kapsamı ücreti etkiler. Sabit paket fiyat verilmez; keşif sonrası yazılı teklif sunulur. Trafik ve ekip uygunluğuna göre yönlendirme yapılır.",
+      },
+    ],
+    faq: [
+      {
+        question: "Kağıthane tesisatçı aynı gün gelir mi?",
+        answer:
+          "Açık sızıntı, taşma veya alt kata su gibi acil durumlarda öncelikli yönlendirme yapılır. Planlı yenileme, hat çekimi veya kapsamlı tadilat keşif ve malzeme tedariğine göre randevulanır. Emniyet Evleri, Çeliktepe, Gültepe, Seyrantepe ve Merkez mahallelerinde trafik ile ekip uygunluğu belirleyicidir; sabit aynı gün veya sabit dakika vaadi verilmez. WhatsApp ile mahalle, belirti ve fotoğraf göndermeniz aynı gün yönlendirmeyi kolaylaştırır. Keşif sonrası kapsam yazılı teklifle netleşir; onay olmadan onarıma başlanmaz. Ana vanayı kapatmak ve elektrik riskini azaltmak acilde ilk adımdır. Sonuçlar yazılı form ile teslim edilir; abartılı yüzde yüz iddiası kullanılmaz.",
+        category: "Acil",
+      },
+      {
+        question: "Kağıthane tesisatçı fiyatları nasıl belirlenir?",
+        answer:
+          "Ücret arızanın tipine, cihazlı tespit ihtiyacına, erişim zorluğuna ve malzeme kalemlerine göre değişir. Su kaçağında termal/akustik, tıkanıklıkta robot/spiral veya kamera, hat onarımında malzeme ve işçilik ayrı değerlendirilir. Çeliktepe eski hatlarda erişim, Emniyet Evleri site dairelerinde gömme hatlar kapsamı etkileyebilir. Keşif sonrası yazılı teklif sunulur; onay olmadan işe başlanmaz. Sabit “paket fiyat” veya tıkla-öde vaadi verilmez. WhatsApp fotoğrafı ön değerlendirmeyi hızlandırır; kesin tutar yerinde netleşir. 6 ay işçilik garantisi ilgili onarımda formda belirtilir.",
+        category: "Fiyat",
+      },
+      {
+        question: "Kağıthane tesisatçı ile su tesisatı sayfası farkı nedir?",
+        answer:
+          "Bu sayfa genel “tesisatçı çağır” niyetine ve acil yönlendirmeye odaklanır. Kağıthane su tesisatı sayfası temiz su hattı, vana-musluk ve banyo-mutfak yenileme sürecini anlatır. Kaçak şüphesinde su kaçağı tespiti, tıkanıklıkta tıkanıklık açma spoke sayfaları kullanılır. Hamidiye ve Merkez’de yenileme çağrıları su tesisatı sayfasına; Gültepe alt kata sızıntı kaçak sayfasına daha yakın düşer. Doğru sayfa, doğru yöntem ve doğru ekip eşleşmesini hızlandırır. Şüphede ana sayfa veya bu tesisatçı sayfasından iletişime geçmeniz yeterlidir; yönlendirme keşifte ayrıştırılır.",
+        category: "Kapsam",
+      },
+      {
+        question: "Hangi Kağıthane mahallelerine tesisatçı geliyor?",
+        answer:
+          "Kağıthane’nin 19 mahallesine (Emniyet Evleri, Çeliktepe, Gültepe, Seyrantepe, Çağlayan, Merkez, Hamidiye, Ortabayır ve diğerleri) yönlendirme yapılır. Mahalle listesi ve bina stoku notları için Kağıthane tesisat hizmet bölgeleri hub’ı kullanılır. Çağrıda mahalle adı vermeniz rota planını hızlandırır. Sabit varış saati vaadi verilmez; trafik ve ekip uygunluğuna göre gelinir. Detaylı mahalle kartları için Kağıthane mahalleleri sayfasına bakabilirsiniz.",
+        category: "Bölge",
+      },
+    ],
+    relatedLocalSlugs: [
+      "kagithane-tesisat",
+      "kagithane-su-tesisati",
+      "kagithane-su-kacagi-tespiti",
+      "kagithane-tikaniklik-acma",
+      "kagithane-kombi-servisi",
+    ],
+  },
+  {
+    slug: "kagithane-tesisat",
+    serviceSlug: "su-tesisati",
+    title: "Kağıthane Tesisat | Su Kaçağı Tıkanıklık Kombi",
+    description:
+      "Kağıthane tesisat hizmetleri: su kaçağı, tıkanıklık, su hattı, pimaş, petek ve kombi. Hangi iş için hangi sayfa; keşif sonrası yazılı teklif.",
+    h1: "Kağıthane Tesisat",
+    heroDescription:
+      "Kağıthane’de tesisat işi su kaçağı, tıkanıklık, hat onarımı, pimaş, petek veya kombi olabilir. Belirtiye göre doğru spoke seçilir; kapsam yazılı teklifle netleşir.",
+    intro:
+      "Kağıthane tesisat aramaları çoğu zaman tek bir arızaya değil, birkaç olası kaynağa işaret eder. Emniyet Evleri ve Hamidiye’de yeni hatlar ile Çeliktepe–Gültepe eski stok aynı ilçede yan yanadır. Bu sayfa tesisat hizmetlerinin genel haritasıdır; acil usta çağrısı için Kağıthane tesisatçı sayfasını, spesifik iş için su kaçağı / tıkanıklık / su tesisatı spokes’larını kullanın. Amaç, doğru yönteme hızlı yönlendirmek ve yazılı teklifle ilerlemekdir.",
+    serviceType: "Tesisat hizmetleri",
+    canonicalPath: "/kagithane-tesisat",
+    imageAlt: "Kağıthane'de tesisat hattı kontrolü ve yerinde keşif",
+    sections: [
+      {
+        title: "Kağıthane tesisatında sık talep edilen işler",
+        body:
+          "Su kaçağı tespiti, tıkanıklık açma, temiz su hattı onarımı, pimaş, musluk-rezervuar, petek ve kombi tesisat kontrolü en sık gelen kollardır. Belirti netleşmeden geniş kırma önerilmez.",
+        items: [
+          "Su kaçağı ve alt kata sızıntı",
+          "Lavabo / tuvalet / mutfak tıkanıklığı",
+          "Su hattı, vana ve musluk onarımı",
+          "Petek, kalorifer ve kombi tesisat kontrolü",
+        ],
+      },
+      {
+        title: "Belirtiye göre doğru hizmet seçimi",
+        body:
+          "Sayaç hareketi veya duvar neminde önce kaçak tespiti; yavaş gider veya taşmada tıkanıklık açma; damlama ve basınçta su tesisatı; ısınmama ve basınç düşmesinde petek/kombi kolları değerlendirilir. Keşif sonrası yöntem yazılı özetlenir.",
+      },
+      {
+        title: "Çeliktepe ve Seyrantepe tesisat senaryoları",
+        body:
+          "Çeliktepe eski apartmanlarda flex ve şaft; Seyrantepe iş yeri mutfaklarında yağ tıkanıklığı sık görülür. Merkez ve Çağlayan’da rezervuar ve musluk arızaları öne çıkar. Saha notu (Seyrantepe, Haziran 2026): İş yeri mutfak gideri yavaşlıyor ve koku şikâyeti vardı. Robot açım sonrası yağ tabakası görüldü; akış testi yapıldı, tekrar riski için yıkama seçeneği yazılı teklifle paylaşıldı.",
+      },
+      {
+        title: "Tesisat işinde ücreti ve süreyi ne belirler?",
+        body:
+          "İş kolu, cihaz ihtiyacı, erişim, malzeme ve aciliyet ücreti etkiler. Sabit paket fiyat yoktur; keşif sonrası yazılı teklif sunulur. Yönlendirme trafik ve ekibe göre planlanır.",
+      },
+    ],
+    faq: [
+      {
+        question: "Kağıthane tesisat ile tesisatçı aynı arama mıdır?",
+        answer:
+          "Çoğu aramada aynı niyettir: yerinde tesisat çözümü. “Tesisatçı” daha çok acil usta çağrısı; “tesisat” ise hangi hizmetin gerektiğini tarayan daha geniş aramadır. Bu sayfa hizmet haritası ve spoke yönlendirmesi sunar; Kağıthane tesisatçı sayfası ise hızlı iletişim ve acil süreç odaklıdır. Emniyet Evleri veya Gültepe’den gelen çağrıda belirti net değilse önce bu haritadan veya tesisatçı sayfasından iletişime geçmeniz yeterlidir. Keşifte iş kolu ayrılır; onay olmadan onarıma başlanmaz. Sabit süre vaadi verilmez.",
+        category: "Kapsam",
+      },
+      {
+        question: "Kağıthane'de hangi tesisat işi önce yapılır?",
+        answer:
+          "Aktif su akışı, taşma veya alt kata sızıntıda güvenlik ve kaynak daraltma önceliklidir: ana vana, elektrik riski, ardından keşif. Planlı yenileme ve bakım randevu ile ilerler. Çeliktepe’de kaçak şüphesi, Seyrantepe’de mutfak tıkanıklığı farklı sıra izleyebilir. Kimyasal tıkayıcı dökmek önerilmez. WhatsApp fotoğrafı yönlendirmeyi hızlandırır; kapsam yazılı teklifle netleşir.",
+        category: "Öncelik",
+      },
+      {
+        question: "Tesisat yenileme ile noktasal onarım farkı nedir?",
+        answer:
+          "Noktasal onarım tek arıza noktasına (vana, flex, ek yeri, tıkaç) odaklanır. Yenileme hat uzunluğu, malzeme değişimi ve daha geniş kapsam demektir. Hamidiye yeni dairelerde noktasal iş; Ortabayır eski stokta kısmi yenileme daha sık gündeme gelir. Kamera veya cihazlı tespit karar vermeyi kolaylaştırır; yalnızca şikâyete bakarak komple yenileme önerilmez. Teklif onaydan sonra uygulanır.",
+        category: "Yenileme",
+      },
+      {
+        question: "Kağıthane tesisat için 7/24 destek var mı?",
+        answer:
+          "Acil su kaçağı, taşma ve açık sızıntı çağrıları için 7/24 hat aktiftir. Planlı işler gündüz ve randevu ile yürür. Yönlendirme trafik ve ekip uygunluğuna göre yapılır; sabit dakika vaadi verilmez. Mahalle ve belirti bilgisi ile aramanız planlamayı hızlandırır.",
+        category: "Acil",
+      },
+    ],
+    relatedLocalSlugs: [
+      "kagithane-tesisatci",
+      "kagithane-su-tesisati",
+      "kagithane-su-kacagi-tespiti",
+      "kagithane-tikaniklik-acma",
+      "kagithane-petek-temizleme",
+      "kagithane-kombi-servisi",
+    ],
+  },
 ];

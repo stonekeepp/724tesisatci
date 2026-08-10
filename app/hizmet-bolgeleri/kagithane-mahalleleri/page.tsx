@@ -48,10 +48,14 @@ export default async function KagithaneMahalleleriPage() {
           </h1>
           <p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto text-center mb-12">
             Kağıthane&apos;nin 19 mahallesine 7/24 tesisat yönlendirmesi sunuyoruz. Ana yerel hedef{" "}
-            <Link href="/" className="text-secondary hover:text-primary transition-colors">
+            <Link href="/kagithane-tesisatci" className="text-secondary hover:text-primary transition-colors">
               Kağıthane tesisatçı
             </Link>
-            {" "}ana sayfası; mahalle/hizmet hub’ı için{" "}
+            {" "}ve{" "}
+            <Link href="/kagithane-tesisat" className="text-secondary hover:text-primary transition-colors">
+              Kağıthane tesisat
+            </Link>
+            {" "}sayfaları; mahalle/hizmet hub’ı için{" "}
             <Link href="/hizmet-bolgeleri/kagithane" className="text-secondary hover:text-primary transition-colors">
               Kağıthane tesisat hizmet bölgeleri
             </Link>

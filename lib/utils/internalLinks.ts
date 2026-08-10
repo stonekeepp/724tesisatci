@@ -20,7 +20,9 @@ import { services } from "@/data/mock/services";
 import { getPublishedBlogPosts } from "@/data/mock/blogPosts";
 
 const STATIC_LABELS: Record<string, string> = {
-  "/": "Kağıthane tesisatçı",
+  "/": "Ana Sayfa",
+  "/kagithane-tesisatci": "Kağıthane tesisatçı",
+  "/kagithane-tesisat": "Kağıthane tesisat",
   "/hizmetler": "Tüm Hizmetler",
   "/hizmet-bolgeleri": "Hizmet Bölgeleri",
   "/hizmet-bolgeleri/istanbul": "İstanbul Geneli Tesisat",
@@ -57,7 +59,8 @@ export function getInternalLinkLabel(path: string): string {
 }
 
 export const primaryHubLinks = [
-  { href: "/", label: "Kağıthane tesisatçı" },
+  { href: "/kagithane-tesisatci", label: "Kağıthane tesisatçı" },
+  { href: "/kagithane-tesisat", label: "Kağıthane tesisat" },
   { href: "/hizmetler", label: "Tüm Hizmetler" },
   { href: "/hizmet-bolgeleri", label: "Hizmet Bölgeleri" },
   { href: "/hizmet-bolgeleri/kagithane", label: "Kağıthane Tesisat Hizmet Bölgeleri" },

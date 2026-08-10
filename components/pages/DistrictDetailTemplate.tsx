@@ -67,11 +67,15 @@ export function DistrictDetailTemplate({
             </p>
             {isHQ && (
               <p className="font-body-md text-body-md text-on-surface-variant mb-8 leading-relaxed">
-                Kağıthane tesisatçı ve tesisat çağrıları için ana sayfa{" "}
-                <Link href="/" className="text-secondary font-label-md hover:text-primary transition-colors">
+                Kağıthane tesisatçı ve tesisat çağrıları için{" "}
+                <Link href="/kagithane-tesisatci" className="text-secondary font-label-md hover:text-primary transition-colors">
                   Kağıthane tesisatçı
                 </Link>
-                {" "}adresidir; bu sayfa mahalle ve hizmet yönlendirme hub’ıdır.
+                {" "}ve{" "}
+                <Link href="/kagithane-tesisat" className="text-secondary font-label-md hover:text-primary transition-colors">
+                  Kağıthane tesisat
+                </Link>
+                {" "}sayfaları birincil hedeftir; bu sayfa mahalle ve hizmet yönlendirme hub’ıdır.
               </p>
             )}
             {!isHQ && (
@@ -107,7 +111,7 @@ export function DistrictDetailTemplate({
                 <p className="font-body-md text-sm text-on-surface-variant">
                   Birincil yerel hub:{" "}
                   <Link
-                    href="/"
+                    href="/kagithane-tesisatci"
                     className="text-secondary font-label-md hover:text-primary transition-colors"
                   >
                     Kağıthane tesisatçı
@@ -203,11 +207,15 @@ export function DistrictDetailTemplate({
               <p className="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
                 Bu sayfa mahalle ve hizmet yönlendirme hub’ıdır. 19 mahalleye servis planı,
                 bina tiplerine göre arıza analizi ve acil durumda yapılacaklar burada bir araya
-                getirilir.                 Ana yerel hedef{" "}
-                <Link href="/" className="text-secondary hover:text-primary transition-colors">
+                getirilir. Ana yerel hedef{" "}
+                <Link href="/kagithane-tesisatci" className="text-secondary hover:text-primary transition-colors">
                   Kağıthane tesisatçı
                 </Link>
-                {" "}ana sayfasıdır.
+                {" "}ve{" "}
+                <Link href="/kagithane-tesisat" className="text-secondary hover:text-primary transition-colors">
+                  Kağıthane tesisat
+                </Link>
+                {" "}sayfalarındır.
               </p>
             </div>
 

@@ -1,9 +1,9 @@
 import type { SEOData } from "@/types";
 
 export const defaultSeo: SEOData = {
-  title: "Kağıthane Tesisatçı | 7/24 Su Tesisatı, Tıkanıklık",
+  title: "724 Tesisatçı | Kağıthane Merkezli 7/24 Tesisat",
   description:
-    "Kağıthane tesisatçı ve tesisat servisi: su kaçağı tespiti, tıkanıklık açma, pimaş, musluk ve rezervuar için 7/24 destek. Yazılı teklif; telefon ve WhatsApp ile ulaşın.",
+    "Kağıthane merkezli 7/24 tesisat: su kaçağı, tıkanıklık, pimaş, musluk ve rezervuar. Yerel tesisatçı ve tesisat sayfalarından keşif sonrası yazılı teklif.",
   canonicalPath: "/",
 };
 
