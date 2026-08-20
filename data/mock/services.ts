@@ -40,6 +40,10 @@ export const services: Service[] = [
     faq: getServiceFaq("su-tesisati"),
     relatedServices: ["su-kacagi-tespit-ve-onarim", "batarya-musluk-montaj", "gomme-rezervuar-tamiri"],
     relatedLocations: ["istanbul", "kagithane"],
+    relatedLocalLandingSlugs: [
+      "kagithane-su-tesisati",
+      "kagithane-su-basinci-dusuk",
+    ],
     seoTitle: "İstanbul Su Tesisatı Tamir ve Yenileme | 724 Tesisatçı",
     seoDescription: "İstanbul su tesisatı tamir, yenileme, vana-musluk onarımı ve banyo-mutfak tesisatı. PPRC-bakır boru, basınç testi, yazılı teklif. 7/24 acil su tesisatçı.",
     canonicalPath: "/hizmetler/su-tesisati",
@@ -89,7 +93,10 @@ export const services: Service[] = [
       "kombi-basinci-neden-surekli-duser",
       "kombi-arizasi-ile-tesisat-arizasi-nasil-ayirt-edilir",
     ],
-    relatedLocalLandingSlugs: ["kagithane-kombi-servisi"],
+    relatedLocalLandingSlugs: [
+      "kagithane-kombi-servisi",
+      "kagithane-kombi-basinci-dusuyor",
+    ],
     seoTitle: "İstanbul Kombi Servisi ve Tesisatı | 724 Tesisatçı",
     seoDescription:
       "İstanbul kombi servisi: arıza tespiti, periyodik bakım, yedek parça ve tesisat onarımı. Kağıthane öncelikli, tüm markalar, 7/24 acil destek.",
@@ -140,7 +147,10 @@ export const services: Service[] = [
       "kombi-basinci-neden-surekli-duser",
       "petegin-alti-soguk-ustu-sicaksa-ne-yapilmali",
     ],
-    relatedLocalLandingSlugs: ["kagithane-kalorifer-tesisati"],
+    relatedLocalLandingSlugs: [
+      "kagithane-kalorifer-tesisati",
+      "kagithane-kalorifer-kacagi",
+    ],
     seoTitle: "İstanbul Kalorifer Tesisatı Kurulum ve Onarım | 724 Tesisatçı",
     seoDescription: "İstanbul kalorifer tesisatı kurulum, petek montajı, pompa onarımı ve sistem dengeleme. Termal kamera ile kaçak tespiti, yazılı teklif.",
     canonicalPath: "/hizmetler/kalorifer-tesisati",
@@ -525,6 +535,10 @@ export const services: Service[] = [
     faq: getServiceFaq("gomme-rezervuar-tamiri"),
     relatedServices: ["su-tesisati", "tikaniklik-acma", "su-kacagi-tespit-ve-onarim"],
     relatedLocations: ["istanbul", "kagithane"],
+    relatedLocalLandingSlugs: [
+      "kagithane-gomme-rezervuar-tamiri",
+      "kagithane-rezervuar-su-akiyor",
+    ],
     seoTitle: "İstanbul Gömme Rezervuar Tamiri | Geberit, Vitra, ECA — 724 Tesisatçı",
     seoDescription: "İstanbul gömme rezervuar tamiri ve montaj. Geberit, Vitra, ECA iç takım değişimi, sızıntı onarımı, zayıf sifon çözümü. Yazılı teklif, yazılı teklif, 7/24 acil servis.",
     canonicalPath: "/hizmetler/gomme-rezervuar-tamiri",
@@ -567,6 +581,10 @@ export const services: Service[] = [
     faq: getServiceFaq("batarya-musluk-montaj"),
     relatedServices: ["su-tesisati", "gomme-rezervuar-tamiri", "su-kacagi-tespit-ve-onarim"],
     relatedLocations: ["istanbul", "kagithane"],
+    relatedLocalLandingSlugs: [
+      "kagithane-musluk-tamiri",
+      "kagithane-musluk-damliyor",
+    ],
     seoTitle: "İstanbul Batarya Musluk Montaj ve Tamiri | 724 Tesisatçı",
     seoDescription: "İstanbul batarya musluk montaj, değişim ve tamiri. Mutfak ve banyo armatür montajı, damlayan musluk onarımı. Tüm markalar, yazılı teklif, 7/24 servis.",
     canonicalPath: "/hizmetler/batarya-musluk-montaj",

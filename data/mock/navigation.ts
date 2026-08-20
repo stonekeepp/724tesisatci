@@ -74,6 +74,26 @@ export const navigation: Navigation = {
           href: "/kagithane-kombi-servisi",
         },
         {
+          label: "Kağıthane Kombi Basıncı Düşüyor",
+          href: "/kagithane-kombi-basinci-dusuyor",
+        },
+        {
+          label: "Kağıthane Musluk Damlıyor",
+          href: "/kagithane-musluk-damliyor",
+        },
+        {
+          label: "Kağıthane Rezervuar Su Akıyor",
+          href: "/kagithane-rezervuar-su-akiyor",
+        },
+        {
+          label: "Kağıthane Kalorifer Kaçağı",
+          href: "/kagithane-kalorifer-kacagi",
+        },
+        {
+          label: "Kağıthane Su Basıncı Düşük",
+          href: "/kagithane-su-basinci-dusuk",
+        },
+        {
           label: "Kağıthane Doğalgaz Tesisatı",
           href: "/kagithane-dogalgaz-tesisati",
         },

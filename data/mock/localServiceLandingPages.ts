@@ -297,7 +297,9 @@ export const localServiceLandingPages: LocalServiceLanding[] = [
     ],
     relatedLocalSlugs: [
       "kagithane-kombi-servisi",
+      "kagithane-kombi-basinci-dusuyor",
       "kagithane-kalorifer-tesisati",
+      "kagithane-kalorifer-kacagi",
       "kagithane-petek-isinmiyor",
       "kagithane-su-kacagi-tespiti",
     ],
@@ -367,6 +369,7 @@ export const localServiceLandingPages: LocalServiceLanding[] = [
     relatedLocalSlugs: [
       "kagithane-petek-temizleme",
       "kagithane-petek-isinmiyor",
+      "kagithane-kombi-basinci-dusuyor",
       "kagithane-kalorifer-tesisati",
       "kagithane-dogalgaz-tesisati",
       "kagithane-su-tesisati",
@@ -437,6 +440,8 @@ export const localServiceLandingPages: LocalServiceLanding[] = [
     relatedLocalSlugs: [
       "kagithane-su-tesisati",
       "kagithane-musluk-tamiri",
+      "kagithane-musluk-damliyor",
+      "kagithane-rezervuar-su-akiyor",
       "kagithane-su-kacagi-tespiti",
       "kagithane-tikaniklik-acma",
     ],
@@ -505,6 +510,7 @@ export const localServiceLandingPages: LocalServiceLanding[] = [
     ],
     relatedLocalSlugs: [
       "kagithane-su-tesisati",
+      "kagithane-musluk-damliyor",
       "kagithane-gomme-rezervuar-tamiri",
       "kagithane-su-kacagi-tespiti",
       "kagithane-tikaniklik-acma",
@@ -576,6 +582,8 @@ export const localServiceLandingPages: LocalServiceLanding[] = [
       "kagithane-petek-temizleme",
       "kagithane-petek-isinmiyor",
       "kagithane-kombi-servisi",
+      "kagithane-kombi-basinci-dusuyor",
+      "kagithane-kalorifer-kacagi",
       "kagithane-dogalgaz-tesisati",
       "kagithane-alt-kata-su-siziyor",
     ],
@@ -797,6 +805,8 @@ export const localServiceLandingPages: LocalServiceLanding[] = [
       "kagithane-su-kacagi-tespiti",
       "kagithane-alt-kata-su-siziyor",
       "kagithane-musluk-tamiri",
+      "kagithane-musluk-damliyor",
+      "kagithane-su-basinci-dusuk",
       "kagithane-gomme-rezervuar-tamiri",
     ],
   },
@@ -947,6 +957,7 @@ export const localServiceLandingPages: LocalServiceLanding[] = [
       "kagithane-su-kacagi-tespiti",
       "kagithane-alt-kata-su-siziyor",
       "kagithane-su-tesisati",
+      "kagithane-rezervuar-su-akiyor",
       "kagithane-gomme-rezervuar-tamiri",
       "kagithane-kalorifer-tesisati",
     ],
@@ -1325,8 +1336,384 @@ export const localServiceLandingPages: LocalServiceLanding[] = [
     relatedLocalSlugs: [
       "kagithane-petek-temizleme",
       "kagithane-kombi-servisi",
+      "kagithane-kombi-basinci-dusuyor",
       "kagithane-kalorifer-tesisati",
       "kagithane-dogalgaz-tesisati",
+    ],
+  },
+  {
+    slug: "kagithane-kombi-basinci-dusuyor",
+    serviceSlug: "kombi-servisi-ve-tesisati",
+    title: "Kağıthane Kombi Basıncı Düşüyor | Tesisat Kontrolü",
+    description:
+      "Kağıthane kombi basıncı düşüyor: sürekli bar kaybı, sık doldurma ve petek neminde tesisat kaynaklı kontrol. Yazılı bilgilendirme.",
+    h1: "Kağıthane Kombi Basıncı Düşüyor",
+    heroDescription:
+      "Kombi basıncı sık sık düşüyorsa veya her gün doldurmak gerekiyorsa önce tesisat hattı, petek bağlantısı ve nem noktaları kontrol edilir; cihaz içi arıza şüphesinde güvenli yönlendirme yapılır.",
+    intro:
+      "Sürekli basınç düşmesi her zaman cihaz arızası değildir. Merkez ve Çeliktepe dairelerinde kalorifer hattı, petek altında damlama veya mikro kaçak basıncı düşürebilir. Bu sayfa bar kaybı / sık doldurma senaryosuna odaklanır; genel kombi tesisat kontrolü için Kağıthane kombi servisi, petek ısınmama için petek ısınmıyor sayfası kullanılır. Amaç, gereksiz cihaz sökümü yapmadan kaynağı ayırmak ve yazılı teklifle ilerlemekdir.",
+    serviceType: "Kombi basınç düşmesi kontrolü",
+    canonicalPath: "/kagithane-kombi-basinci-dusuyor",
+    imageAlt: "Kağıthane'de kombi basınç düşmesi için tesisat ve hat kontrolü",
+    sections: [
+      {
+        title: "Sürekli bar kaybı ve sık doldurma uyarıları",
+        body:
+          "Basınç 1 barın altına iniyor, haftada birkaç kez doldurma gerekiyor veya petek/boru çevresinde nem varsa aktif kaçak veya genleşme/tesisat tarafı şüphesi güçlenir.",
+        items: [
+          "Kombi basıncının sık düşmesi",
+          "Her gün veya haftada birkaç kez doldurma",
+          "Petek veya boru çevresinde nem",
+          "Basınç düşerken bazı peteklerin soğuması",
+        ],
+      },
+      {
+        title: "Tesisat tarafı kontrol ve cihaz ayrımı",
+        body:
+          "Önce petek altı, vana, bağlantı ve hat nemi incelenir; gerekirse basınç testi yapılır. Kaçak netleşirse noktasal onarım planlanır. Sorun cihaz içi arızaya işaret ederse kullanıcı güvenli şekilde uygun servis kanalına yönlendirilir; bu sayfada marka içi işlem sunulmaz.",
+      },
+      {
+        title: "Merkez ve Çeliktepe basınç düşmesi senaryoları",
+        body:
+          "Merkez ve Çeliktepe eski kalorifer hatlarında petek altı damlama; Hamidiye kollektörlü sistemlerde bağlantı conta sızıntısı öne çıkar. Saha notu (Merkez, Ağustos 2026): Haftada iki kez basınç dolduran dairede petek altında hafif nem tespit edildi. Bağlantı conta değişimi sonrası basınç 48 saat stabil kaldı; yazılı form ile teslim edildi.",
+      },
+      {
+        title: "Kombi basıncı düşmesinde ücreti ne belirler?",
+        body:
+          "Kaçağın petek, hat veya bağlantıda olması; cihazlı tespit ihtiyacı; erişim ve noktasal onarım kapsamı ücreti etkiler. Keşif sonrası yazılı teklif sunulur; onay olmadan işe başlanmaz.",
+      },
+    ],
+    faq: [
+      {
+        question: "Kombi basıncı düşüyor ile genel kombi servisi aynı mıdır?",
+        answer:
+          "Bu sayfa sürekli bar kaybı ve sık doldurma belirtisine odaklanır; genel kombi sayfası tesisat odaklı kombi kontrolünü daha geniş anlatır. Kağıthane’de Merkez ve Çeliktepe’de basınç düşmesi sık çağrıdır. Önce tesisat tarafı bakılır; cihaz içi arıza şüphesinde güvenli yönlendirme yapılır. Sonuç yazılı paylaşılır; WhatsApp ile basınç göstergesi fotoğrafı yönlendirmeyi hızlandırır.",
+        category: "Kapsam",
+      },
+      {
+        question: "Basıncı sürekli doldurmak çözüm mü?",
+        answer:
+          "Geçici rahatlama sağlar ama kaynağı kapatmaz. Doldurma ihtiyacı sürüyorsa kaçak veya genleşme/tesisat tarafı değerlendirilir. Zorlamanız önerilmez; keşif sonrası kapsam yazılı teklifle netleşir.",
+        category: "İlk adım",
+      },
+      {
+        question: "Basınç düşmesi her zaman kaçak mıdır?",
+        answer:
+          "Sıkça tesisat kaçağı şüphesi güçlenir; ancak genleşme tankı/tesisat tarafı veya cihaz içi arıza da mümkün olabilir. Ayrım keşifte yapılır; abartılı yüzde yüz iddiası kullanılmaz.",
+        category: "Ayrım",
+      },
+      {
+        question: "Kağıthane'de aynı gün basınç düşmesi kontrolü yapılır mı?",
+        answer:
+          "Aktif nem ve hızlı bar kaybında öncelikli yönlendirme yapılır. Planlı işler ekip ve trafiğe göre ayarlanır; sabit aynı gün garantisi verilmez. Mahalle ve fotoğraf WhatsApp ile planlamayı hızlandırır.",
+        category: "Planlama",
+      },
+    ],
+    relatedLocalSlugs: [
+      "kagithane-kombi-servisi",
+      "kagithane-petek-isinmiyor",
+      "kagithane-kalorifer-tesisati",
+      "kagithane-su-kacagi-tespiti",
+    ],
+  },
+  {
+    slug: "kagithane-musluk-damliyor",
+    serviceSlug: "batarya-musluk-montaj",
+    title: "Kağıthane Musluk Damlıyor | Conta Kartuş Tamiri",
+    description:
+      "Kağıthane musluk damlıyor: uç damlaması, kartuş arızası ve lavabo altı ıslaklıkta conta/kartuş kontrolü. Yazılı bilgilendirme.",
+    h1: "Kağıthane Musluk Damlıyor",
+    heroDescription:
+      "Musluk ucundan damlıyor, batarya gövdesi ıslak veya lavabo altında nem varsa conta, kartuş ve flex bağlantılar kontrol edilir; gerekirse batarya değişimi planlanır.",
+    intro:
+      "Küçük damlama su israfı ve dolap çürümesi üretir. Seyrantepe ve Sanayi iş yerlerinde sık aç-kapa kartuş ömrünü kısaltır; Emniyet Evleri dairelerinde flex hortum yıpranması sık görülür. Bu sayfa damlama niyetine odaklanır; genel musluk/batarya süreçleri için Kağıthane musluk tamiri sayfası kullanılır. Amaç, gereksiz komple söküm yapmadan kaynağı ayırmak ve yazılı teklifle ilerlemekdir.",
+    serviceType: "Musluk damlama tamiri",
+    canonicalPath: "/kagithane-musluk-damliyor",
+    imageAlt: "Kağıthane'de damlayan musluk için conta ve kartuş kontrolü",
+    sections: [
+      {
+        title: "Uç damlaması ve lavabo altı ıslaklık",
+        body:
+          "Musluk kapalıyken uçtan damlama, batarya gövdesinden kaçırma veya lavabo altında ıslaklık conta, kartuş veya flex sorununa işaret edebilir.",
+        items: [
+          "Musluk ucunda sürekli damlama",
+          "Batarya gövdesinden su kaçırma",
+          "Lavabo altında nem / dolap ıslaklığı",
+          "Aeratör tıkanıklığıyla birlikte zayıf akış",
+        ],
+      },
+      {
+        title: "Conta, kartuş ve flex kontrolü",
+        body:
+          "Ara vana kapatılır; conta, kartuş, flex hortum ve bağlantı rekorları incelenir. Tamir yeterli değilse batarya değişimi önerilir; işlem sonrası sızdırmazlık testi yapılır.",
+      },
+      {
+        title: "Seyrantepe ve Emniyet Evleri damlama senaryoları",
+        body:
+          "Seyrantepe iş yerlerinde yoğun kullanım kartuş arızasını hızlandırır; Emniyet Evleri ve Ortabayır’da eski flex hortum öne çıkar. Saha notu (Seyrantepe, Ağustos 2026): Mutfak musluğu gece damlıyordu. Kartuş değişimi sonrası sızdırmazlık testi yapıldı; yazılı form ile teslim edildi.",
+      },
+      {
+        title: "Musluk damlamada ücreti ne belirler?",
+        body:
+          "Conta/kartuş yeterli olup olmadığı, yeni batarya ihtiyacı, lavabo altı erişimi ve flex değişimi ücreti etkiler. Keşif sonrası yazılı teklif sunulur; onay olmadan işe başlanmaz.",
+      },
+    ],
+    faq: [
+      {
+        question: "Musluk damlıyor ile musluk tamiri aynı mıdır?",
+        answer:
+          "Bu sayfa damlama belirtisine odaklanır; musluk tamiri sayfası batarya montajı ve genel armatür sürecini de kapsar. Kağıthane’de Seyrantepe’de kartuş, Emniyet Evleri’nde flex damlaması sık çağrıdır. Sonuç yazılı paylaşılır; WhatsApp fotoğrafı yönlendirmeyi hızlandırır.",
+        category: "Kapsam",
+      },
+      {
+        question: "Damlayan muslukta önce ne yapmalıyım?",
+        answer:
+          "Ara vanayı kapatın, lavabo altını kurulayın ve fotoğraf çekin. Flex hortum şişmiş veya ıslaksa beklemeyin. Kimyasal dökmek önerilmez. Keşif sonrası kapsam yazılı teklifle netleşir.",
+        category: "İlk adım",
+      },
+      {
+        question: "Her damlama batarya değişimi ister mi?",
+        answer:
+          "Hayır. Conta veya kartuş çoğu zaman yeterlidir. Gövde çatlağı veya korozyonda değişim daha doğru olabilir. Ayrım yerinde yapılır.",
+        category: "Ayrım",
+      },
+      {
+        question: "Kağıthane'de aynı gün musluk damlama tamiri yapılır mı?",
+        answer:
+          "Aktif lavabo altı ıslaklıkta öncelikli yönlendirme yapılır. Planlı işler ekip ve trafiğe göre ayarlanır; sabit aynı gün garantisi verilmez.",
+        category: "Planlama",
+      },
+    ],
+    relatedLocalSlugs: [
+      "kagithane-musluk-tamiri",
+      "kagithane-su-tesisati",
+      "kagithane-gomme-rezervuar-tamiri",
+      "kagithane-su-kacagi-tespiti",
+    ],
+  },
+  {
+    slug: "kagithane-rezervuar-su-akiyor",
+    serviceSlug: "gomme-rezervuar-tamiri",
+    title: "Kağıthane Rezervuar Su Akıyor | İç Takım Kontrolü",
+    description:
+      "Kağıthane rezervuar su akıyor: sürekli akış, su sesi ve yüksek faturada gömme rezervuar iç takım kontrolü. Yazılı bilgilendirme.",
+    h1: "Kağıthane Rezervuar Su Akıyor",
+    heroDescription:
+      "Klozete ince akış, sürekli su sesi veya rezervuar dolduktan sonra akma sürüyorsa iç takım, conta ve doldurma ventili servis kapağından kontrol edilir.",
+    intro:
+      "Sürekli akan rezervuar gizli su israfı ve duvar nemi riski üretir. Çağlayan ve Merkez dairelerinde doldurma ventili / sifon contası sık arızalanır. Bu sayfa “rezervuar su akıyor” niyetine odaklanır; genel gömme rezervuar süreci için Kağıthane gömme rezervuar tamiri sayfası kullanılır. Amaç, gereksiz fayans kırmadan kaynağı ayırmak ve yazılı teklifle ilerlemekdir.",
+    serviceType: "Rezervuar sürekli akış tamiri",
+    canonicalPath: "/kagithane-rezervuar-su-akiyor",
+    imageAlt: "Kağıthane'de sürekli akan rezervuar için iç takım kontrolü",
+    sections: [
+      {
+        title: "Sürekli akış ve fatura uyarıları",
+        body:
+          "Klozet içine ince akış, gece su sesi veya ani fatura artışı rezervuar iç takım arızasını güçlendirir. Erken müdahale su kaybını sınırlar.",
+        items: [
+          "Klozete sürekli ince akış",
+          "Rezervuar dolduktan sonra su sesi",
+          "Ani yükselen su faturası",
+          "Klozet arkasında nem şüphesi",
+        ],
+      },
+      {
+        title: "Servis kapağından iç takım kontrolü",
+        body:
+          "Kapak açılarak şamandıra, doldurma ventili, sifon contası ve bağlantılar incelenir. Uygun parça değişimi sonrası doldurma-boşaltma ve sızdırmazlık testi yapılır. Duvar içi kaçak şüphesinde cihazlı tespit ayrı planlanır.",
+      },
+      {
+        title: "Çağlayan ve Merkez rezervuar senaryoları",
+        body:
+          "Çağlayan tadilatlı banyolarda montaj ölçüsü; Merkez ve Gültepe eski dairelerde conta deformasyonu öne çıkar. Saha notu (Çağlayan, Ağustos 2026): Gece su sesi ve fatura artışı şikâyetiyle gelindi. Doldurma ventili değişimi sonrası akış kesildi; yazılı form ile teslim edildi.",
+      },
+      {
+        title: "Rezervuar su akıyorsa ücreti ne belirler?",
+        body:
+          "Değişecek iç takım parçası, model uyumu, duvar içi sızıntı şüphesi ve erişim ücreti etkiler. Keşif sonrası yazılı teklif sunulur; onay olmadan işe başlanmaz.",
+      },
+    ],
+    faq: [
+      {
+        question: "Rezervuar su akıyor ile gömme rezervuar tamiri aynı mıdır?",
+        answer:
+          "Bu sayfa sürekli akış / fatura niyetine odaklanır; gömme rezervuar sayfası zayıf sifon, montaj ve genel arızaları da kapsar. Kağıthane’de Çağlayan ve Merkez’de sürekli akış sık çağrıdır. Sonuç yazılı paylaşılır; WhatsApp ile rezervuar kapağı fotoğrafı yönlendirmeyi hızlandırır.",
+        category: "Kapsam",
+      },
+      {
+        question: "Sürekli akan rezervuarda önce ne yapmalıyım?",
+        answer:
+          "Mümkünse rezervuar giriş vanasını kapatın, fotoğraf çekin ve fatura/sayaç notu alın. Fayans kırmaya çalışmayın. Keşif sonrası kapsam yazılı teklifle netleşir.",
+        category: "İlk adım",
+      },
+      {
+        question: "Her sürekli akışta duvar kırılır mı?",
+        answer:
+          "Hayır. Çoğu iç takım arızası servis kapağından çözülür. Duvar içi nem şüphesinde önce nokta doğrulanır; geniş kırım önerilmez.",
+        category: "Müdahale",
+      },
+      {
+        question: "Kağıthane'de aynı gün rezervuar akış tamiri yapılır mı?",
+        answer:
+          "Yüksek fatura ve aktif akışta öncelikli yönlendirme yapılır. Planlı işler ekip ve trafiğe göre ayarlanır; sabit aynı gün garantisi verilmez.",
+        category: "Planlama",
+      },
+    ],
+    relatedLocalSlugs: [
+      "kagithane-gomme-rezervuar-tamiri",
+      "kagithane-su-tesisati",
+      "kagithane-gizli-su-kacagi",
+      "kagithane-musluk-tamiri",
+    ],
+  },
+  {
+    slug: "kagithane-kalorifer-kacagi",
+    serviceSlug: "kalorifer-tesisati",
+    title: "Kağıthane Kalorifer Kaçağı | Hat ve Petek Nemi",
+    description:
+      "Kağıthane kalorifer kaçağı: petek altı nem, hat damlaması ve basınç düşmesinde tesisat kontrolü. Yazılı bilgilendirme.",
+    h1: "Kağıthane Kalorifer Kaçağı",
+    heroDescription:
+      "Petek altında ıslaklık, kalorifer borusunda damlama veya ısıtma basıncı düşüyorsa hat, vana ve petek bağlantıları kontrol edilir; gerekirse cihazlı tespit planlanır.",
+    intro:
+      "Kalorifer kaçağı temiz su sızıntısından farklıdır; ısıtma hattı ve petek bağlantıları kaynak olabilir. Çeliktepe ve Gültepe eski borulu dairelerde conta/ek yeri; Hamidiye kollektörlü sistemlerde vana sızıntısı sık görülür. Bu sayfa kalorifer/hat nemi niyetine odaklanır; alt kata genel su için alt kata su sızıyor, gizli temiz su için gizli su kaçağı sayfası kullanılır. Amaç, geniş kırım yerine nokta daraltmak ve yazılı teklifle ilerlemekdir.",
+    serviceType: "Kalorifer kaçağı tespiti",
+    canonicalPath: "/kagithane-kalorifer-kacagi",
+    imageAlt: "Kağıthane'de kalorifer hattı ve petek kaçağı kontrolü",
+    sections: [
+      {
+        title: "Petek altı nem ve basınç düşmesi",
+        body:
+          "Petek altında ıslaklık, boya kabarması, boru ek yerinde damlama veya kombi/kalorifer basıncının düşmesi ısıtma hattı kaçağını güçlendirir.",
+        items: [
+          "Petek altında nem veya damlama",
+          "Kalorifer borusu / vana çevresinde ıslaklık",
+          "Isıtma basıncının sürekli düşmesi",
+          "Kışın nem kokusu + soğuk petek birleşimi",
+        ],
+      },
+      {
+        title: "Hat kontrolü ve noktasal müdahale",
+        body:
+          "Petek bağlantıları, vanalar ve hat güzergahı incelenir; gerekirse basınç testi ve termal tarama yapılır. Kaynak netleşmeden geniş alan kırımı önerilmez; onay sonrası noktasal onarım planlanır.",
+      },
+      {
+        title: "Çeliktepe ve Gültepe kalorifer kaçak senaryoları",
+        body:
+          "Çeliktepe ve Gültepe eski hatlarda ek yeri conta; Hamidiye’de kollektör vana sızıntısı öne çıkar. Saha notu (Gültepe, Ağustos 2026): Petek altında nem ve basınç düşmesi şikâyetiyle gelindi. Bağlantı conta değişimi sonrası basınç stabil kaldı; yazılı form ile teslim edildi.",
+      },
+      {
+        title: "Kalorifer kaçağında ücreti ne belirler?",
+        body:
+          "Kaçağın petek, hat veya kollektörde olması; cihazlı tespit; erişim ve noktasal onarım ihtiyacı ücreti etkiler. Keşif sonrası yazılı teklif sunulur; onay olmadan işe başlanmaz.",
+      },
+    ],
+    faq: [
+      {
+        question: "Kalorifer kaçağı ile alt kata su sızıyor aynı mıdır?",
+        answer:
+          "Alt kata su sayfası genel tavan/alt komşu sızıntısına odaklanır; bu sayfa ısıtma hattı ve petek nemine odaklanır. Kaynak temiz su da olabilir — keşifte ayrılır. Kağıthane’de Çeliktepe ve Gültepe’de petek altı nem sık çağrıdır. Sonuç yazılı paylaşılır.",
+        category: "Kapsam",
+      },
+      {
+        question: "Petek altında nem varsa önce ne yapmalıyım?",
+        answer:
+          "Mümkünse ısıtmayı güvenli şekilde kapatın, alanı kurulayın ve fotoğraf çekin. Elektrik riskine dikkat edin. Keşif sonrası kapsam yazılı teklifle netleşir.",
+        category: "İlk adım",
+      },
+      {
+        question: "Kalorifer kaçağı her zaman duvar kırımı ister mi?",
+        answer:
+          "Hayır. Öncelik bağlantı ve vana noktalarını daraltmaktır. Kırma gerekiyorsa yalnızca tespit edilen alana müdahale edilir.",
+        category: "Müdahale",
+      },
+      {
+        question: "Kağıthane'de aynı gün kalorifer kaçak kontrolü yapılır mı?",
+        answer:
+          "Aktif damlama ve hızlı basınç kaybında öncelikli yönlendirme yapılır. Planlı işler ekip ve trafiğe göre ayarlanır; sabit aynı gün garantisi verilmez.",
+        category: "Planlama",
+      },
+    ],
+    relatedLocalSlugs: [
+      "kagithane-kalorifer-tesisati",
+      "kagithane-kombi-servisi",
+      "kagithane-alt-kata-su-siziyor",
+      "kagithane-petek-temizleme",
+    ],
+  },
+  {
+    slug: "kagithane-su-basinci-dusuk",
+    serviceSlug: "su-tesisati",
+    title: "Kağıthane Su Basıncı Düşük | Vana Hat Kontrolü",
+    description:
+      "Kağıthane su basıncı düşük: zayıf akış, tek musluk veya tüm daire basınç düşmesinde vana-hat kontrolü. Yazılı bilgilendirme.",
+    h1: "Kağıthane Su Basıncı Düşük",
+    heroDescription:
+      "Musluklardan zayıf su geliyor, yalnızca bir nokta veya tüm daire etkileniyorsa ara vana, aeratör, flex ve hat basıncı kontrol edilir; gerekirse bina ana hattı değerlendirilir.",
+    intro:
+      "Düşük su basıncı kaçak demek değildir; kısmen kapalı vana, tıkanan aeratör, yıpranmış flex veya hat daralması da kaynak olabilir. Hamidiye ve Merkez’de kollektör ayarı; Çeliktepe eski hatlarda daralma sık görülür. Bu sayfa zayıf akış niyetine odaklanır; genel hat/yenileme için Kağıthane su tesisatı, damlama için musluk damlıyor sayfası kullanılır. Amaç, geniş kırma yerine kaynağı ayırmak ve yazılı teklifle ilerlemekdir.",
+    serviceType: "Su basıncı düşüklüğü kontrolü",
+    canonicalPath: "/kagithane-su-basinci-dusuk",
+    imageAlt: "Kağıthane'de düşük su basıncı için vana ve hat kontrolü",
+    sections: [
+      {
+        title: "Zayıf akış ve noktasal / genel ayrımı",
+        body:
+          "Tek musluk zayıfsa o nokta ve aeratör/flex bakılır; tüm daire düşükse kollektör, ara vana veya bina ana hattı değerlendirilir. Sayaç hareketi ve nem varsa kaçak ihtimali ayrı ele alınır.",
+        items: [
+          "Musluklardan zayıf / kesik kesik akış",
+          "Yalnızca bir bataryanın düşük olması",
+          "Tüm dairede düşük basınç",
+          "Sıcak su zayıf, soğuk normal (veya tersi)",
+        ],
+      },
+      {
+        title: "Vana, aeratör ve hat kontrolü",
+        body:
+          "Ara vanalar, aeratör, flex hortum ve bağlantılar incelenir. Kollektörlü sistemlerde denge ayarı bakılır. Daralma veya arıza netleşirse noktasal onarım planlanır; onay olmadan geniş müdahale yapılmaz.",
+      },
+      {
+        title: "Hamidiye ve Çeliktepe basınç senaryoları",
+        body:
+          "Hamidiye kollektörlü dairelerde vana ayarı; Çeliktepe eski hatlarda daralma ve yıpranmış ara musluk öne çıkar. Saha notu (Hamidiye, Ağustos 2026): Mutfak musluğu zayıf akıyordu. Aeratör ve kısmen kapalı ara vana düzeltildi; akış testi sonrası yazılı form ile teslim edildi.",
+      },
+      {
+        title: "Su basıncı düşükken ücreti ne belirler?",
+        body:
+          "Tek nokta veya tüm daire, parça değişimi, hat daralması ve erişim ücreti etkiler. Keşif sonrası yazılı teklif sunulur; onay olmadan işe başlanmaz.",
+      },
+    ],
+    faq: [
+      {
+        question: "Su basıncı düşük ile su tesisatı aynı mıdır?",
+        answer:
+          "Bu sayfa zayıf akış belirtisine odaklanır; su tesisatı sayfası hat çekimi, vana-musluk ve yenilemeyi daha geniş anlatır. Kağıthane’de Hamidiye’de kollektör, Çeliktepe’de eski hat daralması sık çağrıdır. Sonuç yazılı paylaşılır; WhatsApp fotoğrafı yönlendirmeyi hızlandırır.",
+        category: "Kapsam",
+      },
+      {
+        question: "Basınç düşükken önce ne yapmalıyım?",
+        answer:
+          "Aeratörü söküp temizlemeyi deneyebilir, ara vananın tam açık olduğunu kontrol edebilirsiniz. Tüm daire düşükse bina ana vanasını zorlamayın; keşif planlayın. Nem veya sayaç hareketi varsa kaçak ihtimalini not edin.",
+        category: "İlk adım",
+      },
+      {
+        question: "Düşük basınç her zaman kaçak mıdır?",
+        answer:
+          "Hayır. Vana, aeratör, flex, kollektör ayarı veya bina hattı da kaynak olabilir. Nem ve sayaç hareketi birlikteyse kaçak ihtimali güçlenir; ayrım keşifte yapılır.",
+        category: "Ayrım",
+      },
+      {
+        question: "Kağıthane'de aynı gün basınç kontrolü yapılır mı?",
+        answer:
+          "Acil kullanım kısıtında öncelikli yönlendirme yapılır. Planlı işler ekip ve trafiğe göre ayarlanır; sabit aynı gün garantisi verilmez.",
+        category: "Planlama",
+      },
+    ],
+    relatedLocalSlugs: [
+      "kagithane-su-tesisati",
+      "kagithane-musluk-tamiri",
+      "kagithane-kombi-servisi",
+      "kagithane-su-kacagi-tespiti",
     ],
   },
   {
