@@ -29,6 +29,7 @@ export function getLocalLandingSeo(landing: LocalServiceLanding): SEOData {
     title: landing.title,
     description: landing.description,
     canonicalPath: landing.canonicalPath,
+    noindex: landing.indexable === false,
   };
 }
 
@@ -37,7 +38,10 @@ export function getRelatedLocalLandings(
 ): LocalServiceLanding[] {
   return landing.relatedLocalSlugs
     .map((slug) => getLocalLandingBySlug(slug))
-    .filter((page): page is LocalServiceLanding => Boolean(page));
+    .filter(
+      (page): page is LocalServiceLanding =>
+        page != null && page.indexable !== false
+    );
 }
 
 /** Append shared 6-month workmanship warranty FAQ when missing. */

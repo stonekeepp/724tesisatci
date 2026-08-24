@@ -6,7 +6,7 @@ Telefon: +90 532 346 87 69. Adres: Emniyet Evleri, Semerkant Sk. 14/A, 34415 Ka�
 
 ## Ana sayfalar
 
-- [Ana Sayfa](https://724tesisatci.com/): Marka hub, acil çağrı ve hizmet özeti
+- [Ana Sayfa](https://724tesisatci.com/): Kağıthane tesisatçı para URL, acil çağrı ve hizmet özeti
 - [Hizmetler](https://724tesisatci.com/hizmetler): Su kaçağı, tıkanıklık, kombi, kalorifer ve diğer tesisat hizmetleri
 - [Hizmet Bölgeleri](https://724tesisatci.com/hizmet-bolgeleri): İstanbul ilçe ve mahalle hizmet ağı
 - [Kağıthane Tesisat Hizmet Bölgeleri](https://724tesisatci.com/hizmet-bolgeleri/kagithane): Merkez ilçe mahalle hub sayfası
@@ -15,8 +15,6 @@ Telefon: +90 532 346 87 69. Adres: Emniyet Evleri, Semerkant Sk. 14/A, 34415 Ka�
 
 ## Kağıthane yerel hizmetler
 
-- [Kağıthane Tesisatçı](https://724tesisatci.com/kagithane-tesisatci): Acil tesisatçı, 7/24 yönlendirme ve yazılı teklif
-- [Kağıthane Tesisat](https://724tesisatci.com/kagithane-tesisat): Tesisat hizmet haritası ve spoke yönlendirme
 - [Kağıthane Su Tesisatı](https://724tesisatci.com/kagithane-su-tesisati): Temiz su hattı, vana-musluk ve yenileme
 - [Kağıthane Su Kaçağı Tespiti](https://724tesisatci.com/kagithane-su-kacagi-tespiti): Kırmadan cihazlı kaçak tespiti
 - [Kağıthane Gizli Su Kaçağı](https://724tesisatci.com/kagithane-gizli-su-kacagi): Görünmeyen kaçak, sayaç ve nem

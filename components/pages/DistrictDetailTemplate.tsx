@@ -67,15 +67,11 @@ export function DistrictDetailTemplate({
             </p>
             {isHQ && (
               <p className="font-body-md text-body-md text-on-surface-variant mb-8 leading-relaxed">
-                Kağıthane tesisatçı ve tesisat çağrıları için{" "}
-                <Link href="/kagithane-tesisatci" className="text-secondary font-label-md hover:text-primary transition-colors">
-                  Kağıthane tesisatçı
+                Kağıthane tesisatçı ve tesisat çağrıları için birincil para URL{" "}
+                <Link href="/" className="text-secondary font-label-md hover:text-primary transition-colors">
+                  ana sayfa
                 </Link>
-                {" "}ve{" "}
-                <Link href="/kagithane-tesisat" className="text-secondary font-label-md hover:text-primary transition-colors">
-                  Kağıthane tesisat
-                </Link>
-                {" "}sayfaları birincil hedeftir; bu sayfa mahalle ve hizmet yönlendirme hub’ıdır.
+                ’dır; bu sayfa mahalle ve hizmet yönlendirme hub’ıdır.
               </p>
             )}
             {!isHQ && (
@@ -109,12 +105,12 @@ export function DistrictDetailTemplate({
                   </p>
                 ) : null}
                 <p className="font-body-md text-sm text-on-surface-variant">
-                  Birincil yerel hub:{" "}
+                  Birincil yerel hedef:{" "}
                   <Link
-                    href="/kagithane-tesisatci"
+                    href="/"
                     className="text-secondary font-label-md hover:text-primary transition-colors"
                   >
-                    Kağıthane tesisatçı
+                    Kağıthane tesisatçı (ana sayfa)
                   </Link>
                 </p>
               </div>
@@ -208,14 +204,10 @@ export function DistrictDetailTemplate({
                 Bu sayfa mahalle ve hizmet yönlendirme hub’ıdır. 19 mahalleye servis planı,
                 bina tiplerine göre arıza analizi ve acil durumda yapılacaklar burada bir araya
                 getirilir. Ana yerel hedef{" "}
-                <Link href="/kagithane-tesisatci" className="text-secondary hover:text-primary transition-colors">
-                  Kağıthane tesisatçı
+                <Link href="/" className="text-secondary hover:text-primary transition-colors">
+                  ana sayfa (Kağıthane tesisatçı)
                 </Link>
-                {" "}ve{" "}
-                <Link href="/kagithane-tesisat" className="text-secondary hover:text-primary transition-colors">
-                  Kağıthane tesisat
-                </Link>
-                {" "}sayfalarındır.
+                ’dır; mahalle yönlendirme için bu hub kullanılır.
               </p>
             </div>
 

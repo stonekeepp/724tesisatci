@@ -299,8 +299,12 @@ export default async function BlogDetailPage({ params }: Props) {
           </h2>
           <p className="font-body-md text-body-md text-on-primary-container mb-8 max-w-xl mx-auto">
             Kağıthane merkezli 7/24 tesisat ekibimiz yazılı teklif ile hizmet verir. Ana yerel hedef için{" "}
-            <Link href="/kagithane-tesisatci" className="text-secondary hover:text-primary transition-colors">
-              Kağıthane tesisatçı
+            <Link href="/" className="text-secondary hover:text-primary transition-colors">
+              ana sayfa
+            </Link>
+            {" "}veya{" "}
+            <Link href="/hizmet-bolgeleri/kagithane" className="text-secondary hover:text-primary transition-colors">
+              Kağıthane hub
             </Link>
             {" "}sayfasına bakın.
           </p>

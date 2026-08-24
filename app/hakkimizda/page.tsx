@@ -263,10 +263,10 @@ export default async function HakkimizdaPage() {
                 </div>
               </div>
               <Link
-                href="/kagithane-tesisatci"
+                href="/"
                 className="text-secondary font-label-md hover:text-on-secondary-container transition-colors"
               >
-                Kağıthane tesisatçı sayfası →
+                Kağıthane tesisatçı (ana sayfa) →
               </Link>
               <Link
                 href="/hizmet-bolgeleri/kagithane"

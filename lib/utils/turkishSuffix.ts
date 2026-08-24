@@ -69,6 +69,7 @@ export function getTurkishLocativeSuffixOnly(value: string): string {
  * Examples: Adalar'da, Beşiktaş'ta, Kadıköy'de, Beyoğlu'nda
  */
 export function getTurkishLocative(value: string): string {
+  if (typeof value !== "string") return "";
   const trimmed = stripTrailingApostropheJunk(value.trim());
   if (!trimmed) return "";
   const suffix = getTurkishLocativeSuffixOnly(trimmed);

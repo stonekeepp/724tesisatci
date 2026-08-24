@@ -43,8 +43,6 @@ const problemTiles = [
 ] as const;
 
 const kagithanePriorityLinks = [
-  { href: "/kagithane-tesisatci", label: "Kağıthane tesisatçı" },
-  { href: "/kagithane-tesisat", label: "Kağıthane tesisat" },
   { href: "/hizmet-bolgeleri/kagithane", label: "Kağıthane tesisat hizmet bölgeleri" },
   { href: "/kagithane-su-kacagi-tespiti", label: "Kağıthane su kaçağı tespiti" },
   { href: "/kagithane-tikaniklik-acma", label: "Kağıthane tıkanıklık açma" },

@@ -8,7 +8,7 @@ import { getAllAdLandingSlugs, getAdLandingBySlug } from "./adLandingService";
 import { staticPageSeo } from "@/data/mock/seo";
 
 /** Büyük içerik sürümü — her büyük içerik güncellemesinde bu tarihi güncelleyin */
-const CONTENT_LAST_UPDATED = new Date("2026-08-20"); // Weekly: 5 Kağıthane long-tail landings (hafta 3)
+const CONTENT_LAST_UPDATED = new Date("2026-08-24"); // Index hygiene: district noindex, ad noindex, money URL consolidate
 
 export async function generateSitemapEntries() {
   const siteUrl = getSiteUrl();

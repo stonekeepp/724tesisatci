@@ -4,14 +4,14 @@ export const localServiceLandingPages: LocalServiceLanding[] = [
   {
     slug: "kagithane-su-kacagi-tespiti",
     serviceSlug: "su-kacagi-tespit-ve-onarim",
-    title: "Kağıthane Su Kaçağı Tespiti | Kırmadan Cihazlı",
+    title: "Kağıthane Su Kaçağı Tespiti | 724 Tesisatçı",
     description:
       "Kağıthane su kaçağı tespiti: alt kata su, tavan nemi ve kabarma için termal kamera, akustik dinleme ve nem ölçerle kırmadan noktasal kontrol.",
     h1: "Kağıthane Su Kaçağı Tespiti",
     heroDescription:
       "Alt kata su sızması, tavanda nem veya kabarma, yüksek fatura ve sayaç hareketinde termal kamera, akustik dinleme ve nem ölçerle kaçak noktası daraltılır; sonuç yazılı olarak paylaşılır.",
     intro:
-      "Kağıthane'de su kaçağı çoğu zaman banyo, mutfak, temiz su borusu veya kalorifer hattından başlar. Ekibimiz önce belirtileri dinler; gereksiz kırma yapmadan termal, akustik ve nem ölçümle kaynağı doğrulamaya odaklanır. Genel çağrılar için ana sayfa, mahalle seçimi için Kağıthane hizmet bölgeleri hub’ı kullanılır.",
+      "Kağıthane'de su kaçağı çoğu zaman banyo, mutfak, temiz su borusu veya kalorifer hattından başlar. Ekibimiz önce belirtileri dinler; gereksiz kırma yapmadan termal, akustik ve nem ölçümle kaynağı doğrulamaya odaklanır. Bu sayfa Kağıthane’ye özel cihazlı tespit niyetine yazılmıştır; İstanbul genel hizmet özeti ilgili hizmet sayfasında, gizli kaçak senaryoları ayrı Kağıthane gizli su kaçağı sayfasında, genel çağrı için ana sayfa, mahalle seçimi için Kağıthane hizmet bölgeleri hub’ı kullanılır.",
     serviceType: "Su kaçağı tespiti",
     canonicalPath: "/kagithane-su-kacagi-tespiti",
     imageAlt:
@@ -76,14 +76,14 @@ export const localServiceLandingPages: LocalServiceLanding[] = [
   {
     slug: "kagithane-tikaniklik-acma",
     serviceSlug: "tikaniklik-acma",
-    title: "Kağıthane Tıkanıklık Açma | Robot Cihazlı Servis",
+    title: "Kağıthane Tıkanıklık Açma | 724 Tesisatçı",
     description:
       "Kağıthane tıkanıklık açma: lavabo yavaş akma, tuvalet taşıma ve mutfak kokusunda robot, spiral veya kameralı müdahale.",
     h1: "Kağıthane Tıkanıklık Açma",
     heroDescription:
       "Lavabo yavaş akıyorsa, tuvalet taşıyorsa veya mutfaktan koku geliyorsa gider tipine göre robot cihaz, spiral veya kameralı kontrol ile tıkanıklık açılır.",
     intro:
-      "Kağıthane'de tıkanıklık çoğu zaman yağ, kireç, saç veya yabancı cisim birikiminden kaynaklanır. Seyrantepe ve Sanayi çevresindeki mutfaklarda yağ; Çağlayan dairelerinde ise lavabo ve tuvalet noktasal tıkanıklıkları sık görülür. Yöntem gider tipine göre seçilir; acil taşma ve koku çağrıları için ana sayfa üzerinden de iletişime geçilebilir.",
+      "Kağıthane'de tıkanıklık çoğu zaman yağ, kireç, saç veya yabancı cisim birikiminden kaynaklanır. Seyrantepe ve Sanayi çevresindeki mutfaklarda yağ; Çağlayan dairelerinde ise lavabo ve tuvalet noktasal tıkanıklıkları sık görülür. Bu sayfa genel tıkanıklık açma niyetidir; yalnız tuvalet veya yalnız mutfak tıkanıklığı için ilgili Kağıthane sayfaları, pimaş hattı yıkama/açma için Kağıthane pimaş açma sayfası kullanılır. Yöntem gider tipine göre seçilir; acil taşma ve koku çağrıları için ana sayfa üzerinden de iletişime geçilebilir.",
     serviceType: "Tıkanıklık açma",
     canonicalPath: "/kagithane-tikaniklik-acma",
     imageAlt: "Kağıthane'de robot cihaz ile lavabo tıkanıklığı açma",
@@ -236,14 +236,14 @@ export const localServiceLandingPages: LocalServiceLanding[] = [
   {
     slug: "kagithane-petek-temizleme",
     serviceSlug: "petek-temizleme",
-    title: "Kağıthane Petek Temizleme | Makine ile Tesisat Bakımı",
+    title: "Kağıthane Petek Temizleme | 724 Tesisatçı",
     description:
       "Kağıthane petek temizleme: altı soğuk üstü sıcak petek, çamurlaşma ve kış öncesi makineyle tesisat temizliği.",
     h1: "Kağıthane Petek Temizleme",
     heroDescription:
       "Peteklerin altı soğuk üstü sıcak kalıyorsa, son petek ısınmıyorsa veya kombi çalıştığı halde ev ısınmıyorsa tesisat içi çamur ve tortu makineyle temizlenir.",
     intro:
-      "Kağıthane'de kış öncesi petek temizliği, özellikle eski kalorifer hatlarında ısı verimini korur ve dolaşım zayıflığını azaltır. Gültepe ve Ortabayır dairelerinde çamurlaşma sık görülür; Çeliktepe kollektörlü sistemlerde vana dengesi de temizlikle birlikte kontrol edilir. Temizlik makinesi ve uygun koruyucu kimyasalla sirkülasyon yeniden dengelenir; işlem sonrası ısı dağılımı test edilir.",
+      "Kağıthane'de kış öncesi petek temizliği, özellikle eski kalorifer hatlarında ısı verimini korur ve dolaşım zayıflığını azaltır. Gültepe ve Ortabayır dairelerinde çamurlaşma sık görülür; Çeliktepe kollektörlü sistemlerde vana dengesi de temizlikle birlikte kontrol edilir. Bu sayfa makineyle tesisat temizliği niyetidir; yalnızca “petek ısınmıyor” teşhis/ayırt etme ve basınç düşmesi için ilgili Kağıthane sayfaları kullanılır. Temizlik makinesi ve uygun koruyucu kimyasalla sirkülasyon yeniden dengelenir; işlem sonrası ısı dağılımı test edilir.",
     serviceType: "Petek temizleme",
     canonicalPath: "/kagithane-petek-temizleme",
     imageAlt: "Kağıthane'de makine ile petek temizleme işlemi",
@@ -307,14 +307,14 @@ export const localServiceLandingPages: LocalServiceLanding[] = [
   {
     slug: "kagithane-kombi-servisi",
     serviceSlug: "kombi-servisi-ve-tesisati",
-    title: "Kağıthane Kombi ve Tesisat Kontrolü | Basınç Düşmesi",
+    title: "Kağıthane Kombi ve Tesisat Kontrolü | 724 Tesisatçı",
     description:
       "Kağıthane kombi basınç düşmesi, tesisat kaçağı şüphesi ve petek ısınmama sorunlarında tesisat kaynaklı kontrol.",
     h1: "Kağıthane Kombi ve Tesisat Kontrolü",
     heroDescription:
       "Kombi basıncı düşüyorsa, petekler ısınmıyorsa veya tesisat kaçağı şüphesi varsa genleşme tankı/tesisat tarafı ve hat bağlantıları kontrol edilir; cihaz içi işlem gereken durumda güvenli yönlendirme yapılır.",
     intro:
-      "Sürekli basınç düşmesi her zaman cihaz arızası değildir. Merkez ve Çeliktepe dairelerinde kalorifer hattı, petek bağlantısı veya tesisat kaçağı basıncı düşürebilir. Bu sayfa tesisat odaklı kontrole odaklanır; cihaz içi servis gereken durumda kullanıcı güvenli şekilde yönlendirilir.",
+      "Sürekli basınç düşmesi her zaman cihaz arızası değildir. Merkez ve Çeliktepe dairelerinde kalorifer hattı, petek bağlantısı veya tesisat kaçağı basıncı düşürebilir. Bu sayfa tesisat odaklı kontrole odaklanır; dar niyetli basınç düşmesi ve makineyle petek temizliği için ilgili Kağıthane sayfaları kullanılır. Cihaz içi servis gereken durumda kullanıcı güvenli şekilde yönlendirilir.",
     serviceType: "Kombi tesisat kontrolü",
     canonicalPath: "/kagithane-kombi-servisi",
     imageAlt: "Kağıthane'de kombi basınç düşmesi için tesisat kontrolü",
@@ -736,14 +736,14 @@ export const localServiceLandingPages: LocalServiceLanding[] = [
   {
     slug: "kagithane-su-tesisati",
     serviceSlug: "su-tesisati",
-    title: "Kağıthane Su Tesisatı | Hattı Onarım ve Yenileme",
+    title: "Kağıthane Su Tesisatı | 724 Tesisatçı",
     description:
       "Kağıthane su tesisatı: temiz su hattı, vana-musluk onarımı, banyo-mutfak yenileme ve basınç kontrolü. Keşif sonrası yazılı teklif; trafik ve ekibe göre yönlendirme.",
     h1: "Kağıthane Su Tesisatı",
     heroDescription:
       "Düşük basınç, paslı su, damlayan musluk veya banyo-mutfak tesisat yenilemede keşif yapılır; kapsam yazılı teklifle netleştirilir. Onay olmadan işe başlanmaz.",
     intro:
-      "Su tesisatı, daire ve iş yerlerinde en sık çağrı alınan kollardan biridir. Emniyet Evleri ve Çeliktepe apartmanlarında temiz su hattı, vana arızası, musluk-batarya sızıntısı ve banyo-mutfak yenileme talepleri öne çıkar. Odak; doğru tespit, uygun malzeme, yazılı teklif ve işlem sonrası basınç testi ile kalıcı çözümdür.",
+      "Su tesisatı, daire ve iş yerlerinde en sık çağrı alınan kollardan biridir. Emniyet Evleri ve Çeliktepe apartmanlarında temiz su hattı, vana arızası, musluk-batarya sızıntısı ve banyo-mutfak yenileme talepleri öne çıkar. Gizli kaçak veya alt kata su için Kağıthane su kaçağı tespiti, yalnız musluk damlatma için ilgili musluk sayfası kullanılır. Odak; doğru tespit, uygun malzeme, yazılı teklif ve işlem sonrası basınç testi ile kalıcı çözümdür.",
     serviceType: "Su tesisatı",
     canonicalPath: "/kagithane-su-tesisati",
     imageAlt: "Kağıthane'de su tesisatı hattı onarımı ve basınç kontrolü",
@@ -1729,6 +1729,7 @@ export const localServiceLandingPages: LocalServiceLanding[] = [
       "Kağıthane tesisatçı arayışında çoğu çağrı aynı anda hem acil hem de doğru yöntem ister. Emniyet Evleri, Çeliktepe, Gültepe ve Seyrantepe’de su kaçağı, tıkanıklık, pimaş, musluk-batarya ve rezervuar işleri sık gelir. Bu sayfa “hemen tesisatçı” niyetine odaklanır; hizmet türüne göre Kağıthane su kaçağı, tıkanıklık veya su tesisatı spoke sayfalarına yönlenirsiniz. Odak; keşif, yazılı teklif, cihazlı kontrol ve yumuşak iddialarla güvenilir süreçtir.",
     serviceType: "Tesisatçı hizmeti",
     canonicalPath: "/kagithane-tesisatci",
+    indexable: false,
     imageAlt: "Kağıthane'de acil tesisatçı keşif ve yerinde müdahale",
     sections: [
       {
@@ -1785,7 +1786,6 @@ export const localServiceLandingPages: LocalServiceLanding[] = [
       },
     ],
     relatedLocalSlugs: [
-      "kagithane-tesisat",
       "kagithane-su-tesisati",
       "kagithane-su-kacagi-tespiti",
       "kagithane-tikaniklik-acma",
@@ -1805,6 +1805,7 @@ export const localServiceLandingPages: LocalServiceLanding[] = [
       "Kağıthane tesisat aramaları çoğu zaman tek bir arızaya değil, birkaç olası kaynağa işaret eder. Emniyet Evleri ve Hamidiye’de yeni hatlar ile Çeliktepe–Gültepe eski stok aynı ilçede yan yanadır. Bu sayfa tesisat hizmetlerinin genel haritasıdır; acil usta çağrısı için Kağıthane tesisatçı sayfasını, spesifik iş için su kaçağı / tıkanıklık / su tesisatı spokes’larını kullanın. Amaç, doğru yönteme hızlı yönlendirmek ve yazılı teklifle ilerlemekdir.",
     serviceType: "Tesisat hizmetleri",
     canonicalPath: "/kagithane-tesisat",
+    indexable: false,
     imageAlt: "Kağıthane'de tesisat hattı kontrolü ve yerinde keşif",
     sections: [
       {
@@ -1861,7 +1862,6 @@ export const localServiceLandingPages: LocalServiceLanding[] = [
       },
     ],
     relatedLocalSlugs: [
-      "kagithane-tesisatci",
       "kagithane-su-tesisati",
       "kagithane-su-kacagi-tespiti",
       "kagithane-tikaniklik-acma",

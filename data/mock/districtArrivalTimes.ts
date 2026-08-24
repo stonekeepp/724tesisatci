@@ -101,15 +101,13 @@ export function getDistrictArrivalDisplay(slug: string): string {
 }
 
 /**
- * Tüm ilçe sayfaları indexable (noindex kaldırıldı).
- * Allowlist artık tüm bilinen ilçe slug'larını kapsar.
+ * Yalnızca kaliteli / para-niyet hub ilçeleri indexable.
+ * İnce şablon ilçe sayfaları noindex + sitemap dışı (GSC Discovered kuyruğu).
  */
-export const INDEXABLE_DISTRICT_ALLOWLIST = new Set(
-  Object.keys(districtCoordinates)
-);
+export const INDEXABLE_DISTRICT_ALLOWLIST = new Set(["kagithane"]);
 
 export function isDistrictIndexable(slug: string): boolean {
-  return INDEXABLE_DISTRICT_ALLOWLIST.has(slug) || slug === "kagithane";
+  return INDEXABLE_DISTRICT_ALLOWLIST.has(slug);
 }
 
 /** Mahalle koordinatları (yaklaşık) */

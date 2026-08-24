@@ -8,12 +8,8 @@ const editorialReviewedAt = "2026-07-24";
 
 const kagithaneCoreLinks = [
   {
-    href: "/kagithane-tesisatci",
-    label: "Kağıthane tesisatçı",
-  },
-  {
-    href: "/kagithane-tesisat",
-    label: "Kağıthane tesisat",
+    href: "/",
+    label: "Kağıthane tesisatçı (ana sayfa)",
   },
   {
     href: "/hizmet-bolgeleri/kagithane",
@@ -359,7 +355,7 @@ Kombi basınç düşüşü veya petek ısınmama şikayetlerinde [İstanbul komb
 
 ## Kağıthane Apartmanları İçin Bakım Notu
 
-Kağıthane'de eski bina stoku ile yeni dönüşüm projeleri bir arada bulunduğu için bakım ihtiyacı yapıya göre değişir. [Kağıthane tesisatçı](/kagithane-tesisatci) hizmet ağımızla 19 mahallede keşif ve yazılı teklif standardını koruyoruz. İlçe genel plan için [Kağıthane tesisat hizmet bölgeleri](/hizmet-bolgeleri/kagithane) sayfasını kullanın.
+Kağıthane'de eski bina stoku ile yeni dönüşüm projeleri bir arada bulunduğu için bakım ihtiyacı yapıya göre değişir. [Kağıthane tesisatçı ana sayfa](/) üzerinden 19 mahallede keşif ve yazılı teklif standardını koruyoruz. İlçe genel plan için [Kağıthane tesisat hizmet bölgeleri](/hizmet-bolgeleri/kagithane) sayfasını kullanın.
 
 ## Ne Zaman Acil Çağrı Gerekir?
 
@@ -409,7 +405,7 @@ Bodrum taşması, aktif su kaçağı, gaz kokusu veya kombi altından sürekli s
     editorialNote:
       "Bakım sıklığı, kontrol listesi ve Kağıthane notları güncellendi; iç linkler güçlendirildi.",
     relatedLinks: [
-      { href: "/kagithane-tesisatci", label: "Kağıthane tesisatçı" },
+      { href: "/", label: "Kağıthane tesisatçı (ana sayfa)" },
       { href: "/kagithane-pimas-acma", label: "Kağıthane pimaş açma" },
       { href: "/hizmetler/kombi-servisi-ve-tesisati", label: "Kombi servisi" },
       { href: "/kagithane-petek-temizleme", label: "Kağıthane petek temizleme" },
@@ -672,7 +668,7 @@ Gaz hattı, kombinin kapalı gövdesi veya elektrikli parçalar kullanıcı tara
     content: `
 ## Mahalle Servis Planı Neden Önemli?
 
-Yerel tesisat servisinde rota, ekipman ve hızlı karar verme önemlidir. Kağıthane merkezli hizmet ağımız ilçe içindeki çağrılara planlı yönlendirme yapmamıza yardımcı olur. Ana yerel hedef için [Kağıthane tesisatçı](/kagithane-tesisatci) ve [Kağıthane tesisat](/kagithane-tesisat) sayfalarını inceleyebilirsiniz.
+Yerel tesisat servisinde rota, ekipman ve hızlı karar verme önemlidir. Kağıthane merkezli hizmet ağımız ilçe içindeki çağrılara planlı yönlendirme yapmamıza yardımcı olur. Ana yerel hedef için [Kağıthane tesisatçı ana sayfa](/) ve [Kağıthane tesisat hizmet bölgeleri](/hizmet-bolgeleri/kagithane) hub’ını inceleyebilirsiniz.
 
 ## Hangi Mahallelere Hizmet Veriliyor?
 

@@ -16,6 +16,16 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
+        source: "/kagithane-tesisatci",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/kagithane-tesisat",
+        destination: "/",
+        permanent: true,
+      },
+      {
         source: "/besiktas-tesisatci-tamir-onarim-servisi",
         destination: "/hizmet-bolgeleri/kagithane",
         permanent: true,
