@@ -123,6 +123,9 @@ Musluklar kapalıyken sayacın dönmesi önemli bir uyarı işaretidir; ancak se
     },
     status: "published",
     reviewerId: "mucahit-korkmaz",
+    image: "/images/blog-musluklar-kapaliyken-su-sayaci-neden-doner.png",
+    imageAlt:
+      "Musluklar kapalıyken su sayacı hareketini kontrol eden el ve sayaç göstergesi",
     faq: [
       {
         question: "Klozet rezervuarı kaçağı su sayacını döndürür mü?",
