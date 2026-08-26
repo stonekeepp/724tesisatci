@@ -3,7 +3,7 @@ import { draftBlogPosts as suKacagiDrafts } from "./blogDrafts.su-kacagi";
 import { draftBlogPostsTikaniklik } from "./blogDrafts.tikaniklik";
 import { draftBlogPostsIsitma } from "./blogDrafts.isitma";
 
-/** PR-2 topical authority guides (3 published pilots + 6 drafts). */
+/** PR-2 topical authority guides (published wave + weekly topical posts). */
 export const draftBlogPosts: BlogPost[] = [
   ...suKacagiDrafts,
   ...draftBlogPostsTikaniklik,
@@ -20,4 +20,6 @@ export const PR2_DRAFT_SLUGS = [
   "kombi-basinci-neden-surekli-duser",
   "petegin-alti-soguk-ustu-sicaksa-ne-yapilmali",
   "kombi-arizasi-ile-tesisat-arizasi-nasil-ayirt-edilir",
+  "musluk-neden-damlar",
+  "rezervuar-neden-su-akiyor",
 ] as const;

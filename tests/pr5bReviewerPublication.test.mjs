@@ -42,7 +42,7 @@ const mucahit = expertProfiles.find((e) => e.id === "mucahit-korkmaz");
 const catalog = {
   approvals: blogTechnicalReviewApprovals,
   experts: expertProfiles,
-  nowMs: new Date("2026-08-01T18:00:00+03:00").getTime(),
+  nowMs: new Date("2026-08-26T18:00:00+03:00").getTime(),
 };
 
 describe("PR-5B reviewer profile", () => {
@@ -74,15 +74,20 @@ describe("PR-5B reviewer eligibility", () => {
 });
 
 describe("PR-5B approval records", () => {
-  it("has six valid topical approvals", () => {
-    assert.equal(blogTechnicalReviewApprovals.length, 6);
+  it("has eleven valid topical approvals", () => {
+    assert.equal(blogTechnicalReviewApprovals.length, 11);
     const slugs = blogTechnicalReviewApprovals.map((a) => a.slug);
-    assert.equal(new Set(slugs).size, 6);
+    assert.equal(new Set(slugs).size, 11);
     for (const slug of [
       ...pilotPublicationCandidateSlugs,
       "robotla-tikaniklik-acma-ile-pimas-yikama-farki",
       "birden-fazla-gider-ayni-anda-neden-yavaslar",
       "alt-kata-su-sizmasinin-kaynagi-nasil-bulunur",
+      "duvar-nemi-su-kacagi-mi-yogusma-mi",
+      "kombi-basinci-neden-surekli-duser",
+      "kombi-arizasi-ile-tesisat-arizasi-nasil-ayirt-edilir",
+      "musluk-neden-damlar",
+      "rezervuar-neden-su-akiyor",
     ]) {
       assert.ok(slugs.includes(slug), slug);
     }
@@ -100,9 +105,9 @@ describe("PR-5B approval records", () => {
 });
 
 describe("PR-5B technical review items", () => {
-  it("verifies published guides and keeps remaining drafts pending", () => {
+  it("verifies all topical guides as published", () => {
     const published = posts.filter((p) => p.status === "published");
-    assert.equal(published.length, 6);
+    assert.equal(published.length, 11);
     for (const post of published) {
       assert.equal(post.needsTechnicalReview, false);
       assert.ok((post.technicalReview?.items ?? []).length > 0);
@@ -111,20 +116,14 @@ describe("PR-5B technical review items", () => {
       );
     }
     const drafts = posts.filter((p) => p.status === "draft");
-    assert.equal(drafts.length, 3);
-    for (const post of drafts) {
-      assert.equal(post.needsTechnicalReview, true);
-      assert.ok(
-        (post.technicalReview?.items ?? []).every((i) => i.status === "pending")
-      );
-    }
+    assert.equal(drafts.length, 0);
   });
 });
 
 describe("PR-5B publication split", () => {
-  it("publishes six approved topical guides including three pilots", () => {
+  it("publishes eleven approved topical guides including three pilots", () => {
     const published = posts.filter((p) => p.status === "published");
-    assert.equal(published.length, 6);
+    assert.equal(published.length, 11);
     const publishedSlugs = new Set(published.map((p) => p.slug));
     for (const slug of pilotPublicationCandidateSlugs) {
       assert.ok(publishedSlugs.has(slug), slug);

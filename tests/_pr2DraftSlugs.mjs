@@ -1,4 +1,4 @@
-/** Shared PR-2 draft slug list for regression tests (no @/ imports). */
+/** Shared PR-2 topical guide slug list for regression tests (no @/ imports). */
 export const PR2_DRAFT_SLUGS = [
   "musluklar-kapaliyken-su-sayaci-neden-doner",
   "alt-kata-su-sizmasinin-kaynagi-nasil-bulunur",
@@ -9,4 +9,6 @@ export const PR2_DRAFT_SLUGS = [
   "kombi-basinci-neden-surekli-duser",
   "petegin-alti-soguk-ustu-sicaksa-ne-yapilmali",
   "kombi-arizasi-ile-tesisat-arizasi-nasil-ayirt-edilir",
+  "musluk-neden-damlar",
+  "rezervuar-neden-su-akiyor",
 ];

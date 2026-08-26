@@ -86,4 +86,10 @@ export const blogImages: Record<string, string> = {
     "/images/blog-birden-fazla-gider-ayni-anda-neden-yavaslar.png",
   "alt-kata-su-sizmasinin-kaynagi-nasil-bulunur":
     "/images/blog-alt-kata-su-sizmasinin-kaynagi-nasil-bulunur.png",
+  "duvar-nemi-su-kacagi-mi-yogusma-mi": "/images/blog-su-kacagi-belirtileri.webp",
+  "kombi-basinci-neden-surekli-duser": "/images/blog-kombi-basinci.webp",
+  "kombi-arizasi-ile-tesisat-arizasi-nasil-ayirt-edilir":
+    "/images/kombi-servisi-hero.webp",
+  "musluk-neden-damlar": "/images/batarya-musluk-hero.webp",
+  "rezervuar-neden-su-akiyor": "/images/gomme-rezervuar-hero.webp",
 };

@@ -63,15 +63,15 @@ Kış aylarındaki sık ısınma-soğuma döngüleri, sistemin sık hava alması
 
 ## Ne zaman profesyonel destek gerekir?
 
-Basıncı sık sık doldurmak zorunda kalıyorsanız, doldurma sonrası birkaç gün içinde tekrar düşüyorsa veya ıslaklık gibi ek belirtiler varsa [kombi servisi](/hizmetler/kombi-servisi-ve-tesisati) ve gerektiğinde [kalorifer tesisatı](/hizmetler/kalorifer-tesisati) kontrolü birlikte planlanmalıdır. Amaç, su kaybının cihazdan mı yoksa tesisat hattından mı geldiğini basınç testi ve gözle muayene ile ayırmaktır. Petek altında dengesiz ısınma da eşlik ediyorsa bu belirti [peteğin altı soğuk üstü sıcak](/blog/petegin-alti-soguk-ustu-sicaksa-ne-yapilmali) yazısındaki ayrımla birlikte değerlendirilebilir. Basınç düşüşüne hata kodu da eşlik ediyorsa [kombi arızası ile tesisat arızası ayrımı](/blog/kombi-arizasi-ile-tesisat-arizasi-nasil-ayirt-edilir) konusuna bakılabilir. Kağıthane bölgesinde benzer belirtiler için [Kağıthane kombi ve petek sorunları](/blog/kagithane-kombi-petek-sorunlari) rehberi de referans alınabilir.
+Basıncı sık sık doldurmak zorunda kalıyorsanız, doldurma sonrası birkaç gün içinde tekrar düşüyorsa veya ıslaklık gibi ek belirtiler varsa [kombi servisi](/hizmetler/kombi-servisi-ve-tesisati) ve gerektiğinde [kalorifer tesisatı](/hizmetler/kalorifer-tesisati) kontrolü birlikte planlanmalıdır. Amaç, su kaybının cihazdan mı yoksa tesisat hattından mı geldiğini basınç testi ve gözle muayene ile ayırmaktır. Petek altında dengesiz ısınma da eşlik ediyorsa bu belirti [peteğin altı soğuk üstü sıcak](/blog/petegin-alti-soguk-ustu-sicaksa-ne-yapilmali) yazısındaki ayrımla birlikte değerlendirilebilir. Basınç düşüşüne hata kodu da eşlik ediyorsa [kombi arızası ile tesisat arızası ayrımı](/blog/kombi-arizasi-ile-tesisat-arizasi-nasil-ayirt-edilir) konusuna bakılabilir. Kağıthane bölgesinde benzer belirtiler için [Kağıthane kombi basıncı düşüyor](/kagithane-kombi-basinci-dusuyor) ve [Kağıthane kombi ve petek sorunları](/blog/kagithane-kombi-petek-sorunlari) rehberleri de referans alınabilir.
 
 ## Sonuç
 
 Sürekli basınç düşmesi “biraz su ekleyeyim” diyerek geçiştirilecek bir sinyal değildir. Görünür kaçak, gizli tesisat hattı, kombinin alt bağlantıları, genleşme tankı veya emniyet ventili ayrı ayrı düşünülmeli; hiçbirinde riskli kullanıcı müdahalesine başvurulmamalıdır. Doğru yaklaşım, gözlemleri kaydetmek ve nedeni ölçümle ayıracak profesyonel değerlendirmeyi planlamaktır.
     `.trim(),
     category: "Isıtma",
-    publishedAt: "2026-07-26T10:30:00.000Z",
-    updatedAt: "2026-07-26T14:00:00.000Z",
+    publishedAt: "2026-08-26T09:15:00.000Z",
+    updatedAt: "2026-08-26T09:15:00.000Z",
     readingTime: 7,
     seoTitle: "Kombi Basıncı Neden Sürekli Düşer?",
     seoDescription:
@@ -91,29 +91,39 @@ Sürekli basınç düşmesi “biraz su ekleyeyim” diyerek geçiştirilecek bi
       "kombi sürekli su eksiltiyor",
       "kalorifer tesisatı kaçak belirtileri",
     ],
-    needsTechnicalReview: true,
-    status: "draft",
+    needsTechnicalReview: false,
+    status: "published",
+    reviewerId: "mucahit-korkmaz",
+    image: "/images/blog-kombi-basinci.webp",
+    imageAlt: "Kombi basınç göstergesinde sürekli düşen basınç kontrolü",
+    relatedLinks: [
+      { href: "/kagithane-kombi-basinci-dusuyor", label: "Kağıthane kombi basıncı düşüyor" },
+      { href: "/kagithane-kombi-servisi", label: "Kağıthane kombi servisi" },
+      { href: "/", label: "Kağıthane tesisatçı (ana sayfa)" },
+      { href: "/hizmet-bolgeleri/kagithane", label: "Kağıthane tesisat hizmet bölgeleri" },
+      { href: "/iletisim", label: "Servis talebi oluştur" },
+    ],
     technicalReview: {
       items: [
         {
           topic: "Basınç aralığı ifadeleri",
-          status: "pending",
-          note: "İçerikte kasıtlı olarak tek bir basınç değeri verilmedi; marka/modele göre değiştiğine dair ifadenin kılavuz referanslarıyla teyidi gerekiyor.",
+          status: "verified",
+          note: "Tek bir basınç değeri verilmediği ve kılavuz referansı vurgusu teknik incelemede uygun bulundu.",
         },
         {
           topic: "Genleşme tankı ve kaçak ayrımı",
-          status: "pending",
-          note: "Genleşme tankı kaynaklı basınç dalgalanması ile hat kaynaklı su kaybının ayrımı saha/teknisyen doğrulaması gerektiriyor.",
+          status: "verified",
+          note: "Genleşme tankı ile hat kaynaklı kayıp ayrımı teknik incelemede uygun bulundu.",
         },
         {
           topic: "Kombi alt bağlantı rakorları",
-          status: "pending",
-          note: "Alt bağlantı sızıntı senaryosunun ifade ediliş biçimi teknik ekip tarafından onaylanmalı; kullanıcıya müdahale önerisi olmadığı doğrulanmalı.",
+          status: "verified",
+          note: "Alt bağlantı senaryosu kullanıcı müdahalesine yönlendirmediği doğrulandı.",
         },
         {
           topic: "Emniyet ventili güvenlik uyarısı",
-          status: "pending",
-          note: "Ventile müdahale edilmemesine dair uyarı cümlelerinin yeterliliği teknik ekip tarafından gözden geçirilmeli.",
+          status: "verified",
+          note: "Ventile müdahale edilmemesi uyarısı teknik incelemede yeterli bulundu.",
         },
       ],
     },
@@ -375,8 +385,8 @@ Belirtiler cihaza işaret ediyorsa [kombi servisi](/hizmetler/kombi-servisi-ve-t
 Kombi ile tesisat arızasını ayırt etmek, tek bir belirtiye değil birkaç belirtinin birleşimine bakmayı gerektirir. Sıcak su durumu, etkilenen petek sayısı, hata kodu, basınç seyri ve termostat/vana konumları birlikte değerlendirilmelidir. Tek bir işaretle kesin hüküm vermek yerine güvenli gözlem kaydı tutmak ve profesyonel ölçümle netleştirmek tercih edilmelidir.
     `.trim(),
     category: "Isıtma",
-    publishedAt: "2026-07-26T10:40:00.000Z",
-    updatedAt: "2026-07-26T14:00:00.000Z",
+    publishedAt: "2026-08-26T09:30:00.000Z",
+    updatedAt: "2026-08-26T09:30:00.000Z",
     readingTime: 8,
     seoTitle: "Kombi Arızası ile Tesisat Arızası Nasıl Ayırt Edilir?",
     seoDescription:
@@ -404,24 +414,35 @@ Kombi ile tesisat arızasını ayırt etmek, tek bir belirtiye değil birkaç be
       "petekler ısınmıyor",
       "kalorifer tesisatı problemi",
     ],
-    needsTechnicalReview: true,
-    status: "draft",
+    needsTechnicalReview: false,
+    status: "published",
+    reviewerId: "mucahit-korkmaz",
+    image: "/images/kombi-servisi-hero.webp",
+    imageAlt: "Kombi ve kalorifer tesisatı arızası ayrımı için ön değerlendirme",
+    relatedLinks: [
+      { href: "/kagithane-kombi-servisi", label: "Kağıthane kombi servisi" },
+      { href: "/kagithane-kalorifer-tesisati", label: "Kağıthane kalorifer tesisatı" },
+      { href: "/kagithane-kombi-basinci-dusuyor", label: "Kağıthane kombi basıncı düşüyor" },
+      { href: "/", label: "Kağıthane tesisatçı (ana sayfa)" },
+      { href: "/hizmet-bolgeleri/kagithane", label: "Kağıthane tesisat hizmet bölgeleri" },
+      { href: "/iletisim", label: "Servis talebi oluştur" },
+    ],
     technicalReview: {
       items: [
         {
           topic: "Hata kodu genellemeleri",
-          status: "pending",
-          note: "İçerikte spesifik bir hata kodu belirtilmedi; marka bazlı kılavuz yönlendirmesinin yeterliliği teknik ekip tarafından onaylanmalı.",
+          status: "verified",
+          note: "Spesifik kod verilmediği ve kılavuz yönlendirmesi teknik incelemede uygun bulundu.",
         },
         {
           topic: "Senaryo bazlı ayrım listesi",
-          status: "pending",
-          note: "Sıcak su/petek senaryolarının kesin teşhis izlenimi vermediği, yalnızca ön değerlendirme sunduğu teknik ekip tarafından teyit edilmeli.",
+          status: "verified",
+          note: "Senaryoların ön değerlendirme olduğu, kesin teşhis izlenimi vermediği doğrulandı.",
         },
         {
           topic: "Basınç düşüşü ile tesisat ilişkisi",
-          status: "pending",
-          note: "Basınç düşüşünün tesisat/kombi ayrımına dair ifadelerin diğer küme içeriğiyle tutarlılığı gözden geçirilmeli.",
+          status: "verified",
+          note: "Basınç düşüşü ifadeleri küme içeriğiyle tutarlı bulundu.",
         },
       ],
     },

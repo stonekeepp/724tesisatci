@@ -36,6 +36,8 @@ const PR4_DRAFT_SLUGS = [
   "kombi-basinci-neden-surekli-duser",
   "petegin-alti-soguk-ustu-sicaksa-ne-yapilmali",
   "kombi-arizasi-ile-tesisat-arizasi-nasil-ayirt-edilir",
+  "musluk-neden-damlar",
+  "rezervuar-neden-su-akiyor",
 ];
 
 function wordCount(text) {
@@ -47,24 +49,16 @@ function headingCount(text) {
 }
 
 describe("PR-4 draft data integrity", () => {
-  it("has nine unique draft slugs", () => {
-    assert.equal(draftBlogPosts.length, 9);
+  it("has eleven unique topical guide slugs", () => {
+    assert.equal(draftBlogPosts.length, 11);
     const slugs = draftBlogPosts.map((p) => p.slug);
-    assert.equal(new Set(slugs).size, 9);
+    assert.equal(new Set(slugs).size, 11);
     for (const slug of PR4_DRAFT_SLUGS) {
       assert.ok(slugs.includes(slug), slug);
     }
   });
 
-  it("keeps draft status and technical review flags", () => {
-    const publishedSlugs = new Set([
-      "musluklar-kapaliyken-su-sayaci-neden-doner",
-      "tikaniklik-acildiktan-sonra-neden-tekrar-eder",
-      "petegin-alti-soguk-ustu-sicaksa-ne-yapilmali",
-      "robotla-tikaniklik-acma-ile-pimas-yikama-farki",
-      "birden-fazla-gider-ayni-anda-neden-yavaslar",
-      "alt-kata-su-sizmasinin-kaynagi-nasil-bulunur",
-    ]);
+  it("keeps published status and verified technical review flags", () => {
     for (const post of draftBlogPosts) {
       assert.ok(post.cluster);
       assert.ok(post.searchIntent);
@@ -75,17 +69,10 @@ describe("PR-4 draft data integrity", () => {
       ];
       assert.ok(servicesForPost.length > 0, post.slug);
       assert.ok(post.technicalReview?.items?.length >= 2, post.slug);
-      if (publishedSlugs.has(post.slug)) {
-        assert.equal(post.needsTechnicalReview, false);
-        for (const item of post.technicalReview.items) {
-          assert.equal(item.status, "verified", `${post.slug}:${item.topic}`);
-        }
-        continue;
-      }
-      assert.equal(post.status, "draft");
-      assert.equal(post.needsTechnicalReview, true);
+      assert.equal(post.status, "published");
+      assert.equal(post.needsTechnicalReview, false);
       for (const item of post.technicalReview.items) {
-        assert.equal(item.status, "pending", `${post.slug}:${item.topic}`);
+        assert.equal(item.status, "verified", `${post.slug}:${item.topic}`);
       }
     }
   });
@@ -106,15 +93,7 @@ describe("PR-4 content depth", () => {
 });
 
 describe("PR-4 publication readiness", () => {
-  it("marks approved pilots ready and blocks remaining drafts", () => {
-    const readySlugs = new Set([
-      "musluklar-kapaliyken-su-sayaci-neden-doner",
-      "tikaniklik-acildiktan-sonra-neden-tekrar-eder",
-      "petegin-alti-soguk-ustu-sicaksa-ne-yapilmali",
-      "robotla-tikaniklik-acma-ile-pimas-yikama-farki",
-      "birden-fazla-gider-ayni-anda-neden-yavaslar",
-      "alt-kata-su-sizmasinin-kaynagi-nasil-bulunur",
-    ]);
+  it("marks all topical guides ready for publication", () => {
     for (const post of draftBlogPosts) {
       const result = evaluateBlogPublicationReadiness(post, {
         allPosts: draftBlogPosts,
@@ -122,17 +101,11 @@ describe("PR-4 publication readiness", () => {
         approvals: blogTechnicalReviewApprovals,
         experts: expertProfiles,
       });
-      if (readySlugs.has(post.slug)) {
-        assert.equal(result.ready, true, result.blockers.join("; "));
-        continue;
-      }
-      assert.equal(result.ready, false, post.slug);
-      if (post.status !== "published") {
-        assert.ok(
-          result.blockers.some((b) => /draft/i.test(b)),
-          `${post.slug} missing draft blocker`
-        );
-      }
+      assert.equal(
+        result.ready,
+        true,
+        `${post.slug}: ${result.blockers.join("; ")}`
+      );
     }
   });
 

@@ -102,4 +102,85 @@ export const blogTechnicalReviewApprovals: TechnicalReviewApproval[] = [
       "seo-audits/pr-5b/TECHNICAL-REVIEW-MUCAHIT-KORKMAZ.md",
     ],
   },
+  {
+    slug: "duvar-nemi-su-kacagi-mi-yogusma-mi",
+    reviewerExpertId: "mucahit-korkmaz",
+    reviewedAt: "2026-08-26T10:00:00+03:00",
+    decision: "approved",
+    approvedItemTopics: [
+      "Isı köprüsü açıklamasının teknik doğruluğu",
+      "Zeminden yükselen nem ile tesisat kaçağı ayrımı",
+      "Küf ile ilgili ifadelerin kapsamı",
+    ],
+    notes:
+      "Duvar nemi ayrımı, ısı köprüsü ve küf kapsamı teknik açıdan incelenerek uygun bulunmuştur. Reviewer kimliği ve yazılı teknik onayı doğrulanmıştır; mesleki belge dosyaları bu kayıt kapsamında doğrulanmamıştır.",
+    evidenceReferences: [
+      "seo-audits/pr-5b/TECHNICAL-REVIEW-MUCAHIT-KORKMAZ.md",
+    ],
+  },
+  {
+    slug: "kombi-basinci-neden-surekli-duser",
+    reviewerExpertId: "mucahit-korkmaz",
+    reviewedAt: "2026-08-26T10:15:00+03:00",
+    decision: "approved",
+    approvedItemTopics: [
+      "Basınç aralığı ifadeleri",
+      "Genleşme tankı ve kaçak ayrımı",
+      "Kombi alt bağlantı rakorları",
+      "Emniyet ventili güvenlik uyarısı",
+    ],
+    notes:
+      "Sürekli basınç düşüşü nedenleri, genleşme tankı ayrımı ve emniyet ventili uyarıları teknik açıdan incelenerek uygun bulunmuştur. Reviewer kimliği ve yazılı teknik onayı doğrulanmıştır; mesleki belge dosyaları bu kayıt kapsamında doğrulanmamıştır.",
+    evidenceReferences: [
+      "seo-audits/pr-5b/TECHNICAL-REVIEW-MUCAHIT-KORKMAZ.md",
+    ],
+  },
+  {
+    slug: "kombi-arizasi-ile-tesisat-arizasi-nasil-ayirt-edilir",
+    reviewerExpertId: "mucahit-korkmaz",
+    reviewedAt: "2026-08-26T10:30:00+03:00",
+    decision: "approved",
+    approvedItemTopics: [
+      "Hata kodu genellemeleri",
+      "Senaryo bazlı ayrım listesi",
+      "Basınç düşüşü ile tesisat ilişkisi",
+    ],
+    notes:
+      "Kombi/tesisat ön değerlendirme senaryoları ve hata kodu dili teknik açıdan incelenerek uygun bulunmuştur. Reviewer kimliği ve yazılı teknik onayı doğrulanmıştır; mesleki belge dosyaları bu kayıt kapsamında doğrulanmamıştır.",
+    evidenceReferences: [
+      "seo-audits/pr-5b/TECHNICAL-REVIEW-MUCAHIT-KORKMAZ.md",
+    ],
+  },
+  {
+    slug: "musluk-neden-damlar",
+    reviewerExpertId: "mucahit-korkmaz",
+    reviewedAt: "2026-08-26T10:45:00+03:00",
+    decision: "approved",
+    approvedItemTopics: [
+      "Conta ve kartuş ayrımı",
+      "Basınç etkisi ifadeleri",
+      "DIY müdahale sınırları",
+    ],
+    notes:
+      "Musluk damlaması conta/kartuş ayrımı, basınç etkisi ve DIY sınırları teknik açıdan incelenerek uygun bulunmuştur. Reviewer kimliği ve yazılı teknik onayı doğrulanmıştır; mesleki belge dosyaları bu kayıt kapsamında doğrulanmamıştır.",
+    evidenceReferences: [
+      "seo-audits/pr-5b/TECHNICAL-REVIEW-MUCAHIT-KORKMAZ.md",
+    ],
+  },
+  {
+    slug: "rezervuar-neden-su-akiyor",
+    reviewerExpertId: "mucahit-korkmaz",
+    reviewedAt: "2026-08-26T11:00:00+03:00",
+    decision: "approved",
+    approvedItemTopics: [
+      "Şamandıra ve doldurma ventili ayrımı",
+      "Gıda boyası testi açıklaması",
+      "Gömme rezervuar erişim dili",
+    ],
+    notes:
+      "Rezervuar akış nedenleri, boya testi ve gömme erişim dili teknik açıdan incelenerek uygun bulunmuştur. Reviewer kimliği ve yazılı teknik onayı doğrulanmıştır; mesleki belge dosyaları bu kayıt kapsamında doğrulanmamıştır.",
+    evidenceReferences: [
+      "seo-audits/pr-5b/TECHNICAL-REVIEW-MUCAHIT-KORKMAZ.md",
+    ],
+  },
 ];

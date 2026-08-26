@@ -89,6 +89,8 @@ Musluklar kapalıyken sayacın dönmesi önemli bir uyarı işaretidir; ancak se
     relatedArticleSlugs: [
       "alt-kata-su-sizmasinin-kaynagi-nasil-bulunur",
       "duvar-nemi-su-kacagi-mi-yogusma-mi",
+      "rezervuar-neden-su-akiyor",
+      "musluk-neden-damlar",
     ],
     cluster: "su-kacagi",
     searchIntent: "informational",
@@ -396,8 +398,8 @@ Nem yayılmaya devam ediyorsa, alt kata geçiyorsa, sayaç hareketi şüpheliyse
 Duvarda görülen nem, otomatik olarak bir su kaçağı anlamına gelmez. Yoğuşma, ısı köprüsü, dış cephe/çatı, temiz su, gider, zeminden yükselen rutubet ve banyo yalıtımı ayrı ayrı düşünülmesi gereken olasılıklardır. Evdeki gözlemler yön gösterir; kaynağın kesin noktasını belirlemek için ölçüme dayalı, sistematik bir kontrol gerekir.
     `.trim(),
     category: "Su Kaçağı",
-    publishedAt: "2026-07-26T10:10:00.000Z",
-    updatedAt: "2026-07-26T00:00:00.000Z",
+    publishedAt: "2026-08-26T09:00:00.000Z",
+    updatedAt: "2026-08-26T09:00:00.000Z",
     readingTime: 11,
     seoTitle: "Duvar Nemi Su Kaçağı mı, Yoğuşma mı?",
     seoDescription:
@@ -408,6 +410,7 @@ Duvarda görülen nem, otomatik olarak bir su kaçağı anlamına gelmez. Yoğu�
     relatedArticleSlugs: [
       "musluklar-kapaliyken-su-sayaci-neden-doner",
       "alt-kata-su-sizmasinin-kaynagi-nasil-bulunur",
+      "rezervuar-neden-su-akiyor",
     ],
     cluster: "su-kacagi",
     searchIntent: "informational",
@@ -417,27 +420,38 @@ Duvarda görülen nem, otomatik olarak bir su kaçağı anlamına gelmez. Yoğu�
       "duvarda nem neden olur",
       "rutubet ve su kaçağı farkı",
     ],
-    needsTechnicalReview: true,
+    needsTechnicalReview: false,
     technicalReview: {
       items: [
         {
           topic: "Isı köprüsü açıklamasının teknik doğruluğu",
-          status: "pending",
-          note: "Isı köprüsü tanımının ve tipik görülme noktalarının (kolon-kiriş, balkon çıkıntısı) doğru anlatıldığı teyit edilmeli.",
+          status: "verified",
+          note: "Isı köprüsü tanımı ve tipik görülme noktaları teknik incelemede uygun bulundu.",
         },
         {
           topic: "Zeminden yükselen nem ile tesisat kaçağı ayrımı",
-          status: "pending",
-          note: "Yatay şerit deseni açıklamasının sahada gözlemlenen tipik örüntüyle uyumlu olduğu kontrol edilmeli.",
+          status: "verified",
+          note: "Yatay şerit deseni ve tesisat kaçağı ayrımı teknik incelemede uygun bulundu.",
         },
         {
           topic: "Küf ile ilgili ifadelerin kapsamı",
-          status: "pending",
-          note: "Küf hakkında herhangi bir sağlık/tıbbi iddia içermediğinden, yalnızca nem sonucu olarak ele alındığından emin olunmalı.",
+          status: "verified",
+          note: "Küf yalnızca nem sonucu olarak ele alındı; sağlık/tıbbi iddia içermediği doğrulandı.",
         },
       ],
     },
-    status: "draft",
+    status: "published",
+    reviewerId: "mucahit-korkmaz",
+    image: "/images/blog-su-kacagi-belirtileri.webp",
+    imageAlt: "Duvar nemi ve rutubet izinin su kaçağı veya yoğuşma açısından değerlendirilmesi",
+    relatedLinks: [
+      { href: "/kagithane-su-kacagi-tespiti", label: "Kağıthane su kaçağı tespiti" },
+      { href: "/kagithane-alt-kata-su-siziyor", label: "Kağıthane alt kata su sızıyor" },
+      { href: "/kagithane-gizli-su-kacagi", label: "Kağıthane gizli su kaçağı" },
+      { href: "/", label: "Kağıthane tesisatçı (ana sayfa)" },
+      { href: "/hizmet-bolgeleri/kagithane", label: "Kağıthane tesisat hizmet bölgeleri" },
+      { href: "/iletisim", label: "Servis talebi oluştur" },
+    ],
     faq: [
       {
         question: "Duvar terlemesi her zaman kaçak mıdır?",
@@ -473,6 +487,280 @@ Duvarda görülen nem, otomatik olarak bir su kaçağı anlamına gelmez. Yoğu�
         question: "Havalandırmayı artırmak nemi tamamen çözer mi?",
         answer:
           "Yoğuşma kaynaklı nemde havalandırma iyileşmesi genellikle belirgin bir gerileme sağlar. Ancak nem devam ediyorsa yoğuşma dışında bir kaynak da araştırılmalıdır.",
+        category: "su-kacagi",
+      },
+    ],
+  },
+  {
+    id: "draft-musluk-damlar",
+    title: "Musluk Neden Damlar? Conta, Kartuş ve Basınç Ayrımı",
+    slug: "musluk-neden-damlar",
+    excerpt:
+      "Musluk damlaması conta, kartuş, vana yuvası veya basınç kaynaklı olabilir. Evde güvenli gözlemler ve ne zaman montaj/onarım gerektiği.",
+    content: `
+Musluktan ince bir damlama, özellikle gece sessizliğinde fark edildiğinde hem rahatsız edici hem de su israfına işaret eden bir belirtidir. Tek bir damla zararsız görünse de gün boyu biriken miktar fatura ve tezgâh altı nem riskini artırabilir. Bu yazı, damlamanın olası nedenlerini ayırmaya yardımcı olur; ancak hiçbir gözlem tek başına kesin teşhis değildir. Amaç, güvenli kontrollerle şüpheyi daraltmak ve gerektiğinde doğru hizmete yönlenmektir.
+
+## Damlayan musluk neyi anlatır?
+
+Damla, armatürün tam kapanmadığını veya sızdırmazlık elemanının yıprandığını düşündürür. Mutfak evyesi, lavabo bataryası veya duş bataryasında aynı görüntü farklı parçalardan kaynaklanabilir. Damlama sürekli mi, yalnızca kullanım sonrası mı, yoksa yalnızca sıcak veya soğuk tarafta mı görülüyor — bu ayrım değerlendirmeyi hızlandırır. Kullanım sonrası kısa süreli bir damlama bazen aeratördeki birikinti veya hortumdaki kalan basınçtan kaynaklanabilir; saatlerce süren sürekli damlama ise daha çok sızdırmazlık elemanına işaret eder.
+
+## Conta ve sızdırmazlık elemanları
+
+Klasik veya yarı klasik armatürlerde conta zamanla sertleşir, çatlar veya oturma yüzeyinden kayar. Conta yıprandığında vana kapatılsa bile ince bir geçiş kalabilir. Conta değişimi basit görünse de yanlış boyutta conta veya yanlış sıkma, kısa sürede tekrarlayan damlamaya yol açabilir; bu yüzden parça uyumu önemlidir. Contanın malzemesi (kauçuk, fiber, özel polimer) ve kalınlığı armatür tipine göre değişir; “her contayı her musluğa” yaklaşımı çoğu zaman kısa ömürlü bir çözüm üretir.
+
+## Kartuş arızası
+
+Tek kollu bataryalarda akışı ve sıcak-soğuk karışımını kartuş yönetir. Kartuş içindeki seramik diskler veya contalar aşındığında kapatma pozisyonunda da sızıntı devam edebilir. Kol “kapalı” konumdayken damlama sürüyorsa kartuş şüphesi güçlenir. Kartuş markası ve modeli bataryaya özgüdür; rastgele bir kartuş takmak sızdırmazlığı garanti etmez. Bazı modellerde kartuş üstündeki O-ring’ler de sızıntı kaynağı olabilir; bu durumda yalnızca “kartuş değişti” demek yeterli olmayabilir, conta setinin birlikte değerlendirilmesi gerekir.
+
+## Vana yuvası ve gövde aşınması
+
+Uzun yıllardır kullanılan armatürlerde vana yuvası çizilmiş veya kireç birikimi nedeniyle tam kapanmayı engelliyor olabilir. Bu durumda yalnızca conta değiştirmek yeterli olmayabilir; gövde iç yüzeyinin durumu da önemlidir. Yoğun kireçli bölgelerde bu tablo daha sık görülür. Kireç tabakası bazen geçici olarak damlamayı azaltıyormuş gibi görünse de aslında sızdırmazlık yüzeyini bozarak sorunu kalıcı hale getirebilir.
+
+## Basınç ve ani darbe etkisi
+
+Şebeke basıncının yüksek olduğu saatlerde veya ani basınç değişiminde zayıf bir sızdırmazlık noktası damlamaya başlayabilir. Basınç tek başına “arızayı yaratmaz”; mevcut zayıf noktayı daha görünür hale getirir. Aynı evdeki diğer musluklar damlamıyorsa sorun daha çok o armatüre özgüdür. Bina girişinde basınç regülatörü olup olmadığı, damlamanın günün hangi saatlerinde arttığı gibi notlar keşif sırasında faydalı bağlam sağlar.
+
+## Flex hortum ve bağlantı sızıntısı karıştırması
+
+Tezgâh altındaki flex hortum veya rakor sızıntısı bazen musluk ağzından damlıyormuş gibi algılanabilir. Alt dolapta ıslaklık, küf kokusu veya birikinti varsa önce bağlantı noktalarını gözle kontrol etmek gerekir. Musluk ağzından net damlama ile alt dolap nemi farklı müdahale alanlarıdır. Flex hortumun metal örgüsünde pas izi, bağlantı somununda beyaz kireç halkası veya dolap tabanında sürekli nem, ağzı damlayan musluktan bağımsız bir sızıntı ihtimalini güçlendirir.
+
+## Aeratör ve perlatör tıkanıklığı
+
+Musluk ucundaki aeratör zamanla kireç ve tortu biriktirir. Bu birikinti akışı bozabilir, sıçrama yaratabilir veya kapatma sonrası kısa süreli damlamaya katkıda bulunabilir. Aeratörü nazikçe söküp temizlemek bazı kullanıcılarda geçici rahatlama sağlar; ancak sürekli damlama sürüyorsa asıl neden aeratörden daha derin bir noktada olabilir. Aeratörü zorlayarak sökmek dişleri bozabileceğinden dikkatli olunmalıdır.
+
+## Evde güvenli gözlemler
+
+- Damlamanın sürekli mi yoksa kullanım sonrası mı olduğunu not edin
+- Yalnızca sıcak, yalnızca soğuk veya her iki tarafta mı olduğunu işaretleyin
+- Tezgâh / lavabo altını nem ve flex bağlantıları için kontrol edin
+- Kolun tam kapalı konumda olduğundan emin olun
+- Conta veya kartuşu kendiniz sökmeden önce marka/model bilgisini fotoğraflayın
+- Kimyasal tıkayıcı veya zorlama ile vanayı “sıkıştırarak” kapatmaya çalışmayın
+- Alt dolapta elektrik prizi yakınında nem varsa o noktayı kullanmayın
+
+## Ne zaman profesyonel destek gerekir?
+
+Damlama birkaç gün içinde kesilmiyorsa, alt dolapta nem artıyorsa, batarya gövdesinde çatlak şüphesi varsa veya parça uyumu belirsizse [batarya ve musluk montaj](/hizmetler/batarya-musluk-montaj) kapsamında kontrol planlanmalıdır. Aynı dönemde sayaç hareketi veya yüksek fatura da varsa [musluklar kapalıyken sayaç dönmesi](/blog/musluklar-kapaliyken-su-sayaci-neden-doner) rehberiyle birlikte değerlendirmek faydalıdır. Kağıthane’de benzer şikâyetler için [Kağıthane musluk damlıyor](/kagithane-musluk-damliyor) sayfası yerel servis bağlamını verir. Amaç, doğru parçayı doğru armatüre uygulamak ve sızdırmazlık testiyle sonucu doğrulamaktır.
+
+## Sonuç
+
+Musluk damlaması çoğu zaman conta, kartuş veya yuva aşınmasıyla ilişkilidir; basınç, bağlantı sızıntısı ve aeratör birikintisi de aynı görüntüyü üretebilir. Evdeki gözlemler yön gösterir; doğru parça ve sızdırmaz test ile kalıcı çözüm profesyonel montaj/onarım sürecinde netleşir.
+    `.trim(),
+    category: "Su Tesisatı",
+    publishedAt: "2026-08-26T09:45:00.000Z",
+    updatedAt: "2026-08-26T09:45:00.000Z",
+    readingTime: 9,
+    seoTitle: "Musluk Neden Damlar? Conta, Kartuş ve Basınç Ayrımı",
+    seoDescription:
+      "Musluk damlamasının olası nedenleri: conta, kartuş, vana yuvası ve basınç. Evde güvenli gözlemler ve ne zaman montaj gerektiği.",
+    canonicalPath: "/blog/musluk-neden-damlar",
+    relatedServices: ["batarya-musluk-montaj", "su-tesisati"],
+    relatedServiceSlugs: ["batarya-musluk-montaj", "su-tesisati"],
+    relatedArticleSlugs: [
+      "musluklar-kapaliyken-su-sayaci-neden-doner",
+      "rezervuar-neden-su-akiyor",
+      "duvar-nemi-su-kacagi-mi-yogusma-mi",
+    ],
+    cluster: "su-kacagi",
+    searchIntent: "informational",
+    primaryKeyword: "musluk neden damlar",
+    secondaryKeywords: [
+      "damlayan musluk nasıl düzelir",
+      "batarya contası değişimi",
+      "musluk damlaması neden olur",
+    ],
+    needsTechnicalReview: false,
+    status: "published",
+    reviewerId: "mucahit-korkmaz",
+    image: "/images/batarya-musluk-hero.webp",
+    imageAlt: "Damlayan mutfak veya lavabo musluğunun conta ve kartuş kontrolü",
+    relatedLinks: [
+      { href: "/kagithane-musluk-damliyor", label: "Kağıthane musluk damlıyor" },
+      { href: "/kagithane-musluk-tamiri", label: "Kağıthane musluk tamiri" },
+      { href: "/hizmetler/batarya-musluk-montaj", label: "Batarya musluk montaj" },
+      { href: "/", label: "Kağıthane tesisatçı (ana sayfa)" },
+      { href: "/hizmet-bolgeleri/kagithane", label: "Kağıthane tesisat hizmet bölgeleri" },
+      { href: "/iletisim", label: "Servis talebi oluştur" },
+    ],
+    technicalReview: {
+      items: [
+        {
+          topic: "Conta ve kartuş ayrımı",
+          status: "verified",
+          note: "Conta/kartuş ayrımı ve marka uyumu vurgusu teknik incelemede uygun bulundu.",
+        },
+        {
+          topic: "Basınç etkisi ifadeleri",
+          status: "verified",
+          note: "Basıncın zayıf noktayı görünür kıldığı dili teknik incelemede uygun bulundu.",
+        },
+        {
+          topic: "DIY müdahale sınırları",
+          status: "verified",
+          note: "Zorlamalı kapatma ve rastgele parça uyarısı teknik incelemede yeterli bulundu.",
+        },
+      ],
+    },
+    faq: [
+      {
+        question: "Musluk damlaması yüksek faturaya yol açar mı?",
+        answer:
+          "Sürekli damlama gün içinde biriken su ile tüketimi artırabilir. Fatura artışı tek başına damlama kanıtı değildir; sayaç ve diğer kullanım noktalarıyla birlikte değerlendirilmelidir.",
+        category: "su-kacagi",
+      },
+      {
+        question: "Conta değiştirmek her zaman yeterli midir?",
+        answer:
+          "Hayır. Tek kollu bataryalarda kartuş, eski armatürlerde yuva aşınması veya bağlantı sızıntısı da aynı görüntüyü verebilir.",
+        category: "su-kacagi",
+      },
+      {
+        question: "Yalnızca sıcak su damlıyorsa ne düşünülmeli?",
+        answer:
+          "Sıcak tarafa özgü conta, kartuş yarısı veya sıcak hat bağlantısı şüphesi güçlenir. Yine de kesin ayrım için armatür tipine göre kontrol gerekir.",
+        category: "su-kacagi",
+      },
+      {
+        question: "Damlayan musluğu kendim sıkarak durdurabilir miyim?",
+        answer:
+          "Zorlamalı sıkma gövde veya vanayı bozabilir. Kolu tam kapalı konuma getirip damlamayı not etmek güvenli gözlemdir; zorlama önerilmez.",
+        category: "su-kacagi",
+      },
+    ],
+  },
+  {
+    id: "draft-rezervuar-akir",
+    title: "Rezervuar Neden Su Akıyor? Şamandıra, Conta ve Doldurma Ventili",
+    slug: "rezervuar-neden-su-akiyor",
+    excerpt:
+      "Klozet rezervuarından sürekli su akması şamandıra, doldurma ventili veya sifon contası kaynaklı olabilir. Güvenli gözlem ve ne zaman tamir gerekir.",
+    content: `
+Klozet rezervuarından sürekli ince bir akış veya taşma borusuna giden su, hem ses hem de su israfı olarak kendini gösterir. Bu belirti bazen “musluklar kapalıyken sayaç dönüyor” şikâyetiyle birlikte fark edilir. Bu yazı, rezervuar kaynaklı su geçişinin olası nedenlerini ayırmaya yardımcı olur; kesin teşhis yerine yönlendirici gözlem sunar. Amaç, hangi parçanın şüpheye girdiğini anlamak ve gereksiz sökme/kırma riskini azaltmaktır.
+
+## Sürekli akış neyi düşündürür?
+
+Rezervuar dolduktan sonra da suyun kesilmemesi, doldurma tarafının kapanmadığını veya sifon tarafında sızdırmazlığın bozulduğunu düşündürür. Akış taşma borusuna mı gidiyor, yoksa klozet haznesine mi sızıyor — bu iki görüntü farklı parçaları işaret edebilir. Taşma borusuna giden ince bir şelale genelde seviye veya doldurma tarafını; hazneye sızıntı ise sifon contası tarafını öne çıkarır. İkisinin aynı anda görülmesi de mümkündür; bu durumda parçalar ayrı ayrı değerlendirilmelidir.
+
+## Şamandıra ve seviye ayarı
+
+Klasik şamandıralı sistemlerde şamandıra seviyesi yüksekse su taşma seviyesine ulaşmadan önce veya sürekli taşmaya yakın çalışabilir. Şamandıranın su emmesi, kolun takılması veya yanlış ayar, doldurma vanasının tam kapanmasını engelleyebilir. Seviye ayarı markaya göre değişir; rastgele bükme veya sıkma önerilmez. Şamandıra kolunun serbest hareket edip etmediğini gözle kontrol etmek güvenli bir ilk adımdır; kolun takılı kaldığı durumlarda doldurma hiç kesilmeyebilir.
+
+## Doldurma ventili (şebeke giriş vanası)
+
+Doldurma ventili, rezervuar dolunca su girişini kesmelidir. Contası veya mekanizması yıprandığında ince bir geçiş devam eder. Bu durumda sayaç da yavaş hareket edebilir. Ventil değişimi parça uyumuna bağlıdır; gömme rezervuarlarda erişim kapağı üzerinden yapılır. Ventil filtresinde biriken tortu da kapanmayı bozabilir; filtre temizliği bazı modellerde mümkündür ancak erişim ve marka uyumu bilinmeden zorlanmamalıdır.
+
+## Sifon contası ve iç takım
+
+Sifon contası veya flapper tipi kapak tam oturmazsa rezervuar suyu klozet haznesine sızabilir. Bu sızıntı bazen gözle zor görülür; rezervuara birkaç damla gıda boyası ekleyip belirli süre sonra haznede renk aramak yönlendirici bir ev gözlemidir. Renk geçişi sifon tarafı şüphesini güçlendirir; yine de tek başına tüm hat kaçağını dışlamaz. Contanın eğrilmesi, kireç birikmesi veya zincir/bağlantı takılması da aynı tabloyu üretebilir.
+
+## Gömme rezervuar farkı
+
+Gömme sistemlerde mekanizma duvar içindedir; erişim genellikle ön kapaktan sağlanır. Sürekli akış, zayıf sifon sesi veya kapak çevresinde nem gömme rezervuar arızasına işaret edebilir. Duvar arkası nem artıyorsa yalnızca “iç takım” varsayımıyla yetinmemek; bağlantı kaçığı ihtimalini de akılda tutmak gerekir. Ayrıntılı yerel bağlam için [Kağıthane rezervuar su akıyor](/kagithane-rezervuar-su-akiyor) sayfasına bakılabilir. Gömme rezervuarlarda marka uyumlu iç takım kullanmak, yanlış parçayla yapılan “geçici” onarımların tekrarını azaltmaya yardımcı olur.
+
+## Sayaç ile birlikte değerlendirme
+
+Musluklar kapalıyken sayaç dönüyorsa rezervuar kontrolü listenin başındadır. Rezervuar şüphesi elendikten sonra damlayan musluk, dış hat veya gizli kaçak ihtimalleri gündeme gelir. Bu sıra [musluklar kapalıyken su sayacı neden döner](/blog/musluklar-kapaliyken-su-sayaci-neden-doner) rehberiyle uyumludur. Sayaç hareketi yokken yalnızca rezervuar sesi duyuluyorsa, bazen taşma seviyesine yakın ama çok yavaş bir dolum da söz konusu olabilir; yine de gözlem kaydı tutmak faydalıdır.
+
+## Ses ve kullanım örüntüleri
+
+Rezervuar “hişş” sesi, dolumun bitmediğini veya sifon tarafında sürekli bir geçişi düşündürür. Gece sessizliğinde bu ses daha belirginleşir. Kullanım sonrası dolumun bitip bitmediğini 30–60 saniye dinlemek basit bir gözlemdir. Dolum hiç bitmiyorsa doldurma/şamandıra tarafı; dolum bitiyor ama haznede boya geçişi varsa sifon tarafı daha olasıdır. Bu ayrım teşhis değil, servis öncesi yönlendirme sağlar. Aynı sesin yalnızca belirli saatlerde duyulması, şebeke basıncının gündüz-gece farkıyla da ilişkilendirilebilir; yine de parça kontrolü olmadan kesin hüküm verilmez.
+
+## Evde güvenli gözlemler
+
+- Rezervuar kapağını dikkatli açıp taşma borusuna akış olup olmadığını dinleyin/gözlemleyin
+- Gıda boyası testi yapıyorsanız yalnızca birkaç damla kullanın ve sonucu not edin
+- Gömme rezervuarda kapak vidasını zorlamadan açın; bilmediğiniz parçayı sökmeyin
+- Alt kata sızıntı veya duvar nemi varsa fotoğraflayın
+- Kimyasal tıkayıcıyı rezervuar içine dökmeyin
+- Su ana vanasını gereksiz yere zorlamayın
+- Parça markası okunabiliyorsa fotoğraflayın; yanlış iç takım siparişini azaltır
+
+## Ne zaman profesyonel destek gerekir?
+
+Akış birkaç gün sürüyorsa, sayaç hareketi pozitifse, gömme rezervuar kapak çevresinde nem varsa veya iç takım markası belirsizse [gömme rezervuar tamiri](/hizmetler/gomme-rezervuar-tamiri) planlanmalıdır. Duvar nemi de eşlik ediyorsa [duvar nemi su kaçağı mı yoğuşma mı](/blog/duvar-nemi-su-kacagi-mi-yogusma-mi) ayrımıyla birlikte değerlendirmek faydalıdır. Amaç, doğru parçayı doğru sisteme uygulamak ve sızdırmazlık ile sifon testini yazılı olarak netleştirmektir.
+
+## Sonuç
+
+Rezervuardan su akması çoğu zaman şamandıra, doldurma ventili veya sifon contasıyla ilişkilidir; gömme sistemlerde erişim ve parça uyumu ek dikkat ister. Ev gözlemleri şüpheyi daraltır; kalıcı çözüm parça değişimi ve sızdırmazlık testi ile netleşir. Erken müdahale hem su israfını hem de duvar arkası nem riskini azaltmaya yardımcı olur.
+    `.trim(),
+    category: "Su Tesisatı",
+    publishedAt: "2026-08-26T10:00:00.000Z",
+    updatedAt: "2026-08-26T10:00:00.000Z",
+    readingTime: 9,
+    seoTitle: "Rezervuar Neden Su Akıyor? Şamandıra ve Conta Rehberi",
+    seoDescription:
+      "Klozet rezervuarından sürekli su akmasının olası nedenleri: şamandıra, doldurma ventili, sifon contası. Güvenli gözlem ve ne zaman tamir gerekir.",
+    canonicalPath: "/blog/rezervuar-neden-su-akiyor",
+    relatedServices: ["gomme-rezervuar-tamiri", "su-kacagi-tespit-ve-onarim"],
+    relatedServiceSlugs: ["gomme-rezervuar-tamiri", "su-kacagi-tespit-ve-onarim"],
+    relatedArticleSlugs: [
+      "musluklar-kapaliyken-su-sayaci-neden-doner",
+      "musluk-neden-damlar",
+      "duvar-nemi-su-kacagi-mi-yogusma-mi",
+    ],
+    cluster: "su-kacagi",
+    searchIntent: "informational",
+    primaryKeyword: "rezervuar neden su akıyor",
+    secondaryKeywords: [
+      "klozet rezervuarı sürekli akıyor",
+      "gömme rezervuar su kaçağı",
+      "şamandıra ayarı",
+    ],
+    needsTechnicalReview: false,
+    status: "published",
+    reviewerId: "mucahit-korkmaz",
+    image: "/images/gomme-rezervuar-hero.webp",
+    imageAlt: "Klozet rezervuarında sürekli su akışı ve şamandıra kontrolü",
+    relatedLinks: [
+      { href: "/kagithane-rezervuar-su-akiyor", label: "Kağıthane rezervuar su akıyor" },
+      { href: "/kagithane-gomme-rezervuar-tamiri", label: "Kağıthane gömme rezervuar tamiri" },
+      { href: "/hizmetler/gomme-rezervuar-tamiri", label: "Gömme rezervuar tamiri" },
+      { href: "/", label: "Kağıthane tesisatçı (ana sayfa)" },
+      { href: "/hizmet-bolgeleri/kagithane", label: "Kağıthane tesisat hizmet bölgeleri" },
+      { href: "/iletisim", label: "Servis talebi oluştur" },
+    ],
+    technicalReview: {
+      items: [
+        {
+          topic: "Şamandıra ve doldurma ventili ayrımı",
+          status: "verified",
+          note: "Şamandıra/ventil/sifon ayrımı teknik incelemede uygun bulundu.",
+        },
+        {
+          topic: "Gıda boyası testi açıklaması",
+          status: "verified",
+          note: "Boya testinin yönlendirici olduğu vurgusu teknik incelemede uygun bulundu.",
+        },
+        {
+          topic: "Gömme rezervuar erişim dili",
+          status: "verified",
+          note: "Erişim kapağı ve DIY sınırları teknik incelemede yeterli bulundu.",
+        },
+      ],
+    },
+    faq: [
+      {
+        question: "Rezervuar kaçağı su sayacını döndürür mü?",
+        answer:
+          "Evet. Doldurma vanası veya sifon contası tam kapanmazsa sürekli geçiş sayacı hareket ettirebilir. Boya testi ve görsel kontrol şüpheyi güçlendirir.",
+        category: "su-kacagi",
+      },
+      {
+        question: "Gömme rezervuar ile harici rezervuar aynı mı arızalanır?",
+        answer:
+          "Temel parçalar benzer işlev görür; ancak gömme sistemde erişim ve parça uyumu farklıdır. Kapak çevresi nemi ek bir uyarı işaretidir.",
+        category: "su-kacagi",
+      },
+      {
+        question: "Şamandıra ayarını kendim yapabilir miyim?",
+        answer:
+          "Basit seviye gözlemi yapılabilir; rastgele bükme veya sökme önerilmez. Yanlış ayar taşmayı veya yetersiz sifonu artırabilir.",
+        category: "su-kacagi",
+      },
+      {
+        question: "Sürekli akan rezervuar ne kadar su kaybettirir?",
+        answer:
+          "Akış hızına göre değişir; ince bir akış bile gün içinde ciddi litre kaybına yol açabilir. Net miktar ölçüm olmadan iddia edilmemelidir.",
         category: "su-kacagi",
       },
     ],

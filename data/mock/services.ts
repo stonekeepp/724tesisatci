@@ -535,6 +535,10 @@ export const services: Service[] = [
     faq: getServiceFaq("gomme-rezervuar-tamiri"),
     relatedServices: ["su-tesisati", "tikaniklik-acma", "su-kacagi-tespit-ve-onarim"],
     relatedLocations: ["istanbul", "kagithane"],
+    relatedGuideSlugs: [
+      "rezervuar-neden-su-akiyor",
+      "musluklar-kapaliyken-su-sayaci-neden-doner",
+    ],
     relatedLocalLandingSlugs: [
       "kagithane-gomme-rezervuar-tamiri",
       "kagithane-rezervuar-su-akiyor",
@@ -581,6 +585,10 @@ export const services: Service[] = [
     faq: getServiceFaq("batarya-musluk-montaj"),
     relatedServices: ["su-tesisati", "gomme-rezervuar-tamiri", "su-kacagi-tespit-ve-onarim"],
     relatedLocations: ["istanbul", "kagithane"],
+    relatedGuideSlugs: [
+      "musluk-neden-damlar",
+      "musluklar-kapaliyken-su-sayaci-neden-doner",
+    ],
     relatedLocalLandingSlugs: [
       "kagithane-musluk-tamiri",
       "kagithane-musluk-damliyor",

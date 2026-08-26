@@ -47,3 +47,8 @@ Telefon: +90 532 346 87 69. Adres: Emniyet Evleri, Semerkant Sk. 14/A, 34415 Ka�
 - [Robotla Açma ile Pimaş Yıkama Farkı](https://724tesisatci.com/blog/robotla-tikaniklik-acma-ile-pimas-yikama-farki): Yöntem seçimi rehberi
 - [Birden Fazla Gider Aynı Anda Neden Yavaşlar?](https://724tesisatci.com/blog/birden-fazla-gider-ayni-anda-neden-yavaslar): Ortak hat belirtileri
 - [Alt Kata Su Sızmasının Kaynağı](https://724tesisatci.com/blog/alt-kata-su-sizmasinin-kaynagi-nasil-bulunur): Kaynak ayrımı rehberi
+- [Duvar Nemi Su Kaçağı mı, Yoğuşma mı?](https://724tesisatci.com/blog/duvar-nemi-su-kacagi-mi-yogusma-mi): Nem kaynağı karşılaştırma rehberi
+- [Kombi Basıncı Neden Sürekli Düşer?](https://724tesisatci.com/blog/kombi-basinci-neden-surekli-duser): Tekrarlayan basınç düşüşü
+- [Kombi Arızası ile Tesisat Arızası Ayrımı](https://724tesisatci.com/blog/kombi-arizasi-ile-tesisat-arizasi-nasil-ayirt-edilir): Ön değerlendirme senaryoları
+- [Musluk Neden Damlar?](https://724tesisatci.com/blog/musluk-neden-damlar): Conta, kartuş ve basınç ayrımı
+- [Rezervuar Neden Su Akıyor?](https://724tesisatci.com/blog/rezervuar-neden-su-akiyor): Şamandıra, ventil ve conta

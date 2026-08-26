@@ -22,6 +22,8 @@ const PR2_DRAFT_SLUGS = [
   "kombi-basinci-neden-surekli-duser",
   "petegin-alti-soguk-ustu-sicaksa-ne-yapilmali",
   "kombi-arizasi-ile-tesisat-arizasi-nasil-ayirt-edilir",
+  "musluk-neden-damlar",
+  "rezervuar-neden-su-akiyor",
 ];
 
 /** Mirrors public related-article filtering without importing @/ path aliases. */
@@ -39,18 +41,16 @@ function filterPublishedRelated(post, allPosts) {
 }
 
 describe("draft route filtering", () => {
-  it("keeps unpublished PR topical guides as draft", () => {
-    assert.equal(draftBlogPosts.length, 9);
+  it("publishes all weekly topical guides", () => {
+    assert.equal(draftBlogPosts.length, 11);
     const published = draftBlogPosts.filter((p) => p.status === "published");
     const drafts = draftBlogPosts.filter((p) => p.status === "draft");
-    assert.equal(published.length, 6);
-    assert.equal(drafts.length, 3);
-    for (const post of drafts) {
-      assert.equal(isPublishedContent(post), false);
-      assert.ok(PR2_DRAFT_SLUGS.includes(post.slug));
-    }
+    assert.equal(published.length, 11);
+    assert.equal(drafts.length, 0);
     for (const post of published) {
       assert.equal(isPublishedContent(post), true);
+      assert.ok(PR2_DRAFT_SLUGS.includes(post.slug));
+      assert.equal(post.needsTechnicalReview, false);
     }
   });
 
@@ -116,19 +116,20 @@ describe("related article filtering", () => {
       const related = filterPublishedRelated(post, draftBlogPosts);
       assert.ok(related.every((r) => isPublishedContent(r)));
       assert.ok(related.every((r) => r.slug !== post.slug));
-      // Draft posts may surface the published pilot; never other drafts.
       assert.ok(related.every((r) => r.status === "published"));
     }
   });
 });
 
 describe("cluster integrity for PR-2 drafts", () => {
-  it("places 9 topical guide slugs in the correct clusters", () => {
+  it("places topical guide slugs in the correct clusters", () => {
     const byCluster = {
       "su-kacagi": [
         "musluklar-kapaliyken-su-sayaci-neden-doner",
         "alt-kata-su-sizmasinin-kaynagi-nasil-bulunur",
         "duvar-nemi-su-kacagi-mi-yogusma-mi",
+        "musluk-neden-damlar",
+        "rezervuar-neden-su-akiyor",
       ],
       tikaniklik: [
         "tikaniklik-acildiktan-sonra-neden-tekrar-eder",
@@ -153,26 +154,8 @@ describe("cluster integrity for PR-2 drafts", () => {
         const post = draftBlogPosts.find((p) => p.slug === slug);
         assert.ok(post, `missing blog post ${slug}`);
         assert.equal(post.cluster, clusterId);
-        assert.ok(
-          post.status === "draft" || post.status === "published",
-          post.slug
-        );
-        if (
-          [
-            "musluklar-kapaliyken-su-sayaci-neden-doner",
-            "tikaniklik-acildiktan-sonra-neden-tekrar-eder",
-            "petegin-alti-soguk-ustu-sicaksa-ne-yapilmali",
-            "robotla-tikaniklik-acma-ile-pimas-yikama-farki",
-            "birden-fazla-gider-ayni-anda-neden-yavaslar",
-            "alt-kata-su-sizmasinin-kaynagi-nasil-bulunur",
-          ].includes(post.slug)
-        ) {
-          assert.equal(post.needsTechnicalReview, false);
-          assert.equal(post.status, "published");
-        } else {
-          assert.equal(post.status, "draft");
-          assert.equal(post.needsTechnicalReview, true);
-        }
+        assert.equal(post.status, "published");
+        assert.equal(post.needsTechnicalReview, false);
       }
     }
   });
@@ -212,23 +195,11 @@ describe("metadata uniqueness for PR-2 drafts", () => {
     assert.equal(new Set(slugs).size, slugs.length);
   });
 
-  it("marks non-pilot drafts for technical review", () => {
-    const publishedSlugs = new Set([
-      "musluklar-kapaliyken-su-sayaci-neden-doner",
-      "tikaniklik-acildiktan-sonra-neden-tekrar-eder",
-      "petegin-alti-soguk-ustu-sicaksa-ne-yapilmali",
-      "robotla-tikaniklik-acma-ile-pimas-yikama-farki",
-      "birden-fazla-gider-ayni-anda-neden-yavaslar",
-      "alt-kata-su-sizmasinin-kaynagi-nasil-bulunur",
-    ]);
+  it("requires FAQ and published status on every topical guide", () => {
     for (const post of draftBlogPosts) {
-      if (publishedSlugs.has(post.slug)) {
-        assert.equal(post.needsTechnicalReview, false);
-        continue;
-      }
-      assert.equal(post.status, "draft");
-      assert.equal(post.needsTechnicalReview, true);
-      assert.ok((post.faq?.length ?? 0) >= 3);
+      assert.equal(post.status, "published");
+      assert.equal(post.needsTechnicalReview, false);
+      assert.ok((post.faq?.length ?? 0) >= 3, post.slug);
     }
   });
 });

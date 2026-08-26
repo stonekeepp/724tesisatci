@@ -27,6 +27,8 @@ export const contentClusters: ContentClusterDefinition[] = [
       "musluklar-kapaliyken-su-sayaci-neden-doner",
       "alt-kata-su-sizmasinin-kaynagi-nasil-bulunur",
       "duvar-nemi-su-kacagi-mi-yogusma-mi",
+      "musluk-neden-damlar",
+      "rezervuar-neden-su-akiyor",
     ],
   },
   {
