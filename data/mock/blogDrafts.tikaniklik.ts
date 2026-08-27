@@ -70,8 +70,8 @@ Aynı gider birkaç kez tekrar tıkandıysa [tıkanıklık açma](/hizmetler/tik
 Tekrarlayan tıkanıklık "şanssızlık" değil çoğu zaman eksik temizlik, hat deformasyonu veya ana gider sorunudur. Kimyasallar kesin çözüm sanılmamalı, farklı ürünler asla karıştırılmamalıdır; yöntem hattın tipine ve tekrar sıklığına göre seçilmelidir. Belirtileri not etmek ve gerektiğinde görüntüleme talep etmek, aynı sorunun tekrar tekrar yaşanmasını azaltabilir.
     `.trim(),
     category: "Tıkanıklık",
-    publishedAt: "2026-08-01T09:00:00.000Z",
-    updatedAt: "2026-08-01T09:00:00.000Z",
+    publishedAt: "2026-07-28T10:00:00.000Z",
+    updatedAt: "2026-07-28T10:00:00.000Z",
     readingTime: 10,
     seoTitle: "Tıkanıklık Açıldıktan Sonra Neden Tekrar Eder?",
     seoDescription:
@@ -233,8 +233,8 @@ Yöntem seçimi belirsizse veya tekrar varsa [tıkanıklık açma](/hizmetler/ti
 Robotla açma ve pimaş yıkama rakip değil, tamamlayıcı yöntemlerdir. Hiçbiri her koşulda "daha iyi" değildir; her tıkanıklıkta aynı yöntem kullanılmaz, önce sorun tipi ve boru durumu, sonra ekipman seçilir. Doğru sıralama, gereksiz tekrar eden müdahaleleri azaltır.
     `.trim(),
     category: "Tıkanıklık",
-    publishedAt: "2026-08-01T10:00:00.000Z",
-    updatedAt: "2026-08-01T10:00:00.000Z",
+    publishedAt: "2026-07-30T10:00:00.000Z",
+    updatedAt: "2026-07-30T10:00:00.000Z",
     readingTime: 10,
     seoTitle: "Robotla Tıkanıklık Açma ile Pimaş Yıkama Farkı",
     seoDescription:
@@ -383,8 +383,8 @@ Yavaşlama zamanla tam tıkanmaya, geri tepme sıklığı ise taşmaya dönüşe
 Birden fazla giderin aynı anda yavaşlaması, lokal sifon sorunundan daha geniş bir hat problemine işaret edebilir. Erken ayrım ve yönetimi zamanında bilgilendirmek, yanlış noktada tekrarlayan müdahaleyi azaltır ve sorunun büyümeden ele alınmasına yardımcı olur. Tek bir daireye odaklanmak yerine ortak hattı da değerlendirmeye dahil etmek, çoklu yavaşlama vakalarında daha sağlıklı bir yol haritası sunar.
     `.trim(),
     category: "Tıkanıklık",
-    publishedAt: "2026-07-26T10:25:00.000Z",
-    updatedAt: "2026-07-26T10:25:00.000Z",
+    publishedAt: "2026-07-27T10:00:00.000Z",
+    updatedAt: "2026-07-27T10:00:00.000Z",
     readingTime: 10,
     seoTitle: "Birden Fazla Gider Aynı Anda Neden Yavaşlar?",
     seoDescription:

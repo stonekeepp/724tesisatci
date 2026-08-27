@@ -1,0 +1,28 @@
+---
+description: Blog publishedAt/updatedAt must use unique calendar days
+globs: data/mock/blog*.ts
+alwaysApply: false
+---
+
+# Blog tarih benzersizliği
+
+UI `toLocaleDateString("tr-TR")` ile yalnızca **takvim günü** gösterir. Aynı günde birden fazla yazı “aynı tarih” görünür.
+
+## Zorunlu
+
+- Her blog için `publishedAt` **benzersiz takvim günü** (`YYYY-MM-DD`)
+- Her blog için `updatedAt` **benzersiz takvim günü**
+- `updatedAt` ≥ `publishedAt`
+- Yeni yazı eklerken mevcut tüm `blogPosts` + `blogDrafts*` tarihlerini kontrol et; çakışan gün kullanma
+- Aynı yayın dalgasında birden fazla yazı varsa günleri **en az 1 gün** arayla yay
+
+## Yapılmayacaklar
+
+- Aynı güne saat farkıyla (`T09:00` / `T10:00`) birden fazla yazı koymak
+- Toplu “bugün” veya tek `updatedAt` damgası ile tüm yazıları güncellemek
+
+## Doğrulama
+
+```bash
+node --experimental-strip-types --test tests/blogUniqueDates.test.mjs
+```

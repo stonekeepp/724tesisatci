@@ -78,7 +78,7 @@ Musluklar kapalıyken sayacın dönmesi önemli bir uyarı işaretidir; ancak se
     `.trim(),
     category: "Su Kaçağı",
     publishedAt: "2026-07-26T10:00:00.000Z",
-    updatedAt: "2026-07-26T12:00:00.000Z",
+    updatedAt: "2026-07-26T10:00:00.000Z",
     readingTime: 10,
     seoTitle: "Musluklar Kapalıyken Su Sayacı Neden Döner?",
     seoDescription:
@@ -243,8 +243,8 @@ Islaklık yayılmaya devam ediyorsa, kaynak kategorisi net biçimde belirlenemiy
 Alt kata su sızmasında en kritik adım, ıslak noktayı doğrudan kaynak sanmamaktır. Temiz su, gider, klozet bağlantısı, izolasyon, ısıtma tesisatı, ortak hat ve hatta çatı/cephe kaynaklı ihtimaller ayrı ayrı düşünülmelidir. Evdeki gözlemler yönlendiricidir; kaynağın kesin noktasını belirlemek için sistematik kontrol ve ölçüme dayalı bir değerlendirme gerekir.
     `.trim(),
     category: "Su Kaçağı",
-    publishedAt: "2026-08-01T10:30:00.000Z",
-    updatedAt: "2026-08-01T10:30:00.000Z",
+    publishedAt: "2026-07-31T10:00:00.000Z",
+    updatedAt: "2026-07-31T10:00:00.000Z",
     readingTime: 12,
     seoTitle: "Alt Kata Su Sızmasının Kaynağı Nasıl Bulunur?",
     seoDescription:
@@ -401,8 +401,8 @@ Nem yayılmaya devam ediyorsa, alt kata geçiyorsa, sayaç hareketi şüpheliyse
 Duvarda görülen nem, otomatik olarak bir su kaçağı anlamına gelmez. Yoğuşma, ısı köprüsü, dış cephe/çatı, temiz su, gider, zeminden yükselen rutubet ve banyo yalıtımı ayrı ayrı düşünülmesi gereken olasılıklardır. Evdeki gözlemler yön gösterir; kaynağın kesin noktasını belirlemek için ölçüme dayalı, sistematik bir kontrol gerekir.
     `.trim(),
     category: "Su Kaçağı",
-    publishedAt: "2026-08-26T09:00:00.000Z",
-    updatedAt: "2026-08-26T09:00:00.000Z",
+    publishedAt: "2026-08-22T10:00:00.000Z",
+    updatedAt: "2026-08-22T10:00:00.000Z",
     readingTime: 11,
     seoTitle: "Duvar Nemi Su Kaçağı mı, Yoğuşma mı?",
     seoDescription:
@@ -550,8 +550,8 @@ Damlama birkaç gün içinde kesilmiyorsa, alt dolapta nem artıyorsa, batarya g
 Musluk damlaması çoğu zaman conta, kartuş veya yuva aşınmasıyla ilişkilidir; basınç, bağlantı sızıntısı ve aeratör birikintisi de aynı görüntüyü üretebilir. Evdeki gözlemler yön gösterir; doğru parça ve sızdırmaz test ile kalıcı çözüm profesyonel montaj/onarım sürecinde netleşir.
     `.trim(),
     category: "Su Tesisatı",
-    publishedAt: "2026-08-26T09:45:00.000Z",
-    updatedAt: "2026-08-26T09:45:00.000Z",
+    publishedAt: "2026-08-25T10:00:00.000Z",
+    updatedAt: "2026-08-25T10:00:00.000Z",
     readingTime: 9,
     seoTitle: "Musluk Neden Damlar? Conta, Kartuş ve Basınç Ayrımı",
     seoDescription:

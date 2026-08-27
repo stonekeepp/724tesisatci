@@ -167,7 +167,7 @@ Kağıthane'de özellikle eski apartmanlarda ve yoğun kullanılan petek hatlar�
     `.trim(),
     category: "Kombi & Petek Bakımı",
     publishedAt: "2025-05-20T10:00:00.000Z",
-    updatedAt: "2026-07-24T10:00:00.000Z",
+    updatedAt: "2026-07-23T10:00:00.000Z",
     readingTime: 5,
     seoTitle: "Kombi Basıncı Neden Düşer? Evde Kontroller | 724 Tesisatçı",
     seoDescription:
@@ -257,7 +257,7 @@ Kağıthane'de yoğun kullanılan apartman hatlarında mutfak gideri ve ana pima
     `.trim(),
     category: "Tıkanıklık Açma",
     publishedAt: "2025-04-10T10:00:00.000Z",
-    updatedAt: "2026-07-24T10:00:00.000Z",
+    updatedAt: "2026-07-22T10:00:00.000Z",
     readingTime: 5,
     seoTitle: "Lavabo Tıkanıklığı Nasıl Açılır? | Kameralı Tespit",
     seoDescription:
@@ -449,7 +449,7 @@ Kaçak noktası belirlendikten sonra kırım gerekip gerekmediği, malzeme tipi 
     `.trim(),
     category: "Kağıthane Rehberi",
     publishedAt: "2026-07-09T08:30:00.000Z",
-    updatedAt: "2026-07-24T10:00:00.000Z",
+    updatedAt: "2026-07-21T10:00:00.000Z",
     readingTime: 6,
     seoTitle: "Kağıthane’de Su Kaçağı Belirtileri | Evde Kontrol Rehberi",
     seoDescription:
@@ -530,7 +530,7 @@ Aynı hat kısa sürede tekrar tıkanıyorsa yalnızca açma yeterli olmayabilir
     `.trim(),
     category: "Kağıthane Rehberi",
     publishedAt: "2026-07-08T10:00:00.000Z",
-    updatedAt: "2026-07-24T10:00:00.000Z",
+    updatedAt: "2026-07-20T10:00:00.000Z",
     readingTime: 6,
     seoTitle: "Kağıthane’de Gider Tıkanıklığı Nedenleri | Pratik Rehber",
     seoDescription:
@@ -607,7 +607,7 @@ Gaz hattı, kombinin kapalı gövdesi veya elektrikli parçalar kullanıcı tara
     `.trim(),
     category: "Kağıthane Rehberi",
     publishedAt: "2026-07-07T10:00:00.000Z",
-    updatedAt: "2026-07-24T10:00:00.000Z",
+    updatedAt: "2026-07-19T10:00:00.000Z",
     readingTime: 4,
     seoTitle: "Kağıthane’de Kombi Basıncı ve Petek | Evde Kontrol Rehberi",
     seoDescription:
@@ -688,7 +688,7 @@ Blog rehberleri, kullanıcıların sorunu tanımasına ve doğru servise yönelm
     `.trim(),
     category: "Kağıthane Rehberi",
     publishedAt: "2026-07-06T10:00:00.000Z",
-    updatedAt: "2026-07-24T10:00:00.000Z",
+    updatedAt: "2026-07-18T10:00:00.000Z",
     readingTime: 4,
     seoTitle: "Kağıthane Mahalle Servis Rehberi | 19 Mahalle Yönlendirme",
     seoDescription:

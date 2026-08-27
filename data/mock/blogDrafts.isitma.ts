@@ -70,8 +70,8 @@ Basıncı sık sık doldurmak zorunda kalıyorsanız, doldurma sonrası birkaç 
 Sürekli basınç düşmesi “biraz su ekleyeyim” diyerek geçiştirilecek bir sinyal değildir. Görünür kaçak, gizli tesisat hattı, kombinin alt bağlantıları, genleşme tankı veya emniyet ventili ayrı ayrı düşünülmeli; hiçbirinde riskli kullanıcı müdahalesine başvurulmamalıdır. Doğru yaklaşım, gözlemleri kaydetmek ve nedeni ölçümle ayıracak profesyonel değerlendirmeyi planlamaktır.
     `.trim(),
     category: "Isıtma",
-    publishedAt: "2026-08-26T09:15:00.000Z",
-    updatedAt: "2026-08-26T09:15:00.000Z",
+    publishedAt: "2026-08-23T10:00:00.000Z",
+    updatedAt: "2026-08-23T10:00:00.000Z",
     readingTime: 7,
     seoTitle: "Kombi Basıncı Neden Sürekli Düşer?",
     seoDescription:
@@ -227,8 +227,8 @@ Vana konumları doğru olduğu halde belirti sürüyorsa, birden fazla petekte g
 Peteğin altı soğuk üstü sıcak olması tortu ihtimalini güçlendirebilir; ancak düşük debi, vana problemi, dengeleme ve bağlantı tasarımı da aynı görüntüyü verebilir. Her durumda petek temizliği gerekir demek doğru değildir; önce vana ve tek/çoklu petek ayrımı yapılmalı, ardından gerekirse profesyonel değerlendirme planlanmalıdır.
     `.trim(),
     category: "Isıtma",
-    publishedAt: "2026-08-01T09:15:00.000Z",
-    updatedAt: "2026-08-01T09:15:00.000Z",
+    publishedAt: "2026-07-29T10:00:00.000Z",
+    updatedAt: "2026-07-29T10:00:00.000Z",
     readingTime: 7,
     seoTitle: "Peteğin Altı Soğuk, Üstü Sıcaksa Ne Yapılmalı?",
     seoDescription:
@@ -385,8 +385,8 @@ Belirtiler cihaza işaret ediyorsa [kombi servisi](/hizmetler/kombi-servisi-ve-t
 Kombi ile tesisat arızasını ayırt etmek, tek bir belirtiye değil birkaç belirtinin birleşimine bakmayı gerektirir. Sıcak su durumu, etkilenen petek sayısı, hata kodu, basınç seyri ve termostat/vana konumları birlikte değerlendirilmelidir. Tek bir işaretle kesin hüküm vermek yerine güvenli gözlem kaydı tutmak ve profesyonel ölçümle netleştirmek tercih edilmelidir.
     `.trim(),
     category: "Isıtma",
-    publishedAt: "2026-08-26T09:30:00.000Z",
-    updatedAt: "2026-08-26T09:30:00.000Z",
+    publishedAt: "2026-08-24T10:00:00.000Z",
+    updatedAt: "2026-08-24T10:00:00.000Z",
     readingTime: 8,
     seoTitle: "Kombi Arızası ile Tesisat Arızası Nasıl Ayırt Edilir?",
     seoDescription:
