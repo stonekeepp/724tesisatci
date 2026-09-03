@@ -5,25 +5,12 @@ import { draftBlogPostsTikaniklik } from "../data/mock/blogDrafts.tikaniklik.ts"
 import { draftBlogPostsIsitma } from "../data/mock/blogDrafts.isitma.ts";
 import { contentClusters } from "../data/mock/contentClusters.ts";
 import { isPublishedContent } from "../lib/utils/publication.ts";
+import { PR2_DRAFT_SLUGS } from "./_pr2DraftSlugs.mjs";
 
 const draftBlogPosts = [
   ...suKacagiDrafts,
   ...draftBlogPostsTikaniklik,
   ...draftBlogPostsIsitma,
-];
-
-const PR2_DRAFT_SLUGS = [
-  "musluklar-kapaliyken-su-sayaci-neden-doner",
-  "alt-kata-su-sizmasinin-kaynagi-nasil-bulunur",
-  "duvar-nemi-su-kacagi-mi-yogusma-mi",
-  "tikaniklik-acildiktan-sonra-neden-tekrar-eder",
-  "robotla-tikaniklik-acma-ile-pimas-yikama-farki",
-  "birden-fazla-gider-ayni-anda-neden-yavaslar",
-  "kombi-basinci-neden-surekli-duser",
-  "petegin-alti-soguk-ustu-sicaksa-ne-yapilmali",
-  "kombi-arizasi-ile-tesisat-arizasi-nasil-ayirt-edilir",
-  "musluk-neden-damlar",
-  "rezervuar-neden-su-akiyor",
 ];
 
 /** Mirrors public related-article filtering without importing @/ path aliases. */
@@ -42,10 +29,10 @@ function filterPublishedRelated(post, allPosts) {
 
 describe("draft route filtering", () => {
   it("publishes all weekly topical guides", () => {
-    assert.equal(draftBlogPosts.length, 11);
+    assert.equal(draftBlogPosts.length, 16);
     const published = draftBlogPosts.filter((p) => p.status === "published");
     const drafts = draftBlogPosts.filter((p) => p.status === "draft");
-    assert.equal(published.length, 11);
+    assert.equal(published.length, 16);
     assert.equal(drafts.length, 0);
     for (const post of published) {
       assert.equal(isPublishedContent(post), true);
@@ -130,16 +117,21 @@ describe("cluster integrity for PR-2 drafts", () => {
         "duvar-nemi-su-kacagi-mi-yogusma-mi",
         "musluk-neden-damlar",
         "rezervuar-neden-su-akiyor",
+        "evde-su-basinci-neden-dusuk",
+        "gizli-su-kacagi-nasil-tespit-edilir",
       ],
       tikaniklik: [
         "tikaniklik-acildiktan-sonra-neden-tekrar-eder",
         "robotla-tikaniklik-acma-ile-pimas-yikama-farki",
         "birden-fazla-gider-ayni-anda-neden-yavaslar",
+        "tuvalet-tikanikligi-neden-olur",
       ],
       isitma: [
         "kombi-basinci-neden-surekli-duser",
         "petegin-alti-soguk-ustu-sicaksa-ne-yapilmali",
         "kombi-arizasi-ile-tesisat-arizasi-nasil-ayirt-edilir",
+        "kalorifer-kacagi-nasil-anlasilir",
+        "petek-hic-isinmiyor-ne-yapmali",
       ],
     };
 

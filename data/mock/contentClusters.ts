@@ -29,6 +29,8 @@ export const contentClusters: ContentClusterDefinition[] = [
       "duvar-nemi-su-kacagi-mi-yogusma-mi",
       "musluk-neden-damlar",
       "rezervuar-neden-su-akiyor",
+      "evde-su-basinci-neden-dusuk",
+      "gizli-su-kacagi-nasil-tespit-edilir",
     ],
   },
   {
@@ -52,6 +54,7 @@ export const contentClusters: ContentClusterDefinition[] = [
       "tikaniklik-acildiktan-sonra-neden-tekrar-eder",
       "robotla-tikaniklik-acma-ile-pimas-yikama-farki",
       "birden-fazla-gider-ayni-anda-neden-yavaslar",
+      "tuvalet-tikanikligi-neden-olur",
     ],
   },
   {
@@ -75,6 +78,8 @@ export const contentClusters: ContentClusterDefinition[] = [
       "kombi-basinci-neden-surekli-duser",
       "petegin-alti-soguk-ustu-sicaksa-ne-yapilmali",
       "kombi-arizasi-ile-tesisat-arizasi-nasil-ayirt-edilir",
+      "kalorifer-kacagi-nasil-anlasilir",
+      "petek-hic-isinmiyor-ne-yapmali",
     ],
   },
 ];

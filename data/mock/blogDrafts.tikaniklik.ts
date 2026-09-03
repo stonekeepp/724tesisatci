@@ -468,4 +468,154 @@ Birden fazla giderin aynı anda yavaşlaması, lokal sifon sorunundan daha geni�
       },
     ],
   },
+{
+    id: "draft-tuvalet-tikaniklik",
+    title: "Tuvalet Tıkanıklığı Neden Olur? Sifon, Cisim ve Ana Hat Ayrımı",
+    slug: "tuvalet-tikanikligi-neden-olur",
+    excerpt:
+      "Tuvalet tıkanıklığı lavabo tıkanığından farklıdır: sifon, rezervuar, yabancı cisim veya ana gider etkiler. Kimyasal uyarıları ve güvenli gözlem rehberi.",
+    content: `
+Tuvalet tıkanıklığı, lavabo veya duş tıkanığından hem belirti hem müdahale açısından ayrılır. Sifon çekildiğinde suyun yükselmesi, yavaş inmesi, taşma riski veya kötü koku; rezervuar dolumu, klozet boynu ve ana gider hattını birlikte düşündürür. Bu yazı, tuvalete özgü olası nedenleri ayırmaya yardımcı olur; kesin teşhis yerine yönlendirici gözlem sunar. Özellikle sert kimyasal ürünlerin klozete dökülmesi risklidir ve çoğu durumda kalıcı çözüm sağlamaz.
+
+## Tuvalet tıkanığı lavabo tıkanığından nasıl ayrılır?
+
+Lavabo tıkanığında sorun genelde sifon veya kısa branşmandadır; tuvalette ise gövde içi geçiş, rezervuar sifonu ve daha geniş çaplı ana hatta bağlantı söz konusudur. Lavabo açma yöntemleri tuvalete bire bir uygulanmaz. Birden fazla gider aynı anda yavaşlıyorsa ortak hat ihtimali artar; bu senaryo [birden fazla gider aynı anda neden yavaşlar](/blog/birden-fazla-gider-ayni-anda-neden-yavaslar) rehberiyle uyumludur. Yalnızca tuvalet etkileniyorsa lokal cisim veya klozet boynu şüphesi daha öne çıkar.
+
+## Rezervuar ve sifon gücü
+
+Zayıf sifon, rezervuarın yeterince dolmaması, şamandıra ayarı veya iç takım sorunundan kaynaklanabilir. Su “iniyor gibi” görünüp kısa sürede geri yükselebilir. Rezervuar sürekli akıyorsa tıkanıklık ile karıştırılmamalıdır; sürekli akış için ayrı değerlendirme gerekir. Sifon sesinin zayıf olması veya suyun haznede kalması, önce rezervuar dolumunu gözlemlemeyi gerektirir.
+
+## Yabancı cisim ve yanlış atık
+
+Islak mendil, pamuk, hijyen ürünleri, çocuk oyuncağı, saç tokası veya inşaat kalıntısı tuvalet boynunda tıkaç oluşturabilir. Cisim yerinden oynayıp tekrar takılabilir; bu da “açıldı, sonra yine tıkandı” hissi yaratır. Pompa veya tel ile agresif itme, cismi daha derine gönderebilir. Şüphe varsa görüntüleme ile doğrulama tercih edilebilir; zorlayıcı ev denemeleri önerilmez.
+
+## Yalnızca tuvalet mi, ana hat mı?
+
+Sadece klozet yavaşlıyor, lavabo ve duş normalse lokal tıkanık daha olasıdır. Tuvaletle birlikte banyo giderleri de doluyor veya alt kata taşma/koku eşlik ediyorsa ana gider veya bina hattı şüphesi güçlenir. Bu ayrım, daire içi açma ile ortak hat müdahalesinin kapsamını değiştirir. Tekrarlayan vakalarda [tıkanıklık açıldıktan sonra neden tekrar eder](/blog/tikaniklik-acildiktan-sonra-neden-tekrar-eder) çerçevesi faydalıdır.
+
+## Kimyasal ürünler neden risklidir?
+
+Tuvalet için satılan sert kimyasal açıcılar bazı eski veya hasarlı seramik/conta bağlantılarında ek risk oluşturabilir; farklı ürünleri art arda karıştırmak tehlikeli tepkime üretebilir. Kimyasal “su indirdi” hissi verse bile cisim veya birikinti yerinde kalabilir. Ev tipi karışımlar (çamaşır suyu + asit vb.) önerilmez. Kimyasal denendiyse ve sonuç alınamadıysa üzerine ikinci ürün eklemek yerine profesyonel değerlendirme daha güvenlidir.
+
+## Mekanik açma ve görüntüleme farkı
+
+Lokal tıkaçta uygun mekanik müdahale akışı açabilir; yağ/tortu tabakası veya hat deformasyonunda yıkama veya kamera gerekebilir. Robotla açma ile pimaş yıkama farklı amaçlara hizmet eder; yöntem seçimi için [robotla tıkanıklık açma ile pimaş yıkama farkı](/blog/robotla-tikaniklik-acma-ile-pimas-yikama-farki) rehberine bakılabilir. “Su indi” ifadesi hattın tamamen temizlendiği anlamına gelmeyebilir.
+
+## Taşma ve hijyen riski
+
+Klozet taşmaya yaklaştığında ek sifon çekmek durumu kötüleştirebilir. Su kullanımını azaltmak, taşmayı önlemek ve mümkünse ana vanayı bilerek değil panikle zorlamadan durum notu almak önceliklidir. Elektrik prizi yakınında su birikmesi varsa teması önleyin. Alt kata sızıntı veya kötü koku varsa fotoğraf ve zaman kaydı tutun.
+
+## Rezervuar dolum süresi ile tıkanıklık karıştırması
+
+Rezervuarın yavaş dolması bazen “tuvalet tıkalı” sanılır; oysa sorun sifon gücünden bağımsız bir dolum vanası veya şamandıra ayarı olabilir. Sifon çekildikten sonra hazne boşalıyor ancak yeniden dolum uzun sürüyorsa tıkanıklık değil rezervuar tarafı değerlendirilir. Bu ayrım yanlış kimyasal müdahaleyi azaltmaya yardımcı olur.
+
+## Koku ve geri tepme ipuçları
+
+Klozetten gelen kötü koku veya ara sıra geri tepme, yalnızca yüzeysel bir tıkanıklık değil hat içinde birikmiş organik yük veya havalandırma zayıflığı ihtimalini de düşündürür. Koku tek başına teşhis değildir; sifon su seviyesinin düşmesi veya kuru sifon da benzer koku üretebilir. Taşma olmadan koku varsa kullanım sıklığı ve havalandırma notu tutmak keşif için faydalıdır. Kimyasal koku gidericiler boru içindeki tıkaçı çözmez.
+
+## Evde güvenli gözlemler
+
+- Sifon sonrası su seviyesi yükseliyor mu, ne kadar sürede iniyor not edin
+- Lavabo/duş aynı anda etkileniyor mu kontrol edin
+- Islak mendil veya cisim atılmış olma ihtimalini hatırlamaya çalışın
+- Taşma riskinde ek sifon çekmeyin; su kullanımını azaltın
+- Farklı kimyasal ürünleri asla karıştırmayın; mümkünse kimyasal denemeyin
+- Tel veya yabancı cisimle zorlamayın
+- Tekrar aralığını (kaç saat/gün sonra yavaşladığını) kaydedin
+
+## Ne zaman profesyonel destek gerekir?
+
+Tuvalet birkaç kez tekrar tıkandıysa, taşma riski varsa, birden fazla gider etkileniyorsa veya kimyasal denemesinden sonuç alınamadıysa [tıkanıklık açma](/hizmetler/tikaniklik-acma) ve gerektiğinde [kameralı tesisat görüntüleme](/hizmetler/kamerali-tesisat-goruntuleme-ve-onarim) planlanmalıdır. Kağıthane’de benzer şikâyetler için [Kağıthane tuvalet tıkanıklığı](/kagithane-tuvalet-tikanikligi) sayfası yerel servis bağlamını verir. Amaç yalnızca anlık sifonu açmak değil, tekrarı üreten nedeni görmektir.
+
+## Sonuç
+
+Tuvalet tıkanıklığı rezervuar sifonu, yabancı cisim veya ana hat sorunundan kaynaklanabilir; lavabo yöntemleri ve sert kimyasallar güvenli çözüm sayılmamalıdır. Ev gözlemleri lokal ile ortak hat ayrımına yardım eder; kalıcı sonuç yöntem seçimi ve gerektiğinde görüntüleme ile netleşir.
+    `.trim(),
+    category: "Tıkanıklık",
+    publishedAt: "2026-09-01T09:30:00.000Z",
+    updatedAt: "2026-09-01T09:30:00.000Z",
+    readingTime: 9,
+    seoTitle: "Tuvalet Tıkanıklığı Neden Olur? Sifon ve Ana Hat Rehberi",
+    seoDescription:
+      "Tuvalet tıkanıklığının olası nedenleri: sifon zayıflığı, yabancı cisim, ana gider. Kimyasal riskleri ve lavabo tıkanığından ayrım.",
+    canonicalPath: "/blog/tuvalet-tikanikligi-neden-olur",
+    relatedServices: [
+      "tikaniklik-acma",
+      "kamerali-tesisat-goruntuleme-ve-onarim",
+    ],
+    relatedServiceSlugs: [
+      "tikaniklik-acma",
+      "kamerali-tesisat-goruntuleme-ve-onarim",
+    ],
+    relatedArticleSlugs: [
+      "tikaniklik-acildiktan-sonra-neden-tekrar-eder",
+      "birden-fazla-gider-ayni-anda-neden-yavaslar",
+      "robotla-tikaniklik-acma-ile-pimas-yikama-farki",
+    ],
+    cluster: "tikaniklik",
+    searchIntent: "informational",
+    primaryKeyword: "tuvalet tıkanıklığı neden olur",
+    secondaryKeywords: [
+      "klozet tıkanıklığı",
+      "tuvalet sifonu inmiyor",
+      "tuvalet taşma tıkanıklık",
+    ],
+    needsTechnicalReview: false,
+    status: "published",
+    reviewerId: "mucahit-korkmaz",
+    image: "/images/tikaniklik-acma-hero.webp",
+    imageAlt: "Tıkanan tuvalette sifon ve taşma riski için profesyonel kontrol",
+    relatedLinks: [
+      { href: "/kagithane-tuvalet-tikanikligi", label: "Kağıthane tuvalet tıkanıklığı" },
+      { href: "/hizmetler/tikaniklik-acma", label: "Tıkanıklık açma" },
+      { href: "/", label: "Kağıthane tesisatçı (ana sayfa)" },
+      { href: "/hizmet-bolgeleri/kagithane", label: "Kağıthane tesisat hizmet bölgeleri" },
+      { href: "/iletisim", label: "Servis talebi oluştur" },
+    ],
+    technicalReview: {
+      items: [
+        {
+          topic: "Tuvalet–lavabo tıkanıklığı ayrımı",
+          status: "verified",
+          note: "Lokal tuvalet ile ana hat ayrımı teknik incelemede uygun bulundu.",
+        },
+        {
+          topic: "Kimyasal ürün güvenlik uyarıları",
+          status: "verified",
+          note: "Kimyasalların karıştırılmaması ve risk dili teknik incelemede uygun bulundu.",
+        },
+        {
+          topic: "Taşma ve zorlamalı müdahale sınırları",
+          status: "verified",
+          note: "Ek sifon ve agresif itme uyarıları teknik incelemede yeterli bulundu.",
+        },
+      ],
+    },
+    faq: [
+      {
+        question: "Tuvalet tıkanığında kimyasal açıcı kullanmalı mıyım?",
+        answer:
+          "Genelde önerilmez. Geçici rahatlama verse bile cisim veya birikinti kalabilir; ürünleri karıştırmak tehlikelidir. Tekrarlayan sorunlarda mekanik/kamera değerlendirmesi daha güvenlidir.",
+        category: "tikaniklik",
+      },
+      {
+        question: "Sifon çekince su yükseliyorsa ne yapmalıyım?",
+        answer:
+          "Ek sifon çekmeyin; taşma riskini artırabilir. Su kullanımını azaltıp lavabo/duşun da etkilenip etkilenmediğini not edin.",
+        category: "tikaniklik",
+      },
+      {
+        question: "Yalnızca tuvalet mi tıkalı, nasıl anlarım?",
+        answer:
+          "Lavabo ve duş normalse lokal şüphe güçlenir. Birden fazla gider aynı anda yavaşlıyorsa ortak hat ihtimali artar.",
+        category: "tikaniklik",
+      },
+      {
+        question: "Islak mendil tuvaleti tıkar mı?",
+        answer:
+          "Evet, ıslak mendil ve benzeri ürünler parçalanmadan birikip tıkaç oluşturabilir. Atılmaması tekrar riskini azaltır.",
+        category: "tikaniklik",
+      },
+    ],
+  }
 ];

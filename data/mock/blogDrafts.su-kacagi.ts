@@ -768,4 +768,288 @@ Rezervuardan su akması çoğu zaman şamandıra, doldurma ventili veya sifon co
       },
     ],
   },
+{
+    id: "draft-su-basinci",
+    title: "Evde Su Basıncı Neden Düşük? Bina, Daire ve Armatür Ayrımı",
+    slug: "evde-su-basinci-neden-dusuk",
+    excerpt:
+      "Düşük su basıncı kaçaktan önce aeratör, ortak kolon, regülatör veya sabah yoğunluğu kaynaklı olabilir. Bina–daire ayrımı ve güvenli gözlem rehberi.",
+    content: `
+Evde suyun zayıf akması, birçok kullanıcıda önce “boru kaçırıyor” düşüncesini uyandırır. Oysa düşük basınç çoğu zaman aktif bir kaçak teşhisi değildir; aeratör tıkanıklığı, daire giriş vanası, ortak kolon hattı, basınç regülatörü ayarı veya sabah–akşam kullanım yoğunluğu aynı hissi üretebilir. Bu yazı, basınç zayıflığını kaçak listesinden ayırarak bina, daire ve armatür düzeyinde değerlendirmeye yardımcı olur. Amaç kesin teşhis vermek değil, güvenli gözlemlerle şüpheyi daraltmak ve doğru hizmete yönlendirmektir.
+
+## Düşük basınç neyi anlatır, neyi anlatmaz?
+
+Zayıf akış, suyun “az geldiğini” gösterir; kaynağın kaçak olduğunu kanıtlamaz. Kaçak daha çok sayaç hareketi, nem, alt kata sızıntı gibi belirtilerle birlikte düşünülür; bu konular için [gizli su kaçağı nasıl tespit edilir](/blog/gizli-su-kacagi-nasil-tespit-edilir) rehberi daha uygundur. Basınç şikâyetinde önce tek musluk mu yoksa tüm daire mi etkileniyor, yalnızca sıcak mı yoksa soğuk da mı zayıf, soruları yönlendiricidir.
+
+## Bina basıncı ile daire içi farkı
+
+Bazı binalarda üst katlarda şebeke basıncı doğal olarak daha düşüktür; hidrofor veya basınç artırma sistemi varsa bu sistemin durumu tüm daireleri etkiler. Komşularda da aynı saatlerde zayıf akış varsa bina/ortak sistem şüphesi güçlenir. Yalnızca sizin dairenizde sorun varsa daire giriş vanası, filtre, flex bağlantı veya armatür tarafı daha öne çıkar. Bu ayrım yönetime veya profesyonel keşfe iletilecek somut bir not üretir.
+
+## Aeratör ve musluk ucu tıkanıklığı
+
+Musluk ucundaki aeratör (perlatör) kireç ve tortu biriktirdiğinde akış incelir, sıçrama artar veya “basınç düştü” hissi oluşur. Tek bir lavabo veya mutfak musluğu zayıfken diğer noktalar normalse aeratör şüphesi yüksektir. Nazikçe sökülüp temizlenmesi bazı kullanıcılarda rahatlama sağlar; dişi bozacak zorlama önerilmez. Sürekli damlama da eşlik ediyorsa [musluk neden damlar](/blog/musluk-neden-damlar) ayrımıyla birlikte bakmak faydalıdır.
+
+## Ortak kolon (riser) ve paylaşımlı hat
+
+Apartmanlarda soğuk veya sıcak su kolon hattı ortak çalışabilir. Kolon üzerindeki bir daralma, bakım veya üst/alt daire kullanımı, sizin dairenizde geçici zayıflık yaratabilir. Özellikle sabah erken veya akşam saatlerinde birden fazla dairenin aynı anda kullanımı “basınç düştü” şikâyetini artırır. Bu, daire içi kaçak kanıtı değildir; zaman desenini not etmek yeterlidir.
+
+## Basınç regülatörü ve daire giriş vanası
+
+Bazı dairelerde girişte basınç düşürücü (regülatör) bulunur. Yanlış ayar, arıza veya filtre tıkanıklığı akışı zayıflatabilir. Daire ana vanasının kısmen kapalı kalması da benzer etki yapar. Vanayı ani ve zorlayıcı hareketlerle açıp kapatmak önerilmez; konumu gözle kontrol edip not almak güvenli ilk adımdır. Regülatör ayarı teknik ölçüm gerektirir; rastgele çevirmek önerilmez.
+
+## Sabah ve akşam yoğunluğu (peak)
+
+Şebeke ve bina içi kullanımın yoğun olduğu saatlerde basınç hissi düşebilir; gece geç saatlerde düzelme görülmesi bu senaryoyu destekler. Mevsimsel sulama, tadilat dönemleri veya hidrofor arızası da aynı tabloyu üretebilir. Yoğunluk kaynaklı zayıflık ile sürekli, gün boyu aynı derecede düşük akış ayrı değerlendirilmelidir.
+
+## Sıcak–soğuk ve rezervuar karıştırması
+
+Yalnızca sıcak su zayıfsa kombi/eşanjör veya sıcak hat tarafı; yalnızca soğuk zayıfsa soğuk kolon veya giriş tarafı daha olasıdır. Klozet sifonunun zayıf inmesi bazen basınç değil rezervuar dolum sorunudur; sürekli akış varsa [rezervuar neden su akıyor](/blog/rezervuar-neden-su-akiyor) rehberi daha uygundur. Bu ayrımlar teşhis değil servis öncesi yönlendirmedir.
+
+## Filtre ve esnek hortum etkisi
+
+Daire girişindeki pislik tutucu filtre veya musluk altı flex hortumdaki kısmi daralma, tek noktada veya tüm dairede zayıf akış hissi yaratabilir. Filtre temizliği markaya göre değişir; bilmeden sökmeye çalışmak sızıntı riski doğurur. Flex hortumda ezilme veya aşırı kıvrım da debıyı düşürebilir. Bu noktalar kaçak teşhisi değil, basınç hissini açıklayan mekanik ihtimallerdir.
+
+## Evde güvenli gözlemler
+
+- Tek musluk mu yoksa tüm kullanım noktaları mı zayıf, listeleyin
+- Yalnızca sıcak, yalnızca soğuk veya her ikisi mi olduğunu not edin
+- Komşu dairelerde aynı saatlerde benzer şikâyet var mı sorun
+- Aeratörü zorlamadan kontrol edin; dişi bozmayın
+- Daire giriş vanasının tam açık konumda olup olmadığını gözle bakın
+- Ana vanayı veya regülatörü rastgele çevirmeyin / zorlamayın
+- Sayaç hareketi veya nem de varsa bunları ayrı kaydedin (basınçtan bağımsız)
+
+## Ne zaman profesyonel destek gerekir?
+
+Tüm dairede sürekli düşük basınç varsa, regülatör/vana şüphesi belirsizse veya armatür değişimi sonrası düzelme olmuyorsa [su tesisatı](/hizmetler/su-tesisati) kontrolü planlanmalıdır. Tek bataryada sorun yoğunlaşıyorsa [batarya ve musluk montaj](/hizmetler/batarya-musluk-montaj) kapsamında aeratör, kartuş ve bağlantı değerlendirilebilir. Kağıthane’de benzer şikâyetler için [Kağıthane su basıncı düşük](/kagithane-su-basinci-dusuk) sayfası yerel bağlam sağlar. Amaç, bina ile daire içi nedeni ayırıp gereksiz kırım veya yanlış “kaçak” varsayımından kaçınmaktır.
+
+## Sonuç
+
+Evde düşük su basıncı çoğu zaman kaçaktan önce aeratör, ortak kolon, regülatör, vana konumu veya yoğun kullanım saatleriyle ilişkilidir. Gözlemler şüpheyi daraltır; ölçüm ve doğru parça/hat kontrolü profesyonel süreçte netleşir. Nem veya sayaç hareketi eşlik ediyorsa basınç şikâyeti ile kaçak değerlendirmesi ayrı başlıklarda ele alınmalıdır.
+    `.trim(),
+    category: "Su Tesisatı",
+    publishedAt: "2026-08-31T09:15:00.000Z",
+    updatedAt: "2026-08-31T09:15:00.000Z",
+    readingTime: 9,
+    seoTitle: "Evde Su Basıncı Neden Düşük? Bina ve Armatür Rehberi",
+    seoDescription:
+      "Düşük su basıncının olası nedenleri: aeratör, ortak kolon, regülatör, sabah yoğunluğu. Kaçak varsayımından ayrım ve güvenli gözlem.",
+    canonicalPath: "/blog/evde-su-basinci-neden-dusuk",
+    relatedServices: ["su-tesisati", "batarya-musluk-montaj"],
+    relatedServiceSlugs: ["su-tesisati", "batarya-musluk-montaj"],
+    relatedArticleSlugs: [
+      "musluk-neden-damlar",
+      "rezervuar-neden-su-akiyor",
+      "gizli-su-kacagi-nasil-tespit-edilir",
+    ],
+    cluster: "su-kacagi",
+    searchIntent: "informational",
+    primaryKeyword: "evde su basıncı neden düşük",
+    secondaryKeywords: [
+      "musluk suyu az geliyor",
+      "su basıncı düşük neden olur",
+      "aerator tıkanıklığı basınç",
+    ],
+    needsTechnicalReview: false,
+    status: "published",
+    reviewerId: "mucahit-korkmaz",
+    image: "/images/su-tesisati-hero.webp",
+    imageAlt: "Zayıf akan muslukta su basıncı ve aeratör kontrolü",
+    relatedLinks: [
+      { href: "/kagithane-su-basinci-dusuk", label: "Kağıthane su basıncı düşük" },
+      { href: "/hizmetler/su-tesisati", label: "Su tesisatı" },
+      { href: "/", label: "Kağıthane tesisatçı (ana sayfa)" },
+      { href: "/hizmet-bolgeleri/kagithane", label: "Kağıthane tesisat hizmet bölgeleri" },
+      { href: "/iletisim", label: "Servis talebi oluştur" },
+    ],
+    technicalReview: {
+      items: [
+        {
+          topic: "Basınç zayıflığı ile kaçak ayrımı",
+          status: "verified",
+          note: "Düşük basıncın birincil kaçak teşhisi olmadığı dili teknik incelemede uygun bulundu.",
+        },
+        {
+          topic: "Bina–daire ve aeratör ayrımı",
+          status: "verified",
+          note: "Tek musluk / tüm daire / komşu karşılaştırması teknik incelemede uygun bulundu.",
+        },
+        {
+          topic: "Regülatör ve vana müdahale sınırları",
+          status: "verified",
+          note: "Rastgele ayar ve zorlama uyarısı teknik incelemede yeterli bulundu.",
+        },
+      ],
+    },
+    faq: [
+      {
+        question: "Tek musluk zayıfsa ne düşünülmeli?",
+        answer:
+          "Aeratör tıkanıklığı veya o armatüre özgü bağlantı şüphesi güçlenir. Diğer musluklar normalse önce uç temizliği ve armatür kontrolü değerlendirilir.",
+        category: "su-kacagi",
+      },
+      {
+        question: "Komşularda da basınç düşükse kaçak mı vardır?",
+        answer:
+          "Ortak kolon, hidrofor veya şebeke yoğunluğu daha olasıdır. Bu durum tek daire kaçağı kanıtı değildir; zaman desenini not etmek faydalıdır.",
+        category: "su-kacagi",
+      },
+      {
+        question: "Sabahları zayıf, geceleri iyi akıyorsa ne olur?",
+        answer:
+          "Kullanım yoğunluğu (peak) senaryosu güçlenir. Gün boyu aynı derecede zayıf akıştan ayrı değerlendirilir.",
+        category: "su-kacagi",
+      },
+      {
+        question: "Düşük basınç yüksek faturaya yol açar mı?",
+        answer:
+          "Basınç düşüklüğü tek başına fatura artışı demek değildir. Fatura artışı ve sayaç hareketi varsa kaçak değerlendirmesi ayrı ele alınmalıdır.",
+        category: "su-kacagi",
+      },
+    ],
+  },
+{
+    id: "draft-gizli-kacagi",
+    title: "Gizli Su Kaçağı Nasıl Tespit Edilir? Sayaç, Nem ve Cihazlı Yöntemler",
+    slug: "gizli-su-kacagi-nasil-tespit-edilir",
+    excerpt:
+      "Gizli su kaçağı tespitinde sayaç testi, nem örüntüsü ve termal/akustik cihazlı yöntemler yönlendiricidir. Kesin garanti olmadan güvenli gözlem rehberi.",
+    content: `
+Gizli su kaçağı, yüzeyde hemen görünmeyen ancak sayaç hareketi, nem artışı veya fatura sapmasıyla kendini hissettiren bir durum olabilir. “Gizli” ifadesi, kaynağın duvar içi, şap altı veya şaftta olabileceğini anlatır; tek bir yöntemle her noktayı %100 bulma garantisi yoktur. Bu yazı, tespit yaklaşımını belirti listesinden ayırarak sayaç, nem ve cihazlı yöntemleri kavramsal düzeyde anlatır. Amaç yumuşak iddialarla şüpheyi daraltmak; kırma kararı vermeden önce ölçülebilir adımlar önermektir.
+
+## Tespit, teşhis ve onarım neden ayrı düşünülür?
+
+Belirti (nem, sayaç hareketi) şüpheyi doğurur; tespit olası bölgeyi daraltır; onarım ise kaynağa göre planlanır. Bu üç adımı birbirine karıştırmak gereksiz kırıma yol açabilir. Evdeki gözlemler yönlendiricidir; nokta doğrulama çoğu zaman cihazlı değerlendirme ile güçlenir. Hiçbir ev testi laboratuvar kesinliği iddia etmez.
+
+## Sayaç ile aktif geçiş gözlemi
+
+Tüm musluklar ve dış bağlantılar kapalıyken sayacın ilerlemeye devam etmesi, aktif su geçişi ihtimalini güçlendirir. Rezervuar, damlayan vana veya ortak hat da aynı görüntüyü verebilir; bu yüzden sayaç pozitifliği tek başına “şu boru kaçırıyor” demek değildir. Adım adım yaklaşım [musluklar kapalıyken su sayacı neden döner](/blog/musluklar-kapaliyken-su-sayaci-neden-doner) rehberiyle uyumludur. Fotoğraflı okuma ve 30–60 dakikalık tekrar, tek seferlik yanılsamayı azaltmaya yardımcı olur.
+
+## Nem örüntüsü ve yoğuşma ayrımı
+
+Duvar veya tavanda nem, kaçak olabileceği gibi yoğuşma da olabilir. Nem lekesi ısı köprüsü, havalandırma ve kullanım saatleriyle ilişkiliyse yoğuşma ihtimali artar; sürekli büyüyen ve kuruma göstermeyen alanlar kaçak şüphesini güçlendirebilir. Ayrıntılı ayrım için [duvar nemi su kaçağı mı yoğuşma mı](/blog/duvar-nemi-su-kacagi-mi-yogusma-mi) yazısı yönlendiricidir. Nem ölçer kullanımı profesyonelde daha anlamlıdır; ev tipi cihazlar göreli fark gösterebilir, mutlak teşhis değildir.
+
+## Alt kata sızıntıda kaynak daraltma
+
+Alt komşuya su gitmesi, ıslak noktanın kaynağın başladığı yer olduğu anlamına gelmez. Su döşeme arasında ilerleyebilir. Temiz su, gider, izolasyon veya ısıtma ayrımı sistematik yapılmalıdır; [alt kata su sızmasının kaynağı nasıl bulunur](/blog/alt-kata-su-sizmasinin-kaynagi-nasil-bulunur) bu çerçeveyi anlatır. Rastgele üst katta kırma, yanlış dairede müdahale riskini artırır.
+
+## Termal ve akustik yöntemler (kavramsal)
+
+Profesyonel uygulamada termal kamera, yüzey sıcaklık farklarını; akustik dinleme ise basınçlı hatlardaki sızıntı sesini daraltmaya yardımcı olabilir. Bu yöntemler koşullara (kaplama, gürültü, hat tipi) bağlıdır ve her vakada aynı netliği vermez. “Cihaz gösterdi, kesin orada” iddiası yerine, birden fazla yöntemin birbirini desteklemesi daha güvenilir bir yaklaşımdır. Kullanıcının kendi termal telefon uygulamasıyla kesin nokta bulması beklenmemelidir.
+
+## Basınç ve hat tipi bağlamı
+
+Temiz su hattı basınçlıdır; gider hattı genellikle kullanım anında belirti verir. Isıtma hattı içme suyu sayacını her zaman etkilemez. Bu yüzden tespit planı hat tipine göre değişir. Yanlış hat varsayımı yanlış test sırası üretir. Keşif öncesi hangi sistemin şüpheli olduğuna dair notlar (ısıtma açıkken mi, musluk kullanımı sırasında mı) değerlendirmeyi hızlandırır.
+
+## Kayıt tutmanın değeri
+
+Tarihli sayaç okuması, nem fotoğrafları ve hangi odada artış olduğu, tek seferlik gözlemden daha değerlidir. Birkaç gün tekrarlanan örüntü, rastgele bir unutulmuş musluktan ayırmaya yardımcı olur. Bu kayıtlar [su kaçağı tespiti ve onarım](/hizmetler/su-kacagi-tespit-ve-onarim) sürecinde yazılı keşif notuna dönüşebilir; garanti yerine kanıt seti sağlar.
+
+## Sigorta ve yönetim iletişiminde kayıt
+
+Alt kata sızıntı veya ortak alanda nem olduğunda tarihli fotoğraf, sayaç okuması ve hangi saatte arttığına dair notlar, hem keşif hem de yönetim/sigorta görüşmelerinde bağlam sağlar. Bu kayıtlar teşhis yerine delil setidir; yine de nokta tespiti cihazlı değerlendirme olmadan garanti edilmez.
+
+## Ortak alan ve şaft gözlemi
+
+Apartman şaftı, merdiven boşluğu veya ortak boru güzergâhında nem artışı, kaçak kaynağının tek daireye ait olmadığını düşündürebilir. Bu durumda tek taraflı kırma yerine yönetim bilgilendirmesi ve ortak hat değerlendirmesi gündeme gelir. Ortak alan nemi kesin ortak hat demek değildir; yine de keşif planını değiştiren önemli bir bağlamdır.
+
+## Evde güvenli gözlemler
+
+- Tüm kullanım noktalarını kapatıp sayaç fotoğrafı alın; 30–60 dk sonra tekrar bakın
+- Rezervuar ve dış muslukları listeye ekleyin
+- Nemli alanları tarihle fotoğraflayın; yayılma hızını not edin
+- Elektrik prizi yakınında nem varsa o noktayı kullanmayın
+- Duvar delmeyin, rastgele kırmayın, kimyasal “tıkaç açıcı” ile hat aramayın
+- Ana vanayı yalnızca gözlem amaçlı nazikçe kullanın; zorlamayın
+- Alt kata sızıntı varsa komşu/yönetimle iletişimi ve zaman çizelgesini kaydedin
+
+## Ne zaman profesyonel destek gerekir?
+
+Sayaç testi tekrarlanabilir biçimde pozitifse, nem hızla yayılıyorsa, alt kata sızıntı varsa veya ev gözlemleri kaynağı açıklamıyorsa cihazlı [su kaçağı tespiti ve onarım](/hizmetler/su-kacagi-tespit-ve-onarim) değerlendirilmelidir. Kağıthane’de benzer şikâyetler için [Kağıthane gizli su kaçağı](/kagithane-gizli-su-kacagi) sayfası yerel servis bağlamını verir. Amaç, gereksiz kırım yapmadan olası noktaları daraltmak ve onarım kapsamını netleştirmektir; sonuç her zaman koşullara bağlıdır.
+
+## Sonuç
+
+Gizli su kaçağı tespitinde sayaç, nem örüntüsü ve gerektiğinde termal/akustik cihazlı yöntemler birlikte okunur; hiçbir yöntem tek başına kesin garanti vermez. Ev gözlemleri şüpheyi yönlendirir; nokta daraltma ve güvenli onarım profesyonel süreçte planlanır. Erken kayıt, yanlış kırım riskini azaltmaya yardımcı olur.
+    `.trim(),
+    category: "Su Kaçağı",
+    publishedAt: "2026-09-03T09:50:00.000Z",
+    updatedAt: "2026-09-03T09:50:00.000Z",
+    readingTime: 9,
+    seoTitle: "Gizli Su Kaçağı Nasıl Tespit Edilir? Sayaç ve Cihazlı Yöntemler",
+    seoDescription:
+      "Gizli su kaçağı tespitinde sayaç testi, nem örüntüsü, termal/akustik yöntemler. Soft iddialar, güvenli gözlem ve ne zaman destek gerekir.",
+    canonicalPath: "/blog/gizli-su-kacagi-nasil-tespit-edilir",
+    relatedServices: ["su-kacagi-tespit-ve-onarim"],
+    relatedServiceSlugs: ["su-kacagi-tespit-ve-onarim"],
+    relatedArticleSlugs: [
+      "musluklar-kapaliyken-su-sayaci-neden-doner",
+      "duvar-nemi-su-kacagi-mi-yogusma-mi",
+      "alt-kata-su-sizmasinin-kaynagi-nasil-bulunur",
+    ],
+    cluster: "su-kacagi",
+    searchIntent: "informational",
+    primaryKeyword: "gizli su kaçağı nasıl tespit edilir",
+    secondaryKeywords: [
+      "gizli kaçak tespiti",
+      "su kaçağı cihazlı tespit",
+      "duvar içi su kaçağı nasıl bulunur",
+    ],
+    needsTechnicalReview: false,
+    status: "published",
+    reviewerId: "mucahit-korkmaz",
+    image: "/images/su-kacagi-tespit-hero.webp",
+    imageAlt: "Gizli su kaçağı için sayaç ve nem odaklı tespit değerlendirmesi",
+    relatedLinks: [
+      { href: "/kagithane-gizli-su-kacagi", label: "Kağıthane gizli su kaçağı" },
+      { href: "/hizmetler/su-kacagi-tespit-ve-onarim", label: "Su kaçağı tespiti ve onarım" },
+      { href: "/", label: "Kağıthane tesisatçı (ana sayfa)" },
+      { href: "/hizmet-bolgeleri/kagithane", label: "Kağıthane tesisat hizmet bölgeleri" },
+      { href: "/iletisim", label: "Servis talebi oluştur" },
+    ],
+    technicalReview: {
+      items: [
+        {
+          topic: "Tespit yöntemlerinin garanti vermeyen dili",
+          status: "verified",
+          note: "Sayaç/nem/cihazlı yöntemlerin yönlendirici olduğu vurgusu teknik incelemede uygun bulundu.",
+        },
+        {
+          topic: "Termal ve akustik kavramsal anlatım",
+          status: "verified",
+          note: "Koşula bağlılık ve tek yöntem garantisi verilmemesi teknik incelemede uygun bulundu.",
+        },
+        {
+          topic: "DIY kırım ve güvenlik sınırları",
+          status: "verified",
+          note: "Rastgele kırma ve elektrik/nem uyarıları teknik incelemede yeterli bulundu.",
+        },
+      ],
+    },
+    faq: [
+      {
+        question: "Sayaç testi gizli kaçağı kesin gösterir mi?",
+        answer:
+          "Hayır. Aktif geçiş ihtimalini güçlendirir; rezervuar, damlama veya ortak hat da aynı sonucu verebilir. Yönlendirici bir gözlemdir.",
+        category: "su-kacagi",
+      },
+      {
+        question: "Termal kamera her zaman kaçağı bulur mu?",
+        answer:
+          "Hayır. Kaplama, ortam koşulları ve hat tipine bağlıdır. Tek başına kesin nokta garantisi vermez; diğer yöntemlerle birlikte değerlendirilir.",
+        category: "su-kacagi",
+      },
+      {
+        question: "Nem lekesi gizli kaçak demek midir?",
+        answer:
+          "Her zaman değil. Yoğuşma da benzer görüntü üretebilir. Yayılma hızı, kuruma davranışı ve sayaç gözlemiyle birlikte okunmalıdır.",
+        category: "su-kacagi",
+      },
+      {
+        question: "Kendim duvarı kırarak bakabilir miyim?",
+        answer:
+          "Önerilmez. Yanlış noktada kırım maliyeti ve riski artar. Önce gözlem ve gerektiğinde cihazlı daraltma tercih edilir.",
+        category: "su-kacagi",
+      },
+    ],
+  }
 ];

@@ -22,4 +22,9 @@ export const PR2_DRAFT_SLUGS = [
   "kombi-arizasi-ile-tesisat-arizasi-nasil-ayirt-edilir",
   "musluk-neden-damlar",
   "rezervuar-neden-su-akiyor",
+  "kalorifer-kacagi-nasil-anlasilir",
+  "evde-su-basinci-neden-dusuk",
+  "tuvalet-tikanikligi-neden-olur",
+  "petek-hic-isinmiyor-ne-yapmali",
+  "gizli-su-kacagi-nasil-tespit-edilir",
 ] as const;

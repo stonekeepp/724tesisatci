@@ -40,6 +40,10 @@ export const services: Service[] = [
     faq: getServiceFaq("su-tesisati"),
     relatedServices: ["su-kacagi-tespit-ve-onarim", "batarya-musluk-montaj", "gomme-rezervuar-tamiri"],
     relatedLocations: ["istanbul", "kagithane"],
+    relatedGuideSlugs: [
+      "evde-su-basinci-neden-dusuk",
+      "musluk-neden-damlar",
+    ],
     relatedLocalLandingSlugs: [
       "kagithane-su-tesisati",
       "kagithane-su-basinci-dusuk",
@@ -146,6 +150,8 @@ export const services: Service[] = [
       "kagithane-kombi-petek-sorunlari",
       "kombi-basinci-neden-surekli-duser",
       "petegin-alti-soguk-ustu-sicaksa-ne-yapilmali",
+      "kalorifer-kacagi-nasil-anlasilir",
+      "petek-hic-isinmiyor-ne-yapmali",
     ],
     relatedLocalLandingSlugs: [
       "kagithane-kalorifer-tesisati",
@@ -200,6 +206,7 @@ export const services: Service[] = [
       "musluklar-kapaliyken-su-sayaci-neden-doner",
       "alt-kata-su-sizmasinin-kaynagi-nasil-bulunur",
       "duvar-nemi-su-kacagi-mi-yogusma-mi",
+      "gizli-su-kacagi-nasil-tespit-edilir",
     ],
     relatedLocalLandingSlugs: [
       "kagithane-su-kacagi-tespiti",
@@ -254,6 +261,7 @@ export const services: Service[] = [
       "tikaniklik-acildiktan-sonra-neden-tekrar-eder",
       "robotla-tikaniklik-acma-ile-pimas-yikama-farki",
       "birden-fazla-gider-ayni-anda-neden-yavaslar",
+      "tuvalet-tikanikligi-neden-olur",
     ],
     relatedLocalLandingSlugs: [
       "kagithane-tikaniklik-acma",
@@ -307,6 +315,7 @@ export const services: Service[] = [
       "kagithane-kombi-petek-sorunlari",
       "petegin-alti-soguk-ustu-sicaksa-ne-yapilmali",
       "kombi-arizasi-ile-tesisat-arizasi-nasil-ayirt-edilir",
+      "petek-hic-isinmiyor-ne-yapmali",
     ],
     relatedLocalLandingSlugs: ["kagithane-petek-temizleme", "kagithane-petek-isinmiyor"],
     seoTitle: "İstanbul Petek Temizleme Hizmeti | 724 Tesisatçı",

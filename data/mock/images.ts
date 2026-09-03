@@ -94,4 +94,9 @@ export const blogImages: Record<string, string> = {
     "/images/kombi-servisi-hero.webp",
   "musluk-neden-damlar": "/images/batarya-musluk-hero.webp",
   "rezervuar-neden-su-akiyor": "/images/gomme-rezervuar-hero.webp",
+  "kalorifer-kacagi-nasil-anlasilir": "/images/kalorifer-tesisati-hero.webp",
+  "evde-su-basinci-neden-dusuk": "/images/su-tesisati-hero.webp",
+  "tuvalet-tikanikligi-neden-olur": "/images/tikaniklik-acma-hero.webp",
+  "petek-hic-isinmiyor-ne-yapmali": "/images/petek-temizleme-hero.webp",
+  "gizli-su-kacagi-nasil-tespit-edilir": "/images/su-kacagi-tespit-hero.webp",
 };

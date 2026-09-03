@@ -183,4 +183,84 @@ export const blogTechnicalReviewApprovals: TechnicalReviewApproval[] = [
       "seo-audits/pr-5b/TECHNICAL-REVIEW-MUCAHIT-KORKMAZ.md",
     ],
   },
+  {
+    slug: "kalorifer-kacagi-nasil-anlasilir",
+    reviewerExpertId: "mucahit-korkmaz",
+    reviewedAt: "2026-09-03T10:00:00+03:00",
+    decision: "approved",
+    approvedItemTopics: [
+      "Isıtma kaçağı ile kombi basınç düşüşü ayrımı",
+      "Isıtma açıkken basınç kaybı dili",
+      "DIY müdahale sınırları",
+    ],
+    notes:
+      "Kalorifer kaçağı belirtileri, basınç düşüşü ayrımı ve DIY sınırları teknik açıdan incelenerek uygun bulunmuştur. Reviewer kimliği ve yazılı teknik onayı doğrulanmıştır; mesleki belge dosyaları bu kayıt kapsamında doğrulanmamıştır.",
+    evidenceReferences: [
+      "seo-audits/pr-5b/TECHNICAL-REVIEW-MUCAHIT-KORKMAZ.md",
+    ],
+  },
+  {
+    slug: "evde-su-basinci-neden-dusuk",
+    reviewerExpertId: "mucahit-korkmaz",
+    reviewedAt: "2026-09-03T10:15:00+03:00",
+    decision: "approved",
+    approvedItemTopics: [
+      "Basınç zayıflığı ile kaçak ayrımı",
+      "Bina–daire ve aeratör ayrımı",
+      "Regülatör ve vana müdahale sınırları",
+    ],
+    notes:
+      "Düşük su basıncı bina/daire/aeratör ayrımı ve kaçak varsayımı sınırları teknik açıdan incelenerek uygun bulunmuştur. Reviewer kimliği ve yazılı teknik onayı doğrulanmıştır; mesleki belge dosyaları bu kayıt kapsamında doğrulanmamıştır.",
+    evidenceReferences: [
+      "seo-audits/pr-5b/TECHNICAL-REVIEW-MUCAHIT-KORKMAZ.md",
+    ],
+  },
+  {
+    slug: "tuvalet-tikanikligi-neden-olur",
+    reviewerExpertId: "mucahit-korkmaz",
+    reviewedAt: "2026-09-03T10:30:00+03:00",
+    decision: "approved",
+    approvedItemTopics: [
+      "Tuvalet–lavabo tıkanıklığı ayrımı",
+      "Kimyasal ürün güvenlik uyarıları",
+      "Taşma ve zorlamalı müdahale sınırları",
+    ],
+    notes:
+      "Tuvalet tıkanıklığı ayrımı, kimyasal uyarıları ve taşma sınırları teknik açıdan incelenerek uygun bulunmuştur. Reviewer kimliği ve yazılı teknik onayı doğrulanmıştır; mesleki belge dosyaları bu kayıt kapsamında doğrulanmamıştır.",
+    evidenceReferences: [
+      "seo-audits/pr-5b/TECHNICAL-REVIEW-MUCAHIT-KORKMAZ.md",
+    ],
+  },
+  {
+    slug: "petek-hic-isinmiyor-ne-yapmali",
+    reviewerExpertId: "mucahit-korkmaz",
+    reviewedAt: "2026-09-03T10:45:00+03:00",
+    decision: "approved",
+    approvedItemTopics: [
+      "Tam soğuk ile altı soğuk/üstü sıcak ayrımı",
+      "Vana, hava ve dengeleme sırası",
+      "Tek petek–tüm sistem ayrımı",
+    ],
+    notes:
+      "Petek hiç ısınmama senaryosu, vana/hava/dengeleme sırası teknik açıdan incelenerek uygun bulunmuştur. Reviewer kimliği ve yazılı teknik onayı doğrulanmıştır; mesleki belge dosyaları bu kayıt kapsamında doğrulanmamıştır.",
+    evidenceReferences: [
+      "seo-audits/pr-5b/TECHNICAL-REVIEW-MUCAHIT-KORKMAZ.md",
+    ],
+  },
+  {
+    slug: "gizli-su-kacagi-nasil-tespit-edilir",
+    reviewerExpertId: "mucahit-korkmaz",
+    reviewedAt: "2026-09-03T11:00:00+03:00",
+    decision: "approved",
+    approvedItemTopics: [
+      "Tespit yöntemlerinin garanti vermeyen dili",
+      "Termal ve akustik kavramsal anlatım",
+      "DIY kırım ve güvenlik sınırları",
+    ],
+    notes:
+      "Gizli kaçak tespit yöntemlerinin soft dili, cihazlı yöntem sınırları ve DIY kırım uyarıları teknik açıdan incelenerek uygun bulunmuştur. Reviewer kimliği ve yazılı teknik onayı doğrulanmıştır; mesleki belge dosyaları bu kayıt kapsamında doğrulanmamıştır.",
+    evidenceReferences: [
+      "seo-audits/pr-5b/TECHNICAL-REVIEW-MUCAHIT-KORKMAZ.md",
+    ],
+  },
 ];

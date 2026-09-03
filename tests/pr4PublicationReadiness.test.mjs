@@ -38,6 +38,11 @@ const PR4_DRAFT_SLUGS = [
   "kombi-arizasi-ile-tesisat-arizasi-nasil-ayirt-edilir",
   "musluk-neden-damlar",
   "rezervuar-neden-su-akiyor",
+  "kalorifer-kacagi-nasil-anlasilir",
+  "evde-su-basinci-neden-dusuk",
+  "tuvalet-tikanikligi-neden-olur",
+  "petek-hic-isinmiyor-ne-yapmali",
+  "gizli-su-kacagi-nasil-tespit-edilir",
 ];
 
 function wordCount(text) {
@@ -49,10 +54,10 @@ function headingCount(text) {
 }
 
 describe("PR-4 draft data integrity", () => {
-  it("has eleven unique topical guide slugs", () => {
-    assert.equal(draftBlogPosts.length, 11);
+  it("has sixteen unique topical guide slugs", () => {
+    assert.equal(draftBlogPosts.length, 16);
     const slugs = draftBlogPosts.map((p) => p.slug);
-    assert.equal(new Set(slugs).size, 11);
+    assert.equal(new Set(slugs).size, 16);
     for (const slug of PR4_DRAFT_SLUGS) {
       assert.ok(slugs.includes(slug), slug);
     }

@@ -485,4 +485,284 @@ Kombi ile tesisat arızasını ayırt etmek, tek bir belirtiye değil birkaç be
       },
     ],
   },
+{
+    id: "draft-kalorifer-kacagi",
+    title: "Kalorifer Kaçağı Nasıl Anlaşılır? Petek, Vana ve Hat Belirtileri",
+    slug: "kalorifer-kacagi-nasil-anlasilir",
+    excerpt:
+      "Kalorifer kaçağı petek altı ıslaklık, vana sızıntısı veya ısıtma açıkken basınç kaybıyla kendini gösterebilir. Kombi basınç düşüşünden ayrımı ve güvenli gözlem rehberi.",
+    content: `
+Kalorifer (ısıtma) devresindeki bir kaçak, içme suyu tesisatından farklı bir kapalı döngüde ilerler. Bu yüzden “kombi basıncı düşüyor” şikâyeti ile “kalorifer kaçağı” çoğu zaman aynı cümlede geçer; ancak odak noktaları aynı değildir. Basınç düşüşü cihaz, genleşme tankı veya emniyet ventili kaynaklı da olabilir. Bu yazı, özellikle petek, vana ve ısıtma hattı çevresindeki sızıntı ipuçlarını ayırmaya yardımcı olur; hiçbir belirti tek başına kesin teşhis değildir. Amaç, güvenli gözlemlerle şüpheyi daraltmak ve gerektiğinde doğru hizmete yönlenmektir.
+
+## Isıtma kaçağı ile kombi basınç düşüşü neden karışır?
+
+Kapalı ısıtma devresinde su kaybı, manometrede düşüş olarak görülebilir. Bu, [kombi basıncı neden sürekli düşer](/blog/kombi-basinci-neden-surekli-duser) rehberindeki senaryolarla örtüşebilir. Fark şudur: kalorifer kaçağı değerlendirmesinde önce petek altı nem, vana gövdesi, dip bağlantıları ve ısıtma açıkken artan ıslaklık gibi “hat/petek” işaretleri aranır. Yalnızca paneli doldurup geçiştirmek, görünür bir sızıntıyı maskeleyebilir. Isıtma kapalıyken basınç sabitse ama ısıtma açılınca ıslaklık veya hızlanan düşüş görülüyorsa, devre tarafı şüphesi güçlenebilir; yine de bu tek başına nokta teşhis değildir.
+
+## Petek altı ve zemin ıslaklığı
+
+Peteğin altında, parke veya seramik üzerinde sürekli nem, pas izi veya küçük bir birikinti, vana veya petek bağlantısından yavaş sızıntıyı düşündürür. Islaklık bazen yalnızca ısıtma çalışırken belirginleşir; soğukken buharlaşma veya emilim yüzünden gözden kaçabilir. Alt kata sızıntı veya lokal zemin ısınması da ısıtma hattı ihtimalini destekleyen ek bağlam olabilir. Ancak zemin nemi her zaman kaloriferden gelmez; temiz su veya yoğuşma da benzer görüntü üretebilir.
+
+## Vana, rakor ve dip bağlantıları
+
+Termostatik veya manuel petek vanaları, nipeller ve dip rakorları zamanla conta yıpranması veya gevşek sıkma nedeniyle sızdırabilir. Vana gövdesinde ıslaklık, beyaz kireç halkası veya pas izi bu noktayı öne çıkarır. Vanayı “daha sıkı kapatalım” diye zorlamak gövdeyi bozabilir; güvenli gözlem fotoğraf ve not tutmaktır. Üç yollu vana veya kolektör grupları da benzer şekilde aday noktalar arasındadır; erişim zor olduğunda kullanıcı müdahalesi önerilmez.
+
+## Hat ve döşeme altı ihtimali
+
+Duvar içi veya döşeme altı ısıtma hatlarında kaçak, yüzeyde hemen görünmeyebilir. Basınç kaybı, lokal ısınma şeridi veya alt komşuya sızıntı bu kategoriyi düşündürür. Bu senaryoda rastgele kırma yerine cihazlı daraltma tercih edilir. Isıtma hattı ile temiz su hattını ayırmak için sayaç hareketi, sistem basıncı ve ıslaklığın ısıtma ile ilişkisi birlikte okunmalıdır; ayrım kesin hüküm değil yönlendirmedir.
+
+## Isıtma açıkken basınç kaybı örüntüsü
+
+Bazı hanelerde basınç, sistem soğukken daha yavaş düşerken ısıtma açıkken hızlanır. Bu örüntü, genleşen/dolaşan suyun zayıf bir noktadan geçişini güçlendirebilir. Tek seferlik hava alma sonrası küçük düşüş beklenen bir durum olabilir; günler içinde tekrarlayan doldurma ihtiyacı ise kayıp ihtimalini güçlendirir. Doldurma sıklığını tarihleyerek not etmek, keşif sırasında bağlam sağlar.
+
+## Diğer petek ve ısınma belirtileriyle birlikte okuma
+
+Tek bir petek hiç ısınmıyorsa sorun kaçaktan çok hava, vana konumu veya dengeleme kaynaklı da olabilir; bu ayrım için [petek hiç ısınmıyor ne yapmalı](/blog/petek-hic-isinmiyor-ne-yapmali) rehberi daha uygundur. Panelde hata kodu varken hat ıslaklığı yoksa cihaz tarafı daha öne çıkabilir; [kombi arızası ile tesisat arızası nasıl ayırt edilir](/blog/kombi-arizasi-ile-tesisat-arizasi-nasil-ayirt-edilir) yazısı bu çerçeveye yardımcı olur. Kaçak şüphesinde ise ıslaklık + basınç kaybı birlikte değerlendirilir.
+
+## Mevsim ve kullanım bağlamı
+
+Isıtma sezonunun ilk açılışlarında küçük sızıntılar daha kolay fark edilir çünkü sistem uzun süre kapalı kaldıktan sonra yeniden basınçlanır. Yazın ısıtma kullanılmazken yavaş bir kaçak, basınç göstergesinde daha geç görülebilir. Bu yüzden mevsim geçişlerinde petek altı ve vana kontrollerini artırmak faydalıdır. Yine de mevsimsel fark tek başına teşhis değildir; ıslaklık ve doldurma sıklığıyla birlikte okunmalıdır.
+
+## Evde güvenli gözlemler
+
+- Petek altlarını, vana gövdelerini ve dip bağlantılarını nem için kontrol edin
+- Islaklığı ısıtma açık/kapalı dönemleriyle ilişkilendirip not edin
+- Basınç değerini ve doldurma sıklığını tarihle kaydedin
+- Alt kata sızıntı veya zemin şişmesi varsa fotoğraflayın
+- Kombi kapağını açmayın; gaz ve elektrik bağlantılarına dokunmayın
+- Emniyet ventilini tıkamayın veya bantlamayın
+- Vanayı zorlayarak “sıkıştırarak” sızdırmazlık sağlamaya çalışmayın
+
+## Ne zaman profesyonel destek gerekir?
+
+Islaklık birkaç gün sürüyorsa, basıncı sık doldurmak zorunda kalıyorsanız, alt kata sızıntı varsa veya vana/petek çevresi net ıslanıyorsa [kalorifer tesisatı](/hizmetler/kalorifer-tesisati) ve gerektiğinde [kombi servisi](/hizmetler/kombi-servisi-ve-tesisati) birlikte planlanmalıdır. Kağıthane’de benzer şikâyetler için [Kağıthane kalorifer kaçağı](/kagithane-kalorifer-kacagi) sayfası yerel servis bağlamını verir. Amaç, su kaybının cihazdan mı yoksa petek/hat tarafından mı geldiğini ölçüm ve gözlemle ayırmaktır.
+
+## Sonuç
+
+Kalorifer kaçağı şüphesi, petek ve vana çevresi ıslaklığı ile ısıtma açıkken belirginleşen basınç kaybına odaklanır; kombi basınç düşüşünün tüm nedenlerini kapsamaz. Ev gözlemleri yön gösterir; nokta tespit ve güvenli onarım profesyonel değerlendirme ile netleşir. Erken kayıt tutmak hem su kaybını hem de gereksiz kırım riskini azaltmaya yardımcı olur.
+    `.trim(),
+    category: "Isıtma",
+    publishedAt: "2026-08-30T09:00:00.000Z",
+    updatedAt: "2026-08-30T09:00:00.000Z",
+    readingTime: 9,
+    seoTitle: "Kalorifer Kaçağı Nasıl Anlaşılır? Petek ve Hat Belirtileri",
+    seoDescription:
+      "Kalorifer kaçağı belirtileri: petek altı ıslaklık, vana sızıntısı, ısıtma açıkken basınç kaybı. Kombi basınç düşüşünden ayrım ve güvenli gözlem.",
+    canonicalPath: "/blog/kalorifer-kacagi-nasil-anlasilir",
+    relatedServices: ["kalorifer-tesisati", "kombi-servisi-ve-tesisati"],
+    relatedServiceSlugs: ["kalorifer-tesisati", "kombi-servisi-ve-tesisati"],
+    relatedArticleSlugs: [
+      "kombi-basinci-neden-surekli-duser",
+      "petek-hic-isinmiyor-ne-yapmali",
+      "kombi-arizasi-ile-tesisat-arizasi-nasil-ayirt-edilir",
+    ],
+    cluster: "isitma",
+    searchIntent: "informational",
+    primaryKeyword: "kalorifer kaçağı nasıl anlaşılır",
+    secondaryKeywords: [
+      "petek altı su sızıntısı",
+      "kalorifer vanası sızdırıyor",
+      "ısıtma tesisatı kaçak belirtileri",
+    ],
+    needsTechnicalReview: false,
+    status: "published",
+    reviewerId: "mucahit-korkmaz",
+    image: "/images/kalorifer-tesisati-hero.webp",
+    imageAlt: "Petek altı nem ve kalorifer vanası çevresinde sızıntı kontrolü",
+    relatedLinks: [
+      { href: "/kagithane-kalorifer-kacagi", label: "Kağıthane kalorifer kaçağı" },
+      { href: "/hizmetler/kalorifer-tesisati", label: "Kalorifer tesisatı" },
+      { href: "/", label: "Kağıthane tesisatçı (ana sayfa)" },
+      { href: "/hizmet-bolgeleri/kagithane", label: "Kağıthane tesisat hizmet bölgeleri" },
+      { href: "/iletisim", label: "Servis talebi oluştur" },
+    ],
+    technicalReview: {
+      items: [
+        {
+          topic: "Isıtma kaçağı ile kombi basınç düşüşü ayrımı",
+          status: "verified",
+          note: "Petek/hat odaklı kaçak ile genel basınç düşüşü ayrımı teknik incelemede uygun bulundu.",
+        },
+        {
+          topic: "Isıtma açıkken basınç kaybı dili",
+          status: "verified",
+          note: "Örüntünün yönlendirici olduğu ve kesin teşhis olmadığı vurgusu teknik incelemede uygun bulundu.",
+        },
+        {
+          topic: "DIY müdahale sınırları",
+          status: "verified",
+          note: "Vana zorlama, kombi kapağı ve emniyet ventili uyarıları teknik incelemede yeterli bulundu.",
+        },
+      ],
+    },
+    faq: [
+      {
+        question: "Kombi basıncı düşüyorsa mutlaka kalorifer kaçağı mı vardır?",
+        answer:
+          "Hayır. Genleşme tankı, emniyet ventili, kombi alt bağlantıları veya gösterge sapması da basıncı düşürebilir. Petek/vana ıslaklığı yoksa önce genel basınç düşüşü senaryoları da değerlendirilmelidir.",
+        category: "isitma",
+      },
+      {
+        question: "Petek altı nem her zaman kaçak mıdır?",
+        answer:
+          "Nem kaçak ihtimalini güçlendirir; ancak yoğuşma, temiz su sızıntısı veya başka bir kaynak da benzer görüntü verebilir. Isıtma ile ilişkisini not etmek faydalıdır.",
+        category: "isitma",
+      },
+      {
+        question: "Isıtma kapalıyken basınç sabitse kaçak yok mudur?",
+        answer:
+          "Bu, bazı yavaş kaçaklarda yanıltıcı olabilir. Isıtma açıkken hızlanan düşüş veya ıslaklık şüpheyi güçlendirir; yine de tek başına kesin sonuç değildir.",
+        category: "isitma",
+      },
+      {
+        question: "Vanayı sıkarak sızıntıyı durdurabilir miyim?",
+        answer:
+          "Zorlamalı sıkma gövde veya conta hasarını artırabilir. Islaklığı fotoğraflayıp not etmek güvenli gözlemdir; zorlama önerilmez.",
+        category: "isitma",
+      },
+    ],
+  },
+{
+    id: "draft-petek-isinmiyor",
+    title: "Petek Hiç Isınmıyor Ne Yapmalı? Vana, Hava ve Dengeleme",
+    slug: "petek-hic-isinmiyor-ne-yapmali",
+    excerpt:
+      "Petek tamamen soğuksa altı soğuk/üstü sıcak senaryosundan farklıdır. Vana konumu, hava, dengeleme ve tek–tüm petek ayrımı için güvenli rehber.",
+    content: `
+Bir peteğin hiç ısınmaması, “altı soğuk üstü sıcak” şikâyetinden farklı bir tabloyu işaret eder. Tamamen soğuk yüzey, vananın kapalı kalması, hava kilidi, yanlış dengeleme, tek hat sorunu veya tüm sistemi etkileyen bir dolaşım zayıflığı gibi olasılıkları düşündürür. Bu yazı, tam soğuk petek senaryosunu ayırmaya yardımcı olur; kesin teşhis yerine yönlendirici gözlem sunar. Amaç, güvenli kontrollerle şüpheyi daraltmak ve gerektiğinde doğru hizmete yönlenmektir.
+
+## Tam soğuk petek ile altı soğuk / üstü sıcak farkı
+
+Peteğin üstü sıcak altı soğuksa çoğu zaman hava veya dolaşım/tortu dengesizliği gündeme gelir; bu ayrım [peteğin altı soğuk üstü sıcaksa ne yapılmalı](/blog/petegin-alti-soguk-ustu-sicaksa-ne-yapilmali) rehberinde ele alınır. Buna karşılık petek gövdesi baştan sona soğuksa, önce vana konumu ve o peteğe sıcak suyun ulaşıp ulaşmadığı sorulmalıdır. İki belirtiyi birbirine karıştırmak yanlış müdahale (gereksiz hava alma veya yanlış temizlik beklentisi) üretebilir.
+
+## Vana konumu ve termostatik kafa
+
+Manuel veya termostatik vananın kapalı ya da kısık kalması en sık gözden kaçan nedenlerdendir. Termostatik kafa oda sıcaklığına göre kapanmış olabilir; mobilya arkası veya perdenin vanayı “sıcak” sanması da kapanmayı hızlandırabilir. Vanayı zorlamadan açık konuma getirip bir süre beklemek güvenli bir gözlemdir. Kafa sökülmeden veya vida zorlanmadan önce konum notu almak yeterlidir.
+
+## Hava kilidi ihtimali
+
+Sistemde hava, tek bir peteğe sıcak su girişini engelleyebilir. Tam soğuk petekte hava alma bazı durumlarda yardımcı olur; ancak bilmeden uzun süre açık bırakmak basınç kaybına yol açabilir. Hava alma sonrası basınç düşerse bunu not edin. Tüm petekler soğuksa sorun büyük olasılıkla tek noktadaki havadan daha geniştir; kombi dolaşımı veya genel sistem değerlendirmesi gerekir.
+
+## Tek petek mi, tüm petekler mi?
+
+Yalnızca bir petek soğuksa vana, branşman, lokal hava veya o hatta dengeleme şüphesi öne çıkar. Birden fazla veya tüm petekler soğuksa kombi çalışma modu, pompa dolaşımı, genel basınç veya tesisat tarafı birlikte düşünülür. Panelde hata kodu varsa [kombi arızası ile tesisat arızası nasıl ayırt edilir](/blog/kombi-arizasi-ile-tesisat-arizasi-nasil-ayirt-edilir) çerçevesi faydalıdır. Bu ayrım, keşifte doğru ekibin yönlendirilmesine yardımcı olur.
+
+## Dengeleme (balans) vanaları
+
+Bazı sistemlerde petek dönüşünde dengeleme vanası bulunur. Yanlış ayar, uzak peteklere yeterli sıcak su gitmesini engelleyebilir. Dengeleme ayarı teknik ölçüm ve deneyim gerektirir; rastgele açıp kapamak diğer peteklerin dengesini bozabilir. Kullanıcının “biraz daha açayım” yaklaşımı önerilmez; ayar durumunu fotoğraflamak daha güvenlidir.
+
+## Tortu ve petek içi tıkanıklık şüphesi
+
+Uzun yıllardır temizlenmemiş peteklerde tortu, dolaşımı zayıflatabilir. Tam soğuk petekte bu ihtimal, vana ve hava elendikten sonra gündeme gelir. Temizlik kararı tek belirtiye değil sistem durumuna göre verilir; her soğuk petek “mutlaka yıkama” demek değildir. Gerekirse [petek temizleme](/hizmetler/petek-temizleme) değerlendirmesi planlanır.
+
+## Basınç ve kaçak ile karıştırmama
+
+Petek soğukken aynı dönemde basınç sürekli düşüyorsa veya petek altında ıslaklık varsa kaçak ihtimali ayrı başlıkta ele alınmalıdır; [kalorifer kaçağı nasıl anlaşılır](/blog/kalorifer-kacagi-nasil-anlasilir) rehberi bu çerçeveye uygundur. Soğuk petek tek başına kaçak kanıtı değildir. Islaklık yokken yalnızca ısınma sorunu varsa odak dolaşım ve vana tarafında kalır.
+
+## Oda termostatı ve kombi modu kontrolü
+
+Oda termostatı hedefe ulaştıysa veya yaz/kış modu yanlış seçildiyse bazı petekler beklenen ısınmayı göstermeyebilir. Termostatın doğru odaya konumlanıp konumlanmadığı, mobilya arkasına sıkışıp sıkışmadığı da etkilidir. Bu kontroller kaçak veya tortu teşhisi değildir; önce sistemin gerçekten ısıtma talebi verdiğini doğrular.
+
+## Yeni montaj ve tadilat sonrası kontrol
+
+Yakın zamanda petek değişimi, hat uzatması veya tadilat yapıldıysa bağlantı yönü, vana tipi veya havayı tam alınmamış bir branşman tam soğuk petek üretebilir. Bu durumda önce montaj geçmişini not etmek, ardından vana ve hava kontrollerini yapmak doğru sıradır. Tadilat sonrası sorunlar otomatik olarak kombi arızası anlamına gelmez; yerel hat detayı daha sık sorumludur.
+
+## Evde güvenli gözlemler
+
+- Vananın açık/kısık/kapalı konumunu not edin; zorlamayın
+- Tek petek mi tüm petekler mi soğuk, listeleyin
+- Üst–alt sıcaklık farkı var mı yoksa tamamen soğuk mu ayırın
+- Hava alıyorsanız kısa tutun; basınç değişimini kaydedin
+- Kombi kapağını açmayın; gaz/elektrik bağlantılarına dokunmayın
+- Dengeleme vanasını rastgele çevirmeyin
+- Petek altında nem varsa fotoğraflayın (ısıınma sorunundan ayrı)
+
+## Ne zaman profesyonel destek gerekir?
+
+Vana açık olduğu halde petek günlerce soğuk kalıyorsa, birden fazla petek etkileniyorsa veya hava alma sonrası düzelme olmuyorsa [kalorifer tesisatı](/hizmetler/kalorifer-tesisati) ve gerektiğinde [petek temizleme](/hizmetler/petek-temizleme) birlikte planlanmalıdır. Kağıthane’de benzer şikâyetler için [Kağıthane petek ısınmıyor](/kagithane-petek-isinmiyor) sayfası yerel servis bağlamını verir. Amaç, vana/hava/dengeleme ile sistemik dolaşım sorununu ayırmaktır.
+
+## Sonuç
+
+Petek hiç ısınmıyorsa önce vana konumu, tek–tüm petek ayrımı ve hava ihtimali değerlendirilir; bu tablo “altı soğuk üstü sıcak” senaryosundan farklıdır. Ev gözlemleri yön gösterir; dengeleme, dolaşım ve temizlik kararı ölçüme dayalı profesyonel süreçte netleşir.
+    `.trim(),
+    category: "Isıtma",
+    publishedAt: "2026-09-02T09:45:00.000Z",
+    updatedAt: "2026-09-02T09:45:00.000Z",
+    readingTime: 9,
+    seoTitle: "Petek Hiç Isınmıyor Ne Yapmalı? Vana ve Hava Rehberi",
+    seoDescription:
+      "Petek tamamen soğuksa vana, hava, dengeleme ve tek–tüm petek ayrımı. Altı soğuk/üstü sıcak senaryosundan fark ve güvenli gözlem.",
+    canonicalPath: "/blog/petek-hic-isinmiyor-ne-yapmali",
+    relatedServices: ["petek-temizleme", "kalorifer-tesisati"],
+    relatedServiceSlugs: ["petek-temizleme", "kalorifer-tesisati"],
+    relatedArticleSlugs: [
+      "petegin-alti-soguk-ustu-sicaksa-ne-yapilmali",
+      "kalorifer-kacagi-nasil-anlasilir",
+      "kombi-arizasi-ile-tesisat-arizasi-nasil-ayirt-edilir",
+    ],
+    cluster: "isitma",
+    searchIntent: "informational",
+    primaryKeyword: "petek hiç ısınmıyor ne yapmalı",
+    secondaryKeywords: [
+      "kalorifer peteği soğuk",
+      "tek petek ısınmıyor",
+      "petek vanası kapalı mı",
+    ],
+    needsTechnicalReview: false,
+    status: "published",
+    reviewerId: "mucahit-korkmaz",
+    image: "/images/petek-temizleme-hero.webp",
+    imageAlt: "Tamamen soğuk petekte vana konumu ve ısınma kontrolü",
+    relatedLinks: [
+      { href: "/kagithane-petek-isinmiyor", label: "Kağıthane petek ısınmıyor" },
+      { href: "/hizmetler/petek-temizleme", label: "Petek temizleme" },
+      { href: "/", label: "Kağıthane tesisatçı (ana sayfa)" },
+      { href: "/hizmet-bolgeleri/kagithane", label: "Kağıthane tesisat hizmet bölgeleri" },
+      { href: "/iletisim", label: "Servis talebi oluştur" },
+    ],
+    technicalReview: {
+      items: [
+        {
+          topic: "Tam soğuk ile altı soğuk/üstü sıcak ayrımı",
+          status: "verified",
+          note: "İki senaryonun karıştırılmaması gerektiği dili teknik incelemede uygun bulundu.",
+        },
+        {
+          topic: "Vana, hava ve dengeleme sırası",
+          status: "verified",
+          note: "Önce vana/gözlem, dengelemenin kullanıcıya bırakılmaması teknik incelemede uygun bulundu.",
+        },
+        {
+          topic: "Tek petek–tüm sistem ayrımı",
+          status: "verified",
+          note: "Lokal ile sistemik dolaşım ayrımı teknik incelemede yeterli bulundu.",
+        },
+      ],
+    },
+    faq: [
+      {
+        question: "Petek hiç ısınmıyorsa önce ne kontrol edilmeli?",
+        answer:
+          "Vana konumunun açık olup olmadığı ve sorunun tek petekte mi yoksa tüm sistemde mi olduğu. Zorlamadan gözlem yeterli ilk adımdır.",
+        category: "isitma",
+      },
+      {
+        question: "Hava almak her soğuk petekte çözüm müdür?",
+        answer:
+          "Hayır. Bazen yardımcı olur; tüm petekler soğuksa veya basınç sorunları varsa hava tek başına yeterli olmayabilir.",
+        category: "isitma",
+      },
+      {
+        question: "Altı soğuk üstü sıcak ile aynı şey midir?",
+        answer:
+          "Hayır. Üstü sıcak altı soğuk farklı bir dolaşım/hava tablosudur; tamamen soğuk petek ayrı değerlendirilir.",
+        category: "isitma",
+      },
+      {
+        question: "Dengeleme vanasını kendim ayarlayabilir miyim?",
+        answer:
+          "Rastgele ayar diğer petekleri bozabilir. Ayar teknik ölçüm gerektirir; kullanıcıya önerilmez.",
+        category: "isitma",
+      },
+    ],
+  }
 ];

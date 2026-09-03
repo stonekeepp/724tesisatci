@@ -8,7 +8,7 @@ import { getAllAdLandingSlugs, getAdLandingBySlug } from "./adLandingService";
 import { staticPageSeo } from "@/data/mock/seo";
 
 /** Büyük içerik sürümü — her büyük içerik güncellemesinde bu tarihi güncelleyin */
-const CONTENT_LAST_UPDATED = new Date("2026-08-26"); // Week blog: 3 draft publish + musluk/rezervuar guides
+const CONTENT_LAST_UPDATED = new Date("2026-09-03"); // Week blog: kalorifer kaçak, basınç, tuvalet, petek, gizli kaçak
 
 export async function generateSitemapEntries() {
   const siteUrl = getSiteUrl();

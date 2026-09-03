@@ -42,7 +42,7 @@ const mucahit = expertProfiles.find((e) => e.id === "mucahit-korkmaz");
 const catalog = {
   approvals: blogTechnicalReviewApprovals,
   experts: expertProfiles,
-  nowMs: new Date("2026-08-26T18:00:00+03:00").getTime(),
+  nowMs: new Date("2026-09-03T18:00:00+03:00").getTime(),
 };
 
 describe("PR-5B reviewer profile", () => {
@@ -74,10 +74,10 @@ describe("PR-5B reviewer eligibility", () => {
 });
 
 describe("PR-5B approval records", () => {
-  it("has eleven valid topical approvals", () => {
-    assert.equal(blogTechnicalReviewApprovals.length, 11);
+  it("has sixteen valid topical approvals", () => {
+    assert.equal(blogTechnicalReviewApprovals.length, 16);
     const slugs = blogTechnicalReviewApprovals.map((a) => a.slug);
-    assert.equal(new Set(slugs).size, 11);
+    assert.equal(new Set(slugs).size, 16);
     for (const slug of [
       ...pilotPublicationCandidateSlugs,
       "robotla-tikaniklik-acma-ile-pimas-yikama-farki",
@@ -88,6 +88,11 @@ describe("PR-5B approval records", () => {
       "kombi-arizasi-ile-tesisat-arizasi-nasil-ayirt-edilir",
       "musluk-neden-damlar",
       "rezervuar-neden-su-akiyor",
+      "kalorifer-kacagi-nasil-anlasilir",
+      "evde-su-basinci-neden-dusuk",
+      "tuvalet-tikanikligi-neden-olur",
+      "petek-hic-isinmiyor-ne-yapmali",
+      "gizli-su-kacagi-nasil-tespit-edilir",
     ]) {
       assert.ok(slugs.includes(slug), slug);
     }
@@ -107,7 +112,7 @@ describe("PR-5B approval records", () => {
 describe("PR-5B technical review items", () => {
   it("verifies all topical guides as published", () => {
     const published = posts.filter((p) => p.status === "published");
-    assert.equal(published.length, 11);
+    assert.equal(published.length, 16);
     for (const post of published) {
       assert.equal(post.needsTechnicalReview, false);
       assert.ok((post.technicalReview?.items ?? []).length > 0);
@@ -121,9 +126,9 @@ describe("PR-5B technical review items", () => {
 });
 
 describe("PR-5B publication split", () => {
-  it("publishes eleven approved topical guides including three pilots", () => {
+  it("publishes sixteen approved topical guides including three pilots", () => {
     const published = posts.filter((p) => p.status === "published");
-    assert.equal(published.length, 11);
+    assert.equal(published.length, 16);
     const publishedSlugs = new Set(published.map((p) => p.slug));
     for (const slug of pilotPublicationCandidateSlugs) {
       assert.ok(publishedSlugs.has(slug), slug);
